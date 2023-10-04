@@ -1,32 +1,58 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Player Camera System
-/// </summary>
 public class PlayerCamera : MonoBehaviour
 {
-    // Player Mode: The camera will follow the player
-    private bool bPlayerMode = true;
+    [SerializeField] private GameObject targetObject;
+    [SerializeField] private Camera playerCamera;
     [SerializeField] private float cameraYOffset = 3f;
     [SerializeField] private float cameraZOffset = 4f;
-    [SerializeField] private GameObject player;
 
-    private void Update()
+    private bool bPlayerMode = true;
+    private EUnit unit;
+
+    private void Awake()
     {
-        // Exit if player is null or camera set to not following
-        if (player == null || !bPlayerMode)
+        if (playerCamera == null)
         {
-            return;
+            playerCamera = GetComponent<Camera>();
         }
-        this.gameObject.transform.position = new Vector3(player.transform.position.x , cameraYOffset, player.transform.position.z - cameraZOffset);
+        if (unit == null && targetObject != null)
+        {
+            unit = targetObject.GetComponent<EUnit>();
+        }
     }
 
-    public void SetPlayer(GameObject playerObject)
+    private void FixedUpdate()
     {
-        player = playerObject;
+        if (unit == null || !bPlayerMode) return;
+
+        // Set target position based on facing direction
+        Vector3 targetPosition;
+        // transform.position = new Vector3(targetObject.transform.position.x, cameraYOffset, -cameraZOffset);
+
+        if (unit.GetFacingToRight())
+        {
+            targetPosition = new Vector3(targetObject.transform.position.x + Constants.CAMERA_PAN_OFFSET, cameraYOffset, -cameraZOffset);
+        }
+        else
+        {
+            targetPosition = new Vector3(targetObject.transform.position.x - Constants.CAMERA_PAN_OFFSET, cameraYOffset, -cameraZOffset);
+        }
+
+        // Calculate the distance to the target
+        float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+
+        // Check if the camera is close enough to the target position
+        if (distanceToTarget < Constants.CAMERA_SNAP_THRESHOLD)
+        {
+            transform.position = targetPosition;
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, targetPosition, unit.GetUnitSpeed() * 0.1f * Time.deltaTime);
+        }
     }
+
 
     public void SetCameraToPlayerMode(bool bSetToPlayerMode = true)
     {

@@ -82,7 +82,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""name"": ""WASDMove"",
                     ""id"": ""7610aba4-3704-4ead-bc8d-e3c8197e777f"",
                     ""path"": ""2DVector"",
-                    ""interactions"": ""Hold,Tap"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Move"",

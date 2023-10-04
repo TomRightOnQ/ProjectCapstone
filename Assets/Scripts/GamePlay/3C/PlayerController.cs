@@ -11,18 +11,20 @@ public class PlayerController : MonoBehaviour
     private PlayerControls playerControls;
     [SerializeField] private Player player;
 
+    private Vector2 moveInput;
+
     // Data
-    [SerializeField] private float moveRatio = 1f;
     [SerializeField] private float jumpRatio = 1f;
     [SerializeField] private float dashRatio = 1f;
     [SerializeField] private Rigidbody playerRigidBody;
 
+    // Flags
+    private bool bAirBorne = false;
+    private bool bDash = false;
+
     // Lock input from keyboard
     private bool bInputLocked = false;
-
     // Lock attack movement
-    // ToDo: Add more flags...
-
     // Lock all movement
     private bool bMovementLocked = false;
     // Lock all active mmovement
@@ -44,8 +46,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         // Subscribe to the events
-        playerControls.Player.Move.started += move;
         playerControls.Player.Move.performed += move;
+        playerControls.Player.Move.canceled += stopMove;
 
         playerControls.Player.Jump.started += jump;
         playerControls.Player.Dash.performed += dash;
@@ -61,32 +63,48 @@ public class PlayerController : MonoBehaviour
         playerControls.Disable();
     }
 
-    // Events
-    private void move(InputAction.CallbackContext context)
+    private void FixedUpdate()
     {
-        //Player's position is locked
+        // If player's position is not locked and movable
         if (!bMovementLocked || !bMovable)
         {
             return;
         }
-        // Move
-        Vector2 inputVector = context.ReadValue<Vector2>();
-        Vector3 moveForce = new Vector3(inputVector.x, 0, inputVector.y) * moveRatio;
-        if (inputVector.x > 0)
+
+        // Apply continuous force based on moveInput
+        if (moveInput != Vector2.zero)
         {
-            player.ChangeFacing(false);
+            Vector3 force = new Vector3(moveInput.x, 0, moveInput.y) * player.GetUnitSpeed();
+            playerRigidBody.AddForce(force);
         }
-        else if (inputVector.x < 0)
+
+    }
+
+    // Events
+    private void move(InputAction.CallbackContext context)
+    {
+        // Update moveInput with the current input value
+        moveInput = context.ReadValue<Vector2>();
+        // Flip the player
+        if (moveInput.x < 0)
         {
             player.ChangeFacing(true);
         }
-        playerRigidBody.AddForce(moveForce);
+        else 
+        {
+            player.ChangeFacing(false);
+        }
+    }
+
+    private void stopMove(InputAction.CallbackContext context)
+    {
+        moveInput = Vector2.zero;
     }
 
     private void jump(InputAction.CallbackContext context)
     {
         //Player's position is locked
-        if (!bMovementLocked || !bMovable)
+        if (bAirBorne || bDash || !bMovementLocked || !bMovable)
         {
             return;
         }
@@ -95,13 +113,38 @@ public class PlayerController : MonoBehaviour
 
     private void dash(InputAction.CallbackContext context)
     {
-        if (!bMovementLocked || !bMovable)
+        if (bAirBorne || bDash || !bMovementLocked || !bMovable)
         {
             return;
         }
         // Dash
+        float dashDirectionX = player.GetFacingToRight() ? 1f : -1f;
+        playerRigidBody.AddForce(new Vector3(dashRatio * dashDirectionX, 0f, 0f));
+        bDash = true;
+        Invoke("stopDash", Constants.DASH_CD_PLAYER);
     }
 
+    private void stopDash()
+    {
+        bDash = false;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        bAirBorne = true;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        bAirBorne = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        bAirBorne = false;
+    }
+
+    // Methods
     // Stop all movement of the player
     public void StopPlayerMovement()
     {
@@ -122,7 +165,7 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        Vector3 moveForce = movement * moveRatio;
+        Vector3 moveForce = movement * player.GetUnitSpeed();
         playerRigidBody.AddForce(moveForce);
     }
 

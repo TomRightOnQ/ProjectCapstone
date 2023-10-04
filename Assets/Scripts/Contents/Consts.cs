@@ -1,5 +1,11 @@
 public static class Constants
 {
+    // 3C
+    public const float DASH_CD_PLAYER = 0.1f;  // Dash CD for player
+    public const float CAMERA_PAN_SPEED = 10f;  // Speed of Camera Pan according to the player's movement
+    public const float CAMERA_PAN_OFFSET = 0.9f;  // 
+    public const float CAMERA_SNAP_THRESHOLD = 0.01f;  // 
+
     // C1
     public const int TEST_INT_C1 = 1;  // A normal value
     public const string TEST_STRING_C1 = "test";  // A normal value

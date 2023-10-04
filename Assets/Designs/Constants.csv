@@ -8,3 +8,7 @@ SCENE_GAME_INIT,string,SCENE_NAME,GameInitScene,Game Entry Scene
 SCENE_GAME_LOAD,string,SCENE_NAME,GameLoadingScene,Game Main Loading Scene
 SCENE_MAIN_MENU,string,SCENE_NAME,MainMenu,Main Menu
 SCENE_DEFAULT_LEVEL,string,SCENE_NAME,DefaultLevel,Deafult scene of a level
+DASH_CD_PLAYER,float,3C,0.1f,Dash CD for player
+CAMERA_PAN_SPEED,float,3C,10f,Speed of Camera Pan according to the player's movement
+CAMERA_PAN_OFFSET,float,3C,0.9f,
+CAMERA_SNAP_THRESHOLD,float,3C,0.01f,

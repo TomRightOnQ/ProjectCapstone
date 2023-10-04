@@ -8,13 +8,17 @@ public class EUnit : MEntity
     // Data Section
     // Unit HP
     protected float maxHealth = 0f;
-    protected float health = 0f; 
+    protected float health = 0f;
     // If unit is inmmune to damage - notive that this unit is still considered in damage system in this case
-    protected bool bInvulnerable = false; 
+    protected bool bInvulnerable = false;
+
+    [SerializeField] protected Rigidbody unitRigidBody;
 
     // Temp
-    protected float defense = 0f;
-    protected float attack = 0f;
+    [SerializeField] protected float defense = 0f;
+    [SerializeField] protected float attack = 0f;
+    [SerializeField] protected float speedBase = 1f;
+    [SerializeField] protected float speedModifier = 1f;
 
     // Sprite Renderer
     [SerializeField] protected SpriteRenderer sprite;
@@ -23,7 +27,7 @@ public class EUnit : MEntity
 
     // Setup the unit
     public virtual void SetUpUnit()
-    { 
+    {
         // Use a UnitData or similar struct to load the data
         // To be determined
     }
@@ -31,11 +35,27 @@ public class EUnit : MEntity
     // Change the direction of sprite
     public void ChangeFacing(bool bLeft = true)
     {
-        if (sprite == null) 
+        if (sprite == null)
         {
             return;
         }
         sprite.flipX = bLeft;
+    }
+
+    // Get facing
+    public bool GetFacingToRight()
+    {
+        return !sprite.flipX;
+    }
+
+    // Return velocity magnitude
+    public virtual float GetUnitVelocity()
+    {
+        if (unitRigidBody == null)
+        {
+            return 0f;
+        }
+        return unitRigidBody.velocity.magnitude;
     }
 
     // Take Damage Method
@@ -43,7 +63,7 @@ public class EUnit : MEntity
     public virtual void TakeDamage(float damage = 0f, bool bForceDamage = false, bool bPercentDamage = false, bool bRealDamage = false)
     {
         float finalDamage = -1;
-        if (!bDamagable && (!bInvulnerable || bForceDamage)) 
+        if (!bDamagable && (!bInvulnerable || bForceDamage))
         {
             if (damage == 0f)
             {
@@ -83,7 +103,7 @@ public class EUnit : MEntity
         {
 
         }
-        else 
+        else
         {
             health = 0f;
             checkCurrentHealth();
@@ -93,13 +113,20 @@ public class EUnit : MEntity
     // Revive a unit
     public virtual void ReviveUnit()
     {
-    
+
     }
 
-    // Protected and private:
+    // Get unit speed
+    public virtual float GetUnitSpeed()
+    {
+        return speedBase * speedModifier;
+    }
 
-    // Determmine currnent HP status
-    protected virtual void checkCurrentHealth()
+
+// Protected and private:
+
+// Determmine currnent HP status
+protected virtual void checkCurrentHealth()
     {
         // Check if current HP will lead to something
     }

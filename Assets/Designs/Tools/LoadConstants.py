@@ -41,6 +41,8 @@ with open(csv_filename, 'r') as f:
                 outfile.write(f'    public const int {name} = {value};  // {description}\n')
             elif type == "string":
                 outfile.write(f'    public const string {name} = "{value}";  // {description}\n')
+            elif type == "float":
+                outfile.write(f'    public const float {name} = {value};  // {description}\n')
             else:
                 print("Error: Unable to process type", type, "on line", line_count)
         outfile.write('}\n')
