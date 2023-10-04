@@ -28,15 +28,14 @@ public class PlayerCamera : MonoBehaviour
 
         // Set target position based on facing direction
         Vector3 targetPosition;
-        // transform.position = new Vector3(targetObject.transform.position.x, cameraYOffset, -cameraZOffset);
 
         if (unit.GetFacingToRight())
         {
-            targetPosition = new Vector3(targetObject.transform.position.x + Constants.CAMERA_PAN_OFFSET, cameraYOffset, -cameraZOffset);
+            targetPosition = new Vector3(targetObject.transform.position.x + Constants.CAMERA_PAN_OFFSET, cameraYOffset, targetObject.transform.position.z - cameraZOffset);
         }
         else
         {
-            targetPosition = new Vector3(targetObject.transform.position.x - Constants.CAMERA_PAN_OFFSET, cameraYOffset, -cameraZOffset);
+            targetPosition = new Vector3(targetObject.transform.position.x - Constants.CAMERA_PAN_OFFSET, cameraYOffset, targetObject.transform.position.z - cameraZOffset);
         }
 
         // Calculate the distance to the target
