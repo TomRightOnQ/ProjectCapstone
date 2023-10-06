@@ -94,6 +94,9 @@ public class PersistentGameManager : MonoBehaviour
         Debug.Log("1. PrefabManager Loading");
         PrefabManager.Instance.InitPooling();
 
+        Debug.Log("2. ChatInteractionManager");
+        ChatInteractionManager.Instance.Init();
+
         Debug.Log("PersistentGameManager Load: Managers Ready!");
         // SceneManager.LoadScene("MainMenu");
     }

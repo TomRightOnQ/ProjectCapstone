@@ -5,6 +5,7 @@ public static class Constants
     public const float CAMERA_PAN_SPEED = 10f;  // Speed of Camera Pan according to the player's movement
     public const float CAMERA_PAN_OFFSET = 0.9f;  // 
     public const float CAMERA_SNAP_THRESHOLD = 0.01f;  // 
+    public const float PLAYER_JUMP_DETECT_RADIUS = 0.01f;  // From how far we should consider the player on the ground
 
     // C1
     public const int TEST_INT_C1 = 1;  // A normal value

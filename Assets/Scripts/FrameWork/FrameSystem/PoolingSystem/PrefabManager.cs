@@ -101,9 +101,7 @@ public class PrefabManager : MonoBehaviour
                 return instance;
             }
         }
-
-        GameObject prefab = Resources.Load<GameObject>(prefabName);
-        return GameObject.Instantiate(prefab, position, rotation);
+        return GameObject.Instantiate(prefabData.PrefabReference, position, rotation);
     }
 
 

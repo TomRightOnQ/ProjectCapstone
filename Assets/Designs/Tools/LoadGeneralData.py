@@ -37,8 +37,8 @@ def convert_csv_to_cs(csv_filename, output_filename):
             outfile.write('\n')
         
             # Add constructor
-            constructor_args = ', '.join([f"{t} {h.lower()}" for h, t in zip(dataHeader, dataType)])
-            constructor_body = '\n'.join([f"            this.{h} = {h.lower()};" for h in dataHeader])
+            constructor_args = ', '.join([f"{t} {h}" for h, t in zip(dataHeader, dataType)])
+            constructor_body = '\n'.join([f"            this.{h} = {h};" for h in dataHeader])
             outfile.write(f'        public {structName}({constructor_args})\n')
             outfile.write('        {\n')
             outfile.write(constructor_body)

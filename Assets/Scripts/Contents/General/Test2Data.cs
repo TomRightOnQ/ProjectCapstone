@@ -10,13 +10,13 @@ public static class Test2Data
         public float HP;
         public int[] BUFF;
 
-        public Test2DataStruct(int id, string name, int type, float hp, int[] buff)
+        public Test2DataStruct(int ID, string Name, int Type, float HP, int[] BUFF)
         {
-            this.ID = id;
-            this.Name = name;
-            this.Type = type;
-            this.HP = hp;
-            this.BUFF = buff;
+            this.ID = ID;
+            this.Name = Name;
+            this.Type = Type;
+            this.HP = HP;
+            this.BUFF = BUFF;
         }
     }
     public static Dictionary<int, Test2DataStruct> data = new Dictionary<int, Test2DataStruct>

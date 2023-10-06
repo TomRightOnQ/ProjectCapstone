@@ -1,0 +1,7 @@
+ID,Content,bIsChoice,Speaker,Target,Action,bEnd
+int,string,bool,string,int[],Enums.INTERACTION_TYPE,bool
+1,This is a message.,false,ChatInteraction,2,Enums.INTERACTION_TYPE.Next,false
+2,Now we have choices.,false,You,"3,4",Enums.INTERACTION_TYPE.Choice,false
+3,Here's a choice to end the message.,true,ChatInteraction,0,Enums.INTERACTION_TYPE.End,true
+4,I'm a choice to jump to the next one.,true,ChatInteraction,5,Enums.INTERACTION_TYPE.Next,false
+5,This message will end the chat.,false,ChatInteraction,0,Enums.INTERACTION_TYPE.End,true

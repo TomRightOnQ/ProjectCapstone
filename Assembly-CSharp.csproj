@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\EffectsSystem\Animation\AnimObject.cs" />
     <Compile Include="Assets\Scripts\Contents\AnimConfig.cs" />
     <Compile Include="Assets\Scripts\FrameWork\Misc\ReadOnlyAttribute.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\ChatInteraction\UI_ChatInteraction.cs" />
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\EffectsSystem\GameEffect.cs" />
     <Compile Include="Assets\Scripts\Contents\MusicConfig.cs" />
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\BGMSystem\MusicManager.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\GamePlay\3C\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\PoolingSystem\ObjPoolBase.cs" />
     <Compile Include="Assets\Scripts\FrameWork\PersistentDataManager.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\ChatInteraction\ChatInteractionManager.cs" />
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\PoolingSystem\ObjPool.cs" />
     <Compile Include="Assets\Scripts\Contents\PrefabConfig.cs" />
     <Compile Include="Assets\Scripts\FrameWork\CoreComponents\EUnit.cs" />
@@ -84,7 +86,9 @@
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\EffectsSystem\GameEffectManager.cs" />
     <Compile Include="Assets\Scripts\Testing\GameManager.cs" />
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\EffectsSystem\SoundFX\SFXObject.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Debug\DebugManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\ChatInteractionData.cs" />
     <Compile Include="Assets\Scripts\Testing\SphereObject.cs" />
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\EffectsSystem\GameEffectConfig.cs" />
     <Compile Include="Assets\Scripts\GamePlay\3C\PlayerController.cs" />
