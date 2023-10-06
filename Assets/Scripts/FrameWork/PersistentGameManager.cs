@@ -76,6 +76,8 @@ public class PersistentGameManager : MonoBehaviour
         // Configs
         Debug.Log("1. PrefabConfig Loading");
         PrefabConfig.Instance.Init();
+        Debug.Log("2. UIConfig Loading");
+        UIConfig.Instance.Init();
         Debug.Log("PersistentGameManager Init: Configs Ready!");
     }
 
@@ -94,7 +96,10 @@ public class PersistentGameManager : MonoBehaviour
         Debug.Log("1. PrefabManager Loading");
         PrefabManager.Instance.InitPooling();
 
-        Debug.Log("2. ChatInteractionManager");
+        Debug.Log("2. UIManager Loading");
+        UIManager.Instance.Init();
+
+        Debug.Log("3. ChatInteractionManager");
         ChatInteractionManager.Instance.Init();
 
         Debug.Log("PersistentGameManager Load: Managers Ready!");

@@ -92,6 +92,16 @@
     <Compile Include="Assets\Scripts\Testing\SphereObject.cs" />
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\EffectsSystem\GameEffectConfig.cs" />
     <Compile Include="Assets\Scripts\GamePlay\3C\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\HUDInteraction\HUDInteractionManager.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\HUDInteraction\UI_HUDInteraction.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\HUDInteraction\HUDInteractionTrigger.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\HUDInteractionData.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\NPC\NPCManager.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\NPC\NPCUnit.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\HUDInteraction\PlayerHUDInteractionTrigger.cs" />
+    <Compile Include="Assets\Scripts\FrameWork\FrameSystem\UISystem\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Contents\UIConfig.cs" />
+    <Compile Include="Assets\Scripts\FrameWork\FrameSystem\UISystem\UIBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

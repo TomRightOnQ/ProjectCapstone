@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : EUnit
 {
     private PlayerController playerController;
+    [SerializeField] private PlayerHUDInteractionTrigger playerInteractionTrigger;
 
     void Awake()
     {

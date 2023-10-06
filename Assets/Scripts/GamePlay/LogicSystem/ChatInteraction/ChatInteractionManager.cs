@@ -23,7 +23,6 @@ public class ChatInteractionManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this);
-            Init();
         }
         else
         {
@@ -35,7 +34,7 @@ public class ChatInteractionManager : MonoBehaviour
     {
         if (ui_ChatInteraction == null)
         {
-            ui_ChatInteraction = PrefabManager.Instance.Instantiate("UI_ChatInteraction", Vector3.zero, Quaternion.identity).GetComponent<UI_ChatInteraction>();
+            ui_ChatInteraction = UIManager.Instance.CreateUI("UI_ChatInteraction").GetComponent<UI_ChatInteraction>();
         }
     }
 

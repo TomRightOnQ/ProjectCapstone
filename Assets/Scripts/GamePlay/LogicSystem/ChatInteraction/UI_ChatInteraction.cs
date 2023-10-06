@@ -6,7 +6,7 @@ using TMPro;
 /// <summary>
 /// Interaction panel logic
 /// </summary>
-public class UI_ChatInteraction : MonoBehaviour
+public class UI_ChatInteraction : UIBase
 {
     [SerializeField] private Transform content;
     [SerializeField] private GameObject p_ChatChoicePanel;

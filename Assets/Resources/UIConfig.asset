@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d968855aa67ba1543bcb7cd44d6c59ac, type: 3}
+  m_Name: UIConfig
+  m_EditorClassIdentifier: 
+  uiCollections:
+  - name: UI_ChatInteraction
+    PrefabPath: 
+    TypeName: UI_ChatInteraction
+    PrefabReference: {fileID: 4979292503200273898, guid: 468f294a95e8ac1478be33abb4e23126,
+      type: 3}

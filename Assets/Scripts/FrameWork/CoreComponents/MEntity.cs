@@ -11,6 +11,17 @@ public class MEntity : MObject
     // If the entity is considered in damage system
     protected bool bDamagable = false;
 
+    // Screen Interact
+    protected HUDInteractionTrigger interactionTrigger;
+    public HUDInteractionTrigger InteractionTrigger { get { return interactionTrigger; } set { interactionTrigger = value; } }
+
+    // HUDInteraction
+    // Override this to interact
+    public virtual void HUDInteract()
+    {
+    
+    }
+
     // End an entity
     public virtual void DeactivateEntity()
     {
