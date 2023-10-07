@@ -11,9 +11,30 @@ public class HUDInteractionTrigger : MonoBehaviour
     [SerializeField] private Collider trigger;
     // Data
     private HUDInteractionData.HUDInteractionDataStruct currentInteraction;
-    private int currentInteractionID;
+
+    [SerializeField, ReadOnly]
+    private List<int> interactionIDs = new List<int>();
+    public List<int> InteractionIDs => interactionIDs;
+
+    //Public:
 
     public void SetUpTrigger(int interactionID)
+    {
+        if (!interactionIDs.Contains(interactionID))
+        {
+            interactionIDs.Add(interactionID);
+        }
+    }
+
+    public void RemoveTrigger(int interactionID)
+    {
+        if (interactionIDs.Contains(interactionID))
+        {
+            interactionIDs.Remove(interactionID);
+        }
+    }
+
+    public void EnableTrigger()
     {
         trigger.enabled = true;
     }

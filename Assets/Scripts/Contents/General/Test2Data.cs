@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 
+using UnityEngine;
+
 public static class Test2Data
 {
     public class Test2DataStruct

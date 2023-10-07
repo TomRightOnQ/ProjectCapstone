@@ -12,7 +12,7 @@ public class MEntity : MObject
     protected bool bDamagable = false;
 
     // Screen Interact
-    protected HUDInteractionTrigger interactionTrigger;
+    [SerializeField] protected HUDInteractionTrigger interactionTrigger;
     public HUDInteractionTrigger InteractionTrigger { get { return interactionTrigger; } set { interactionTrigger = value; } }
 
     // HUDInteraction

@@ -21,4 +21,10 @@ public class DebugManager : MonoBehaviour
         ChatInteractionManager.Instance.BeginInteraction(1);
         onClick();
     }
+
+    public void SpawnNPC()
+    {
+        NPCManager.Instance.SpawnNPC(1);
+        onClick();
+    }
 }

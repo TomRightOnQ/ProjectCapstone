@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uuid: 0
   objectName: 
+  interactionTrigger: {fileID: 0}
   unitRigidBody: {fileID: 6126956499534643397}
   defense: 0
   attack: 0
@@ -167,7 +168,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 2064517867704711478}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.2
   m_Height: 1
   m_Direction: 1

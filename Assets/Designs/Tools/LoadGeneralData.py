@@ -10,8 +10,12 @@ def wrap_quotes_if_string(value, data_type):
         return f"{value}f"
     elif data_type == 'int[]':
         return f"new int[]{{{value}}}"
+    elif data_type == 'float[]':
+        return f"new float[]{{{value}}}"
     elif data_type == 'string[]':
         return f"new string[]{{{value}}}"
+    elif data_type == 'Vector3':
+        return f"new Vector3({value})"
     else:
         return value
 
@@ -27,6 +31,7 @@ def convert_csv_to_cs(csv_filename, output_filename):
         structName = className + 'Struct'
         with open(output_filename, 'w') as outfile:
             outfile.write('using System.Collections.Generic;\n\n')
+            outfile.write('using UnityEngine;\n\n')
             outfile.write(f'public static class {className}\n')
             outfile.write('{\n')
             # Define MyData class
