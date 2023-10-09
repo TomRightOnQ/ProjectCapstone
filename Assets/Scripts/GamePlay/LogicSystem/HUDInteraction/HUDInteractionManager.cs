@@ -39,6 +39,7 @@ public class HUDInteractionManager : UIBase
     // Add interaction to the list
     public void AddInteractionToUIList(int interactionID)
     {
+        EnableHUDInteractionUI();
         ui_HUDInteraction.AddInteraction(interactionID);
     }
 
@@ -48,6 +49,17 @@ public class HUDInteractionManager : UIBase
         ui_HUDInteraction.RemoveInteraction(interactionID);
     }
 
+    // Enable the UI for interaction
+    public void EnableHUDInteractionUI()
+    {
+        UIManager.Instance.ShowUI("UI_HUDInteraction");
+    }
+
+    // Disable the UI
+    public void DisableHUDInteractionUI()
+    {
+        UIManager.Instance.HideUI("UI_HUDInteraction");
+    }
 
     // Allow an object to be interactable
     public void AddInteraction(MObject target, int interactionID)

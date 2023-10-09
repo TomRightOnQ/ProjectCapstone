@@ -99,10 +99,10 @@ public class PersistentGameManager : MonoBehaviour
         Debug.Log("2. UIManager Loading");
         UIManager.Instance.Init();
 
-        Debug.Log("3. ChatInteractionManager");
+        Debug.Log("3. ChatInteractionManager Loading");
         ChatInteractionManager.Instance.Init();
 
-        Debug.Log("4. HUDInteractionManager");
+        Debug.Log("4. HUDInteractionManager Loading");
         HUDInteractionManager.Instance.Init();
 
         Debug.Log("PersistentGameManager Load: Managers Ready!");

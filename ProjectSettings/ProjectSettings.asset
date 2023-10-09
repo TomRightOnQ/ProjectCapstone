@@ -781,7 +781,9 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: UITHEMES_INSTALLED;UIWIDGETS_TMPRO_SUPPORT;UIWIDGETS_INSTALLED;UIWIDGETS_ASMDEF
+    WebGL: UITHEMES_INSTALLED;UIWIDGETS_TMPRO_SUPPORT;UIWIDGETS_INSTALLED;UIWIDGETS_ASMDEF
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
