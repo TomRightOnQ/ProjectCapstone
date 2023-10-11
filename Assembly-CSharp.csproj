@@ -1103,6 +1103,13 @@
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\DataBindSupport\DataBindOption.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Tabs\TabButton.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Wrappers\Selectable\SelectableSelectedSprite.cs" />
+    <Compile Include="Assets\Scripts\FrameWork\FrameSystem\EventSystem\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Contents\GameEvents.cs" />
+    <Compile Include="Assets\Scripts\FrameWork\FrameSystem\SaveSystem\SaveConfig.cs" />
+    <Compile Include="Assets\Scripts\FrameWork\FrameSystem\SaveSystem\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\FrameWork\FrameSystem\LevelSystem\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\TaskData.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\TaskRingData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,5 +1,11 @@
 public static class Enums
 {
+    public enum INTERACTION_EVENT
+    {
+        CompleteTask,  // Screen Interaction Event: Complete a task
+        None,  // Screen Interaction Event: Doing nothing
+    }
+
     public enum INTERACTION_TYPE
     {
         Next,  // Screen Interaction Type: Go to next chat
@@ -14,5 +20,10 @@ public static class Enums
     public enum NONE
     {
         PLACE_HOLDER,  // DEBUG
+    }
+
+    public enum TASK_TYPE
+    {
+        Chat,  // Task System: Chat
     }
 }

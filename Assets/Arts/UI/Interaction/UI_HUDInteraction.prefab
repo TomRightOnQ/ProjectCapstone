@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -6865866624629397872}
   - component: {fileID: 2571488229254635080}
   - component: {fileID: 1645587599693770305}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: UI_HUDInteraction
-  m_TagString: Untagged
+  m_TagString: UIBase
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c57a1006c0d6f24e819e6f9fa692c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionIDs: 
   InteractionList: {fileID: 5902949568197038450}
+  viewPort: {fileID: 5902949568202653150}
 --- !u!1 &5902949568202653144
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 5902949568183006776}
   - component: {fileID: 5902949568182674940}
   - component: {fileID: 5902949568197038454}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: ScrollRect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 5902949568197038450}
   - component: {fileID: 5902949568197150772}
   - component: {fileID: 5931048536596429160}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: InteractionList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +358,19 @@ MonoBehaviour:
         m_Calls: []
     FirstClick:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1645587599693770305}
+          m_TargetAssemblyTypeName: UI_HUDInteraction, Assembly-CSharp
+          m_MethodName: OnClick_InteractionList
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     DoubleClick:
       m_PersistentCalls:
         m_Calls: []
@@ -609,7 +621,7 @@ GameObject:
   - component: {fileID: 5902949568183006780}
   - component: {fileID: 5902949568197038456}
   - component: {fileID: 5902949568197038462}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: List
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +810,7 @@ GameObject:
   - component: {fileID: 5902949568197038452}
   - component: {fileID: 5902949568197038458}
   - component: {fileID: 7597494721554895969}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}

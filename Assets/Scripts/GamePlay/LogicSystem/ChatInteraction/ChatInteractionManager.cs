@@ -34,7 +34,10 @@ public class ChatInteractionManager : MonoBehaviour
     {
         if (ui_ChatInteraction == null)
         {
-            ui_ChatInteraction = UIManager.Instance.CreateUI("UI_ChatInteraction").GetComponent<UI_ChatInteraction>();
+
+            GameObject uiObject = UIManager.Instance.CreateUI("UI_ChatInteraction");
+            ui_ChatInteraction = uiObject.GetComponent<UI_ChatInteraction>();
+            uiObject.SetActive(false);
         }
     }
 
@@ -48,6 +51,8 @@ public class ChatInteractionManager : MonoBehaviour
             Debug.Log("ChatInteractionManager: Chatting");
             return;
         }
+        UIManager.Instance.ShowUI("UI_ChatInteraction");
+        EventManager.Instance.PostEvent(GameEvent.Event.EVENT_CHAT_BEGIN);
         ui_ChatInteraction.StartChat(chatID);
         bInChat = true;
     }
@@ -61,6 +66,8 @@ public class ChatInteractionManager : MonoBehaviour
             return;
         }
         ui_ChatInteraction.EndChat();
+        UIManager.Instance.HideUI("UI_ChatInteraction");
+        EventManager.Instance.PostEvent(GameEvent.Event.EVENT_CHAT_END);
         bInChat = false;
     }
 }

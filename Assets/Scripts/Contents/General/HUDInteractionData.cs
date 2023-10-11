@@ -25,6 +25,8 @@ public static class HUDInteractionData
     {
         {1, new HUDInteractionDataStruct(1, "Hello", new int[]{1}, Enums.INTERACTION_TYPE.Chat, false)},
         {2, new HUDInteractionDataStruct(2, "Only happended once", new int[]{2}, Enums.INTERACTION_TYPE.End, true)},
+        {3, new HUDInteractionDataStruct(3, "Task1", new int[]{6}, Enums.INTERACTION_TYPE.Chat, false)},
+        {4, new HUDInteractionDataStruct(4, "Task2", new int[]{8}, Enums.INTERACTION_TYPE.Chat, false)},
     };
 
     public static HUDInteractionDataStruct GetData(int id)

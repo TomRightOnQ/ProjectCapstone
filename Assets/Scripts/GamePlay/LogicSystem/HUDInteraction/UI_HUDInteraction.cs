@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UIWidgets;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// UI Logic of the interaction list on HUD
 /// </summary>
 public class UI_HUDInteraction : UIBase
 {
-    // List of interactions
-    [SerializeField, ReadOnly]
-    private List<int> interactionIDs = new List<int>();
-
     // UI List
     [SerializeField] private ListViewIcons InteractionList;
+    [SerializeField] private GameObject viewPort;
     private ObservableList<ListViewIconsItemDescription> interactionItems = new ObservableList<ListViewIconsItemDescription>();
 
     private void Awake()
@@ -22,13 +20,15 @@ public class UI_HUDInteraction : UIBase
     }
 
     // Public:
+    // Change visibility of the list
+    public void ChangeHUDINteractionState(bool bShow)
+    {
+        viewPort.SetActive(bShow);
+    }
+
     // Add interactions
     public void AddInteraction(int interactionID)
     {
-        if (!interactionIDs.Contains(interactionID))
-        {
-            interactionIDs.Add(interactionID);
-        }
         if (!interactionItems.Exists(item => item.Value == interactionID))
         {
             HUDInteractionData.HUDInteractionDataStruct interactionData = HUDInteractionData.GetData(interactionID);
@@ -40,18 +40,43 @@ public class UI_HUDInteraction : UIBase
     // Remove interactions
     public void RemoveInteraction(int interactionID)
     {
-        if (interactionIDs.Contains(interactionID))
-        {
-            interactionIDs.Remove(interactionID);
-        }
         ListViewIconsItemDescription itemToRemove = interactionItems.Find(item => item.Value == interactionID);
         if (itemToRemove != null)
         {
             interactionItems.Remove(itemToRemove);
         }
-        if (interactionItems.Count == 0)
+        if (interactionItems.Count == 0 && gameObject.activeSelf)
         {
-            UIManager.Instance.HideUI("UI_HUDInteraction");
+            ChangeHUDINteractionState(false);
         }
+    }
+
+    // Events:
+    public void OnClick_InteractionList(int index, ListViewItem item, PointerEventData eventData)
+    {
+        if (item != null)
+        {
+            HUDInteractionData.HUDInteractionDataStruct interactionData = HUDInteractionData.GetData(interactionItems[item.Index].Value);
+            if (interactionData == null)
+            {
+                return;
+            }
+            switch (interactionData.Action)
+            {
+                case Enums.INTERACTION_TYPE.Chat:
+                    ChatInteractionManager.Instance.BeginInteraction(interactionData.Target[0]);
+                    break;
+                case Enums.INTERACTION_TYPE.Choice:
+                    break;
+                case Enums.INTERACTION_TYPE.Next:
+                    break;
+                case Enums.INTERACTION_TYPE.End:
+                    break;
+                case Enums.INTERACTION_TYPE.None:
+                    break;
+                default:
+                    break;
+            }
+        }              
     }
 }

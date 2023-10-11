@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7976249082178374196}
   - component: {fileID: -5327784513139128651}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chatter
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -202,20 +202,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5309144605239496874, guid: c0a155a0b5772f74b8ab1def69dad717,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8810683820621628102, guid: c0a155a0b5772f74b8ab1def69dad717,
         type: 3}
       propertyPath: m_Name
       value: HUDInteractionTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 8810683820621628102, guid: c0a155a0b5772f74b8ab1def69dad717,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0a155a0b5772f74b8ab1def69dad717, type: 3}

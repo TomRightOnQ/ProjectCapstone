@@ -160,14 +160,12 @@ public class UI_ChatInteraction : UIBase
             GameObject child = content.GetChild(i).gameObject;
             child.SetActive(false);
         }
-        gameObject.SetActive(false);
     }
 
     // Public:
     // Begin a chat
     public void StartChat(int chatID)
     {
-        gameObject.SetActive(true);
         refreshChat(chatID);
     }
 

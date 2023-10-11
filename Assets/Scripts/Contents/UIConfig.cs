@@ -47,4 +47,5 @@ public struct UIData
     public string PrefabPath;
     public string TypeName;
     public GameObject PrefabReference;
+    public int UIExclusionGroup;
 }

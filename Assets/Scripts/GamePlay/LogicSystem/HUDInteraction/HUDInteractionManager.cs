@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Manager that handles objects' interaction shown on the HUD
 /// </summary>
-public class HUDInteractionManager : UIBase
+public class HUDInteractionManager : MonoBehaviour
 {
     private static HUDInteractionManager instance;
     public static HUDInteractionManager Instance => instance;
@@ -20,6 +20,7 @@ public class HUDInteractionManager : UIBase
         {
             instance = this;
             DontDestroyOnLoad(this);
+            configEventHandlers();
         }
         else
         {
@@ -27,12 +28,21 @@ public class HUDInteractionManager : UIBase
         }
     }
 
+    // Private:
+    // Config events
+    public void configEventHandlers()
+    {
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_CHAT_BEGIN, OnRecv_ChatBegin);
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_CHAT_END, OnRecv_ChatEnd);
+    }
+
     // Public:
     public void Init()
     {
         if (ui_HUDInteraction == null)
-        {
-            ui_HUDInteraction = UIManager.Instance.CreateUI("UI_HUDInteraction").GetComponent<UI_HUDInteraction>();
+        { 
+            GameObject uiObject = UIManager.Instance.CreateUI("UI_HUDInteraction");
+            ui_HUDInteraction = uiObject.GetComponent<UI_HUDInteraction>();
         }
     }
 
@@ -52,13 +62,13 @@ public class HUDInteractionManager : UIBase
     // Enable the UI for interaction
     public void EnableHUDInteractionUI()
     {
-        UIManager.Instance.ShowUI("UI_HUDInteraction");
+        ui_HUDInteraction.ChangeHUDINteractionState(true);
     }
 
     // Disable the UI
     public void DisableHUDInteractionUI()
     {
-        UIManager.Instance.HideUI("UI_HUDInteraction");
+        ui_HUDInteraction.ChangeHUDINteractionState(false);
     }
 
     // Allow an object to be interactable
@@ -133,5 +143,16 @@ public class HUDInteractionManager : UIBase
         {
             interactionTrigger.DisableTrigger();
         }
+    }
+
+    // Event Handler
+    public void OnRecv_ChatBegin()
+    {
+        DisableHUDInteractionUI();
+    }
+
+    public void OnRecv_ChatEnd()
+    {
+        EnableHUDInteractionUI();
     }
 }

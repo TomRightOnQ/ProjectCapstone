@@ -2,3 +2,5 @@ ID,Content,Target,Action,bOneTime
 int,string,int[],Enums.INTERACTION_TYPE,bool
 1,Hello,1,Enums.INTERACTION_TYPE.Chat,false
 2,Only happended once,2,Enums.INTERACTION_TYPE.End,true
+3,Task1,6,Enums.INTERACTION_TYPE.Chat,false
+4,Task2,8,Enums.INTERACTION_TYPE.Chat,false

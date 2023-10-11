@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 5309144605239496874}
   - component: {fileID: -2739085210781404050}
   - component: {fileID: 1658590439461697059}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: HUDInteractionTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2701502379117201093
 Transform:
   m_ObjectHideFlags: 0
@@ -43,7 +43,7 @@ SphereCollider:
   m_GameObject: {fileID: 8810683820621628102}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -76,3 +76,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 5309144605239496874}
+  interactionIDs: 

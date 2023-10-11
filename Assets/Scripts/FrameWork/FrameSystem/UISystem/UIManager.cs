@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
     // All opened UIs
     private Dictionary<string, UIBase> openedUIs = new Dictionary<string, UIBase>();
 
+    // UI Exclusion State
+    private Dictionary<int, bool> uiExclusion = new Dictionary<int, bool>();
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -28,19 +31,35 @@ public class UIManager : MonoBehaviour
     }
 
     // Private:
+    // Check Exclusion Condition
+    public void TryActiveUI(UIData uiData, GameObject UI)
+    {
+        if (uiData.UIExclusionGroup == -1 || !uiExclusion[uiData.UIExclusionGroup])
+        {
+            UI.SetActive(true);
+            uiExclusion[uiData.UIExclusionGroup] = true;
+        }
+    }
 
-
+    public void TryDeactiveUI(UIData uiData, GameObject UI)
+    {
+        UI.SetActive(false);
+        uiExclusion[uiData.UIExclusionGroup] = false;
+    }
 
     // Public:
     // Init
     public void Init()
     {
         openedUIs.Clear();
+        uiExclusion.Clear();
         // This will find and potentially register already-open UIs at start, if needed.
         UIBase[] allUIBases = FindObjectsOfType<UIBase>();
         foreach (UIBase ui in allUIBases)
         {
             openedUIs[ui.name] = ui;
+            UIData uiData = UIConfig.Instance.GetUIData(ui.name);
+            uiExclusion[uiData.UIExclusionGroup] = false;
         }
     }
 
@@ -51,10 +70,13 @@ public class UIManager : MonoBehaviour
         {
             UIData uiData = UIConfig.Instance.GetUIData(uiName);
             GameObject uiObject = Instantiate(uiData.PrefabReference, Vector3.zero, Quaternion.identity);
-
             UIBase uiBase = uiObject.GetComponent<UIBase>();
             uiBase.SetUp(uiData);
             openedUIs[uiName] = uiBase;
+            if (!uiExclusion.ContainsKey(uiData.UIExclusionGroup))
+            {
+                uiExclusion[uiData.UIExclusionGroup] = false;
+            }
         }
         return openedUIs[uiName].gameObject;
     }
@@ -62,16 +84,15 @@ public class UIManager : MonoBehaviour
     // Show a UI
     public GameObject ShowUI(string uiName)
     {
+        UIData uiData = UIConfig.Instance.GetUIData(uiName);
         if (openedUIs.ContainsKey(uiName))
         {
-            openedUIs[uiName].gameObject.SetActive(true);
+            TryActiveUI(uiData, openedUIs[uiName].gameObject);
         }
         else 
         {
-            UIData uiData = UIConfig.Instance.GetUIData(uiName);
-
             GameObject uiObject = Instantiate(uiData.PrefabReference, Vector3.zero, Quaternion.identity);
-            uiObject.SetActive(true);
+            TryActiveUI(uiData, uiObject);
 
             UIBase uiBase = uiObject.GetComponent<UIBase>();
             uiBase.SetUp(uiData);
@@ -83,9 +104,10 @@ public class UIManager : MonoBehaviour
     // Hide a UI
     public void HideUI(string uiName)
     {
+        UIData uiData = UIConfig.Instance.GetUIData(uiName);
         if (openedUIs.TryGetValue(uiName, out UIBase uiBase))
         {
-            uiBase.gameObject.SetActive(false);
+            TryDeactiveUI(uiData, uiBase.gameObject);
         }
         else
         {
@@ -96,6 +118,7 @@ public class UIManager : MonoBehaviour
     // Destroy a UI
     public void DestroyUI(string uiName)
     {
+        HideUI(uiName);
         if (openedUIs.TryGetValue(uiName, out UIBase uiBase))
         {
             openedUIs.Remove(uiName);
