@@ -5,7 +5,9 @@ using UnityEngine;
 /// </summary>
 public class Player : EUnit
 {
-    private PlayerController playerController;
+    [SerializeField] private PlayerController playerController;
+    public PlayerController Controller => playerController;
+
     [SerializeField] private PlayerHUDInteractionTrigger playerInteractionTrigger;
 
     void Awake()

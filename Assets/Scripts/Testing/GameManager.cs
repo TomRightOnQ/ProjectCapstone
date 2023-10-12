@@ -3,23 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// MainMenu Manager
+/// </summary>
+/// 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private PlayerController playerController;
-
-    // Start is called before the first frame update
-    void Start()
+    // Public:
+    // Enter game
+    public void EnterGame()
     {
-        playerController.ChangePlayerInputState(true);
-        playerController.ChangePlayerMovementState(true);
-        playerController.ChangePlayerActiveMovementState(true);
+        LevelManager.Instance.EnterGame();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void PlaySound()
     {
@@ -27,14 +23,10 @@ public class GameManager : MonoBehaviour
         Debug.Log(Constants.TEST_INT_C1);
     }
 
-    public void SwapScene()
-    {
-        PersistentGameManager.Instance.LoadScene(Constants.SCENE_DEFAULT_LEVEL);
-    }
 
     public void BackToTest()
     {
-        PersistentGameManager.Instance.LoadScene(Constants.SCENE_MAIN_MENU);
+        LevelManager.Instance.LoadScene(Constants.SCENE_MAIN_MENU);
     }
 
     public void TakeObj()

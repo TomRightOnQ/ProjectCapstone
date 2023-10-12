@@ -52,9 +52,14 @@ public class PlayerCamera : MonoBehaviour
         }
     }
 
-
     public void SetCameraToPlayerMode(bool bSetToPlayerMode = true)
     {
         bPlayerMode = bSetToPlayerMode;
+    }
+
+    public void SetCameraToTarget(GameObject target, EUnit targetUnit)
+    {
+        targetObject = target;
+        unit = targetUnit;
     }
 }

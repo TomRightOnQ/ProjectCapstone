@@ -14,6 +14,15 @@ public class PersistentDataManager : MonoBehaviour
     public static PersistentDataManager Instance => instance;
     private long MObjectID = -1;
 
+    // Reference
+    // Player
+    [SerializeField] private Player mainPlayer;
+    public Player MainPlayer => mainPlayer;
+
+    // MainCamera
+    [SerializeField] private PlayerCamera mainCamera;
+    public PlayerCamera MainCamera => mainCamera;
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -32,5 +41,22 @@ public class PersistentDataManager : MonoBehaviour
     public long GetMObjectID()
     {
         return ++MObjectID;
+    }
+
+    // Set Player
+    public void SetPlayer(Player player)
+    {
+        mainPlayer = player;
+        InputManager.Instance.SetController(player.Controller);
+    }
+
+    // Set Camera
+    public void SetCamera()
+    {
+        mainCamera = FindObjectOfType<PlayerCamera>();
+        if (mainCamera != null)
+        {
+            mainCamera.SetCameraToTarget(mainPlayer.gameObject, mainPlayer);
+        }
     }
 }

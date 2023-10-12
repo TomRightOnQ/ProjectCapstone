@@ -701,7 +701,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1331367482}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: SwapScene
+        m_MethodName: EnterGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -928,6 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74eb3d9c060853438efb200b87b8969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
 --- !u!1 &1373220630
 GameObject:
   m_ObjectHideFlags: 0

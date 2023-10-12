@@ -15,8 +15,6 @@ public class UIConfig : ScriptableSingleton<UIConfig>
 
     public List<UIData> UICollections => uiCollections;
 
-    // Return prefabData
-
     public void Init()
     {
         uiMap = new Dictionary<string, UIData>();
@@ -34,7 +32,7 @@ public class UIConfig : ScriptableSingleton<UIConfig>
         }
         else
         {
-            Debug.LogError($"Prefab {name} not found.");
+            Debug.LogError($"UI {name} not found.");
             return default;
         }
     }

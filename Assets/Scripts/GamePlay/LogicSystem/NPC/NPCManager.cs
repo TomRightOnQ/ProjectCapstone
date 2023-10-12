@@ -10,7 +10,6 @@ public class NPCManager : MonoBehaviour
     private static NPCManager instance;
     public static NPCManager Instance => instance;
 
-
     private void Awake()
     {
         gameObject.tag = "Manager";

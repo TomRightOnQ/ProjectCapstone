@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
-using UnityEngine.Networking;
-using UnityEngine.SceneManagement;
+
 
 /// <summary>
 /// Core Object lives through the entire game run-time
@@ -32,33 +28,6 @@ public class PersistentGameManager : MonoBehaviour
         }
     }
 
-    // Public Methods
-
-    // Load Scene
-    public void LoadScene(string sceneName)
-    {
-        // Reset pooling system to clear references
-        PrefabManager.Instance.ResetPooling();
-        // Load the scene async
-        StartCoroutine(LoadSceneAsync(sceneName));
-    }
-
-    private IEnumerator LoadSceneAsync(string sceneName)
-    {
-        // Start loading the scene
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
-
-        // Wait until the scene is fully loaded
-        while (!asyncOperation.isDone)
-        {
-            yield return null;
-        }
-
-        // OnSceneLoaded?.Invoke();
-        // Scene is loaded, now load managers
-        LoadManagers();
-    }
-
     // Private Methods
 
     // Enter Loading Stage
@@ -67,7 +36,7 @@ public class PersistentGameManager : MonoBehaviour
     {
         InitConfigs();
         InitManagers();
-        PersistentGameManager.Instance.LoadScene(Constants.SCENE_MAIN_MENU);
+        LevelManager.Instance.LoadScene(Constants.SCENE_MAIN_MENU);
     }
 
     // Init Configs
@@ -76,7 +45,9 @@ public class PersistentGameManager : MonoBehaviour
         // Configs
         Debug.Log("1. PrefabConfig Loading");
         PrefabConfig.Instance.Init();
-        Debug.Log("2. UIConfig Loading");
+        Debug.Log("2. LevelConfig Loading");
+        LevelConfig.Instance.Init();
+        Debug.Log("3. UIConfig Loading");
         UIConfig.Instance.Init();
         Debug.Log("PersistentGameManager Init: Configs Ready!");
     }
@@ -90,7 +61,7 @@ public class PersistentGameManager : MonoBehaviour
     }
 
     // Load Managers
-    private void LoadManagers()
+    public void LoadManagers()
     {
         // Managers
         Debug.Log("1. PrefabManager Loading");

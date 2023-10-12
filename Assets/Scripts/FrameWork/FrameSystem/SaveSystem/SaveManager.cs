@@ -39,6 +39,8 @@ public class SaveManager : MonoBehaviour
             return;
         }
         // Now load data for new game...
+        SaveConfig.Instance.SetPlayer("You", new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
+        SaveConfig.Instance.LockSave();
     }
 
     // Write data to scriptable
@@ -53,13 +55,18 @@ public class SaveManager : MonoBehaviour
     }
 
     // Read Data
-    // When loading save, call all other modules' loading from here
+    // Load Save to the scriptable object
     public void LoadSave()
     {
         if (bLoaded)
         {
             return;
         }
-        // Call other managers to load...
+    }
+
+    // Get Player Info
+    public SaveConfig.PlayerSaveData GetPlayer()
+    {
+        return SaveConfig.Instance.GetPlayer();
     }
 }

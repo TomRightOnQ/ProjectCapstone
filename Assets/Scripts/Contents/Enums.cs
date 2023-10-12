@@ -22,6 +22,13 @@ public static class Enums
         PLACE_HOLDER,  // DEBUG
     }
 
+    public enum SCENE_TYPE
+    {
+        Battle,  // Scene Type: Battle Scene
+        World,  // Scene Type: Wrold Scene
+        Outside,  // Scene Type: Non-in-game Scene
+    }
+
     public enum TASK_TYPE
     {
         Chat,  // Task System: Chat

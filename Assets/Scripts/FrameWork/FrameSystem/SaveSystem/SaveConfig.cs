@@ -6,7 +6,7 @@ using UnityEngine;
 public class SaveConfig : ScriptableSingleton<SaveConfig>
 {
     // Control flag
-    [SerializeField] private bool bAllowRewrite = false;
+    [SerializeField] private bool bAllowRewrite = true;
     public bool AllowRewrite { get { return bAllowRewrite; } }
 
     // Data
@@ -32,6 +32,24 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         public Vector3 Position;
         public List<int> interactionIDs;
         public string Scene;
+    }
+
+    // Methods:
+    public void SetPlayer(string name, Vector3 position, string scene)
+    {
+        playerSaveData.PlayerName = name;
+        playerSaveData.Position = position;
+        playerSaveData.Scene = scene;
+    }
+
+    public PlayerSaveData GetPlayer()
+    {
+        return playerSaveData;
+    }
+
+    public void LockSave()
+    {
+        bAllowRewrite = false;
     }
 }
 

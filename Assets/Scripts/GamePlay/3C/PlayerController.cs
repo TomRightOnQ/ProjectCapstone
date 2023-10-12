@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
         {
             player.ChangeFacing(true);
         }
-        else 
+        else if (moveInput.x > 0)
         {
             player.ChangeFacing(false);
         }
