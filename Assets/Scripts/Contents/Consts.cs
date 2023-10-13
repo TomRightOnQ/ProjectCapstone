@@ -23,4 +23,6 @@ public static class Constants
     public const string SCENE_GAME_LOAD = "GameLoadingScene";  // Game Main Loading Scene
     public const string SCENE_MAIN_MENU = "MainMenu";  // Main Menu
     public const string SCENE_DEFAULT_LEVEL = "DefaultLevel";  // Deafult scene of a level
+    public const string SCENE_AUDIENCE_LEVEL = "AudienceLevel";  // Audience Level
+    public const string SCENE_AUDIENCELOW_LEVEL = "AudienceLowLevel";  // Audience Level - Lower stands
 }

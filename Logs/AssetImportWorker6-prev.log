@@ -15,7 +15,7 @@ D:/CS/ICS169/Capstone/ProjectCapstone
 -logFile
 Logs/AssetImportWorker6.log
 -srvPort
-60761
+53950
 Successfully changed project path to: D:/CS/ICS169/Capstone/ProjectCapstone
 D:/CS/ICS169/Capstone/ProjectCapstone
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ D:/CS/ICS169/Capstone/ProjectCapstone
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3204] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 3271670721 [EditorId] 3271670721 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [79120] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 2925418625 [EditorId] 2925418625 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3204] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 3271670721 [EditorId] 3271670721 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [79120] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 2925418625 [EditorId] 2925418625 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 223.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 227.89 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -67,95 +67,95 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56792
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.016535 seconds.
+Registered in 0.033621 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 218.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 242.59 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.152 seconds
+- Completed reload, in  1.186 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1153ms)
-		BeginReloadAssembly (132ms)
+	ReloadAssembly (1187ms)
+		BeginReloadAssembly (137ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (829ms)
-			LoadAssemblies (129ms)
+		EndReloadAssembly (856ms)
+			LoadAssemblies (133ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (156ms)
+			SetupTypeCache (154ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (55ms)
-			SetupLoadedEditorAssemblies (534ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (567ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
+				InitializePlatformSupportModulesInManaged (40ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (219ms)
+				RefreshPlugins (243ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (205ms)
-				ProcessInitializeOnLoadMethodAttributes (90ms)
+				ProcessInitializeOnLoadAttributes (213ms)
+				ProcessInitializeOnLoadMethodAttributes (69ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011988 seconds.
+Registered in 0.011517 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 291.45 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 181.93 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  8.622 seconds
+- Completed reload, in  5.587 seconds
 Domain Reload Profiling:
-	ReloadAssembly (8624ms)
-		BeginReloadAssembly (222ms)
+	ReloadAssembly (5589ms)
+		BeginReloadAssembly (121ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
+			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (8117ms)
-			LoadAssemblies (207ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (5328ms)
+			LoadAssemblies (124ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (789ms)
+			SetupTypeCache (502ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (223ms)
-			SetupLoadedEditorAssemblies (6799ms)
+			RebuildScriptCaches (192ms)
+			SetupLoadedEditorAssemblies (4430ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (27ms)
+				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (292ms)
-				BeforeProcessingInitializeOnLoad (396ms)
-				ProcessInitializeOnLoadAttributes (5506ms)
-				ProcessInitializeOnLoadMethodAttributes (546ms)
-				AfterProcessingInitializeOnLoad (32ms)
+				RefreshPlugins (182ms)
+				BeforeProcessingInitializeOnLoad (187ms)
+				ProcessInitializeOnLoadAttributes (3759ms)
+				ProcessInitializeOnLoadMethodAttributes (273ms)
+				AfterProcessingInitializeOnLoad (15ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (25ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
-Refreshing native plugins compatible for Editor in 1.11 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7773 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (3.4 MB). Loaded Objects now: 8233.
+Unloading 7782 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 53 unused Assets / (3.4 MB). Loaded Objects now: 8242.
 Memory consumption went from 346.6 MB to 343.2 MB.
-Total: 12.014900 ms (FindLiveObjects: 1.453200 ms CreateObjectMapping: 0.336300 ms MarkObjects: 9.736200 ms  DeleteObjects: 0.488200 ms)
+Total: 5.717700 ms (FindLiveObjects: 0.926800 ms CreateObjectMapping: 0.438800 ms MarkObjects: 3.914700 ms  DeleteObjects: 0.435700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -165,1578 +165,619 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014906 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.889 seconds
+Domain Reload Profiling:
+	ReloadAssembly (7891ms)
+		BeginReloadAssembly (236ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (7501ms)
+			LoadAssemblies (203ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (616ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (139ms)
+			SetupLoadedEditorAssemblies (6315ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (29ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (177ms)
+				ProcessInitializeOnLoadAttributes (6049ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (85ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7438 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8245.
+Memory consumption went from 330.2 MB to 326.8 MB.
+Total: 7.008300 ms (FindLiveObjects: 0.765100 ms CreateObjectMapping: 0.379900 ms MarkObjects: 5.350200 ms  DeleteObjects: 0.511900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009738 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.440 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4441ms)
+		BeginReloadAssembly (181ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (4144ms)
+			LoadAssemblies (129ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (441ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (108ms)
+			SetupLoadedEditorAssemblies (3306ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (28ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (152ms)
+				ProcessInitializeOnLoadAttributes (3071ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (48ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7438 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8248.
+Memory consumption went from 330.2 MB to 326.8 MB.
+Total: 5.181200 ms (FindLiveObjects: 0.699400 ms CreateObjectMapping: 0.241600 ms MarkObjects: 3.830800 ms  DeleteObjects: 0.408500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010070 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.219 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4220ms)
+		BeginReloadAssembly (191ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (3913ms)
+			LoadAssemblies (129ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (400ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (86ms)
+			SetupLoadedEditorAssemblies (3158ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (138ms)
+				ProcessInitializeOnLoadAttributes (2946ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (51ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7438 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8251.
+Memory consumption went from 330.2 MB to 326.8 MB.
+Total: 4.253800 ms (FindLiveObjects: 0.692400 ms CreateObjectMapping: 0.247700 ms MarkObjects: 2.922500 ms  DeleteObjects: 0.390100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010233 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.059 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4060ms)
+		BeginReloadAssembly (192ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (3745ms)
+			LoadAssemblies (125ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (399ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (88ms)
+			SetupLoadedEditorAssemblies (2991ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (135ms)
+				ProcessInitializeOnLoadAttributes (2782ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (14ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (46ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7438 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8254.
+Memory consumption went from 330.2 MB to 326.8 MB.
+Total: 5.552500 ms (FindLiveObjects: 0.687400 ms CreateObjectMapping: 0.252700 ms MarkObjects: 3.996900 ms  DeleteObjects: 0.613800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1513960.804671 seconds.
-  path: Assets/New UI Widgets/Scripts/ColorPicker/ColorPickerRangeHSV.cs
-  artifactKey: Guid(090ef637733ba684eadcab609b14c6a8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ColorPicker/ColorPickerRangeHSV.cs using Guid(090ef637733ba684eadcab609b14c6a8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'db4ba6b2d6e19f0e8f5ca7a64abb3ce5') in 0.257027 seconds 
+  Time since last request: 1775524.917401 seconds.
+  path: Assets/Resources/Prefabs/Camera
+  artifactKey: Guid(572b632dcaa14194fae3994f62c97149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Camera using Guid(572b632dcaa14194fae3994f62c97149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9581366ea8a9bcd55c8f8934036fd29') in 0.013578 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/Converter/ConverterInputField.cs
-  artifactKey: Guid(20562d33bec18c341bb8faf0cc50504d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Converter/ConverterInputField.cs using Guid(20562d33bec18c341bb8faf0cc50504d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '430e1e906824036aa1a91537825ef3c6') in 0.029250 seconds 
+  Time since last request: 10.640729 seconds.
+  path: Assets/Resources/Prefabs/Camera/PlayerCameraAudience.prefab
+  artifactKey: Guid(41f8eed6227a0414091bb393783e5153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Camera/PlayerCameraAudience.prefab using Guid(41f8eed6227a0414091bb393783e5153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4881e014fef9c3a9807ef5675d33bf3f') in 0.055875 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.003195 seconds.
-  path: Assets/New UI Widgets/Scripts/Utilities
-  artifactKey: Guid(3a10cb23ebe1d7c49b33b587379b4e33) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Utilities using Guid(3a10cb23ebe1d7c49b33b587379b4e33) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b7a9c75ea1ec93a562aaa0cacbf8e169') in 0.020940 seconds 
+  Time since last request: 75.975899 seconds.
+  path: Assets/Arts/Terrain/Scene_Terrain_Stands_Low
+  artifactKey: Guid(029e6968cc7112147916322a9d3ec569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/Terrain/Scene_Terrain_Stands_Low using Guid(029e6968cc7112147916322a9d3ec569) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0a76945196db8261caf2e538c20191') in 0.002230 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/New UI Widgets/Assets/Cursors/cursor_ew_resize.png
-  artifactKey: Guid(6849a3e9e15bf7d4c98cd8bb5762c7bb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Cursors/cursor_ew_resize.png using Guid(6849a3e9e15bf7d4c98cd8bb5762c7bb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a82aacacc7c74042eecc70dd4498c906') in 0.131125 seconds 
+  Time since last request: 0.198481 seconds.
+  path: Assets/Arts/Terrain/Scene_Terrain_Stands_Low/Scene_Terrain_Stands_Low.obj
+  artifactKey: Guid(33a32cdfbc094d846854988ce16b8c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/Terrain/Scene_Terrain_Stands_Low/Scene_Terrain_Stands_Low.obj using Guid(33a32cdfbc094d846854988ce16b8c27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dfdbd16722e83f6f4300d85a5d65cf9') in 1.194787 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Dialog/PickerIcons.cs
-  artifactKey: Guid(99acc3e5108820745bcf6e6c2621ee0f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Dialog/PickerIcons.cs using Guid(99acc3e5108820745bcf6e6c2621ee0f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0ca8c0f099549d12873cca367489ff6e') in 0.024481 seconds 
+  Time since last request: 2.497793 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_High.prefab
+  artifactKey: Guid(ebb7226d6abbd994a920187146d830b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_High.prefab using Guid(ebb7226d6abbd994a920187146d830b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '074fe0343a4986e5dd9ac1782a9c4a57') in 0.040477 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/Drag-and-Drop/DropIndicatorBase.cs
-  artifactKey: Guid(ac13be54f461e394ebb92dfba0e76188) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Drag-and-Drop/DropIndicatorBase.cs using Guid(ac13be54f461e394ebb92dfba0e76188) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '458b7a2dd85c37e53cc08c02e06e0ea3') in 0.031401 seconds 
+  Time since last request: 2.815241 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2db8e1da64d216238681f2bf1550233b') in 0.029813 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/New UI Widgets/Scripts/ScrollRectUtilities/ScrollRectHeader.cs
-  artifactKey: Guid(fb2d52b86d229d9458114a56d1bf2a2c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ScrollRectUtilities/ScrollRectHeader.cs using Guid(fb2d52b86d229d9458114a56d1bf2a2c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1b2e38f81a5edea9fc79947d64fa102c') in 0.020853 seconds 
+  Time since last request: 141.946244 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_High.prefab
+  artifactKey: Guid(ebb7226d6abbd994a920187146d830b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_High.prefab using Guid(ebb7226d6abbd994a920187146d830b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e1d77698437a5f2b9c835bd34cf581d') in 0.027537 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewString/ListViewString.cs
-  artifactKey: Guid(cfe642d4ddb9b6047999c01b38a55a84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewString/ListViewString.cs using Guid(cfe642d4ddb9b6047999c01b38a55a84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9d0f27302ed718acb9111da8f9bfa4f8') in 0.042995 seconds 
+  Time since last request: 14.928374 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7792f3ef8b0bf3dee0a7a61719851b3c') in 0.019276 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/New UI Widgets/Scripts/WidgetGeneration/ComboboxGeneratorHelper.cs
-  artifactKey: Guid(3a3c4e0fc8bd8744aa300904e7aeca5f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/WidgetGeneration/ComboboxGeneratorHelper.cs using Guid(3a3c4e0fc8bd8744aa300904e7aeca5f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e22a5ba519b6ec8fc11be9d9219d77ce') in 0.016979 seconds 
+  Time since last request: 0.977235 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd29b208c73c3a94e1e96b10646107021') in 0.019995 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport/recompilation.status
-  artifactKey: Guid(8b1fbe80f7518be41872eadbd10d7067) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport/recompilation.status using Guid(8b1fbe80f7518be41872eadbd10d7067) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cb4963e575b2337fa533102dc82f5eff') in 0.037111 seconds 
+  Time since last request: 0.382525 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c493aeb3817965de6c102b430bd6aea') in 0.018385 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelperList/SelectableHelperListPressedSprite.cs
-  artifactKey: Guid(5043a733724105440be6c1f2739f1ca2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelperList/SelectableHelperListPressedSprite.cs using Guid(5043a733724105440be6c1f2739f1ca2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '51533b684d32bfa6b0b92930aeee174a') in 0.034598 seconds 
+  Time since last request: 0.781939 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e30e81f447ab7c688346371022f6418') in 0.020367 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/New UI Widgets/Scripts/Drag-and-Drop/TreeViewCustomNodeDragSupport.cs
-  artifactKey: Guid(37f19146757db974a874a7d6d45827e1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Drag-and-Drop/TreeViewCustomNodeDragSupport.cs using Guid(37f19146757db974a874a7d6d45827e1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '12fa3e55f22ca1e08fd1e7360bcf2727') in 0.008266 seconds 
+  Time since last request: 0.378936 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0ad334c580ed7b440e73c9c230a7be8') in 0.019066 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/ListViewString.prefab
-  artifactKey: Guid(bd6fd0049da47004395086b3c24580c2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/ListViewString.prefab using Guid(bd6fd0049da47004395086b3c24580c2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd3f6fa77aae48930345de68258a7b156') in 0.279954 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/ColorsList.prefab
-  artifactKey: Guid(8f9dca7ac42848d4e8429da63c2f67d2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/ColorsList.prefab using Guid(8f9dca7ac42848d4e8429da63c2f67d2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '363cb9e6c12cc4e23a9faa2c54dfa48f') in 0.156153 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Arts/Water
-  artifactKey: Guid(795ff8c08f5f0fa4888bd66daef16ef3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Arts/Water using Guid(795ff8c08f5f0fa4888bd66daef16ef3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3105e696652b1d4d2cb68fb60bca7ce7') in 0.013613 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/TreeView/TreeViewDataSourceItem.cs
-  artifactKey: Guid(4d7a29e0d5fc39347a11f080d254e403) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/TreeView/TreeViewDataSourceItem.cs using Guid(4d7a29e0d5fc39347a11f080d254e403) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '296051e312c5c266df6832c6d5317bd0') in 0.037072 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.009965 seconds.
-  path: Assets/New UI Widgets/Assets/Shaders/UIGradientShaderVLineHSV.shader
-  artifactKey: Guid(a7f0605273913b241ab9edfd96624ecb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Shaders/UIGradientShaderVLineHSV.shader using Guid(a7f0605273913b241ab9edfd96624ecb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c0d10f3351b6e3f6dbb2543ae3dd8b08') in 0.036408 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/SliderScale/Scale.cs
-  artifactKey: Guid(09a56b521e968b440be6ffa30c9cb517) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/SliderScale/Scale.cs using Guid(09a56b521e968b440be6ffa30c9cb517) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '25ec848d169df1c00d858e74ea2d9b85') in 0.034680 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport/Scripts/Calendar
-  artifactKey: Guid(4e3f9404e602cf64684bf3a6795d25c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport/Scripts/Calendar using Guid(4e3f9404e602cf64684bf3a6795d25c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '95be9f54dbf7413192234681cb760cd1') in 0.017038 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001591 seconds.
-  path: Assets/New UI Widgets/Assets/DataBindTemplates.asset
-  artifactKey: Guid(48d6be4465afc704fad81633397bf474) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/DataBindTemplates.asset using Guid(48d6be4465afc704fad81633397bf474) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3b0098168230121b81b43c27f2cb292f') in 0.022342 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/New UI Widgets/Scripts/SnapGrid/SnapGrid.cs
-  artifactKey: Guid(d80ff16d57d7f1a45a15b68c2f389408) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/SnapGrid/SnapGrid.cs using Guid(d80ff16d57d7f1a45a15b68c2f389408) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ac37d328ff3d412013620da6f9992fee') in 0.056383 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Progressbar/ProgressbarMaxSetter.cs
-  artifactKey: Guid(8de7fb1ea93f46f4684dbb7e42326881) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Progressbar/ProgressbarMaxSetter.cs using Guid(8de7fb1ea93f46f4684dbb7e42326881) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3711cafc18f2caeeb5dd9abe0941e284') in 0.010421 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/New UI Widgets/Scripts/Utilities/UtilitiesEditor.cs
-  artifactKey: Guid(8440a823515c81449b63f4327d3acbe7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Utilities/UtilitiesEditor.cs using Guid(8440a823515c81449b63f4327d3acbe7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '37b3f160c581cbef0143b5aed7f0c99f') in 0.013232 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/Dialogs/PickerListView.template.txt
-  artifactKey: Guid(8f1b3e52d3aa5d745b6e523f18d15207) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/Dialogs/PickerListView.template.txt using Guid(8f1b3e52d3aa5d745b6e523f18d15207) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b8c6fa55867a44635dcec7946e3f3085') in 0.030795 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/Listeners
-  artifactKey: Guid(3ac6d0d8c11f9ed40ab1bc422ff7cb61) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Listeners using Guid(3ac6d0d8c11f9ed40ab1bc422ff7cb61) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd68c9b1f9fa16f6f5970a0cd6d60dd74') in 0.022372 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/Templates
-  artifactKey: Guid(52cec0a21c61fd8418eb3c7df02a4493) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/Templates using Guid(52cec0a21c61fd8418eb3c7df02a4493) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '49bdfd354962fe9bc6b228e599238d04') in 0.018176 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/Switch/SwitchBackgroundOnColor.cs
-  artifactKey: Guid(964e613a6ab7e5e41952c5b0788a42af) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/Switch/SwitchBackgroundOnColor.cs using Guid(964e613a6ab7e5e41952c5b0788a42af) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0d8504e3a64ced18b3cde9225c61a7db') in 0.020025 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Dialogs/StyleSupportNotify.cs
-  artifactKey: Guid(8e9a2e513458e0a4eb45a88757bf51f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Dialogs/StyleSupportNotify.cs using Guid(8e9a2e513458e0a4eb45a88757bf51f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2112e175781522033ec17f0e0cf98fe0') in 0.037664 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/New UI Widgets/Scripts/ColorPicker/Events/ColorAlphaChangedEvent.cs
-  artifactKey: Guid(76a2ae5ac6fbe8d499a45b14bb02f849) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ColorPicker/Events/ColorAlphaChangedEvent.cs using Guid(76a2ae5ac6fbe8d499a45b14bb02f849) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b7997c051909ac8e669960b04a797a32') in 0.034171 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Calendar/TimeBaseTimeSynchronizer.cs
-  artifactKey: Guid(68826358e857efe4e877fe14a23c0733) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Calendar/TimeBaseTimeSynchronizer.cs using Guid(68826358e857efe4e877fe14a23c0733) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '5fbea0693f442fdad61927e72476f6de') in 0.017356 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/ScrollRectUtilities/ScrollButton.cs
-  artifactKey: Guid(39d2918bd82858047ba3d95101a50e2a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ScrollRectUtilities/ScrollButton.cs using Guid(39d2918bd82858047ba3d95101a50e2a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0b3529c9a7019fb361c462f2f79163d5') in 0.032026 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Editor.Conditions/EditorConditionBoolAttribute.cs
-  artifactKey: Guid(08077f066cb7fff4498b03a30d9a69e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Editor.Conditions/EditorConditionBoolAttribute.cs using Guid(08077f066cb7fff4498b03a30d9a69e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e6b6a9e7d0c31deb5ffd0317c25c1d19') in 0.019079 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/Converter
-  artifactKey: Guid(91c23f731032c0649b92539754ca1c35) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Converter using Guid(91c23f731032c0649b92539754ca1c35) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6ee10e2ccad6ac1791d4c783483720fb') in 0.015753 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/CollectionsUtilities/PoolEnumeratorMode.cs
-  artifactKey: Guid(833296d6e4262ba429ccb565f6b3a3c1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/CollectionsUtilities/PoolEnumeratorMode.cs using Guid(833296d6e4262ba429ccb565f6b3a3c1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a2181d9581aeccf8421e2c06f2989701') in 0.017584 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/Accordion/AccordionHighlightDefaultBackgroundColor.cs
-  artifactKey: Guid(d937b68053f181e408a54b9c38af75cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/Accordion/AccordionHighlightDefaultBackgroundColor.cs using Guid(d937b68053f181e408a54b9c38af75cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'acc6d948c73e8d766675b06cab92c59b') in 0.016555 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/ButtonSmall.prefab
-  artifactKey: Guid(48f610d8b79d08a4f95a71182cdafe7a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/ButtonSmall.prefab using Guid(48f610d8b79d08a4f95a71182cdafe7a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '717db6a976ad1f582ca1e0a2c20bd0e4') in 0.054825 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/TreeView/TreeViewSelectedNodesSetter.cs
-  artifactKey: Guid(9fb8e310b9791264582a8ba3da6db27b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/TreeView/TreeViewSelectedNodesSetter.cs using Guid(9fb8e310b9791264582a8ba3da6db27b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '89d4750ea6e1386845096493c8f51036') in 0.024085 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.004893 seconds.
-  path: Assets/New UI Widgets/Editor/Unity/AssemblyDefinitionsEditor.cs
-  artifactKey: Guid(077a1823c1c985e47abf2d12fe19f073) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/Unity/AssemblyDefinitionsEditor.cs using Guid(077a1823c1c985e47abf2d12fe19f073) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '42c4d58abc206b3643dc952fc9b7d91c') in 0.008604 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/Accordion.prefab
-  artifactKey: Guid(6ebe13f12b4a9014aa8e72af3a3e0518) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/Accordion.prefab using Guid(6ebe13f12b4a9014aa8e72af3a3e0518) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '20d34b814eb5d8944236373aee4ec96d') in 0.172184 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Editor/TMProSupport
-  artifactKey: Guid(da22eef1a1d4e814f9b20b46b3daedd9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/TMProSupport using Guid(da22eef1a1d4e814f9b20b46b3daedd9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6b2f34cf456f7132c5e78839b0283e10') in 0.032156 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewString/ListViewStringItemComponent.cs
-  artifactKey: Guid(c7cddd1f46f25ed40a43d9313429fae8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewString/ListViewStringItemComponent.cs using Guid(c7cddd1f46f25ed40a43d9313429fae8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0a0b53f75645edf30dea3249813e1e3b') in 0.025367 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Editor/ContextMenuEditor.cs
-  artifactKey: Guid(5c92b369bfd762f44b093d710c90df71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/ContextMenuEditor.cs using Guid(5c92b369bfd762f44b093d710c90df71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1a2250b1f6def9a85caee607a859deb1') in 0.031116 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/Collections/AutoCombobox.template.txt
-  artifactKey: Guid(d05e55267b2b120409a78b0feb94ba6d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/Collections/AutoCombobox.template.txt using Guid(d05e55267b2b120409a78b0feb94ba6d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'fc8462740c20089c58bd52f0d33b258c') in 0.016692 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.003391 seconds.
-  path: Assets/New UI Widgets/Assets/Cursors/cursor_nwse_resize.png
-  artifactKey: Guid(a11340f3ef0069e41bf169ad8846defc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Cursors/cursor_nwse_resize.png using Guid(a11340f3ef0069e41bf169ad8846defc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a0c4fbc32ef790707067a9a790a26d7a') in 0.051956 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/DistanceLines
-  artifactKey: Guid(1e939d68da453434787c259f3775f86d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/DistanceLines using Guid(1e939d68da453434787c259f3775f86d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b1f2a57542c4e3f8a015fc0c1ad8d262') in 0.031089 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/New UI Widgets/Assets/Shaders/UIWidgets.cginc
-  artifactKey: Guid(99b5b4e3a757d564ab851521ae2f489b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Shaders/UIWidgets.cginc using Guid(99b5b4e3a757d564ab851521ae2f489b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd3697815c2b0e404751779bead431eff') in 0.039808 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/New UI Widgets/Scripts/TreeView/TreeNodeJson.cs
-  artifactKey: Guid(5ad3a28370c864b46ada200169453894) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/TreeView/TreeNodeJson.cs using Guid(5ad3a28370c864b46ada200169453894) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4d65dd4cb9919ffaf4367cf3ad52ec52') in 0.017849 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Spinner/Float/SpinnerFloatStepSetter.cs
-  artifactKey: Guid(602ec60a3194f9f4b8979ad03fa11948) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Spinner/Float/SpinnerFloatStepSetter.cs using Guid(602ec60a3194f9f4b8979ad03fa11948) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '760a366c5f0d7cebd447368d094b4894') in 0.036075 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/ContextMenu/ContextMenu.cs
-  artifactKey: Guid(6d1bd0c50a7662848b8a8ac17930032b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ContextMenu/ContextMenu.cs using Guid(6d1bd0c50a7662848b8a8ac17930032b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b5ab3841068dc97fac49fbfa64f5ad83') in 0.030198 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/New UI Widgets/Scripts/Attributes/DataBindFieldAttribute.cs
-  artifactKey: Guid(2145c48d666a707459e8e5a31e3fd28d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Attributes/DataBindFieldAttribute.cs using Guid(2145c48d666a707459e8e5a31e3fd28d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b749be70d4e86b3ace6131690fffa175') in 0.024526 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.006955 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelperList/SelectableHelperListDisabledSprite.cs
-  artifactKey: Guid(f0b5e7d9c6166674cb5f352ea8f988ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelperList/SelectableHelperListDisabledSprite.cs using Guid(f0b5e7d9c6166674cb5f352ea8f988ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'f28563f9c00fd86316ad907a9fee5289') in 0.033527 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/ScrollBlock
-  artifactKey: Guid(9b3957617c474ec4eb1e50167a2b3e7e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ScrollBlock using Guid(9b3957617c474ec4eb1e50167a2b3e7e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '681f7cc0c7fe1560145bc6e708a7354a') in 0.011150 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelper/SelectableHelperNormalColor.cs
-  artifactKey: Guid(e026b3ec9a7dbcd4b880d5c249137222) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelper/SelectableHelperNormalColor.cs using Guid(e026b3ec9a7dbcd4b880d5c249137222) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8ee6faf1b18eb1f1f5d1e310cc8f01d6') in 0.014790 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/Collections/TreeGraph.template.txt
-  artifactKey: Guid(71cadf787e75fa542a097cf6950bb656) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/Collections/TreeGraph.template.txt using Guid(71cadf787e75fa542a097cf6950bb656) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'fff1f65569a69890150a457fa708c6a7') in 0.010051 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/TreeView.prefab
-  artifactKey: Guid(6b8f259dc93cd154786739045597d9d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/TreeView.prefab using Guid(6b8f259dc93cd154786739045597d9d1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3fbbf014e30d01d00ad3965e54fc4c1f') in 0.134502 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/Templates/ComboboxMultiselectTemplate.prefab
-  artifactKey: Guid(f679564ccb40ad942a27eafab5c50286) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/Templates/ComboboxMultiselectTemplate.prefab using Guid(f679564ccb40ad942a27eafab5c50286) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '123656916c70c90f2f3182127307585b') in 0.056508 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.007438 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/IO/DirectoryTreeView/DirectoryTreeViewSelectedNodesSynchronizer.cs
-  artifactKey: Guid(c5a467f79cd1ddf4e8a80faf1bdfc1d2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/IO/DirectoryTreeView/DirectoryTreeViewSelectedNodesSynchronizer.cs using Guid(c5a467f79cd1ddf4e8a80faf1bdfc1d2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8f5d32f9fb4b2b6d11ed30eb53d7ac32') in 0.022904 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Input
-  artifactKey: Guid(900c3f5d6a596fc4f9a8d4cbf625d055) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Input using Guid(900c3f5d6a596fc4f9a8d4cbf625d055) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '77c9bf39a7c1dca0386d9dff9f29f981') in 0.028290 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/New UI Widgets/Scripts/IO/FileListViewPathComponentBase.cs
-  artifactKey: Guid(fd5bf1c0ea82aa344aede59f46bec428) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/IO/FileListViewPathComponentBase.cs using Guid(fd5bf1c0ea82aa344aede59f46bec428) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '568c2e52ddb9a936e3a2de0011f07be2') in 0.012785 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/WidgetGeneration/DataBindSupport/DataBindGenerator.cs
-  artifactKey: Guid(6f4bf31e527468f43a55e4865c0d7c83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/WidgetGeneration/DataBindSupport/DataBindGenerator.cs using Guid(6f4bf31e527468f43a55e4865c0d7c83) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2d3af7c261295df43af02397e852f9f4') in 0.027148 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Collections/StyleFileListView.cs
-  artifactKey: Guid(bfbc4b21a8f56b943bf107e26f9eaac9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Collections/StyleFileListView.cs using Guid(bfbc4b21a8f56b943bf107e26f9eaac9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'f92e47ea2de4cf164a0be9bf5d1d70a3') in 0.012658 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport/Scripts/Utilities/InputFieldTMProProxy.cs
-  artifactKey: Guid(c69b98bf0eb7930438b18042a9fcc642) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport/Scripts/Utilities/InputFieldTMProProxy.cs using Guid(c69b98bf0eb7930438b18042a9fcc642) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '5db91c562a1deeaf5524cc0a419f00c5') in 0.026330 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/New UI Widgets/Scripts/ScrollBlock/ScrollBlockItem.cs
-  artifactKey: Guid(994d5656a2b425e42b3df694aa5094de) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ScrollBlock/ScrollBlockItem.cs using Guid(994d5656a2b425e42b3df694aa5094de) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e61bd5252537051a82179e237e0b14d4') in 0.038752 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Dialogs/StyleSupportButtonClose.cs
-  artifactKey: Guid(fb2760dece36b4a478b4781885e4670d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Dialogs/StyleSupportButtonClose.cs using Guid(fb2760dece36b4a478b4781885e4670d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '7741e83ac2c92b3a78dde91d1e7e1e2a') in 0.008348 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000089 seconds.
-  path: Assets/New UI Widgets/Scripts/Effects/LinesDrawer.cs
-  artifactKey: Guid(ed15f1656ca8eae429730a82e5ab2125) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Effects/LinesDrawer.cs using Guid(ed15f1656ca8eae429730a82e5ab2125) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '818d9398146ada23bb9ee7d8b544ee96') in 0.017910 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Autocomplete/AutoCombobox.cs
-  artifactKey: Guid(9236e7a143834b34cbb2ee55ffc5894e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Autocomplete/AutoCombobox.cs using Guid(9236e7a143834b34cbb2ee55ffc5894e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b9752810faf1ed2bde6d03ae68308425') in 0.025250 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/BlueStyle/blue-scrollbar-background.png
-  artifactKey: Guid(6914e4c3271e398438bd8da65de0eb5d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/BlueStyle/blue-scrollbar-background.png using Guid(6914e4c3271e398438bd8da65de0eb5d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a34ef7987c301d56cd5ebfc21e4f5845') in 0.033140 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/TreeView/TreeViewCustomToggleAnimation.cs
-  artifactKey: Guid(e1b935454b1f41145b9d68ff0145e306) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/TreeView/TreeViewCustomToggleAnimation.cs using Guid(e1b935454b1f41145b9d68ff0145e306) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6ad76007f62dd322af28da52ca621be2') in 0.010940 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/New UI Widgets/UI Themes/Scripts/Wrappers/Selectable/SelectableNormalColor.cs
-  artifactKey: Guid(41415bf736653c54084994cd4020c10e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Scripts/Wrappers/Selectable/SelectableNormalColor.cs using Guid(41415bf736653c54084994cd4020c10e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c97f3d76c828033a75f0841e67f33562') in 0.012758 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/ListView/ListViewHeight/ListViewHeightSelectedItemsObserver.cs
-  artifactKey: Guid(e89f72c7d8f66314fb9e74a830df8f0c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/ListView/ListViewHeight/ListViewHeightSelectedItemsObserver.cs using Guid(e89f72c7d8f66314fb9e74a830df8f0c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2ab39dbd46253f80472c2acba19f368a') in 0.031530 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/AudioPlayer.prefab
-  artifactKey: Guid(d46f9b3ff4727d94bb9385aa5f66c549) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/AudioPlayer.prefab using Guid(d46f9b3ff4727d94bb9385aa5f66c549) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '89ed83f0dcad8c5f88f4c88f67e49a47') in 0.045154 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/UI Themes/Editor/ThemeTarget/ThemeTargetsWindow.cs
-  artifactKey: Guid(99ae5a49975aae54db4ef859b2cddef1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Editor/ThemeTarget/ThemeTargetsWindow.cs using Guid(99ae5a49975aae54db4ef859b2cddef1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '938589291e5a1b6285e197828b29fc0d') in 0.024144 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/IO/FileListView/FileListViewSelectedItemsProvider.cs
-  artifactKey: Guid(1ab95949c03b2ee43b48ec5de713dafe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/IO/FileListView/FileListViewSelectedItemsProvider.cs using Guid(1ab95949c03b2ee43b48ec5de713dafe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '39d2bd0591688a5dfb50d206fb35d5ed') in 0.028949 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/UI Themes/Samples/Assets
-  artifactKey: Guid(824fa79bee95ffe48a311463893b4752) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Samples/Assets using Guid(824fa79bee95ffe48a311463893b4752) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cebdf90914c405cabf379b8c6966391f') in 0.022121 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/DefaultStyle/spinner_up.png
-  artifactKey: Guid(f058d4396fa2e9643b71a544535fcae0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/DefaultStyle/spinner_up.png using Guid(f058d4396fa2e9643b71a544535fcae0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'add179d5c9b9b750fd1d38f6b047344d') in 0.046545 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/ListView/ListViewHeight/ListViewHeightSelectedItemObserver.cs
-  artifactKey: Guid(660847be40333084fbdaf95746a77f90) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/ListView/ListViewHeight/ListViewHeightSelectedItemObserver.cs using Guid(660847be40333084fbdaf95746a77f90) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e1f92edf1b20d6a628106fdb9b564b7e') in 0.033215 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Updater/IUpdaterProxy.cs
-  artifactKey: Guid(71521049812ca8b42920e00b2051c65d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Updater/IUpdaterProxy.cs using Guid(71521049812ca8b42920e00b2051c65d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2f4f415bcb05770138f3335295d57505') in 0.035328 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Core/MonoBehaviourConditional.cs
-  artifactKey: Guid(b239895f5e8d2e1488c746ac0b0e50ef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Core/MonoBehaviourConditional.cs using Guid(b239895f5e8d2e1488c746ac0b0e50ef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '91a1b7993a3b9aa3c95494828d19b47f') in 0.023549 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewString/ListViewHeight.cs
-  artifactKey: Guid(adbe1e0787e12b24eb3b1a46ce3db587) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewString/ListViewHeight.cs using Guid(adbe1e0787e12b24eb3b1a46ce3db587) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a978b525467713c88c9bbef3dcd72c0f') in 0.019827 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/New UI Widgets/UI Themes/Scripts/Wrappers/Selectable/SelectableHighlightedSprite.cs
-  artifactKey: Guid(d64e7489ec4b05243a6ec49be213b74e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Scripts/Wrappers/Selectable/SelectableHighlightedSprite.cs using Guid(d64e7489ec4b05243a6ec49be213b74e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '92b62e26144b9d7ca99766310b8599e6') in 0.015962 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/Drag-and-Drop/DragSupport.cs
-  artifactKey: Guid(24527fb9156c00d4da20c2fefd80eddf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Drag-and-Drop/DragSupport.cs using Guid(24527fb9156c00d4da20c2fefd80eddf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b6b93dd1e97fceee83e05517d1cdea17') in 0.025167 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000068 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/Events/ListViewEvent.cs
-  artifactKey: Guid(8884656bc0be6c546ac2b8d41072a5d0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/Events/ListViewEvent.cs using Guid(8884656bc0be6c546ac2b8d41072a5d0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e6846d0f3428d5c856095aa21f2d0d3b') in 0.011063 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/New UI Widgets/Scripts/Spinner/Event
-  artifactKey: Guid(2a8c8f61626f572488c1c9623ac8fcbd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Spinner/Event using Guid(2a8c8f61626f572488c1c9623ac8fcbd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8bea096b9c355784a133b75db7c50e99') in 0.014490 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Vertical/CenteredSliderVerticalValueMaxSetter.cs
-  artifactKey: Guid(8b1b5555fb961ba4ea8de05259bb43e6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Vertical/CenteredSliderVerticalValueMaxSetter.cs using Guid(8b1b5555fb961ba4ea8de05259bb43e6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '69dafc2d427c2c5448f64a8f46a007af') in 0.008967 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/Time12.prefab
-  artifactKey: Guid(2c97875ab91d6584b8701185d1fe7796) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/Time12.prefab using Guid(2c97875ab91d6584b8701185d1fe7796) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd6f64c6a18ef81fd891a932ecb017873') in 0.090690 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/ListView/ListViewHeight/ListViewHeightSelectedItemsProvider.cs
-  artifactKey: Guid(afbca5bbf6f9a6e4a84195966b3b7b72) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/ListView/ListViewHeight/ListViewHeightSelectedItemsProvider.cs using Guid(afbca5bbf6f9a6e4a84195966b3b7b72) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'bf17cafa99682fef77e5bc20b3c308eb') in 0.021563 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/Collections/ListViewSelectedColor.cs
-  artifactKey: Guid(294bcc879a05ba74791395d527a67820) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/Collections/ListViewSelectedColor.cs using Guid(294bcc879a05ba74791395d527a67820) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '590b471bc15c8c68fcc174cfe4cf100d') in 0.028022 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/New UI Widgets/Scripts/References/PrefabsTemplates.cs
-  artifactKey: Guid(54a10eb8c41008c439fd173e1d17ae65) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/References/PrefabsTemplates.cs using Guid(54a10eb8c41008c439fd173e1d17ae65) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '81fb02d409746fbb05b2bb57b0cfc550') in 0.015762 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/SliderScale/ScaleMarkTemplate.cs
-  artifactKey: Guid(0420e6a0bfe642743a31169755cd6cbb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/SliderScale/ScaleMarkTemplate.cs using Guid(0420e6a0bfe642743a31169755cd6cbb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '096fc3e5fea4fe02e89b7e3eef2b6326') in 0.021254 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/IO/DirectoryTreeView.cs
-  artifactKey: Guid(0a3eb4e158bf0ee418986cb37f10d1fb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/IO/DirectoryTreeView.cs using Guid(0a3eb4e158bf0ee418986cb37f10d1fb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '66b8f29e9207373255d762457dc6b143') in 0.028770 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/Templates/TileViewTemplate.prefab
-  artifactKey: Guid(39b137aa840da9640a143a44538f0bb7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/Templates/TileViewTemplate.prefab using Guid(39b137aa840da9640a143a44538f0bb7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0c536258da4d85afc0df200e2f39583c') in 0.054642 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/Pinchable/Pinchable.cs
-  artifactKey: Guid(6abf8bdc9f0adf54abe0403b36e1dd51) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Pinchable/Pinchable.cs using Guid(6abf8bdc9f0adf54abe0403b36e1dd51) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '31f5e92077e7f43171d016ecf05129e4') in 0.053676 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/New UI Widgets/Editor/ListView/TreeViewCustomEditor.cs
-  artifactKey: Guid(b4242b08b11ae5c4a83f469cd9cdf235) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/ListView/TreeViewCustomEditor.cs using Guid(b4242b08b11ae5c4a83f469cd9cdf235) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '60b64826fcf24971712355e88fd80d9e') in 0.020147 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewType/ListViewTypeRectangle.cs
-  artifactKey: Guid(8461d81ced37a444e9d2c01dacb09318) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewType/ListViewTypeRectangle.cs using Guid(8461d81ced37a444e9d2c01dacb09318) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4658cb5f346765f69a99070aa3565a2c') in 0.019783 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/Converter/ConverterTMPro.cs
-  artifactKey: Guid(fe9b18fd85432e742a355d39c329f474) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Converter/ConverterTMPro.cs using Guid(fe9b18fd85432e742a355d39c329f474) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9aa886c70e0bc00968b6903280c35db8') in 0.014456 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Sprites/border_1px.png
-  artifactKey: Guid(e2e478004de8dcf44bf61a74de9ef57f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Sprites/border_1px.png using Guid(e2e478004de8dcf44bf61a74de9ef57f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8cb0ec3252c32a52814324977e28d0dd') in 0.073963 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001626 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/ListViewStringHeight.prefab
-  artifactKey: Guid(1457996d56bcf9c4884505c2b77d4bf1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/ListViewStringHeight.prefab using Guid(1457996d56bcf9c4884505c2b77d4bf1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8fda67935f9c76a647091b1804cf8d65') in 0.077084 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/Editor.Conditions
-  artifactKey: Guid(7c29da311a12fad4483fdcf638a5de5d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Editor.Conditions using Guid(7c29da311a12fad4483fdcf638a5de5d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e7d5e13c3d4cfa7737ca34268814a7c2') in 0.020455 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/DirectoryTreeView.prefab
-  artifactKey: Guid(25fb6fd97f7002749be2a5893e739464) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/DirectoryTreeView.prefab using Guid(25fb6fd97f7002749be2a5893e739464) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '15f9885301e25df4b0e608cb88cc4d50') in 0.151682 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/New UI Widgets/Assets/Shaders/UIGrayscale.shader
-  artifactKey: Guid(421e9f927fd0a094cae4be131b2c1857) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Shaders/UIGrayscale.shader using Guid(421e9f927fd0a094cae4be131b2c1857) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '25e08dc5a4d9151695aa6b0a9798b0d5') in 0.027732 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Collections
-  artifactKey: Guid(a383c36fbed3feb42b70709ae43a987c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Collections using Guid(a383c36fbed3feb42b70709ae43a987c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3a9b0d280339b8560f647972da8ddc78') in 0.010392 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/Tooltips
-  artifactKey: Guid(2aa35752b109262488bb461cc0484ad3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Tooltips using Guid(2aa35752b109262488bb461cc0484ad3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cdf8695f09ac21312104944d382a324d') in 0.026399 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/DateScroller.prefab
-  artifactKey: Guid(275c3a5e90f4d5843bf0576651b0c069) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/DateScroller.prefab using Guid(275c3a5e90f4d5843bf0576651b0c069) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0de3fdb681853b28ed8455cd515cfe77') in 0.059332 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001192 seconds.
-  path: Assets/New UI Widgets/UI Themes/Samples/Scripts/RotatedSpriteView.cs
-  artifactKey: Guid(26c5667cea53eaf4d96299235e1205ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Samples/Scripts/RotatedSpriteView.cs using Guid(26c5667cea53eaf4d96299235e1205ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a1a8f2dc13871b6c1778fda2836cc444') in 0.009219 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/IO/FileListView/FileListViewSelectedItemProvider.cs
-  artifactKey: Guid(b2ffa712c1fc5144db0d3d0a7dfe9d4d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/IO/FileListView/FileListViewSelectedItemProvider.cs using Guid(b2ffa712c1fc5144db0d3d0a7dfe9d4d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3191560a138a6ff71c8edd46c3b7693b') in 0.026003 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelper/SelectableHelperHighlightedSprite.cs
-  artifactKey: Guid(a407e5ff5ae4e9d45bcf3affecfd9d13) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelper/SelectableHelperHighlightedSprite.cs using Guid(a407e5ff5ae4e9d45bcf3affecfd9d13) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '060e8cd1db4ddb61dbe63ea3e91b5848') in 0.012653 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000105 seconds.
-  path: Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/TestItemOff.template.txt
-  artifactKey: Guid(029c52c9c4a36a6489ded78b68736a3a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/TestItemOff.template.txt using Guid(029c52c9c4a36a6489ded78b68736a3a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '410ec3e62f947ec0c4e7611d38efe969') in 0.020485 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/Calendar/TimePicker.cs
-  artifactKey: Guid(e8ffafebe90ce294faa69555d48e5129) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Calendar/TimePicker.cs using Guid(e8ffafebe90ce294faa69555d48e5129) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '7eab64801202ed5e1669bb65480fcbbd') in 0.011010 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/TreeGraph/TreeGraphComponentIcons.cs
-  artifactKey: Guid(863a83eacb2d90745926f9ea6bc8a9ba) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/TreeGraph/TreeGraphComponentIcons.cs using Guid(863a83eacb2d90745926f9ea6bc8a9ba) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0208b6fa8003ae076f1ef3ac3bb51fde') in 0.017611 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/Accordion
-  artifactKey: Guid(d5a46f9a236cab149a3f48519909e85b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Accordion using Guid(d5a46f9a236cab149a3f48519909e85b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '76f2035ec4545f4cfc1256a4cd2914a0') in 0.015454 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport
-  artifactKey: Guid(cd38b3043ce53d54b8f534f4de095a75) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport using Guid(cd38b3043ce53d54b8f534f4de095a75) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'bbcfd24f7eb93579ba0ae7bb2e718e7d') in 0.010880 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/Calendar/TimeSpinnerBase.cs
-  artifactKey: Guid(5d40b987f3f9df348b2ffbd114e4fbcf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Calendar/TimeSpinnerBase.cs using Guid(5d40b987f3f9df348b2ffbd114e4fbcf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ab064b8e1290606b683bccac7710631a') in 0.010206 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/IO/FileSystemEntry.cs
-  artifactKey: Guid(23fd792cc5126e24abaa0607a3e3d885) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/IO/FileSystemEntry.cs using Guid(23fd792cc5126e24abaa0607a3e3d885) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '693c958db6b64852261478e1fbbf6170') in 0.018750 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/Dialog/PickerOptionalOK{TValue,TPicker}.cs
-  artifactKey: Guid(2759458a3940afa4a86bb64cdfb7bc00) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Dialog/PickerOptionalOK{TValue,TPicker}.cs using Guid(2759458a3940afa4a86bb64cdfb7bc00) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c3127a819144eb144dd6bf8d88305cf7') in 0.018058 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/ListViewString.prefab
-  artifactKey: Guid(1b6ba138f2dcde340a6552281b92340f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/ListViewString.prefab using Guid(1b6ba138f2dcde340a6552281b92340f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c2df6e558759b96aeddf03995c709e0a') in 0.047921 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Input/StyleTime.cs
-  artifactKey: Guid(f000dd8d8547fb348a3f0719d498d87e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Input/StyleTime.cs using Guid(f000dd8d8547fb348a3f0719d498d87e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0940f5338dd37e9f016e99f377a6b604') in 0.027175 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.006419 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/BlueStyle/blue-dialog-delimiter.png
-  artifactKey: Guid(c7e96bec8355ba94c8fd85674c15928c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/BlueStyle/blue-dialog-delimiter.png using Guid(c7e96bec8355ba94c8fd85674c15928c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '899a3c7f8441f854955a99204fb32fba') in 0.080793 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/New UI Widgets/Scripts/EasyLayout/EasyLayoutCompact.cs
-  artifactKey: Guid(888bcc23c9e0cbf4c9a9096c28976984) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/EasyLayout/EasyLayoutCompact.cs using Guid(888bcc23c9e0cbf4c9a9096c28976984) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3ae836984cbf5b3f4d15d78571e80331') in 0.047403 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/New UI Widgets/Scripts/Connector/ConnectorLine.cs
-  artifactKey: Guid(f70a57a6816b21942b9927c246940e1e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Connector/ConnectorLine.cs using Guid(f70a57a6816b21942b9927c246940e1e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '28c55a0ac22af4c68033ab1fc8b68ecc') in 0.033382 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/New UI Widgets/Scripts/Drag-and-Drop/LayoutDropIndicator.cs
-  artifactKey: Guid(f4811c8800dafa446be3e52209fea398) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Drag-and-Drop/LayoutDropIndicator.cs using Guid(f4811c8800dafa446be3e52209fea398) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cf364d08667a83ebb6dbdc2c5a7351eb') in 0.036352 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000083 seconds.
-  path: Assets/New UI Widgets/Scripts
-  artifactKey: Guid(1a0ae82418872774d8240b5bc4df7d06) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts using Guid(1a0ae82418872774d8240b5bc4df7d06) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1dd3217ee6f3dfec7b1c475516c53273') in 0.007170 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/DefaultStyle/tab_inactive_mask_h.png
-  artifactKey: Guid(9cd17873aeef1324cbf5dcc9734d26dd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/DefaultStyle/tab_inactive_mask_h.png using Guid(9cd17873aeef1324cbf5dcc9734d26dd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '372c833c00b54b9d892082368efa2a20') in 0.079796 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewType/ListViewTypeEllipse.cs
-  artifactKey: Guid(46c8db5ed92342d4fbc1387ab2e07f26) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewType/ListViewTypeEllipse.cs using Guid(46c8db5ed92342d4fbc1387ab2e07f26) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '91271595a0ad9f6b8842968b051ba2d7') in 0.010480 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Vertical/CenteredSliderVerticalUseValueLimitsSetter.cs
-  artifactKey: Guid(44b7d3111ef28be45bb198f6593c6c3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Vertical/CenteredSliderVerticalUseValueLimitsSetter.cs using Guid(44b7d3111ef28be45bb198f6593c6c3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'fb90ad41a44471a0d49a79be772ffcba') in 0.070126 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelper/SelectableHelperDisabledSprite.cs
-  artifactKey: Guid(1fa4e316c1d26fa4fa27098bee903a7e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelper/SelectableHelperDisabledSprite.cs using Guid(1fa4e316c1d26fa4fa27098bee903a7e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ef40883e8cb13484238c97369c2a70ce') in 0.018495 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/TimePicker.prefab
-  artifactKey: Guid(7951d0ed20953984a9669cc52732e5bc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/TimePicker.prefab using Guid(7951d0ed20953984a9669cc52732e5bc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a30af88655f5e5284a39903889ebfc27') in 0.088270 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/New UI Widgets/Scripts/Spinner/Event/OnChangeEventFloat.cs
-  artifactKey: Guid(1caf14de15b4bc547b5a4d9deacc8734) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Spinner/Event/OnChangeEventFloat.cs using Guid(1caf14de15b4bc547b5a4d9deacc8734) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b4247276533b5cfe45be411123c688f4') in 0.020009 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/New UI Widgets/Scripts/Connector/ILineBuilder.cs
-  artifactKey: Guid(8e305f6253c19044f939d66c404ddde8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Connector/ILineBuilder.cs using Guid(8e305f6253c19044f939d66c404ddde8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd9a70c897c88d3cce4ae84ab4fa63d76') in 0.011005 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/TracksView/TrackBackgroundBase.cs
-  artifactKey: Guid(5a784b3538e331b46946b3ae7bdf5bfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/TracksView/TrackBackgroundBase.cs using Guid(5a784b3538e331b46946b3ae7bdf5bfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '29a1965e828bc3c3df756703fa9e3084') in 0.011304 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/IListViewTemplateSelector.cs
-  artifactKey: Guid(81c4bd0cb3a103e48ad38bad9195a73b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/IListViewTemplateSelector.cs using Guid(81c4bd0cb3a103e48ad38bad9195a73b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1b6a35cd8f8bd63ca83479bc6d43c57b') in 0.053077 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.002381 seconds.
-  path: Assets/New UI Widgets/Scripts/Calendar/DateTimeWidget.cs
-  artifactKey: Guid(48c3da8bb65a54440878fa26612d8155) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Calendar/DateTimeWidget.cs using Guid(48c3da8bb65a54440878fa26612d8155) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6729e0a56216ed540390c30e89d6acc6') in 0.023011 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/UI Themes/Scripts/Attributes/ThemePropertyAttribute.cs
-  artifactKey: Guid(b0791ce846a77eb4a849b2d28dd8215e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Scripts/Attributes/ThemePropertyAttribute.cs using Guid(b0791ce846a77eb4a849b2d28dd8215e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0d65a38443c644160c4de8f06d8b0fc3') in 0.032960 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/CollectionsUtilities/ICollectionItemChanged.cs
-  artifactKey: Guid(20b04f3827e21004eb26f89cd345653c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/CollectionsUtilities/ICollectionItemChanged.cs using Guid(20b04f3827e21004eb26f89cd345653c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cf0c91c736bae61ba7454e3ddaa736bb') in 0.021901 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/Templates/TreeGraphTemplate.prefab
-  artifactKey: Guid(9f1523379661ca043af7a091aca0582c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/Templates/TreeGraphTemplate.prefab using Guid(9f1523379661ca043af7a091aca0582c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b47645414381b221db8957de52e7b021') in 0.046480 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Tabs/TabButtonBase.cs
-  artifactKey: Guid(d9d07048805c39741acc245197527a73) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Tabs/TabButtonBase.cs using Guid(d9d07048805c39741acc245197527a73) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8033157eb4c54a083fc1af212e48d972') in 0.033469 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Sprites/border_2px.png
-  artifactKey: Guid(c9d44684b0abf1b46bb300b3b5535682) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Sprites/border_2px.png using Guid(c9d44684b0abf1b46bb300b3b5535682) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '128b6d7f990a99f4faa09c34799a19ad') in 0.043551 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/RangeSlider/Float
-  artifactKey: Guid(ece8c1d769a91b746b4cce701427dba5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/RangeSlider/Float using Guid(ece8c1d769a91b746b4cce701427dba5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '62b79bf55b6e21216f9fc1ad1d32f20d') in 0.017752 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/TabsIcons.prefab
-  artifactKey: Guid(7f56eae9a7f9b714096e95c8c4e1d91c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/TabsIcons.prefab using Guid(7f56eae9a7f9b714096e95c8c4e1d91c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b31ae01b150d8cca431b4c5e84078de6') in 0.029303 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/New UI Widgets/Scripts/Connector
-  artifactKey: Guid(cbeb33e791d69034d8b8db695b3ca54a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Connector using Guid(cbeb33e791d69034d8b8db695b3ca54a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ea7c35c85cb10d244121bcac5bf69d78') in 0.031465 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Unity/StyleSupportToggle.cs
-  artifactKey: Guid(17cb28230cdac0a4b9656560040bcbbe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Unity/StyleSupportToggle.cs using Guid(17cb28230cdac0a4b9656560040bcbbe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c6d0b8bbb2a08764a7aa3e6bc935c2c7') in 0.039180 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.002223 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Input/StyleSupportCalendar.cs
-  artifactKey: Guid(2156d26072f7a1f418c892ea49a801d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Input/StyleSupportCalendar.cs using Guid(2156d26072f7a1f418c892ea49a801d4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2832951d8e52b980fe20dfb1ffd554cb') in 0.015489 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/Listeners/ResizeListener.cs
-  artifactKey: Guid(b1973940da1e7cf48a1fc80693c99093) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Listeners/ResizeListener.cs using Guid(b1973940da1e7cf48a1fc80693c99093) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '61d8dd65edeff0fdf4d41dfa26b40c0b') in 0.051729 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/ProgressbarDeterminate.prefab
-  artifactKey: Guid(f355d995121121a419bdd365fd5f606d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/ProgressbarDeterminate.prefab using Guid(f355d995121121a419bdd365fd5f606d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ece03dbc466dcfc78d24c8576cca5870') in 0.064991 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/New UI Widgets/Editor/ConditionalEditor.cs
-  artifactKey: Guid(30d38e982a8554046af5a24748945e32) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/ConditionalEditor.cs using Guid(30d38e982a8554046af5a24748945e32) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c775db2ecbacc138fde10be2ee2107e1') in 0.019656 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/Tooltips/Tooltip.cs
-  artifactKey: Guid(40b3f2a1905b3b04495a6df47f9052ea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Tooltips/Tooltip.cs using Guid(40b3f2a1905b3b04495a6df47f9052ea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2f958301726097ca39cd36a2d63a9aaf') in 0.009988 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/New UI Widgets/Scripts/Table/TableHeaderDragCell.cs
-  artifactKey: Guid(fe5ab4e5e813ccf419858f97e9a9e18d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Table/TableHeaderDragCell.cs using Guid(fe5ab4e5e813ccf419858f97e9a9e18d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e224c39d0c8bda8e356c9e89eaf91ed5') in 0.012255 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/CollectionsSupport/ListViewDragSupport.template.txt
-  artifactKey: Guid(2d156cfba3bf3db49ac31b927d04d4b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/WidgetsGeneration/Templates/CollectionsSupport/ListViewDragSupport.template.txt using Guid(2d156cfba3bf3db49ac31b927d04d4b2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b2eef1294c332ab3c33d1e26029c3aab') in 0.006839 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CircularSlider/Float/CircularSliderFloatMaxValueSetter.cs
-  artifactKey: Guid(032d8a3a5de40f74a8ed02614716bdfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CircularSlider/Float/CircularSliderFloatMaxValueSetter.cs using Guid(032d8a3a5de40f74a8ed02614716bdfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2216b9eb87a05dfac98e8e37d525e349') in 0.020885 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/TracksView/Layouts/TrackLayoutAnyLine.cs
-  artifactKey: Guid(12f27705378021a43bd71bdbe0bcfac1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/TracksView/Layouts/TrackLayoutAnyLine.cs using Guid(12f27705378021a43bd71bdbe0bcfac1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'aa83f5ed8dabda64e7fe268178a87c43') in 0.020837 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Combobox/ComboboxInputField.cs
-  artifactKey: Guid(b891aebc27241bd40aad53572c5b4a14) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Combobox/ComboboxInputField.cs using Guid(b891aebc27241bd40aad53572c5b4a14) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e19417b733ecc2952324841114a103c1') in 0.016269 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/TreeGraph
-  artifactKey: Guid(4e233b49d6673fd4facb5dc80c3f768d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/TreeGraph using Guid(4e233b49d6673fd4facb5dc80c3f768d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8c64050b1ae41d52c176642753a9004c') in 0.005634 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/Effects/RingEffectRingColor.cs
-  artifactKey: Guid(6564a46b2bd52e046b59a3753e564a84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/Effects/RingEffectRingColor.cs using Guid(6564a46b2bd52e046b59a3753e564a84) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4aa43ac99522080707f2ee3945abc15c') in 0.036051 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/SnapGrid/SnapGridBase.cs
-  artifactKey: Guid(3c6d55b89def4f643a24781118508529) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/SnapGrid/SnapGridBase.cs using Guid(3c6d55b89def4f643a24781118508529) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '46ba19ca81ac57fbf445cdaae8818577') in 0.018964 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/Obsolete/ListViewCustomSize.cs
-  artifactKey: Guid(3c982f167defc374fbaa3d386a219c42) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/Obsolete/ListViewCustomSize.cs using Guid(3c982f167defc374fbaa3d386a219c42) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'cf8ea0b7079633bbd802f67904e96442') in 0.009466 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Horizontal/CenteredSliderValueSetter.cs
-  artifactKey: Guid(156e6a70b6a17654dbd9c2d17cb7c915) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Horizontal/CenteredSliderValueSetter.cs using Guid(156e6a70b6a17654dbd9c2d17cb7c915) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '578966014ac4d9124141a01c8b2d844f') in 0.033071 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/ProgressbarIndeterminate.prefab
-  artifactKey: Guid(87c3cdef7ba4b0445941e3dc059cd177) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/ProgressbarIndeterminate.prefab using Guid(87c3cdef7ba4b0445941e3dc059cd177) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e6774da2ad8ce1751fb11e81f3465caf') in 0.037334 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/Progressbar/Progressbar.cs
-  artifactKey: Guid(122f707ca0b9ca04d863a8d350f94098) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Progressbar/Progressbar.cs using Guid(122f707ca0b9ca04d863a8d350f94098) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3bf39b84405d6d289ce920053129660c') in 0.007855 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000344 seconds.
-  path: Assets/New UI Widgets/Scripts/Connector/RectangularPath.cs
-  artifactKey: Guid(dcb933da46db6b54c8ed29f1b8d9441a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Connector/RectangularPath.cs using Guid(dcb933da46db6b54c8ed29f1b8d9441a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c3821e129fbceda969bee1025751fd10') in 0.021411 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/DatePicker.prefab
-  artifactKey: Guid(8180100b783547c4384e505dc81cc95d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/DatePicker.prefab using Guid(8180100b783547c4384e505dc81cc95d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2fb1038a84648a3e14438708d9cb9c44') in 0.069213 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport/Scripts/ColorPicker/ColorPickerHexBlockTMPro.cs
-  artifactKey: Guid(6130f16e3fe390646a07472d14c20b92) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/TMProSupport/Scripts/ColorPicker/ColorPickerHexBlockTMPro.cs using Guid(6130f16e3fe390646a07472d14c20b92) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4444bc8859a1956e7f5647c94f27142d') in 0.032208 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/PickerIntTemplate.prefab
-  artifactKey: Guid(b16e9ad2938f530418924f2c0f51b5b1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/PickerIntTemplate.prefab using Guid(b16e9ad2938f530418924f2c0f51b5b1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0e899400539b644f253de3a9cec1dd82') in 0.084778 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/IO
-  artifactKey: Guid(2cfb56cccc4285e46ae2e0769ec074c6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/IO using Guid(2cfb56cccc4285e46ae2e0769ec074c6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e8dd2dd43198f5679c041cd10d6c30bf') in 0.022273 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/New UI Widgets/Scripts/Localization/Localization.cs
-  artifactKey: Guid(8d1e8758d46c0db419781b23554c9e48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Localization/Localization.cs using Guid(8d1e8758d46c0db419781b23554c9e48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'd7e4ca89d62694915a0f88c4b20a69de') in 0.016484 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/Utilities/Events
-  artifactKey: Guid(6233af5726a7ad24d87a9e8730ea93c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Utilities/Events using Guid(6233af5726a7ad24d87a9e8730ea93c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0b56a2c586edec3c8c2faddfa2980bb1') in 0.013556 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Spinner/Float/SpinnerFloatMaxSetter.cs
-  artifactKey: Guid(d0b3b60fcd00d1d43b2e65af36df70fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Spinner/Float/SpinnerFloatMaxSetter.cs using Guid(d0b3b60fcd00d1d43b2e65af36df70fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '43ecd4c57b567048b3ccbfc6a3536c35') in 0.015369 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Editor/Unity/ProjectSettings.cs
-  artifactKey: Guid(853f798cef908cd438e95a48d8ef2aad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/Unity/ProjectSettings.cs using Guid(853f798cef908cd438e95a48d8ef2aad) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9dbb4f46c7bcc5baaae0412bd2080a2b') in 0.018315 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Dialogs/StyleDialog.cs
-  artifactKey: Guid(200fca8f56a10514681349a509cfe9ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Dialogs/StyleDialog.cs using Guid(200fca8f56a10514681349a509cfe9ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b7749cb01f3040d1a9715458782bcebb') in 0.011588 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Tooltips/TooltipString.cs
-  artifactKey: Guid(6f9568cc65c8de4488c2c17bbe69066e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Tooltips/TooltipString.cs using Guid(6f9568cc65c8de4488c2c17bbe69066e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '3e4b8a0079579c3bf4e6745805a0af11') in 0.015598 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/ScrollBlock/ScrollBlockBase.cs
-  artifactKey: Guid(829c8306e1b85794a8d5697c4b1ef6c0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ScrollBlock/ScrollBlockBase.cs using Guid(829c8306e1b85794a8d5697c4b1ef6c0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '52a96a25ee580c0bd10d6e2f0605aa82') in 0.012053 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/New UI Widgets/Editor/WidgetsGeneration/MenuOptions.cs
-  artifactKey: Guid(c3f5abadf7df0894985bd4afb1fa33e7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/WidgetsGeneration/MenuOptions.cs using Guid(c3f5abadf7df0894985bd4afb1fa33e7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '23bb52aa6fce0a467f61f256b9739134') in 0.025180 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/IO/IOExceptionsView.cs
-  artifactKey: Guid(6c0ae273c1def76458a39ec35c8eda62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/IO/IOExceptionsView.cs using Guid(6c0ae273c1def76458a39ec35c8eda62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '34010e2a4bc194da56ea2cd2c3acbbbf') in 0.031852 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001248 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Switch/SwitchIsOnSynchronizer.cs
-  artifactKey: Guid(8ebaed3dd952a1b4791dd9332d32aabc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Switch/SwitchIsOnSynchronizer.cs using Guid(8ebaed3dd952a1b4791dd9332d32aabc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '24509838ea25a1a5eea661a0c64e475b') in 0.021475 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/TracksView/Timeline/DataDragSupport.cs
-  artifactKey: Guid(6c4486203fe073448a4548f942c8a7af) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/TracksView/Timeline/DataDragSupport.cs using Guid(6c4486203fe073448a4548f942c8a7af) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '6fa12990bc5a0af5985919f57679a362') in 0.046965 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000481 seconds.
-  path: Assets/New UI Widgets/Scripts/WidgetGeneration/ListViewGeneratorHelper.cs
-  artifactKey: Guid(b8649a0234f8ea54f87f35621933b965) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/WidgetGeneration/ListViewGeneratorHelper.cs using Guid(b8649a0234f8ea54f87f35621933b965) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1c61372820111e646d87a68c843c2400') in 0.017510 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/Effects/RippleEffectStartColor.cs
-  artifactKey: Guid(934cbd8cc15e6be48b15e7e8cd8edab7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/Effects/RippleEffectStartColor.cs using Guid(934cbd8cc15e6be48b15e7e8cd8edab7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '500635f5b16773be49852960ea4372e0') in 0.011849 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/Utilities/Animations.cs
-  artifactKey: Guid(58b945b5bbeb1894089987a2e980e0dd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Utilities/Animations.cs using Guid(58b945b5bbeb1894089987a2e980e0dd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'f667cfc4a584f438e2d3569727c554ec') in 0.016099 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Editor/SplitterEditor.cs
-  artifactKey: Guid(350e435e80fce69418e8967296a88113) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/SplitterEditor.cs using Guid(350e435e80fce69418e8967296a88113) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'bc48dc86990aade6bf763c3fcf3e4a8b') in 0.013318 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CircularSlider/Float/CircularSliderFloatValueSynchronizer.cs
-  artifactKey: Guid(d4a6bc12b6661db4598e8931edec0ff9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CircularSlider/Float/CircularSliderFloatValueSynchronizer.cs using Guid(d4a6bc12b6661db4598e8931edec0ff9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '5f34c2f73abbbddde2134f1b148f541e') in 0.028503 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/ScrollRectPaginator.prefab
-  artifactKey: Guid(0070b37023502424f80009a4bdb33d54) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/ScrollRectPaginator.prefab using Guid(0070b37023502424f80009a4bdb33d54) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '46725887f9e10bdf7a7bb0f96729785f') in 0.051467 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/EasyLayout/LayoutElementInfo.cs
-  artifactKey: Guid(3de0f6282353c5447abecc7836badcb9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/EasyLayout/LayoutElementInfo.cs using Guid(3de0f6282353c5447abecc7836badcb9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'eb48aa0232af8d851a082604fd19aa25') in 0.014666 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001327 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewCustom.cs
-  artifactKey: Guid(4460e6f9bec5cb84ebb2ed145366ca5e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewCustom.cs using Guid(4460e6f9bec5cb84ebb2ed145366ca5e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a34d01969b218a8994cfabf0e356dbcf') in 0.021677 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelper/SelectableHelperPressedColor.cs
-  artifactKey: Guid(25b763bd0da2409449ac177328a51981) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/SelectableHelper/SelectableHelperPressedColor.cs using Guid(25b763bd0da2409449ac177328a51981) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '23af046f98d9b3cce45ffba7a26e05f7') in 0.019439 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Unity/StyleSupportScrollbar.cs
-  artifactKey: Guid(64dbab7775f0bac4bac45f82af2a5a64) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Unity/StyleSupportScrollbar.cs using Guid(64dbab7775f0bac4bac45f82af2a5a64) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '075c9c3c3943350d4ba2570c0c3ec8d3') in 0.031798 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Spinner/Int/SpinnerValueSetter.cs
-  artifactKey: Guid(ecccb02889fe84c45886c61f7e87849d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/Spinner/Int/SpinnerValueSetter.cs using Guid(ecccb02889fe84c45886c61f7e87849d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a6635c278ce6e063411e8dad9e67d795') in 0.012357 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/UI Themes/Scripts/IThemeTarget.cs
-  artifactKey: Guid(b63e2a1f04875ad4e9d4bec2a277a881) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Scripts/IThemeTarget.cs using Guid(b63e2a1f04875ad4e9d4bec2a277a881) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4bcaaf028154d054acc7b68918ccd70e') in 0.035143 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/Progressbar.prefab
-  artifactKey: Guid(6832b77813754d940aa80ad11104fd3a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/Progressbar.prefab using Guid(6832b77813754d940aa80ad11104fd3a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '75b9774386c96a2c084416aae9d8404d') in 0.036203 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/SliderScale/ScaleMark.cs
-  artifactKey: Guid(db24a2d315730034b9ffd9c5b4d8a743) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/SliderScale/ScaleMark.cs using Guid(db24a2d315730034b9ffd9c5b4d8a743) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1e03b411f0f8d895d6c04ba7ba328b7f') in 0.023509 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/BlueStyle/blue-tab-button-top-active.png
-  artifactKey: Guid(b3589d68455855f4d8ff20ec7a71e67d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/BlueStyle/blue-tab-button-top-active.png using Guid(b3589d68455855f4d8ff20ec7a71e67d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ef1327d5778e4c9cbca5d8ae59f86ee8') in 0.033587 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Vertical/CenteredSliderVerticalLimitMinSetter.cs
-  artifactKey: Guid(04771a1e172017e4b8c754ad85142ad4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Vertical/CenteredSliderVerticalLimitMinSetter.cs using Guid(04771a1e172017e4b8c754ad85142ad4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'f76c6a23629263c664d4c616ebc33be5') in 0.009747 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001131 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/BlueStyle/blue-tab-button-left-inactive.png
-  artifactKey: Guid(56441aa8e0a31f04598bf0920e58d17b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/BlueStyle/blue-tab-button-left-inactive.png using Guid(56441aa8e0a31f04598bf0920e58d17b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '11aa267f0cb67cbd62def5af3bc2d26b') in 0.065926 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001298 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/Switch.prefab
-  artifactKey: Guid(3020f7628b4322b41ac22aee667c2910) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/Switch.prefab using Guid(3020f7628b4322b41ac22aee667c2910) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1df3d7fa999d2885e63ac7dbe0dbd7e5') in 0.081267 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/Events/ListViewItemBaseEvent.cs
-  artifactKey: Guid(1ba99db46696f4047a217651ab1291f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/Events/ListViewItemBaseEvent.cs using Guid(1ba99db46696f4047a217651ab1291f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '29145b1e3ca4a4955b396a38376ed9a9') in 0.012455 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewString/ListViewStringDataFile.cs
-  artifactKey: Guid(ec75788440c720d409ac5b227a2281a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewString/ListViewStringDataFile.cs using Guid(ec75788440c720d409ac5b227a2281a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c5a28f875b5d1ffd2b624ab70577e455') in 0.014505 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewInt/ListViewIntComponentBase.cs
-  artifactKey: Guid(136d408edfdfcb243912878310127704) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewInt/ListViewIntComponentBase.cs using Guid(136d408edfdfcb243912878310127704) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ceea4e4277818a156961339771033963') in 0.015455 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/UI Themes/Scripts/Utilities/ColorComparer.cs
-  artifactKey: Guid(121f94fd597bf694686d1776b48162c0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Scripts/Utilities/ColorComparer.cs using Guid(121f94fd597bf694686d1776b48162c0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '81d1c28e80771901a34cef7b12504bbe') in 0.020573 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Horizontal/CenteredSliderLimitMaxSetter.cs
-  artifactKey: Guid(3edbc1057a6e0574c836aedbfc86a1f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Horizontal/CenteredSliderLimitMaxSetter.cs using Guid(3edbc1057a6e0574c836aedbfc86a1f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a372a00b64666f7beae694140e4770b5') in 0.016614 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Misc/StyleCanvas.cs
-  artifactKey: Guid(96277da66d9e024459082ab5ed43e5f7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Misc/StyleCanvas.cs using Guid(96277da66d9e024459082ab5ed43e5f7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a66462bc025f853431f9601bab7722a1') in 0.034393 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/ComboboxIconsMultiselect.prefab
-  artifactKey: Guid(2804c388514f89648963a7f2b4af6d31) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/ComboboxIconsMultiselect.prefab using Guid(2804c388514f89648963a7f2b4af6d31) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '845a30163f58b31073bbc98bf16fde7c') in 0.112896 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/Templates/TableTemplate.prefab
-  artifactKey: Guid(b10b7177272a5304caf2370fec76803b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/Templates/TableTemplate.prefab using Guid(b10b7177272a5304caf2370fec76803b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '00ef801e8268e4219140b558a82d54de') in 0.057287 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.003394 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewType/TileViewTypeSize.cs
-  artifactKey: Guid(bc3d955683100f4438f5f9b9f5cd3434) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewType/TileViewTypeSize.cs using Guid(bc3d955683100f4438f5f9b9f5cd3434) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'ff6491a3c79f4c9ec65b4af6510ccb68') in 0.036862 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/CircularSlider/CircularSliderBase.cs
-  artifactKey: Guid(9da5ee3aff270374c995e76e8a4fa8be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/CircularSlider/CircularSliderBase.cs using Guid(9da5ee3aff270374c995e76e8a4fa8be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4831d0fc08854cd9ccf21a5fcf01fce1') in 0.011743 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/Scripts/EasyLayout/EasyLayoutExtensions.cs
-  artifactKey: Guid(5519ed91eecfc7b449e22714dd91e2f4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/EasyLayout/EasyLayoutExtensions.cs using Guid(5519ed91eecfc7b449e22714dd91e2f4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0fd7b85c8404785328a7fb0e0620d364') in 0.034145 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/Core/UIWidgetsMonoBehaviour.cs
-  artifactKey: Guid(bb5c3b8fed801a44d85fe089664ad238) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Core/UIWidgetsMonoBehaviour.cs using Guid(bb5c3b8fed801a44d85fe089664ad238) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'a5851a908d96540baad8d492cc466aa8') in 0.049851 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001880 seconds.
-  path: Assets/New UI Widgets/Scripts/Spinner/SpinnerFloat.cs
-  artifactKey: Guid(2132002145f455440975b748ae2fe4eb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Spinner/SpinnerFloat.cs using Guid(2132002145f455440975b748ae2fe4eb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2615bc48d0d3f271b39a8474ddff8971') in 0.014317 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Assets/UI Themes/Prefabs/ContextMenuTemplate.prefab
-  artifactKey: Guid(d9a836208dba1ec489d4772190534a97) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/UI Themes/Prefabs/ContextMenuTemplate.prefab using Guid(d9a836208dba1ec489d4772190534a97) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '121d6af26d9afdadc410728a7d2804c4') in 0.092728 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/New UI Widgets/Scripts/Updater/IUpdatable.cs
-  artifactKey: Guid(404caa3e8a81f844fa2aac945d643364) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Updater/IUpdatable.cs using Guid(404caa3e8a81f844fa2aac945d643364) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '16946af4253570fb943f9ef3aa4f0921') in 0.016447 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/New UI Widgets/Scripts/Resizable/Splitter.cs
-  artifactKey: Guid(1b6c8c3e3690eeb49912951674216737) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Resizable/Splitter.cs using Guid(1b6c8c3e3690eeb49912951674216737) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'dbec44d82eaf87926acda80e1f37dd54') in 0.031414 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/Rating.prefab
-  artifactKey: Guid(c19978fb0a16b92419716cc93b016290) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/Rating.prefab using Guid(c19978fb0a16b92419716cc93b016290) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '35e28de6fbb73e6c8f9fe28ebb86143f') in 0.057289 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.010615 seconds.
-  path: Assets/New UI Widgets/Scripts/EasyLayout/LayoutElementsGroup.cs
-  artifactKey: Guid(ac9cbf79ebdf3a841b2f2c00a7709fef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/EasyLayout/LayoutElementsGroup.cs using Guid(ac9cbf79ebdf3a841b2f2c00a7709fef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '69a02cbbe9855e66806e0501cd40c9de') in 0.010108 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Input/StyleSupportButtonSmall.cs
-  artifactKey: Guid(34f02e9de0ecd2242a2eddb5e2575439) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Input/StyleSupportButtonSmall.cs using Guid(34f02e9de0ecd2242a2eddb5e2575439) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8b5e5025407eaca7b5a6d054b83b7efb') in 0.014326 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/Style/Unity/StyleDropdown.cs
-  artifactKey: Guid(76c7022de125cf1468a7b2d0077423bd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Style/Unity/StyleDropdown.cs using Guid(76c7022de125cf1468a7b2d0077423bd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '71c5468991ae537313052adc9968c5a3') in 0.015714 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/RangeSlider/Int/RangeSliderLimitMaxSetter.cs
-  artifactKey: Guid(92afeca3980591349b690a2bfc0711e4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/RangeSlider/Int/RangeSliderLimitMaxSetter.cs using Guid(92afeca3980591349b690a2bfc0711e4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '479e870cb2472046b13b85f5438082f8') in 0.014643 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/New UI Widgets/UI Themes/Scripts/Wrappers/Selectable/SelectableSelectedSprite.cs
-  artifactKey: Guid(474deff7cfe68f6418a95f3216d977cf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Scripts/Wrappers/Selectable/SelectableSelectedSprite.cs using Guid(474deff7cfe68f6418a95f3216d977cf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2797c03d2202aa99f07224bc812aae28') in 0.024023 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CircularSlider
-  artifactKey: Guid(1a4816b3ca3c8db459e4d49335e90ebd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CircularSlider using Guid(1a4816b3ca3c8db459e4d49335e90ebd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e2bcb92b9e54c665bfe2faa67b01e737') in 0.027494 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/New UI Widgets/Scripts/UIThemesSupport/Accordion/AccordionHighlightThemesDefaultBackgroundColor.cs
-  artifactKey: Guid(43069831dfabb944a8ac8c483b67ecfc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/UIThemesSupport/Accordion/AccordionHighlightThemesDefaultBackgroundColor.cs using Guid(43069831dfabb944a8ac8c483b67ecfc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'aee1d3c6491a53b23d42a57766c25c67') in 0.010566 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/New UI Widgets/Scripts/IO/FileListViewComponentBase.cs
-  artifactKey: Guid(6006b57eb59b3a04d85f0450594df47f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/IO/FileListViewComponentBase.cs using Guid(6006b57eb59b3a04d85f0450594df47f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4d581999f89478317c10c36690d11382') in 0.015387 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/New UI Widgets/Scripts/Converter/ConverterTMProReplacementInfo.cs
-  artifactKey: Guid(47dcab6462a8062468a72252d8a296ac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Converter/ConverterTMProReplacementInfo.cs using Guid(47dcab6462a8062468a72252d8a296ac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '9a4532e7d6e00451241a2ea56be9282e') in 0.040533 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000061 seconds.
-  path: Assets/New UI Widgets/Assets/Styles/Prefabs/NotifyTemplate.prefab
-  artifactKey: Guid(68dddece17574df44ab676905540ea79) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Assets/Styles/Prefabs/NotifyTemplate.prefab using Guid(68dddece17574df44ab676905540ea79) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '0925b6dd2a14ac8e51436a908eceefc8') in 0.046935 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/IO/FileListView/FileListViewDataSourceSetter.cs
-  artifactKey: Guid(cd15819f14793ac48a0c786746250ba9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/IO/FileListView/FileListViewDataSourceSetter.cs using Guid(cd15819f14793ac48a0c786746250ba9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '141d42d9b3191936eaf853b92a4dbd73') in 0.030645 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/New UI Widgets/Scripts/ListView/ListViewType/IInstanceSizes.cs
-  artifactKey: Guid(38dfb60d11061b34694f54a4b1a973b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ListView/ListViewType/IInstanceSizes.cs using Guid(38dfb60d11061b34694f54a4b1a973b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '1b0cdd21e5f816fb2b668114818ee6a2') in 0.029454 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.007648 seconds.
-  path: Assets/New UI Widgets/Scripts/Converter/ConverterTMProMessage.cs
-  artifactKey: Guid(7c6a1e6fceee5d6459e4210d16099efb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/Converter/ConverterTMProMessage.cs using Guid(7c6a1e6fceee5d6459e4210d16099efb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '852f53ce1220e1aa4f9989a3af99c367') in 0.029877 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Horizontal/CenteredSliderLimitMinSetter.cs
-  artifactKey: Guid(260e6e1c8d861d542baa1e86abe8bd76) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Scripts/ThirdPartySupport/DataBindSupport/CenteredSlider/Horizontal/CenteredSliderLimitMinSetter.cs using Guid(260e6e1c8d861d542baa1e86abe8bd76) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '164aed6415cab11b94c500c15e0d6f8c') in 0.027317 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/New UI Widgets/Editor/Unity
-  artifactKey: Guid(368344857ad2b794fbd5f1f7edde909b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/Editor/Unity using Guid(368344857ad2b794fbd5f1f7edde909b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c824f1a22eac3496b3fbc9839142c351') in 0.010012 seconds 
-========================================================================
+  Time since last request: 0.377022 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '976f800be39c705dab15586402389093') in 0.018520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.387569 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '231fca0cb07630805282a653f8715adb') in 0.018525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.378295 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc082166de692d75da71afa0f62d53ed') in 0.020512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.739961 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31fbe03e15c311874f1ef2aa4aaa98dc') in 0.019046 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.820761 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6c063849245dce80b574f4b759b34ff') in 0.018524 seconds 
+========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/New UI Widgets/UI Themes/Samples
-  artifactKey: Guid(6a8988fab0895a24f8e0dbba9d42f03b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/New UI Widgets/UI Themes/Samples using Guid(6a8988fab0895a24f8e0dbba9d42f03b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '49fb16116368639344303122eee68f09') in 0.023449 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+  Time since last request: 0.380728 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a06d276667352af87d92bb0ad6a103f3') in 0.037143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.981800 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '256fb528436602d7f78c8253ada10f13') in 0.038133 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.767112 seconds.
+  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab
+  artifactKey: Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_Low.prefab using Guid(d7a040404cb67304da7d09641b66f019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caa5da7776273c82500c5def59e9e90d') in 0.019865 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 315.569744 seconds.
+  path: Assets/Resources/LevelConfig.asset
+  artifactKey: Guid(e81fea9999c2ced4c962526bc9782ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/LevelConfig.asset using Guid(e81fea9999c2ced4c962526bc9782ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6195c820878ad7fef9a0ecd94839a346') in 0.006341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.339853 seconds.
+  path: Assets/Resources/LevelConfig.asset
+  artifactKey: Guid(e81fea9999c2ced4c962526bc9782ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/LevelConfig.asset using Guid(e81fea9999c2ced4c962526bc9782ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52511344711e4349d89e49a5e214e237') in 0.002602 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009475 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.372 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4373ms)
+		BeginReloadAssembly (320ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (56ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (114ms)
+		EndReloadAssembly (3928ms)
+			LoadAssemblies (135ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (413ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (102ms)
+			SetupLoadedEditorAssemblies (3096ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (137ms)
+				ProcessInitializeOnLoadAttributes (2885ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (50ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7439 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8409.
+Memory consumption went from 337.7 MB to 334.3 MB.
+Total: 4.927000 ms (FindLiveObjects: 0.680900 ms CreateObjectMapping: 0.279900 ms MarkObjects: 3.581000 ms  DeleteObjects: 0.384200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009517 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.383 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4384ms)
+		BeginReloadAssembly (192ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		EndReloadAssembly (4073ms)
+			LoadAssemblies (120ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (430ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (87ms)
+			SetupLoadedEditorAssemblies (3258ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (140ms)
+				ProcessInitializeOnLoadAttributes (3045ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (49ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7439 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8412.
+Memory consumption went from 337.5 MB to 334.1 MB.
+Total: 5.299300 ms (FindLiveObjects: 0.715500 ms CreateObjectMapping: 0.264900 ms MarkObjects: 3.869600 ms  DeleteObjects: 0.446800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009327 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.279 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4281ms)
+		BeginReloadAssembly (200ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (3963ms)
+			LoadAssemblies (123ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (396ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (3172ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (137ms)
+				ProcessInitializeOnLoadAttributes (2960ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (50ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.07 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7439 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8415.
+Memory consumption went from 337.5 MB to 334.1 MB.
+Total: 4.504800 ms (FindLiveObjects: 0.795300 ms CreateObjectMapping: 0.356100 ms MarkObjects: 2.940100 ms  DeleteObjects: 0.412300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009662 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.368 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4369ms)
+		BeginReloadAssembly (190ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (4061ms)
+			LoadAssemblies (121ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (395ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (3271ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (139ms)
+				ProcessInitializeOnLoadAttributes (3056ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (51ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7439 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8418.
+Memory consumption went from 337.6 MB to 334.2 MB.
+Total: 4.362800 ms (FindLiveObjects: 0.697100 ms CreateObjectMapping: 0.255600 ms MarkObjects: 3.029400 ms  DeleteObjects: 0.379700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

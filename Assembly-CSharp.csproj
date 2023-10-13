@@ -350,6 +350,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\CollectionsUtilities\IObservableList.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Sidebar\SidebarHandle.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Calendar\CalendarDateBaseSelectedDayBackground.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\InputSystem\InputManager.cs" />
     <Compile Include="Assets\Scripts\FrameWork\CoreComponents\MEntity.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\Dialog\DialogButtonComponentTMPro.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ScrollRectUtilities\ScrollRectRestrictedDrag.cs" />
@@ -500,6 +501,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\IO\FileListView\FileListViewSelectedItemProvider.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\IO\FileListView\FileListViewSelectedItemObserver.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\ComparisonCompare.cs" />
+    <Compile Include="Assets\Scripts\Contents\LevelConfig.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CircularSlider\Int\CircularSliderValueObserver.cs" />
     <Compile Include="Assets\Scripts\Contents\MusicConfig.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\Autocomplete\AutocompleteCustomTMPro.cs" />
@@ -1110,8 +1112,6 @@
     <Compile Include="Assets\Scripts\GamePlay\3C\PlayerController.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\SliderScale\SliderScaleBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Converter\ConverterTMProReplacementInfo.cs" />
-    <Compile Include="Assets\Scripts\Contents\LevelConfig.cs" />
-    <Compile Include="Assets\Scripts\GamePlay\InputSystem\InputManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

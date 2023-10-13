@@ -105,8 +105,8 @@ public class LevelManager : MonoBehaviour
         }
         else 
         {
-            Vector3 position = new Vector3(0f, 0.5f, 0f);
-            playerObject = PrefabManager.Instance.Instantiate("Player", position, Quaternion.identity);
+            LevelData levelData = LevelConfig.Instance.GetLevelData(sceneName);
+            playerObject = PrefabManager.Instance.Instantiate("Player", levelData.SpawnPoints[0], Quaternion.identity);
         }
         // Set Player to DataManager
         PersistentDataManager.Instance.SetPlayer(playerObject.GetComponent<Player>());

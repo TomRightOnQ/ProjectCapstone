@@ -44,4 +44,5 @@ public struct LevelData
     public string SceneName;
     public Enums.SCENE_TYPE SceneType;
     public bool bSaveable; // Whether the player in this scene will be saved
+    public List<Vector3> SpawnPoints;
 }
