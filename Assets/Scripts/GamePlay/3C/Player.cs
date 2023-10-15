@@ -9,6 +9,7 @@ public class Player : EUnit
     public PlayerController Controller => playerController;
 
     [SerializeField] private PlayerHUDInteractionTrigger playerInteractionTrigger;
+    public PlayerHUDInteractionTrigger MainPlayerInteractionTrigger => playerInteractionTrigger;
 
     void Awake()
     {

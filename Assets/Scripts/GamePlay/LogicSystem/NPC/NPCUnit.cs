@@ -33,4 +33,14 @@ public class NPCUnit : EUnit
             interactionTrigger.SetUpTrigger(npcData.DefaultInteractionID[i]);
         }
     }
+
+    public void SetNPC(SaveConfig.NPCSaveData npcData)
+    {
+        npcID = npcData.NpcID;
+        interactionTrigger.EnableTrigger();
+        for (int i = 0; i < npcData.interactionIDs.Count; i++)
+        {
+            interactionTrigger.SetUpTrigger(npcData.interactionIDs[i]);
+        }
+    }
 }

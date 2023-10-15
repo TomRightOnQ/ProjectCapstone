@@ -90,6 +90,17 @@ public class UI_ChatInteraction : UIBase
         {
             ChatInteractionManager.Instance.EndInteraction();
         }
+
+        // Process Event
+        switch (choiceInteraction.Event)
+        {
+            case Enums.INTERACTION_EVENT.CompleteTask:
+                TaskManager.Instance.CompleteTasks(choiceInteraction.EventTarget);
+                break;
+            default:
+                break;
+        }
+        // Process Action
         switch (choiceInteraction.Action)
         {
             case Enums.INTERACTION_TYPE.Next:
@@ -127,6 +138,16 @@ public class UI_ChatInteraction : UIBase
         {
             ChatInteractionManager.Instance.EndInteraction();
         }
+        // Process Event
+        switch (currentInteraction.Event)
+        {
+            case Enums.INTERACTION_EVENT.CompleteTask:
+                TaskManager.Instance.CompleteTasks(currentInteraction.EventTarget);
+                break;
+            default:
+                break;
+        }
+        // Process Action
         switch (currentInteraction.Action)
         {
             case Enums.INTERACTION_TYPE.Next:
@@ -143,12 +164,6 @@ public class UI_ChatInteraction : UIBase
             default:
                 ChatInteractionManager.Instance.EndInteraction();
                 break;
-        }
-
-        // Force stop check
-        if (currentInteraction.bEnd)
-        {
-            ChatInteractionManager.Instance.EndInteraction();
         }
     }
 

@@ -8,6 +8,9 @@ public class LevelManager : MonoBehaviour
     private static LevelManager instance;
     public static LevelManager Instance => instance;
 
+    private string currentScene;
+    public string CurrentScene => currentScene;
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -62,7 +65,7 @@ public class LevelManager : MonoBehaviour
         {
             yield return null;
         }
-
+        currentScene = sceneName;
         // Scene is loaded, now load managers
         PersistentGameManager.Instance.LoadManagers();
         // Build the scene based on the saved info
@@ -82,7 +85,7 @@ public class LevelManager : MonoBehaviour
         {
             placePlayer(sceneName);
         }
-
+        placeNPCs(sceneName);
         finishBuild();
     }
 
@@ -94,7 +97,7 @@ public class LevelManager : MonoBehaviour
         InputManager.Instance.UnLockInput();
     }
 
-    // Methods to rebuild the scene
+    // ---Methods to rebuild the scene---
     private void placePlayer(string sceneName)
     {
         SaveConfig.PlayerSaveData playerData = SaveManager.Instance.GetPlayer();
@@ -110,5 +113,17 @@ public class LevelManager : MonoBehaviour
         }
         // Set Player to DataManager
         PersistentDataManager.Instance.SetPlayer(playerObject.GetComponent<Player>());
+    }
+
+    private void placeNPCs(string sceneName)
+    {
+        List<SaveConfig.NPCSaveData> npcList = SaveManager.Instance.GetNPCInfo();
+        for (int i = 0; i < npcList.Count; i++)
+        {
+            if (npcList[i].bActive && npcList[i].Scene == sceneName)
+            {
+                NPCManager.Instance.SpawnNPC(npcList[i]);
+            }
+        }
     }
 }

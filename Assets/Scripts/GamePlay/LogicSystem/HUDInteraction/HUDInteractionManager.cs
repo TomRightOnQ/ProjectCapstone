@@ -145,6 +145,17 @@ public class HUDInteractionManager : MonoBehaviour
         }
     }
 
+    // Refresh Interaction List
+    public void RefreshTriggerList()
+    {
+        Player player = PersistentDataManager.Instance.MainPlayer;
+        if (player != null)
+        {
+            player.MainPlayerInteractionTrigger.DisableTrigger();
+            player.MainPlayerInteractionTrigger.SetUpTrigger();
+        }
+    }
+
     // Event Handler
     public void OnRecv_ChatBegin()
     {
@@ -154,5 +165,6 @@ public class HUDInteractionManager : MonoBehaviour
     public void OnRecv_ChatEnd()
     {
         EnableHUDInteractionUI();
+        RefreshTriggerList();
     }
 }

@@ -1,6 +1,6 @@
-ID,Content,Target,Action,bOneTime
-int,string,int[],Enums.INTERACTION_TYPE,bool
-1,Hello,1,Enums.INTERACTION_TYPE.Chat,false
-2,Only happended once,2,Enums.INTERACTION_TYPE.End,true
-3,Task1,6,Enums.INTERACTION_TYPE.Chat,false
-4,Task2,8,Enums.INTERACTION_TYPE.Chat,false
+ID,Content,Target,Action,bOneTime,Speaker
+int,string,int[],Enums.INTERACTION_TYPE,bool,int
+1,Hello,1,Enums.INTERACTION_TYPE.Chat,false,1
+2,Only happended once,2,Enums.INTERACTION_TYPE.End,true,1
+3,Task1,6,Enums.INTERACTION_TYPE.Chat,false,1
+4,Task2,8,Enums.INTERACTION_TYPE.Chat,false,1

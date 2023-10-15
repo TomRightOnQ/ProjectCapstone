@@ -70,6 +70,9 @@ public class PersistentGameManager : MonoBehaviour
         Debug.Log("2. UIManager Loading");
         UIManager.Instance.Init();
 
+        Debug.Log("3. NPCManager Loading");
+        NPCManager.Instance.Init();
+
         Debug.Log("3. ChatInteractionManager Loading");
         ChatInteractionManager.Instance.Init();
 

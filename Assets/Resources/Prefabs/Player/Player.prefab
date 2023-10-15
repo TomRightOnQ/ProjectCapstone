@@ -124,9 +124,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: -5983067009283729175}
+  moveRatio: 1
   jumpRatio: 250
-  dashRatio: 1000
+  dashRatio: 2000
   playerRigidBody: {fileID: 6126956499534643397}
+  bInputLocked: 0
+  bMovementLocked: 0
+  bMovable: 0
 --- !u!1 &2064517867704711478
 GameObject:
   m_ObjectHideFlags: 0

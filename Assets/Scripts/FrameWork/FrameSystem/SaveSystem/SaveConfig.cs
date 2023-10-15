@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "SaveSystem/SaveConfig")]
@@ -15,6 +16,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
 
     [SerializeField]
     private List<NPCSaveData> npcSaveDataList = new List<NPCSaveData>();
+    public List<NPCSaveData> NpcSaveDataList => npcSaveDataList;
 
     // Datagrams
     [System.Serializable]
@@ -28,10 +30,12 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     [System.Serializable]
     public class NPCSaveData
     {
+        public int NpcID;
         public string NpcName;
         public Vector3 Position;
         public List<int> interactionIDs;
         public string Scene;
+        public bool bActive = false;
     }
 
     // Methods:
@@ -50,6 +54,91 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public void LockSave()
     {
         bAllowRewrite = false;
+    }
+
+    // Modify NPC status
+    // Add NPC to Save List
+    // --Init-- Methods
+    public void InitNPCToSave()
+    {
+        foreach (var pair in NPCData.data)
+        {
+            NPCData.NPCDataStruct defaultNPC = pair.Value;
+
+            NPCSaveData newNPCSaveData = new NPCSaveData()
+            {
+                NpcID = defaultNPC.ID,
+                NpcName = defaultNPC.Name,
+                Position = defaultNPC.Position,
+                Scene = defaultNPC.Scene,
+                bActive = defaultNPC.bActiveByDefault,
+                interactionIDs = defaultNPC.DefaultInteractionID != null ? defaultNPC.DefaultInteractionID.ToList() : new List<int>()
+            };
+
+            npcSaveDataList.Add(newNPCSaveData);
+        }
+    }
+
+    // Only public to SaveManager
+    public void AddInteractionToNPC(int npcID, int interactionID) 
+    {
+        var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
+        if (npc != null)
+        {
+            if (!npc.interactionIDs.Contains(interactionID))
+            {
+                npc.interactionIDs.Add(interactionID);
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"NPC with ID {npcID} not found.");
+        }
+    }
+
+    public void RemoveInteractionFromNPC(int npcID, int interactionID)
+    {
+        var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
+        if (npc != null)
+        {
+            if (!npc.interactionIDs.Remove(interactionID))
+            {
+                Debug.LogWarning($"InteractionID {interactionID} not found in NPC with ID {npcID}.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"NPC with ID {npcID} not found.");
+        }
+    }
+
+    public void ChangeNPCPositionAndScene(int npcID, string sceneName, Vector3 position)
+    {
+        var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
+
+        if (npc != null)
+        {
+            npc.Scene = sceneName;
+            npc.Position = position;
+        }
+        else
+        {
+            Debug.LogWarning($"NPC with ID {npcID} not found.");
+        }
+    }
+
+    public void SetNPCActive(int npcID, bool bActive)
+    {
+        var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
+
+        if (npc != null)
+        {
+            npc.bActive = bActive;
+        }
+        else
+        {
+            Debug.LogWarning($"NPC with ID {npcID} not found.");
+        }
     }
 }
 

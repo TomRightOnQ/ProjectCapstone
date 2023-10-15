@@ -29,6 +29,13 @@ public static class Enums
         Outside,  // Scene Type: Non-in-game Scene
     }
 
+    public enum TASK_ACTION
+    {
+        AddInteraction,  // Task: Add interactions to the targeted NPC
+        RemoveInteraction,  // Task: Remove interactions from the targeted NPC
+        None,  // Task: Doing nothing
+    }
+
     public enum TASK_TYPE
     {
         Chat,  // Task System: Chat

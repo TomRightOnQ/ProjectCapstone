@@ -44,4 +44,10 @@ public class DebugManager : MonoBehaviour
         LevelManager.Instance.LoadScene(Constants.SCENE_AUDIENCELOW_LEVEL);
         onClick();
     }
+
+    public void EnterEntrance()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_ENTRANCE_LEVEL);
+        onClick();
+    }
 }

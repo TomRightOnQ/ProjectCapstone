@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
 
     // Data
+    [SerializeField] private float moveRatio = 1f;
     [SerializeField] private float jumpRatio = 1f;
     [SerializeField] private float dashRatio = 1f;
     [SerializeField] private Rigidbody playerRigidBody;
@@ -23,12 +24,12 @@ public class PlayerController : MonoBehaviour
     private bool bDash = false;
 
     // Lock input from keyboard
-    private bool bInputLocked = false;
+    [SerializeField] private bool bInputLocked = false;
     // Lock attack movement
     // Lock all movement
-    private bool bMovementLocked = false;
+    [SerializeField] private bool bMovementLocked = false;
     // Lock all active mmovement
-    private bool bMovable = false;
+    [SerializeField] private bool bMovable = false;
 
     private void Awake()
     {
@@ -72,9 +73,9 @@ public class PlayerController : MonoBehaviour
         }
 
         // Apply continuous force based on moveInput
-        if (moveInput != Vector2.zero)
+        if (moveInput != Vector2.zero && !bAirBorne)
         {
-            Vector3 force = new Vector3(moveInput.x, 0, moveInput.y) * player.GetUnitSpeed();
+            Vector3 force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitSpeed();
             playerRigidBody.AddForce(force);
         }
 
@@ -108,7 +109,7 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        playerRigidBody.AddForce(new Vector3(0f, jumpRatio, 0f));
+        // playerRigidBody.AddForce(new Vector3(0f, jumpRatio, 0f));
     }
 
     private void dash(InputAction.CallbackContext context)

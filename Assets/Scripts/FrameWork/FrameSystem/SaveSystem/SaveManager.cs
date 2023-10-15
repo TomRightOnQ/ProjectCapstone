@@ -40,6 +40,7 @@ public class SaveManager : MonoBehaviour
         }
         // Now load data for new game...
         SaveConfig.Instance.SetPlayer("You", new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
+        SaveConfig.Instance.InitNPCToSave();
         SaveConfig.Instance.LockSave();
     }
 
@@ -68,5 +69,33 @@ public class SaveManager : MonoBehaviour
     public SaveConfig.PlayerSaveData GetPlayer()
     {
         return SaveConfig.Instance.GetPlayer();
+    }
+
+    // Get NPC Info
+    public List<SaveConfig.NPCSaveData> GetNPCInfo()
+    {
+        return SaveConfig.Instance.NpcSaveDataList;
+    }
+
+
+    // Modify NPCs
+    public void AddInteractionToNPC(int npcID, int interactionID)
+    {
+        SaveConfig.Instance.AddInteractionToNPC(npcID, interactionID);
+    }
+
+    public void RemoveInteractionFromNPC(int npcID, int interactionID)
+    {
+        SaveConfig.Instance.RemoveInteractionFromNPC(npcID, interactionID);
+    }
+
+    public void ChangeNPCPositionAndScene(int npcID, string sceneName, Vector3 position)
+    {
+        SaveConfig.Instance.ChangeNPCPositionAndScene(npcID, sceneName, position);
+    }
+
+    public void SetNPCActive(int npcID, bool bActive)
+    {
+        SaveConfig.Instance.SetNPCActive(npcID, bActive);
     }
 }

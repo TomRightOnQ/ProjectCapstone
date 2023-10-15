@@ -1,7 +1,7 @@
 public static class Constants
 {
     // 3C
-    public const float DASH_CD_PLAYER = 0.1f;  // Dash CD for player
+    public const float DASH_CD_PLAYER = 1f;  // Dash CD for player
     public const float CAMERA_PAN_SPEED = 10f;  // Speed of Camera Pan according to the player's movement
     public const float CAMERA_PAN_OFFSET = 0.9f;  // 
     public const float CAMERA_SNAP_THRESHOLD = 0.01f;  // 
@@ -25,4 +25,5 @@ public static class Constants
     public const string SCENE_DEFAULT_LEVEL = "DefaultLevel";  // Deafult scene of a level
     public const string SCENE_AUDIENCE_LEVEL = "AudienceLevel";  // Audience Level
     public const string SCENE_AUDIENCELOW_LEVEL = "AudienceLowLevel";  // Audience Level - Lower stands
+    public const string SCENE_ENTRANCE_LEVEL = "EntranceLevel";  // Entrance Level
 }

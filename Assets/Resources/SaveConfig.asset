@@ -17,4 +17,10 @@ MonoBehaviour:
     PlayerName: You
     Position: {x: 0, y: 0.5, z: 0}
     Scene: DefaultLevel
-  npcSaveDataList: []
+  npcSaveDataList:
+  - NpcID: 1
+    NpcName: Chatter
+    Position: {x: 2, y: 0.5, z: 0}
+    interactionIDs: 0100000002000000
+    Scene: DefaultLevel
+    bActive: 1

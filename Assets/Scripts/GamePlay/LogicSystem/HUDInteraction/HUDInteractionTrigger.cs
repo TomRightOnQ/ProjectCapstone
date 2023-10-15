@@ -7,6 +7,9 @@ using UnityEngine;
 /// </summary>
 public class HUDInteractionTrigger : MonoBehaviour
 {
+    // Object
+    [SerializeField] public MObject objectBase;
+
     // Trigger
     [SerializeField] private Collider trigger;
     // Data
