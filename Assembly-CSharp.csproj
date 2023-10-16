@@ -493,6 +493,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ListView\ListViewHeight\ListViewHeightSelectedItemProvider.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Timeline\TimelineScale.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CollectionsUtilities\ICollectionChanged.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Task\TaskManager.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Tabs\TabButtonComponentBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Collections\ListViewDefaultOddBackgroundColor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Connector\MultipleConnector.cs" />
@@ -1112,7 +1113,7 @@
     <Compile Include="Assets\Scripts\GamePlay\3C\PlayerController.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\SliderScale\SliderScaleBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Converter\ConverterTMProReplacementInfo.cs" />
-    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Task\TaskManager.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C2D\PlayerController2D.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

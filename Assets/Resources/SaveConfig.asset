@@ -12,15 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5adf8aafd7f0134caf3fc7c7c08a0ff, type: 3}
   m_Name: SaveConfig
   m_EditorClassIdentifier: 
-  bAllowRewrite: 0
+  bAllowRewrite: 1
   playerSaveData:
     PlayerName: You
-    Position: {x: 0, y: 0.5, z: 0}
-    Scene: DefaultLevel
-  npcSaveDataList:
-  - NpcID: 1
-    NpcName: Chatter
-    Position: {x: 2, y: 0.5, z: 0}
-    interactionIDs: 0100000002000000
-    Scene: DefaultLevel
-    bActive: 1
+    Position: {x: 0, y: 0, z: 0}
+    Scene: 
+  npcSaveDataList: []
+  currentDay: 0

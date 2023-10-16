@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,10 +13,12 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     // Data
     [SerializeField]
     private PlayerSaveData playerSaveData = new PlayerSaveData();
-
     [SerializeField]
     private List<NPCSaveData> npcSaveDataList = new List<NPCSaveData>();
     public List<NPCSaveData> NpcSaveDataList => npcSaveDataList;
+
+    /// Day System
+    [SerializeField] private int currentDay = 0;
 
     // Datagrams
     [System.Serializable]
@@ -39,9 +41,8 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     }
 
     // Methods:
-    public void SetPlayer(string name, Vector3 position, string scene)
+    public void SetPlayer(Vector3 position, string scene)
     {
-        playerSaveData.PlayerName = name;
         playerSaveData.Position = position;
         playerSaveData.Scene = scene;
     }
@@ -54,6 +55,19 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public void LockSave()
     {
         bAllowRewrite = false;
+    }
+
+    // Modify Day status
+    // --Init-- Methods
+    public void InitDayToSave()
+    {
+        currentDay = 0;
+    }
+
+    // Jump tp the next day
+    public void JumpToNextDay()
+    {
+        currentDay = Math.Clamp(currentDay++, 0, 7);
     }
 
     // Modify NPC status

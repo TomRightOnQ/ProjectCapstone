@@ -7,6 +7,11 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private float cameraYOffset = 3f;
     [SerializeField] private float cameraZOffset = 4f;
 
+    // Camera horizontal limit
+    [SerializeField] private float camMinX = -100f;
+    [SerializeField] private float camMaxX = 100f;
+    [SerializeField] private float camMaxZ = 100f;
+    [SerializeField] private float camMinZ = -100f;
     private bool bPlayerMode = true;
     private EUnit unit;
 
@@ -28,14 +33,16 @@ public class PlayerCamera : MonoBehaviour
 
         // Set target position based on facing direction
         Vector3 targetPosition;
-
+        float cameraZ = Mathf.Clamp(targetObject.transform.position.z - cameraZOffset, camMinZ, camMaxZ);
         if (unit.GetFacingToRight())
         {
-            targetPosition = new Vector3(targetObject.transform.position.x + Constants.CAMERA_PAN_OFFSET, targetObject.transform.position.y + cameraYOffset, targetObject.transform.position.z - cameraZOffset);
+            float cameraX = Mathf.Clamp(targetObject.transform.position.x + Constants.CAMERA_PAN_OFFSET, camMinX, camMaxX);
+            targetPosition = new Vector3(cameraX, targetObject.transform.position.y + cameraYOffset, cameraZ);
         }
         else
         {
-            targetPosition = new Vector3(targetObject.transform.position.x - Constants.CAMERA_PAN_OFFSET, targetObject.transform.position.y + cameraYOffset, targetObject.transform.position.z - cameraZOffset);
+            float cameraX = Mathf.Clamp(targetObject.transform.position.x - Constants.CAMERA_PAN_OFFSET, camMinX, camMaxX);
+            targetPosition = new Vector3(cameraX, targetObject.transform.position.y + cameraYOffset, cameraZ);
         }
 
         // Calculate the distance to the target

@@ -5,5 +5,7 @@ public static class GameEvent
         // ChatInteraction
         EVENT_CHAT_BEGIN,
         EVENT_CHAT_END,
+        EVENT_SCENE_UNLOADED,
+        EVENT_SCENE_LOADED,
     }
 }

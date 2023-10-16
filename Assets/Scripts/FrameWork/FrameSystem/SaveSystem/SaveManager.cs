@@ -21,6 +21,7 @@ public class SaveManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this);
+            configEventHandlers();
         }
         else
         {
@@ -29,6 +30,13 @@ public class SaveManager : MonoBehaviour
     }
 
     // Public:
+    // Config events
+    public void configEventHandlers()
+    {
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_UNLOADED, OnRecv_SceneUnLoaded);
+    }
+
     // Init a new save
     // --Caution--
     // This will completely rewrite the saving scriptable
@@ -39,7 +47,7 @@ public class SaveManager : MonoBehaviour
             return;
         }
         // Now load data for new game...
-        SaveConfig.Instance.SetPlayer("You", new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
+        SaveConfig.Instance.SetPlayer(new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
         SaveConfig.Instance.InitNPCToSave();
         SaveConfig.Instance.LockSave();
     }
@@ -97,5 +105,25 @@ public class SaveManager : MonoBehaviour
     public void SetNPCActive(int npcID, bool bActive)
     {
         SaveConfig.Instance.SetNPCActive(npcID, bActive);
+    }
+
+    // Private:
+    // Event Handlers
+    private void OnRecv_SceneLoaded()
+    {
+        if (LevelConfig.Instance.GetLevelData(LevelManager.Instance.CurrentScene).SceneType != Enums.SCENE_TYPE.World)
+        {
+            return;
+        }
+        // Save Immediate data
+        SaveConfig.Instance.SetPlayer(PersistentDataManager.Instance.MainPlayer.gameObject.transform.position, LevelManager.Instance.CurrentScene);
+
+        // Begin Save Cycle every given time
+
+    }
+
+    private void OnRecv_SceneUnLoaded()
+    {
+
     }
 }

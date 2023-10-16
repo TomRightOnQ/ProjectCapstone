@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3198806294966716460}
-  m_Mesh: {fileID: -2432090755550338912, guid: 9a42c70f2509623468f8e5d99b5a6418, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: 222c2bd075e6a15458779398f22e976f, type: 3}
 --- !u!23 &5413550381325698761
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -92,13 +92,13 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3198806294966716460}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8d7802630ba88cc4c82c84cc903bee3f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 9a42c70f2509623468f8e5d99b5a6418, type: 3}
+  m_Mesh: {fileID: -2432090755550338912, guid: 222c2bd075e6a15458779398f22e976f, type: 3}
 --- !u!54 &8164078559034091108
 Rigidbody:
   m_ObjectHideFlags: 0

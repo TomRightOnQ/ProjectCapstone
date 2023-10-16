@@ -60,6 +60,9 @@ public class LevelManager : MonoBehaviour
         // Start loading the scene
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
 
+        // Notify the beginning of scene loading
+        EventManager.Instance.PostEvent(GameEvent.Event.EVENT_SCENE_UNLOADED);
+
         // Wait until the scene is fully loaded
         while (!asyncOperation.isDone)
         {
@@ -86,15 +89,17 @@ public class LevelManager : MonoBehaviour
             placePlayer(sceneName);
         }
         placeNPCs(sceneName);
-        finishBuild();
+        finishBuild(sceneName);
     }
 
     // Finishing loading
     // -- At this point, all managers should be ready, and should not have null reference --
-    private void finishBuild()
+    private void finishBuild(string sceneName)
     {
         PersistentDataManager.Instance.SetCamera();
         InputManager.Instance.UnLockInput();
+
+        EventManager.Instance.PostEvent(GameEvent.Event.EVENT_SCENE_LOADED);
     }
 
     // ---Methods to rebuild the scene---

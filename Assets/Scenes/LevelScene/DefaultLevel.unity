@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.38354, g: 325.1084, b: 430.30957, a: 1}
+  m_IndirectSpecularColor: {r: 1435.669, g: 765.6592, b: 510.18848, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1180,6 +1180,18 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 263
       objectReference: {fileID: 0}
+    - target: {fileID: 3531698554722778547, guid: e924919e060f1ae468e86b6643515b60,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 8d7802630ba88cc4c82c84cc903bee3f,
+        type: 2}
+    - target: {fileID: 3531698555127261784, guid: e924919e060f1ae468e86b6643515b60,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 8d7802630ba88cc4c82c84cc903bee3f,
+        type: 2}
     - target: {fileID: 3531698555621082874, guid: e924919e060f1ae468e86b6643515b60,
         type: 3}
       propertyPath: m_RootOrder
@@ -1240,6 +1252,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoadTest
       objectReference: {fileID: 0}
+    - target: {fileID: 3531698555681144219, guid: e924919e060f1ae468e86b6643515b60,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 8d7802630ba88cc4c82c84cc903bee3f,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e924919e060f1ae468e86b6643515b60, type: 3}
 --- !u!1001 &5710726260531181587
@@ -1308,11 +1326,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5710726258557446447, guid: 053e86100d13e63498120e1d31f60b29,
-        type: 3}
-      propertyPath: cameraYOffset
-      value: 5.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 053e86100d13e63498120e1d31f60b29, type: 3}
