@@ -60,6 +60,7 @@ public class PersistentGameManager : MonoBehaviour
         Debug.Log("PersistentGameManager Init: Managers Ready!");
     }
 
+    // Public:
     // Load Managers
     public void LoadManagers()
     {

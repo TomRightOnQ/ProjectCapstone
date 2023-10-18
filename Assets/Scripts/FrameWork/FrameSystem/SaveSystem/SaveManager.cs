@@ -111,7 +111,7 @@ public class SaveManager : MonoBehaviour
     // Event Handlers
     private void OnRecv_SceneLoaded()
     {
-        if (LevelConfig.Instance.GetLevelData(LevelManager.Instance.CurrentScene).SceneType != Enums.SCENE_TYPE.World)
+        if (LevelConfig.Instance.GetLevelData(LevelManager.Instance.CurrentScene).bSaveable)
         {
             return;
         }

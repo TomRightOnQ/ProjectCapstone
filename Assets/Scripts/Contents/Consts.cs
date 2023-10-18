@@ -26,4 +26,5 @@ public static class Constants
     public const string SCENE_AUDIENCE_LEVEL = "AudienceLevel";  // Audience Level
     public const string SCENE_AUDIENCELOW_LEVEL = "AudienceLowLevel";  // Audience Level - Lower stands
     public const string SCENE_ENTRANCE_LEVEL = "EntranceLevel";  // Entrance Level
+    public const string SCENE_PLATFORMER_LEVEL = "PlatformerLevel";  // Platformer Level
 }

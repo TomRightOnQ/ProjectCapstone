@@ -50,4 +50,10 @@ public class DebugManager : MonoBehaviour
         LevelManager.Instance.LoadScene(Constants.SCENE_ENTRANCE_LEVEL);
         onClick();
     }
+
+    public void EnterPlatformer()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_PLATFORMER_LEVEL);
+        onClick();
+    }
 }

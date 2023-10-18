@@ -15,26 +15,37 @@ MonoBehaviour:
   levelCollections:
   - SceneName: MainMenu
     SceneType: 2
+    LevelType: 5
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: 0, z: 0}
   - SceneName: DefaultLevel
     SceneType: 1
+    LevelType: 5
     bSaveable: 1
     SpawnPoints:
     - {x: 0, y: 0.5, z: 0}
   - SceneName: AudienceLevel
     SceneType: 1
+    LevelType: 5
     bSaveable: 1
     SpawnPoints:
     - {x: -6, y: 7.2, z: -1}
   - SceneName: AudienceLowLevel
     SceneType: 1
+    LevelType: 5
     bSaveable: 1
     SpawnPoints:
     - {x: 2.2, y: 11.7, z: 10}
   - SceneName: EntranceLevel
     SceneType: 1
+    LevelType: 5
     bSaveable: 1
     SpawnPoints:
     - {x: 11, y: 0.6, z: 0}
+  - SceneName: PlatformerLevel
+    SceneType: 0
+    LevelType: 0
+    bSaveable: 0
+    SpawnPoints:
+    - {x: 0, y: 2.4, z: 0}

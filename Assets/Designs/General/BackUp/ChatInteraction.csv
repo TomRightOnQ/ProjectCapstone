@@ -1,0 +1,15 @@
+ID,Content,bIsChoice,Speaker,Target,Action,bEnd,Event,EventTarget,SpeakerID
+int,string,bool,string,int[],Enums.INTERACTION_TYPE,bool,Enums.INTERACTION_EVENT,int[],int
+1,This is a message.,FALSE,ChatInteraction,2,Enums.INTERACTION_TYPE.Next,FALSE,Enums.INTERACTION_EVENT.None,-1,1
+2,Now we have choices.,FALSE,You,"3,4",Enums.INTERACTION_TYPE.Choice,FALSE,Enums.INTERACTION_EVENT.None,-1,1
+3,Here's a choice to end the message.,TRUE,ChatInteraction,-1,Enums.INTERACTION_TYPE.End,TRUE,Enums.INTERACTION_EVENT.None,-1,1
+4,I'm a choice to jump to the next one.,TRUE,ChatInteraction,5,Enums.INTERACTION_TYPE.Next,FALSE,Enums.INTERACTION_EVENT.None,-1,1
+5,This message will end the chat.,FALSE,ChatInteraction,-1,Enums.INTERACTION_TYPE.End,TRUE,Enums.INTERACTION_EVENT.None,-1,1
+6,This is the message to start Task 1,FALSE,ChatInteraction,7,Enums.INTERACTION_TYPE.Next,FALSE,Enums.INTERACTION_EVENT.None,-1,1
+7,Now we will complete 1 to unlock Task 2,FALSE,ChatInteraction,-1,Enums.INTERACTION_TYPE.End,TRUE,Enums.INTERACTION_EVENT.CompleteTask,1,1
+8,Only one sentence for task 2,FALSE,ChatInteraction,"9,10",Enums.INTERACTION_TYPE.Choice,FALSE,Enums.INTERACTION_EVENT.None,-1,1
+9,This choice does nothing,TRUE,ChatInteraction,-1,Enums.INTERACTION_TYPE.End,TRUE,Enums.INTERACTION_EVENT.None,-1,1
+10,This choice finishes task 2,TRUE,ChatInteraction,-1,Enums.INTERACTION_TYPE.End,TRUE,Enums.INTERACTION_EVENT.CompleteTask,2,1
+11,Wanna try a sample game?,FALSE,Atom,"12,13",Enums.INTERACTION_TYPE.Choice,FALSE,Enums.INTERACTION_EVENT.None,-1,2
+12,Yes I'm ready,TRUE,You,1,Enums.INTERACTION_TYPE.StartGame,TRUE,Enums.INTERACTION_EVENT.None,-1,2
+13,Nope...,TRUE,You,-1,Enums.INTERACTION_TYPE.End,TRUE,Enums.INTERACTION_EVENT.None,-1,2

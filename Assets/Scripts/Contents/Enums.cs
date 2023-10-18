@@ -15,6 +15,17 @@ public static class Enums
         Choice,  // Screen Interaction Type: Showing choices
         Chat,  // Screen Interaction Type: Start a chat
         Teleport,  // Screen Interaction Type: Teleport the player
+        StartGame,  // Screen Interaction Type: Bring the player to a game level
+    }
+
+    public enum LEVEL_TYPE
+    {
+        Platformer,  // Level:Platformer Stage
+        Dual,  // Level:Battle Stage
+        Shooter,  // Level:Weaponed Battle Stage
+        Hide,  // Level:Hide
+        Track,  // Level:Track
+        None,  // Level:World or other
     }
 
     public enum NONE
@@ -39,5 +50,6 @@ public static class Enums
     public enum TASK_TYPE
     {
         Chat,  // Task System: Chat
+        Game,  // Task System: Game
     }
 }

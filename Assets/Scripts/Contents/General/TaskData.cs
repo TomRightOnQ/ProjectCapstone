@@ -33,6 +33,7 @@ public static class TaskData
     {
         {1, new TaskDataStruct(1, "Task1", "Task1_Desc", Enums.TASK_TYPE.Chat, Enums.TASK_ACTION.AddInteraction, new int[]{1,4}, Enums.TASK_ACTION.RemoveInteraction, new int[]{1,3}, new int[]{-1})},
         {2, new TaskDataStruct(2, "Task2", "Task2_Desc", Enums.TASK_TYPE.Chat, Enums.TASK_ACTION.RemoveInteraction, new int[]{1,4}, Enums.TASK_ACTION.None, new int[]{-1}, new int[]{-1})},
+        {3, new TaskDataStruct(3, "Complete a platformer stage", "Go and try a mini game", Enums.TASK_TYPE.Game, Enums.TASK_ACTION.RemoveInteraction, new int[]{2,5}, Enums.TASK_ACTION.AddInteraction, new int[]{2,6}, new int[]{-1})},
     };
 
     public static TaskDataStruct GetData(int id)

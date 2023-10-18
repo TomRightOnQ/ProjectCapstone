@@ -79,6 +79,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\ListViewEnum\ListViewEnumComponent.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\Calendar\CalendarDateSetter.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Calendar\DateScroller.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\DayCycle\DayCycleManager.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Switch\SwitchBackgroundOffColor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Dialog\DialogButtonsPoolCustom.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Editor.Conditions\NestedInspectorAttribute.cs" />
@@ -205,6 +206,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Async\Awaiter{T}.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\SelectableHelperList\SelectableHelperListDisabledSprite.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Dialog\Dialog.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\2DScene\UI_Level2DComplete.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Timeline\TrackView.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Wrappers\Selectable\SelectableDisabledSprite.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Input\StyleSpinner.cs" />
@@ -411,6 +413,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Text\TextTMPro.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Named{TId}.cs" />
     <Compile Include="Assets\Scripts\GamePlay\LogicSystem\ChatInteraction\UI_ChatInteraction.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\2DScene\EndTrigger.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TreeView\Events\TreeViewNodeEvent.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\ListViewString\ListViewStringComponent.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\RangeSlider\Int\RangeSliderValueMaxSynchronizer.cs" />
@@ -523,6 +526,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\ListViewType\ListViewTypeEllipse.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\SelectableHelper\SelectableHelperDisabledSprite.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\SceneGeneratorHelper.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\2DScene\DeathTrigger.cs" />
     <Compile Include="Assets\Scripts\GamePlay\3C\Player.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CenteredSlider\Horizontal\CenteredSliderUseValueLimitsSetter.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\IO\FileListViewPathComponentTMPro.cs" />
@@ -692,6 +696,7 @@
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\TargetsWrapper.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\ListViewEnum\HighlightSource.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TreeView\TreeViewDataSourceItem.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\Level2DData.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CenteredSlider\Horizontal\CenteredSliderValueObserver.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Connector\ConnectorPosition.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\EasyLayout\EasyLayoutFlex.cs" />
@@ -917,6 +922,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Drag-and-Drop\TreeViewNodeDropSupport.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Collections\ListViewHighlightedBackgroundColor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\EasyLayout\EasyLayoutUtilites.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\2DScene\GameManager2D.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CollectionsUtilities\IMovableToCache.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Wrappers\InputField\TMProInputFieldFontAsset.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Calendar\CalendarDate.cs" />
@@ -1094,6 +1100,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Combobox\ComboboxCustom.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\ListViewCustom.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Timeline\DataDragSupport.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C2D\PlayerController2D.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\SnapGrid\SnapGridBase.LineY.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\IThemeTarget.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CenteredSlider\Vertical\CenteredSliderVerticalLimitMinSetter.cs" />
@@ -1113,7 +1120,6 @@
     <Compile Include="Assets\Scripts\GamePlay\3C\PlayerController.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\SliderScale\SliderScaleBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Converter\ConverterTMProReplacementInfo.cs" />
-    <Compile Include="Assets\Scripts\GamePlay\3C2D\PlayerController2D.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 /// Attching this component to the player for control
 /// </summary>
 
-public class PlayerController : MonoBehaviour 
+public class PlayerController : MonoBehaviour
 {
     // Core: Player Control class and the player
     private PlayerControls playerControls;
@@ -15,11 +15,16 @@ public class PlayerController : MonoBehaviour
 
     // Data
     [SerializeField] private float moveRatio = 1f;
+    [SerializeField] private float jumpRatio = 1f;
     [SerializeField] private float dashRatio = 1f;
     [SerializeField] private Rigidbody playerRigidBody;
 
     // Flags
+    private bool bAirBorne = false;
     private bool bDash = false;
+
+    // Mode Switcher
+    [SerializeField] private bool bWorld = true;
 
     // Lock input from keyboard
     [SerializeField] private bool bInputLocked = false;
@@ -31,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        if (playerRigidBody == null) 
+        if (playerRigidBody == null)
         {
             playerRigidBody = gameObject.GetComponent<Rigidbody>();
         }
@@ -41,13 +46,19 @@ public class PlayerController : MonoBehaviour
             player = GetComponent<Player>();
         }
     }
-
-    private void Start()
+    private void init(bool bWorldMode = true)
     {
+        bWorld = bWorldMode;
+
         // Subscribe to the events
         playerControls.Player.Move.performed += move;
         playerControls.Player.Move.canceled += stopMove;
-        playerControls.Player.Dash.performed += dash;
+
+        if (!bWorld)
+        {
+            playerControls.Player.Jump.started += jump;
+            playerControls.Player.Dash.performed += dash;
+        }
     }
 
     private void OnEnable()
@@ -69,7 +80,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Apply continuous force based on moveInput
-        if (moveInput != Vector2.zero)
+        if (moveInput.magnitude != 0 && !bAirBorne)
         {
             Vector3 force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitSpeed();
             playerRigidBody.AddForce(force);
@@ -98,9 +109,19 @@ public class PlayerController : MonoBehaviour
         moveInput = Vector2.zero;
     }
 
+    private void jump(InputAction.CallbackContext context)
+    {
+        //Player's position is locked
+        if (bWorld || bAirBorne || bDash || !bMovementLocked || !bMovable)
+        {
+            return;
+        }
+        playerRigidBody.AddForce(new Vector3(0f, jumpRatio, 0f));
+    }
+
     private void dash(InputAction.CallbackContext context)
     {
-        if (bDash || !bMovementLocked || !bMovable)
+        if (bWorld ||¡¡bAirBorne || bDash || !bMovementLocked || !bMovable)
         {
             return;
         }
@@ -116,11 +137,40 @@ public class PlayerController : MonoBehaviour
         bDash = false;
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        bAirBorne = true;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        bAirBorne = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        bAirBorne = false;
+    }
+
     // Methods
     // Stop all movement of the player
     public void StopPlayerMovement()
     {
 
+    }
+
+    // Set mode
+    public void SetPlayerMode(Enums.SCENE_TYPE worldType)
+    {
+        if (worldType == Enums.SCENE_TYPE.World)
+        {
+            bWorld = true;
+        }
+        else 
+        {
+            bWorld = false;
+        }
+        init(bWorld);
     }
 
     // All external classes attampting to move the player shall call this method
@@ -129,7 +179,8 @@ public class PlayerController : MonoBehaviour
     public void MovePlayer(Vector3 movement, bool bActiveMove)
     {
         //Player's position is locked
-        if (!bMovementLocked) {
+        if (!bMovementLocked)
+        {
             return;
         }
         // Active move banned
@@ -144,13 +195,13 @@ public class PlayerController : MonoBehaviour
     // Force move of the player
     public void RelocatePlayer(Vector3 targetPos)
     {
-        
+
     }
 
     // Reset flags
     public void ResetPlayerController()
     {
-    
+
     }
 
     // Change input and lock state

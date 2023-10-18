@@ -7,12 +7,20 @@ None,INTERACTION_TYPE,Screen Interaction Type: Doing nothing
 Choice,INTERACTION_TYPE,Screen Interaction Type: Showing choices
 Chat,INTERACTION_TYPE,Screen Interaction Type: Start a chat
 Teleport,INTERACTION_TYPE,Screen Interaction Type: Teleport the player
+StartGame,INTERACTION_TYPE,Screen Interaction Type: Bring the player to a game level
 CompleteTask,INTERACTION_EVENT,Screen Interaction Event: Complete a task
 None,INTERACTION_EVENT,Screen Interaction Event: Doing nothing
 Chat,TASK_TYPE,Task System: Chat
+Game,TASK_TYPE,Task System: Game
 Battle,SCENE_TYPE,Scene Type: Battle Scene
 World,SCENE_TYPE,Scene Type: Wrold Scene
 Outside,SCENE_TYPE,Scene Type: Non-in-game Scene
 AddInteraction,TASK_ACTION,Task: Add interactions to the targeted NPC
 RemoveInteraction,TASK_ACTION,Task: Remove interactions from the targeted NPC
 None,TASK_ACTION,Task: Doing nothing
+Platformer,LEVEL_TYPE,Level:Platformer Stage
+Dual,LEVEL_TYPE,Level:Battle Stage
+Shooter,LEVEL_TYPE,Level:Weaponed Battle Stage
+Hide,LEVEL_TYPE,Level:Hide
+Track,LEVEL_TYPE,Level:Track
+None,LEVEL_TYPE,Level:World or other

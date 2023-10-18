@@ -117,6 +117,9 @@ public class UI_ChatInteraction : UIBase
             case Enums.INTERACTION_TYPE.Choice:
                 refreshChat(choiceInteraction.Target[index]);
                 break;
+            case Enums.INTERACTION_TYPE.StartGame:
+                LevelManager.Instance.Load2DLevel(choiceInteraction.Target[0]);
+                break;
             default:
                 ChatInteractionManager.Instance.EndInteraction();
                 break;

@@ -9,8 +9,6 @@ public class PlayerHUDInteractionTrigger : MonoBehaviour
 {
     // Trigger
     [SerializeField] private Collider trigger;
-
-    // Create a variable to hold your layer mask
     private LayerMask interactableLayer;
 
     private void Awake()

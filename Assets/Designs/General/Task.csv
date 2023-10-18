@@ -1,4 +1,0 @@
-ID,Name,Description,Type,Action_1,Action_1_Target,Action_2,Action_2_Target,UnlockTask
-int,string,string,Enums.TASK_TYPE,Enums.TASK_ACTION,int[],Enums.TASK_ACTION,int[],int[]
-1,Task1,Task1_Desc,Enums.TASK_TYPE.Chat,Enums.TASK_ACTION.AddInteraction,"1,4",Enums.TASK_ACTION.RemoveInteraction,"1,3",-1
-2,Task2,Task2_Desc,Enums.TASK_TYPE.Chat,Enums.TASK_ACTION.RemoveInteraction,"1,4",Enums.TASK_ACTION.None,-1,-1

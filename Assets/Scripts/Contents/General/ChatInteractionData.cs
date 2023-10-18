@@ -43,6 +43,10 @@ public static class ChatInteractionData
         {8, new ChatInteractionDataStruct(8, "Only one sentence for task 2", false, "ChatInteraction", new int[]{9,10}, Enums.INTERACTION_TYPE.Choice, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
         {9, new ChatInteractionDataStruct(9, "This choice does nothing", true, "ChatInteraction", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
         {10, new ChatInteractionDataStruct(10, "This choice finishes task 2", true, "ChatInteraction", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.CompleteTask, new int[]{2}, 1)},
+        {11, new ChatInteractionDataStruct(11, "Wanna try a sample game?", false, "Atom", new int[]{12,13}, Enums.INTERACTION_TYPE.Choice, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
+        {12, new ChatInteractionDataStruct(12, "Yes I'm ready", true, "You", new int[]{1}, Enums.INTERACTION_TYPE.StartGame, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
+        {13, new ChatInteractionDataStruct(13, "Nope...", true, "You", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
+        {14, new ChatInteractionDataStruct(14, "You have tried the sample game", false, "Atom", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
     };
 
     public static ChatInteractionDataStruct GetData(int id)

@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
     }
 
     // Unlock player input
-    public void UnLockInput()
+    public void UnLockInput(Enums.SCENE_TYPE worldType)
     {
         if (playerController == null)
         {
@@ -40,6 +40,7 @@ public class InputManager : MonoBehaviour
         playerController.ChangePlayerInputState(true);
         playerController.ChangePlayerMovementState(true);
         playerController.ChangePlayerActiveMovementState(true);
+        playerController.SetPlayerMode(worldType);
     }
 
     // Lock Player input

@@ -1,0 +1,6 @@
+ID,Name,Type,Next,Unlock
+int,string,Enums.LEVEL_TYPE,string,int
+1,Platformer_1,Enums.LEVEL_TYPE.Platformer,AudienceLevel,4
+2,Track_1,Enums.LEVEL_TYPE.Track,AudienceLevel,-1
+3,Dual_1,Enums.LEVEL_TYPE.Dual,AudienceLevel,-1
+4,Shooter_1,Enums.LEVEL_TYPE.Shooter,AudienceLevel,-1
