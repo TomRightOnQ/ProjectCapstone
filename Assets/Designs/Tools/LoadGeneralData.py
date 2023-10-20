@@ -96,6 +96,9 @@ def convert_xlsx_to_cs(xlsx_filename, output_filename):
     
     convert_to_cs(dataHeader, dataType, lines, output_filename)
 
+def is_temporary_excel_file(filename):
+    return filename.startswith("~$")
+
 root_dir = os.path.join(os.path.dirname(__file__), '..', '..')
 
 data_folder = os.path.join(root_dir, 'Designs', 'General')
@@ -109,6 +112,8 @@ if not os.path.exists(output_folder):
 for filename in os.listdir(data_folder):
     input_filename = os.path.join(data_folder, filename)
     output_filename = os.path.join(output_folder, filename.split('.')[0] + 'Data.cs')
+    if is_temporary_excel_file(filename):
+        continue
     if filename.endswith('.csv'):
         convert_csv_to_cs(input_filename, output_filename)
     elif filename.endswith('.xlsx'):

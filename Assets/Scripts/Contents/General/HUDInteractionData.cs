@@ -24,11 +24,8 @@ public static class HUDInteractionData
     public static Dictionary<int, HUDInteractionDataStruct> data = new Dictionary<int, HUDInteractionDataStruct>
     {
         {1, new HUDInteractionDataStruct(1, "Hello", new int[]{1}, Enums.INTERACTION_TYPE.Chat, false)},
-        {2, new HUDInteractionDataStruct(2, "Only happended once", new int[]{2}, Enums.INTERACTION_TYPE.End, true)},
-        {3, new HUDInteractionDataStruct(3, "Task1", new int[]{6}, Enums.INTERACTION_TYPE.Chat, false)},
-        {4, new HUDInteractionDataStruct(4, "Task2", new int[]{8}, Enums.INTERACTION_TYPE.Chat, false)},
-        {5, new HUDInteractionDataStruct(5, "Sample Game", new int[]{11}, Enums.INTERACTION_TYPE.Chat, false)},
-        {6, new HUDInteractionDataStruct(6, "Sample Game", new int[]{14}, Enums.INTERACTION_TYPE.Chat, false)},
+        {2, new HUDInteractionDataStruct(2, "Sample Game", new int[]{6}, Enums.INTERACTION_TYPE.Chat, false)},
+        {3, new HUDInteractionDataStruct(3, "First Day", new int[]{9}, Enums.INTERACTION_TYPE.Chat, false)},
     };
 
     public static HUDInteractionDataStruct GetData(int id)

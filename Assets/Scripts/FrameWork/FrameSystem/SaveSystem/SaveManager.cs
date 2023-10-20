@@ -48,6 +48,7 @@ public class SaveManager : MonoBehaviour
         }
         // Now load data for new game...
         SaveConfig.Instance.SetPlayer(new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
+        SaveConfig.Instance.InitDayToSave();
         SaveConfig.Instance.InitNPCToSave();
         SaveConfig.Instance.LockSave();
     }
@@ -61,6 +62,11 @@ public class SaveManager : MonoBehaviour
     public void SaveNPCData()
     {
     
+    }
+
+    public void SaveCurrentDay(int currentDay)
+    {
+        SaveConfig.Instance.CurrentDay = currentDay;
     }
 
     // Read Data
@@ -85,6 +91,11 @@ public class SaveManager : MonoBehaviour
         return SaveConfig.Instance.NpcSaveDataList;
     }
 
+    // Get Current Day:
+    public int GetCurrentDay()
+    {
+        return SaveConfig.Instance.CurrentDay;
+    }
 
     // Modify NPCs
     public void AddInteractionToNPC(int npcID, int interactionID)
@@ -111,15 +122,14 @@ public class SaveManager : MonoBehaviour
     // Event Handlers
     private void OnRecv_SceneLoaded()
     {
-        if (LevelConfig.Instance.GetLevelData(LevelManager.Instance.CurrentScene).bSaveable)
+        if (!LevelConfig.Instance.GetLevelData(LevelManager.Instance.CurrentScene).bSaveable)
         {
             return;
         }
-        // Save Immediate data
+        // Save data
         SaveConfig.Instance.SetPlayer(PersistentDataManager.Instance.MainPlayer.gameObject.transform.position, LevelManager.Instance.CurrentScene);
 
         // Begin Save Cycle every given time
-
     }
 
     private void OnRecv_SceneUnLoaded()

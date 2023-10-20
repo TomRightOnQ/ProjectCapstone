@@ -36,6 +36,11 @@ public class LevelConfig : ScriptableSingleton<LevelConfig>
             return default;
         }
     }
+
+    public LevelData GetLevelData(int index)
+    {
+        return levelCollections[index];
+    }
 }
 
 [System.Serializable]

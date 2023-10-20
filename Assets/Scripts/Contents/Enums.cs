@@ -45,6 +45,7 @@ public static class Enums
         AddInteraction,  // Task: Add interactions to the targeted NPC
         RemoveInteraction,  // Task: Remove interactions from the targeted NPC
         None,  // Task: Doing nothing
+        UnlockNextDay,  // Task: Unlock to the next day
     }
 
     public enum TASK_TYPE

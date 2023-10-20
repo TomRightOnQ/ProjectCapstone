@@ -120,6 +120,9 @@ public class UI_ChatInteraction : UIBase
             case Enums.INTERACTION_TYPE.StartGame:
                 LevelManager.Instance.Load2DLevel(choiceInteraction.Target[0]);
                 break;
+            case Enums.INTERACTION_TYPE.Teleport:
+                LevelManager.Instance.LoadScene(LevelConfig.Instance.GetLevelData(choiceInteraction.Target[0]).SceneName);
+                break;
             default:
                 ChatInteractionManager.Instance.EndInteraction();
                 break;

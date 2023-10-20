@@ -80,6 +80,9 @@ public class PersistentGameManager : MonoBehaviour
         Debug.Log("4. HUDInteractionManager Loading");
         HUDInteractionManager.Instance.Init();
 
+        Debug.Log("5. DayCycleManager Loading");
+        DayCycleManager.Instance.Init();
+
         Debug.Log("PersistentGameManager Load: Managers Ready!");
         // SceneManager.LoadScene("MainMenu");
     }

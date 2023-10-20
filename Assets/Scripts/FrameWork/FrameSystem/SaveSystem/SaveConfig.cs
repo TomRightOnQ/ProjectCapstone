@@ -19,6 +19,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
 
     /// Day System
     [SerializeField] private int currentDay = 0;
+    public int CurrentDay { get { return currentDay; } set { currentDay = value; } }
 
     // Datagrams
     [System.Serializable]
@@ -64,17 +65,12 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         currentDay = 0;
     }
 
-    // Jump tp the next day
-    public void JumpToNextDay()
-    {
-        currentDay = Math.Clamp(currentDay++, 0, 7);
-    }
-
     // Modify NPC status
     // Add NPC to Save List
     // --Init-- Methods
     public void InitNPCToSave()
     {
+        npcSaveDataList.Clear();
         foreach (var pair in NPCData.data)
         {
             NPCData.NPCDataStruct defaultNPC = pair.Value;

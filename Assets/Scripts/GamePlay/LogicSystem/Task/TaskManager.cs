@@ -25,22 +25,33 @@ public class TaskManager : MonoBehaviour
 
     // Private:
     // Config task actions
-    private void configTaskActions(Enums.TASK_ACTION action, int[] target)
+    private void configTaskActions(int[] actionIDs)
     {
-        switch (action)
+        for (int i = 0; i < actionIDs.Length; i++)
         {
-            case Enums.TASK_ACTION.AddInteraction:
-                addInteractionsFromTask(target);
+            int id = actionIDs[i];
+            if (id == -1)
+            {
                 break;
-            case Enums.TASK_ACTION.RemoveInteraction:
-                removeInteractionsFromTask(target);
-                break;
-            case Enums.TASK_ACTION.None:
-                break;
-            default:
-                break;
+            }
+            ActionData.ActionDataStruct actionData = ActionData.GetData(id);
+            switch (actionData.ActionType)
+            {
+                case Enums.TASK_ACTION.AddInteraction:
+                    addInteractionsFromTask(actionData.ActionTarget);
+                    break;
+                case Enums.TASK_ACTION.RemoveInteraction:
+                    removeInteractionsFromTask(actionData.ActionTarget);
+                    break;
+                case Enums.TASK_ACTION.UnlockNextDay:
+                    DayCycleManager.Instance.UnlockNextDay();
+                    break;
+                case Enums.TASK_ACTION.None:
+                    break;
+                default:
+                    break;
+            }
         }
-
     }
 
     // Config interactions:
@@ -70,11 +81,31 @@ public class TaskManager : MonoBehaviour
         }
     }
 
+    // Unlock tasks
+    public void UnlockTasks(int[] taskIDs)
+    {
+        for (int i = 0; i < taskIDs.Length; i++)
+        {
+            int id = taskIDs[i];
+            if (id > -1)
+            {
+                UnlockTask(id);
+            }
+        }
+    }
+
+    // Unlock a single task
+    public void UnlockTask(int taskID)
+    {
+        TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
+        configTaskActions(taskData.PreActions);
+    }
+
     // Complete a single task
     public void CompleteTask(int taskID)
     {
         TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
-        configTaskActions(taskData.Action_1, taskData.Action_1_Target);
-        configTaskActions(taskData.Action_2, taskData.Action_2_Target);
+        configTaskActions(taskData.PostActions);
+        UnlockTasks(taskData.UnlockTask);
     }
 }

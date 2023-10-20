@@ -1120,6 +1120,12 @@
     <Compile Include="Assets\Scripts\GamePlay\3C\PlayerController.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\SliderScale\SliderScaleBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Converter\ConverterTMProReplacementInfo.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\ActionData.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\DayCycle\UI_DayCycleControl.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\DayCycle\DayScripts\ScriptDayOne.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\DayData.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\DayCycle\DayScriptBase.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\DayCycle\DayScripts\ScriptDayZero.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
