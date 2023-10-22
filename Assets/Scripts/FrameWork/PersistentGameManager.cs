@@ -11,7 +11,8 @@ public class PersistentGameManager : MonoBehaviour
     private static PersistentGameManager instance;
     public static PersistentGameManager Instance => instance;
 
-    // public static event Action OnSceneLoaded;
+    [SerializeField] private bool bPaused = false;
+    public bool bGamePaused => bPaused;
 
     private void Awake()
     {
@@ -83,7 +84,25 @@ public class PersistentGameManager : MonoBehaviour
         Debug.Log("5. DayCycleManager Loading");
         DayCycleManager.Instance.Init();
 
+        Debug.Log("6 HUDManager Loading");
+        HUDManager.Instance.Init();
+
+        Debug.Log("7 MenuManager Loading");
+        MenuManager.Instance.Init();
+
         Debug.Log("PersistentGameManager Load: Managers Ready!");
         // SceneManager.LoadScene("MainMenu");
+    }
+
+    // Pause Game
+    public void PauseGame()
+    {
+        bPaused = true;
+        Time.timeScale = 0;
+    }
+    public void ResumeGame()
+    {
+        bPaused = false;
+        Time.timeScale = 1;
     }
 }

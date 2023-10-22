@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // If player's position is not locked and movable
-        if (!bMovementLocked || !bMovable)
+        if (!bMovementLocked || !bMovable || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }
@@ -91,6 +91,10 @@ public class PlayerController : MonoBehaviour
     // Events
     private void move(InputAction.CallbackContext context)
     {
+        if (PersistentGameManager.Instance.bGamePaused)
+        {
+            return;
+        }
         // Update moveInput with the current input value
         moveInput = context.ReadValue<Vector2>();
         // Flip the player
@@ -112,7 +116,7 @@ public class PlayerController : MonoBehaviour
     private void jump(InputAction.CallbackContext context)
     {
         //Player's position is locked
-        if (bWorld || bAirBorne || bDash || !bMovementLocked || !bMovable)
+        if (bWorld || bAirBorne || bDash || !bMovementLocked || !bMovable || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }
@@ -121,7 +125,7 @@ public class PlayerController : MonoBehaviour
 
     private void dash(InputAction.CallbackContext context)
     {
-        if (bWorld ||¡¡bAirBorne || bDash || !bMovementLocked || !bMovable)
+        if (bWorld ||¡¡bAirBorne || bDash || !bMovementLocked || !bMovable || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }

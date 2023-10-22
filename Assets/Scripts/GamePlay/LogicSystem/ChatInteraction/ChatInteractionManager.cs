@@ -55,6 +55,9 @@ public class ChatInteractionManager : MonoBehaviour
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_CHAT_BEGIN);
         ui_ChatInteraction.StartChat(chatID);
         bInChat = true;
+
+        // Hide HUD
+        HUDManager.Instance.HideAllHUD();
     }
 
     // End the current interaction
@@ -69,5 +72,8 @@ public class ChatInteractionManager : MonoBehaviour
         UIManager.Instance.HideUI("UI_ChatInteraction");
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_CHAT_END);
         bInChat = false;
+
+        // Show HUD
+        HUDManager.Instance.ShowAllHUD();
     }
 }
