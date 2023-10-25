@@ -15,6 +15,9 @@ public class UI_HUD : UIBase
     // UI - Upper Right Section
     [SerializeField] private GameObject upperRightHUD;
 
+    // UI - Upper Left Section
+    [SerializeField] private GameObject upperLeftHUD;
+
     // HUD Animation
     [SerializeField] private Animator upperRightAnimator;
 
@@ -57,5 +60,17 @@ public class UI_HUD : UIBase
     public void HideUpperRightHUD() 
     {
         upperRightAnimator.Play("HUDUpperRightHide");
+    }
+
+    // Reveal Upper Left HUD
+    public void ShowUpperLeftHUD()
+    {
+        upperLeftHUD.SetActive(false);
+    }
+
+    // Hide Upper Left HUD
+    public void HideUpperLeftHUD()
+    {
+        upperLeftHUD.SetActive(true);
     }
 }

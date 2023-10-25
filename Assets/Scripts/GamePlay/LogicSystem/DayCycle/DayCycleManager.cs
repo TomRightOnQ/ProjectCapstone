@@ -36,11 +36,10 @@ public class DayCycleManager : MonoBehaviour
     public void Init()
     {
         currentDay = SaveManager.Instance.GetCurrentDay();
-        if (ui_DayCycleControl == null)
+        if (ui_DayCycleControl == null && LevelManager.Instance.CurrentSceneType != Enums.SCENE_TYPE.Outside)
         {
             GameObject uiObject = UIManager.Instance.CreateUI("UI_DayCycleControl");
             ui_DayCycleControl = uiObject.GetComponent<UI_DayCycleControl>();
-            ui_DayCycleControl.SetCurrentDayText(currentDay);
         }
     }
 
@@ -64,6 +63,10 @@ public class DayCycleManager : MonoBehaviour
         }
         // Change the save Status
         SaveManager.Instance.SaveCurrentDay(targetDay);
+
+        // Marked the day as uninited
+        SaveManager.Instance.SaveCurrentDayInited(false);
+
         currentDay = targetDay;
         // Show Animation
 
@@ -90,6 +93,15 @@ public class DayCycleManager : MonoBehaviour
         
     }
 
+    // Show list of flash back
+    public void ShowFlashBackList()
+    {
+        if (ui_DayCycleControl != null)
+        {
+            ui_DayCycleControl.ShowFlashBackList();
+        }
+    }
+
     // Private:
     // Event Handlers
     private void OnRecv_SceneLoaded()
@@ -110,6 +122,7 @@ public class DayCycleManager : MonoBehaviour
             default:
                 break;
         }
-
+        // Marked the current day as inited
+        SaveManager.Instance.SaveCurrentDayInited(true);
     }
 }

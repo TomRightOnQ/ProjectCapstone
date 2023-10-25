@@ -1,0 +1,463 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'zh' Physical Memory: 32627 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker19
+-projectPath
+D:/CS/ICS169/Capstone/ProjectCapstone
+-logFile
+Logs/AssetImportWorker19.log
+-srvPort
+55163
+Successfully changed project path to: D:/CS/ICS169/Capstone/ProjectCapstone
+D:/CS/ICS169/Capstone/ProjectCapstone
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [6132] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 1916704840 [EditorId] 1916704840 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [6132] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 1916704840 [EditorId] 1916704840 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 200.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/CS/ICS169/Capstone/ProjectCapstone/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x220a)
+    Vendor:   NVIDIA
+    VRAM:     12107 MB
+    Driver:   31.0.15.3623
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.015145 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 242.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.084 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1085ms)
+		BeginReloadAssembly (91ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (856ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (117ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (641ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (243ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (298ms)
+				ProcessInitializeOnLoadMethodAttributes (82ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009803 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 239.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.532 seconds
+Domain Reload Profiling:
+	ReloadAssembly (5533ms)
+		BeginReloadAssembly (112ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (5269ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (462ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (175ms)
+			SetupLoadedEditorAssemblies (4446ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (240ms)
+				BeforeProcessingInitializeOnLoad (217ms)
+				ProcessInitializeOnLoadAttributes (3496ms)
+				ProcessInitializeOnLoadMethodAttributes (463ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 8261 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 53 unused Assets / (3.4 MB). Loaded Objects now: 8730.
+Memory consumption went from 387.9 MB to 384.5 MB.
+Total: 5.405000 ms (FindLiveObjects: 0.876700 ms CreateObjectMapping: 0.402800 ms MarkObjects: 3.704300 ms  DeleteObjects: 0.420000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 777339.314686 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Rainy_Cubemap_down.png
+  artifactKey: Guid(d6e202b5e4069ca438b5e5444632bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Rainy_Cubemap_down.png using Guid(d6e202b5e4069ca438b5e5444632bc03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53641148136e85dfb09fc1580d01f1ba') in 0.162486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.278775 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunrise_Cubemap_back.png
+  artifactKey: Guid(fa51b356f6688b14ab73ad414d4a8909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunrise_Cubemap_back.png using Guid(fa51b356f6688b14ab73ad414d4a8909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '122d2675e0c51a305644d81211d7e7d1') in 0.018166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.661603 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunset_Cubemap_down.png
+  artifactKey: Guid(dfcf6e3678256d546812594d88d79a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunset_Cubemap_down.png using Guid(dfcf6e3678256d546812594d88d79a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5260fcc40630b248fa50b42ed72b980') in 0.019384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.045771 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunset_Cubemap_right.png
+  artifactKey: Guid(717f2a9ebb816eb4588309f9fb87a157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunset_Cubemap_right.png using Guid(717f2a9ebb816eb4588309f9fb87a157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60d2a868f1e047e84e5d80d717e195bf') in 0.018854 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.828049 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS014/FS014_Day_Sunless_Cubemap.mat
+  artifactKey: Guid(f00c0c809fcf7454aa71a48c7525a56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS014/FS014_Day_Sunless_Cubemap.mat using Guid(f00c0c809fcf7454aa71a48c7525a56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12f7f7da4679f3b3c3dc48e0c74d5dda') in 2.549905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.110546 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Sunset_Cubemap.cubemap
+  artifactKey: Guid(ffd0d7b872d453d45a2773f1a50596a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Sunset_Cubemap.cubemap using Guid(ffd0d7b872d453d45a2773f1a50596a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2293a1326b59e11f27639de1e4e8ef3') in 0.421147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Night_Cubemap.cubemap
+  artifactKey: Guid(3aec1ff91f239664ebf95016e30b02e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Night_Cubemap.cubemap using Guid(3aec1ff91f239664ebf95016e30b02e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '792f5330889b9d8d54b3a1b271ede59a') in 0.373897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Night_Moonless_Cubemap.cubemap
+  artifactKey: Guid(d9d1fe0ba9681e04da8ce40535bf8b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Night_Moonless_Cubemap.cubemap using Guid(d9d1fe0ba9681e04da8ce40535bf8b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49cfbdd83532d71538356118c52b8124') in 0.353365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Sunset_Cubemap.cubemap
+  artifactKey: Guid(b44a73640fcf2904c9d3fdf21a0847a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Sunset_Cubemap.cubemap using Guid(b44a73640fcf2904c9d3fdf21a0847a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92c1dfa4ff721f85ede03d5bf007bcff') in 0.380235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Sunrise_Cubemap.cubemap
+  artifactKey: Guid(31b4f791e9a7cb04ab598c001e6d5d0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Sunrise_Cubemap.cubemap using Guid(31b4f791e9a7cb04ab598c001e6d5d0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d058358ac291bf9d2870d58a65c01ea') in 0.320395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.537084 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Cubemap_down.png
+  artifactKey: Guid(f30695b332978324586e673f9630710e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Cubemap_down.png using Guid(f30695b332978324586e673f9630710e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b79e16526edfb362e66d99d426b82ce') in 0.033658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Cubemap_front.png
+  artifactKey: Guid(c92a1d4bb6127154cb82a8368c064f80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Cubemap_front.png using Guid(c92a1d4bb6127154cb82a8368c064f80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81a69fbc258a3ca525377feaa6499674') in 0.018357 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Cubemap_back.png
+  artifactKey: Guid(497fd0b2ed9155a499662d0055eea905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Cubemap_back.png using Guid(497fd0b2ed9155a499662d0055eea905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc240b16791636f105509c50e840eb7') in 0.040403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Sunless_Cubemap_down.png
+  artifactKey: Guid(5540a7d6541b1154c9b7e8805ec6f848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Sunless_Cubemap_down.png using Guid(5540a7d6541b1154c9b7e8805ec6f848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '845de52d6ca676c0880fd77aa1434f47') in 0.012551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Moonless_Cubemap_right.png
+  artifactKey: Guid(fbc6bef3d0f318444a6a5f0ae756b60c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Moonless_Cubemap_right.png using Guid(fbc6bef3d0f318444a6a5f0ae756b60c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd49fe002df7e3d8da7f9bae8850c69c') in 0.019224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 45.485918 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap_down.png
+  artifactKey: Guid(dbeef58f4800dcd4eb9a8d212f6e07cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap_down.png using Guid(dbeef58f4800dcd4eb9a8d212f6e07cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd716fd3b2475107b3fe5adb50796e595') in 0.021052 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap_right.png
+  artifactKey: Guid(faeb85d0376cb8148a47593a0ff9b4ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap_right.png using Guid(faeb85d0376cb8148a47593a0ff9b4ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1a46ba864d8c7169d8f36318f8def1e') in 0.020508 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.071461 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Snowy_Cubemap_front.png
+  artifactKey: Guid(f8498dc3dcf78c04a9f75fa242cb57bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Snowy_Cubemap_front.png using Guid(f8498dc3dcf78c04a9f75fa242cb57bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '331e1fa36221f3b0fa79092b1e54b949') in 0.014932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.622088 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunrise_Cubemap_back.png
+  artifactKey: Guid(7197b5556ce13a245b2360e7fb82b6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunrise_Cubemap_back.png using Guid(7197b5556ce13a245b2360e7fb82b6e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '369a774b86ee9e98ddec9904b8144f38') in 0.052292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_back.png
+  artifactKey: Guid(f8fe5abaf9812c8409fa7ca057f9b4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_back.png using Guid(f8fe5abaf9812c8409fa7ca057f9b4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '919497ec9b7a80fe0d7bb020c9d6cb83') in 0.022766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.077721 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_right.png
+  artifactKey: Guid(daafd7fabef599f4984a3d113cdacf91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_right.png using Guid(daafd7fabef599f4984a3d113cdacf91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '189df7aa4d618813e023f11b792bb6e9') in 0.015249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 217.999214 seconds.
+  path: Assets/SkySeries Freebie/6sidedCosmicCoolCloud.mat
+  artifactKey: Guid(f531e09e2ad2fb440b4eed7605863143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/6sidedCosmicCoolCloud.mat using Guid(f531e09e2ad2fb440b4eed7605863143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa495c501b9efc5798720389de75d7f6') in 0.173671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/SkySeries Freebie/6SidedMegaSun.mat
+  artifactKey: Guid(c52c5d7968fa6c9499b0b5752f899bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/6SidedMegaSun.mat using Guid(c52c5d7968fa6c9499b0b5752f899bfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a713e8f0b119965b77dbc0fc032ec01') in 0.024617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/SkySeries Freebie/CosmicCoolCloud_Eq.mat
+  artifactKey: Guid(369b9ebe3a62b904dbc19bd332b44086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/CosmicCoolCloud_Eq.mat using Guid(369b9ebe3a62b904dbc19bd332b44086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d0c77e2b2cc9de1ad2961bcc1042976') in 0.084789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/SkySeries Freebie/UnearthlyRed.mat
+  artifactKey: Guid(5d133deeaa66ed445853e946ff25e073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/UnearthlyRed.mat using Guid(5d133deeaa66ed445853e946ff25e073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84b97a4557930f8e8ffbde80f459f22a') in 0.130053 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/SkySeries Freebie/HighFantasy.mat
+  artifactKey: Guid(e2341a9d03e86ec4290c72b1e22bbc7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/HighFantasy.mat using Guid(e2341a9d03e86ec4290c72b1e22bbc7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6101e24e332db32fc7e2d7f3b22126d7') in 0.078997 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/SkySeries Freebie/Cloudymorning.mat
+  artifactKey: Guid(d9dca9ae1786c394f9e79c637aa9a7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/Cloudymorning.mat using Guid(d9dca9ae1786c394f9e79c637aa9a7bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66083e9f1981e9137db646d77b6c097f') in 0.075780 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/SkySeries Freebie/UnderTheSea4k.mat
+  artifactKey: Guid(119ec07f1c7ed204db46bd8465fd5a50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/UnderTheSea4k.mat using Guid(119ec07f1c7ed204db46bd8465fd5a50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13bb317c72c8f10da2bf201431a4d647') in 0.053830 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/SkySeries Freebie/DayInTheClouds.mat
+  artifactKey: Guid(3e5399bd195de7649b874f58c1b9f8a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/DayInTheClouds.mat using Guid(3e5399bd195de7649b874f58c1b9f8a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b3d4489ceb9afc906e7339a217d99f2') in 0.052715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/SkySeries Freebie/DarkStorm.mat
+  artifactKey: Guid(2039a0ad0a9d05549928b70362f54902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/DarkStorm.mat using Guid(2039a0ad0a9d05549928b70362f54902) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17946ada8e5e550c9e54d76c4f32def4') in 0.045560 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.817741 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri
+  artifactKey: Guid(d78fe5a22bec38d43bbe7e846ac3925a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri using Guid(d78fe5a22bec38d43bbe7e846ac3925a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '609cbf5aa63520fc2873ce12e2ee30cf') in 0.007481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.065250 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/AmbienceExposure4k.hdr
+  artifactKey: Guid(c9bc6cdb7a2e78b4c85ae74715b0a355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/AmbienceExposure4k.hdr using Guid(c9bc6cdb7a2e78b4c85ae74715b0a355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42185d331b6bdae3a83823fccee9ab5e') in 0.081250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/MegaSunLeft.hdr
+  artifactKey: Guid(7f0373fb8ec72a142898c7984aada4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/MegaSunLeft.hdr using Guid(7f0373fb8ec72a142898c7984aada4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0068b6485b3788c0349a52999f79db92') in 0.031721 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/MegaSunTop.hdr
+  artifactKey: Guid(47d70ba0d1c1c3e4ab451b6bc37b0ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/MegaSunTop.hdr using Guid(47d70ba0d1c1c3e4ab451b6bc37b0ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7c72cbfdacfdc70907d94182e01681c') in 0.036761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudBack.hdr
+  artifactKey: Guid(a779becf00399924184cd13e046a100e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudBack.hdr using Guid(a779becf00399924184cd13e046a100e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02ac3843adad3be05953b69465d884a8') in 0.016536 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/FluffballDayBottom.hdr
+  artifactKey: Guid(42e0664ae4c5c424ebcd980a10687e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/FluffballDayBottom.hdr using Guid(42e0664ae4c5c424ebcd980a10687e18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2883315461ec759b78ab2dc8676b938f') in 0.038691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudLeft.hdr
+  artifactKey: Guid(740f96d568f4f3e40b049c40f11603e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudLeft.hdr using Guid(740f96d568f4f3e40b049c40f11603e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfd2248107a228cd3d18f497802abee1') in 0.019952 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudBottom.hdr
+  artifactKey: Guid(94b877781ad034640abce933599b6f2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudBottom.hdr using Guid(94b877781ad034640abce933599b6f2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '660de52bcda7bbdab442dbe5bff3879b') in 0.019841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/FluffballDayTop.hdr
+  artifactKey: Guid(c769857dc541ab7449d1352d7ff46ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/FluffballDayTop.hdr using Guid(c769857dc541ab7449d1352d7ff46ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea43680e4c93be11119711437893f142') in 0.023414 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/FluffballDayRight.hdr
+  artifactKey: Guid(669daa4bd63e4204dacb9aa01a164a7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/FluffballDayRight.hdr using Guid(669daa4bd63e4204dacb9aa01a164a7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc3c2639ddf4a4eda030c2cc7b246b0') in 0.039390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/MegaSunRight.hdr
+  artifactKey: Guid(f5760fc943c5eb643a2291630888f6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/MegaSunRight.hdr using Guid(f5760fc943c5eb643a2291630888f6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '405e575228ac736b22a51e0c4b6b4198') in 0.030609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/CoriolisNight4k.hdr
+  artifactKey: Guid(354036e57ae357148aed267204ce73a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/CoriolisNight4k.hdr using Guid(354036e57ae357148aed267204ce73a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '972af40f10fcbced10e087b9eddf001c') in 0.078336 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudTop.hdr
+  artifactKey: Guid(a199da0432efa6a489df8883d1f3bfe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudTop.hdr using Guid(a199da0432efa6a489df8883d1f3bfe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8a6e728c94f7ceedc70fb183cb4a6f4') in 0.026176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/CloudedSunGlow4k.hdr
+  artifactKey: Guid(12c15a8e5a294be45819b1dd4b9b08d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/CloudedSunGlow4k.hdr using Guid(12c15a8e5a294be45819b1dd4b9b08d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf8f660e2db70e8a962346ca1cfe95f') in 0.073128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudEQ_hdr.exr
+  artifactKey: Guid(09999639e73bcd64abda22253af612d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudEQ_hdr.exr using Guid(09999639e73bcd64abda22253af612d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afee8fe1da3fc1fe8014fdb3d1f14c0e') in 2.524744 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.669272 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/PlanetaryEarth4k.hdr
+  artifactKey: Guid(3675d0c3c874f6b479bab57eb7e68c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/PlanetaryEarth4k.hdr using Guid(3675d0c3c874f6b479bab57eb7e68c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e621efc3b08437124eb6f8839789dd4') in 0.067460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.291233 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/SkyhighFluffycloudField4k.hdr
+  artifactKey: Guid(18a0be10f0f64ac4c9f679d68e2cf857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/SkyhighFluffycloudField4k.hdr using Guid(18a0be10f0f64ac4c9f679d68e2cf857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f6c0fed695db51c05c91c3a6e83d5c8') in 0.131319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/UnearthlyRed4k.hdr
+  artifactKey: Guid(a3de28b69b48944438c87668bd722ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/UnearthlyRed4k.hdr using Guid(a3de28b69b48944438c87668bd722ae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52f4aa042f6fa812e857cf6c31765d21') in 0.068276 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

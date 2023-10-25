@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1133717683087183080}
   - component: {fileID: 1660506436462893963}
   m_Layer: 15
-  m_Name: Text (TMP)
+  m_Name: TB_DayText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,6 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuAnimator: {fileID: 6010591193504858562}
+  tb_DayText: {fileID: 1660506436462893963}
   bLocked: 0
 --- !u!1001 &1826678248177106705
 PrefabInstance:

@@ -1,0 +1,1358 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'zh' Physical Memory: 32627 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker13
+-projectPath
+D:/CS/ICS169/Capstone/ProjectCapstone
+-logFile
+Logs/AssetImportWorker13.log
+-srvPort
+55163
+Successfully changed project path to: D:/CS/ICS169/Capstone/ProjectCapstone
+D:/CS/ICS169/Capstone/ProjectCapstone
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [42320] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 3815978822 [EditorId] 3815978822 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [42320] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 3815978822 [EditorId] 3815978822 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 253.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/CS/ICS169/Capstone/ProjectCapstone/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x220a)
+    Vendor:   NVIDIA
+    VRAM:     12107 MB
+    Driver:   31.0.15.3623
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.015146 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 221.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.037 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1037ms)
+		BeginReloadAssembly (128ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (760ms)
+			LoadAssemblies (126ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (124ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (501ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (222ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (197ms)
+				ProcessInitializeOnLoadMethodAttributes (60ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009217 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 286.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.184 seconds
+Domain Reload Profiling:
+	ReloadAssembly (7185ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (6865ms)
+			LoadAssemblies (189ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (602ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (203ms)
+			SetupLoadedEditorAssemblies (5783ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (286ms)
+				BeforeProcessingInitializeOnLoad (264ms)
+				ProcessInitializeOnLoadAttributes (4818ms)
+				ProcessInitializeOnLoadMethodAttributes (383ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7838 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 53 unused Assets / (3.4 MB). Loaded Objects now: 8307.
+Memory consumption went from 354.3 MB to 350.9 MB.
+Total: 6.783400 ms (FindLiveObjects: 0.884100 ms CreateObjectMapping: 0.460900 ms MarkObjects: 4.992400 ms  DeleteObjects: 0.444700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 776835.773982 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Day_Sunless_Cubemap_up.png
+  artifactKey: Guid(234eecc35b11fa64ea0753e78976863d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Day_Sunless_Cubemap_up.png using Guid(234eecc35b11fa64ea0753e78976863d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a3b8e122f0a1abc581b59e7b210cfb85') in 0.248438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunrise_Cubemap.cubemap
+  artifactKey: Guid(e490253d7b8ca854d953333a043d583e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunrise_Cubemap.cubemap using Guid(e490253d7b8ca854d953333a043d583e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fa55fbe65ae233b2edb05b3b84318bb6') in 0.397491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Day_Cubemap_left.png
+  artifactKey: Guid(2ebde08a9da8cc14da1bf04c72641d7d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Day_Cubemap_left.png using Guid(2ebde08a9da8cc14da1bf04c72641d7d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4e443447f1b9dc13ee95912fbebf271f') in 0.052131 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap.cubemap
+  artifactKey: Guid(75a26182c3639744395b37d17c1da4dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap.cubemap using Guid(75a26182c3639744395b37d17c1da4dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '18990f0f89ce8e1bf4d31a7239e2d2d7') in 0.364371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Night_Moonless_Cubemap_right.png
+  artifactKey: Guid(5b61b4f57b4a70e4bbb6fd1563444f27) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Night_Moonless_Cubemap_right.png using Guid(5b61b4f57b4a70e4bbb6fd1563444f27) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ed11bdac45b26a0f1faa837abb6c9421') in 0.023304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS012/Images/FS012_Night_Moonless_Cubemap.cubemap
+  artifactKey: Guid(0a5cd2d4027658649917a283eb8d7a97) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS012/Images/FS012_Night_Moonless_Cubemap.cubemap using Guid(0a5cd2d4027658649917a283eb8d7a97) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '032263bec76b399999730dd441394e28') in 0.369956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Rainy_Cubemap.cubemap
+  artifactKey: Guid(d3ca2a1e10c887042905ffe5b27726c3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Rainy_Cubemap.cubemap using Guid(d3ca2a1e10c887042905ffe5b27726c3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '40beceb9cdeec44d7c8f73f8ddf89916') in 0.443525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/FS006_Night_Moonless_Cubemap.mat
+  artifactKey: Guid(60a42e3be3941754cba41be1166e5110) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/FS006_Night_Moonless_Cubemap.mat using Guid(60a42e3be3941754cba41be1166e5110) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '104363cbbac83416a9d0606d86cb22c1') in 0.053367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Night_Moonless_Cubemap_right.png
+  artifactKey: Guid(810f329d4b9b9dd4182748d5296fc48f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Night_Moonless_Cubemap_right.png using Guid(810f329d4b9b9dd4182748d5296fc48f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ecc56137ea370fa27bc8bce2000ff21e') in 0.052438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Day_Cubemap_right.png
+  artifactKey: Guid(9ef04bd14a7eef549a5938474bc71ec5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Day_Cubemap_right.png using Guid(9ef04bd14a7eef549a5938474bc71ec5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1e750072641ff5380c95217a95a3478f') in 0.037844 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Cubemap_front.png
+  artifactKey: Guid(dbf65ba9f4b58ff4faf9b62a864bd787) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Cubemap_front.png using Guid(dbf65ba9f4b58ff4faf9b62a864bd787) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c159de3a9b3286bb34c43d6fecc3c123') in 0.025754 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Night_Moonless_Cubemap_down.png
+  artifactKey: Guid(761168fe833447d42bed729e9022c9f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Night_Moonless_Cubemap_down.png using Guid(761168fe833447d42bed729e9022c9f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ede88a1d15155d872da183cdad5c6a96') in 0.021826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Day_Sunless_Cubemap.cubemap
+  artifactKey: Guid(836ce4f76476725489aa5fd496432028) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Day_Sunless_Cubemap.cubemap using Guid(836ce4f76476725489aa5fd496432028) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '68a302b59d378be610d0f4687f751488') in 0.380793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Day_Cubemap.cubemap
+  artifactKey: Guid(bf0072f1503a7484fb108143439e81f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Day_Cubemap.cubemap using Guid(bf0072f1503a7484fb108143439e81f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5a8e68c3b61f221a2f380e4eec2d07cd') in 0.434481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Day_Sunless_Cubemap_up.png
+  artifactKey: Guid(5c365d4123f3685439d5bc59116acf14) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Day_Sunless_Cubemap_up.png using Guid(5c365d4123f3685439d5bc59116acf14) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e4d90c473fa2ffd0179709874f932ba2') in 0.032227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/FS007_Day_Sunless_Cubemap.mat
+  artifactKey: Guid(896b57d94b0d9e74eba46b69ebc045d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/FS007_Day_Sunless_Cubemap.mat using Guid(896b57d94b0d9e74eba46b69ebc045d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9a5dbad0e52ff9d21665023eee9686a3') in 0.094101 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Day_Sunless_Cubemap_left.png
+  artifactKey: Guid(b3aad178343044440a2a5b72fec2c7e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Day_Sunless_Cubemap_left.png using Guid(b3aad178343044440a2a5b72fec2c7e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7374724b2941d6a5537a41494fdbf603') in 0.034889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Night_Cubemap_left.png
+  artifactKey: Guid(aec52307a2193114d987668a6b5c1a26) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Night_Cubemap_left.png using Guid(aec52307a2193114d987668a6b5c1a26) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '016154bc87d5d7f99b4b437639d66db1') in 0.033144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.005922 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Day_Sunless_Cubemap_right.png
+  artifactKey: Guid(23d30fda5ab463243a9fbbb73df704eb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Day_Sunless_Cubemap_right.png using Guid(23d30fda5ab463243a9fbbb73df704eb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '23eb95e009d594027f72fca5437f79c9') in 0.020942 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS016/FS016_Sandstorm_Cubemap.mat
+  artifactKey: Guid(43ed2ccb74dbf0945a71bd1bf74a0335) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS016/FS016_Sandstorm_Cubemap.mat using Guid(43ed2ccb74dbf0945a71bd1bf74a0335) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '84d4e0de6b7a7fe0d064da7b0c6f4899') in 0.073375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS003
+  artifactKey: Guid(74dc99b1ae0c4ac48a1224c6d200cefd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS003 using Guid(74dc99b1ae0c4ac48a1224c6d200cefd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a9186cc97021c15f7adffb66503cbf00') in 0.007479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Rainy_Cubemap.cubemap
+  artifactKey: Guid(3bfcfdc792bafe84ba95eb1cff4447ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Rainy_Cubemap.cubemap using Guid(3bfcfdc792bafe84ba95eb1cff4447ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '289af823c9bf7b05a15368edd3cf3958') in 0.362378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Day_Cubemap_back.png
+  artifactKey: Guid(a1022038bcd77a2408469ffdbea1e392) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Day_Cubemap_back.png using Guid(a1022038bcd77a2408469ffdbea1e392) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '86be6599fff9d814ab439cc72c28f741') in 0.022238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Sunrise_Cubemap_front.png
+  artifactKey: Guid(bdb311ed3b8e5724595aedeebb68c65e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Sunrise_Cubemap_front.png using Guid(bdb311ed3b8e5724595aedeebb68c65e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1e37b382fae2dac05a81986523d22dcc') in 0.022789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS012/Images/FS012_Day_Cubemap_back.png
+  artifactKey: Guid(8688416546a890e44a42dfe03639c28d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS012/Images/FS012_Day_Cubemap_back.png using Guid(8688416546a890e44a42dfe03639c28d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '55e50d7b5115fccfd61f96d6e4882cbc') in 0.021100 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Rainy_Cubemap_up.png
+  artifactKey: Guid(5feda7b5e09393a4ca3d0bd88b89e1f6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Rainy_Cubemap_up.png using Guid(5feda7b5e09393a4ca3d0bd88b89e1f6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '40e4315559a3f2bd0514cf8c52e58a16') in 0.022216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/FS020_Sunset_Cubemap.mat
+  artifactKey: Guid(40feb571af6442e49b03686c6fcde617) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/FS020_Sunset_Cubemap.mat using Guid(40feb571af6442e49b03686c6fcde617) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd2b0405e1a5c673e780010929be4faa2') in 0.044643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Night_Moonless_Cubemap.cubemap
+  artifactKey: Guid(9406bc4296fb6694b8690f44c5ddc7e9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Night_Moonless_Cubemap.cubemap using Guid(9406bc4296fb6694b8690f44c5ddc7e9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '40113c0ab357104acff8784e1e7aa4be') in 0.355834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Rainy_Cubemap_back.png
+  artifactKey: Guid(58fc13b0038e0794f995f496145938a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Rainy_Cubemap_back.png using Guid(58fc13b0038e0794f995f496145938a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a61e3c7e2394b07df45e05ad9f137c6e') in 0.026107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Sunrise_Cubemap_left.png
+  artifactKey: Guid(cc74ca4999cf3f44582a3e01eb31801d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Sunrise_Cubemap_left.png using Guid(cc74ca4999cf3f44582a3e01eb31801d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '420f3c5b89239266491f3bc8af1bc686') in 0.020468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/FS006_Day_Sunless_Cubemap.mat
+  artifactKey: Guid(3352e409738b83640839117ef11913ef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/FS006_Day_Sunless_Cubemap.mat using Guid(3352e409738b83640839117ef11913ef) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f5d96a5a55b122cb23b40b6f6937f561') in 0.023900 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/FS006_Sunrise_Cubemap.mat
+  artifactKey: Guid(9708242b356b970498b1885ed4aeba2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/FS006_Sunrise_Cubemap.mat using Guid(9708242b356b970498b1885ed4aeba2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '937afce0c7b23c7c7e60fd0b65ce1725') in 0.014739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunset_Cubemap_up.png
+  artifactKey: Guid(6cb36085cc0344447a385dceb650373a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunset_Cubemap_up.png using Guid(6cb36085cc0344447a385dceb650373a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '11a85f81dbbb49615bd8fc2f745ec680') in 0.019310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Day_Sunless_Cubemap_up.png
+  artifactKey: Guid(4fa55d6535861a14e8fe6db2415bbc5d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Day_Sunless_Cubemap_up.png using Guid(4fa55d6535861a14e8fe6db2415bbc5d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c4e683f3c85d9248e2d0f55cd1749f94') in 0.020088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Cubemap_down.png
+  artifactKey: Guid(ecc51bec5f7ac864ba1e4709e28df494) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Cubemap_down.png using Guid(ecc51bec5f7ac864ba1e4709e28df494) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8281e0c1a14a15cb9550aeff93a73281') in 0.024576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Day_Cubemap.cubemap
+  artifactKey: Guid(8f71b402260deef4aa123cad1dde740d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Day_Cubemap.cubemap using Guid(8f71b402260deef4aa123cad1dde740d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2d084a81fa77d12a05eaf1185287626c') in 0.425474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS015/Images
+  artifactKey: Guid(1a9b1737329edbb4b8b2bd5cb6812be8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS015/Images using Guid(1a9b1737329edbb4b8b2bd5cb6812be8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '432fe35f95c357d95fc5d3b193e55c42') in 0.005025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Day_Sunless_Cubemap_down.png
+  artifactKey: Guid(5bab27314cbce054d88fe20ac3bca035) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Day_Sunless_Cubemap_down.png using Guid(5bab27314cbce054d88fe20ac3bca035) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bc49507f80d8d312bfcbe5fa5feb172f') in 0.026632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap_left.png
+  artifactKey: Guid(34d1a05f37c683342bcfc6eb3c66950e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap_left.png using Guid(34d1a05f37c683342bcfc6eb3c66950e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8010effc519477acb90a510359172ff8') in 0.029659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Sunrise_Cubemap_back.png
+  artifactKey: Guid(e6776866f608f9744acf20d66d0e56ac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Sunrise_Cubemap_back.png using Guid(e6776866f608f9744acf20d66d0e56ac) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0e643eb9d14e063a84b1597effb7b8df') in 0.042687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Sunny_Cubemap_back.png
+  artifactKey: Guid(0705d18218f123242a7220b8cf96c326) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Sunny_Cubemap_back.png using Guid(0705d18218f123242a7220b8cf96c326) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd43093d3b4fbb40dc38d912e11f597cb') in 0.024653 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Sunset_Cubemap_right.png
+  artifactKey: Guid(ca2b2de4ace535b42a4fefe2a748bde8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Sunset_Cubemap_right.png using Guid(ca2b2de4ace535b42a4fefe2a748bde8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a7701239b11b09cd4d884048a74d0dc0') in 0.035147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Rainy_Cubemap.cubemap
+  artifactKey: Guid(6771468df8c845542b92c5af10c28ed0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Rainy_Cubemap.cubemap using Guid(6771468df8c845542b92c5af10c28ed0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b89537231e191851b834fe178e1fb819') in 0.351538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Night_Moonless_Cubemap_back.png
+  artifactKey: Guid(a76e0333d0914944f864faf40fffad8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Night_Moonless_Cubemap_back.png using Guid(a76e0333d0914944f864faf40fffad8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '716f65018ca089b0736cbbc0df87631c') in 0.027965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Sunset_Cubemap_back.png
+  artifactKey: Guid(2ef551be2142e3346a0dd2d0a821e205) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Sunset_Cubemap_back.png using Guid(2ef551be2142e3346a0dd2d0a821e205) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'df0c08bcea916c41935182bfada06a19') in 0.021530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Sunrise_Cubemap.cubemap
+  artifactKey: Guid(55e9a0d66408d0845bfdab8fc079044e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Sunrise_Cubemap.cubemap using Guid(55e9a0d66408d0845bfdab8fc079044e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1ebb692459a36ab0da72a5b5715cb509') in 0.370126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Rainy_Cubemap_left.png
+  artifactKey: Guid(dd34818c047289e4d841a3a66083c250) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Rainy_Cubemap_left.png using Guid(dd34818c047289e4d841a3a66083c250) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b7319baffb59c5938acb0d5e90279fcb') in 0.022121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/Classic/FS000_Night_03_Moonless.png
+  artifactKey: Guid(72dbfaf2e11e92744a2ff15822b9079f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/Classic/FS000_Night_03_Moonless.png using Guid(72dbfaf2e11e92744a2ff15822b9079f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c8339a3b9c8320046f072620c5a09d24') in 0.058381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Day_Sunless_Cubemap_down.png
+  artifactKey: Guid(6fb9f3212707a854586b0b8345b0f16e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Day_Sunless_Cubemap_down.png using Guid(6fb9f3212707a854586b0b8345b0f16e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '22fea23465e285bad2e2ec29b42f1dfd') in 0.019477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Night_Moonless_Cubemap_up.png
+  artifactKey: Guid(e2ca467a752c5b24ea657117ccfb61e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Night_Moonless_Cubemap_up.png using Guid(e2ca467a752c5b24ea657117ccfb61e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd2f24cc1a1318c99db085fcf856e196b') in 0.018398 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Night_Moonless_Cubemap_down.png
+  artifactKey: Guid(69d73f677b7a3fd4db9b6d3038482a42) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Night_Moonless_Cubemap_down.png using Guid(69d73f677b7a3fd4db9b6d3038482a42) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5df1788531474afdf00bdaaab457e22b') in 0.018996 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Day_Cubemap_right.png
+  artifactKey: Guid(a136f2ce8738e244ead5b076278f12a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Day_Cubemap_right.png using Guid(a136f2ce8738e244ead5b076278f12a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '18730106bcec41b7d8b69d3c0e2a1437') in 0.027110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Sunset_Cubemap_down.png
+  artifactKey: Guid(f73d787ff0521364581dab397034793b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Sunset_Cubemap_down.png using Guid(f73d787ff0521364581dab397034793b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '76e7f408ec9c5524c4918f38c6d5597d') in 0.034496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Sunset_Cubemap.cubemap
+  artifactKey: Guid(0b4a3d2ca2fda7843b80964a8038990c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Sunset_Cubemap.cubemap using Guid(0b4a3d2ca2fda7843b80964a8038990c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '06a798f24dddc1475c65976c62176991') in 0.371607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Sunset_Cubemap_front.png
+  artifactKey: Guid(eebcab5fc4362eb4d833a24fd8dac2b9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Sunset_Cubemap_front.png using Guid(eebcab5fc4362eb4d833a24fd8dac2b9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd8b151535797f62a7d1e94cd7276c64c') in 0.020741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Day_Sunless_Cubemap_left.png
+  artifactKey: Guid(50f617ae30a879a4abbf68179062bced) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Day_Sunless_Cubemap_left.png using Guid(50f617ae30a879a4abbf68179062bced) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c974eaadcc1053d54656e581a5d257ec') in 0.041932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS014/Images/FS014_Snowy_Cubemap_down.png
+  artifactKey: Guid(3e21d5c64bd248c43bbf9a805e4f68db) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS014/Images/FS014_Snowy_Cubemap_down.png using Guid(3e21d5c64bd248c43bbf9a805e4f68db) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f2378baadcf5ca69ea124fe9c2ed62af') in 0.037806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Sunset_Cubemap_back.png
+  artifactKey: Guid(6fc82f1c89646e8488f34892f1c6b0f0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Sunset_Cubemap_back.png using Guid(6fc82f1c89646e8488f34892f1c6b0f0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'daca2ccbc471266c8bf37776e7d74527') in 0.024938 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS010/FS010_Snowy_Cubemap.mat
+  artifactKey: Guid(5a1e031eefd21cf4fb0f757d30ab3433) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS010/FS010_Snowy_Cubemap.mat using Guid(5a1e031eefd21cf4fb0f757d30ab3433) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ad08c7a0b042bf483edc3c26418e5902') in 0.019783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Sunless_Cubemap_front.png
+  artifactKey: Guid(c6d25c7bbd6a7234d94c1652daafc5c1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Sunless_Cubemap_front.png using Guid(c6d25c7bbd6a7234d94c1652daafc5c1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '46e3f308d28aca3a3ccce95519636ad9') in 0.022314 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Day_Cubemap_left.png
+  artifactKey: Guid(f11eb0d9ca7c00b4eb664c05b9c48a31) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Day_Cubemap_left.png using Guid(f11eb0d9ca7c00b4eb664c05b9c48a31) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3285166e0e37dceb460b3f18ba179add') in 0.027775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Night_Cubemap.cubemap
+  artifactKey: Guid(87e641513e0e2eb4e9b187de67e40251) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Night_Cubemap.cubemap using Guid(87e641513e0e2eb4e9b187de67e40251) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '06958bbd1bba3c72394db2a7c1cbe2e4') in 0.347361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Day_Sunless_Cubemap_down.png
+  artifactKey: Guid(aef0c30fcf09e2c4cbc6f937aa8774d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Day_Sunless_Cubemap_down.png using Guid(aef0c30fcf09e2c4cbc6f937aa8774d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '08750f6669133db0fb650f53a6e6241f') in 0.021198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS015/FS015_Rainy_Cubemap.mat
+  artifactKey: Guid(5c21c6b8f58537a44b1e656e2e4d1651) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS015/FS015_Rainy_Cubemap.mat using Guid(5c21c6b8f58537a44b1e656e2e4d1651) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fa07cac706d9ac4fa3e01e6bcadce788') in 0.036202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Snowy_Cubemap.cubemap
+  artifactKey: Guid(654177b6162e33547b68ed4651786c69) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Snowy_Cubemap.cubemap using Guid(654177b6162e33547b68ed4651786c69) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6632efee20a6a049003119eaaf9988be') in 0.323645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Night_Cubemap_up.png
+  artifactKey: Guid(21ff8fdeed8925f44843eb0b5b3444ea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Night_Cubemap_up.png using Guid(21ff8fdeed8925f44843eb0b5b3444ea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b89b9101667360abfbe58178b6df0545') in 0.026487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Night_Cubemap.cubemap
+  artifactKey: Guid(ea8d0e38a4ced5248bd7ad578a3d8632) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Night_Cubemap.cubemap using Guid(ea8d0e38a4ced5248bd7ad578a3d8632) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd28e2ce0081b1f4954ccaeada02b8632') in 0.361101 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS014/Images/FS014_Day_Sunless_Cubemap_back.png
+  artifactKey: Guid(fdb2b179f2582994b9e97b65445e9e14) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS014/Images/FS014_Day_Sunless_Cubemap_back.png using Guid(fdb2b179f2582994b9e97b65445e9e14) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c3722ceb1fee0c9ce72f6f6772fb287d') in 0.019413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Night_Moonless_Cubemap_back.png
+  artifactKey: Guid(d3eedbb91d8a37844ac1c5a34003a4be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Night_Moonless_Cubemap_back.png using Guid(d3eedbb91d8a37844ac1c5a34003a4be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2407421e99a413456f92178b5cc1f5b3') in 0.021669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS018/FS018_Night_Moonless_Cubemap.mat
+  artifactKey: Guid(e9a30fb73b4516a4687d6da0e556bdfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS018/FS018_Night_Moonless_Cubemap.mat using Guid(e9a30fb73b4516a4687d6da0e556bdfa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cb8313ee240a1a50483a16ec29a8eb20') in 0.014384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Sunrise_Cubemap.cubemap
+  artifactKey: Guid(a38e2db11462c614c923086faef32513) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Sunrise_Cubemap.cubemap using Guid(a38e2db11462c614c923086faef32513) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aa487c9eb31be5787a6858742fa5e532') in 0.313162 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Day_Sunless_Cubemap.cubemap
+  artifactKey: Guid(f57558367d34a5e49a29591546355090) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Day_Sunless_Cubemap.cubemap using Guid(f57558367d34a5e49a29591546355090) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c1bdaf44e8980befac6f20e20c02a076') in 0.312259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Sunrise_Cubemap_front.png
+  artifactKey: Guid(c01ef8fc8aa63344681934774a4bcc7b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Sunrise_Cubemap_front.png using Guid(c01ef8fc8aa63344681934774a4bcc7b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'acab83b69f07aca74ba553e921ba9fa8') in 0.019102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS014/Images/FS014_Day_Cubemap.cubemap
+  artifactKey: Guid(95ab254cf5c60cc4eab6d332155d0cf1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS014/Images/FS014_Day_Cubemap.cubemap using Guid(95ab254cf5c60cc4eab6d332155d0cf1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bfebbb4f6bf9f0511da20c3c90928800') in 0.321142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Snowy_Cubemap.cubemap
+  artifactKey: Guid(8895d938b3fe36f418e920c015de8049) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Snowy_Cubemap.cubemap using Guid(8895d938b3fe36f418e920c015de8049) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e5f6bf85b20cdc8cbf4f33a38933799d') in 0.365940 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS003/FS003_Night_Moonless_Cubemap.mat
+  artifactKey: Guid(9d551ee20981032439de76f9522115c2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS003/FS003_Night_Moonless_Cubemap.mat using Guid(9d551ee20981032439de76f9522115c2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd58e459256110db389edac945a6c7ba3') in 0.034236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Day_Sunless_Cubemap_back.png
+  artifactKey: Guid(95344815db2aa0c468f3911d5a7b6d99) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Day_Sunless_Cubemap_back.png using Guid(95344815db2aa0c468f3911d5a7b6d99) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4e83ad13739c1b5f7b84e17e1e5b9381') in 0.022350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007
+  artifactKey: Guid(c92de3483dd105d4c841dfab29956b9e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007 using Guid(c92de3483dd105d4c841dfab29956b9e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dfa804cea05ce549f2a5e6c58e9a6127') in 0.007932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_back.png
+  artifactKey: Guid(f8fe5abaf9812c8409fa7ca057f9b4f9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_back.png using Guid(f8fe5abaf9812c8409fa7ca057f9b4f9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bfe21b37f00fda78a03b45c8a6c1f3be') in 0.020832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Snowy_Cubemap_down.png
+  artifactKey: Guid(de0f13414b0813649b3b291711ca2160) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Snowy_Cubemap_down.png using Guid(de0f13414b0813649b3b291711ca2160) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ca1cfd751a94846cb67aac4b14ac6795') in 0.025456 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS012/Images/FS012_Rainy_Cubemap_up.png
+  artifactKey: Guid(ac3071e30bcf22c40bea1498f278a5f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS012/Images/FS012_Rainy_Cubemap_up.png using Guid(ac3071e30bcf22c40bea1498f278a5f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f827b0492ac1e9beca62ebd51a9d44e1') in 0.018846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Snowy_Cubemap.cubemap
+  artifactKey: Guid(625326cce04cfbe4faca8932cb54f43f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Snowy_Cubemap.cubemap using Guid(625326cce04cfbe4faca8932cb54f43f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '429c2842967f89b3a400943734004c95') in 0.317798 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_front.png
+  artifactKey: Guid(647bcb40bae08774e9338d28abfc8fb5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_front.png using Guid(647bcb40bae08774e9338d28abfc8fb5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1af878b24e2f6fc67c39c41fd86f5842') in 0.019800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Night_Cubemap.cubemap
+  artifactKey: Guid(4c785f53328bc434aa8a119f86f9539b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Night_Cubemap.cubemap using Guid(4c785f53328bc434aa8a119f86f9539b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd9083cf8b3a6f700d33897314fe969f5') in 0.326274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Day_Sunless_Cubemap_right.png
+  artifactKey: Guid(fcfb3a1f590dfe943bb2fcd62f7cdcc5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Day_Sunless_Cubemap_right.png using Guid(fcfb3a1f590dfe943bb2fcd62f7cdcc5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b81ac24b477a53e2195e0e81dbc8bf87') in 0.019844 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS014/Images/FS014_Rainy_Cubemap_up.png
+  artifactKey: Guid(34f93077f7be25a4dbc163a0fe1ff68c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS014/Images/FS014_Rainy_Cubemap_up.png using Guid(34f93077f7be25a4dbc163a0fe1ff68c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8d1a2960e77cd3e01b3b754de48f701a') in 0.018792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Snowy_Cubemap_down.png
+  artifactKey: Guid(8577c87af7bf5f347947b5afa05b6903) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Snowy_Cubemap_down.png using Guid(8577c87af7bf5f347947b5afa05b6903) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cf199ed1d8b63a1ea189cda848d31ee7') in 0.031334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Day_Sunless_Cubemap_back.png
+  artifactKey: Guid(3b02c0fb4e4fa804f92e48bf27bd98f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Day_Sunless_Cubemap_back.png using Guid(3b02c0fb4e4fa804f92e48bf27bd98f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6d2b4b8dceb27e0ade005db72375d75f') in 0.034140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Snowy_Cubemap_down.png
+  artifactKey: Guid(5e7767a8b442e9f4596034c58e5f7f92) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Snowy_Cubemap_down.png using Guid(5e7767a8b442e9f4596034c58e5f7f92) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0832846e464e7426e6354a7c7acdb662') in 0.027536 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/FS020_Night_Moonless_Cubemap.mat
+  artifactKey: Guid(888ad501088d76d48aa5efeda8db7fd9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/FS020_Night_Moonless_Cubemap.mat using Guid(888ad501088d76d48aa5efeda8db7fd9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '57d7ba590a3f84fba143c0bad75eb966') in 0.025718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/FS006_Night_Cubemap.mat
+  artifactKey: Guid(abc6a8212f0e90840bc88b6b6244b507) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/FS006_Night_Cubemap.mat using Guid(abc6a8212f0e90840bc88b6b6244b507) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '74991d7f393a7dd132d383432983256c') in 0.028810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/FS007_Day_Cubemap.mat
+  artifactKey: Guid(ea78f0ed418d4354db8a84b722f1a781) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/FS007_Day_Cubemap.mat using Guid(ea78f0ed418d4354db8a84b722f1a781) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4ecdd8d1b19ee61c34f1e4873c7384c8') in 0.014149 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Sunrise_Cubemap_back.png
+  artifactKey: Guid(aabfafe29f91dcb4d87da95e8cc8717a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Sunrise_Cubemap_back.png using Guid(aabfafe29f91dcb4d87da95e8cc8717a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dc342bc189c096b7dbbf092b43e5a57c') in 0.022587 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Snowy_Cubemap_front.png
+  artifactKey: Guid(6887c93cd9b17bb4ba6d4878242a7ce9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Snowy_Cubemap_front.png using Guid(6887c93cd9b17bb4ba6d4878242a7ce9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a5719bf3b8b1f6d50eda5ee3497e3472') in 0.020843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS008/FS008_Sunset_Cubemap.mat
+  artifactKey: Guid(799c12a48532acf4ca5c32d333db71b5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS008/FS008_Sunset_Cubemap.mat using Guid(799c12a48532acf4ca5c32d333db71b5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f7124bc884958c6606d554277a13b6af') in 0.016631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Cubemap_left.png
+  artifactKey: Guid(8e17207cd9a7bec47853ad3f8d39b716) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Night_Cubemap_left.png using Guid(8e17207cd9a7bec47853ad3f8d39b716) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a7f091d85f211b89b3dd5490711adecc') in 0.019729 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Sunrise_Cubemap_right.png
+  artifactKey: Guid(1bbe40761800dcc4eb23e45e973e3008) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Sunrise_Cubemap_right.png using Guid(1bbe40761800dcc4eb23e45e973e3008) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e62e23b6228f3d8f1260221eb847cbbd') in 0.053912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Snowy_Cubemap_down.png
+  artifactKey: Guid(0a0d672ca4fd85d4eade6d763e5a99c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Snowy_Cubemap_down.png using Guid(0a0d672ca4fd85d4eade6d763e5a99c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8925394c6c713f5c36a61f43a4251b90') in 0.022250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Day_Sunless_Cubemap_right.png
+  artifactKey: Guid(f7ff52f0f911b394089226f71af545ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Day_Sunless_Cubemap_right.png using Guid(f7ff52f0f911b394089226f71af545ee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ce79d1239669c007a40312441084a0f3') in 0.024293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS016/Images
+  artifactKey: Guid(91c413380977f3449849ef320575d9db) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS016/Images using Guid(91c413380977f3449849ef320575d9db) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '696b8aed1109abda92a7cb9d2af57cb8') in 0.007697 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Rainy_Cubemap_right.png
+  artifactKey: Guid(962cb71bdaa90364081145d391c4ff88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Rainy_Cubemap_right.png using Guid(962cb71bdaa90364081145d391c4ff88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a7be0e340e1296b5894c74368164923a') in 0.020331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Night_Cubemap_front.png
+  artifactKey: Guid(82f4dcbb718d10e45b7a72dbf18d4711) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Night_Cubemap_front.png using Guid(82f4dcbb718d10e45b7a72dbf18d4711) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b66a1add70ab417dfd4206d3f8aa8b4c') in 0.024506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Day_Cubemap_down.png
+  artifactKey: Guid(5418b559e6ad32d49a24d56f92b02355) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Day_Cubemap_down.png using Guid(5418b559e6ad32d49a24d56f92b02355) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '788715cfa2077d899ab496b4fc05d78e') in 0.024896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Day_Cubemap_back.png
+  artifactKey: Guid(ace26ed9c9ceba2409c53b64fff91b69) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Day_Cubemap_back.png using Guid(ace26ed9c9ceba2409c53b64fff91b69) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2fce513159e62f38d1b4231fb19264f8') in 0.025793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Day_Sunless_Cubemap_left.png
+  artifactKey: Guid(2e1198620e77b9042bb674a250684df4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Day_Sunless_Cubemap_left.png using Guid(2e1198620e77b9042bb674a250684df4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c158363e8e818bdcd4770649bad9538c') in 0.022308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Day_Cubemap.cubemap
+  artifactKey: Guid(16e6835fd7a67dd45897e6f666ae64ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Day_Cubemap.cubemap using Guid(16e6835fd7a67dd45897e6f666ae64ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2b53773186c06128dc0b7d8bef489910') in 0.355671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Night_Moonless_Cubemap_down.png
+  artifactKey: Guid(c2c4883fdb09fa5408f1427a15d6e4b3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Night_Moonless_Cubemap_down.png using Guid(c2c4883fdb09fa5408f1427a15d6e4b3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5e16a05cf7f8e8b2c174941c0ab5a1b5') in 0.038307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Rainy_Cubemap_right.png
+  artifactKey: Guid(58e3e14d0c6d73648a28cb3b2b36f963) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Rainy_Cubemap_right.png using Guid(58e3e14d0c6d73648a28cb3b2b36f963) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '733ea53f40a78384c319e2302dd711a2') in 0.021994 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Sunset_Cubemap_back.png
+  artifactKey: Guid(b0137125f62e1a1439d6d33f47a54d38) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Sunset_Cubemap_back.png using Guid(b0137125f62e1a1439d6d33f47a54d38) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '847b102331416da52adb4e076809c4cb') in 0.019630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Snowy_Cubemap_down.png
+  artifactKey: Guid(13f53e9cdd7e7454488eec3d26c34ba5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Snowy_Cubemap_down.png using Guid(13f53e9cdd7e7454488eec3d26c34ba5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '360899be5538f873a2ea89e8a748865c') in 0.019541 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Day_Cubemap_up.png
+  artifactKey: Guid(ab469765a7c9cf04a8e3b5b79c727e80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS003/Images/FS003_Day_Cubemap_up.png using Guid(ab469765a7c9cf04a8e3b5b79c727e80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6b3683b2fbeac4510a46d0ba4083e77f') in 0.026444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Night_Moonless_Cubemap_right.png
+  artifactKey: Guid(f7a945a77ee8a48448fcd73088bfab8e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Night_Moonless_Cubemap_right.png using Guid(f7a945a77ee8a48448fcd73088bfab8e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1eef24a2fb493b9eb68768d2079aa173') in 0.020996 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_left.png
+  artifactKey: Guid(9b40971366bb8f34b87a8e513a35fa25) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunset_Cubemap_left.png using Guid(9b40971366bb8f34b87a8e513a35fa25) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '932b52723488a4dc7ab871f015366dcd') in 0.031023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Rainy_Cubemap_back.png
+  artifactKey: Guid(b30df1e20586aea42b3b03f81fe5bd21) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Rainy_Cubemap_back.png using Guid(b30df1e20586aea42b3b03f81fe5bd21) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '01e98f53cd23bb07514d8e237863ffb9') in 0.022260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Day_Cubemap_left.png
+  artifactKey: Guid(2d07fad87fd6bde4c97d0bf4251a9f07) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Day_Cubemap_left.png using Guid(2d07fad87fd6bde4c97d0bf4251a9f07) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '96c65b29cb2ea8cb30f8880164e828e4') in 0.044049 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Sunset_Cubemap_up.png
+  artifactKey: Guid(bc3b9bb6966f777428d85dbef6e29fd0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Sunset_Cubemap_up.png using Guid(bc3b9bb6966f777428d85dbef6e29fd0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0fba9593b645891c706b02ae67527193') in 0.022493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Sunrise_Cubemap_down.png
+  artifactKey: Guid(af527fe661364d34aa86febe70ef4ab4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Sunrise_Cubemap_down.png using Guid(af527fe661364d34aa86febe70ef4ab4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ff014baf47a22c20007967b38e77272c') in 0.021995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Sunrise_Cubemap_back.png
+  artifactKey: Guid(e295ff43f41d7234bb991f19df29efcf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Sunrise_Cubemap_back.png using Guid(e295ff43f41d7234bb991f19df29efcf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8aa4f8a88e980a1e301e1b106b192ecc') in 0.030243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS017/FS017_Night_Cubemap.mat
+  artifactKey: Guid(a962b356425be82498d3666d48abdc99) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS017/FS017_Night_Cubemap.mat using Guid(a962b356425be82498d3666d48abdc99) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '82a05089c1fa95a8ebc2c995c2943b47') in 0.033403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Snowy_Cubemap_down.png
+  artifactKey: Guid(fba0f8d700e699442b9ef86f3cc00564) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Snowy_Cubemap_down.png using Guid(fba0f8d700e699442b9ef86f3cc00564) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '30a494603d7babc9e2de5df5532004ce') in 0.026361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Day_Cubemap_back.png
+  artifactKey: Guid(3b4a2e2ef9ecd6e44924023d2d45061d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Day_Cubemap_back.png using Guid(3b4a2e2ef9ecd6e44924023d2d45061d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '949f5b8d7fae19d3fc352265ae16406b') in 0.023462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunset_Cubemap_back.png
+  artifactKey: Guid(ba0f43da8e38c724d82c9ad6502045b9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Sunset_Cubemap_back.png using Guid(ba0f43da8e38c724d82c9ad6502045b9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b7ee0b28c0ff8bcf9ebc656e80f117c1') in 0.039043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Day_Sunless_Cubemap_down.png
+  artifactKey: Guid(f1cb0743dc0e041489f5f357e6dc947a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS013/Images/FS013_Day_Sunless_Cubemap_down.png using Guid(f1cb0743dc0e041489f5f357e6dc947a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '926c233e144306f422541cf48c89b067') in 0.032862 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Sunset_Cubemap_down.png
+  artifactKey: Guid(3edce324aed95234cae99122688ae93d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Sunset_Cubemap_down.png using Guid(3edce324aed95234cae99122688ae93d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'db45612b732435f2e6ea22138040c2f2') in 0.026896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS004/Images
+  artifactKey: Guid(5cb7fc51f84933140b88fb40b0010e36) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS004/Images using Guid(5cb7fc51f84933140b88fb40b0010e36) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e049668b01804af5ae05f32369e68b4c') in 0.008553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunrise_Cubemap_front.png
+  artifactKey: Guid(3cd8872c1f4d0314880815237d86f4bd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Sunrise_Cubemap_front.png using Guid(3cd8872c1f4d0314880815237d86f4bd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ed667799cea3a6e5e3e87ad3b6754bff') in 0.064283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap_up.png
+  artifactKey: Guid(fadd68eee9e7f644193ce0c605903352) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Rainy_Cubemap_up.png using Guid(fadd68eee9e7f644193ce0c605903352) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '959dd02cf6090f457fdbf2995bd2f635') in 0.023244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Snowy_Cubemap_front.png
+  artifactKey: Guid(574d1ccc9e49beb49831a84bb88e66ba) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Snowy_Cubemap_front.png using Guid(574d1ccc9e49beb49831a84bb88e66ba) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd69a573ba330a357bebc84dabcfe4afb') in 0.026539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/Classic/FS000_Day_01_Sunless.mat
+  artifactKey: Guid(d48a7646f5d0547e889733d84b50cb9f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/Classic/FS000_Day_01_Sunless.mat using Guid(d48a7646f5d0547e889733d84b50cb9f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9dbe627c61474715f00c489a6d3f44e4') in 0.026684 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Sunset_Cubemap_front.png
+  artifactKey: Guid(c209e74045a49484d83b66fd64eda946) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Sunset_Cubemap_front.png using Guid(c209e74045a49484d83b66fd64eda946) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '898afe9c9c977997838bb72464981b10') in 0.018308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Rainy_Cubemap_up.png
+  artifactKey: Guid(dff22a45ea420874b85e457f6128bcc2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Rainy_Cubemap_up.png using Guid(dff22a45ea420874b85e457f6128bcc2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e048330975aa6ed61da364d2480c36fa') in 0.067838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Sunrise_Cubemap_front.png
+  artifactKey: Guid(d6f90f845b257e7429dedb3563c50c33) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Sunrise_Cubemap_front.png using Guid(d6f90f845b257e7429dedb3563c50c33) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'feeb36371536b9cbb30b487445ff46f4') in 0.023242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Rainy_Cubemap_down.png
+  artifactKey: Guid(ec36fc966b15e2b4bba2073b0f73af71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Rainy_Cubemap_down.png using Guid(ec36fc966b15e2b4bba2073b0f73af71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8f6b5b589b70df414e8eec5e3744505e') in 0.031670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Rainy_Cubemap_down.png
+  artifactKey: Guid(00ad00f3ac6c43448aeba86171a1d6a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Rainy_Cubemap_down.png using Guid(00ad00f3ac6c43448aeba86171a1d6a3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8b979522c2d8ca0273cfad5035cf4e45') in 0.035347 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Day_Cubemap_back.png
+  artifactKey: Guid(d5a85a6d6d3584c44a65d1155d6b734f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS015/Images/FS015_Day_Cubemap_back.png using Guid(d5a85a6d6d3584c44a65d1155d6b734f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8827b4f9cb6ad4a802596660ae6dce6b') in 0.025153 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Cubemap_back.png
+  artifactKey: Guid(924c018907b28a14aa96bbc58449afda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/Images/FS011_Day_Cubemap_back.png using Guid(924c018907b28a14aa96bbc58449afda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '165796c87e3e29256876f3217db96971') in 0.031814 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Sandstorm_Cubemap_front.png
+  artifactKey: Guid(156f729bd51d2524f84c28edcc1fa0e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS016/Images/FS016_Sandstorm_Cubemap_front.png using Guid(156f729bd51d2524f84c28edcc1fa0e3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '96c14324078dccb39a8c52b02c6f6f41') in 0.050971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004935 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS005/FS005_Day_Cubemap.mat
+  artifactKey: Guid(645dd4af72b864846af02c05e3571462) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS005/FS005_Day_Cubemap.mat using Guid(645dd4af72b864846af02c05e3571462) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '74ab6d21a4493ed6721a7d3a0872f257') in 0.034832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Day_Cubemap_front.png
+  artifactKey: Guid(b35a351cbebd24147a34a2ee156e1ec1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Day_Cubemap_front.png using Guid(b35a351cbebd24147a34a2ee156e1ec1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '165f6674b70626bf0a4665bc480d0a15') in 0.027901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Day_Sunless_Cubemap_back.png
+  artifactKey: Guid(6db130bb8010348479021b01c1b9bfed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Day_Sunless_Cubemap_back.png using Guid(6db130bb8010348479021b01c1b9bfed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '86d07ee2e9ae95c4c6164e764d51c035') in 0.020246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Rainy_Cubemap_down.png
+  artifactKey: Guid(9943f717f38468940849d43f9d829731) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS007/Images/FS007_Rainy_Cubemap_down.png using Guid(9943f717f38468940849d43f9d829731) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '23a377d28a05a0a21a0487388b8dcfa1') in 0.031264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Day_Sunless_Cubemap_right.png
+  artifactKey: Guid(728853fa89886174f90a0cf940451a80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Day_Sunless_Cubemap_right.png using Guid(728853fa89886174f90a0cf940451a80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '53cdf0be6ddfe5476b4700b6342e2795') in 0.019560 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Night_Cubemap_right.png
+  artifactKey: Guid(c49e96b8946a1834aa4d28aa05fe142c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Night_Cubemap_right.png using Guid(c49e96b8946a1834aa4d28aa05fe142c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3a3c30ffc305f981c4e3633e49cc7362') in 0.021506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS005/FS005_Night_Moonless_Cubemap.mat
+  artifactKey: Guid(649960a4d0767de4eab443f7761515cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS005/FS005_Night_Moonless_Cubemap.mat using Guid(649960a4d0767de4eab443f7761515cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a0afeebd57fd24956d6db01770f38712') in 0.013984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Night_Cubemap_front.png
+  artifactKey: Guid(49ad4255097bf5a42a854dd4898e301f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Night_Cubemap_front.png using Guid(49ad4255097bf5a42a854dd4898e301f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '754b07f1cae541321040418706831c12') in 0.019761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Night_Moonless_Cubemap_back.png
+  artifactKey: Guid(a852feb734a66ab4d9533bbb16ba2c8b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Night_Moonless_Cubemap_back.png using Guid(a852feb734a66ab4d9533bbb16ba2c8b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e46dd406f54c9396a88363e4d0a01441') in 0.019298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Night_Moonless_Cubemap_left.png
+  artifactKey: Guid(4cf17a0b560e5a546ad2adf17977a3cd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Night_Moonless_Cubemap_left.png using Guid(4cf17a0b560e5a546ad2adf17977a3cd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0e3de763392b2cfde9b46bb4a287da6a') in 0.024621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Day_Cubemap_up.png
+  artifactKey: Guid(221086c6d680f5f449debfb214985610) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS005/Images/FS005_Day_Cubemap_up.png using Guid(221086c6d680f5f449debfb214985610) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '964596a8a19f93e57be1473c6fb191a7') in 0.037435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Sunset_Cubemap_up.png
+  artifactKey: Guid(333d79c281531c64fb97b15ff698a047) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Sunset_Cubemap_up.png using Guid(333d79c281531c64fb97b15ff698a047) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '33a1913a2460684118889f968d775b5b') in 0.030538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Night_Moonless_Cubemap_right.png
+  artifactKey: Guid(6dc7f81c09dfc3649ae042e10f7915cc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS010/Images/FS010_Night_Moonless_Cubemap_right.png using Guid(6dc7f81c09dfc3649ae042e10f7915cc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7af6702153748d42df5e720c7fc4f75f') in 0.027825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS011/FS011_Night_Cubemap.mat
+  artifactKey: Guid(e372c3e1a4d6ced418027a5638d53d6e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS011/FS011_Night_Cubemap.mat using Guid(e372c3e1a4d6ced418027a5638d53d6e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cef1dce52a53adb643ab2c05ce5d7e8d') in 0.023293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Sunset_Cubemap.cubemap
+  artifactKey: Guid(1986de2ce8a5f5a4dbc8d6ec1063a487) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS008/Images/FS008_Sunset_Cubemap.cubemap using Guid(1986de2ce8a5f5a4dbc8d6ec1063a487) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '10ffb54d8b934a85f1f8816e092c7c7a') in 0.345298 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS008/FS008_Rainy_Cubemap.mat
+  artifactKey: Guid(baf234a517cb27b48a00274ad41f65bd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS008/FS008_Rainy_Cubemap.mat using Guid(baf234a517cb27b48a00274ad41f65bd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7457124db63b4585bda4e9bde137963f') in 0.015402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS018/FS018_Night_Cubemap.mat
+  artifactKey: Guid(155c70b09dc395849a7c3abdbca17dd1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS018/FS018_Night_Cubemap.mat using Guid(155c70b09dc395849a7c3abdbca17dd1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ee923bb7d39085a24aaf15b17f35968a') in 0.017732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Night_Moonless_Cubemap_left.png
+  artifactKey: Guid(0180bf13d654af04098abda789ee8884) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS002/Images/FS002_Night_Moonless_Cubemap_left.png using Guid(0180bf13d654af04098abda789ee8884) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0382646c58ae03ee80dec316a88fa278') in 0.020495 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Night_Moonless_Cubemap_right.png
+  artifactKey: Guid(a019a3a9dc677864f8412c407b4c4d88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Night_Moonless_Cubemap_right.png using Guid(a019a3a9dc677864f8412c407b4c4d88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7e4dfd23cfbe5e4573e9396d88c2b79e') in 0.024480 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS012/Images/FS012_Sunset_Cubemap_back.png
+  artifactKey: Guid(92aa466813a7d6541b858784736479ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS012/Images/FS012_Sunset_Cubemap_back.png using Guid(92aa466813a7d6541b858784736479ab) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '184eb7bc0ed53d1b0fabc0d0b8e13c43') in 0.019678 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Day_Cubemap_front.png
+  artifactKey: Guid(548368ee630ebfa4c9fab7a508d0697f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS006/Images/FS006_Day_Cubemap_front.png using Guid(548368ee630ebfa4c9fab7a508d0697f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e9fb371476fb40fe7f3165934fdbae6e') in 0.029846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003545 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Sunrise_Cubemap_back.png
+  artifactKey: Guid(27d529c07da4341439a281ecc21103d9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS009/Images/FS009_Sunrise_Cubemap_back.png using Guid(27d529c07da4341439a281ecc21103d9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '329593936318f389b13a522896b1d786') in 0.031022 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Day_Sunless_Cubemap.cubemap
+  artifactKey: Guid(8181c1c47e42ff246b40cd82acc3a8df) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Day_Sunless_Cubemap.cubemap using Guid(8181c1c47e42ff246b40cd82acc3a8df) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c115bc0dbc4a122c550fa0e0b8207304') in 0.328375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS010/FS010_Sunrise_Cubemap.mat
+  artifactKey: Guid(bbda3245a8a0436419c184c5a4ea83b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS010/FS010_Sunrise_Cubemap.mat using Guid(bbda3245a8a0436419c184c5a4ea83b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '25fa1e13ce501c6295408188c4d638bf') in 0.014960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Day_Sunless_Cubemap_down.png
+  artifactKey: Guid(61255f71dda45c54e8b3bd53c59ca152) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/Images/FS001_Day_Sunless_Cubemap_down.png using Guid(61255f71dda45c54e8b3bd53c59ca152) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '35b77dd6674abc5a904b79724a2f52e6') in 0.023424 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Day_Sunless_Cubemap_down.png
+  artifactKey: Guid(b4db18754293629409c429f280600522) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS020/Images/FS020_Day_Sunless_Cubemap_down.png using Guid(b4db18754293629409c429f280600522) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9a8bab4999f054dcaae6c9840defee89') in 0.019326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/Classic/FS000_Night_01.mat
+  artifactKey: Guid(ab675e6698bde46fd87143fb0d7580cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/Classic/FS000_Night_01.mat using Guid(ab675e6698bde46fd87143fb0d7580cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd087e285e7e066e206d81f82fa5269a7') in 0.016076 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS001/FS001_Snowy_Cubemap.mat
+  artifactKey: Guid(810b260774e207a4789a6546784b3889) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS001/FS001_Snowy_Cubemap.mat using Guid(810b260774e207a4789a6546784b3889) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ff8821a9f064f9798e991ad4123b57d4') in 0.015802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Rainy_Cubemap_right.png
+  artifactKey: Guid(004737affbeb70e4cbc5ed1403856d25) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS017/Images/FS017_Rainy_Cubemap_right.png using Guid(004737affbeb70e4cbc5ed1403856d25) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '54825cc591b59ad3f60f6de387f757ec') in 0.022342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Rainy_Cubemap_up.png
+  artifactKey: Guid(cf3a53543fd89e447a43f4fe4760c2e2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS019/Images/FS019_Rainy_Cubemap_up.png using Guid(cf3a53543fd89e447a43f4fe4760c2e2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f4e9c77361dae2db5d686756e81b7e7a') in 0.024507 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Day_Sunless_Cubemap_front.png
+  artifactKey: Guid(8158b3423c4880a4ab2b1a00cd10e373) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS004/Images/FS004_Day_Sunless_Cubemap_front.png using Guid(8158b3423c4880a4ab2b1a00cd10e373) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cf9dac310d599cfe719136303eefca80') in 0.036136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Day_Sunless_Cubemap_down.png
+  artifactKey: Guid(d9d578a92768537488378413d8caaa95) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Fantasy Skybox/Cubemaps/FS018/Images/FS018_Day_Sunless_Cubemap_down.png using Guid(d9d578a92768537488378413d8caaa95) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c19a4f115200ae9f968e1d58eb75c36e') in 0.026615 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

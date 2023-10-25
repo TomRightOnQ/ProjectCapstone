@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 700.5786, g: 719.10645, b: 1022.3281, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -266,6 +266,75 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!1001 &1025089693
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751945638607655706, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_Name
+      value: Scene_Terrain_Stands_Roof_2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2df59ffa06c33724d9d25d3bb59c25bd, type: 3}
 --- !u!1 &1326134219
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +783,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2062894528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8232290521403181472, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8751945638607655706, guid: 2df59ffa06c33724d9d25d3bb59c25bd,
+        type: 3}
+      propertyPath: m_Name
+      value: Scene_Terrain_Stands_Roof_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2df59ffa06c33724d9d25d3bb59c25bd, type: 3}
 --- !u!1 &3198806294769435230
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +877,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6988797645420320387, guid: 41f8eed6227a0414091bb393783e5153,
+        type: 3}
+      propertyPath: defaultAngle
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 6988797645420320389, guid: 41f8eed6227a0414091bb393783e5153,
         type: 3}
       propertyPath: m_RootOrder
@@ -747,7 +890,7 @@ PrefabInstance:
     - target: {fileID: 6988797645420320389, guid: 41f8eed6227a0414091bb393783e5153,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 6988797645420320389, guid: 41f8eed6227a0414091bb393783e5153,
         type: 3}
@@ -796,8 +939,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6988797645420320390, guid: 41f8eed6227a0414091bb393783e5153,
         type: 3}
-      propertyPath: orthographic
-      value: 0
+      propertyPath: far clip plane
+      value: 40000
       objectReference: {fileID: 0}
     - target: {fileID: 6988797645420320392, guid: 41f8eed6227a0414091bb393783e5153,
         type: 3}

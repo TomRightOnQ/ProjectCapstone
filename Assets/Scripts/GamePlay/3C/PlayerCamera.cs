@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour
@@ -12,6 +13,14 @@ public class PlayerCamera : MonoBehaviour
     [SerializeField] private float camMaxX = 100f;
     [SerializeField] private float camMaxZ = 100f;
     [SerializeField] private float camMinZ = -100f;
+
+    // Default and Final x Angle
+    [SerializeField] private float defaultAngle = -45f;
+    [SerializeField] private float finalAngle = 22.5f;
+    private float angleToGo = 0f;
+    private bool bRotating = false;
+    private bool bRotateDown = true;
+
     private bool bPlayerMode = true;
     private EUnit unit;
 
@@ -25,6 +34,18 @@ public class PlayerCamera : MonoBehaviour
         {
             unit = targetObject.GetComponent<EUnit>();
         }
+
+        transform.rotation = Quaternion.Euler(defaultAngle, transform.eulerAngles.y, transform.eulerAngles.z);
+
+        // Set up handlers
+        configEventHandlers();
+    }
+
+    // Config events
+    private void configEventHandlers()
+    {
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_UNLOADED, OnRecv_SceneUnLoaded);
     }
 
     private void FixedUpdate()
@@ -57,6 +78,33 @@ public class PlayerCamera : MonoBehaviour
         {
             transform.position = Vector3.Lerp(transform.position, targetPosition, unit.GetUnitSpeed() * 0.1f * Time.deltaTime);
         }
+
+        // Rotate the camera for scene load or unload
+        if (!bRotating)
+        {
+            return;
+        }
+
+        float RotatingAmount = Mathf.Min(1f, angleToGo);
+        if (angleToGo <= 1f)
+        {
+            RotatingAmount = angleToGo;
+            bRotating = false;
+        }
+        else 
+        {
+            angleToGo -= 1f;
+        }
+        
+        if (bRotateDown)
+        {
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x + RotatingAmount, transform.eulerAngles.y, transform.eulerAngles.z);
+        }
+        else 
+        {
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x - RotatingAmount, transform.eulerAngles.y, transform.eulerAngles.z);
+        }
+        
     }
 
     public void SetCameraToPlayerMode(bool bSetToPlayerMode = true)
@@ -68,5 +116,20 @@ public class PlayerCamera : MonoBehaviour
     {
         targetObject = target;
         unit = targetUnit;
+    }
+
+    // Private:
+    private void OnRecv_SceneLoaded()
+    {
+        angleToGo = finalAngle - defaultAngle;
+        bRotateDown = true;
+        bRotating = true;
+    }
+
+    private void OnRecv_SceneUnLoaded()
+    {
+        angleToGo = finalAngle - defaultAngle;
+        bRotateDown = false;
+        bRotating = true;
     }
 }

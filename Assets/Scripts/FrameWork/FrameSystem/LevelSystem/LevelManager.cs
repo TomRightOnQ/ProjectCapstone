@@ -11,6 +11,9 @@ public class LevelManager : MonoBehaviour
     private string currentScene;
     public string CurrentScene => currentScene;
 
+    private Enums.SCENE_TYPE currentSceneType;
+    public Enums.SCENE_TYPE CurrentSceneType => currentSceneType;
+
     // 2D Scene Game ID
     private int gameID2D = -1;
 
@@ -64,8 +67,19 @@ public class LevelManager : MonoBehaviour
             SaveManager.Instance.CreateNewSave();
         }
         SaveConfig.PlayerSaveData playerData = SaveManager.Instance.GetPlayer();
-        string currentScene = playerData.Scene;
-        LoadScene(currentScene);
+
+        // Edge Cases:
+        // If the player quit the game while the game is initing the next day
+        // In this case, re-init
+        if (SaveManager.Instance.GetIsCurrentDayInited())
+        {
+            string currentScene = playerData.Scene;
+            LoadScene(currentScene);
+        }
+        else 
+        {
+            DayCycleManager.Instance.JumpToDay(SaveManager.Instance.GetCurrentDay());
+        }
     }
 
     // Private:
@@ -84,6 +98,12 @@ public class LevelManager : MonoBehaviour
             yield return null;
         }
         currentScene = sceneName;
+
+        // Retrieve level metadata
+        LevelData levelData = LevelConfig.Instance.GetLevelData(sceneName);
+
+        currentSceneType = levelData.SceneType;
+
         // Scene is loaded, now load managers
         PersistentGameManager.Instance.LoadManagers();
         // Build the scene based on the saved info
@@ -130,6 +150,8 @@ public class LevelManager : MonoBehaviour
         PersistentDataManager.Instance.SetCamera();
         InputManager.Instance.UnLockInput(worldType);
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_SCENE_LOADED);
+        // Resume the game
+        PersistentGameManager.Instance.ResumeGame();
 
         if (worldType == Enums.SCENE_TYPE.Battle)
         {

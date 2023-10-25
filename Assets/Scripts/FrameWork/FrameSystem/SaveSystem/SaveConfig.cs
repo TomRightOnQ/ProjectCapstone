@@ -13,13 +13,13 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     // Data
     [SerializeField]
     private PlayerSaveData playerSaveData = new PlayerSaveData();
+
+    [SerializeField]
+    private DaySaveData daySaveData = new DaySaveData();
+
     [SerializeField]
     private List<NPCSaveData> npcSaveDataList = new List<NPCSaveData>();
     public List<NPCSaveData> NpcSaveDataList => npcSaveDataList;
-
-    /// Day System
-    [SerializeField] private int currentDay = 0;
-    public int CurrentDay { get { return currentDay; } set { currentDay = value; } }
 
     // Datagrams
     [System.Serializable]
@@ -41,6 +41,13 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         public bool bActive = false;
     }
 
+    [System.Serializable]
+    public class DaySaveData
+    {
+        public int CurrentDay;
+        public bool bInited;
+    }
+
     // Methods:
     public void SetPlayer(Vector3 position, string scene)
     {
@@ -53,6 +60,11 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         return playerSaveData;
     }
 
+    public DaySaveData GetDay()
+    {
+        return daySaveData;
+    }
+
     public void LockSave()
     {
         bAllowRewrite = false;
@@ -62,7 +74,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     // --Init-- Methods
     public void InitDayToSave()
     {
-        currentDay = 0;
+        daySaveData.CurrentDay = 0;
     }
 
     // Modify NPC status

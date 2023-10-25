@@ -29,14 +29,14 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    // Public:
     // Config events
-    public void configEventHandlers()
+    private void configEventHandlers()
     {
         EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
         EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_UNLOADED, OnRecv_SceneUnLoaded);
     }
 
+    // Public:
     // Init a new save
     // --Caution--
     // This will completely rewrite the saving scriptable
@@ -66,8 +66,15 @@ public class SaveManager : MonoBehaviour
 
     public void SaveCurrentDay(int currentDay)
     {
-        SaveConfig.Instance.CurrentDay = currentDay;
+        SaveConfig.Instance.GetDay().CurrentDay = currentDay;
     }
+
+    // Get current day init status
+    public void SaveCurrentDayInited(bool bInited)
+    {
+        SaveConfig.Instance.GetDay().bInited = bInited;
+    }
+
 
     // Read Data
     // Load Save to the scriptable object
@@ -91,10 +98,16 @@ public class SaveManager : MonoBehaviour
         return SaveConfig.Instance.NpcSaveDataList;
     }
 
-    // Get Current Day:
+    // Get Current Day
     public int GetCurrentDay()
     {
-        return SaveConfig.Instance.CurrentDay;
+        return SaveConfig.Instance.GetDay().CurrentDay;
+    }
+
+    // Get current day init status
+    public bool GetIsCurrentDayInited()
+    {
+        return SaveConfig.Instance.GetDay().bInited;
     }
 
     // Modify NPCs

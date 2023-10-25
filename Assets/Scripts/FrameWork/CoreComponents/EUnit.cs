@@ -14,7 +14,9 @@ public class EUnit : MEntity
 
     [SerializeField] protected Rigidbody unitRigidBody;
 
-    // Temp
+    // Temp Data
+    [SerializeField] protected float maxHP = 0f;
+    [SerializeField] protected float currentHP = 0f;
     [SerializeField] protected float defense = 0f;
     [SerializeField] protected float attack = 0f;
     [SerializeField] protected float speedBase = 1f;
@@ -123,10 +125,10 @@ public class EUnit : MEntity
     }
 
 
-// Protected and private:
+    // Protected and private:
 
-// Determmine currnent HP status
-protected virtual void checkCurrentHealth()
+    // Determmine currnent HP status
+    protected virtual void checkCurrentHealth()
     {
         // Check if current HP will lead to something
     }

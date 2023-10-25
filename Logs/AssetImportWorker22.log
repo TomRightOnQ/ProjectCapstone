@@ -1,0 +1,763 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'zh' Physical Memory: 32627 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker22
+-projectPath
+D:/CS/ICS169/Capstone/ProjectCapstone
+-logFile
+Logs/AssetImportWorker22.log
+-srvPort
+55163
+Successfully changed project path to: D:/CS/ICS169/Capstone/ProjectCapstone
+D:/CS/ICS169/Capstone/ProjectCapstone
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [49164] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 970871623 [EditorId] 970871623 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [49164] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 970871623 [EditorId] 970871623 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 301.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/CS/ICS169/Capstone/ProjectCapstone/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x220a)
+    Vendor:   NVIDIA
+    VRAM:     12107 MB
+    Driver:   31.0.15.3623
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.014755 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 201.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.925 seconds
+Domain Reload Profiling:
+	ReloadAssembly (926ms)
+		BeginReloadAssembly (97ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (675ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (124ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (450ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (201ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (174ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009828 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 286.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.573 seconds
+Domain Reload Profiling:
+	ReloadAssembly (6574ms)
+		BeginReloadAssembly (205ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (6192ms)
+			LoadAssemblies (206ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (651ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (212ms)
+			SetupLoadedEditorAssemblies (5101ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (39ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (287ms)
+				BeforeProcessingInitializeOnLoad (247ms)
+				ProcessInitializeOnLoadAttributes (4140ms)
+				ProcessInitializeOnLoadMethodAttributes (375ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 8261 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 53 unused Assets / (3.4 MB). Loaded Objects now: 8731.
+Memory consumption went from 388.0 MB to 384.6 MB.
+Total: 5.672800 ms (FindLiveObjects: 0.900600 ms CreateObjectMapping: 0.641100 ms MarkObjects: 3.612800 ms  DeleteObjects: 0.516900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 777758.429825 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/SunlessCirruscover4k.hdr
+  artifactKey: Guid(99af420a4ccafa74abdc47436d8b0685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/SunlessCirruscover4k.hdr using Guid(99af420a4ccafa74abdc47436d8b0685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce2422b6ccadb6471d0454af60a80ba4') in 1.141125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.460232 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/SunlessCirruscover4k.hdr
+  artifactKey: Guid(99af420a4ccafa74abdc47436d8b0685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/SunlessCirruscover4k.hdr using Guid(99af420a4ccafa74abdc47436d8b0685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2ee70acc038ea75b28da3eff2599c36') in 0.067530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.175046 seconds.
+  path: Assets/SkySeries Freebie/SunlessCirruscover.mat
+  artifactKey: Guid(4e154bf235e41704bbd6bbc6fd6c63f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/SunlessCirruscover.mat using Guid(4e154bf235e41704bbd6bbc6fd6c63f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66f88485eee30baf7079f7e7521cb1f2') in 0.047711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.275915 seconds.
+  path: Assets/Settings/HDRP High Fidelity.asset
+  artifactKey: Guid(36dd385e759c96147b6463dcd1149c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/HDRP High Fidelity.asset using Guid(36dd385e759c96147b6463dcd1149c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ef0972e91d47a648a166f8e0ecfa03e') in 0.004757 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008339 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.604 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4605ms)
+		BeginReloadAssembly (235ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (40ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (70ms)
+		EndReloadAssembly (4252ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (413ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (103ms)
+			SetupLoadedEditorAssemblies (3406ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (141ms)
+				ProcessInitializeOnLoadAttributes (3013ms)
+				ProcessInitializeOnLoadMethodAttributes (214ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (75ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7842 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (3.4 MB). Loaded Objects now: 8889.
+Memory consumption went from 371.3 MB to 367.9 MB.
+Total: 5.413900 ms (FindLiveObjects: 0.824700 ms CreateObjectMapping: 0.381000 ms MarkObjects: 3.346600 ms  DeleteObjects: 0.859800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009069 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.535 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4536ms)
+		BeginReloadAssembly (183ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (59ms)
+		EndReloadAssembly (4240ms)
+			LoadAssemblies (120ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (454ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (108ms)
+			SetupLoadedEditorAssemblies (3374ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (22ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (142ms)
+				ProcessInitializeOnLoadAttributes (3050ms)
+				ProcessInitializeOnLoadMethodAttributes (146ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (52ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7841 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8892.
+Memory consumption went from 371.0 MB to 367.6 MB.
+Total: 4.587200 ms (FindLiveObjects: 0.711900 ms CreateObjectMapping: 0.295000 ms MarkObjects: 3.165800 ms  DeleteObjects: 0.412900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 222.463719 seconds.
+  path: Assets/Scenes/LevelScene/AudienceLevel/VolumeAudience.asset
+  artifactKey: Guid(7872fd57d0ae39f40aad92d0a41c11d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/LevelScene/AudienceLevel/VolumeAudience.asset using Guid(7872fd57d0ae39f40aad92d0a41c11d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8e63c00eb3ea568247c7a5ab3b1781a') in 0.070459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.841501 seconds.
+  path: Assets/Settings/SkyandFogSettingsProfile.asset
+  artifactKey: Guid(8ba92e2dd7f884a0f88b98fa2d235fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/SkyandFogSettingsProfile.asset using Guid(8ba92e2dd7f884a0f88b98fa2d235fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ecf5a3852738a2b89ef1439cd5b119b') in 0.012517 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 205.365243 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine
+  artifactKey: Guid(c68ff86379392734282f3c9c900b1b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine using Guid(c68ff86379392734282f3c9c900b1b61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1125cd36edc75e4c3729aeaa863cf28a') in 0.002812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.468627 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Polaris - User Guide.pdf
+  artifactKey: Guid(47ac8b211165a23469dcb364fb423714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Polaris - User Guide.pdf using Guid(47ac8b211165a23469dcb364fb423714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '688cd92a9c5ff56c7a9caf7156cf3c7d') in 0.014148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 116.011681 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Tool/BillboardCreatorAtlas.mat
+  artifactKey: Guid(81ff27138fbe35e43b791b7088cbfa98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Tool/BillboardCreatorAtlas.mat using Guid(81ff27138fbe35e43b791b7088cbfa98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7934bc50f86ca910c143a041e971f372') in 1.077259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Sphere.fbx
+  artifactKey: Guid(9e0af751bc36ea146940ba245193e28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Sphere.fbx using Guid(9e0af751bc36ea146940ba245193e28c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d125738eb08a9ceb43e4252afc8da71') in 0.125952 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid9.fbx
+  artifactKey: Guid(6f7abdaf5814a8d418b35f1669addf61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid9.fbx using Guid(6f7abdaf5814a8d418b35f1669addf61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86f451d560823f49138ee5aaeadba3d3') in 0.037649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid10.fbx
+  artifactKey: Guid(b5661883f1e046c448831153b67fcd45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid10.fbx using Guid(b5661883f1e046c448831153b67fcd45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b68d713d3184848e00f470301de777') in 0.036886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_GradientLookup.mat
+  artifactKey: Guid(a1cb8d0a827b8f94ca1bb7125360c068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_GradientLookup.mat using Guid(a1cb8d0a827b8f94ca1bb7125360c068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f286936444edc32fdc672de7acc900c8') in 0.019955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_4Splats4Normals.mat
+  artifactKey: Guid(8b56f8565d18b5a488774ab6a9517931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_4Splats4Normals.mat using Guid(8b56f8565d18b5a488774ab6a9517931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '059a5a51045c8f05435f500093d49355') in 0.017227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleHeadsAndTrails.vfx
+  artifactKey: Guid(f0efff9416db4174984390120a80ee87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleHeadsAndTrails.vfx using Guid(f0efff9416db4174984390120a80ee87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '905a89ce0d954c66825fda730d2cd5a1') in 0.599222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Fonts/PerfectDOSVGA437.ttf
+  artifactKey: Guid(74a5091d8707f334b9a5c31ef71a64ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Fonts/PerfectDOSVGA437.ttf using Guid(74a5091d8707f334b9a5c31ef71a64ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b24130498865655223c0c23415390eb6') in 0.031278 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_4Splats.mat
+  artifactKey: Guid(1f52eb6ce10e55a4099ae55cc01b119e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_4Splats.mat using Guid(1f52eb6ce10e55a4099ae55cc01b119e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a0c355157462186efbfd23d528d442f') in 0.010753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Models/GrassMeshes.fbx
+  artifactKey: Guid(43b3ffc4724f06d4c882432dff623b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Models/GrassMeshes.fbx using Guid(43b3ffc4724f06d4c882432dff623b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9121428b1b89337aa2cb5b7936614b0f') in 0.167460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_ColorMap.mat
+  artifactKey: Guid(4dee0dc4ef62127448c318be6eeae99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_ColorMap.mat using Guid(4dee0dc4ef62127448c318be6eeae99b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c009c7f129a675b71b6a7fe8849ccc41') in 0.014505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/HumanEyeModel.fbx
+  artifactKey: Guid(bc7f614d61b9b2a49a9ca3530b20da5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/HumanEyeModel.fbx using Guid(bc7f614d61b9b2a49a9ca3530b20da5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de121238c05083bc744116eb7f66742b') in 0.033822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.019538 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_ColorMap.mat
+  artifactKey: Guid(faae3a3906a420d4091b5786d1a6c15a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_ColorMap.mat using Guid(faae3a3906a420d4091b5786d1a6c15a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd01b23029584a4c0298ea70c9b2e6f47') in 0.015792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleParticleSystem.vfx
+  artifactKey: Guid(a8d8823499ff50847aa460cb119c445d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleParticleSystem.vfx using Guid(a8d8823499ff50847aa460cb119c445d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a7d3a28eea9fe127455c6bcb747724') in 0.780274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Quad.fbx
+  artifactKey: Guid(1d5a8595286f94f4bb54171d49f473c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Quad.fbx using Guid(1d5a8595286f94f4bb54171d49f473c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '189db14c727e6a0841e617a8185f4e02') in 0.040698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDDecalMaterial.mat
+  artifactKey: Guid(500e733574922d04ea961553b1b26a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDDecalMaterial.mat using Guid(500e733574922d04ea961553b1b26a63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec2193d9658aebbc1dedd45ad4c6d56') in 0.023006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_VertexColor.mat
+  artifactKey: Guid(34801d19551671a4abe7c4eb5d611da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_VertexColor.mat using Guid(34801d19551671a4abe7c4eb5d611da5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '576f07c478d9deadb5bee9267ec89e73') in 0.024542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid12.fbx
+  artifactKey: Guid(7807d55b162ded547a688d7312ece635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid12.fbx using Guid(7807d55b162ded547a688d7312ece635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45557979434ccf5338cba3500c41a30e') in 0.035056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_4Splats.mat
+  artifactKey: Guid(f16db84b20aeb4b4e9ffb2429f24b831) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_4Splats.mat using Guid(f16db84b20aeb4b4e9ffb2429f24b831) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93e470741ee02f7bc3e662453845998e') in 0.030633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid1.fbx
+  artifactKey: Guid(4696ad07c62c7214db2580f0ec1b95b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid1.fbx using Guid(4696ad07c62c7214db2580f0ec1b95b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8756aee87e4f8e3e00425331b08efc7b') in 0.036485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Tool/GrassPreviewMaterial.mat
+  artifactKey: Guid(800466453016ed44eada17f86b6b443c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Tool/GrassPreviewMaterial.mat using Guid(800466453016ed44eada17f86b6b443c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dfcbd3ad712e65ec3da6a890d6da0a3') in 0.042043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid8.fbx
+  artifactKey: Guid(9081e385818e5a34fa640710053249b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid8.fbx using Guid(9081e385818e5a34fa640710053249b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39f6950b7ca192d4b6d1b40357e427dc') in 0.027214 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_4Splats4Normals.mat
+  artifactKey: Guid(a76fdd1ddd41bf94ab44298fbf40b65c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_4Splats4Normals.mat using Guid(a76fdd1ddd41bf94ab44298fbf40b65c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5edfbffc480cb2a6edd6ef110540e7b') in 0.028508 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid11.fbx
+  artifactKey: Guid(ce3db579ad4acf1439cffc5585e7b514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid11.fbx using Guid(ce3db579ad4acf1439cffc5585e7b514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1362f89f6dde4e0943f6d4c5c6dcb428') in 0.036061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid0.fbx
+  artifactKey: Guid(b0c1d9f1f71dac242bf1e740df1d5daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid0.fbx using Guid(b0c1d9f1f71dac242bf1e740df1d5daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a4353ca11f2e6345fe2ff2e684adf30') in 0.048797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/_TerrainData/TerrainMaterial_235476111756733836.mat
+  artifactKey: Guid(1f4ae3acc1f680842bb7fc06d6232d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_TerrainData/TerrainMaterial_235476111756733836.mat using Guid(1f4ae3acc1f680842bb7fc06d6232d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a16a1f9d2b300afc2339ecc57857334d') in 0.033924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Foliage/Builtin_GrassBillboard.mat
+  artifactKey: Guid(2902218ab3a8cae43aee73ba8891cdd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Foliage/Builtin_GrassBillboard.mat using Guid(2902218ab3a8cae43aee73ba8891cdd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '725e482bcdd5c3ac63f901ce3f3a3492') in 0.065533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002074 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Foliage/Builtin_Grass.mat
+  artifactKey: Guid(aa612f1669a06004ca4c7e53adf49314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Foliage/Builtin_Grass.mat using Guid(aa612f1669a06004ca4c7e53adf49314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eeccebea7ef975d140e3ce375539172') in 0.066190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDParticleMaterial.mat
+  artifactKey: Guid(b739a3f02ff77bf48b7636e64c3e3b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDParticleMaterial.mat using Guid(b739a3f02ff77bf48b7636e64c3e3b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c74f39cb062914630e562fa81b4abaa0') in 0.023920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid13.fbx
+  artifactKey: Guid(4fa4f3a0c335316429a5e3cad20987b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid13.fbx using Guid(4fa4f3a0c335316429a5e3cad20987b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2017897dcdb7fe9bd23e10bce48672e6') in 0.036906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Packages/com.unity.visualeffectgraph/Editor/Templates/EmptyParticleSystem.vfx
+  artifactKey: Guid(b7261d938a155b74cb61a60a16d9f2aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.visualeffectgraph/Editor/Templates/EmptyParticleSystem.vfx using Guid(b7261d938a155b74cb61a60a16d9f2aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '708f9795324b23272c774ae55d386d07') in 0.721652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014108 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid4.fbx
+  artifactKey: Guid(2be8ef80a0f55b049b3fdb04a887bc88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid4.fbx using Guid(2be8ef80a0f55b049b3fdb04a887bc88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2d6fe7c0d8f2b65f0cd527e4ec13958') in 0.028095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Editor/RenderPipelineResources/Material/GUITextureBlit2SRGB.mat
+  artifactKey: Guid(6e95c04e4e686554e8bed96ee69f690c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Editor/RenderPipelineResources/Material/GUITextureBlit2SRGB.mat using Guid(6e95c04e4e686554e8bed96ee69f690c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '938640ad3ebbc1bb1f3b914cfcabb263') in 0.028691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_4Splats.mat
+  artifactKey: Guid(2677bce7416957440ba400abba71f6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_4Splats.mat using Guid(2677bce7416957440ba400abba71f6a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bb5b2e16c1a24e34ad374d04d2999d9') in 0.014951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_4Splats4Normals.mat
+  artifactKey: Guid(cefbb481666e7c44f8e159a9408e7115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_4Splats4Normals.mat using Guid(cefbb481666e7c44f8e159a9408e7115) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4ec74170b208b53845cb0721254eadf') in 0.013577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDMirrorMaterial.mat
+  artifactKey: Guid(6b17274157b33bc45b6a40e7d4ff51fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDMirrorMaterial.mat using Guid(6b17274157b33bc45b6a40e7d4ff51fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae490ca5ae59d8a63eac2f66792f5398') in 0.017713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015492 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDMaterial.mat
+  artifactKey: Guid(73c176f402d2c2f4d929aa5da7585d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDMaterial.mat using Guid(73c176f402d2c2f4d929aa5da7585d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81bc8a8c43d1ea39a476e0b13b29257f') in 0.025130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDTerrainMaterial.mat
+  artifactKey: Guid(22ff8771d87ef27429e670136399094b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Material/DefaultHDTerrainMaterial.mat using Guid(22ff8771d87ef27429e670136399094b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '123595e36e835ee48b7768302f850b9d') in 0.019724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_VertexColor.mat
+  artifactKey: Guid(2407d82437383444486716681d0389f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_VertexColor.mat using Guid(2407d82437383444486716681d0389f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce9bb5acef3d423e79771f8e0e27b80f') in 0.022430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleSwarmParticleSystem.vfx
+  artifactKey: Guid(b84f73c7c4a6c6443a3bfbb2f7a504f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleSwarmParticleSystem.vfx using Guid(b84f73c7c4a6c6443a3bfbb2f7a504f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aee5c0d00b40659820d82bfcfed62d18') in 0.530320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid5.fbx
+  artifactKey: Guid(e9215a6e4d62f274d808f3bc09907a77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid5.fbx using Guid(e9215a6e4d62f274d808f3bc09907a77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bb5dba520f59d2ccea80f86d04975d8') in 0.020660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/SkySeries Freebie/FreebieHdri/Materials/CasualDay4K.mat
+  artifactKey: Guid(bd604dac018c44d4fac8929a4f4c1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SkySeries Freebie/FreebieHdri/Materials/CasualDay4K.mat using Guid(bd604dac018c44d4fac8929a4f4c1183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0d7a3781356d570104f01fb3f34bd0') in 0.042329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_VertexColor.mat
+  artifactKey: Guid(894f9cdf0f8a4514da47a36df86a4352) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_VertexColor.mat using Guid(894f9cdf0f8a4514da47a36df86a4352) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d28f46ff6552b2fffab0230da010f8c') in 0.023378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid7.fbx
+  artifactKey: Guid(3f5249ac2d9bdcb429e6dd1b53bc14be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid7.fbx using Guid(3f5249ac2d9bdcb429e6dd1b53bc14be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01614180957d58d3c088948d23ecbae0') in 0.066288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_8Splats.mat
+  artifactKey: Guid(09444822d81fc16418d0e347310de385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_8Splats.mat using Guid(09444822d81fc16418d0e347310de385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0b358775a86b41fc3d29e003d2967f3') in 0.016960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Foliage/Builtin_GrassInteractive.mat
+  artifactKey: Guid(2e0b5cbdcfe3d5c408d57601daaa6c3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Foliage/Builtin_GrassInteractive.mat using Guid(2e0b5cbdcfe3d5c408d57601daaa6c3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e426ad8a480bb542638925bd2416f7d') in 0.068350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleHeadsAndSparks.vfx
+  artifactKey: Guid(092c27d29de329c43aa5ad8ca20e4be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleHeadsAndSparks.vfx using Guid(092c27d29de329c43aa5ad8ca20e4be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13f1f94619adc87c1d4d784c6caa0d3a') in 0.510009 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Foliage/Builtin_TreeBillboard.mat
+  artifactKey: Guid(a92985462b1b78c4abcb29c9e3d8140f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Foliage/Builtin_TreeBillboard.mat using Guid(a92985462b1b78c4abcb29c9e3d8140f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed3b4fa2ec9d9f80d2b18fd80a4996da') in 0.009599 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_GradientLookup.mat
+  artifactKey: Guid(6ca99d08d9071df45966feafc8952237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_GradientLookup.mat using Guid(6ca99d08d9071df45966feafc8952237) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '009fd812b56ad3d009e88dc94334215a') in 0.014563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid2.fbx
+  artifactKey: Guid(31a151ed30b773c4291a88736a04b3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid2.fbx using Guid(31a151ed30b773c4291a88736a04b3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae224164812e2087c962497e0df3fd8') in 0.040164 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Cylinder.fbx
+  artifactKey: Guid(accb6d90f0d50fe4ca0f68159b4323de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Cylinder.fbx using Guid(accb6d90f0d50fe4ca0f68159b4323de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42411095a0b53e291405743f46f5b463') in 0.048548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000454 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_8Splats.mat
+  artifactKey: Guid(a1514d39b149d4242bd583297dcf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_Lambert_8Splats.mat using Guid(a1514d39b149d4242bd583297dcf31bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab940989fda9606bb8df0e9f32cc9a3') in 0.013260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid3.fbx
+  artifactKey: Guid(d3b8adb1a8ed2f9419de072e5beb84f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid3.fbx using Guid(d3b8adb1a8ed2f9419de072e5beb84f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79ea4708e92e27e15e59e9d1dde80316') in 0.038144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid6.fbx
+  artifactKey: Guid(b1a74c377a6c24641904108eafa2858d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Models/Grid6.fbx using Guid(b1a74c377a6c24641904108eafa2858d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c7093c09b21aef36c6afd5c057b8377') in 0.032180 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_ColorMap.mat
+  artifactKey: Guid(41f51d3f1db9c564f80f180db87e3c42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_ColorMap.mat using Guid(41f51d3f1db9c564f80f180db87e3c42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb6b962b346e172608be28fc1ba7b882') in 0.018303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_8Splats.mat
+  artifactKey: Guid(628b460985e13114c94a285d272cd9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_BlinnPhong_8Splats.mat using Guid(628b460985e13114c94a285d272cd9e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '872d6c70d1dd6e66a48e7812bbafb098') in 0.013906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_GradientLookup.mat
+  artifactKey: Guid(7d883601ac0b74542afa362c7a216952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Runtime/Materials/Terrain/Builtin_PBR_GradientLookup.mat using Guid(7d883601ac0b74542afa362c7a216952) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91d09767ad1df811467175ae24e40ed1') in 0.022635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleRibbon.vfx
+  artifactKey: Guid(c071abb088c76054bb603238f21bce1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.visualeffectgraph/Editor/Templates/SimpleRibbon.vfx using Guid(c071abb088c76054bb603238f21bce1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '329a49314d4065abfe39709bd9d6ffa4') in 0.598924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Disc.fbx
+  artifactKey: Guid(aa0197e8182e0924897ca6c14966b2d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/Mesh/Disc.fbx using Guid(aa0197e8182e0924897ca6c14966b2d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60b3ee2f7d9de22cf4597826e14c808a') in 0.020882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Materials/Topographic.mat
+  artifactKey: Guid(f1271be60ed7edf4f86c5d532eeb2bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Polaris - Low Poly Ecosystem/Polaris - Low Poly Terrain Engine/Editor/Materials/Topographic.mat using Guid(f1271be60ed7edf4f86c5d532eeb2bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f21694efce34a199836f1ae644c36890') in 0.012006 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009525 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  8.981 seconds
+Domain Reload Profiling:
+	ReloadAssembly (8982ms)
+		BeginReloadAssembly (385ms)
+			ExecutionOrderSort (1ms)
+			DisableScriptedObjects (73ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (113ms)
+		EndReloadAssembly (8422ms)
+			LoadAssemblies (160ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (593ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (130ms)
+			SetupLoadedEditorAssemblies (7290ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (235ms)
+				ProcessInitializeOnLoadAttributes (6789ms)
+				ProcessInitializeOnLoadMethodAttributes (210ms)
+				AfterProcessingInitializeOnLoad (14ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (62ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7847 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (3.4 MB). Loaded Objects now: 9017.
+Memory consumption went from 373.7 MB to 370.3 MB.
+Total: 6.072900 ms (FindLiveObjects: 0.764800 ms CreateObjectMapping: 0.283400 ms MarkObjects: 4.515100 ms  DeleteObjects: 0.508300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

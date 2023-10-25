@@ -28,4 +28,11 @@ public class Player : EUnit
         this.gameObject.SetActive(false);
         playerController.ResetPlayerController();
     }
+
+    // Update HP to UIs
+    protected override void checkCurrentHealth()
+    {
+        base.checkCurrentHealth();
+        BattleObserver.Instance.OnPlayerHPChanged(currentHP, maxHP);
+    }
 }

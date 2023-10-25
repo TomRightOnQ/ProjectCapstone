@@ -17,17 +17,8 @@ MonoBehaviour:
     PlayerName: You
     Position: {x: 0, y: 0.5, z: 0}
     Scene: DefaultLevel
-  npcSaveDataList:
-  - NpcID: 1
-    NpcName: Chatter
-    Position: {x: 2, y: 0.5, z: 0}
-    interactionIDs: 01000000
-    Scene: DefaultLevel
-    bActive: 1
-  - NpcID: 2
-    NpcName: Atom
-    Position: {x: -2.5, y: 7.25, z: -2}
-    interactionIDs: 02000000
-    Scene: AudienceLevel
-    bActive: 1
-  currentDay: 0
+  daySaveData:
+    CurrentDay: 0
+    bInited: 1
+    MaxDay: 0
+  npcSaveDataList: []
