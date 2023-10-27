@@ -92,6 +92,8 @@ public class LevelManager : MonoBehaviour
         // Notify the beginning of scene loading
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_SCENE_UNLOADED);
 
+        MusicManager.Instance.PlayMusic("MainMenuBGM_1");
+
         // Wait until the scene is fully loaded
         while (!asyncOperation.isDone)
         {
@@ -150,6 +152,7 @@ public class LevelManager : MonoBehaviour
         PersistentDataManager.Instance.SetCamera();
         InputManager.Instance.UnLockInput(worldType);
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_SCENE_LOADED);
+
         // Resume the game
         PersistentGameManager.Instance.ResumeGame();
 

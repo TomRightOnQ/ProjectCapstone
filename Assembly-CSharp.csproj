@@ -456,8 +456,8 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Unity\StyleScrollbar.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Utilities\Utilities.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Tabs\TabButton.cs" />
-    <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Collections\ListViewDefaultColor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\EasyLayout\EnumHelper.cs" />
+    <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Collections\ListViewDefaultColor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\UtilitiesColor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\ListViewItemTemplate.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\UtilitiesRectTransform.cs" />
@@ -1131,6 +1131,8 @@
     <Compile Include="Assets\Scripts\GamePlay\3C\PlayerController.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\SliderScale\SliderScaleBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Converter\ConverterTMProReplacementInfo.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C\MainMenuCamera.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\VisualEffects\RotationalLight.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

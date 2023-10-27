@@ -101,7 +101,7 @@ public class MusicManager : MonoBehaviour
     private IEnumerator LoadMusicAndPlay(string path)
     {
         string fullPath = Path.Combine(Application.streamingAssetsPath, Path.Combine(MUSIC_PATH, path));
-        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(fullPath, AudioType.OGGVORBIS))
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(fullPath, AudioType.WAV))
         {
             yield return www.SendWebRequest();
 

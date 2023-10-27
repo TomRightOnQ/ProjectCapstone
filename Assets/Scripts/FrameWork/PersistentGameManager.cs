@@ -44,6 +44,9 @@ public class PersistentGameManager : MonoBehaviour
     private void InitConfigs() 
     {
         // Configs
+        Debug.Log("0. MusicConfig Loading");
+        MusicConfig.Instance.Init();
+
         Debug.Log("1. PrefabConfig Loading");
         PrefabConfig.Instance.Init();
         Debug.Log("2. LevelConfig Loading");

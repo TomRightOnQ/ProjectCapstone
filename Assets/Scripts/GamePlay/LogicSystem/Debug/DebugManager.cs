@@ -56,4 +56,16 @@ public class DebugManager : MonoBehaviour
         LevelManager.Instance.LoadScene(Constants.SCENE_PLATFORMER_LEVEL);
         onClick();
     }
+
+    public void EnterRoomA()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_ROOMA_LEVEL);
+        onClick();
+    }
+
+    public void EnterGuild()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_GUILD_LEVEL);
+        onClick();
+    }
 }

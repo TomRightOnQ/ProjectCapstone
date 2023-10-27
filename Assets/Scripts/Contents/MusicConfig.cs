@@ -6,7 +6,7 @@ using UnityEngine;
 /// References of BGM clips held here
 /// Loading is handled in MusicManager.cs
 /// </summary>
-
+[CreateAssetMenu(menuName = "GameEffect/MusicConfig")]
 public class MusicConfig : ScriptableObject
 {
     private static MusicConfig instance = null;

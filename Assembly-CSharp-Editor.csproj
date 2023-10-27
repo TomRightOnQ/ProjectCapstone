@@ -1028,10 +1028,6 @@
       <Project>{4EA18785-2C43-CCF8-6705-26F671EC58C8}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="Pinwheel.Polaris.Runtime.csproj">
-      <Project>{C3CF6AE2-97AD-B1A5-D3B7-959C58621528}</Project>
-      <Name>Pinwheel.Polaris.Runtime</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
