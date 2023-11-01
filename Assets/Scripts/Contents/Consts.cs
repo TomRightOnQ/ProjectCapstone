@@ -19,6 +19,10 @@ public static class Constants
     public const int TEST_INT_C3 = 3;  // A normal value
     public const string TEST_STRING_C3 = "unreal";  // A normal value
 
+    // Reminder
+    public const float REMINDER_LEVEL_TIME = 2f;  // Life time of the level reminder
+    public const float REMINDER_LEVEL_FADE_TIME = 0.5f;  // Time for the level remidner to fade out
+
     // SCENE_NAME
     public const string SCENE_GAME_INIT = "GameInitScene";  // Game Entry Scene
     public const string SCENE_GAME_LOAD = "GameLoadingScene";  // Game Main Loading Scene

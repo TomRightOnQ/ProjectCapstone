@@ -16,6 +16,7 @@ public static class Enums
         Chat,  // Screen Interaction Type: Start a chat
         Teleport,  // Screen Interaction Type: Teleport the player
         StartGame,  // Screen Interaction Type: Bring the player to a game level
+        ShowReminder,  // Screen Interaction Type: Show a reminder
     }
 
     public enum LEVEL_TYPE

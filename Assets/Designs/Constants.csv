@@ -20,3 +20,5 @@ CAMERA_PAN_OFFSET,float,3C,0.9f,
 CAMERA_SNAP_THRESHOLD,float,3C,0.01f,
 CAMERA_ROTATED_THRESHOLD,float,3C,0.1f,
 PLAYER_JUMP_DETECT_RADIUS,float,3C,0.01f,From how far we should consider the player on the ground
+REMINDER_LEVEL_TIME,float,Reminder,2f,Life time of the level reminder
+REMINDER_LEVEL_FADE_TIME,float,Reminder,0.5f,Time for the level remidner to fade out

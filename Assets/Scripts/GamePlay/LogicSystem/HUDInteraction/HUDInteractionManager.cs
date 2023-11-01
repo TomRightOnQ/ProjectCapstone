@@ -49,6 +49,17 @@ public class HUDInteractionManager : MonoBehaviour
     // Add interaction to the list
     public void AddInteractionToUIList(int interactionID)
     {
+        // Check the type of the interaction before proceeding
+        HUDInteractionData.HUDInteractionDataStruct interactionData = HUDInteractionData.GetData(interactionID);
+        switch (interactionData.Action)
+        {
+            // For reminder, do it immediately
+            case Enums.INTERACTION_TYPE.ShowReminder:
+                ReminderManager.Instance.ShowGeneralReminder(interactionData.Target[0]);
+                return;
+            default:
+                break;
+        }
         EnableHUDInteractionUI();
         ui_HUDInteraction.AddInteraction(interactionID);
     }

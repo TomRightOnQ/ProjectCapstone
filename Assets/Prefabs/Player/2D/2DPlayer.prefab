@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 7347345649814498388}
   - component: {fileID: 5124319843851478416}
   - component: {fileID: 7495309393412677435}
+  - component: {fileID: 1298854992877839819}
   m_Layer: 12
   m_Name: 2DPlayer
   m_TagString: Player
@@ -226,6 +227,8 @@ MonoBehaviour:
   objectName: 
   interactionTrigger: {fileID: 0}
   unitRigidBody: {fileID: 7347345649814498388}
+  maxHP: 0
+  currentHP: 0
   defense: 0
   attack: 0
   speedBase: 45
@@ -246,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5124319843851478416}
+  animator: {fileID: 0}
   moveRatio: 1
   jumpRatio: 200
   dashRatio: 400
@@ -254,3 +258,24 @@ MonoBehaviour:
   bInputLocked: 0
   bMovementLocked: 0
   bMovable: 0
+  currentState: 0
+--- !u!95 &1298854992877839819
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410081246005573031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56f77a33e45b4ec49a501e4f86cb30f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

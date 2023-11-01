@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     private PlayerControls playerControls;
     [SerializeField] private Player player;
 
+    // Animation Controllers
+    [SerializeField] private Animator animator;
+
     private Vector2 moveInput;
 
     // Data
@@ -34,6 +37,15 @@ public class PlayerController : MonoBehaviour
     // Lock all active mmovement
     [SerializeField] private bool bMovable = false;
 
+    private enum PlayerState
+    {
+        Idle,
+        Walk,
+    }
+
+    [SerializeField, ReadOnly]
+    private PlayerState currentState = PlayerState.Idle;
+
     private void Awake()
     {
         if (playerRigidBody == null)
@@ -45,7 +57,12 @@ public class PlayerController : MonoBehaviour
         {
             player = GetComponent<Player>();
         }
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
     }
+
     private void init(bool bWorldMode = true)
     {
         bWorld = bWorldMode;
@@ -73,19 +90,40 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // If player's position is not locked and movable
+        UpdateAnimationState();
+
         if (!bMovementLocked || !bMovable || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }
 
-        // Apply continuous force based on moveInput
+        Vector3 force = Vector3.zero;
+
         if (moveInput.magnitude != 0 && !bAirBorne)
         {
-            Vector3 force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitSpeed();
-            playerRigidBody.AddForce(force);
+            force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitSpeed();
+            currentState = PlayerState.Walk;
+        }
+        else
+        {
+            currentState = PlayerState.Idle;
         }
 
+        playerRigidBody.AddForce(force);
+    }
+
+    private void UpdateAnimationState()
+    {
+        // Handle animation states based on the current player state
+        switch (currentState)
+        {
+            case PlayerState.Idle:
+                animator.Play("Idle");
+                break;
+            case PlayerState.Walk:
+                animator.Play("Walk");
+                break;
+        }
     }
 
     // Events

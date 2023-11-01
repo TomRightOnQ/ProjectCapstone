@@ -93,6 +93,9 @@ public class PersistentGameManager : MonoBehaviour
         Debug.Log("7 MenuManager Loading");
         MenuManager.Instance.Init();
 
+        Debug.Log("8 ReminderManager Loading");
+        MenuManager.Instance.Init();
+
         Debug.Log("PersistentGameManager Load: Managers Ready!");
         // SceneManager.LoadScene("MainMenu");
     }

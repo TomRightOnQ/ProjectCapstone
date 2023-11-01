@@ -66,20 +66,24 @@
     <Compile Include="Assets\New UI Widgets\Editor\DataBindSupport\MenuOptions.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\ReferencesGUIDs.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ResizableEditor.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Interactive\Editor\WindManagerSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Styles\StyleImagePropertyDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Styles\StyleTextPropertyDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Editor.Conditions\EditorConditionalUI.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\SpinnerFloatEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Unity\AssemblyDefinitionGenerator.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\Unity\ScriptingDefineSymbol.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\ShaderFaderSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\TMProSupport\ProgressbarTMProEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\CursorsMenuOptions.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\WidgetsGeneration\PrefabGenerator.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\ShaderHintSSU.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\ThemesReferences.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\TMProSupport\MenuOptions.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Styles\StyleRangeSliderPropertyDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\EasyLayoutEllipseSettingsPropertyDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ButtonAdvancedEditor.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Interactive\Editor\InteractiveWindSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\WidgetsGeneration\ScriptsGenerator.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\SwitchEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\SelectableHelperListEditor.cs" />
@@ -94,8 +98,10 @@
     <Compile Include="Assets\New UI Widgets\Editor\Unity\ScriptingDefineSymbol.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ConditionalEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Styles\StyleMenuOptions.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\ImageSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\TableHeaderEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ProgressbarEditor.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\SpriteSheetSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\Unity\AssemblyDefinitionGenerator.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\Theme\ThemeWarningBlockView.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\SelectableHelperEditor.cs" />
@@ -107,8 +113,11 @@
     <Compile Include="Assets\New UI Widgets\Editor\AccordionItemDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\UIWidgetsMonoEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\RangeSliderFloatEditor.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Interactive\Editor\WindParallaxSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ListView\TreeListEditorWindow.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\WidgetsGeneration\WidgetsGenerationWindow.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\CodingHelper.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\MaterialInstancerSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\WidgetsGeneration\MenuOptions.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ListView\ListViewItemEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\UIWidgetsEditor.cs" />
@@ -123,6 +132,7 @@
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\Theme\OptionDragDrop.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\Theme\ThemeEditor.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\Theme\BlockView.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\UnscaledTimeSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\TimeBaseEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ListView\ListViewCustomBaseEditor.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\ThemeAttach.cs" />
@@ -131,6 +141,7 @@
     <Compile Include="Assets\New UI Widgets\Editor\ListView\ListViewGameObjectsEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\LayoutSwitcherEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ListView\TreeViewDataSourceEditor.cs" />
+    <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\SSUShaderGUI.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\Theme\EditBlockView.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\TabIconButtonEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\SplitterEditor.cs" />
@@ -884,8 +895,14 @@
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InternalAPIEngineBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="PsdPlugin">
+      <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -901,6 +918,9 @@
     </Reference>
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.IK.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
@@ -926,6 +946,9 @@
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.IK.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
@@ -938,8 +961,17 @@
     <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="spine-csharp">
+      <HintPath>Library\ScriptAssemblies\spine-csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
@@ -952,6 +984,9 @@
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="spine-unity">
+      <HintPath>Library\ScriptAssemblies\spine-unity.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -971,8 +1006,11 @@
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    <Reference Include="Unity.2D.Psdimporter.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
@@ -982,6 +1020,9 @@
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
@@ -1004,11 +1045,20 @@
     <Reference Include="Unity.Services.Core.Environments">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Animation.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Common.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="spine-unity-editor">
+      <HintPath>Library\ScriptAssemblies\spine-unity-editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>

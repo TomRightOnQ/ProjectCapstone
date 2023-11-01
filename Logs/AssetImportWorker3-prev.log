@@ -15,7 +15,7 @@ D:/CS/ICS169/Capstone/ProjectCapstone
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-64762
+49866
 Successfully changed project path to: D:/CS/ICS169/Capstone/ProjectCapstone
 D:/CS/ICS169/Capstone/ProjectCapstone
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ D:/CS/ICS169/Capstone/ProjectCapstone
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [30468] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 487960040 [EditorId] 487960040 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [43280] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 3697604453 [EditorId] 3697604453 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [30468] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 487960040 [EditorId] 487960040 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [43280] Host "[IP] 192.168.1.219 [Port] 0 [Flags] 2 [Guid] 3697604453 [EditorId] 3697604453 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8076NJ7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 236.22 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 294.50 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -67,234 +67,95 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56332
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.16f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.027286 seconds.
+Registered in 0.027260 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 222.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 301.40 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.107 seconds
+- Completed reload, in  1.230 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1107ms)
-		BeginReloadAssembly (137ms)
+	ReloadAssembly (1231ms)
+		BeginReloadAssembly (134ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (782ms)
-			LoadAssemblies (133ms)
+		EndReloadAssembly (900ms)
+			LoadAssemblies (128ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (140ms)
+			SetupTypeCache (142ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (38ms)
-			SetupLoadedEditorAssemblies (532ms)
+			SetupLoadedEditorAssemblies (627ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (24ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (223ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (203ms)
-				ProcessInitializeOnLoadMethodAttributes (80ms)
+				InitializePlatformSupportModulesInManaged (31ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (302ms)
+				BeforeProcessingInitializeOnLoad (5ms)
+				ProcessInitializeOnLoadAttributes (208ms)
+				ProcessInitializeOnLoadMethodAttributes (81ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011473 seconds.
+Registered in 0.012738 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\CS\ICS169\Capstone\ProjectCapstone\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 241.45 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 296.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  8.522 seconds
+- Completed reload, in  6.492 seconds
 Domain Reload Profiling:
-	ReloadAssembly (8523ms)
-		BeginReloadAssembly (190ms)
+	ReloadAssembly (6493ms)
+		BeginReloadAssembly (142ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (8ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (8161ms)
-			LoadAssemblies (183ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (6207ms)
+			LoadAssemblies (128ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (592ms)
+			SetupTypeCache (476ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (199ms)
-			SetupLoadedEditorAssemblies (7142ms)
+			RebuildScriptCaches (212ms)
+			SetupLoadedEditorAssemblies (5277ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
+				InitializePlatformSupportModulesInManaged (13ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (242ms)
-				BeforeProcessingInitializeOnLoad (246ms)
-				ProcessInitializeOnLoadAttributes (6295ms)
-				ProcessInitializeOnLoadMethodAttributes (316ms)
-				AfterProcessingInitializeOnLoad (27ms)
-				EditorAssembliesLoaded (0ms)
+				RefreshPlugins (296ms)
+				BeforeProcessingInitializeOnLoad (365ms)
+				ProcessInitializeOnLoadAttributes (4231ms)
+				ProcessInitializeOnLoadMethodAttributes (353ms)
+				AfterProcessingInitializeOnLoad (18ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.49 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 2.72 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 7839 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 53 unused Assets / (3.4 MB). Loaded Objects now: 8310.
-Memory consumption went from 356.0 MB to 352.6 MB.
-Total: 8.372500 ms (FindLiveObjects: 0.818900 ms CreateObjectMapping: 0.545700 ms MarkObjects: 6.538400 ms  DeleteObjects: 0.467400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 94446.643299 seconds.
-  path: Assets/Arts/Material/Terrain/RegularGround.mat
-  artifactKey: Guid(11ce8d0b80a532747ad5a5a8764f9213) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Arts/Material/Terrain/RegularGround.mat using Guid(11ce8d0b80a532747ad5a5a8764f9213) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '363b6972f55552cad88b4c6bbb046149') in 0.209055 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_TerrainData/TerrainMaterial_758924458696733836.mat
-  artifactKey: Guid(8aa648087bd0e224ab7b5526c3c92f16) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/_TerrainData/TerrainMaterial_758924458696733836.mat using Guid(8aa648087bd0e224ab7b5526c3c92f16) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '64376ad4389f49e4fddcbb54b94a533e') in 0.011223 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Scenes/LevelScene/EntranceLevel.unity
-  artifactKey: Guid(d0e2de988927cf34988ed66b564b89cc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Scenes/LevelScene/EntranceLevel.unity using Guid(d0e2de988927cf34988ed66b564b89cc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c8210285b3a366ff55f514145bd3de58') in 0.006309 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudBottom.hdr
-  artifactKey: Guid(94b877781ad034640abce933599b6f2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudBottom.hdr using Guid(94b877781ad034640abce933599b6f2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '70a89e1f8103e9ec54cfece21f1a8f35') in 0.078062 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_A.prefab
-  artifactKey: Guid(1d8c1d3b00b8f9742881860a94b96ca9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Arts/TerrainPrefab/Scene_Terrain_Stands_A.prefab using Guid(1d8c1d3b00b8f9742881860a94b96ca9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '8d68de0411ee6f9b043eb1336bd42492') in 0.050460 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudLeft.hdr
-  artifactKey: Guid(740f96d568f4f3e40b049c40f11603e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudLeft.hdr using Guid(740f96d568f4f3e40b049c40f11603e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '4b01f7dedefbe7f170b9d3e1c00cc714') in 0.038664 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/SkySeries Freebie/FreebieHdri/PlanetaryEarth4k.hdr
-  artifactKey: Guid(3675d0c3c874f6b479bab57eb7e68c90) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie/FreebieHdri/PlanetaryEarth4k.hdr using Guid(3675d0c3c874f6b479bab57eb7e68c90) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'b1852f52f086b8f9ece559357cedd202') in 0.087412 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudTop.hdr
-  artifactKey: Guid(a199da0432efa6a489df8883d1f3bfe0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudTop.hdr using Guid(a199da0432efa6a489df8883d1f3bfe0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'dd7d6b16d5d09e012eebe58e90896fbe') in 0.034670 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/SkySeries Freebie/FreebieHdri/MegaSunBottom.hdr
-  artifactKey: Guid(3de85f3af41435a4c8f9d237bc1f19ec) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie/FreebieHdri/MegaSunBottom.hdr using Guid(3de85f3af41435a4c8f9d237bc1f19ec) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '67ece5c6dc81ae9b5d7bbf2b9c8a347e') in 0.047947 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/SkySeries Freebie
-  artifactKey: Guid(dc2a708d1b7aee140a105b4a26f798be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie using Guid(dc2a708d1b7aee140a105b4a26f798be) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '2a0418b2b1a4cc99b82a5546607060bc') in 0.006727 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_TerrainData
-  artifactKey: Guid(be5533b6a0910774cacba0f71cfc95e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/_TerrainData using Guid(be5533b6a0910774cacba0f71cfc95e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '78f0039832aee877390bf7ab3ea878e6') in 0.006372 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudRight.hdr
-  artifactKey: Guid(438e868ac8cccca4e81873838a67c003) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie/FreebieHdri/CosmicCoolCloudRight.hdr using Guid(438e868ac8cccca4e81873838a67c003) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c68e8e2b22bf48f027a35adbd5c3fec8') in 0.030432 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/SkySeries Freebie/FreebieHdri/FluffballDayBottom.hdr
-  artifactKey: Guid(42e0664ae4c5c424ebcd980a10687e18) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie/FreebieHdri/FluffballDayBottom.hdr using Guid(42e0664ae4c5c424ebcd980a10687e18) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '573a4e03e9424da40e63e4bf0345d66f') in 0.024722 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/SkySeries Freebie/FreebieHdri/UnearthlyRed4k.hdr
-  artifactKey: Guid(a3de28b69b48944438c87668bd722ae7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie/FreebieHdri/UnearthlyRed4k.hdr using Guid(a3de28b69b48944438c87668bd722ae7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c39bd7b775df55e25b2c6b2e22e0a262') in 0.099094 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Arts/Sprite/Map.png
-  artifactKey: Guid(bc1fc5e14b7e9b64cb4e7ba255da28d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/Arts/Sprite/Map.png using Guid(bc1fc5e14b7e9b64cb4e7ba255da28d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: '86d5a43f1c86fcb4aab0484337165e15') in 0.031254 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/SkySeries Freebie/FreebieHdri/Cloudymorning4k.hdr
-  artifactKey: Guid(3b5d67736d7b8ad4f8da4d58eaef0b98) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/SkySeries Freebie/FreebieHdri/Cloudymorning4k.hdr using Guid(3b5d67736d7b8ad4f8da4d58eaef0b98) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'c47d1ced4bf2f818d6a44182afa0774c') in 0.089953 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/_TerrainData/TerrainData_235476111756733836.asset
-  artifactKey: Guid(ac6799b90574ea7469f84c99d43dc999) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
-Start importing Assets/_TerrainData/TerrainData_235476111756733836.asset using Guid(ac6799b90574ea7469f84c99d43dc999) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
- -> (artifact id: 'e65178ea70e06f15543b5356d65e2fcb') in 0.022415 seconds 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 8.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 45 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 45 unused Assets / (3.4 MB). Loaded Objects now: 8311.
-Memory consumption went from 186.5 MB to 183.1 MB.
-Total: 5.387700 ms (FindLiveObjects: 0.787700 ms CreateObjectMapping: 0.347500 ms MarkObjects: 3.853200 ms  DeleteObjects: 0.398200 ms)
+Unloading 8378 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 76 unused Assets / (9.8 MB). Loaded Objects now: 8830.
+Memory consumption went from 394.3 MB to 384.5 MB.
+Total: 18.770200 ms (FindLiveObjects: 1.023200 ms CreateObjectMapping: 0.647800 ms MarkObjects: 13.315100 ms  DeleteObjects: 3.782500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -308,6 +169,769 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 251434.065577 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Generated/_Checkerboard.asset
+  artifactKey: Guid(2f41a2ac85eae1d4a8fd9f216edc0585) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Generated/_Checkerboard.asset using Guid(2f41a2ac85eae1d4a8fd9f216edc0585) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '92c6c4e0d7f783bbc9152a30cdd68742') in 0.157719 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Transform/_Vibrate.asset
+  artifactKey: Guid(490530af17c72da419bbc3bea4bae9b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Transform/_Vibrate.asset using Guid(490530af17c72da419bbc3bea4bae9b4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a58cca7bfb890beedf17e3d31cd35ff3') in 0.014310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Run/Ellen_Run_02.png
+  artifactKey: Guid(12ea17332fa174442af48960686e1769) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Run/Ellen_Run_02.png using Guid(12ea17332fa174442af48960686e1769) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '91af575b93c22079dada2ec8c4a3f59f') in 0.164717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Transform/_UVScroll.asset
+  artifactKey: Guid(be39ff8debe04f84baeada43b5b8aeb7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Transform/_UVScroll.asset using Guid(be39ff8debe04f84baeada43b5b8aeb7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '63c8e76d2a7fd799ffb63673f1e80664') in 0.010112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Interactive/_Squish.asset
+  artifactKey: Guid(6d6a73cc3433bad4186f7028cad3d98c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Interactive/_Squish.asset using Guid(6d6a73cc3433bad4186f7028cad3d98c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '75228d39ce172ffa57bf6ea5dab80d1d') in 0.007856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Run/Ellen_Run_17.png
+  artifactKey: Guid(690102d87edd7d047824362d73a02788) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Run/Ellen_Run_17.png using Guid(690102d87edd7d047824362d73a02788) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '441fe3680575478a2d25f99187b425fe') in 0.032232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002222 seconds.
+  path: Assets/Sprite Shaders Ultimate/Shaders/3D Lit Cutout URP SSU.shader
+  artifactKey: Guid(df8803656b6189845a31aea7baf6271d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Shaders/3D Lit Cutout URP SSU.shader using Guid(df8803656b6189845a31aea7baf6271d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '10e2666e3b31c159e92a6af67adc0efc') in 0.096790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Tile_Rocks.png
+  artifactKey: Guid(37df95b270df4ac4c87481fd1727dbea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Tile_Rocks.png using Guid(37df95b270df4ac4c87481fd1727dbea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a58303dd01437b4b874b899c2bdb2020') in 0.047331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Uber/_UberGenerated.asset
+  artifactKey: Guid(52defa3f7cca25740a6a77f065edb382) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Uber/_UberGenerated.asset using Guid(52defa3f7cca25740a6a77f065edb382) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f2b10abc1f78d5ec843336b880ae7396') in 0.008327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Color/_AddHue.asset
+  artifactKey: Guid(efaac46316d3217488d4cf033f7df681) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Color/_AddHue.asset using Guid(efaac46316d3217488d4cf033f7df681) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f742c542af1ac06d496e92e7f6b91677') in 0.007926 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Plant.png
+  artifactKey: Guid(6940495cdf9aab149bf459a3db3d225f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Plant.png using Guid(6940495cdf9aab149bf459a3db3d225f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0cfc5734ea8af26b6e4cd73efe9f0715') in 0.033301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Uber/_MultiplicativeAlpha.asset
+  artifactKey: Guid(8b208be8b9c908d4fa87d2ed7f06e0d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Uber/_MultiplicativeAlpha.asset using Guid(8b208be8b9c908d4fa87d2ed7f06e0d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e0e24f245cdfda70b391e88288cc793a') in 0.008995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_InnerOutline2.mat
+  artifactKey: Guid(49fdc002f9724c649b71a2af193d116a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_InnerOutline2.mat using Guid(49fdc002f9724c649b71a2af193d116a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a73aa727954e7e4c1a0389802b54a1b8') in 0.127195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Uber/_PixelArtUV_1.asset
+  artifactKey: Guid(0e4f4d9760e013e4ea49a4cc7c42c155) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Uber/_PixelArtUV_1.asset using Guid(0e4f4d9760e013e4ea49a4cc7c42c155) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '19a3811e6c5440fc123d62768ae99051') in 0.008329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Color/_Saturation.asset
+  artifactKey: Guid(d00cab46f082e684d9395d44e5a9f33a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Color/_Saturation.asset using Guid(d00cab46f082e684d9395d44e5a9f33a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3931855e340fe9c3ff48c05d00225a99') in 0.008428 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Color
+  artifactKey: Guid(69427abdca2e0fa4bbbace655cc83fe3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Color using Guid(69427abdca2e0fa4bbbace655cc83fe3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '193a9ba575276aa83a65ef1e8d64b540') in 0.006954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU
+  artifactKey: Guid(cd51cf613565fc44cba32af44ff64f62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU using Guid(cd51cf613565fc44cba32af44ff64f62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2cb265ccad29d86d013e9b7feb12a20b') in 0.009057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_SineScale.mat
+  artifactKey: Guid(d3deaae736215624faa1b73a002b6690) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_SineScale.mat using Guid(d3deaae736215624faa1b73a002b6690) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9404e60e9b9e05dca54e46599b3fa7a6') in 0.058339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Effect/_Glitch.asset
+  artifactKey: Guid(97a01281f94bcc04fbb9a7c1cd328f08) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Effect/_Glitch.asset using Guid(97a01281f94bcc04fbb9a7c1cd328f08) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c6212faff632bc444c68a02612661758') in 0.014302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Arts/Material/2DSpriteShader_E.mat
+  artifactKey: Guid(109086b7dfa1721418b70bb76a2f46ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Arts/Material/2DSpriteShader_E.mat using Guid(109086b7dfa1721418b70bb76a2f46ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8b89a8dad10565683659d32d23ea5b3f') in 0.045550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_CustomFade.mat
+  artifactKey: Guid(5a7be05e71950c24cb58cae0f615d8d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_CustomFade.mat using Guid(5a7be05e71950c24cb58cae0f615d8d8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5abe21b3627868861aba4158f9f18d54') in 0.062277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/UV Scroll.asset
+  artifactKey: Guid(df74fbd687a1df447bb021f5ae7fe57a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/UV Scroll.asset using Guid(df74fbd687a1df447bb021f5ae7fe57a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cf1c9f14bd7633aa350c1f998a316bb8') in 0.048989 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Enchanted.asset
+  artifactKey: Guid(39b8d78fce229f14bba94e60b2b1ec4c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Enchanted.asset using Guid(39b8d78fce229f14bba94e60b2b1ec4c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0654fa0394f3baa3a4ca365eae05db62') in 0.014127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Scenes/2DScene/PlatformerLevel.unity
+  artifactKey: Guid(67a84821d10dbee44a77d75239dfa937) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scenes/2DScene/PlatformerLevel.unity using Guid(67a84821d10dbee44a77d75239dfa937) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '85a41a1c727436b0a93c350d59bc5eff') in 0.005668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Contrast.mat
+  artifactKey: Guid(9f7447347aeec704f959caf38a4070a9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Contrast.mat using Guid(9f7447347aeec704f959caf38a4070a9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ee301eaef7dc15eab1548593f6829964') in 0.061445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Brightness.mat
+  artifactKey: Guid(df431553f2ee19748962d15863c616a0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Brightness.mat using Guid(df431553f2ee19748962d15863c616a0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9d4565bab47a18fa6f18a12813746cdb') in 0.066856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_04.png
+  artifactKey: Guid(774282641b60d9d4daddad7c6ad7ae69) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_04.png using Guid(774282641b60d9d4daddad7c6ad7ae69) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3c4d61d77abf6d9a130fa10f61e8487d') in 0.032739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Sprite Shaders Ultimate/Textures/Patterns/RainbowVertical.png
+  artifactKey: Guid(5af9a397a8643994c829e696a24a7845) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Textures/Patterns/RainbowVertical.png using Guid(5af9a397a8643994c829e696a24a7845) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2a8501a5e512862211d108acf0537ecf') in 0.026426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Prefabs/Player/C1/C1.prefab
+  artifactKey: Guid(64a925a7d2f6292448ba0bb5fb6a3694) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Prefabs/Player/C1/C1.prefab using Guid(64a925a7d2f6292448ba0bb5fb6a3694) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a43a6dd7f63edafbe490421600d483ec') in 0.067716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Scripts/Demo_Player.cs
+  artifactKey: Guid(abbbff4ef1cc7bf4e8cbae3277c4004b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Scripts/Demo_Player.cs using Guid(abbbff4ef1cc7bf4e8cbae3277c4004b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '89af2e52d2bf2fefbf9689379f106ade') in 0.013318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Prefabs/Player/TestCharacter/CharacterTest.psb
+  artifactKey: Guid(2986454e8c4142048ae0fee3f3995282) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Prefabs/Player/TestCharacter/CharacterTest.psb using Guid(2986454e8c4142048ae0fee3f3995282) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '703f150ea97e4e8730adbf065241af17') in 0.505771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Example/Sky.png
+  artifactKey: Guid(7cd03316a0317de438a07ab66839efca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Example/Sky.png using Guid(7cd03316a0317de438a07ab66839efca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '679ccab328a19e42376c54fec922f92a') in 0.047645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Run/Ellen_Run_07.png
+  artifactKey: Guid(2eaa4938329e1204ca267982a8cdb3fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Run/Ellen_Run_07.png using Guid(2eaa4938329e1204ca267982a8cdb3fa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fdb40111605540b64df73d8bbdea17c6') in 0.031500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.050220 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/SpriteSheetSSUEditor.cs
+  artifactKey: Guid(871ff7f74daabe5459cbb50de60b7b4a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/SpriteSheetSSUEditor.cs using Guid(871ff7f74daabe5459cbb50de60b7b4a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ca362d60450904d43c604f5e11415acd') in 0.008540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Smoke3.mat
+  artifactKey: Guid(7ae9dcab970671644993acc459eb1c2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Smoke3.mat using Guid(7ae9dcab970671644993acc459eb1c2d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9464b55eb0b27e739844723330244f7b') in 0.099779 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Uber/_UberTransformOffset.asset
+  artifactKey: Guid(ee5e9e731457b2342bdb306bdb8d2401) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Uber/_UberTransformOffset.asset using Guid(ee5e9e731457b2342bdb306bdb8d2401) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e9bb7f267d255f9a9530856c6348215c') in 0.012890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Uber/_3DLitStuff.asset
+  artifactKey: Guid(a67b30a19d14d0c498b219c7041d411f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Uber/_3DLitStuff.asset using Guid(a67b30a19d14d0c498b219c7041d411f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b317310262d4fa47871cbfc739a15669') in 0.011284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Uber/_PixelArtUV_2.asset
+  artifactKey: Guid(4b65626ba2313ca40a96813b19044794) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Uber/_PixelArtUV_2.asset using Guid(4b65626ba2313ca40a96813b19044794) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b7d52458d6f8ea64694f6df5d52aec86') in 0.012127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/_Generic/NoiseTexture.asset
+  artifactKey: Guid(7fe1e2210473a53449e5b562606d8e1a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/_Generic/NoiseTexture.asset using Guid(7fe1e2210473a53449e5b562606d8e1a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6cbc74a3b2213aa6fd0d162f6e972c50') in 0.010940 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Tile_Grass_n.png
+  artifactKey: Guid(86fc6a6af9d15354f8224bb5bf24d4c7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Tile_Grass_n.png using Guid(86fc6a6af9d15354f8224bb5bf24d4c7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bcd23bfe2cc3300408786326ecc696a9') in 0.028464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Ink Spread.asset
+  artifactKey: Guid(6c7883bb2299c7b439af0b1415e34619) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Ink Spread.asset using Guid(6c7883bb2299c7b439af0b1415e34619) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2094b05cba8913283727c2aad0d33745') in 0.025397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Fading/_FullGlowDissolve.asset
+  artifactKey: Guid(8ddf4a66b5da487489c0831f7f85d466) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Fading/_FullGlowDissolve.asset using Guid(8ddf4a66b5da487489c0831f7f85d466) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0930b600bf6e7321bb2e6d279c9d0ace') in 0.007512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_12.png
+  artifactKey: Guid(591e3ea0fd60a1442bfbe969a16d4d74) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_12.png using Guid(591e3ea0fd60a1442bfbe969a16d4d74) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '92027e9ac9bda4d5adef9db8a355c1cd') in 0.026678 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Shift Hue.asset
+  artifactKey: Guid(9e62db12cae0a3e46ac60444283c1a7e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Shift Hue.asset using Guid(9e62db12cae0a3e46ac60444283c1a7e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '75242c13acf8a97843fef22e415213d0') in 0.010873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Directional Distortion.asset
+  artifactKey: Guid(f99a9666a0e149049aa613a9b3a8de09) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Directional Distortion.asset using Guid(f99a9666a0e149049aa613a9b3a8de09) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3819f141960861de50d07656cad8c091') in 0.012545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/Shaders/Additive SSU.shader
+  artifactKey: Guid(0817b13d054120c48bd26f3bbe336750) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Shaders/Additive SSU.shader using Guid(0817b13d054120c48bd26f3bbe336750) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bb004e03e19c0ebf3725918b385b89d9') in 0.050383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_05.png
+  artifactKey: Guid(a53475b08393802498550588cf70ef5e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_05.png using Guid(a53475b08393802498550588cf70ef5e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fc9f503f097d465514c1ccabdff3a051') in 0.031661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Fading/_DirectionalAlphaFade.asset
+  artifactKey: Guid(65c65af0f3ba9814bae500501cf3b956) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Fading/_DirectionalAlphaFade.asset using Guid(65c65af0f3ba9814bae500501cf3b956) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e73054bcc3685b4c947722b3c7fe94ec') in 0.009590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Recolor RGB.asset
+  artifactKey: Guid(a12ccba0b1f74b540846c7a425bd3b91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Recolor RGB.asset using Guid(a12ccba0b1f74b540846c7a425bd3b91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bba1aa9b19631507750eb9b5bd6be91d') in 0.026663 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Recolor Palette.asset
+  artifactKey: Guid(827271ed4994b2e40b009938051349e4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Recolor Palette.asset using Guid(827271ed4994b2e40b009938051349e4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '77054ebb56507f97354f9af8daf327a8') in 0.012134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Uber/_2DLitStuff.asset
+  artifactKey: Guid(851662d67a92ce04d84817ff63c501f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Uber/_2DLitStuff.asset using Guid(851662d67a92ce04d84817ff63c501f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd30de08f33885f142be8878984bc5a21') in 0.008763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Flame.asset
+  artifactKey: Guid(b3468c7ca89c1aa43938c49ba5e6e622) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Flame.asset using Guid(b3468c7ca89c1aa43938c49ba5e6e622) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f4cde8d739b21182d5882c095e0ba329') in 0.027176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Grass.png
+  artifactKey: Guid(d207b91f1c146d64cafa29b55efb8bf3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Grass.png using Guid(d207b91f1c146d64cafa29b55efb8bf3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c613811d7fe0848733d874c5d25e4270') in 0.026976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/Shaders/3D Lit Cutout BuiltIn SSU.shader
+  artifactKey: Guid(fb4467eaa3fd9db4bafe148f1717ad89) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Shaders/3D Lit Cutout BuiltIn SSU.shader using Guid(fb4467eaa3fd9db4bafe148f1717ad89) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ffa7c03a65303c0f941ac68ef31620e1') in 0.061284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_02.png
+  artifactKey: Guid(1fa29ad54380226498c2250e612fec93) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_02.png using Guid(1fa29ad54380226498c2250e612fec93) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '41e54bcf5abd635bbc77934a1c2c1365') in 0.037260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Misc/SSU_PP.asset
+  artifactKey: Guid(05cc42d539bc0e2499581c65b289a3fd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Misc/SSU_PP.asset using Guid(05cc42d539bc0e2499581c65b289a3fd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7f3093bbf6abb8b96c00f8777a941a62') in 0.008338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Sprite Shaders Ultimate/Shaders/3D Lit URP SSU.shader
+  artifactKey: Guid(f2d3798c7faa4374b992cdfcab62cb40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Shaders/3D Lit URP SSU.shader using Guid(f2d3798c7faa4374b992cdfcab62cb40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ee92d9181a6ffbb21bbc82083b2af079') in 0.075021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/UnscaledTimeSSUEditor.cs
+  artifactKey: Guid(171f6fcb1c2b4b349a2353d6ba0c3a91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/UnscaledTimeSSUEditor.cs using Guid(171f6fcb1c2b4b349a2353d6ba0c3a91) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7475943b32ba417851fcb5685fcadb45') in 0.007918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Example/Demo_Halftone.mat
+  artifactKey: Guid(22a62c0e3696e794bb81d57dbe7ace29) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Example/Demo_Halftone.mat using Guid(22a62c0e3696e794bb81d57dbe7ace29) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5f57fb7b43d13720d506db5c6671ef79') in 0.056601 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/Shaders/3D Lit BuiltIn SSU.shader
+  artifactKey: Guid(064e922c276ac724583b069fd5d423b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Shaders/3D Lit BuiltIn SSU.shader using Guid(064e922c276ac724583b069fd5d423b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ab7ba9b1fc721008cfb312da83ba2795') in 0.076129 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Example/Plate Highlight.png
+  artifactKey: Guid(1315465214f4bd14295c8721a6367e06) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Example/Plate Highlight.png using Guid(1315465214f4bd14295c8721a6367e06) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '902463c2bca1ccc21086ad5b3cfb3d93') in 0.031405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Interactive/Editor/InteractiveWindSSUEditor.cs
+  artifactKey: Guid(fe9161b8dce72364680eee7fa2e4853b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Interactive/Editor/InteractiveWindSSUEditor.cs using Guid(fe9161b8dce72364680eee7fa2e4853b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1ddbc31b2a5b32288cedd9fc8282d273') in 0.011459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Color/_BlackTint.asset
+  artifactKey: Guid(e72823b8923579647a619869b654ace9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Color/_BlackTint.asset using Guid(e72823b8923579647a619869b654ace9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4d4deb04b57472b9cfcce89860ff710f') in 0.010644 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_InnerOutline.mat
+  artifactKey: Guid(ed67456006c23fe47ae0b480988bc1cc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_InnerOutline.mat using Guid(ed67456006c23fe47ae0b480988bc1cc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fb1487647d2a1212ee96a60ac43f3b33') in 0.061304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Hurt/Ellen_Hurt_05.png
+  artifactKey: Guid(a30259c25db902d48aa386f25d941a8b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Hurt/Ellen_Hurt_05.png using Guid(a30259c25db902d48aa386f25d941a8b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '119c912f551a6841efbbf6232391cd05') in 0.061236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Scripts/Demo_SpriteFader.cs
+  artifactKey: Guid(4a5b0e314acd3d64f8a00ee70d0b6c44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Scripts/Demo_SpriteFader.cs using Guid(4a5b0e314acd3d64f8a00ee70d0b6c44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '211ea818d71d422d89c4866d503144a0') in 0.009377 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Enchanted.mat
+  artifactKey: Guid(ed17deac0414ca44093d1d8655f4a9c6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Enchanted.mat using Guid(ed17deac0414ca44093d1d8655f4a9c6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b68e4b671c5282b2d952653ba4c1aab6') in 0.045634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Example/Cloud 3.png
+  artifactKey: Guid(fe3b84f1e1ef060419e1e8036a39819f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Example/Cloud 3.png using Guid(fe3b84f1e1ef060419e1e8036a39819f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c5f3614c6fe77bfb07bf9c3ad38b3e53') in 0.045700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Textures/Noise
+  artifactKey: Guid(27c69cb3a6f5eea4c8449edacac9557c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Textures/Noise using Guid(27c69cb3a6f5eea4c8449edacac9557c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ae53cbf20c9d5b438408d7f0adc786a3') in 0.007913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Blur/Sample Opposites.asset
+  artifactKey: Guid(2701a75ad31b5e547bda19de250287f0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Blur/Sample Opposites.asset using Guid(2701a75ad31b5e547bda19de250287f0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f9289b1e644574e1bbfccdb5c23998e') in 0.006975 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Color/_InnerOutline.asset
+  artifactKey: Guid(818398d5e9094b940bc7b20a41c33af2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Color/_InnerOutline.asset using Guid(818398d5e9094b940bc7b20a41c33af2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b73ce862b1dd364f2e2945343ed58808') in 0.007735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/ShaderFaderSSUEditor.cs
+  artifactKey: Guid(d88dd009f38e59546ab469e496106f4b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/ShaderFaderSSUEditor.cs using Guid(d88dd009f38e59546ab469e496106f4b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '79c2227af25ff4e8ee209e044ba45cb5') in 0.007072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/SSUShaderGUI.cs
+  artifactKey: Guid(1c300067b7dcf1a48a75091e02e68ddb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/SSUShaderGUI.cs using Guid(1c300067b7dcf1a48a75091e02e68ddb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'db7f9ef1f8ad6b3d58b8fc89391f99eb') in 0.006641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/Shaders/Standard SSU.shader
+  artifactKey: Guid(0803c241834332942abfcbd27c498b46) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Shaders/Standard SSU.shader using Guid(0803c241834332942abfcbd27c498b46) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6e9b6503bb629e58203d9540c50e3ff9') in 0.047032 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Run/Ellen_Run_21.png
+  artifactKey: Guid(88f2ac18ae0c71845bc1d47bd924f8a8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Run/Ellen_Run_21.png using Guid(88f2ac18ae0c71845bc1d47bd924f8a8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5669b8c2c0fb4761ec9480b0b747daaa') in 0.035983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_SplitToning2.mat
+  artifactKey: Guid(7d8f45f53b9abc84a87d89ba875ca006) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_SplitToning2.mat using Guid(7d8f45f53b9abc84a87d89ba875ca006) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8bf900720fdd0941f958247c82f83145') in 0.082450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Tile_Grass.png
+  artifactKey: Guid(ba91842902a2180408ad92914f02afe7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Tile_Grass.png using Guid(ba91842902a2180408ad92914f02afe7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ae65a7d3c1e6da30d35c91890be279cf') in 0.031670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Color/_PingPongGlow.asset
+  artifactKey: Guid(b15eab6ac2243544e88d612a592c101b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Color/_PingPongGlow.asset using Guid(b15eab6ac2243544e88d612a592c101b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ee3771dd92f8341137b27812ab2fdfa8') in 0.011931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Plant_N.png
+  artifactKey: Guid(55ec5ea932c84ea49b38c41863eb6611) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Environment/Plant_N.png using Guid(55ec5ea932c84ea49b38c41863eb6611) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '072bae9bfaf4810f35868f19f8d548e0') in 0.026275 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Hurt
+  artifactKey: Guid(3d874394e24a68747aa7119fe50bb480) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Hurt using Guid(3d874394e24a68747aa7119fe50bb480) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '320f56ee3585fddfb101359ffcc70279') in 0.016583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Halftone.mat
+  artifactKey: Guid(3fd2e70ce56da334ab989845055dc428) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Halftone.mat using Guid(3fd2e70ce56da334ab989845055dc428) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ba545e401b2fbf35973f00e8a24e25d4') in 0.055469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/_Generic/ShaderSpace.asset
+  artifactKey: Guid(be729ef05db9c224caec82a3516038dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/_Generic/ShaderSpace.asset using Guid(be729ef05db9c224caec82a3516038dc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6951383a4299dddd4170009860a9b875') in 0.006878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Color/_StrongTint.asset
+  artifactKey: Guid(967b1b32eaf82fc44b4c41ea1dda1de8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Color/_StrongTint.asset using Guid(967b1b32eaf82fc44b4c41ea1dda1de8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8add6d154b22f6ed0a2dde733d55dc2d') in 0.008302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Wind.asset
+  artifactKey: Guid(0ddb53d3f93d51a4b89a5ed1a1e6b85b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Wind.asset using Guid(0ddb53d3f93d51a4b89a5ed1a1e6b85b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '47c05bb55efff9878043d9d6392456c3') in 0.011115 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Squeeze.asset
+  artifactKey: Guid(93e874f0347d7ce40a08d358b1976f58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Squeeze.asset using Guid(93e874f0347d7ce40a08d358b1976f58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a3892223f2eadbce89e456d24a6891e0') in 0.014396 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Scripts/GamePlay/LogicSystem/Reminder
+  artifactKey: Guid(6bc9106fa30310544b96d0ae387fa664) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Scripts/GamePlay/LogicSystem/Reminder using Guid(6bc9106fa30310544b96d0ae387fa664) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c0a773c0433debde3b9e70fe59fc0142') in 0.012665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Arts/Terrain/Scene_Terrain_Stands_A/Scene_Terrain_Stands_A_M.fbx
+  artifactKey: Guid(c0f4aaccdddb56349b006fd757aa3cbb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Arts/Terrain/Scene_Terrain_Stands_A/Scene_Terrain_Stands_A_M.fbx using Guid(c0f4aaccdddb56349b006fd757aa3cbb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bb8e36bd0aed180b99e5e1f5e3311db8') in 0.173130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Uber/_UberDissolveFade.asset
+  artifactKey: Guid(cb957eb9b67f4f243aa8ba0547208263) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Uber/_UberDissolveFade.asset using Guid(cb957eb9b67f4f243aa8ba0547208263) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ae5d884834c672a7878d6acf5c5fd55f') in 0.011888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_AddHue.mat
+  artifactKey: Guid(ff60591d5061d184093f34f1f33e574c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_AddHue.mat using Guid(ff60591d5061d184093f34f1f33e574c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e2ee78e56f3cffe9e7efa2086ed800a6') in 0.042554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/Textures/Mask
+  artifactKey: Guid(d96ed78fabfd64346b66f8149de1fdf1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Textures/Mask using Guid(d96ed78fabfd64346b66f8149de1fdf1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4d1693a968105cf0237c6b1d13fb3b5e') in 0.006706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Effect/_Poison.asset
+  artifactKey: Guid(22d5850153b7c6b44a14f0e4e0d08787) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Effect/_Poison.asset using Guid(22d5850153b7c6b44a14f0e4e0d08787) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fc6d30f7d238aa4d0dca32ebc235dbe8') in 0.007444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Split Toning.asset
+  artifactKey: Guid(2d47601c5c30777448d845a82ee7647d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Split Toning.asset using Guid(2d47601c5c30777448d845a82ee7647d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0c5d0db9d7e2560cc0bfdde28b6d31c0') in 0.009436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/GUI/Demo_Display_Frame.png
+  artifactKey: Guid(55ae56902b371f740a2cefc9b4abe4c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/GUI/Demo_Display_Frame.png using Guid(55ae56902b371f740a2cefc9b4abe4c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '25ea66cca5901f6e2167fd3209835d0e') in 0.042309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen
+  artifactKey: Guid(884399006e19d8845898e26135e9fb03) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen using Guid(884399006e19d8845898e26135e9fb03) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6512030907be7457e00447b40d304962') in 0.005596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Example/Demo_Plate.mat
+  artifactKey: Guid(8d856104004fadf4ba4b17d575c08a80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Example/Demo_Plate.mat using Guid(8d856104004fadf4ba4b17d575c08a80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '03b1c7d2bc6d87a0114e0207c3814e62') in 0.046671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/GUI/SSU_Demo_Color_Pick.mat
+  artifactKey: Guid(85bda74ecbda46743bfcaef5f59867e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/GUI/SSU_Demo_Color_Pick.mat using Guid(85bda74ecbda46743bfcaef5f59867e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6be0f1cd6ab346e805c3a89cb1ad22fc') in 0.013270 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Wiggle2.mat
+  artifactKey: Guid(33373d28ca5ce8341b8cd6257c1c6276) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Wiggle2.mat using Guid(33373d28ca5ce8341b8cd6257c1c6276) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '92352c65de016be17a8218c1dbd66e0d') in 0.044369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Prefabs/Player/C2
+  artifactKey: Guid(c219bde74aab0a8428c99153ce4fafbd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Prefabs/Player/C2 using Guid(c219bde74aab0a8428c99153ce4fafbd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7c7a27896ee5647622a729a92e7210a3') in 0.006227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Burn.mat
+  artifactKey: Guid(113f6f13f48f51b43834f00efde89451) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Materials/Shaders/SSU_Demo_Burn.mat using Guid(113f6f13f48f51b43834f00efde89451) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '261d33ccbc978c924c73b55f1898fbed') in 0.053310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/_Generic/UVScale.asset
+  artifactKey: Guid(19855ea8e3b8645449db67c8c1165a53) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/_Generic/UVScale.asset using Guid(19855ea8e3b8645449db67c8c1165a53) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fa31df36b164381352c0e5812042e5a6') in 0.007741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Scripts/Demo_ColorPicker.cs
+  artifactKey: Guid(7900ce9e82d3d9f4090a336fc0109c02) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Scripts/Demo_ColorPicker.cs using Guid(7900ce9e82d3d9f4090a336fc0109c02) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c0b7db7b4ad11206be0f02e4f0435e14') in 0.007974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Interactive/InteractiveWindSSU.cs
+  artifactKey: Guid(9fa14830c2cebb942b11ced84dbab634) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Interactive/InteractiveWindSSU.cs using Guid(9fa14830c2cebb942b11ced84dbab634) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '338de8e6975ecd52237b55e465aa3e18') in 0.017226 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_06.png
+  artifactKey: Guid(c6b584771aee7a148bcf2885a6f347ba) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Demo/Textures/Ellen/Idle/Ellen_Idle_06.png using Guid(c6b584771aee7a148bcf2885a6f347ba) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2721033154788461f69c954409f2a6fd') in 0.030588 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprite Shaders Ultimate/Textures/Noise/SSU_Noise_2K.png
+  artifactKey: Guid(60dc7ea5c88bb584aa967f20503faedb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Textures/Noise/SSU_Noise_2K.png using Guid(60dc7ea5c88bb584aa967f20503faedb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dfd152f232ce037c47e3ecdf8fa340de') in 0.034687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Fading/_Halftone.asset
+  artifactKey: Guid(ca4cfbb80c2060a468153c564b58606b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Fading/_Halftone.asset using Guid(ca4cfbb80c2060a468153c564b58606b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a0aa24d81262068be3981e19dfb1dad8') in 0.008632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite Shaders Ultimate/ASE/Generated/_Smoke.asset
+  artifactKey: Guid(3047f329cc469d44bac62642435791d0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/ASE/Generated/_Smoke.asset using Guid(3047f329cc469d44bac62642435791d0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bf5e24687faad64d1f8f35890753d11a') in 0.006667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Shifting.asset
+  artifactKey: Guid(644eb839a56f9a14fb83c50989af31b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Shifting.asset using Guid(644eb839a56f9a14fb83c50989af31b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '94132e2746c01d71a6bb01e3987b8e15') in 0.009826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Rainbow.asset
+  artifactKey: Guid(2727851ef6f5d7849b36668925c12a57) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Rainbow.asset using Guid(2727851ef6f5d7849b36668925c12a57) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1bc42e1deef0e26ac6f3d79fdb650405') in 0.017494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Squish.asset
+  artifactKey: Guid(d4dbc4997999c0e42a88696c91a3f323) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Sprite Shaders Ultimate/Scripts/Editor/Resources/SSU/Hints/Squish.asset using Guid(d4dbc4997999c0e42a88696c91a3f323) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1e7269192e0e1e95d413f3f01614478f') in 0.013814 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

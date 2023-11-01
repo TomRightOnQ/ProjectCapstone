@@ -47,6 +47,7 @@ public class LevelConfig : ScriptableSingleton<LevelConfig>
 public struct LevelData
 {
     public string SceneName;
+    public string StringName; // Actual name
     public string NextScene; // The next scene after this level - used for 2D levels only
     public Enums.SCENE_TYPE SceneType;
     public bool bSaveable; // Whether the player in this scene will be saved

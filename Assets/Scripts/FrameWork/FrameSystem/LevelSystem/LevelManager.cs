@@ -123,31 +123,31 @@ public class LevelManager : MonoBehaviour
         // For menu scenes, do not rebuild some systems
         if (levelData.SceneType == Enums.SCENE_TYPE.World)
         {
-            loadWorldScene(sceneName);
+            loadWorldScene(sceneName, levelData.StringName);
         }
         else if (levelData.SceneType == Enums.SCENE_TYPE.Battle)
         {
-            load2DScene(sceneName);
+            load2DScene(sceneName, levelData.StringName);
         }
 
     }
 
-    private void loadWorldScene(string sceneName)
+    private void loadWorldScene(string sceneName, string stringName)
     {
         placePlayer(sceneName, false);
         placeNPCs(sceneName);
-        finishBuild(sceneName, Enums.SCENE_TYPE.World);
+        finishBuild(stringName, Enums.SCENE_TYPE.World);
     }
 
-    private void load2DScene(string sceneName)
+    private void load2DScene(string sceneName, string stringName)
     {
         placePlayer(sceneName, true);
-        finishBuild(sceneName, Enums.SCENE_TYPE.Battle);
+        finishBuild(stringName, Enums.SCENE_TYPE.Battle);
     }
 
     // Finishing loading
     // -- At this point, all managers should be ready, and should not have null reference --
-    private void finishBuild(string sceneName, Enums.SCENE_TYPE worldType)
+    private void finishBuild(string stringName, Enums.SCENE_TYPE worldType)
     {
         PersistentDataManager.Instance.SetCamera();
         InputManager.Instance.UnLockInput(worldType);
@@ -168,6 +168,9 @@ public class LevelManager : MonoBehaviour
 
             GameManager2D.Instance.SetGame(gameID2D);
         }
+
+        // Show the map name
+        ReminderManager.Instance.ShowMapNameReminder(stringName);
     }
 
     // ---Methods to rebuild the scene---

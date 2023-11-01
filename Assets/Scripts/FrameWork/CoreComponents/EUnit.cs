@@ -6,6 +6,9 @@
 public class EUnit : MEntity
 {
     // Data Section
+    // Facing
+    protected bool facingRight = true;
+
     // Unit HP
     protected float maxHealth = 0f;
     protected float health = 0f;
@@ -23,10 +26,9 @@ public class EUnit : MEntity
     [SerializeField] protected float speedModifier = 1f;
 
     // Sprite Renderer
-    [SerializeField] protected SpriteRenderer sprite;
+    [SerializeField] protected GameObject sprite;
 
     // Public:
-
     // Setup the unit
     public virtual void SetUpUnit()
     {
@@ -37,17 +39,17 @@ public class EUnit : MEntity
     // Change the direction of sprite
     public void ChangeFacing(bool bLeft = true)
     {
-        if (sprite == null)
+        if (facingRight == bLeft)
         {
-            return;
+            sprite.transform.Rotate(0, 180, 0);
         }
-        sprite.flipX = bLeft;
+        facingRight = !bLeft;
     }
 
     // Get facing
     public bool GetFacingToRight()
     {
-        return !sprite.flipX;
+        return facingRight;
     }
 
     // Return velocity magnitude

@@ -27,7 +27,7 @@ public static class TaskData
     }
     public static Dictionary<int, TaskDataStruct> data = new Dictionary<int, TaskDataStruct>
     {
-        {1, new TaskDataStruct(1, "Unlock Day 1", "Time for the next day!", Enums.TASK_TYPE.Chat, new int[]{2}, new int[]{3,4}, new int[]{-1})},
+        {1, new TaskDataStruct(1, "Unlock Day 1", "Time for the next day!", Enums.TASK_TYPE.Chat, new int[]{2}, new int[]{3,4,5}, new int[]{-1})},
         {2, new TaskDataStruct(2, "Unlock Day 2", "Time for the next day!", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{3}, new int[]{-1})},
         {3, new TaskDataStruct(3, "Unlock Day 3", "Time for the next day!", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{-1}, new int[]{-1})},
         {4, new TaskDataStruct(4, "Unlock Day 4", "Time for the next day!", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{-1}, new int[]{-1})},
