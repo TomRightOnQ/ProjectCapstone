@@ -17,7 +17,7 @@ public class MObject : MonoBehaviour
     public long UUID { get { return uuid; } private set { uuid = value; } }
     public string ObjectName { get { return objectName; } set { objectName = value; } }
 
-    void Awake()
+    protected virtual void Awake()
     {
         uuid = PersistentDataManager.Instance.GetMObjectID();
     }

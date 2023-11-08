@@ -1159,6 +1159,9 @@
     <Compile Include="Assets\Scripts\GamePlay\3C\PlayerController.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\SliderScale\SliderScaleBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Converter\ConverterTMProReplacementInfo.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\NPC\StaticTrigger.cs" />
+    <Compile Include="Assets\Arts\UI\Notes\NotesManager.cs" />
+    <Compile Include="Assets\Arts\UI\Notes\UI_Notes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1169,6 +1172,7 @@
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderPlaneHSV.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\3D Lit URP SSU.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Prefabs\Player\C1B\C1.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderCircleHSV.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIRipple.shader" />

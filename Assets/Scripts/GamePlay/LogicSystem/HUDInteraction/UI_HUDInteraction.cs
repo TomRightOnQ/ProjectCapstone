@@ -72,6 +72,9 @@ public class UI_HUDInteraction : UIBase
                     break;
                 case Enums.INTERACTION_TYPE.End:
                     break;
+                case Enums.INTERACTION_TYPE.Teleport:
+                    LevelManager.Instance.LoadScene(interactionData.Target[0]);
+                    break;
                 case Enums.INTERACTION_TYPE.None:
                     break;
                 default:

@@ -203,8 +203,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3410081246005573031}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.6
+  m_Mass: 2
+  m_Drag: 3.4
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -231,9 +231,8 @@ MonoBehaviour:
   currentHP: 0
   defense: 0
   attack: 0
-  speedBase: 45
+  speedBase: 30
   speedModifier: 1
-  sprite: {fileID: 3410081245625750518}
   playerController: {fileID: 7495309393412677435}
   playerInteractionTrigger: {fileID: 3589579351211188403}
 --- !u!114 &7495309393412677435
@@ -249,16 +248,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5124319843851478416}
-  animator: {fileID: 0}
-  moveRatio: 1
-  jumpRatio: 200
+  IdleAnim: Idle
+  WalkAnim: Walk
+  currentState: 0
+  moveRatio: 3.25
+  jumpRatio: 900
   dashRatio: 400
   playerRigidBody: {fileID: 7347345649814498388}
   bWorld: 0
   bInputLocked: 0
   bMovementLocked: 0
   bMovable: 0
-  currentState: 0
 --- !u!95 &1298854992877839819
 Animator:
   serializedVersion: 5

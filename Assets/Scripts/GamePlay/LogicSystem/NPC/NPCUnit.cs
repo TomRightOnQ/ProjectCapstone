@@ -10,8 +10,9 @@ public class NPCUnit : EUnit
     [SerializeField, ReadOnly]
     private int npcID;
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         gameObject.tag = "NPC";
     }
 

@@ -11,8 +11,9 @@ public class Player : EUnit
     [SerializeField] private PlayerHUDInteractionTrigger playerInteractionTrigger;
     public PlayerHUDInteractionTrigger MainPlayerInteractionTrigger => playerInteractionTrigger;
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         // Check Controller's existence
         PlayerController playerController = this.gameObject.GetComponent<PlayerController>();
         if (playerController == null) 

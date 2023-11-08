@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 /// <summary>
 /// HUD UI
@@ -18,6 +19,9 @@ public class UI_HUD : UIBase
     // UI - Upper Left Section
     [SerializeField] private GameObject upperLeftHUD;
 
+    // UI - Timer
+    [SerializeField] private GameObject hudTimer;
+    [SerializeField] private TextMeshProUGUI timerText;
     // HUD Animation
     [SerializeField] private Animator upperRightAnimator;
 
@@ -43,6 +47,27 @@ public class UI_HUD : UIBase
         ShowUpperRightHUD();
     }
 
+    // Battle Timer:
+    public void BeginHUDTimer()
+    {
+        hudTimer.SetActive(true);
+    }
+
+    public void EndHUDTimer()
+    {
+        hudTimer.SetActive(false);
+    }
+
+    public void UpdateTimer(float time)
+    {
+        int hours = Mathf.FloorToInt(time / 3600);
+        int minutes = Mathf.FloorToInt((time % 3600) / 60);
+        int seconds = Mathf.FloorToInt(time % 60);
+
+        string formattedTime = $"{hours:00}:{minutes:00}:{seconds:00}";
+        timerText.text = formattedTime;
+    }
+
     // OnClick Event:
     public void OnClick_Btn_Menu()
     {
@@ -65,12 +90,12 @@ public class UI_HUD : UIBase
     // Reveal Upper Left HUD
     public void ShowUpperLeftHUD()
     {
-        upperLeftHUD.SetActive(false);
+        upperLeftHUD.SetActive(true);
     }
 
     // Hide Upper Left HUD
     public void HideUpperLeftHUD()
     {
-        upperLeftHUD.SetActive(true);
+        upperLeftHUD.SetActive(false);
     }
 }

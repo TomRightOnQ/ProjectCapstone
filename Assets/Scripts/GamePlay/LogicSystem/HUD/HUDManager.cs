@@ -45,6 +45,23 @@ public class HUDManager : MonoBehaviour
     }
 
     // Public:
+    // Battle Timer:
+    public void BeginHUDTimer()
+    {
+        ui_HUD.BeginHUDTimer();
+    }
+
+    public void EndHUDTimer()
+    {
+        ui_HUD.EndHUDTimer();
+    }
+
+    public void UpdateHUDTimer(float time)
+    {
+        ui_HUD.UpdateTimer(time);
+    }
+
+    // HUD visibility
     public void ShowAllHUD()
     {
         ui_HUD.ShowAllHUD();

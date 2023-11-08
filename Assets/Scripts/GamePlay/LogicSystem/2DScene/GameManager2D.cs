@@ -24,6 +24,11 @@ public class GameManager2D : MonoBehaviour
     // Result UI
     [SerializeField] private UI_Level2DComplete UI_Level2DComplete;
 
+    // Battle Timer
+    [SerializeField, ReadOnly]
+    private float battleTime = 0f;
+    public float BattleTime => battleTime;
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -35,6 +40,15 @@ public class GameManager2D : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        if (!BattleObserver.Instance.BGameStarted)
+        {
+            return;
+        }
+        battleTime += Time.deltaTime;
     }
 
     // Public:
@@ -51,11 +65,20 @@ public class GameManager2D : MonoBehaviour
             default:
                 break;
         }
+        HUDManager.Instance.BeginHUDTimer();
+        BattleObserver.Instance.BeginGame();
+        StartCoroutine(UpdateTimerCoroutine());
     }
 
-    public void SetUpGame()
+
+    // Update the timer
+    private IEnumerator UpdateTimerCoroutine()
     {
-        
+        while (true)
+        {
+            HUDManager.Instance.UpdateHUDTimer(battleTime);
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     // End the game
@@ -63,6 +86,9 @@ public class GameManager2D : MonoBehaviour
     // Victory/DefeatL This indicates the result of the game
     public void EndGame(bool bPass = true, bool bVictory = true)
     {
+        StartCoroutine(UpdateTimerCoroutine());
+        BattleObserver.Instance.EndGame();
+        HUDManager.Instance.EndHUDTimer();
         InputManager.Instance.LockInput();
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_2DGAME_END);
         UIManager.Instance.ShowUI("UI_Level2DComplete");

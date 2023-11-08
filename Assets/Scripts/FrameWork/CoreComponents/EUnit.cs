@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Spine.Unity;
 
 /// <summary>
 /// Class for all "living things"
@@ -8,6 +9,7 @@ public class EUnit : MEntity
     // Data Section
     // Facing
     protected bool facingRight = true;
+    protected bool bCanChangeFace = false;
 
     // Unit HP
     protected float maxHealth = 0f;
@@ -25,8 +27,20 @@ public class EUnit : MEntity
     [SerializeField] protected float speedBase = 1f;
     [SerializeField] protected float speedModifier = 1f;
 
-    // Sprite Renderer
-    [SerializeField] protected GameObject sprite;
+    protected SkeletonAnimation skeletonAnimation;
+
+    private Spine.Skeleton skeleton;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
+        if (skeletonAnimation != null)
+        {
+            skeleton = skeletonAnimation.Skeleton;
+            bCanChangeFace = true;
+        }
+    }
 
     // Public:
     // Setup the unit
@@ -39,10 +53,19 @@ public class EUnit : MEntity
     // Change the direction of sprite
     public void ChangeFacing(bool bLeft = true)
     {
-        if (facingRight == bLeft)
+        if (!bCanChangeFace)
         {
-            sprite.transform.Rotate(0, 180, 0);
+            return;
         }
+        if (bLeft)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else 
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+
         facingRight = !bLeft;
     }
 

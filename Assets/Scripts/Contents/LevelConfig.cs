@@ -46,10 +46,12 @@ public class LevelConfig : ScriptableSingleton<LevelConfig>
 [System.Serializable]
 public struct LevelData
 {
+    public int LevelID;
     public string SceneName;
     public string StringName; // Actual name
     public string NextScene; // The next scene after this level - used for 2D levels only
     public Enums.SCENE_TYPE SceneType;
     public bool bSaveable; // Whether the player in this scene will be saved
     public List<Vector3> SpawnPoints;
+    public string BGMName;
 }

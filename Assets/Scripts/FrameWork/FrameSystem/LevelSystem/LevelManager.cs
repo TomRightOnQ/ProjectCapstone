@@ -33,6 +33,11 @@ public class LevelManager : MonoBehaviour
 
     // Public:
     // Swap Scene
+    public void LoadScene(int id)
+    {
+        LoadScene(LevelConfig.Instance.LevelCollections[id].SceneName);
+    }
+
     public void LoadScene(string sceneName)
     {
         // Reset pooling system to clear references
@@ -91,9 +96,6 @@ public class LevelManager : MonoBehaviour
 
         // Notify the beginning of scene loading
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_SCENE_UNLOADED);
-
-        MusicManager.Instance.PlayMusic("MainMenuBGM_1");
-
         // Wait until the scene is fully loaded
         while (!asyncOperation.isDone)
         {
@@ -104,6 +106,8 @@ public class LevelManager : MonoBehaviour
         // Retrieve level metadata
         LevelData levelData = LevelConfig.Instance.GetLevelData(sceneName);
 
+
+        MusicManager.Instance.PlayMusic(levelData.BGMName);
         currentSceneType = levelData.SceneType;
 
         // Scene is loaded, now load managers

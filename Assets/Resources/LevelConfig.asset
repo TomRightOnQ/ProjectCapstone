@@ -13,59 +13,75 @@ MonoBehaviour:
   m_Name: LevelConfig
   m_EditorClassIdentifier: 
   levelCollections:
-  - SceneName: MainMenu
+  - LevelID: 0
+    SceneName: MainMenu
     StringName: None
     NextScene: 
     SceneType: 2
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: 0, z: 0}
-  - SceneName: DefaultLevel
+    BGMName: MainMenuBGM_1
+  - LevelID: 1
+    SceneName: DefaultLevel
     StringName: Welcome
     NextScene: 
     SceneType: 1
     bSaveable: 1
     SpawnPoints:
     - {x: 0, y: 0.5, z: 0}
-  - SceneName: AudienceLevel
+    BGMName: MainMenuBGM_1
+  - LevelID: 2
+    SceneName: AudienceLevel
     StringName: Audience Stands - High
     NextScene: 
     SceneType: 1
     bSaveable: 1
     SpawnPoints:
     - {x: -6, y: 7.2, z: -1}
-  - SceneName: AudienceLowLevel
+    BGMName: PublicSceneBGM_1
+  - LevelID: 3
+    SceneName: AudienceLowLevel
     StringName: Audience Stands - Low
     NextScene: 
     SceneType: 1
     bSaveable: 1
     SpawnPoints:
     - {x: 2.2, y: 11.7, z: 10}
-  - SceneName: EntranceLevel
+    BGMName: PublicSceneBGM_1
+  - LevelID: 4
+    SceneName: EntranceLevel
     StringName: Entrance Tunnel
     NextScene: 
     SceneType: 1
     bSaveable: 1
     SpawnPoints:
     - {x: 11, y: 0.6, z: 0}
-  - SceneName: PlatformerLevel
+    BGMName: EntranceSceneBGM_1
+  - LevelID: 5
+    SceneName: PlatformerLevel
     StringName: Ready, Set, Run!
     NextScene: 
     SceneType: 0
     bSaveable: 0
     SpawnPoints:
-    - {x: 0, y: 2.4, z: 0}
-  - SceneName: RoomALevel
+    - {x: 0, y: 2.4, z: 1.2}
+    BGMName: PublicSceneBGM_1
+  - LevelID: 6
+    SceneName: RoomALevel
     StringName: Team Room
     NextScene: 
     SceneType: 1
     bSaveable: 1
     SpawnPoints:
     - {x: 14, y: 0.6, z: 0}
-  - SceneName: GuildScene
+    BGMName: MainMenuBGM_1
+  - LevelID: 7
+    SceneName: GuildScene
     StringName: Guild
     NextScene: 
     SceneType: 1
     bSaveable: 1
     SpawnPoints:
     - {x: 0, y: 0.6, z: 0}
+    BGMName: PublicSceneBGM_1

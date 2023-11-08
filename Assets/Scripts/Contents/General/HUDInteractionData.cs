@@ -27,6 +27,8 @@ public static class HUDInteractionData
         {2, new HUDInteractionDataStruct(2, "Sample Game", new int[]{6}, Enums.INTERACTION_TYPE.Chat, false)},
         {3, new HUDInteractionDataStruct(3, "First Day", new int[]{9}, Enums.INTERACTION_TYPE.Chat, false)},
         {4, new HUDInteractionDataStruct(4, "Reminder", new int[]{1}, Enums.INTERACTION_TYPE.ShowReminder, false)},
+        {5, new HUDInteractionDataStruct(5, "Enter Team Room", new int[]{6}, Enums.INTERACTION_TYPE.Teleport, false)},
+        {6, new HUDInteractionDataStruct(6, "Exit Team Room", new int[]{2}, Enums.INTERACTION_TYPE.Teleport, false)},
     };
 
     public static HUDInteractionDataStruct GetData(int id)

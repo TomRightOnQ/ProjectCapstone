@@ -8,6 +8,29 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Observer/BattleObserver")]
 public class BattleObserver : ScriptableSingleton<BattleObserver>
 {
+    [SerializeField, ReadOnly]
+    private bool bGameStarted = false;
+    public bool BGameStarted => bGameStarted;
+
+    // Begin and end the game
+    public void BeginGame()
+    {
+        if (bGameStarted)
+        {
+            return;
+        }
+        bGameStarted = true;
+    }
+
+    public void EndGame()
+    {
+        if (!bGameStarted)
+        {
+            return;
+        }
+        bGameStarted = false;
+    }
+
     // Player HP
     public void OnPlayerHPChanged(float value, float maxValue)
     {

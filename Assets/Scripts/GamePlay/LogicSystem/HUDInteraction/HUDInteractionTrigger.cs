@@ -15,7 +15,7 @@ public class HUDInteractionTrigger : MonoBehaviour
     // Data
     private HUDInteractionData.HUDInteractionDataStruct currentInteraction;
 
-    [SerializeField, ReadOnly]
+    [SerializeField]
     private List<int> interactionIDs = new List<int>();
     public List<int> InteractionIDs => interactionIDs;
 

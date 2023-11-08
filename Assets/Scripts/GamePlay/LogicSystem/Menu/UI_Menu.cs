@@ -74,7 +74,7 @@ public class UI_Menu : UIBase
     // OnClick Events:
     public void OnClick_Btn_Calender()
     {
-    
+        MenuManager.Instance.CloseMenu();
     }
 
     public void OnClick_Btn_FlashBack()
@@ -83,19 +83,24 @@ public class UI_Menu : UIBase
         DayCycleManager.Instance.ShowFlashBackList();
     }
 
-    public void OnClick_Btn_Games()
+    public void OnClick_Btn_Notes()
     {
+        MenuManager.Instance.CloseMenu();
+    }
 
+    public void OnClick_Btn_Maps()
+    {
+        MenuManager.Instance.CloseMenu();
     }
 
     public void OnClick_Btn_Characters()
     {
-
+        MenuManager.Instance.CloseMenu();
     }
 
     public void OnClick_Btn_Settings()
     {
-
+        MenuManager.Instance.CloseMenu();
     }
 
     public void OnClick_Btn_CloseMenu()

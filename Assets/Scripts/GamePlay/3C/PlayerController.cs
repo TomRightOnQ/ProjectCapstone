@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Spine.Unity;
 
 /// <summary>
 /// Attching this component to the player for control
@@ -12,9 +13,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Player player;
 
     // Animation Controllers
-    [SerializeField] private Animator animator;
+    SkeletonAnimation skeletonAnimation;
 
+    private Spine.Skeleton skeleton;
+    private Spine.AnimationState spineAnimationState;
     private Vector2 moveInput;
+
+    [SerializeField] private string IdleAnim = "Idle";
+    [SerializeField] private string WalkAnim = "Walk";
+    [SerializeField] private string currentState = "Idle";
 
     // Data
     [SerializeField] private float moveRatio = 1f;
@@ -37,15 +44,6 @@ public class PlayerController : MonoBehaviour
     // Lock all active mmovement
     [SerializeField] private bool bMovable = false;
 
-    private enum PlayerState
-    {
-        Idle,
-        Walk,
-    }
-
-    [SerializeField, ReadOnly]
-    private PlayerState currentState = PlayerState.Idle;
-
     private void Awake()
     {
         if (playerRigidBody == null)
@@ -56,10 +54,6 @@ public class PlayerController : MonoBehaviour
         if (player == null)
         {
             player = GetComponent<Player>();
-        }
-        if (animator == null)
-        {
-            animator = GetComponentInChildren<Animator>();
         }
     }
 
@@ -76,6 +70,13 @@ public class PlayerController : MonoBehaviour
             playerControls.Player.Jump.started += jump;
             playerControls.Player.Dash.performed += dash;
         }
+
+        skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
+        if (skeletonAnimation != null)
+        {
+            spineAnimationState = skeletonAnimation.AnimationState;
+            skeleton = skeletonAnimation.Skeleton;
+        }
     }
 
     private void OnEnable()
@@ -90,8 +91,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdateAnimationState();
-
         if (!bMovementLocked || !bMovable || PersistentGameManager.Instance.bGamePaused)
         {
             return;
@@ -99,30 +98,30 @@ public class PlayerController : MonoBehaviour
 
         Vector3 force = Vector3.zero;
 
-        if (moveInput.magnitude != 0 && !bAirBorne)
+        if (moveInput.magnitude != 0)
         {
             force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitSpeed();
-            currentState = PlayerState.Walk;
+            UpdateAnimationState(WalkAnim);
         }
         else
         {
-            currentState = PlayerState.Idle;
+            UpdateAnimationState(IdleAnim);
+            
         }
-
         playerRigidBody.AddForce(force);
     }
 
-    private void UpdateAnimationState()
+    private void UpdateAnimationState(string state)
     {
-        // Handle animation states based on the current player state
-        switch (currentState)
+        if (currentState == WalkAnim && state == IdleAnim)
         {
-            case PlayerState.Idle:
-                animator.Play("Idle");
-                break;
-            case PlayerState.Walk:
-                animator.Play("Walk");
-                break;
+            spineAnimationState.SetAnimation(0, IdleAnim, true);
+            currentState = IdleAnim;
+        } 
+        else if (currentState == IdleAnim && state == WalkAnim) 
+        {
+            spineAnimationState.SetAnimation(0, WalkAnim, true);
+            currentState = WalkAnim;
         }
     }
 
