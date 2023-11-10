@@ -34,4 +34,5 @@ public static class Constants
     public const string SCENE_PLATFORMER_LEVEL = "PlatformerLevel";  // Platformer Level
     public const string SCENE_ROOMA_LEVEL = "RoomALevel";  // RoomA Level
     public const string SCENE_GUILD_LEVEL = "GuildScene";  // Guild Level
+    public const string SCENE_MATCHING_LEVEL = "MatchingLevel";  // Matching Platform
 }

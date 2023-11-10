@@ -5,15 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/GameInitScene.unity
     guid: 5d1539b91add5e64cb4bd97776fcf174
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: fb0f7b969e31493409d0bbda7628239a
+    guid: 8093a0d811a258848a1e5e6345fdfd00
   - enabled: 1
     path: Assets/Scenes/LevelScene/DefaultLevel.unity
     guid: 10b990acdcab10f48b3ad1931a84baa5
@@ -33,6 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelScene/RoomALevel.unity
     guid: cc1f84dd3d8356d499876e3e5ee4d7b8
   - enabled: 1
-    path: Assets/Scenes/LevelScene/GuildScene.unity
-    guid: c895f76b52fadb14c92a0aa1ff76d65c
+    path: Assets/Scenes/LevelScene/MatchingLevel.unity
+    guid: 6237e4d6e36fd214286c1050f395a408
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

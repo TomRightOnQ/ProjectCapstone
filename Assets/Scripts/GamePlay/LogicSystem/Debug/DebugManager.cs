@@ -68,4 +68,10 @@ public class DebugManager : MonoBehaviour
         LevelManager.Instance.LoadScene(Constants.SCENE_GUILD_LEVEL);
         onClick();
     }
+
+    public void EnterMatching()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_MATCHING_LEVEL);
+        onClick();
+    }
 }

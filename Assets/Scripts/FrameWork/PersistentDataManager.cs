@@ -53,7 +53,7 @@ public class PersistentDataManager : MonoBehaviour
     // Set Camera
     public void SetCamera()
     {
-        mainCamera = FindObjectOfType<PlayerCamera>();
+        mainCamera = FindObjectsByType<PlayerCamera>(FindObjectsSortMode.None)[0];
         if (mainCamera != null)
         {
             mainCamera.SetCameraToTarget(mainPlayer.gameObject, mainPlayer);

@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
         openedUIs.Clear();
         uiExclusion.Clear();
         // This will find and potentially register already-open UIs at start, if needed.
-        UIBase[] allUIBases = FindObjectsOfType<UIBase>();
+        UIBase[] allUIBases = FindObjectsByType<UIBase>(FindObjectsSortMode.None);
         foreach (UIBase ui in allUIBases)
         {
             openedUIs[ui.name] = ui;

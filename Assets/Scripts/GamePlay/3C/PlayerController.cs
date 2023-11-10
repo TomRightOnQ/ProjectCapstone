@@ -116,11 +116,13 @@ public class PlayerController : MonoBehaviour
         if (currentState == WalkAnim && state == IdleAnim)
         {
             spineAnimationState.SetAnimation(0, IdleAnim, true);
+            spineAnimationState.TimeScale = 1;
             currentState = IdleAnim;
         } 
         else if (currentState == IdleAnim && state == WalkAnim) 
         {
             spineAnimationState.SetAnimation(0, WalkAnim, true);
+            spineAnimationState.TimeScale = 1.5f;
             currentState = WalkAnim;
         }
     }

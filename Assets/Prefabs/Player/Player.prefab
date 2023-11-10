@@ -216,13 +216,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2735874020404217317, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735874020404217317, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735874020404217317, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735874020404217317, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2735874020404217317, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.083
+      value: -0.011
       objectReference: {fileID: 0}
     - target: {fileID: 2735874020404217317, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
         type: 3}
@@ -283,6 +298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: initialFlipX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6117768371248586003, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
+        type: 3}
+      propertyPath: _animationName
+      value: Idle
       objectReference: {fileID: 0}
     - target: {fileID: 6117768371248586003, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
         type: 3}

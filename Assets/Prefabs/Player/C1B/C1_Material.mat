@@ -10,6 +10,8 @@ Material:
   m_Name: C1_Material
   m_Shader: {fileID: -6465566751694194690, guid: b1b0e7204c2f4834b8a06d95faac9c27,
     type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHATEST_ON
   - _DISABLE_SSR
@@ -36,6 +38,7 @@ Material:
   - TransparentBackface
   - RayTracingPrepass
   - MOTIONVECTORS
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -105,11 +108,14 @@ Material:
     - _EmissionPower: 2
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 0
+    - _ExcludeFromTUAndAA: 0
     - _FillPhase: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _Hue: 0
     - _LightAffectsAdditive: 0
+    - _MaterialID: 1
+    - _MaterialTypeMask: 2
     - _Metallic: 0
     - _OpaqueCullMode: 2
     - _OutlineMipLevel: 0
@@ -138,15 +144,16 @@ Material:
     - _StencilRefGBuffer: 2
     - _StencilRefMV: 32
     - _StencilWriteMask: 6
-    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDepth: 9
     - _StencilWriteMaskDistortionVec: 4
-    - _StencilWriteMaskGBuffer: 14
-    - _StencilWriteMaskMV: 40
+    - _StencilWriteMaskGBuffer: 15
+    - _StencilWriteMaskMV: 41
     - _StraightAlphaInput: 0
     - _SupportDecals: 1
     - _SurfaceType: 0
     - _ThresholdEnd: 0.25
     - _TintBlack: 0
+    - _TransmissionEnable: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -184,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 12
+  version: 13
   hdPluginSubTargetMaterialVersions:
     m_Keys: []
     m_Values: 
