@@ -19,6 +19,9 @@ public static class Constants
     public const int TEST_INT_C3 = 3;  // A normal value
     public const string TEST_STRING_C3 = "unreal";  // A normal value
 
+    // Notes
+    public const string NOTES_SOURCE_PATH = "Texts/Notes";  // Path for Notes folder path
+
     // Reminder
     public const float REMINDER_LEVEL_TIME = 2f;  // Life time of the level reminder
     public const float REMINDER_LEVEL_FADE_TIME = 0.5f;  // Time for the level remidner to fade out

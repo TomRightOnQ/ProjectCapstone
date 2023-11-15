@@ -57,6 +57,12 @@ public class HUDInteractionManager : MonoBehaviour
             case Enums.INTERACTION_TYPE.ShowReminder:
                 ReminderManager.Instance.ShowGeneralReminder(interactionData.Target[0]);
                 return;
+            case Enums.INTERACTION_TYPE.EnterActing:
+                HUDManager.Instance.EnterActingMode();
+                return;
+            case Enums.INTERACTION_TYPE.ExitActing:
+                HUDManager.Instance.ExitActingMode();
+                return;
             default:
                 break;
         }

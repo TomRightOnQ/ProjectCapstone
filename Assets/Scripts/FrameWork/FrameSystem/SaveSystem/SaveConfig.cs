@@ -21,6 +21,13 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     private List<NPCSaveData> npcSaveDataList = new List<NPCSaveData>();
     public List<NPCSaveData> NpcSaveDataList => npcSaveDataList;
 
+    [SerializeField]
+    private NoteData noteData = new NoteData();
+
+    [SerializeField]
+    private List<GuildSaveData> guildSaveDataList = new List<GuildSaveData>();
+    public List<GuildSaveData> GuildSaveDataList => guildSaveDataList;
+
     // Datagrams
     [System.Serializable]
     public class PlayerSaveData
@@ -45,7 +52,26 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public class DaySaveData
     {
         public int CurrentDay;
+        public int MaxDay;
         public bool bInited;
+    }
+
+    [System.Serializable]
+    public class NoteData
+    {
+        public List<int> NoteIDs;
+        public List<int> ItemIDs;
+        public List<int> ReportIDs;
+    }
+
+    [System.Serializable]
+    public class GuildSaveData
+    {
+        public int GuildID;
+        public int Score;
+        public int DuelWin;
+        public int DuelLose;
+        public bool bElminated;
     }
 
     // Methods:
@@ -65,6 +91,99 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         return daySaveData;
     }
 
+    public List<int> GetNote(Enums.NOTE_TYPE type)
+    {
+        switch (type)
+        {
+            case Enums.NOTE_TYPE.Note:
+                return noteData.NoteIDs;
+            case Enums.NOTE_TYPE.Item:
+                return noteData.ItemIDs;
+            case Enums.NOTE_TYPE.Report:
+                return noteData.ReportIDs;
+            default:
+                return noteData.NoteIDs;
+        }
+    }
+
+    public void AddNote(Enums.NOTE_TYPE type, int[] IDs)
+    {
+        switch (type) 
+        {
+            case Enums.NOTE_TYPE.Note:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (!noteData.NoteIDs.Contains(IDs[i]))
+                    {
+                        noteData.NoteIDs.Add(i);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            case Enums.NOTE_TYPE.Item:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (!noteData.ItemIDs.Contains(IDs[i]))
+                    {
+                        noteData.ItemIDs.Add(i);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            case Enums.NOTE_TYPE.Report:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (!noteData.ReportIDs.Contains(IDs[i]))
+                    {
+                        noteData.ReportIDs.Add(i);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void RemoveNote(Enums.NOTE_TYPE type, int[] IDs)
+    {
+        switch (type)
+        {
+            case Enums.NOTE_TYPE.Note:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (noteData.NoteIDs.Contains(IDs[i]))
+                    {
+                        noteData.NoteIDs.Remove(i);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            case Enums.NOTE_TYPE.Item:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (noteData.ItemIDs.Contains(IDs[i]))
+                    {
+                        noteData.ItemIDs.Remove(i);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            case Enums.NOTE_TYPE.Report:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (noteData.ReportIDs.Contains(IDs[i]))
+                    {
+                        noteData.ReportIDs.Remove(i);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            default:
+                break;
+        }
+    }
+
     public void LockSave()
     {
         bAllowRewrite = false;
@@ -75,6 +194,29 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public void InitDayToSave()
     {
         daySaveData.CurrentDay = 0;
+        daySaveData.MaxDay = 0;
+    }
+
+    // Modify Guild status
+    // --Init-- Methods
+    public void InitGuildToSave()
+    {
+        guildSaveDataList.Clear();
+        foreach (var pair in GuildInfoData.data)
+        {
+            GuildInfoData.GuildInfoDataStruct defaultGuild = pair.Value;
+
+            GuildSaveData newGuildSaveData = new GuildSaveData()
+            {
+                GuildID = defaultGuild.ID,
+                Score = 0,
+                DuelWin = 0,
+                DuelLose = 0,
+                bElminated = false
+            };
+
+            guildSaveDataList.Add(newGuildSaveData);
+        }
     }
 
     // Modify NPC status

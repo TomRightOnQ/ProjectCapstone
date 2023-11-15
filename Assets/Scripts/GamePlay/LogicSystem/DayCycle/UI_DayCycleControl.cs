@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using UIWidgets;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 public class UI_DayCycleControl : UIBase
 {
@@ -10,12 +11,19 @@ public class UI_DayCycleControl : UIBase
 
     // Panels
     [SerializeField] private GameObject p_FlashBackPanel;
-    [SerializeField] private bool bListInited = false; // Because the list is thrown away upon scene changes or day changes, use a flag to mark inited
+
+    // Texts
+    [SerializeField] private TextMeshProUGUI tb_Day_Text;
 
     // Day ListVIew
     [SerializeField] private ListViewIcons dayList;
     [SerializeField] private GameObject viewPort;
     private ObservableList<ListViewIconsItemDescription> dayItems = new ObservableList<ListViewIconsItemDescription>();
+
+    // LeaderBoard LiseView
+    [SerializeField] private ListViewIcons guildList;
+    [SerializeField] private GameObject guildViewPort;
+    private ObservableList<ListViewIconsItemDescription> guildItems = new ObservableList<ListViewIconsItemDescription>();
 
     // Data
     [SerializeField, ReadOnly] 
@@ -24,26 +32,28 @@ public class UI_DayCycleControl : UIBase
     private void Awake()
     {
         dayList.DataSource = dayItems;
-        CloseFlashBackList();
+        guildList.DataSource = guildItems;
+        CloseDayPanel();
     }
 
 
     // Public:
     // Show list of flashback
-    public void ShowFlashBackList()
+    public void ShowDayPanel()
     {
         p_FlashBackPanel.SetActive(true);
-        if (!bListInited)
-        {
-            bListInited = true;
-            initList();
-        }
+        tb_Day_Text.text = "DAY: " + DayCycleManager.Instance.CurrentDay.ToString();
+        initList();
     }
 
     // Close the list
-    public void CloseFlashBackList()
+    public void CloseDayPanel()
     {
+        // Clear items
+        dayItems.Clear();
+        guildItems.Clear();
         p_FlashBackPanel.SetActive(false);
+        PersistentGameManager.Instance.ResumeGame();
     }
 
     // Show button to the next day
@@ -62,12 +72,26 @@ public class UI_DayCycleControl : UIBase
     // Populate the list
     private void initList()
     {
-        int currentDay = DayCycleManager.Instance.CurrentDay;
-        // Add to list
-        for (int i = 0; i < currentDay + 1; i++)
+        int maxDay = SaveManager.Instance.GetMaxDay();
+        // Add unlocked days to list
+        for (int i = 0; i < maxDay + 1; i++)
         {
             ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = i, Name = "Day " + i.ToString() };
             dayItems.Add(newItem);
+        }
+
+        // Fill leaderboard list
+        List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
+        guildList.Sort((x, y) => y.Score.CompareTo(x.Score));
+        for (int i = 0; i < guildList.Count; i++)
+        {
+            string itemName = string.Format(" <mspace=0.65em>{0,-13}{1,3}  {2,3}/{3,-3}", 
+                GuildInfoData.GetData(guildList[i].GuildID).Name, 
+                guildList[i].Score.ToString(), 
+                guildList[i].DuelWin.ToString(), 
+                guildList[i].DuelLose.ToString());
+            ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = i, Name = itemName };
+            guildItems.Add(newItem);
         }
     }
 

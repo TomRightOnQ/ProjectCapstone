@@ -50,6 +50,7 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.SetPlayer(new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
         SaveConfig.Instance.InitDayToSave();
         SaveConfig.Instance.InitNPCToSave();
+        SaveConfig.Instance.InitGuildToSave();
         SaveConfig.Instance.LockSave();
     }
 
@@ -64,17 +65,55 @@ public class SaveManager : MonoBehaviour
     
     }
 
+    public void SaveMaxDay(int maxDay)
+    {
+        if (maxDay <= SaveConfig.Instance.GetDay().MaxDay)
+        {
+            return;
+        }
+        SaveConfig.Instance.GetDay().MaxDay = maxDay;
+    }
+
     public void SaveCurrentDay(int currentDay)
     {
         SaveConfig.Instance.GetDay().CurrentDay = currentDay;
     }
 
-    // Get current day init status
     public void SaveCurrentDayInited(bool bInited)
     {
         SaveConfig.Instance.GetDay().bInited = bInited;
     }
 
+    public void SaveGuildData(int targetID, int score, int win, int lose, bool bElminated)
+    {
+        List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
+        for (int i = 0; i <= guildList.Count; i++)
+        {
+            if (targetID == guildList[i].GuildID)
+            {
+                guildList[i].Score += score;
+                guildList[i].DuelWin += win;
+                guildList[i].DuelLose += lose;
+                guildList[i].bElminated = bElminated;
+            }
+        }
+    }
+
+    // Set the guild data
+    public void SaveGuildData_F(int targetID, int score, int win, int lose, bool bElminated)
+    {
+        List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
+        for (int i = 0; i <= guildList.Count; i++)
+        {
+            if (targetID == guildList[i].GuildID)
+            {
+                guildList[i].Score = score;
+                guildList[i].DuelWin = win;
+                guildList[i].DuelLose = lose;
+                guildList[i].bElminated = bElminated;
+            }
+        }
+    }
 
     // Read Data
     // Load Save to the scriptable object
@@ -104,6 +143,11 @@ public class SaveManager : MonoBehaviour
         return SaveConfig.Instance.GetDay().CurrentDay;
     }
 
+    public int GetMaxDay()
+    {
+        return SaveConfig.Instance.GetDay().MaxDay;
+    }
+
     // Get current day init status
     public bool GetIsCurrentDayInited()
     {
@@ -129,6 +173,22 @@ public class SaveManager : MonoBehaviour
     public void SetNPCActive(int npcID, bool bActive)
     {
         SaveConfig.Instance.SetNPCActive(npcID, bActive);
+    }
+
+    // Save or change note data
+    public void AddNote(Enums.NOTE_TYPE type, int[] IDs)
+    {
+        SaveConfig.Instance.AddNote(type, IDs);
+    }
+    public void RemoveNote(Enums.NOTE_TYPE type, int[] IDs)
+    {
+        SaveConfig.Instance.RemoveNote(type, IDs);
+    }
+
+    // Get Note Data
+    public List<int> GetNote(Enums.NOTE_TYPE type)
+    {
+        return SaveConfig.Instance.GetNote(type);
     }
 
     // Private:

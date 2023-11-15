@@ -9,6 +9,8 @@ Chat,INTERACTION_TYPE,Screen Interaction Type: Start a chat
 Teleport,INTERACTION_TYPE,Screen Interaction Type: Teleport the player
 StartGame,INTERACTION_TYPE,Screen Interaction Type: Bring the player to a game level
 ShowReminder,INTERACTION_TYPE,Screen Interaction Type: Show a reminder
+EnterActing,INTERACTION_TYPE,Screen Interaction Type: Start Acting mode
+ExitActing,INTERACTION_TYPE,Screen Interaction Type: End Acting mode
 CompleteTask,INTERACTION_EVENT,Screen Interaction Event: Complete a task
 None,INTERACTION_EVENT,Screen Interaction Event: Doing nothing
 Chat,TASK_TYPE,Task System: Chat
@@ -20,9 +22,14 @@ AddInteraction,TASK_ACTION,Task: Add interactions to the targeted NPC
 RemoveInteraction,TASK_ACTION,Task: Remove interactions from the targeted NPC
 None,TASK_ACTION,Task: Doing nothing
 UnlockNextDay,TASK_ACTION,Task: Unlock to the next day
+EnterActing,TASK_ACTION,Task: Start Acting mode
+ExitActing,TASK_ACTION,Task: End Acting mode
 Platformer,LEVEL_TYPE,Level:Platformer Stage
 Dual,LEVEL_TYPE,Level:Battle Stage
 Shooter,LEVEL_TYPE,Level:Weaponed Battle Stage
 Hide,LEVEL_TYPE,Level:Hide
 Track,LEVEL_TYPE,Level:Track
 None,LEVEL_TYPE,Level:World or other
+Note,NOTE_TYPE,NoteType: Regular information
+Item,NOTE_TYPE,NoteType: Items
+Report,NOTE_TYPE,NoteType: Daily Reports

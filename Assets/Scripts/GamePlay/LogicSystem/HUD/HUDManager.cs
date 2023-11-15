@@ -45,6 +45,21 @@ public class HUDManager : MonoBehaviour
     }
 
     // Public:
+    // Acting Mode
+    public void EnterActingMode()
+    {
+        HUDInteractionManager.Instance.DisableHUDInteractionUI();
+        InputManager.Instance.LockInput();
+        HideAllHUD();
+    }
+
+    public void ExitActingMode()
+    {
+        HUDInteractionManager.Instance.EnableHUDInteractionUI();
+        InputManager.Instance.UnLockInput(LevelManager.Instance.CurrentSceneType);
+        ShowAllHUD();
+    }
+
     // Battle Timer:
     public void BeginHUDTimer()
     {

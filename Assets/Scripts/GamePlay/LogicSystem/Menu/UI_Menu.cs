@@ -42,6 +42,17 @@ public class UI_Menu : UIBase
         PersistentGameManager.Instance.ResumeGame();
     }
 
+    public void CloseMenuNoResume()
+    {
+        if (!bLocked)
+        {
+            return;
+        }
+        menuAnimator.Play("MenuOutAnimation");
+        float length = menuAnimator.GetCurrentAnimatorStateInfo(0).length;
+        DisableMenu();
+    }
+
     // Set the current day
     public void SetCurrentDayText(int currentDay)
     {
@@ -79,13 +90,14 @@ public class UI_Menu : UIBase
 
     public void OnClick_Btn_FlashBack()
     {
-        MenuManager.Instance.CloseMenu();
-        DayCycleManager.Instance.ShowFlashBackList();
+        DayCycleManager.Instance.ShowDayPanel();
+        MenuManager.Instance.CloseMenuNoResume();
     }
 
     public void OnClick_Btn_Notes()
     {
-        MenuManager.Instance.CloseMenu();
+        NotesManager.Instance.ShowNotePanel();
+        MenuManager.Instance.CloseMenuNoResume();
     }
 
     public void OnClick_Btn_Maps()

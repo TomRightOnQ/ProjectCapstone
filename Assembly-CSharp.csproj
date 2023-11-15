@@ -146,6 +146,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Connector\ConnectorBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ColorPicker\ColorPickerColorSetter.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CircularSlider\CircularSlider.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Notes\NotesManager.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ListView\ListViewHeight\ListViewHeightSelectedItemsProvider.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\DataBindSupport\DataBindEvents.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Accordion\AccordionEvent.cs" />
@@ -206,7 +207,6 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Fast\StyleFastScrollbar.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Progressbar\LoadingAnimation.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\InputField\InputFieldNull.cs" />
-    <Compile Include="Assets\Arts\UI\Notes\UI_Notes.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CenteredSlider\Vertical\CenteredSliderVerticalValueObserver.cs" />
     <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Interactive\WindManagerSSU.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\Dialog\DialogButtonComponentTMPro.cs" />
@@ -458,7 +458,6 @@
     <Compile Include="Assets\New UI Widgets\Scripts\InputField\InputFieldExtendedNull.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Misc\StyleCanvas.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Sidebar\SidebarEnums.cs" />
-    <Compile Include="Assets\Arts\UI\Notes\NotesManager.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Unity\StyleImage.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Calendar\DatePicker.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Timeline\DataForm.cs" />
@@ -484,6 +483,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Dialog\PickerStringV2.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\Notify\NotifyInfoTMPro.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Collections\StyleDropIndicator.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\GuildInfoData.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ListView\ListViewIcons\ListViewIconsSelectedItemObserver.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\IO\DrivesListViewComponentTMPro.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Accordion\AccordionHighlightDefaultBackgroundColor.cs" />
@@ -740,6 +740,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ContextMenu\HotKey.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Text\TextNull.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\EasyLayout\LayoutElementsGroup.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Notes\UI_Notes.cs" />
     <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Interactive\InteractiveSquishSSU.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\ColorPicker\ColorPickerHexBlockTMPro.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Editor.Conditions\NestedInspectorAttribute.cs" />
@@ -851,6 +852,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Accordion\AccordionEnums.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Calendar\CalendarDateBaseSelectedDayBackground.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\PrefabsGeneratorStarter.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\NotesData.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Timeline\DataDialog.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Accordion\AccordionItem.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ColorPicker\ColorPickerABlock.cs" />
@@ -1186,6 +1188,7 @@
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\Multiplicative SSU.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderVLineHSV.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIFlareGlobal.shader" />
+    <None Include="Assets\Resources\Texts\Notes\SampleItem.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\Standard SSU.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\Additive SSU.shader" />
@@ -1197,6 +1200,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIWidgets.cginc" />
+    <None Include="Assets\Resources\Texts\Notes\SampleNote.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\New UI Widgets\Scripts\WidgetGeneration\DataBindSupport\Observer.template.txt" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIBorderDrawer.shader" />
@@ -1219,6 +1223,7 @@
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\Additive GUI SSU.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\New UI Widgets\readme.txt" />
+    <None Include="Assets\Resources\Texts\Notes\SampleReport.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderHLineHSV.shader" />
     <None Include="Assets\New UI Widgets\version.txt" />

@@ -47,8 +47,10 @@ public class DayCycleManager : MonoBehaviour
     public void UnlockNextDay()
     {
         ShowReport(currentDay);
-        if (ui_DayCycleControl != null)
+        if (ui_DayCycleControl != null && currentDay < 7)
         {
+            // Write to save
+            SaveManager.Instance.SaveMaxDay(currentDay);
             ui_DayCycleControl.ShowNextDayButton();
         }
     }
@@ -94,11 +96,11 @@ public class DayCycleManager : MonoBehaviour
     }
 
     // Show list of flash back
-    public void ShowFlashBackList()
+    public void ShowDayPanel()
     {
         if (ui_DayCycleControl != null)
         {
-            ui_DayCycleControl.ShowFlashBackList();
+            ui_DayCycleControl.ShowDayPanel();
         }
     }
 

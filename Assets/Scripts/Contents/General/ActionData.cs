@@ -24,6 +24,8 @@ public static class ActionData
         {3, new ActionDataStruct(3, Enums.TASK_ACTION.UnlockNextDay, new int[]{-1})},
         {4, new ActionDataStruct(4, Enums.TASK_ACTION.RemoveInteraction, new int[]{2,3})},
         {5, new ActionDataStruct(5, Enums.TASK_ACTION.RemoveInteraction, new int[]{2,4})},
+        {6, new ActionDataStruct(6, Enums.TASK_ACTION.EnterActing, new int[]{-1})},
+        {7, new ActionDataStruct(7, Enums.TASK_ACTION.ExitActing, new int[]{-1})},
     };
 
     public static ActionDataStruct GetData(int id)

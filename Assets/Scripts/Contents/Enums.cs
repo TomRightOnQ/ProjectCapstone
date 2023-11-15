@@ -17,6 +17,8 @@ public static class Enums
         Teleport,  // Screen Interaction Type: Teleport the player
         StartGame,  // Screen Interaction Type: Bring the player to a game level
         ShowReminder,  // Screen Interaction Type: Show a reminder
+        EnterActing,  // Screen Interaction Type: Start Acting mode
+        ExitActing,  // Screen Interaction Type: End Acting mode
     }
 
     public enum LEVEL_TYPE
@@ -34,6 +36,13 @@ public static class Enums
         PLACE_HOLDER,  // DEBUG
     }
 
+    public enum NOTE_TYPE
+    {
+        Note,  // NoteType: Regular information
+        Item,  // NoteType: Items
+        Report,  // NoteType: Daily Reports
+    }
+
     public enum SCENE_TYPE
     {
         Battle,  // Scene Type: Battle Scene
@@ -47,6 +56,8 @@ public static class Enums
         RemoveInteraction,  // Task: Remove interactions from the targeted NPC
         None,  // Task: Doing nothing
         UnlockNextDay,  // Task: Unlock to the next day
+        EnterActing,  // Task: Start Acting mode
+        ExitActing,  // Task: End Acting mode
     }
 
     public enum TASK_TYPE

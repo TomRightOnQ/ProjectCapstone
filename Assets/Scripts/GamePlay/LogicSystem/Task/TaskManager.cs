@@ -46,6 +46,12 @@ public class TaskManager : MonoBehaviour
                 case Enums.TASK_ACTION.UnlockNextDay:
                     DayCycleManager.Instance.UnlockNextDay();
                     break;
+                case Enums.TASK_ACTION.EnterActing:
+                    HUDManager.Instance.EnterActingMode();
+                    return;
+                case Enums.TASK_ACTION.ExitActing:
+                    HUDManager.Instance.ExitActingMode();
+                    return;
                 case Enums.TASK_ACTION.None:
                     break;
                 default:

@@ -62,6 +62,16 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    // Close Menu
+    public void CloseMenuNoResume()
+    {
+        if (ui_Menu != null)
+        {
+            ui_Menu.CloseMenuNoResume();
+            HUDManager.Instance.ShowUpperRightHUD();
+        }
+    }
+
     // Toggle Menu
     public void ToggleMenu()
     {
