@@ -137,7 +137,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &188516084
 Transform:
@@ -216,7 +216,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &314294372
 Transform:
@@ -344,7 +344,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &638126496
 MeshCollider:
@@ -450,7 +450,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &717225482
 MeshCollider:
@@ -773,7 +773,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &934868838
 MeshCollider:
@@ -878,7 +878,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1217653195
 Transform:
@@ -1175,7 +1175,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1427352078
 Transform:
@@ -1325,7 +1325,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1944551139
 Transform:
@@ -1379,7 +1379,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1986847158
 Transform:
@@ -1674,6 +1674,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene_Terrain_Low_Entrance
       objectReference: {fileID: 0}
+    - target: {fileID: 175539145985345887, guid: de5107d5f06d53142a4c19b97c02cf24,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 658778167473968101, guid: de5107d5f06d53142a4c19b97c02cf24,
         type: 3}
       propertyPath: m_RootOrder
@@ -1733,6 +1738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderingLayerMask
       value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215042188591935878, guid: de5107d5f06d53142a4c19b97c02cf24,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8164078559111342926, guid: de5107d5f06d53142a4c19b97c02cf24, type: 3}
@@ -1832,10 +1842,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2225300602780590036, guid: 1675e307aceeea6419f13a61382c9382,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7164119781267760909, guid: 1675e307aceeea6419f13a61382c9382,
         type: 3}
       propertyPath: m_Name
       value: Scene_Terrain_Low_Entrance_Body
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164119781267760909, guid: 1675e307aceeea6419f13a61382c9382,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7505178785950481847, guid: 1675e307aceeea6419f13a61382c9382,
         type: 3}
