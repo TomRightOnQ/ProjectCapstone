@@ -10,6 +10,8 @@ TagManager:
   - layout
   - UIBase
   - StaticTrigger
+  - Projectile
+  - Target
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Wall
   - 
   - 
-  - 
-  - 
+  - Target
+  - Projectile
   - NPC
   - Player
   - Interactable

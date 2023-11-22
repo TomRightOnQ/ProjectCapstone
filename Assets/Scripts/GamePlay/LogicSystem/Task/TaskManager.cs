@@ -110,6 +110,10 @@ public class TaskManager : MonoBehaviour
     // Complete a single task
     public void CompleteTask(int taskID)
     {
+        if (taskID == -1)
+        {
+            return;
+        }
         TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
         configTaskActions(taskData.PostActions);
         UnlockTasks(taskData.UnlockTask);

@@ -14,6 +14,9 @@ public class LevelManager : MonoBehaviour
     private Enums.SCENE_TYPE currentSceneType;
     public Enums.SCENE_TYPE CurrentSceneType => currentSceneType;
 
+    // Current 2D Level Info
+    private Level2DData.Level2DDataStruct current2DLevel;
+
     // 2D Scene Game ID
     private int gameID2D = -1;
 
@@ -54,9 +57,9 @@ public class LevelManager : MonoBehaviour
         {
             return;
         }
-        Level2DData.Level2DDataStruct level2DData = Level2DData.GetData(levelID);
+        current2DLevel = Level2DData.GetData(levelID);
         gameID2D = levelID;
-        LevelManager.Instance.LoadScene(level2DData.SceneName);
+        LevelManager.Instance.LoadScene(current2DLevel.SceneName);
     }
 
     // For single save mode - Check and see if there's a save
@@ -154,11 +157,7 @@ public class LevelManager : MonoBehaviour
     private void finishBuild(string stringName, Enums.SCENE_TYPE worldType)
     {
         PersistentDataManager.Instance.SetCamera();
-        InputManager.Instance.UnLockInput(worldType);
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_SCENE_LOADED);
-
-        // Resume the game
-        PersistentGameManager.Instance.ResumeGame();
 
         if (worldType == Enums.SCENE_TYPE.Battle)
         {
@@ -166,12 +165,24 @@ public class LevelManager : MonoBehaviour
             {
                 return;
             }
+            // Unlock according to level type
+            if (current2DLevel.Type == Enums.LEVEL_TYPE.Shooter)
+            {
+                InputManager.Instance.SetInputAsShooter();
+            }
             // Create a 2D Game Manger
             GameObject managerObject = new GameObject("GameManager2D");
             managerObject.AddComponent<GameManager2D>();
 
             GameManager2D.Instance.SetGame(gameID2D);
         }
+        else 
+        {
+            InputManager.Instance.UnLockInput(worldType);
+        }
+
+        // Resume the game
+        PersistentGameManager.Instance.ResumeGame();
 
         // Show the map name
         ReminderManager.Instance.ShowMapNameReminder(stringName);

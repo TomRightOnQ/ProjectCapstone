@@ -21,8 +21,8 @@ public class GameManager2D : MonoBehaviour
     private int gameLevelID = -1;
     public int GameLevelID => gameLevelID;
 
-    // Result UI
-    [SerializeField] private UI_Level2DComplete UI_Level2DComplete;
+    // UI
+    [SerializeField] private UI_Level2D UI_Level2D;
 
     // Battle Timer
     [SerializeField, ReadOnly]
@@ -52,24 +52,44 @@ public class GameManager2D : MonoBehaviour
     }
 
     // Public:
-    // Config the game scene
-    public void SetGame(int gameID)
+    // Start the game
+    public void StartGame()
     {
-        gameLevelID = gameID;
-        UI_Level2DComplete = UIManager.Instance.CreateUI("UI_Level2DComplete").GetComponent<UI_Level2DComplete>();
-
-        Level2DData.Level2DDataStruct level2DData = Level2DData.GetData(gameID);
-        Enums.LEVEL_TYPE gameMode = level2DData.Type;
         switch (gameMode)
         {
+            case Enums.LEVEL_TYPE.Shooter:
+                ShooterLevelManager.Instance.StartGame();
+                break;
             default:
                 break;
         }
-        HUDManager.Instance.BeginHUDTimer();
+        InputManager.Instance.UnLockInput(Enums.SCENE_TYPE.Battle, Enums.LEVEL_TYPE.Shooter);
         BattleObserver.Instance.BeginGame();
         StartCoroutine(UpdateTimerCoroutine());
     }
 
+    // Config the game scene
+    public void SetGame(int gameID)
+    {
+        gameLevelID = gameID;
+        UI_Level2D = UIManager.Instance.CreateUI("UI_Level2D").GetComponent<UI_Level2D>();
+
+        Level2DData.Level2DDataStruct level2DData = Level2DData.GetData(gameID);
+        gameMode = level2DData.Type;
+        switch (gameMode)
+        {
+            case Enums.LEVEL_TYPE.Shooter:
+                GameObject ShooterLevelManager = new GameObject();
+                ShooterLevelManager shooterLevelManager = ShooterLevelManager.AddComponent<ShooterLevelManager>();
+                shooterLevelManager.Init(gameID);
+                break;
+            default:
+                break;
+        }
+        HUDManager.Instance.BeginHUDTimer();
+        // Show Panel after loaded
+        ShowGameStartPanel();
+    }
 
     // Update the timer
     private IEnumerator UpdateTimerCoroutine()
@@ -79,6 +99,17 @@ public class GameManager2D : MonoBehaviour
             HUDManager.Instance.UpdateHUDTimer(battleTime);
             yield return new WaitForSeconds(1f);
         }
+    }
+
+    // Show/Hide Game Start Panel
+    public void ShowGameStartPanel()
+    {
+        UI_Level2D.SetLevelStartPanel(true);
+    }
+
+    public void HideGameStartPanel()
+    {
+        UI_Level2D.SetLevelStartPanel(false);
     }
 
     // End the game
@@ -91,7 +122,7 @@ public class GameManager2D : MonoBehaviour
         HUDManager.Instance.EndHUDTimer();
         InputManager.Instance.LockInput();
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_2DGAME_END);
-        UIManager.Instance.ShowUI("UI_Level2DComplete");
+        UI_Level2D.SetLevelCompletePanel(true);
     }
 
     // Leave the game Scene

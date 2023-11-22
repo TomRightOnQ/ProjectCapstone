@@ -74,4 +74,10 @@ public class DebugManager : MonoBehaviour
         LevelManager.Instance.LoadScene(Constants.SCENE_MATCHING_LEVEL);
         onClick();
     }
+
+    public void EnterShooter()
+    {
+        LevelManager.Instance.Load2DLevel(4);
+        onClick();
+    }
 }

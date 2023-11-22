@@ -11,5 +11,7 @@ public static class GameEvent
         // Game Manager
         EVENT_2DGAME_START,
         EVENT_2DGAME_END,
+        // Shooter Level
+        SHOOTER_LEVEL_BEGIN,
     }
 }

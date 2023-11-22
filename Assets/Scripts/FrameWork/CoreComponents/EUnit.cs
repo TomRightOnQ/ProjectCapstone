@@ -26,6 +26,7 @@ public class EUnit : MEntity
     [SerializeField] protected float attack = 0f;
     [SerializeField] protected float speedBase = 1f;
     [SerializeField] protected float speedModifier = 1f;
+    [SerializeField] protected float speedAccel = 1f;
 
     protected SkeletonAnimation skeletonAnimation;
 
@@ -149,6 +150,10 @@ public class EUnit : MEntity
         return speedBase * speedModifier;
     }
 
+    public virtual float GetUnitAccel()
+    {
+        return speedAccel;
+    }
 
     // Protected and private:
 

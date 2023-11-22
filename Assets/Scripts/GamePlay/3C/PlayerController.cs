@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     private PlayerControls playerControls;
     [SerializeField] private Player player;
 
+    // MainCamera
+    [SerializeField, ReadOnly]
+    private Camera mainCamera;
+
     // Animation Controllers
     SkeletonAnimation skeletonAnimation;
 
@@ -38,11 +42,16 @@ public class PlayerController : MonoBehaviour
 
     // Lock input from keyboard
     [SerializeField] private bool bInputLocked = false;
-    // Lock attack movement
     // Lock all movement
     [SerializeField] private bool bMovementLocked = false;
-    // Lock all active mmovement
-    [SerializeField] private bool bMovable = false;
+    // Control fire mode
+    [SerializeField] private bool bShooter = false;
+
+    // Shooter Configurations
+    [SerializeField] private float fireLineSize = 0.2f;
+    [SerializeField] private float fireLineZ = 1.3f;
+    // Prev Renderer
+    private LineRenderer lineRenderer;
 
     private void Awake()
     {
@@ -55,6 +64,7 @@ public class PlayerController : MonoBehaviour
         {
             player = GetComponent<Player>();
         }
+        mainCamera = FindFirstObjectByType<Camera>();
     }
 
     private void init(bool bWorldMode = true)
@@ -91,24 +101,78 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!bMovementLocked || !bMovable || PersistentGameManager.Instance.bGamePaused)
+        if (bInputLocked || !bMovementLocked || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }
 
+        // Config movement
         Vector3 force = Vector3.zero;
-
-        if (moveInput.magnitude != 0)
+        if (moveInput.magnitude != 0 && !bAirBorne)
         {
-            force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitSpeed();
+            force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitAccel();
+            UpdateAnimationState(WalkAnim);
+        }
+        else if (moveInput.magnitude != 0 && bAirBorne)
+        {
+            force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitAccel() * 0.5f;
             UpdateAnimationState(WalkAnim);
         }
         else
         {
             UpdateAnimationState(IdleAnim);
-            
+
         }
         playerRigidBody.AddForce(force);
+
+        // Clamp the max speed
+        Vector3 horizontalVelocity = playerRigidBody.velocity;
+        horizontalVelocity.y = 0;
+
+        if (horizontalVelocity.magnitude > player.GetUnitSpeed())
+        {
+            horizontalVelocity = horizontalVelocity.normalized * player.GetUnitSpeed();
+            playerRigidBody.velocity = new Vector3(horizontalVelocity.x, playerRigidBody.velocity.y, horizontalVelocity.z);
+        }
+    }
+
+    private void Update()
+    {
+        if (bInputLocked)
+        {
+            return;
+        }
+        // Config Shooting and Attacking
+        if (bShooter)
+        {
+            AimCursor();
+        }
+    }
+
+    // Config firing Angle
+    private void AimCursor()
+    {
+        Vector3 mousePosition = Input.mousePosition;
+        Vector3 worldPosition = mainCamera.ScreenToWorldPoint(mousePosition);
+        Vector3 playerPos = player.transform.position;
+        playerPos.z = fireLineZ;
+        worldPosition.z = fireLineZ;
+
+        Vector3 directionToCursor = (worldPosition - playerPos).normalized;
+
+        // Config fireline preview
+        float lineLength = (worldPosition - playerPos).magnitude * fireLineSize;
+        Vector3 startLine = playerPos;
+        Vector3 endLine = startLine + directionToCursor * lineLength;
+
+        lineRenderer.SetPosition(0, startLine);
+        lineRenderer.SetPosition(1, endLine);
+
+        // Config Firing
+        if (Input.GetMouseButton(0))
+        {
+            player.FireProjectile(directionToCursor);
+        }
     }
 
     private void UpdateAnimationState(string state)
@@ -155,7 +219,7 @@ public class PlayerController : MonoBehaviour
     private void jump(InputAction.CallbackContext context)
     {
         //Player's position is locked
-        if (bWorld || bAirBorne || bDash || !bMovementLocked || !bMovable || PersistentGameManager.Instance.bGamePaused)
+        if (bWorld || bAirBorne || bDash || !bMovementLocked || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }
@@ -164,7 +228,7 @@ public class PlayerController : MonoBehaviour
 
     private void dash(InputAction.CallbackContext context)
     {
-        if (bWorld ||¡¡bAirBorne || bDash || !bMovementLocked || !bMovable || PersistentGameManager.Instance.bGamePaused)
+        if (bWorld ||¡¡bAirBorne || bDash || !bMovementLocked || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }
@@ -203,42 +267,66 @@ public class PlayerController : MonoBehaviour
     }
 
     // Set mode
-    public void SetPlayerMode(Enums.SCENE_TYPE worldType)
+    public void SetPlayerMode(Enums.SCENE_TYPE worldType, Enums.LEVEL_TYPE levelType = Enums.LEVEL_TYPE.None)
     {
+        bWorld = false;
         if (worldType == Enums.SCENE_TYPE.World)
         {
             bWorld = true;
         }
-        else 
+        switch (levelType)
         {
-            bWorld = false;
+            case Enums.LEVEL_TYPE.Shooter:
+                bShooter = true;
+                break;
+            case Enums.LEVEL_TYPE.None:
+                break;
         }
         init(bWorld);
+    }
+
+    public void SetAsShooter()
+    {
+        bShooter = true;
+        lineRenderer = GetComponent<LineRenderer>();
+        if (lineRenderer != null)
+        {
+            lineRenderer.enabled = true;
+        }
+    }
+
+    // Lock All Inputs
+    public void LockPlayerInput()
+    {
+        bInputLocked = true;
+        ChangePlayerMovementState(false);
+        bShooter = false;
+        if (lineRenderer != null)
+        {
+            lineRenderer.enabled = false;
+        }
+    }
+
+    // Unlock All Inputs
+    public void UnlockPlayerInput()
+    {
+        bInputLocked = false;
+        ChangePlayerMovementState(true);
     }
 
     // All external classes attampting to move the player shall call this method
     // movement: vector indicating the movement
     // bAvtiveMove: if this movement comes from the player input
-    public void MovePlayer(Vector3 movement, bool bActiveMove)
+    public void MovePlayer(Vector3 movement)
     {
         //Player's position is locked
         if (!bMovementLocked)
         {
             return;
         }
-        // Active move banned
-        if (bActiveMove && !bMovable)
-        {
-            return;
-        }
+
         Vector3 moveForce = movement * player.GetUnitSpeed();
         playerRigidBody.AddForce(moveForce);
-    }
-
-    // Force move of the player
-    public void RelocatePlayer(Vector3 targetPos)
-    {
-
     }
 
     // Reset flags
@@ -248,18 +336,8 @@ public class PlayerController : MonoBehaviour
     }
 
     // Change input and lock state
-    public void ChangePlayerInputState(bool bState = false)
-    {
-        bInputLocked = bState;
-    }
-
     public void ChangePlayerMovementState(bool bState = false)
     {
         bMovementLocked = bState;
-    }
-
-    public void ChangePlayerActiveMovementState(bool bState = false)
-    {
-        bMovable = bState;
     }
 }
