@@ -71,6 +71,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ContextMenu\MenuItemEvent.cs" />
     <Compile Include="Assets\Scripts\GamePlay\LogicSystem\HUD\HUDManager.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\IO\IOExceptionsView.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\Object2D\Projectile\BulletLeaf.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Attributes\ExclusionRegistryAttribute.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Table\TableHeaderCellInfo.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\SelectableHelper\SelectableHelperSelectedColor.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\References\DataBindTemplates.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Async\IAwaitable{T}.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Dialog\PickerListViewCustom.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\Object2D\Projectile\MissileSmall.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Utilities\UtilitiesEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\SceneGeneratorHelper.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Calendar\CalendarDateBaseDefaultDayBackground.cs" />
@@ -215,6 +217,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CenteredSlider\Vertical\CenteredSliderVerticalValueObserver.cs" />
     <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Interactive\WindManagerSSU.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\Dialog\DialogButtonComponentTMPro.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\Object2D\Projectile\LaserSmall.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\TableGeneratorHelper.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CircularSlider\CircularSliderBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\TrackFormBase.cs" />
@@ -288,6 +291,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\References\PrefabsTemplates.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ListView\ListViewInt\ListViewIntSelectedItemsObserver.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Tabs\TabSelectEvent.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Character\CharacterManager.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CollectionsUtilities\ICollectionItemChanged.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Switch\SwitchGroup.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Drag-and-Drop\LayoutDropIndicator.cs" />
@@ -350,6 +354,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\SnapGrid\SnapGridBase.Point.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Effects\BorderEffectColor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Connector\MultipleConnector.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\Object2D\Projectile\BulletVT.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Misc\StyleContextMenu.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\SelectableHelper\SelectableHelperDisabledSprite.cs" />
     <Compile Include="Assets\Scripts\Contents\MusicConfig.cs" />
@@ -519,6 +524,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Dialog\DialogButtonComponentBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\RangeSlider\Int\RangeSliderValueMinObserver.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\EasyLayout\EasyLayoutFlexOrStaggered.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\Character2DData.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Calendar\CalendarDayOfWeek.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\Events\ListViewItemEvents.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Input\StyleCenteredSlider.cs" />
@@ -590,6 +596,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\ComparisonCompare.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\UtilitiesAlign.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CenteredSlider\Horizontal\CenteredSliderValueMaxSetter.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\Object2D\Target\FlyingTargetMid.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Tabs\TabButtonComponent.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Calendar\CalendarDateBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\TrackBackgroundBase.cs" />
@@ -662,6 +669,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\EasyLayout\EasyLayoutGrid.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Effects\GrayscaleEffect.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Groupable\Groupable.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\2DScene\Level2DGroup.cs" />
     <Compile Include="Assets\Scripts\FrameWork\PersistentGameManager.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CircularSlider\CircularSliderFloat.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\Calendar\TimeBaseTimeProvider.cs" />
@@ -834,6 +842,7 @@
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Wrappers\Selectable\SelectableHighlightedSprite.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Core\UIWidgetsMonoBehaviour.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Drag-and-Drop\ListViewIconsMultipleDropSupport.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Character\UI_CharacterPicker.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Timeline\Timeline.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Dialog\PickerOptionalOK{TValue,TPicker}.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\IO\FileListViewPathComponent.cs" />

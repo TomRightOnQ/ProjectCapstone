@@ -24,10 +24,31 @@ public class Target : MEntity
     [SerializeField] protected float targetLife = 5f;
     [SerializeField] protected int targetPoints = 1;
 
+    // Materials
+    [SerializeField] protected Material defaultMaterial;
+    [SerializeField, ReadOnly] protected Material instanceMaterial;
+
+    // Mesh Renderer
+    [SerializeField] protected MeshRenderer targetRenderer;
+
     // Public:
     public void SetUp()
     {
         targetCurrentHP = targetHP;
+        if (targetRigidBody == null)
+        {
+            targetRigidBody = GetComponent<Rigidbody>();
+        }
+        if (targetRenderer == null)
+        {
+            targetRenderer = GetComponent<MeshRenderer>();
+        }
+        if (instanceMaterial == null)
+        {
+            instanceMaterial = new Material(defaultMaterial);
+        }
+        targetRenderer.material = instanceMaterial;
+        revertMaterial();
     }
 
     // Launch the Target
@@ -47,10 +68,13 @@ public class Target : MEntity
     public void TakeDamage(float damage)
     {
         targetCurrentHP -= damage;
+        instanceMaterial.SetFloat("_Hitted", 0);
         if (targetCurrentHP <= 0)
         {
             explode();
+            return;
         }
+        Invoke("revertMaterial", 0.1f);
     }
 
     // Private:
@@ -62,6 +86,11 @@ public class Target : MEntity
             bExploded = true;
             deactivate();
         }
+    }
+
+    protected void revertMaterial()
+    {
+        instanceMaterial.SetFloat("_Hitted", 1);
     }
 
     protected void explode()
@@ -79,6 +108,8 @@ public class Target : MEntity
 
     protected void deactivate()
     {
+        CancelInvoke("revertMaterial");
+        revertMaterial();
         targetRigidBody.velocity = Vector3.zero;
         gameObject.SetActive(false);
         PrefabManager.Instance.Destroy(this.gameObject);

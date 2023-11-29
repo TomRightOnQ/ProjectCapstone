@@ -51,7 +51,15 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.InitDayToSave();
         SaveConfig.Instance.InitNPCToSave();
         SaveConfig.Instance.InitGuildToSave();
+        SaveConfig.Instance.InitCharacter2DToList();
         SaveConfig.Instance.LockSave();
+    }
+
+    // Set the save state to a specfic day
+    public void SetSaveToDay(int day)
+    {
+        // Set Character Lock
+        SaveConfig.Instance.SetCharacter2DLockToDay(day);
     }
 
     // Write data to scriptable
@@ -65,6 +73,25 @@ public class SaveManager : MonoBehaviour
     
     }
 
+    // Character Locking
+    // Lock or Unlock a 2D character
+    public void LockCharacter2D(int characterID, Enums.LEVEL_TYPE levelType)
+    {
+        SaveConfig.Instance.LockCharacter2D(characterID, levelType);
+    }
+
+    public void UnlockCharacter2D(int characterID, Enums.LEVEL_TYPE levelType)
+    {
+        SaveConfig.Instance.UnlockCharacter2D(characterID, levelType);
+    }
+
+    // Get the current character lock
+    public List<int> GetCurrentCharacterLock(int currentDay, Enums.LEVEL_TYPE levelType)
+    {
+        return SaveConfig.Instance.GetCurrentCharacterLock(currentDay, levelType);
+    }
+
+    // DayCycle
     public void SaveMaxDay(int maxDay)
     {
         if (maxDay <= SaveConfig.Instance.GetDay().MaxDay)

@@ -50,6 +50,20 @@ public class PlayerController : MonoBehaviour
     // Shooter Configurations
     [SerializeField] private float fireLineSize = 0.2f;
     [SerializeField] private float fireLineZ = 1.3f;
+
+    // Missile Configuratiojn
+    [SerializeField, ReadOnly]
+    private float aimAngle = 45f;
+    [SerializeField, ReadOnly]
+    private bool bMissile = false;
+    [SerializeField, ReadOnly]
+    private float minRange = 1f;
+    [SerializeField, ReadOnly]
+    private float maxRange = 30f;
+    [SerializeField, ReadOnly]
+    private Transform targetTransform;
+    protected LayerMask proxTargetLayerMask;
+
     // Prev Renderer
     private LineRenderer lineRenderer;
 
@@ -65,6 +79,7 @@ public class PlayerController : MonoBehaviour
             player = GetComponent<Player>();
         }
         mainCamera = FindFirstObjectByType<Camera>();
+        proxTargetLayerMask = 1 << LayerMask.NameToLayer("Target");
     }
 
     private void init(bool bWorldMode = true)
@@ -88,6 +103,7 @@ public class PlayerController : MonoBehaviour
             skeleton = skeletonAnimation.Skeleton;
         }
     }
+
 
     private void OnEnable()
     {
@@ -168,10 +184,49 @@ public class PlayerController : MonoBehaviour
         lineRenderer.SetPosition(0, startLine);
         lineRenderer.SetPosition(1, endLine);
 
+        // Config Missile
+        if (bMissile)
+        {
+            FindTarget();
+        }
+
         // Config Firing
         if (Input.GetMouseButton(0))
         {
-            player.FireProjectile(directionToCursor);
+            player.FireProjectile(directionToCursor, targetTransform);
+        }
+    }
+
+    private void FindTarget()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, maxRange, proxTargetLayerMask);
+        Transform closestTarget = null;
+        float closestDistance = float.MaxValue;
+
+        foreach (var hitCollider in hitColliders)
+        {
+            Vector3 directionToCollider = (hitCollider.transform.position - transform.position).normalized;
+            float angleToCollider = Vector3.Angle(transform.up, directionToCollider);
+
+            if (angleToCollider <= aimAngle)
+            {
+                float distance = Vector3.Distance(transform.position, hitCollider.transform.position);
+                if (distance < closestDistance && distance > minRange)
+                {
+                    closestDistance = distance;
+                    closestTarget = hitCollider.transform;
+                }
+            }
+        }
+
+        if (closestTarget != null)
+        {
+            targetTransform = closestTarget;
+
+        }
+        else 
+        {
+
         }
     }
 
@@ -293,6 +348,11 @@ public class PlayerController : MonoBehaviour
         {
             lineRenderer.enabled = true;
         }
+
+        // Check weapon type
+        ProjectileData.ProjectileDataStruct projData = ProjectileData.GetData(player.ProjectileID);
+        aimAngle = projData.LockAngle;
+        bMissile = projData.bGuided;
     }
 
     // Lock All Inputs

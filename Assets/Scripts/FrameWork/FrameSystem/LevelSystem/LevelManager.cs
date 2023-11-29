@@ -18,7 +18,12 @@ public class LevelManager : MonoBehaviour
     private Level2DData.Level2DDataStruct current2DLevel;
 
     // 2D Scene Game ID
+    [SerializeField, ReadOnly]
     private int gameID2D = -1;
+    [SerializeField, ReadOnly]
+    private int characterID = -1;
+    [SerializeField, ReadOnly]
+    private int groupID = 0;
 
     private void Awake()
     {
@@ -39,6 +44,9 @@ public class LevelManager : MonoBehaviour
     public void LoadScene(int id)
     {
         LoadScene(LevelConfig.Instance.LevelCollections[id].SceneName);
+        groupID = 0;
+        characterID = -1;
+        gameID2D = -1;
     }
 
     public void LoadScene(string sceneName)
@@ -51,7 +59,7 @@ public class LevelManager : MonoBehaviour
     }
 
     // Enter a 2D level
-    public void Load2DLevel(int levelID)
+    public void Load2DLevel(int levelID, int chosenCharacterID = 1)
     {
         if (levelID < 0)
         {
@@ -59,6 +67,8 @@ public class LevelManager : MonoBehaviour
         }
         current2DLevel = Level2DData.GetData(levelID);
         gameID2D = levelID;
+        characterID = chosenCharacterID;
+        groupID = current2DLevel.GroupID;
         LevelManager.Instance.LoadScene(current2DLevel.SceneName);
     }
 
@@ -148,6 +158,19 @@ public class LevelManager : MonoBehaviour
 
     private void load2DScene(string sceneName, string stringName)
     {
+        // Config group
+        Level2DGroup[] levelGroups = FindObjectsByType<Level2DGroup>(FindObjectsSortMode.None);
+        for (int i = 0; i < levelGroups.Length; i++)
+        {
+            if (levelGroups[i].GroupID == groupID)
+            {
+                levelGroups[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                levelGroups[i].gameObject.SetActive(false);
+            }
+        }
         placePlayer(sceneName, true);
         finishBuild(stringName, Enums.SCENE_TYPE.Battle);
     }
@@ -174,7 +197,7 @@ public class LevelManager : MonoBehaviour
             GameObject managerObject = new GameObject("GameManager2D");
             managerObject.AddComponent<GameManager2D>();
 
-            GameManager2D.Instance.SetGame(gameID2D);
+            GameManager2D.Instance.SetGame(gameID2D, characterID);
         }
         else 
         {
@@ -191,10 +214,16 @@ public class LevelManager : MonoBehaviour
     // ---Methods to rebuild the scene---
     private void placePlayer(string sceneName, bool bBattleLevel = false)
     {
-        string playerPrefabName = "Player";
-        if (bBattleLevel)
+        if (currentSceneType != Enums.SCENE_TYPE.Battle)
         {
-            playerPrefabName = "2DPlayer";
+            groupID = 0;
+        }
+
+        string playerPrefabName = "Player";
+        if (bBattleLevel && characterID != -1)
+        {
+            Character2DData.Character2DDataStruct characterData = Character2DData.GetData(characterID);
+            playerPrefabName = characterData.PrefabName;
         }
         SaveConfig.PlayerSaveData playerData = SaveManager.Instance.GetPlayer();
         GameObject playerObject;
@@ -205,7 +234,7 @@ public class LevelManager : MonoBehaviour
         else 
         {
             LevelData levelData = LevelConfig.Instance.GetLevelData(sceneName);
-            playerObject = PrefabManager.Instance.Instantiate(playerPrefabName, levelData.SpawnPoints[0], Quaternion.identity);
+            playerObject = PrefabManager.Instance.Instantiate(playerPrefabName, levelData.SpawnPoints[groupID], Quaternion.identity);
         }
         // Set Player to DataManager
         PersistentDataManager.Instance.SetPlayer(playerObject.GetComponent<Player>());

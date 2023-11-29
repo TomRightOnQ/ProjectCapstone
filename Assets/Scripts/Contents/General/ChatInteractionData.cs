@@ -38,12 +38,14 @@ public static class ChatInteractionData
         {3, new ChatInteractionDataStruct(3, "Go to the level", true, "ChatInteraction", new int[]{2}, Enums.INTERACTION_TYPE.Teleport, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
         {4, new ChatInteractionDataStruct(4, "I'm a choice to jump to the next one.", true, "ChatInteraction", new int[]{5}, Enums.INTERACTION_TYPE.Next, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
         {5, new ChatInteractionDataStruct(5, "This message will end the chat.", false, "ChatInteraction", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
-        {6, new ChatInteractionDataStruct(6, "Wanna try a sample game?", false, "Atom", new int[]{7,8}, Enums.INTERACTION_TYPE.Choice, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
+        {6, new ChatInteractionDataStruct(6, "Wanna try a sample game?", false, "Atom", new int[]{7,8,12,13}, Enums.INTERACTION_TYPE.Choice, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
         {7, new ChatInteractionDataStruct(7, "Yes I'm ready", true, "You", new int[]{1}, Enums.INTERACTION_TYPE.StartGame, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
         {8, new ChatInteractionDataStruct(8, "Nope...", true, "You", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
         {9, new ChatInteractionDataStruct(9, "Ready for the the first day?", false, "Atom", new int[]{10,11}, Enums.INTERACTION_TYPE.Choice, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
         {10, new ChatInteractionDataStruct(10, "Yes I'm ready", true, "You", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.CompleteTask, new int[]{1}, 2)},
         {11, new ChatInteractionDataStruct(11, "Nope...", true, "You", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
+        {12, new ChatInteractionDataStruct(12, "Try Shooter Level 1", true, "You", new int[]{4}, Enums.INTERACTION_TYPE.StartGame, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
+        {13, new ChatInteractionDataStruct(13, "Try Shooter Level 2", true, "You", new int[]{5}, Enums.INTERACTION_TYPE.StartGame, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
     };
 
     public static ChatInteractionDataStruct GetData(int id)

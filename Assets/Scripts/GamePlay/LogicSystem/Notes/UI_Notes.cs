@@ -78,6 +78,7 @@ public class UI_Notes : UIBase
             notesItems.Add(newItem);
         }
     }
+
     // Remove from the list
     public void RemoveFromNoteList(int noteID)
     {

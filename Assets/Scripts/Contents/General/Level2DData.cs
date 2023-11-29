@@ -10,29 +10,32 @@ public static class Level2DData
         public string Name;
         public string SceneName;
         public Enums.LEVEL_TYPE Type;
-        public string Next;
+        public int GroupID;
         public int Complete;
         public float TimeLimit;
         public int ScoreGoal;
+        public string Next;
 
-        public Level2DDataStruct(int ID, string Name, string SceneName, Enums.LEVEL_TYPE Type, string Next, int Complete, float TimeLimit, int ScoreGoal)
+        public Level2DDataStruct(int ID, string Name, string SceneName, Enums.LEVEL_TYPE Type, int GroupID, int Complete, float TimeLimit, int ScoreGoal, string Next)
         {
             this.ID = ID;
             this.Name = Name;
             this.SceneName = SceneName;
             this.Type = Type;
-            this.Next = Next;
+            this.GroupID = GroupID;
             this.Complete = Complete;
             this.TimeLimit = TimeLimit;
             this.ScoreGoal = ScoreGoal;
+            this.Next = Next;
         }
     }
     public static Dictionary<int, Level2DDataStruct> data = new Dictionary<int, Level2DDataStruct>
     {
-        {1, new Level2DDataStruct(1, "Platformer_1", "PlatformerLevel", Enums.LEVEL_TYPE.Platformer, "AudienceLevel", 8, -1f, -1)},
-        {2, new Level2DDataStruct(2, "Track_1", "TrackLevel", Enums.LEVEL_TYPE.Track, "AudienceLevel", -1, -1f, -1)},
-        {3, new Level2DDataStruct(3, "Dual_1", "DualLevel", Enums.LEVEL_TYPE.Dual, "AudienceLevel", -1, -1f, -1)},
-        {4, new Level2DDataStruct(4, "Shooter_1", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, "AudienceLevel", -1, 60f, 30)},
+        {1, new Level2DDataStruct(1, "Platformer_1", "PlatformerLevel", Enums.LEVEL_TYPE.Platformer, 0, 8, -1f, -1, "AudienceLevel")},
+        {2, new Level2DDataStruct(2, "Track_1", "TrackLevel", Enums.LEVEL_TYPE.Track, 0, -1, -1f, -1, "AudienceLevel")},
+        {3, new Level2DDataStruct(3, "Dual_1", "DualLevel", Enums.LEVEL_TYPE.Dual, 0, -1, -1f, -1, "AudienceLevel")},
+        {4, new Level2DDataStruct(4, "Shooter_1", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, 0, -1, 60f, 30, "AudienceLevel")},
+        {5, new Level2DDataStruct(5, "Shooter_2", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, 1, -1, 60f, 30, "AudienceLevel")},
     };
 
     public static Level2DDataStruct GetData(int id)

@@ -21,6 +21,10 @@ public class GameManager2D : MonoBehaviour
     private int gameLevelID = -1;
     public int GameLevelID => gameLevelID;
 
+    // Chosen Character ID
+    private int characterID = 1;
+    public int CharacterID => characterID;
+
     // UI
     [SerializeField] private UI_Level2D UI_Level2D;
 
@@ -69,9 +73,10 @@ public class GameManager2D : MonoBehaviour
     }
 
     // Config the game scene
-    public void SetGame(int gameID)
+    public void SetGame(int gameID, int playerCharacterID)
     {
         gameLevelID = gameID;
+        characterID = playerCharacterID;
         UI_Level2D = UIManager.Instance.CreateUI("UI_Level2D").GetComponent<UI_Level2D>();
 
         Level2DData.Level2DDataStruct level2DData = Level2DData.GetData(gameID);
@@ -117,11 +122,13 @@ public class GameManager2D : MonoBehaviour
     // Victory/DefeatL This indicates the result of the game
     public void EndGame(bool bPass = true, bool bVictory = true)
     {
-        StartCoroutine(UpdateTimerCoroutine());
+        StopCoroutine(UpdateTimerCoroutine());
         BattleObserver.Instance.EndGame();
         HUDManager.Instance.EndHUDTimer();
         InputManager.Instance.LockInput();
+        CharacterManager.Instance.LockCharacter2D(characterID, gameMode);
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_2DGAME_END);
+        HUDManager.Instance.HideAllHUD();
         UI_Level2D.SetLevelCompletePanel(true);
     }
 

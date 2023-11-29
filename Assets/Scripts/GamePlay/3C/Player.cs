@@ -54,7 +54,7 @@ public class Player : EUnit
 
     // Public:
     // Fire
-    public void FireProjectile(Vector3 fireDirection)
+    public void FireProjectile(Vector3 fireDirection, Transform targetTransform)
     {
         if (!bFireCDReady)
         {
@@ -68,7 +68,7 @@ public class Player : EUnit
         if (projectile != null)
         {
             projectile.SetUp(projectileID);
-            projectile.Launch(fireDirection);
+            projectile.Launch(fireDirection, targetTransform);
         }
         else
         {

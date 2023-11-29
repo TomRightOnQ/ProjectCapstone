@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 /// <summary>
 /// In-game Menu
@@ -15,9 +17,12 @@ public class UI_Menu : UIBase
     // Flags
     [SerializeField, ReadOnly]
     private bool bLocked = false;
-    
 
-    // Public:
+    // List of functional buttons
+    [SerializeField]
+    private List<Button> functionalButtonList = new List<Button>();
+
+
     // Open Menu
     public void OpenMenu()
     {
@@ -51,6 +56,15 @@ public class UI_Menu : UIBase
         menuAnimator.Play("MenuOutAnimation");
         float length = menuAnimator.GetCurrentAnimatorStateInfo(0).length;
         DisableMenu();
+    }
+
+    // Set all buttons except menu locked or unlocked
+    public void SetFunctionalButtonState(bool bActive)
+    {
+        for (int i = 0; i < functionalButtonList.Count; i++)
+        {
+            functionalButtonList[i].interactable = bActive;
+        }
     }
 
     // Set the current day
@@ -124,6 +138,7 @@ public class UI_Menu : UIBase
     {
         LevelManager.Instance.LoadScene(Constants.SCENE_MAIN_MENU);
     }
+
     // Private:
 
 }

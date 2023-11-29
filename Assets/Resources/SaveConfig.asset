@@ -34,16 +34,19 @@ MonoBehaviour:
     interactionIDs: 0200000004000000
     Scene: AudienceLevel
     bActive: 1
-  noteData:
-    NoteIDs: 00000000
-    ItemIDs: 01000000
-    ReportIDs: 02000000
+  - NpcID: 1
+    NpcName: Chatter
+    Position: {x: 2, y: 0.5, z: 0}
+    interactionIDs: 01000000
+    Scene: DefaultLevel
+    bActive: 1
+  - NpcID: 2
+    NpcName: Atom
+    Position: {x: -2.5, y: 7.25, z: -2}
+    interactionIDs: 0200000004000000
+    Scene: AudienceLevel
+    bActive: 1
   guildSaveDataList:
-  - GuildID: 5
-    Score: 16
-    DuelWin: 6
-    DuelLose: 1
-    bElminated: 0
   - GuildID: 1
     Score: 0
     DuelWin: 0
@@ -60,6 +63,11 @@ MonoBehaviour:
     DuelLose: 0
     bElminated: 0
   - GuildID: 4
+    Score: 0
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 5
     Score: 0
     DuelWin: 0
     DuelLose: 0
@@ -119,3 +127,22 @@ MonoBehaviour:
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
+  noteData:
+    NoteIDs: 00000000
+    ItemIDs: 01000000
+    ReportIDs: 02000000
+  character2DLockList:
+  - ShooterLevelLock: 
+    PlatformerLevelLock: 
+  - ShooterLevelLock: 
+    PlatformerLevelLock: 
+  - ShooterLevelLock: 
+    PlatformerLevelLock: 
+  - ShooterLevelLock: 
+    PlatformerLevelLock: 
+  - ShooterLevelLock: 
+    PlatformerLevelLock: 
+  - ShooterLevelLock: 
+    PlatformerLevelLock: 
+  - ShooterLevelLock: 
+    PlatformerLevelLock: 

@@ -77,7 +77,7 @@ public class DebugManager : MonoBehaviour
 
     public void EnterShooter()
     {
-        LevelManager.Instance.Load2DLevel(4);
+        CharacterManager.Instance.ShowCharacterPickerPanel(5);
         onClick();
     }
 }

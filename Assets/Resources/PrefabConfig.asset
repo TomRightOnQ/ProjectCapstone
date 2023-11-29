@@ -63,16 +63,6 @@ MonoBehaviour:
     bPoolByDefault: 0
     PrefabReference: {fileID: 5699732878155908487, guid: 13d691acb5f054b458b8ea7b001cc334,
       type: 3}
-  - name: 2DPlayer
-    PrefabPath: 
-    TypeName: Player
-    Count: 1
-    IsExpandable: 0
-    ExpandableRatio: 0.2
-    bPoolable: 0
-    bPoolByDefault: 0
-    PrefabReference: {fileID: 3410081246005573031, guid: c3f3bd58eb6199046b04b67a6bd87db5,
-      type: 3}
   - name: Player
     PrefabPath: 
     TypeName: Player
@@ -82,16 +72,6 @@ MonoBehaviour:
     bPoolable: 0
     bPoolByDefault: 0
     PrefabReference: {fileID: 543877054150755391, guid: 73863f8722b882540a98091025464ce0,
-      type: 3}
-  - name: BulletSmall
-    PrefabPath: 
-    TypeName: BulletSmall
-    Count: 10
-    IsExpandable: 1
-    ExpandableRatio: 0.5
-    bPoolable: 1
-    bPoolByDefault: 0
-    PrefabReference: {fileID: 1296052183316958792, guid: e028035da4211b1428b094a17c3e248b,
       type: 3}
   - name: P_GeneralReminder
     PrefabPath: 
@@ -103,6 +83,96 @@ MonoBehaviour:
     bPoolByDefault: 1
     PrefabReference: {fileID: 6414322973794016778, guid: b1d269aacf599964ea7d247f7ae647d7,
       type: 3}
+  - name: Player2D_1
+    PrefabPath: 
+    TypeName: Player
+    Count: 1
+    IsExpandable: 0
+    ExpandableRatio: 0
+    bPoolable: 0
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 8526560582831464781, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+      type: 3}
+  - name: Player2D_2
+    PrefabPath: 
+    TypeName: Player
+    Count: 1
+    IsExpandable: 0
+    ExpandableRatio: 0
+    bPoolable: 0
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 6703874159462560942, guid: d18d90ae73c41e24fbaf55da3d94ffef,
+      type: 3}
+  - name: Player2D_3
+    PrefabPath: 
+    TypeName: Player
+    Count: 1
+    IsExpandable: 0
+    ExpandableRatio: 0
+    bPoolable: 0
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 6140762676369609257, guid: 17b9a1280156ae94395d44b0dfb3fb7a,
+      type: 3}
+  - name: Player2D_4
+    PrefabPath: 
+    TypeName: Player
+    Count: 1
+    IsExpandable: 0
+    ExpandableRatio: 0
+    bPoolable: 0
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 1338545887191912199, guid: 6323bd34da4d8ab4e8166f15e0352f89,
+      type: 3}
+  - name: Player2D_5
+    PrefabPath: 
+    TypeName: Player
+    Count: 1
+    IsExpandable: 0
+    ExpandableRatio: 0
+    bPoolable: 0
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 6033011811365081348, guid: 7d84acb8a8ca3484fa11c2e4ee1267fb,
+      type: 3}
+  - name: BulletSmall
+    PrefabPath: 
+    TypeName: BulletSmall
+    Count: 10
+    IsExpandable: 1
+    ExpandableRatio: 0.5
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 1296052183316958792, guid: e028035da4211b1428b094a17c3e248b,
+      type: 3}
+  - name: BulletLeaf
+    PrefabPath: 
+    TypeName: BulletLeaf
+    Count: 10
+    IsExpandable: 1
+    ExpandableRatio: 0.5
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 7938392283112338055, guid: 9071786672f7e574a9c2dd569130930f,
+      type: 3}
+  - name: LaserSmall
+    PrefabPath: 
+    TypeName: LaserSmall
+    Count: 10
+    IsExpandable: 1
+    ExpandableRatio: 0.5
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 470428896884176233, guid: 756a72a307a4faa478f93cfd1c50a1c4,
+      type: 3}
+  - name: MissileSmall
+    PrefabPath: 
+    TypeName: MissileSmall
+    Count: 10
+    IsExpandable: 1
+    ExpandableRatio: 0.5
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 7231661533962449725, guid: f87218f437356c74ab77ee898f11bb10,
+      type: 3}
   - name: GravityTargetSmall
     PrefabPath: 
     TypeName: GravityTargetSmall
@@ -112,4 +182,24 @@ MonoBehaviour:
     bPoolable: 1
     bPoolByDefault: 0
     PrefabReference: {fileID: 8610155828918508476, guid: 18e322683ca9ec04e818db47b16c02dc,
+      type: 3}
+  - name: BulletVT
+    PrefabPath: 
+    TypeName: BulletVT
+    Count: 10
+    IsExpandable: 1
+    ExpandableRatio: 0.2
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 706728078302446487, guid: 19b4e6d79ecb83e419e4566095c0f6d0,
+      type: 3}
+  - name: FlyingTargetMid
+    PrefabPath: 
+    TypeName: FlyingTargetMid
+    Count: 10
+    IsExpandable: 1
+    ExpandableRatio: 0.2
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 6850441423145369418, guid: 03d0d3a2e8da6774793f981f95624325,
       type: 3}

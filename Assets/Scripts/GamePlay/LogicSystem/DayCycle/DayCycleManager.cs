@@ -110,6 +110,8 @@ public class DayCycleManager : MonoBehaviour
     {
         // First, remove the listener
         EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
+        // Reset essential data to the beginning of the day (auto)
+        SaveManager.Instance.SetSaveToDay(currentDay);
         // Run the day script
         switch (currentDay)
         {

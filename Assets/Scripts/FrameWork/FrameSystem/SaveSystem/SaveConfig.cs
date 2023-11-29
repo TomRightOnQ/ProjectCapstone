@@ -22,11 +22,15 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public List<NPCSaveData> NpcSaveDataList => npcSaveDataList;
 
     [SerializeField]
+    private List<GuildSaveData> guildSaveDataList = new List<GuildSaveData>();
+    public List<GuildSaveData> GuildSaveDataList => guildSaveDataList;
+
+    [SerializeField]
     private NoteData noteData = new NoteData();
 
     [SerializeField]
-    private List<GuildSaveData> guildSaveDataList = new List<GuildSaveData>();
-    public List<GuildSaveData> GuildSaveDataList => guildSaveDataList;
+    private List<Character2DLockData> character2DLockList = new List<Character2DLockData>();
+    public List<Character2DLockData> Character2DLockList => character2DLockList;
 
     // Datagrams
     [System.Serializable]
@@ -74,6 +78,13 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         public bool bElminated;
     }
 
+    [System.Serializable]
+    public class Character2DLockData
+    {
+        public List<int> ShooterLevelLock;
+        public List<int> PlatformerLevelLock;
+    }
+
     // Methods:
     public void SetPlayer(Vector3 position, string scene)
     {
@@ -115,7 +126,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
                 {
                     if (!noteData.NoteIDs.Contains(IDs[i]))
                     {
-                        noteData.NoteIDs.Add(i);
+                        noteData.NoteIDs.Add(IDs[i]);
                     }
                 }
                 noteData.NoteIDs.Sort();
@@ -125,7 +136,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
                 {
                     if (!noteData.ItemIDs.Contains(IDs[i]))
                     {
-                        noteData.ItemIDs.Add(i);
+                        noteData.ItemIDs.Add(IDs[i]);
                     }
                 }
                 noteData.NoteIDs.Sort();
@@ -135,7 +146,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
                 {
                     if (!noteData.ReportIDs.Contains(IDs[i]))
                     {
-                        noteData.ReportIDs.Add(i);
+                        noteData.ReportIDs.Add(IDs[i]);
                     }
                 }
                 noteData.NoteIDs.Sort();
@@ -154,7 +165,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
                 {
                     if (noteData.NoteIDs.Contains(IDs[i]))
                     {
-                        noteData.NoteIDs.Remove(i);
+                        noteData.NoteIDs.Remove(IDs[i]);
                     }
                 }
                 noteData.NoteIDs.Sort();
@@ -164,7 +175,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
                 {
                     if (noteData.ItemIDs.Contains(IDs[i]))
                     {
-                        noteData.ItemIDs.Remove(i);
+                        noteData.ItemIDs.Remove(IDs[i]);
                     }
                 }
                 noteData.NoteIDs.Sort();
@@ -174,7 +185,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
                 {
                     if (noteData.ReportIDs.Contains(IDs[i]))
                     {
-                        noteData.ReportIDs.Remove(i);
+                        noteData.ReportIDs.Remove(IDs[i]);
                     }
                 }
                 noteData.NoteIDs.Sort();
@@ -224,7 +235,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     // --Init-- Methods
     public void InitNPCToSave()
     {
-        npcSaveDataList.Clear();
+        //npcSaveDataList.Clear();
         foreach (var pair in NPCData.data)
         {
             NPCData.NPCDataStruct defaultNPC = pair.Value;
@@ -243,7 +254,95 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         }
     }
 
-    // Only public to SaveManager
+    // Modify character lock states
+    // --Init-- Methods
+    public void InitCharacter2DToList()
+    {
+        character2DLockList.Clear();
+        for (int i = 0; i < 7; i++)
+        {
+            character2DLockList.Add(new Character2DLockData());
+        }
+    }
+
+    // Lock or Unlock a 2D character
+    public void LockCharacter2D(int characterID, Enums.LEVEL_TYPE levelType)
+    {
+        switch (levelType)
+        {
+            case (Enums.LEVEL_TYPE.Shooter):
+                if (!character2DLockList[daySaveData.CurrentDay].ShooterLevelLock.Contains(characterID))
+                {
+                    character2DLockList[daySaveData.CurrentDay].ShooterLevelLock.Add(characterID);
+                }
+                break;
+            case (Enums.LEVEL_TYPE.Platformer):
+                if (!character2DLockList[daySaveData.CurrentDay].PlatformerLevelLock.Contains(characterID))
+                {
+                    character2DLockList[daySaveData.CurrentDay].PlatformerLevelLock.Add(characterID);
+                }
+                break;
+        }
+    }
+
+    public void UnlockCharacter2D(int characterID, Enums.LEVEL_TYPE levelType)
+    {
+        switch (levelType)
+        {
+            case (Enums.LEVEL_TYPE.Shooter):
+                if (character2DLockList[daySaveData.CurrentDay].ShooterLevelLock.Contains(characterID))
+                {
+                    character2DLockList[daySaveData.CurrentDay].ShooterLevelLock.Remove(characterID);
+                }
+                break;
+            case (Enums.LEVEL_TYPE.Platformer):
+                if (character2DLockList[daySaveData.CurrentDay].PlatformerLevelLock.Contains(characterID))
+                {
+                    character2DLockList[daySaveData.CurrentDay].PlatformerLevelLock.Remove(characterID);
+                }
+                break;
+        }
+    }
+
+    // Set the data to the begining of a day
+    public void SetCharacter2DLockToDay(int currentDay)
+    {
+        for (int i = currentDay; i < 7; i++)
+        {
+            character2DLockList[i].ShooterLevelLock = new List<int>();
+            character2DLockList[i].PlatformerLevelLock = new List<int>();
+        }
+        if (currentDay >= 1)
+        {
+            character2DLockList[currentDay].ShooterLevelLock = DeepCopyList(character2DLockList[currentDay - 1].ShooterLevelLock);
+            character2DLockList[currentDay].PlatformerLevelLock = DeepCopyList(character2DLockList[currentDay - 1].PlatformerLevelLock);
+        }
+    }
+
+    private List<int> DeepCopyList(List<int> sourceList)
+    {
+        List<int> newList = new List<int>();
+        foreach (int item in sourceList)
+        {
+            newList.Add(item);
+        }
+        return newList;
+    }
+
+    // Get the current character lock
+    public List<int> GetCurrentCharacterLock(int currentDay, Enums.LEVEL_TYPE levelType)
+    {
+        switch (levelType)
+        {
+            case (Enums.LEVEL_TYPE.Shooter):
+                return character2DLockList[currentDay].ShooterLevelLock;
+            case (Enums.LEVEL_TYPE.Platformer):
+                return character2DLockList[currentDay].PlatformerLevelLock;
+        }
+        return null;
+    }
+
+    // Modify Interactions
     public void AddInteractionToNPC(int npcID, int interactionID) 
     {
         var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);

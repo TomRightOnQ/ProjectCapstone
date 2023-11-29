@@ -71,7 +71,7 @@ public class TargetLauncher : MEntity
     protected void activateLauncher()
     {
         bActivated = true;
-        if (launchRoutine == null)
+        if (launchRoutine == null && gameObject.activeSelf)
         {
             launchRoutine = StartCoroutine(LaunchTargetsRoutine());
         }
@@ -79,6 +79,8 @@ public class TargetLauncher : MEntity
     // Stop the launcer
     protected void deactivateLauncher()
     {
+        EventManager.Instance.RemoveListener(GameEvent.Event.SHOOTER_LEVEL_BEGIN, OnRecv_ShooterLevelBegin);
+        EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_2DGAME_END, OnRecv_ShooterLevelEnd);
         if (!bActivated)
         {
             return;
@@ -89,8 +91,6 @@ public class TargetLauncher : MEntity
             StopCoroutine(launchRoutine);
             launchRoutine = null;
         }
-        EventManager.Instance.RemoveListener(GameEvent.Event.SHOOTER_LEVEL_BEGIN, OnRecv_ShooterLevelBegin);
-        EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_2DGAME_END, OnRecv_ShooterLevelEnd);
     }
 
     // Event Handlers

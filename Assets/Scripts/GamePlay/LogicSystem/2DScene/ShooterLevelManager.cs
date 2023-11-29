@@ -17,8 +17,6 @@ public class ShooterLevelManager : MonoBehaviour
     private float currentTime = 999f;
     [SerializeField, ReadOnly]
     private int currentScore = 0;
-    [SerializeField, ReadOnly]
-    private int targetScore = 999;
 
     // Flags
     [SerializeField] private bool bStarted = false;
@@ -38,6 +36,7 @@ public class ShooterLevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        configListners();
     }
 
     // Private:
@@ -55,11 +54,30 @@ public class ShooterLevelManager : MonoBehaviour
         }
     }
 
+
+    // Config Listeners
+    private void configListners()
+    {
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_2DGAME_END, OnRecv_ShooterLevelEnd);
+    }
+
     // End Game
     private void EndGame(bool bWin)
     {
+        if (!bStarted)
+        {
+            return;
+        }
         bStarted = false;
+        ui_ShooterLevel.HideShooterLevelUI();
         GameManager2D.Instance.EndGame(true, bWin);
+    }
+
+    // Event Handlers
+    private void OnRecv_ShooterLevelEnd()
+    {
+        EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_2DGAME_END, OnRecv_ShooterLevelEnd);
+        EndGame(true);
     }
 
     // Public:
@@ -74,8 +92,7 @@ public class ShooterLevelManager : MonoBehaviour
         levelID = id;
         Level2DData.Level2DDataStruct levelData = Level2DData.GetData(levelID);
         currentTime = levelData.TimeLimit;
-        targetScore = levelData.ScoreGoal;
-        ui_ShooterLevel.InitShooterLevelUI(currentTime, targetScore);
+        ui_ShooterLevel.InitShooterLevelUI(currentTime);
     }
 
     // Start the game
@@ -90,10 +107,6 @@ public class ShooterLevelManager : MonoBehaviour
     {
         currentScore += amount;
         ui_ShooterLevel.UpdateScore(currentScore);
-        if (currentScore >= targetScore)
-        {
-            EndGame(true);
-        }
     }
 
     public void RemoveScore(int amount)

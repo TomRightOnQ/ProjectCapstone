@@ -11,15 +11,19 @@ public class UI_ShooterLevel : UIBase
     // Text fields
     [SerializeField] private TextMeshProUGUI TB_Timer;
     [SerializeField] private TextMeshProUGUI TB_CurrentScore;
-    [SerializeField] private TextMeshProUGUI TB_Score;
 
     // Public:
     // Init
-    public void InitShooterLevelUI(float timeLimit, int scoreGoal)
+    public void InitShooterLevelUI(float timeLimit)
     {
         TB_Timer.text = timeLimit.ToString();
         TB_CurrentScore.text = "0";
-        TB_Score.text = "/" + scoreGoal.ToString();
+    }
+
+    // Hide All
+    public void HideShooterLevelUI()
+    {
+        gameObject.SetActive(false);
     }
 
     // Set Timer

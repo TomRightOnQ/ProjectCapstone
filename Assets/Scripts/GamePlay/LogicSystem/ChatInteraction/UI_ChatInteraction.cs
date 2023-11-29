@@ -115,10 +115,10 @@ public class UI_ChatInteraction : UIBase
             case Enums.INTERACTION_TYPE.None:
                 break;
             case Enums.INTERACTION_TYPE.Choice:
-                refreshChat(choiceInteraction.Target[index]);
+                refreshChat(choiceInteraction.Target[0]);
                 break;
             case Enums.INTERACTION_TYPE.StartGame:
-                LevelManager.Instance.Load2DLevel(choiceInteraction.Target[0]);
+                CharacterManager.Instance.ShowCharacterPickerPanel(choiceInteraction.Target[0]);
                 break;
             case Enums.INTERACTION_TYPE.Teleport:
                 LevelManager.Instance.LoadScene(LevelConfig.Instance.GetLevelData(choiceInteraction.Target[0]).SceneName);

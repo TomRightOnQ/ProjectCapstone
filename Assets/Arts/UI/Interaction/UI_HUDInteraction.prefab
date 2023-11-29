@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6865866624629397872}
   - component: {fileID: 2571488229254635080}
   - component: {fileID: 1645587599693770305}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: UI_HUDInteraction
   m_TagString: UIBase
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5902949568183006776}
   - component: {fileID: 5902949568182674940}
   - component: {fileID: 5902949568197038454}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: ScrollRect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 5902949568197038450}
   - component: {fileID: 5902949568197150772}
   - component: {fileID: 5931048536596429160}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: InteractionList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 5902949568183006780}
   - component: {fileID: 5902949568197038456}
   - component: {fileID: 5902949568197038462}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: List
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,8 +643,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -48.76203, y: -0.000061035156}
+  m_SizeDelta: {x: 97.524, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &5902949568197038456
 MonoBehaviour:
@@ -691,7 +691,7 @@ MonoBehaviour:
   rowAlign: 0
   innerAlign: 0
   cellAlign: 0
-  spacing: {x: 2, y: 2}
+  spacing: {x: 2, y: 5}
   symmetric: 1
   margin: {x: 5, y: 5}
   marginInner:
@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 5902949568197038452}
   - component: {fileID: 5902949568197038458}
   - component: {fileID: 7597494721554895969}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,8 +832,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 155.718, y: 0}
+  m_SizeDelta: {x: 311.436, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5902949568182674882
 CanvasRenderer:

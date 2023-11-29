@@ -37,7 +37,16 @@ public class MenuManager : MonoBehaviour
             SetCurrentDayText(DayCycleManager.Instance.CurrentDay);
 
             uiObject.SetActive(false);
+            configHandlers();
         }
+    }
+
+    // Private:
+    // Handlers
+    private void configHandlers()
+    {
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_UNLOADED, OnRecv_SceneUnloaded);
     }
 
     // Public:
@@ -88,5 +97,18 @@ public class MenuManager : MonoBehaviour
         {
             ui_Menu.SetCurrentDayText(currentDay);
         }
+    }
+
+    // Event Handlers
+    private void OnRecv_SceneLoaded()
+    {
+        // Unlock all buttons except MainMenu
+        ui_Menu.SetFunctionalButtonState(true);
+    }
+
+    private void OnRecv_SceneUnloaded()
+    {
+        // Lock all buttons except MainMenu
+        ui_Menu.SetFunctionalButtonState(false);
     }
 }

@@ -114,6 +114,7 @@ public class PlayerCamera : MonoBehaviour
 
     public void SetCameraToTarget(GameObject target, EUnit targetUnit)
     {
+        transform.position = new Vector3(target.transform.position.x, transform.position.y, transform.position.z);
         targetObject = target;
         unit = targetUnit;
     }

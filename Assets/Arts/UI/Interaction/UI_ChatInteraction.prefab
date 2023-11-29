@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 776897887}
   - component: {fileID: 776897886}
   - component: {fileID: 776897885}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: SV_Choices
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 955882999}
   - component: {fileID: 955883001}
   - component: {fileID: 955883000}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: TB_ChatSpeaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 1077126459}
   - component: {fileID: 1077126461}
   - component: {fileID: 1077126460}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: TB_ChatContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 1150308900}
   - component: {fileID: 1150308903}
   - component: {fileID: 1150308901}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 1405005810}
   - component: {fileID: 1405005812}
   - component: {fileID: 1405005811}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: P_ChatChoicePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +523,7 @@ GameObject:
   - component: {fileID: 1728778064}
   - component: {fileID: 1728778065}
   - component: {fileID: 1728778066}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 4979292501420687517}
   - component: {fileID: 4979292501420687459}
   - component: {fileID: 4979292501420687516}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: P_DialogueInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,8 +630,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 202}
-  m_SizeDelta: {x: -400, y: 294}
+  m_AnchoredPosition: {x: 0, y: 174.50003}
+  m_SizeDelta: {x: -400, y: 349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4979292501420687459
 CanvasRenderer:
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 4979292503200273896}
   - component: {fileID: 4979292503200273897}
   - component: {fileID: 515868686}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: UI_ChatInteraction
   m_TagString: UIBase
   m_Icon: {fileID: 0}
@@ -806,7 +806,7 @@ GameObject:
   - component: {fileID: 2872557356052918418}
   - component: {fileID: 8966470978218706536}
   - component: {fileID: 7277443333560466570}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Btn_ClickAny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -942,7 +942,7 @@ PrefabInstance:
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
@@ -1092,7 +1092,7 @@ PrefabInstance:
     - target: {fileID: 7257604696556819444, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1121,7 +1121,7 @@ PrefabInstance:
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
@@ -1266,7 +1266,7 @@ PrefabInstance:
     - target: {fileID: 7257604696127403903, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -225
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 7257604696127403903, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
@@ -1286,7 +1286,7 @@ PrefabInstance:
     - target: {fileID: 7257604696556819444, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1315,7 +1315,7 @@ PrefabInstance:
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
@@ -1465,7 +1465,7 @@ PrefabInstance:
     - target: {fileID: 7257604696556819444, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1494,7 +1494,7 @@ PrefabInstance:
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
@@ -1624,7 +1624,7 @@ PrefabInstance:
     - target: {fileID: 7257604696127403903, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -175
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 7257604696127403903, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
@@ -1644,7 +1644,7 @@ PrefabInstance:
     - target: {fileID: 7257604696556819444, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1673,7 +1673,7 @@ PrefabInstance:
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7257604696127403900, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
@@ -1823,7 +1823,7 @@ PrefabInstance:
     - target: {fileID: 7257604696556819444, guid: 224a3dd43dc6d7b44b0f0cdb3623de7d,
         type: 3}
       propertyPath: m_Layer
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
