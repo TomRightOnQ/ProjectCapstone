@@ -14,6 +14,9 @@ public class Target : MEntity
     // State flags
     [SerializeField, ReadOnly] protected bool bExploded = true;
 
+    // Effects
+    [SerializeField] protected string explodeVFXName = "None";
+
     // RigidBody
     [SerializeField] protected Rigidbody targetRigidBody;
 
@@ -84,6 +87,12 @@ public class Target : MEntity
         if (other.tag == "Terrain")
         {
             bExploded = true;
+            if (explodeVFXName != "None")
+            {
+                GameEffectManager.Instance.PlayVFX(explodeVFXName,
+                    new Vector3(transform.position.x, transform.position.y, 0),
+                    transform.localScale);
+            }
             deactivate();
         }
     }
@@ -100,6 +109,13 @@ public class Target : MEntity
             return;
         }
         bExploded = true;
+
+        if (explodeVFXName != "None")
+        {
+            GameEffectManager.Instance.PlayVFX(explodeVFXName,
+                new Vector3(transform.position.x, transform.position.y, 0),
+                transform.localScale);
+        }
 
         ShooterLevelManager.Instance.AddScore(targetPoints);
 

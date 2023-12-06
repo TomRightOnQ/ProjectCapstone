@@ -23,6 +23,13 @@ public class TaskManager : MonoBehaviour
         }
     }
 
+    // Public:
+    // Process events
+    public void ProcessActions(int[] actionIDs)
+    {
+        configTaskActions(actionIDs);
+    }
+
     // Private:
     // Config task actions
     private void configTaskActions(int[] actionIDs)
@@ -37,6 +44,23 @@ public class TaskManager : MonoBehaviour
             ActionData.ActionDataStruct actionData = ActionData.GetData(id);
             switch (actionData.ActionType)
             {
+                case Enums.TASK_ACTION.None:
+                    break;
+                case Enums.TASK_ACTION.Chat:
+                    ChatInteractionManager.Instance.BeginInteraction(actionData.ActionTarget[0]);
+                    break;
+                case Enums.TASK_ACTION.End:
+                    ChatInteractionManager.Instance.EndInteraction();
+                    return;
+                case Enums.TASK_ACTION.Claim:
+                    ChatInteractionManager.Instance.EndInteraction();
+                    break;
+                case Enums.TASK_ACTION.StartGame:
+                    CharacterManager.Instance.ShowCharacterPickerPanel(actionData.ActionTarget[0]);
+                    break;
+                case Enums.TASK_ACTION.Teleport:
+                    LevelManager.Instance.LoadScene(LevelConfig.Instance.GetLevelData(actionData.ActionTarget[0]).SceneName);
+                    break;
                 case Enums.TASK_ACTION.AddInteraction:
                     addInteractionsFromTask(actionData.ActionTarget);
                     break;
@@ -52,8 +76,9 @@ public class TaskManager : MonoBehaviour
                 case Enums.TASK_ACTION.ExitActing:
                     HUDManager.Instance.ExitActingMode();
                     return;
-                case Enums.TASK_ACTION.None:
-                    break;
+                case Enums.TASK_ACTION.ShowReminder:
+                    ReminderManager.Instance.ShowGeneralReminder(actionData.ActionTarget[0]);
+                    return;
                 default:
                     break;
             }

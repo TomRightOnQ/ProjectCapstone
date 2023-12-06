@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Content: {fileID: 5902949568183006780}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -231,8 +231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 222, y: -539.5703}
-  m_SizeDelta: {x: -1393.9292, y: -692.0459}
+  m_AnchoredPosition: {x: 222, y: -295.894}
+  m_SizeDelta: {x: -1393.929, y: -250.874}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &5902949568182674942
 CanvasRenderer:
@@ -416,12 +416,12 @@ MonoBehaviour:
   disabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
   interactable: 1
   virtualization: 1
-  reversedOrder: 0
+  reversedOrder: 1
   listType: 0
   ChangeLayoutType: 0
   destroyDefaultItemsCache: 1
   sort: 1
-  disableScrollRect: 0
+  disableScrollRect: 1
   LimitScrollValue: 1
   scrollRect: {fileID: 5902949568197038454}
   direction: 1

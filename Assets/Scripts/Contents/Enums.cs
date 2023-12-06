@@ -1,26 +1,5 @@
 public static class Enums
 {
-    public enum INTERACTION_EVENT
-    {
-        CompleteTask,  // Screen Interaction Event: Complete a task
-        None,  // Screen Interaction Event: Doing nothing
-    }
-
-    public enum INTERACTION_TYPE
-    {
-        Next,  // Screen Interaction Type: Go to next chat
-        End,  // Screen Interaction Type: End the Interaction
-        Claim,  // Screen Interaction Type: Claim something
-        None,  // Screen Interaction Type: Doing nothing
-        Choice,  // Screen Interaction Type: Showing choices
-        Chat,  // Screen Interaction Type: Start a chat
-        Teleport,  // Screen Interaction Type: Teleport the player
-        StartGame,  // Screen Interaction Type: Bring the player to a game level
-        ShowReminder,  // Screen Interaction Type: Show a reminder
-        EnterActing,  // Screen Interaction Type: Start Acting mode
-        ExitActing,  // Screen Interaction Type: End Acting mode
-    }
-
     public enum LEVEL_TYPE
     {
         Platformer,  // Level:Platformer Stage
@@ -52,12 +31,21 @@ public static class Enums
 
     public enum TASK_ACTION
     {
+        Next,  // Screen Interaction Type: Go to next chat
+        End,  // Screen Interaction Type: End the Interaction
+        Claim,  // Screen Interaction Type: Claim something
+        None,  // Screen Interaction Type: Doing nothing
+        Choice,  // Screen Interaction Type: Showing choices
+        Chat,  // Screen Interaction Type: Start a chat
+        Teleport,  // Screen Interaction Type: Teleport the player
+        StartGame,  // Screen Interaction Type: Bring the player to a game level
+        ShowReminder,  // Screen Interaction Type: Show a reminder
+        EnterActing,  // Screen Interaction Type: Start Acting mode
+        ExitActing,  // Screen Interaction Type: End Acting mode
+        CompleteTask,  // Screen Interaction Type: Complete a task
         AddInteraction,  // Task: Add interactions to the targeted NPC
         RemoveInteraction,  // Task: Remove interactions from the targeted NPC
-        None,  // Task: Doing nothing
         UnlockNextDay,  // Task: Unlock to the next day
-        EnterActing,  // Task: Start Acting mode
-        ExitActing,  // Task: End Acting mode
     }
 
     public enum TASK_TYPE

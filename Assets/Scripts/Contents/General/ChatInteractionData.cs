@@ -10,42 +10,32 @@ public static class ChatInteractionData
         public string Content;
         public bool bIsChoice;
         public string Speaker;
-        public int[] Target;
-        public Enums.INTERACTION_TYPE Action;
+        public int[] Choices;
+        public int Next;
+        public int[] Action;
         public bool bEnd;
-        public Enums.INTERACTION_EVENT Event;
-        public int[] EventTarget;
-        public int SpeakerID;
 
-        public ChatInteractionDataStruct(int ID, string Content, bool bIsChoice, string Speaker, int[] Target, Enums.INTERACTION_TYPE Action, bool bEnd, Enums.INTERACTION_EVENT Event, int[] EventTarget, int SpeakerID)
+        public ChatInteractionDataStruct(int ID, string Content, bool bIsChoice, string Speaker, int[] Choices, int Next, int[] Action, bool bEnd)
         {
             this.ID = ID;
             this.Content = Content;
             this.bIsChoice = bIsChoice;
             this.Speaker = Speaker;
-            this.Target = Target;
+            this.Choices = Choices;
+            this.Next = Next;
             this.Action = Action;
             this.bEnd = bEnd;
-            this.Event = Event;
-            this.EventTarget = EventTarget;
-            this.SpeakerID = SpeakerID;
         }
     }
     public static Dictionary<int, ChatInteractionDataStruct> data = new Dictionary<int, ChatInteractionDataStruct>
     {
-        {1, new ChatInteractionDataStruct(1, "This is a message.", false, "ChatInteraction", new int[]{2}, Enums.INTERACTION_TYPE.Next, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
-        {2, new ChatInteractionDataStruct(2, "Now we have choices.", false, "You", new int[]{3,4}, Enums.INTERACTION_TYPE.Choice, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
-        {3, new ChatInteractionDataStruct(3, "Go to the level", true, "ChatInteraction", new int[]{2}, Enums.INTERACTION_TYPE.Teleport, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
-        {4, new ChatInteractionDataStruct(4, "I'm a choice to jump to the next one.", true, "ChatInteraction", new int[]{5}, Enums.INTERACTION_TYPE.Next, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
-        {5, new ChatInteractionDataStruct(5, "This message will end the chat.", false, "ChatInteraction", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 1)},
-        {6, new ChatInteractionDataStruct(6, "Wanna try a sample game?", false, "Atom", new int[]{7,8,12,13}, Enums.INTERACTION_TYPE.Choice, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
-        {7, new ChatInteractionDataStruct(7, "Yes I'm ready", true, "You", new int[]{1}, Enums.INTERACTION_TYPE.StartGame, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
-        {8, new ChatInteractionDataStruct(8, "Nope...", true, "You", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
-        {9, new ChatInteractionDataStruct(9, "Ready for the the first day?", false, "Atom", new int[]{10,11}, Enums.INTERACTION_TYPE.Choice, false, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
-        {10, new ChatInteractionDataStruct(10, "Yes I'm ready", true, "You", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.CompleteTask, new int[]{1}, 2)},
-        {11, new ChatInteractionDataStruct(11, "Nope...", true, "You", new int[]{-1}, Enums.INTERACTION_TYPE.End, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
-        {12, new ChatInteractionDataStruct(12, "Try Shooter Level 1", true, "You", new int[]{4}, Enums.INTERACTION_TYPE.StartGame, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
-        {13, new ChatInteractionDataStruct(13, "Try Shooter Level 2", true, "You", new int[]{5}, Enums.INTERACTION_TYPE.StartGame, true, Enums.INTERACTION_EVENT.None, new int[]{-1}, 2)},
+        {1, new ChatInteractionDataStruct(1, "Welcome to the debug version!", false, "Guide", new int[]{-1}, 2, new int[]{-1}, false)},
+        {2, new ChatInteractionDataStruct(2, "Now we have some minigames to play with...", false, "Guide", new int[]{3,4,5,6,7}, -1, new int[]{-1}, false)},
+        {3, new ChatInteractionDataStruct(3, "Shooter Level 1", true, "Guide", new int[]{-1}, -1, new int[]{1}, true)},
+        {4, new ChatInteractionDataStruct(4, "Shooter Level 2", true, "Guide", new int[]{-1}, -1, new int[]{2}, true)},
+        {5, new ChatInteractionDataStruct(5, "Shooter Level 3", true, "Guide", new int[]{-1}, -1, new int[]{3}, true)},
+        {6, new ChatInteractionDataStruct(6, "Shooter Level 4", true, "Guide", new int[]{-1}, -1, new int[]{4}, true)},
+        {7, new ChatInteractionDataStruct(7, "Shooter Level 5", true, "Guide", new int[]{-1}, -1, new int[]{5}, true)},
     };
 
     public static ChatInteractionDataStruct GetData(int id)

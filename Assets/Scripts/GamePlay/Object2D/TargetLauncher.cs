@@ -18,6 +18,14 @@ public class TargetLauncher : MEntity
     [SerializeField] private float minLaunchForce = 1f;
     [SerializeField] private float maxLaunchForce = 1f;
 
+    // Launching Angle
+    [SerializeField] private float minLaunchAngle = 0f;
+    [SerializeField] private float maxLaunchAngle = 0f;
+
+    // Cluster Count
+    [SerializeField] private int clusterCount = 1;
+    [SerializeField] private float clusterGap = 0.1f;
+
     // Flags
     [SerializeField, ReadOnly]
     private bool bActivated = false;
@@ -42,13 +50,25 @@ public class TargetLauncher : MEntity
             }
 
             float waitTime = Random.Range(minLaunchTime, maxLaunchTime);
+
+            Vector3 randomizedDirection = new Vector3(
+                transform.up.x + UnityEngine.Random.Range(-minLaunchAngle, maxLaunchAngle),
+                transform.up.y + UnityEngine.Random.Range(-minLaunchAngle, maxLaunchAngle),
+                transform.up.z
+            ).normalized;
+
+            for (int i = 0; i < clusterCount; i++)
+            {
+                launchTarget(randomizedDirection);
+                yield return new WaitForSeconds(clusterGap);
+            }
+
             yield return new WaitForSeconds(waitTime);
-            launchTarget();
         }
     }
 
     // Launch Target
-    protected virtual void launchTarget()
+    protected virtual void launchTarget(Vector3 randomizedDirection)
     {
         // Spawn Target
         GameObject targetObj = PrefabManager.Instance.Instantiate(targetName, gameObject.transform.position, Quaternion.identity);
@@ -59,7 +79,7 @@ public class TargetLauncher : MEntity
         if (target != null)
         {
             target.SetUp();
-            target.Launch(transform.up, launchForce);
+            target.Launch(randomizedDirection, launchForce);
         }
         else
         {

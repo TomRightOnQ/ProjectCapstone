@@ -19,13 +19,14 @@ public static class ActionData
     }
     public static Dictionary<int, ActionDataStruct> data = new Dictionary<int, ActionDataStruct>
     {
-        {1, new ActionDataStruct(1, Enums.TASK_ACTION.RemoveInteraction, new int[]{2,2})},
-        {2, new ActionDataStruct(2, Enums.TASK_ACTION.AddInteraction, new int[]{2,3})},
-        {3, new ActionDataStruct(3, Enums.TASK_ACTION.UnlockNextDay, new int[]{-1})},
-        {4, new ActionDataStruct(4, Enums.TASK_ACTION.RemoveInteraction, new int[]{2,3})},
-        {5, new ActionDataStruct(5, Enums.TASK_ACTION.RemoveInteraction, new int[]{2,4})},
-        {6, new ActionDataStruct(6, Enums.TASK_ACTION.EnterActing, new int[]{-1})},
-        {7, new ActionDataStruct(7, Enums.TASK_ACTION.ExitActing, new int[]{-1})},
+        {1, new ActionDataStruct(1, Enums.TASK_ACTION.StartGame, new int[]{4})},
+        {2, new ActionDataStruct(2, Enums.TASK_ACTION.StartGame, new int[]{5})},
+        {3, new ActionDataStruct(3, Enums.TASK_ACTION.StartGame, new int[]{6})},
+        {4, new ActionDataStruct(4, Enums.TASK_ACTION.StartGame, new int[]{7})},
+        {5, new ActionDataStruct(5, Enums.TASK_ACTION.StartGame, new int[]{8})},
+        {6, new ActionDataStruct(6, Enums.TASK_ACTION.Teleport, new int[]{6})},
+        {7, new ActionDataStruct(7, Enums.TASK_ACTION.Teleport, new int[]{2})},
+        {8, new ActionDataStruct(8, Enums.TASK_ACTION.Chat, new int[]{1})},
     };
 
     public static ActionDataStruct GetData(int id)

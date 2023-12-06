@@ -18,6 +18,7 @@ public class UI_CharacterPicker : UIBase
     // UIs
     [SerializeField] private TextMeshProUGUI TB_CharacterName;
     [SerializeField] private GameObject TB_CharacterLocked;
+    [SerializeField] private TextMeshProUGUI TB_CharacterInfo;
     [SerializeField] private Button Btn_Confirmed;
 
     // Data
@@ -70,6 +71,7 @@ public class UI_CharacterPicker : UIBase
         }
         Character2DData.Character2DDataStruct characterData = Character2DData.GetData(characterID);
         TB_CharacterName.text = characterData.Name;
+        TB_CharacterInfo.text = StringConstData.GetData(characterData.InfoText).Content;
     }
 
     // Public:

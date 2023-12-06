@@ -64,7 +64,7 @@ public class Pooling : MonoBehaviour
         pools.TryGetValue(typeName, out object pool);
         if (pool == null)
         {
-            Debug.LogWarning($"Pool for {typeName} not found.");
+            Debug.Log($"Pool for {typeName} not found.");
             return null;
         }
 
@@ -105,6 +105,20 @@ public class Pooling : MonoBehaviour
         {
             Debug.LogWarning($"Pool for " + typeName + " not found.");
             return null;
+        }
+    }
+
+    // Check if pool exists
+    public bool CheckPoolExist(string typeName)
+    {
+        var pool = GetPool(typeName);
+        if (pool != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

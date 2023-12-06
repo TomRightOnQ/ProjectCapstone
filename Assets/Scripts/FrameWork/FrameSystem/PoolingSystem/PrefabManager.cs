@@ -64,11 +64,11 @@ public class PrefabManager : MonoBehaviour
     {
         foreach (var prefabData in PrefabConfig.Instance.PrefabCollections)
         {
-            if (prefabData.bPoolByDefault || prefabData.bPoolable)
+            if (prefabData.bPoolByDefault && prefabData.bPoolable)
             {
                 SetPoolUp(prefabData.TypeName, prefabData.PrefabReference, prefabData.Count, prefabData.IsExpandable, prefabData.ExpandableRatio);
                 prefabReferences[prefabData.name] = prefabData;
-                prefabTypes[prefabData.name + SUFFIX] = prefabData.TypeName;
+                prefabTypes[prefabData.name] = prefabData.TypeName;
             }
         }
     }
@@ -91,7 +91,9 @@ public class PrefabManager : MonoBehaviour
                 if (Pooling.Instance.GetPool(prefabData.TypeName) == null)
                 {
                     // Create new pool
-                    Pooling.Instance.CreatePool<Component>(prefabData.PrefabReference, prefabData.Count, prefabData.IsExpandable, prefabData.ExpandableRatio);
+                    SetPoolUp(prefabData.TypeName, prefabData.PrefabReference, prefabData.Count, prefabData.IsExpandable, prefabData.ExpandableRatio);
+                    prefabReferences[prefabData.name] = prefabData;
+                    prefabTypes[prefabData.name] = prefabData.TypeName;
                 }
 
                 GameObject instance = Pooling.Instance.GetObj(prefabName);
@@ -134,7 +136,7 @@ public class PrefabManager : MonoBehaviour
 
     public string GetReferenceType(GameObject prefab)
     {
-        prefabTypes.TryGetValue(prefab.name, out string componentName);
+        prefabTypes.TryGetValue(prefab.name.Replace("(Clone)", "").Trim(), out string componentName);
         return componentName;
     }
 }

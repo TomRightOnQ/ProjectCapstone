@@ -135,6 +135,7 @@
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Utilities\UtilitiesEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\SceneGeneratorHelper.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Calendar\CalendarDateBaseDefaultDayBackground.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\Object2D\Target\GroundTarget.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Drag-and-Drop\ListViewStringDropSupport.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Samples\Scripts\RotatedSpriteWrapper.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TreeView\Events\TreeViewNodeEvent.cs" />
@@ -231,9 +232,11 @@
     <Compile Include="Assets\New UI Widgets\Scripts\CollectionsUtilities\ICollectionChanged.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Text\TextAdapter.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\EasyLayout\EasyLayoutUtilites.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\Object2D\Target\ClusterTarget.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ColorPicker\ColorPickerImagePalette.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\RangeSlider\RangeSliderFloat.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\OptionId.cs" />
+    <Compile Include="Assets\Scripts\FrameWork\FrameSystem\EffectsSystem\VFX\VFXObject.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Combobox\ComboboxInputField.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\Combobox\ComboboxTMPro.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\FieldViews\FieldView{TValue}.cs" />
@@ -287,6 +290,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\RangeSlider\Int\RangeSliderLimitMinSetter.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\FieldViews\ObjectFieldView{TValue}.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Input\StyleCalendar.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\StringConstData.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\ImageAdvanced.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\References\PrefabsTemplates.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ListView\ListViewInt\ListViewIntSelectedItemsObserver.cs" />
@@ -596,6 +600,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\ComparisonCompare.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\UtilitiesAlign.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CenteredSlider\Horizontal\CenteredSliderValueMaxSetter.cs" />
+    <Compile Include="Assets\Scripts\Contents\VFXConfig.cs" />
     <Compile Include="Assets\Scripts\GamePlay\Object2D\Target\FlyingTargetMid.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Tabs\TabButtonComponent.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Calendar\CalendarDateBase.cs" />
@@ -1159,6 +1164,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ScrollRectUtilities\ScrollRectRestrictedDrag.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\TreeView\TreeViewSelectedNodesObserver.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Draggable\Draggable.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\Object2D\Target\MovingTarget.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\PropertyWrappersRegistry.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Updater\Updater.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Drag-and-Drop\ListViewStringDragSupport.cs" />

@@ -33,23 +33,13 @@ public class UI_ChatInteraction : UIBase
         TB_ChatSepaker.text = currentInteraction.Speaker;
         TB_ChatContent.text = currentInteraction.Content;
 
-        switch (currentInteraction.Action)
+        if (currentInteraction.bEnd || currentInteraction.Next > 0)
         {
-            case Enums.INTERACTION_TYPE.Choice:
-                configChoices();
-                break;
-            case Enums.INTERACTION_TYPE.Next:
-                btn_ClickAny.SetActive(true);
-                break;
-            case Enums.INTERACTION_TYPE.End:
-                btn_ClickAny.SetActive(true);
-                break;
-            case Enums.INTERACTION_TYPE.None:
-                btn_ClickAny.SetActive(true);
-                break;
-            default:
-                ChatInteractionManager.Instance.EndInteraction();
-                break;
+            btn_ClickAny.SetActive(true);
+        } 
+        else if (currentInteraction.Choices[0] > 0) 
+        {
+            configChoices();
         }
     }
 
@@ -57,14 +47,14 @@ public class UI_ChatInteraction : UIBase
     private void configChoices()
     {
         p_ChatChoicePanel.SetActive(true);
-        for (int i = 0; i < currentInteraction.Target.Length; i++)
+        for (int i = 0; i < currentInteraction.Choices.Length; i++)
         {
             GameObject child = content.GetChild(i).gameObject;
             // Set choice text
             TextMeshProUGUI textMesh = child.GetComponentInChildren<TextMeshProUGUI>();
             if (textMesh != null)
             {
-                int choiceID = currentInteraction.Target[i];
+                int choiceID = currentInteraction.Choices[i];
                 textMesh.text = ChatInteractionData.GetData(choiceID).Content;
             }
             child.SetActive(true);
@@ -83,7 +73,7 @@ public class UI_ChatInteraction : UIBase
         // Turn off the choices
         p_ChatChoicePanel.SetActive(false);
 
-        int choiceID = currentInteraction.Target[index];
+        int choiceID = currentInteraction.Choices[index];
         ChatInteractionData.ChatInteractionDataStruct choiceInteraction = ChatInteractionData.GetData(choiceID);
 
         if (choiceInteraction == null)
@@ -91,41 +81,10 @@ public class UI_ChatInteraction : UIBase
             ChatInteractionManager.Instance.EndInteraction();
         }
 
-        // Process Event
-        switch (choiceInteraction.Event)
-        {
-            case Enums.INTERACTION_EVENT.CompleteTask:
-                TaskManager.Instance.CompleteTasks(choiceInteraction.EventTarget);
-                break;
-            default:
-                break;
-        }
         // Process Action
-        switch (choiceInteraction.Action)
+        if (choiceInteraction.Action[0] > 0)
         {
-            case Enums.INTERACTION_TYPE.Next:
-                jumpToChoice(choiceInteraction.Target[0]);
-                break;
-            case Enums.INTERACTION_TYPE.End:
-                ChatInteractionManager.Instance.EndInteraction();
-                return;
-            case Enums.INTERACTION_TYPE.Claim:
-                ChatInteractionManager.Instance.EndInteraction();
-                break;
-            case Enums.INTERACTION_TYPE.None:
-                break;
-            case Enums.INTERACTION_TYPE.Choice:
-                refreshChat(choiceInteraction.Target[0]);
-                break;
-            case Enums.INTERACTION_TYPE.StartGame:
-                CharacterManager.Instance.ShowCharacterPickerPanel(choiceInteraction.Target[0]);
-                break;
-            case Enums.INTERACTION_TYPE.Teleport:
-                LevelManager.Instance.LoadScene(LevelConfig.Instance.GetLevelData(choiceInteraction.Target[0]).SceneName);
-                break;
-            default:
-                ChatInteractionManager.Instance.EndInteraction();
-                break;
+            TaskManager.Instance.ProcessActions(choiceInteraction.Action);
         }
 
         // Force stop check
@@ -144,32 +103,20 @@ public class UI_ChatInteraction : UIBase
         {
             ChatInteractionManager.Instance.EndInteraction();
         }
-        // Process Event
-        switch (currentInteraction.Event)
-        {
-            case Enums.INTERACTION_EVENT.CompleteTask:
-                TaskManager.Instance.CompleteTasks(currentInteraction.EventTarget);
-                break;
-            default:
-                break;
-        }
+
         // Process Action
-        switch (currentInteraction.Action)
+        if (currentInteraction.Action[0] > 0)
         {
-            case Enums.INTERACTION_TYPE.Next:
-                jumpToChoice(currentInteraction.Target[0]);
-                break;
-            case Enums.INTERACTION_TYPE.End:
-                ChatInteractionManager.Instance.EndInteraction();
-                return;
-            case Enums.INTERACTION_TYPE.Claim:
-                ChatInteractionManager.Instance.EndInteraction();
-                break;
-            case Enums.INTERACTION_TYPE.None:
-                break;
-            default:
-                ChatInteractionManager.Instance.EndInteraction();
-                break;
+            TaskManager.Instance.ProcessActions(currentInteraction.Action);
+        }
+
+        if (currentInteraction.bEnd)
+        {
+            ChatInteractionManager.Instance.EndInteraction();
+        }
+        else if (currentInteraction.Next > 0)
+        {
+            refreshChat(currentInteraction.Next);
         }
     }
 

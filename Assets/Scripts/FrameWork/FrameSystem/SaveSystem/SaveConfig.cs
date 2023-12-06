@@ -81,8 +81,8 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     [System.Serializable]
     public class Character2DLockData
     {
-        public List<int> ShooterLevelLock;
-        public List<int> PlatformerLevelLock;
+        public List<int> ShooterLevelLock = new List<int>();
+        public List<int> PlatformerLevelLock = new List<int>();
     }
 
     // Methods:

@@ -51,20 +51,9 @@ public class HUDInteractionManager : MonoBehaviour
     {
         // Check the type of the interaction before proceeding
         HUDInteractionData.HUDInteractionDataStruct interactionData = HUDInteractionData.GetData(interactionID);
-        switch (interactionData.Action)
+        if (interactionData.bNoneClicking)
         {
-            // For reminder, do it immediately
-            case Enums.INTERACTION_TYPE.ShowReminder:
-                ReminderManager.Instance.ShowGeneralReminder(interactionData.Target[0]);
-                return;
-            case Enums.INTERACTION_TYPE.EnterActing:
-                HUDManager.Instance.EnterActingMode();
-                return;
-            case Enums.INTERACTION_TYPE.ExitActing:
-                HUDManager.Instance.ExitActingMode();
-                return;
-            default:
-                break;
+            TaskManager.Instance.ProcessActions(interactionData.Action);
         }
         EnableHUDInteractionUI();
         ui_HUDInteraction.AddInteraction(interactionID);

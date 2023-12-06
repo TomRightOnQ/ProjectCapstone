@@ -59,24 +59,9 @@ public class UI_HUDInteraction : UIBase
             {
                 return;
             }
-            switch (interactionData.Action)
+            if (interactionData.Action[0] > 0)
             {
-                case Enums.INTERACTION_TYPE.Chat:
-                    ChatInteractionManager.Instance.BeginInteraction(interactionData.Target[0]);
-                    break;
-                case Enums.INTERACTION_TYPE.Choice:
-                    break;
-                case Enums.INTERACTION_TYPE.Next:
-                    break;
-                case Enums.INTERACTION_TYPE.End:
-                    break;
-                case Enums.INTERACTION_TYPE.Teleport:
-                    LevelManager.Instance.LoadScene(interactionData.Target[0]);
-                    break;
-                case Enums.INTERACTION_TYPE.None:
-                    break;
-                default:
-                    break;
+                TaskManager.Instance.ProcessActions(interactionData.Action);
             }
         }              
     }

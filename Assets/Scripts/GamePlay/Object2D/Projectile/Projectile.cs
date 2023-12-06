@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 /// <summary>
 /// Projectiles for 2D scenes
@@ -13,6 +14,9 @@ public class Projectile : MEntity
 
     // State flags
     [SerializeField, ReadOnly] protected bool bExploded = true;
+
+    // Effects
+    [SerializeField] protected string explodeVFXName = "None";
 
     // RigidBody
     [SerializeField] protected Rigidbody projRigidBody;
@@ -87,7 +91,6 @@ public class Projectile : MEntity
 
         projRigidBody.velocity = Vector3.zero;
 
-        // Apply sparsing to the launch direction
         Vector3 randomizedDirection = new Vector3(
             launchDirection.x + UnityEngine.Random.Range(-projSparsing, projSparsing),
             launchDirection.y + UnityEngine.Random.Range(-projSparsing, projSparsing),
@@ -141,7 +144,15 @@ public class Projectile : MEntity
         {
             return;
         }
+
         bExploded = true;
+        if (explodeVFXName != "None")
+        {
+            GameEffectManager.Instance.PlayVFX(explodeVFXName, 
+                new Vector3(transform.position.x, transform.position.y, 0), 
+                new Vector3(projDamageRange, projDamageRange, projDamageRange));
+        }
+
         // Apply damage to all entities within the damage range
         if (bAOE)
         {
