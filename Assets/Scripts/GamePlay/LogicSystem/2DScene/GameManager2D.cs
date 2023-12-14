@@ -70,7 +70,7 @@ public class GameManager2D : MonoBehaviour
         // Load non-player teams' preset game results
         Level2DData.Level2DDataStruct levelData = Level2DData.GetData(gameLevelID);
         // Process the array into dictionary with player's actual score
-        gameResult.Add((1, gameScore));
+        gameResult.Add((0, gameScore));
         for (int i = 0; i < levelData.Score.Length; i += 2)
         {
             gameResult.Add((levelData.Score[i], levelData.Score[i + 1]));

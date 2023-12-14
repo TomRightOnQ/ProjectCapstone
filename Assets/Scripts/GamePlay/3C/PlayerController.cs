@@ -282,7 +282,7 @@ public class PlayerController : MonoBehaviour
 
     private void dash(InputAction.CallbackContext context)
     {
-        if (bWorld ||¡¡bAirBorne || bDash || !bMovementLocked || PersistentGameManager.Instance.bGamePaused)
+        if (bWorld ||bAirBorne || bDash || !bMovementLocked || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }

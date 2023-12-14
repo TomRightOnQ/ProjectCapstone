@@ -84,8 +84,8 @@ public class UI_Level2D : UIBase
         {
             int currentGuildID = guildList[i].Item1;
             string currentGuildName = GuildInfoData.GetData(currentGuildID).Name;
-            string itemName = string.Format(" <mspace=0.65em>{1,3}{0,-13}{1,3}{1,3}",
-                i.ToString(),
+            string itemName = string.Format(" <mspace=0.65em>{0,-3}{1,-13} {2,3} {3,3}",
+                (i + 1).ToString(),
                 currentGuildName,
                 guildList[i].Item2.ToString(),
                 guildData[guildList[i].Item1].Score.ToString()
