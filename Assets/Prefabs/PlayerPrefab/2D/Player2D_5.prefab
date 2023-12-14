@@ -105,6 +105,7 @@ Transform:
   m_Children:
   - {fileID: 5954012041930796453}
   - {fileID: 8307593640832297533}
+  - {fileID: 2179613028024683333}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6991056260194597749
@@ -413,3 +414,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2505831295411983901
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2378850132450976923}
+    m_Modifications:
+    - target: {fileID: 2803966064970281969, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 8468581209908526687}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707359574087181752, guid: eb1affd5344fd2a42a9d52577373019e,
+        type: 3}
+      propertyPath: m_Name
+      value: JumpingTrigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb1affd5344fd2a42a9d52577373019e, type: 3}
+--- !u!4 &2179613028024683333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4393554771444702552, guid: eb1affd5344fd2a42a9d52577373019e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2505831295411983901}
+  m_PrefabAsset: {fileID: 0}

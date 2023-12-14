@@ -17,22 +17,22 @@ public static class GuildInfoData
     }
     public static Dictionary<int, GuildInfoDataStruct> data = new Dictionary<int, GuildInfoDataStruct>
     {
-        {1, new GuildInfoDataStruct(1, "You")},
-        {2, new GuildInfoDataStruct(2, "B")},
-        {3, new GuildInfoDataStruct(3, "C")},
-        {4, new GuildInfoDataStruct(4, "D")},
-        {5, new GuildInfoDataStruct(5, "E")},
-        {6, new GuildInfoDataStruct(6, "F")},
-        {7, new GuildInfoDataStruct(7, "G")},
-        {8, new GuildInfoDataStruct(8, "H")},
-        {9, new GuildInfoDataStruct(9, "I")},
-        {10, new GuildInfoDataStruct(10, "J")},
-        {11, new GuildInfoDataStruct(11, "K")},
-        {12, new GuildInfoDataStruct(12, "L")},
-        {13, new GuildInfoDataStruct(13, "M")},
-        {14, new GuildInfoDataStruct(14, "N")},
-        {15, new GuildInfoDataStruct(15, "O")},
-        {16, new GuildInfoDataStruct(16, "P")},
+        {0, new GuildInfoDataStruct(0, "PlayerTeam")},
+        {1, new GuildInfoDataStruct(1, "OtherTeamB")},
+        {2, new GuildInfoDataStruct(2, "OtherTeamC")},
+        {3, new GuildInfoDataStruct(3, "OtherTeamD")},
+        {4, new GuildInfoDataStruct(4, "OtherTeamE")},
+        {5, new GuildInfoDataStruct(5, "OtherTeamF")},
+        {6, new GuildInfoDataStruct(6, "OtherTeamG")},
+        {7, new GuildInfoDataStruct(7, "OtherTeamH")},
+        {8, new GuildInfoDataStruct(8, "OtherTeamI")},
+        {9, new GuildInfoDataStruct(9, "OtherTeamJ")},
+        {10, new GuildInfoDataStruct(10, "OtherTeamK")},
+        {11, new GuildInfoDataStruct(11, "OtherTeamL")},
+        {12, new GuildInfoDataStruct(12, "OtherTeamM")},
+        {13, new GuildInfoDataStruct(13, "OtherTeamN")},
+        {14, new GuildInfoDataStruct(14, "OtherTeamO")},
+        {15, new GuildInfoDataStruct(15, "OtherTeamP")},
     };
 
     public static GuildInfoDataStruct GetData(int id)

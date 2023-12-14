@@ -32,6 +32,10 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     private List<Character2DLockData> character2DLockList = new List<Character2DLockData>();
     public List<Character2DLockData> Character2DLockList => character2DLockList;
 
+    [SerializeField]
+    private List<int> hintUnlockList = new List<int>();
+    public List<int> HintUnlockList => hintUnlockList;
+
     // Datagrams
     [System.Serializable]
     public class PlayerSaveData
@@ -200,6 +204,22 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         bAllowRewrite = false;
     }
 
+    // Modify Unlocked Hints
+    // --Init-- Methods
+    public void InitUnlockHintToSave()
+    {
+        hintUnlockList.Clear();
+    }
+
+    // Add a Hint
+    public void UnlockHint(int hintID)
+    {
+        if (!hintUnlockList.Contains(hintID))
+        {
+            hintUnlockList.Add(hintID);
+        }
+    }
+
     // Modify Day status
     // --Init-- Methods
     public void InitDayToSave()
@@ -235,7 +255,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     // --Init-- Methods
     public void InitNPCToSave()
     {
-        //npcSaveDataList.Clear();
+        npcSaveDataList.Clear();
         foreach (var pair in NPCData.data)
         {
             NPCData.NPCDataStruct defaultNPC = pair.Value;

@@ -8,20 +8,22 @@ public static class StringConstData
     {
         public int ID;
         public string Content;
+        public bool bLocked;
+        public string AlterContent;
 
-        public StringConstDataStruct(int ID, string Content)
+        public StringConstDataStruct(int ID, string Content, bool bLocked, string AlterContent)
         {
             this.ID = ID;
             this.Content = Content;
+            this.bLocked = bLocked;
+            this.AlterContent = AlterContent;
         }
     }
     public static Dictionary<int, StringConstDataStruct> data = new Dictionary<int, StringConstDataStruct>
     {
-        {1, new StringConstDataStruct(1, "Rapid-fired projectile influenced by gravity")},
-        {2, new StringConstDataStruct(2, "Bursting small bullets with less damage")},
-        {3, new StringConstDataStruct(3, "Laser with high damage and low ROF")},
-        {4, new StringConstDataStruct(4, "Launching missiles dealing great damage")},
-        {5, new StringConstDataStruct(5, "Shooting bullets with proximity fuze")},
+        {1, new StringConstDataStruct(1, "Shooting Range: Aim and destory targets to gain score", false, "???")},
+        {2, new StringConstDataStruct(2, "PLACE_HOLDER", true, "???")},
+        {3, new StringConstDataStruct(3, "PLACE_HOLDER", true, "???")},
     };
 
     public static StringConstDataStruct GetData(int id)

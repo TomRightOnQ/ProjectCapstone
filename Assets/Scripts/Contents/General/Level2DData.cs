@@ -10,37 +10,43 @@ public static class Level2DData
         public string Name;
         public string SceneName;
         public Enums.LEVEL_TYPE Type;
+        public string TypeText;
         public int GroupID;
-        public int Complete;
         public float TimeLimit;
-        public int ScoreGoal;
+        public int[] Hints;
+        public string IntroText;
+        public string IconPath;
         public string Next;
         public int[] Score;
+        public int TaskComplete;
 
-        public Level2DDataStruct(int ID, string Name, string SceneName, Enums.LEVEL_TYPE Type, int GroupID, int Complete, float TimeLimit, int ScoreGoal, string Next, int[] Score)
+        public Level2DDataStruct(int ID, string Name, string SceneName, Enums.LEVEL_TYPE Type, string TypeText, int GroupID, float TimeLimit, int[] Hints, string IntroText, string IconPath, string Next, int[] Score, int TaskComplete)
         {
             this.ID = ID;
             this.Name = Name;
             this.SceneName = SceneName;
             this.Type = Type;
+            this.TypeText = TypeText;
             this.GroupID = GroupID;
-            this.Complete = Complete;
             this.TimeLimit = TimeLimit;
-            this.ScoreGoal = ScoreGoal;
+            this.Hints = Hints;
+            this.IntroText = IntroText;
+            this.IconPath = IconPath;
             this.Next = Next;
             this.Score = Score;
+            this.TaskComplete = TaskComplete;
         }
     }
     public static Dictionary<int, Level2DDataStruct> data = new Dictionary<int, Level2DDataStruct>
     {
-        {1, new Level2DDataStruct(1, "Platformer_1", "PlatformerLevel", Enums.LEVEL_TYPE.Platformer, 0, 8, -1f, -1, "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,16,7})},
-        {2, new Level2DDataStruct(2, "Track_1", "TrackLevel", Enums.LEVEL_TYPE.Track, 0, -1, -1f, -1, "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,16,7})},
-        {3, new Level2DDataStruct(3, "Dual_1", "DualLevel", Enums.LEVEL_TYPE.Dual, 0, -1, -1f, -1, "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,16,7})},
-        {4, new Level2DDataStruct(4, "Shooter_1", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, 0, -1, 60f, 30, "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,16,7})},
-        {5, new Level2DDataStruct(5, "Shooter_2", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, 1, -1, 60f, 30, "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,16,7})},
-        {6, new Level2DDataStruct(6, "Shooter_3", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, 2, -1, 60f, 30, "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,16,7})},
-        {7, new Level2DDataStruct(7, "Shooter_4", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, 3, -1, 60f, 30, "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,16,7})},
-        {8, new Level2DDataStruct(8, "Shooter_5", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, 4, -1, 60f, 30, "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,16,7})},
+        {1, new Level2DDataStruct(1, "Platformer_1", "PlatformerLevel", Enums.LEVEL_TYPE.Platformer, "None", 0, -1f, new int[]{-1}, "None", "None", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, -1)},
+        {2, new Level2DDataStruct(2, "Track_1", "TrackLevel", Enums.LEVEL_TYPE.Track, "None", 0, -1f, new int[]{-1}, "None", "None", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, 0)},
+        {3, new Level2DDataStruct(3, "Dual_1", "DualLevel", Enums.LEVEL_TYPE.Dual, "None", 0, -1f, new int[]{-1}, "None", "None", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, 1)},
+        {4, new Level2DDataStruct(4, "Shooting Range - Stage 1", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, "SHOOTING RANGE", 0, 60f, new int[]{1,2,3}, "Text_ShootingRange", "Img_ShootingRange", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, 2)},
+        {5, new Level2DDataStruct(5, "Shooting Range - Stage 2", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, "SHOOTING RANGE", 1, 60f, new int[]{1,2,3}, "Text_ShootingRange", "Img_ShootingRange", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, 3)},
+        {6, new Level2DDataStruct(6, "Shooting Range - Stage 3", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, "SHOOTING RANGE", 2, 60f, new int[]{1,2,3}, "Text_ShootingRange", "Img_ShootingRange", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, 4)},
+        {7, new Level2DDataStruct(7, "Shooting Range - Stage 4", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, "SHOOTING RANGE", 3, 60f, new int[]{1,2,3}, "Text_ShootingRange", "Img_ShootingRange", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, 5)},
+        {8, new Level2DDataStruct(8, "Shooting Range - Stage 5", "ShooterLevel", Enums.LEVEL_TYPE.Shooter, "SHOOTING RANGE", 4, 60f, new int[]{1,2,3}, "Text_ShootingRange", "Img_ShootingRange", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, 6)},
     };
 
     public static Level2DDataStruct GetData(int id)

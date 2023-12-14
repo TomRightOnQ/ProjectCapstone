@@ -16,10 +16,18 @@ public class UI_CharacterPicker : UIBase
     private ObservableList<ListViewIconsItemDescription> characterItems = new ObservableList<ListViewIconsItemDescription>();
 
     // UIs
+    // Character Info
     [SerializeField] private TextMeshProUGUI TB_CharacterName;
     [SerializeField] private GameObject TB_CharacterLocked;
-    [SerializeField] private TextMeshProUGUI TB_CharacterInfo;
+    [SerializeField] private TextMeshProUGUI RTB_CharacterInfo;
     [SerializeField] private Button Btn_Confirmed;
+    [SerializeField] private Image Img_CharacterIconSmall;
+
+    // Level Info
+    [SerializeField] private TextMeshProUGUI TB_LevelName;
+    [SerializeField] private TextMeshProUGUI TB_LevelInfo_1;
+    [SerializeField] private TextMeshProUGUI TB_LevelInfo_2;
+    [SerializeField] private TextMeshProUGUI TB_LevelInfo_3;
 
     // Data
     [SerializeField, ReadOnly]
@@ -71,7 +79,27 @@ public class UI_CharacterPicker : UIBase
         }
         Character2DData.Character2DDataStruct characterData = Character2DData.GetData(characterID);
         TB_CharacterName.text = characterData.Name;
-        TB_CharacterInfo.text = StringConstData.GetData(characterData.InfoText).Content;
+        TextAsset textAsset = ResourceManager.Instance.LoadText(Constants.LEVEL2D_TEXT_SOURCE_PATH, characterData.InfoText);
+        if (textAsset != null)
+        {
+            RTB_CharacterInfo.text = textAsset.text;
+        }
+        Sprite characterIcon = ResourceManager.Instance.LoadImage(Constants.IMAGES_SOURCE_PATH, characterData.IconPath);
+        if (characterIcon != null)
+        {
+            Img_CharacterIconSmall.sprite = characterIcon;
+        }
+    }
+
+    // Refresh Level Info
+    private void refreshLevelPanel()
+    {
+        Level2DData.Level2DDataStruct levelData = Level2DData.GetData(levelID);
+        // Config Level details
+        TB_LevelName.text = levelData.Name;
+        TB_LevelInfo_1.text = ResourceManager.Instance.GetStringText(levelData.Hints[0]);
+        TB_LevelInfo_2.text = ResourceManager.Instance.GetStringText(levelData.Hints[1]);
+        TB_LevelInfo_3.text = ResourceManager.Instance.GetStringText(levelData.Hints[2]);
     }
 
     // Public:
@@ -82,6 +110,7 @@ public class UI_CharacterPicker : UIBase
         levelType = Level2DData.GetData(levelID).Type;
         refreshList();
         refreshPanel(1);
+        refreshLevelPanel();
     }
 
     // Enter Level

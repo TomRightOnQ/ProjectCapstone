@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 /// <summary>
@@ -33,6 +34,12 @@ public class GameManager2D : MonoBehaviour
     private float battleTime = 0f;
     public float BattleTime => battleTime;
 
+    // Game Score
+    [SerializeField, ReadOnly]
+    private int gameScore = 0;
+    private List<(int TeamID, int Score)> gameResult = new List<(int TeamID, int Score)>();
+    public List<(int TeamID, int Score)> GameResult => gameResult;
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -53,6 +60,29 @@ public class GameManager2D : MonoBehaviour
             return;
         }
         battleTime += Time.deltaTime;
+    }
+
+    // Private:
+    // Process Score
+    private void processGameScore()
+    {
+        gameResult.Clear();
+        // Load non-player teams' preset game results
+        Level2DData.Level2DDataStruct levelData = Level2DData.GetData(gameLevelID);
+        // Process the array into dictionary with player's actual score
+        gameResult.Add((1, gameScore));
+        for (int i = 0; i < levelData.Score.Length; i += 2)
+        {
+            gameResult.Add((levelData.Score[i], levelData.Score[i + 1]));
+        }
+        // Sort
+        gameResult = gameResult.OrderByDescending(result => result.Score).ToList();
+
+        // Add score to the teams
+        for (int i = 0; i < gameResult.Count; i ++)
+        {
+            SaveManager.Instance.SaveGuildData(gameResult[i].TeamID, gameResult[i].Score, 0, 0, false);
+        }
     }
 
     // Public:
@@ -85,6 +115,7 @@ public class GameManager2D : MonoBehaviour
         {
             case Enums.LEVEL_TYPE.Shooter:
                 GameObject ShooterLevelManager = new GameObject();
+                ShooterLevelManager.name = "ShooterLevelManager";
                 ShooterLevelManager shooterLevelManager = ShooterLevelManager.AddComponent<ShooterLevelManager>();
                 shooterLevelManager.Init(gameID);
                 break;
@@ -117,6 +148,12 @@ public class GameManager2D : MonoBehaviour
         UI_Level2D.SetLevelStartPanel(false);
     }
 
+    // Update the score
+    public void UpdatePlayerScore(int score)
+    {
+        gameScore = score;
+    }
+
     // End the game
     // Pass/No Pass: This only determines if the completion of the game will take the player to the next game
     // Victory/DefeatL This indicates the result of the game
@@ -129,6 +166,8 @@ public class GameManager2D : MonoBehaviour
         CharacterManager.Instance.LockCharacter2D(characterID, gameMode);
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_2DGAME_END);
         HUDManager.Instance.HideAllHUD();
+        // Config Score and notify the UI System
+        processGameScore();
         UI_Level2D.SetLevelCompletePanel(true);
     }
 
@@ -141,7 +180,7 @@ public class GameManager2D : MonoBehaviour
             Level2DData.Level2DDataStruct level2DData = Level2DData.GetData(gameLevelID);
             nextScene = level2DData.Next;
 
-            TaskManager.Instance.CompleteTask(level2DData.Complete);
+            TaskManager.Instance.CompleteTask(level2DData.TaskComplete);
         }
         LevelManager.Instance.LoadScene(nextScene);
     }

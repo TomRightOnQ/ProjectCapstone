@@ -49,21 +49,12 @@ public class UI_Notes : UIBase
     {
         Img_DefualtImage.SetActive(false);
         NotesData.NotesDataStruct notesData = NotesData.GetData(noteID);
-        string resourcePath = Path.Combine(Constants.NOTES_SOURCE_PATH, notesData.Path);
-
-        // Remove the file extension if present, Unity Resources.Load does not require it
-        resourcePath = resourcePath.Replace(".txt", "");
-
-        TextAsset textAsset = Resources.Load<TextAsset>(resourcePath);
+        TextAsset textAsset = ResourceManager.Instance.LoadText(Constants.NOTES_SOURCE_PATH, notesData.Path);
 
         if (textAsset != null)
         {
             TB_NameTitle.text = notesData.Name;
             RTB_NoteContent.text = textAsset.text;
-        }
-        else
-        {
-            Debug.LogWarning("UI_Notes: Resource file not found: " + resourcePath);
         }
     }
 

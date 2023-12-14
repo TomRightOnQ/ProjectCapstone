@@ -288,9 +288,9 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Combobox\ComboboxIcons.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\RangeSlider\Float\RangeSliderFloatLimitMinSetter.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\RangeSlider\Int\RangeSliderLimitMinSetter.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\StringConstData.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\FieldViews\ObjectFieldView{TValue}.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Input\StyleCalendar.cs" />
-    <Compile Include="Assets\Scripts\Contents\General\StringConstData.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\ImageAdvanced.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\References\PrefabsTemplates.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ListView\ListViewInt\ListViewIntSelectedItemsObserver.cs" />
@@ -956,6 +956,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Draggable\DragRedirect.cs" />
     <Compile Include="Assets\Scripts\FrameWork\Misc\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\Scripts\FrameWork\FrameSystem\EffectsSystem\SoundFX\SFXObject.cs" />
+    <Compile Include="Assets\Scripts\FrameWork\FrameSystem\ResourceSystem\ResourceManager.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Utilities\Utilities.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CenteredSlider\Vertical\CenteredSliderVerticalLimitMinSetter.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\IListViewTemplateSelector.cs" />
@@ -996,6 +997,7 @@
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Wrappers\Selectable\SelectableColor.cs" />
     <Compile Include="Assets\Scripts\GamePlay\Object2D\Target\GravityTargetSmall.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Localization\ILocalizationSupport.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C\JumpingTrigger.cs" />
     <Compile Include="Assets\Scripts\GamePlay\LogicSystem\2DScene\UI_ShooterLevel.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CollectionsUtilities\GroupedList.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\EasyLayout\EasyLayoutEnums.cs" />
@@ -1199,10 +1201,13 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGrayscale.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderPlaneHSV.shader" />
+    <None Include="Assets\Resources\Texts\Level2D\Text_Missile.txt" />
+    <None Include="Assets\Resources\Texts\Level2D\Text_Gravity.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\Prefabs\PlayerPrefab\C1B\C1.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderCircleHSV.shader" />
+    <None Include="Assets\Resources\Texts\Level2D\Text_Leaf.txt" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIRipple.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\3D Lit BuiltIn SSU.shader" />
@@ -1222,6 +1227,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Resources\Texts\Level2D\Text_Laser.txt" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIWidgets.cginc" />
     <None Include="Assets\Resources\Texts\Notes\SampleNote.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
@@ -1229,14 +1235,17 @@
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIBorderDrawer.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderPlaneRGB.shader" />
     <None Include="Assets\New UI Widgets\Scripts\WidgetGeneration\DataBindSupport\Setter.template.txt" />
+    <None Include="Assets\Resources\Texts\Notes\None.txt" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UILinesDrawer.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIRing.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\GUI SSU.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\3D Lit Cutout BuiltIn SSU.shader" />
+    <None Include="Assets\Resources\Texts\Level2D\Text_VT.txt" />
     <None Include="Assets\New UI Widgets\Scripts\WidgetGeneration\DataBindSupport\Synchronizer.template.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\readme.txt" />
+    <None Include="Assets\Resources\Texts\Level2D\Text_ShootingRange.txt" />
     <None Include="Assets\New UI Widgets\changelog.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\ASE\Readme.txt" />

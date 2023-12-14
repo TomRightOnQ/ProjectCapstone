@@ -36,7 +36,6 @@ public class UI_DayCycleControl : UIBase
         CloseDayPanel();
     }
 
-
     // Public:
     // Show list of flashback
     public void ShowDayPanel()

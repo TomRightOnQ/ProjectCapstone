@@ -37,6 +37,7 @@ public class NotesManager : MonoBehaviour
     }
 
     // Public:
+
     public void ShowNotePanel()
     {
         if (ui_Notes == null)

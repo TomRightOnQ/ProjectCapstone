@@ -107,11 +107,13 @@ public class ShooterLevelManager : MonoBehaviour
     {
         currentScore += amount;
         ui_ShooterLevel.UpdateScore(currentScore);
+        GameManager2D.Instance.UpdatePlayerScore(currentScore);
     }
 
     public void RemoveScore(int amount)
     {
         currentScore += amount;
         ui_ShooterLevel.UpdateScore(currentScore);
+        GameManager2D.Instance.UpdatePlayerScore(currentScore);
     }
 }

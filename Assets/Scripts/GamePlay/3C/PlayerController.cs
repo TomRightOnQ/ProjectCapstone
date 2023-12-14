@@ -104,7 +104,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     private void OnEnable()
     {
         playerControls.Enable();
@@ -299,19 +298,15 @@ public class PlayerController : MonoBehaviour
         bDash = false;
     }
 
-    private void OnCollisionExit(Collision collision)
+    // Public:
+    public void ResetJumping()
+    {
+        bAirBorne = false;
+    }
+
+    public void LockJumping()
     {
         bAirBorne = true;
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        bAirBorne = false;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        bAirBorne = false;
     }
 
     // Methods

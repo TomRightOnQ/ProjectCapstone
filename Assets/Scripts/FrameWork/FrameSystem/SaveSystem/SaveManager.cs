@@ -52,6 +52,7 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.InitNPCToSave();
         SaveConfig.Instance.InitGuildToSave();
         SaveConfig.Instance.InitCharacter2DToList();
+        SaveConfig.Instance.InitUnlockHintToSave();
         SaveConfig.Instance.LockSave();
     }
 
@@ -114,14 +115,17 @@ public class SaveManager : MonoBehaviour
     public void SaveGuildData(int targetID, int score, int win, int lose, bool bElminated)
     {
         List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
-        for (int i = 0; i <= guildList.Count; i++)
+        for (int i = 0; i < guildList.Count; i++)
         {
             if (targetID == guildList[i].GuildID)
             {
                 guildList[i].Score += score;
                 guildList[i].DuelWin += win;
                 guildList[i].DuelLose += lose;
-                guildList[i].bElminated = bElminated;
+                if (!guildList[i].bElminated)
+                {
+                    guildList[i].bElminated = bElminated;
+                }
             }
         }
     }
@@ -130,7 +134,7 @@ public class SaveManager : MonoBehaviour
     public void SaveGuildData_F(int targetID, int score, int win, int lose, bool bElminated)
     {
         List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
-        for (int i = 0; i <= guildList.Count; i++)
+        for (int i = 0; i < guildList.Count; i++)
         {
             if (targetID == guildList[i].GuildID)
             {
@@ -216,6 +220,17 @@ public class SaveManager : MonoBehaviour
     public List<int> GetNote(Enums.NOTE_TYPE type)
     {
         return SaveConfig.Instance.GetNote(type);
+    }
+
+    // Get Hint Data
+    public void UnlockHint(int hintID)
+    {
+        SaveConfig.Instance.UnlockHint(hintID);
+    }
+
+    public bool CheckHintUnlocked(int hintID)
+    {
+        return SaveConfig.Instance.HintUnlockList.Contains(hintID);
     }
 
     // Private:
