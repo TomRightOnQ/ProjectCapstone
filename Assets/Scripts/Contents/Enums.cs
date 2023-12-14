@@ -47,6 +47,9 @@ public static class Enums
         RemoveInteraction,  // Task: Remove interactions from the targeted NPC
         UnlockNextDay,  // Task: Unlock to the next day
         UnlockHint,  // Task: Unlock a hint
+        ChangeNPCPosition,  // Task: Change NPC position
+        UnlockInteraction,  // Task: Unlock an Interaction
+        LockInteraction,  // Task: Lock an Interaction
     }
 
     public enum TASK_TYPE

@@ -51,12 +51,24 @@ public class HUDInteractionManager : MonoBehaviour
     {
         // Check the type of the interaction before proceeding
         HUDInteractionData.HUDInteractionDataStruct interactionData = HUDInteractionData.GetData(interactionID);
+        if (!SaveManager.Instance.CheckHUDInteractionEnabled(interactionID))
+        {
+            return;
+        }
+
         if (interactionData.bNoneClicking)
         {
             TaskManager.Instance.ProcessActions(interactionData.Action);
+            // Remove one-time interaction
+            if (interactionData.bOneTime)
+            {
+                SaveManager.Instance.DisableHUDInteraction(interactionID);
+            }
         }
-        EnableHUDInteractionUI();
-        ui_HUDInteraction.AddInteraction(interactionID);
+        else 
+        {
+            ui_HUDInteraction.AddInteraction(interactionID);
+        }
     }
 
     // Remove interaction from the list

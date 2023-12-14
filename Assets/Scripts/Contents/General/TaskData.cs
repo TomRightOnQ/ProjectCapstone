@@ -35,6 +35,7 @@ public static class TaskData
         {6, new TaskDataStruct(6, "Unlock Day 6", "Time for the next day!", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{-1}, new int[]{-1})},
         {7, new TaskDataStruct(7, "Unlock Day 7", "Time for the next day!", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{-1}, new int[]{-1})},
         {8, new TaskDataStruct(8, "Complete a platformer stage", "Go and try a mini game", Enums.TASK_TYPE.Game, new int[]{-1}, new int[]{1}, new int[]{1})},
+        {9, new TaskDataStruct(9, "Complete a shooter stage", "Go and try a mini game", Enums.TASK_TYPE.Game, new int[]{-1}, new int[]{24}, new int[]{-1})},
     };
 
     public static TaskDataStruct GetData(int id)

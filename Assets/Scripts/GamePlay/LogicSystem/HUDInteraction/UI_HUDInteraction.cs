@@ -33,6 +33,10 @@ public class UI_HUDInteraction : UIBase
             ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = interactionID , Name = interactionData.Content };
             interactionItems.Add(newItem);
         }
+        if (interactionItems.Count != 0 && gameObject.activeSelf)
+        {
+            ChangeHUDINteractionState(true);
+        }
     }
 
     // Remove interactions
@@ -62,6 +66,11 @@ public class UI_HUDInteraction : UIBase
             if (interactionData.Action[0] > 0)
             {
                 TaskManager.Instance.ProcessActions(interactionData.Action);
+            }
+            // Remove one-time interaction
+            if (interactionData.bOneTime)
+            {
+                SaveManager.Instance.DisableHUDInteraction(interactionItems[item.Index].Value);
             }
         }              
     }

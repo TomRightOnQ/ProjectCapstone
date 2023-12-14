@@ -98,6 +98,13 @@ public class NPCManager : MonoBehaviour
     }
 
     // Modify NPCs in save
+    public void AddNewNPCToSave(int npcID, int sceneID, int positionID)
+    {
+        Vector3 position = Vector3PositionData.GetData(positionID).Position;
+        string sceneName = LevelConfig.Instance.GetLevelData(sceneID).SceneName;
+        SaveManager.Instance.AddNPCToSave(npcID, sceneName, position);
+    }
+
     public void AddInteractionToNPC(int npcID, int interactionID)
     {
         SaveManager.Instance.AddInteractionToNPC(npcID, interactionID);
@@ -112,6 +119,13 @@ public class NPCManager : MonoBehaviour
 
     public void ChangeNPCPositionAndScene(int npcID, string sceneName, Vector3 position)
     {
+        SaveManager.Instance.ChangeNPCPositionAndScene(npcID, sceneName, position);
+    }
+
+    public void ChangeNPCPositionAndScene(int npcID, int sceneID, int positionID)
+    {
+        Vector3 position = Vector3PositionData.GetData(positionID).Position;
+        string sceneName = LevelConfig.Instance.GetLevelData(sceneID).SceneName;
         SaveManager.Instance.ChangeNPCPositionAndScene(npcID, sceneName, position);
     }
 

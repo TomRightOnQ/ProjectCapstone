@@ -15,8 +15,8 @@ MonoBehaviour:
   bAllowRewrite: 0
   playerSaveData:
     PlayerName: You
-    Position: {x: -6, y: 7.2, z: -1}
-    Scene: AudienceLevel
+    Position: {x: 0, y: 0.5, z: 0}
+    Scene: DefaultLevel
   daySaveData:
     CurrentDay: 0
     MaxDay: 0
@@ -27,12 +27,6 @@ MonoBehaviour:
     Position: {x: 2, y: 0.5, z: 0}
     interactionIDs: 08000000
     Scene: DefaultLevel
-    bActive: 1
-  - NpcID: 2
-    NpcName: Atom
-    Position: {x: -2.5, y: 7.25, z: -2}
-    interactionIDs: 08000000
-    Scene: AudienceLevel
     bActive: 1
   guildSaveDataList:
   - GuildID: 0
@@ -120,7 +114,7 @@ MonoBehaviour:
     ItemIDs: 01000000
     ReportIDs: 02000000
   character2DLockList:
-  - ShooterLevelLock: 01000000
+  - ShooterLevelLock: 
     PlatformerLevelLock: 
   - ShooterLevelLock: 
     PlatformerLevelLock: 
@@ -135,3 +129,4 @@ MonoBehaviour:
   - ShooterLevelLock: 
     PlatformerLevelLock: 
   hintUnlockList: 
+  disabledHUDInteractionList: 13000000

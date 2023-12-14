@@ -7,11 +7,17 @@ using UnityEngine;
 /// ---Caution---
 /// This is a hardcoded script
 /// </summary>
+
 public class ScriptDayOne : DayScriptBase
 {
     // Public:
     public override void Init() 
     {
-    
+        // Clear all NPC things...
+        SaveConfig.Instance.ClearAllNPC();
+
+        // NPCs...
+        NPCManager.Instance.AddNewNPCToSave(1, 2, 1);
+        NPCManager.Instance.AddInteractionToNPC(1, 17);
     }
 }

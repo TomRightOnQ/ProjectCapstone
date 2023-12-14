@@ -28,7 +28,6 @@ public static class NPCData
     public static Dictionary<int, NPCDataStruct> data = new Dictionary<int, NPCDataStruct>
     {
         {1, new NPCDataStruct(1, "Chatter", "DefaultLevel", new Vector3(2f,0.5f,0f), new int[]{8}, new int[]{1}, true)},
-        {2, new NPCDataStruct(2, "Atom", "AudienceLevel", new Vector3(-2.5f,7.25f,-2f), new int[]{8}, new int[]{1}, true)},
     };
 
     public static NPCDataStruct GetData(int id)

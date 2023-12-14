@@ -17,11 +17,30 @@ public class InputManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this);
+            configEventHandler();
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+    
+    // Private:
+    private void configEventHandler()
+    {
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_CHAT_BEGIN, On_Recv_ChatBegin);
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_CHAT_END, On_Recv_ChatEnd);
+    }
+
+    // Evnet Handlers
+    private void On_Recv_ChatBegin()
+    {
+        LockInput();
+    }
+
+    private void On_Recv_ChatEnd()
+    {
+        UnLockInput(LevelManager.Instance.CurrentSceneType);
     }
 
     // Public:

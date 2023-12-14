@@ -25,6 +25,7 @@ public class DayCycleManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(this);
         }
         else
         {
@@ -74,6 +75,22 @@ public class DayCycleManager : MonoBehaviour
 
         // Add a listner to determine the end of loading
         EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
+
+        // Run the day script
+        switch (targetDay)
+        {
+            case 0:
+                currentScript = new ScriptDayZero();
+                currentScript.Init();
+                break;
+            case 1:
+                currentScript = new ScriptDayOne();
+                currentScript.Init();
+                break;
+            default:
+                break;
+        }
+
         // Load Scene
         string targetScene = DayData.GetData(targetDay).StartedScene;
         LevelManager.Instance.LoadScene(targetScene);
@@ -112,20 +129,6 @@ public class DayCycleManager : MonoBehaviour
         EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
         // Reset essential data to the beginning of the day (auto)
         SaveManager.Instance.SetSaveToDay(currentDay);
-        // Run the day script
-        switch (currentDay)
-        {
-            case 0:
-                currentScript = new ScriptDayZero();
-                currentScript.Init();
-                break;
-            case 1:
-                currentScript = new ScriptDayOne();
-                currentScript.Init();
-                break;
-            default:
-                break;
-        }
         // Marked the current day as inited
         SaveManager.Instance.SaveCurrentDayInited(true);
     }

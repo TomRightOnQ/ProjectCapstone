@@ -36,6 +36,10 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     private List<int> hintUnlockList = new List<int>();
     public List<int> HintUnlockList => hintUnlockList;
 
+    [SerializeField]
+    private List<int> disabledHUDInteractionList = new List<int>();
+    public List<int> DisabledHUDInteractionList => disabledHUDInteractionList;
+
     // Datagrams
     [System.Serializable]
     public class PlayerSaveData
@@ -250,6 +254,30 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         }
     }
 
+    // Modify Hidden HUD Interaction
+    // --Init-- Methods
+    public void InitHUDInteractionDisableList()
+    {
+        disabledHUDInteractionList.Clear();
+    }
+
+    // Add and remove from this list
+    public void EnableHUDInteraction(int interactionID)
+    {
+        if (disabledHUDInteractionList.Contains(interactionID))
+        {
+            disabledHUDInteractionList.Remove(interactionID);
+        }
+    }
+
+    public void DisableHUDInteraction(int interactionID)
+    {
+        if (!disabledHUDInteractionList.Contains(interactionID))
+        {
+            disabledHUDInteractionList.Add(interactionID);
+        }
+    }
+
     // Modify NPC status
     // Add NPC to Save List
     // --Init-- Methods
@@ -273,6 +301,54 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
             npcSaveDataList.Add(newNPCSaveData);
         }
     }
+
+    // Change NPC in save
+    public void ChangeNPCPositionAndScene(int npcID, string sceneName, Vector3 position)
+    {
+        var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
+
+        if (npc != null)
+        {
+            npc.Scene = sceneName;
+            npc.Position = position;
+        }
+        else
+        {
+            Debug.LogWarning($"NPC with ID {npcID} not found.");
+        }
+    }
+
+    public void AddNPCToSave(int npcID, string sceneName, Vector3 position)
+    {
+        var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
+
+        if (npc == null)
+        {
+            NPCData.NPCDataStruct defaultNPC = NPCData.GetData(npcID);
+
+            NPCSaveData newNPCSaveData = new NPCSaveData()
+            {
+                NpcID = defaultNPC.ID,
+                NpcName = defaultNPC.Name,
+                Position = position,
+                Scene = sceneName,
+                bActive = defaultNPC.bActiveByDefault,
+                interactionIDs = new List<int>()
+            };
+
+            npcSaveDataList.Add(newNPCSaveData);
+        }
+        else
+        {
+            Debug.LogWarning($"NPC with ID {npcID} already in save.");
+        }
+    }
+
+    public void ClearAllNPC()
+    {
+        npcSaveDataList.Clear();
+    }
+
 
     // Modify character lock states
     // --Init-- Methods
@@ -388,21 +464,6 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
             {
                 Debug.LogWarning($"InteractionID {interactionID} not found in NPC with ID {npcID}.");
             }
-        }
-        else
-        {
-            Debug.LogWarning($"NPC with ID {npcID} not found.");
-        }
-    }
-
-    public void ChangeNPCPositionAndScene(int npcID, string sceneName, Vector3 position)
-    {
-        var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
-
-        if (npc != null)
-        {
-            npc.Scene = sceneName;
-            npc.Position = position;
         }
         else
         {

@@ -51,7 +51,7 @@ public class TaskManager : MonoBehaviour
                     break;
                 case Enums.TASK_ACTION.End:
                     ChatInteractionManager.Instance.EndInteraction();
-                    return;
+                    break;
                 case Enums.TASK_ACTION.Claim:
                     ChatInteractionManager.Instance.EndInteraction();
                     break;
@@ -72,13 +72,16 @@ public class TaskManager : MonoBehaviour
                     break;
                 case Enums.TASK_ACTION.EnterActing:
                     HUDManager.Instance.EnterActingMode();
-                    return;
+                    break;
                 case Enums.TASK_ACTION.ExitActing:
                     HUDManager.Instance.ExitActingMode();
-                    return;
+                    break;
                 case Enums.TASK_ACTION.ShowReminder:
                     ReminderManager.Instance.ShowGeneralReminder(actionData.ActionTarget[0]);
-                    return;
+                    break;
+                case Enums.TASK_ACTION.ChangeNPCPosition:
+                    NPCManager.Instance.ChangeNPCPositionAndScene(actionData.ActionTarget[0], actionData.ActionTarget[1], actionData.ActionTarget[2]);
+                    break;
                 default:
                     break;
             }

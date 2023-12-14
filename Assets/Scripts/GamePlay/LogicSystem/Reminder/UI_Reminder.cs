@@ -40,13 +40,20 @@ public class UI_Reminder : UIBase
         tb_MapName.text = name;
 
         mapAnimator.Play("In");
-        Invoke("HideMapReminder", Constants.REMINDER_LEVEL_TIME);
+        StartCoroutine(closeMapReminder());
+    }
+
+    private IEnumerator closeMapReminder()
+    {
+        yield return new WaitForSecondsRealtime(Constants.REMINDER_LEVEL_TIME);
+        HideMapReminder();
     }
 
     // Hide Map Reminder
     public void HideMapReminder()
     {
         mapAnimator.Play("Out");
+        StopCoroutine(closeMapReminder());
         Invoke("DisableMapReminder", 0.5f);
     }
 

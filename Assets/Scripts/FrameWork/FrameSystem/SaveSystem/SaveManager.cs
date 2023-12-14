@@ -53,6 +53,19 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.InitGuildToSave();
         SaveConfig.Instance.InitCharacter2DToList();
         SaveConfig.Instance.InitUnlockHintToSave();
+        SaveConfig.Instance.InitHUDInteractionDisableList();
+        SaveConfig.Instance.LockSave();
+    }
+
+    // Flash Back to Day 0
+    public void ChangeSaveToDayZero()
+    {
+        SaveConfig.Instance.SetPlayer(new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
+        SaveConfig.Instance.InitDayToSave();
+        SaveConfig.Instance.InitNPCToSave();
+        SaveConfig.Instance.InitGuildToSave();
+        SaveConfig.Instance.InitCharacter2DToList();
+        SaveConfig.Instance.InitHUDInteractionDisableList();
         SaveConfig.Instance.LockSave();
     }
 
@@ -186,6 +199,11 @@ public class SaveManager : MonoBehaviour
     }
 
     // Modify NPCs
+    public void AddNPCToSave(int npcID, string sceneName, Vector3 position)
+    {
+        SaveConfig.Instance.AddNPCToSave(npcID, sceneName, position);
+    }
+
     public void AddInteractionToNPC(int npcID, int interactionID)
     {
         SaveConfig.Instance.AddInteractionToNPC(npcID, interactionID);
@@ -231,6 +249,22 @@ public class SaveManager : MonoBehaviour
     public bool CheckHintUnlocked(int hintID)
     {
         return SaveConfig.Instance.HintUnlockList.Contains(hintID);
+    }
+
+    // Check, Enable and Disable HUDInteraction
+    public bool CheckHUDInteractionEnabled(int interactionID)
+    {
+        return !SaveConfig.Instance.DisabledHUDInteractionList.Contains(interactionID);
+    }
+
+    public void EnableHUDInteraction(int interactionID)
+    {
+        SaveConfig.Instance.EnableHUDInteraction(interactionID);
+    }
+
+    public void DisableHUDInteraction(int interactionID)
+    {
+        SaveConfig.Instance.DisableHUDInteraction(interactionID);
     }
 
     // Private:

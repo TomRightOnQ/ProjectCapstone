@@ -7,12 +7,15 @@ using UnityEngine;
 /// ---Caution---
 /// This is a hardcoded script
 /// </summary>
+
 public class ScriptDayZero : DayScriptBase
 {
     // Public:
     public override void Init() 
     {
-        // Config NPCs
-        NPCManager.Instance.AddInteractionToNPC(2, 2);
+        SaveManager.Instance.ChangeSaveToDayZero();
+        // NPCs
+        NPCManager.Instance.RemoveInteractionFromNPC(1, 8);
+        NPCManager.Instance.AddInteractionToNPC(1, 19);
     }
 }
