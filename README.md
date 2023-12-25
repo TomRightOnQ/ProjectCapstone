@@ -1,13 +1,3 @@
-<!-----
-
-You have some errors, warnings, or alerts. If you are using reckless mode, turn it off to see inline alerts.
-* ERRORs: 0
-* WARNINGs: 0
-* ALERTS: 3
-
-Conversion time: 1.564 seconds.
-
-
 Using this Markdown file:
 
 1. Paste this output into your source file.
