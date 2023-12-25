@@ -235,17 +235,7 @@ _Not supported_
 **UI System**
 
 UIBase: base class of each game system’s UI object
-
 UIConfig: scriptable singleton to record the reference and record of each UIBase prefab
-
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
-
-
 UIManager: controls the lifecycle of UIBase objects and keeps track of their references.
 
 Each game system with UI has a UI Canvas object with a child class of the UIBase class; this ensures that each system can have decoupled UI components.
@@ -257,14 +247,6 @@ To create a new UIBase:
 1. Attach a child class of UIBase to the Canvas game object of the UIs, which we define the detail of the UI in this script.
 2. Saves the Canvas as a prefab and fills in its information into UIConfig.
 3. **No repeating name or type name allowed for UIBase prefabs.**
-
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
-
 
 **public GameObject CreateUI(string uiName)**
 
@@ -288,15 +270,6 @@ Deactivate the GameObject of the UI with the given name; if the UI does not exis
 **Save System -> Unfinished**
 
 SaveConfig: a scriptable object acts as the interface between the serialized JSON game save and the current game state data.
-
-
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
-
-
 SaveManager: provides methods to get and set data to the save, and manages the SaveConfig. _Now the Save System is only a debug version, which each save only lasts for one game session. The actual serialization to JSON is not complete yet._
 
 **public void CreateNewSave()**
