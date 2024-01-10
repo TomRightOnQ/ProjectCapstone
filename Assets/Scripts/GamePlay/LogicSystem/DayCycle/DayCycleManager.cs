@@ -44,6 +44,13 @@ public class DayCycleManager : MonoBehaviour
         }
     }
 
+    // Init the day 0
+    public void LoadDayZero()
+    {
+        currentScript = new ScriptDayZero();
+        currentScript.Init();
+    }
+
     // Unlock Next Day
     public void UnlockNextDay()
     {
@@ -57,7 +64,8 @@ public class DayCycleManager : MonoBehaviour
     }
 
     // Jump to the beginning of a specific day
-    public void JumpToDay(int targetDay)
+    // bBack: indicates if we are flashing back
+    public void JumpToDay(int targetDay, bool bBack = true)
     {
         // Reset the day script
         if (currentScript != null)
@@ -91,6 +99,19 @@ public class DayCycleManager : MonoBehaviour
                 break;
         }
 
+        ///
+        /// If we are jumping to the beginning of a day, we should alter to the beginning of that day by loading.
+        /// Then we shall overwrite the current game save.
+        /// Otherwise, we are going to a future day, save the current save as the new day's save.
+        ///
+        if (bBack)
+        {
+            // Load the target day save
+            SaveManager.Instance.LoadGameSave(targetDay);
+            // Overwrite the beginning of the new day to the current save
+            SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
+        }
+
         // Load Scene
         string targetScene = DayData.GetData(targetDay).StartedScene;
         LevelManager.Instance.LoadScene(targetScene);
@@ -102,7 +123,7 @@ public class DayCycleManager : MonoBehaviour
         if (currentDay < 7)
         {
             ui_DayCycleControl.HideNextDayButton();
-            JumpToDay(currentDay + 1);
+            JumpToDay(currentDay + 1, false);
         }
     }
 
@@ -127,9 +148,11 @@ public class DayCycleManager : MonoBehaviour
     {
         // First, remove the listener
         EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
-        // Reset essential data to the beginning of the day (auto)
-        SaveManager.Instance.SetSaveToDay(currentDay);
-        // Marked the current day as inited
+        if (!SaveManager.Instance.GetIsCurrentDayInited())
+        {
+            SaveManager.Instance.SaveGameSave(currentDay);
+        }
+        // Mark the current day as inited
         SaveManager.Instance.SaveCurrentDayInited(true);
     }
 }

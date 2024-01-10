@@ -19,7 +19,6 @@ MonoBehaviour:
     Scene: DefaultLevel
   daySaveData:
     CurrentDay: 0
-    MaxDay: 0
     bInited: 1
   npcSaveDataList:
   - NpcID: 1
@@ -113,20 +112,7 @@ MonoBehaviour:
     NoteIDs: 00000000
     ItemIDs: 01000000
     ReportIDs: 02000000
-  character2DLockList:
-  - ShooterLevelLock: 
+  character2DLock:
+    ShooterLevelLock: 
     PlatformerLevelLock: 
-  - ShooterLevelLock: 
-    PlatformerLevelLock: 
-  - ShooterLevelLock: 
-    PlatformerLevelLock: 
-  - ShooterLevelLock: 
-    PlatformerLevelLock: 
-  - ShooterLevelLock: 
-    PlatformerLevelLock: 
-  - ShooterLevelLock: 
-    PlatformerLevelLock: 
-  - ShooterLevelLock: 
-    PlatformerLevelLock: 
-  hintUnlockList: 
-  disabledHUDInteractionList: 13000000
+  disabledHUDInteractionList: 

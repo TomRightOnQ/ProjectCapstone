@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 /// <summary>
@@ -9,10 +11,6 @@ public class SaveManager : MonoBehaviour
 {
     private static SaveManager instance;
     public static SaveManager Instance => instance;
-
-    // When in-game, no repeating loading is allowed
-    [SerializeField, ReadOnly]
-    private bool bLoaded = false;
 
     private void Awake()
     {
@@ -37,6 +35,100 @@ public class SaveManager : MonoBehaviour
     }
 
     // Public:
+
+    /// <summary>
+    /// Save and Load
+    /// </summary>
+
+    // Serialize a Save
+    // --Caution--
+    // This will save the scriptable object to a chosen JSON file
+    // Default: Change the autosave
+    public void SaveGameSave(string saveName = Constants.SAVE_CURRENT_SAVE)
+    {
+        string saveFilePath = Path.Combine(Application.persistentDataPath, saveName);
+        string json = JsonUtility.ToJson(SaveConfig.Instance);
+        File.WriteAllText(saveFilePath, json);
+        Debug.Log("CurrentDaySave saved to " + Application.persistentDataPath);
+    }
+
+    public void SaveGameSave(int day = 0)
+    {
+        string saveName = Constants.SAVE_DAY_SAVE + day.ToString();
+        string saveFilePath = Path.Combine(Application.persistentDataPath, saveName);
+        string json = JsonUtility.ToJson(SaveConfig.Instance);
+        File.WriteAllText(saveFilePath, json);
+        Debug.Log("CoreSaveConfig saved to " + Application.persistentDataPath);
+    }
+
+    // Load a Save
+    // --Caution--
+    // This will load the the targeted JSON and change the scriptable object to it
+    // Default: Load the autosave
+    public void LoadGameSave(string saveName = Constants.SAVE_CURRENT_SAVE)
+    {
+        string saveFilePath = Path.Combine(Application.persistentDataPath, saveName);
+        if (File.Exists(saveFilePath))
+        {
+            string json = File.ReadAllText(saveFilePath);
+            // SaveConfig saveConfig = JsonUtility.FromJson<SaveConfig>(json);
+            JsonUtility.FromJsonOverwrite(json, SaveConfig.Instance);
+            Debug.Log("CoreSaveConfig loaded from " + saveFilePath);
+        }
+        else
+        {
+            Debug.LogWarning("Save file not found in " + saveFilePath);
+        }
+    }
+
+    public void LoadGameSave(int day = 0)
+    {
+        string saveName = Constants.SAVE_DAY_SAVE + day.ToString();
+        string saveFilePath = Path.Combine(Application.persistentDataPath, saveName);
+        if (File.Exists(saveFilePath))
+        {
+            string json = File.ReadAllText(saveFilePath);
+            // SaveConfig saveConfig = JsonUtility.FromJson<SaveConfig>(json);
+            JsonUtility.FromJsonOverwrite(json, SaveConfig.Instance);
+            Debug.Log("CoreSaveConfig loaded from " + saveFilePath);
+        }
+        else
+        {
+            Debug.LogWarning("Save file not found in " + saveFilePath);
+        }
+    }
+
+    // Save the Core Save Data
+    // --Caution--
+    // This will save the persisitent save data
+    public void SaveGameCoreSave(string saveName = Constants.SAVE_CORE_SAVE)
+    {
+        string saveFilePath = Path.Combine(Application.persistentDataPath, saveName);
+        string json = JsonUtility.ToJson(CoreSaveConfig.Instance);
+        File.WriteAllText(saveFilePath, json);
+        Debug.Log("CoreSaveConfig saved to " + Application.persistentDataPath);
+    }
+
+    // Load the Core Save Data
+    // --Caution--
+    // This will load the persisitent save data
+    public void LoadGameCoreSave(string saveName = Constants.SAVE_CORE_SAVE)
+    {
+        string saveFilePath = Path.Combine(Application.persistentDataPath, saveName);
+        if (File.Exists(saveFilePath))
+        {
+            string json = File.ReadAllText(saveFilePath);
+            // CoreSaveConfig coreSaveConfig = JsonUtility.FromJson<CoreSaveConfig>(json);
+            JsonUtility.FromJsonOverwrite(json, CoreSaveConfig.Instance);
+            Debug.Log("CoreSaveConfig loaded from " + saveFilePath);
+        }
+        else
+        {
+            Debug.LogWarning("Save file not found in " + saveFilePath);
+        }
+    }
+
+
     // Init a new save
     // --Caution--
     // This will completely rewrite the saving scriptable
@@ -47,19 +139,8 @@ public class SaveManager : MonoBehaviour
             return;
         }
         // Now load data for new game...
-        SaveConfig.Instance.SetPlayer(new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
-        SaveConfig.Instance.InitDayToSave();
-        SaveConfig.Instance.InitNPCToSave();
-        SaveConfig.Instance.InitGuildToSave();
-        SaveConfig.Instance.InitCharacter2DToList();
-        SaveConfig.Instance.InitUnlockHintToSave();
-        SaveConfig.Instance.InitHUDInteractionDisableList();
-        SaveConfig.Instance.LockSave();
-    }
+        CoreSaveConfig.Instance.InitUnlockHintToSave();
 
-    // Flash Back to Day 0
-    public void ChangeSaveToDayZero()
-    {
         SaveConfig.Instance.SetPlayer(new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
         SaveConfig.Instance.InitDayToSave();
         SaveConfig.Instance.InitNPCToSave();
@@ -67,25 +148,19 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.InitCharacter2DToList();
         SaveConfig.Instance.InitHUDInteractionDisableList();
         SaveConfig.Instance.LockSave();
+
+        // Load Day 0 Configs
+
+
+        // Create Save File
+        SaveGameSave(Constants.SAVE_CURRENT_SAVE);
+        SaveGameSave(0);
+        SaveGameCoreSave();
     }
 
-    // Set the save state to a specfic day
-    public void SetSaveToDay(int day)
-    {
-        // Set Character Lock
-        SaveConfig.Instance.SetCharacter2DLockToDay(day);
-    }
-
-    // Write data to scriptable
-    public void SavePlayerData()
-    {
-    
-    }
-
-    public void SaveNPCData()
-    {
-    
-    }
+    /// <summary>
+    /// Methods
+    /// </summary>
 
     // Character Locking
     // Lock or Unlock a 2D character
@@ -100,19 +175,15 @@ public class SaveManager : MonoBehaviour
     }
 
     // Get the current character lock
-    public List<int> GetCurrentCharacterLock(int currentDay, Enums.LEVEL_TYPE levelType)
+    public List<int> GetCurrentCharacterLock(Enums.LEVEL_TYPE levelType)
     {
-        return SaveConfig.Instance.GetCurrentCharacterLock(currentDay, levelType);
+        return SaveConfig.Instance.GetCurrentCharacterLock(levelType);
     }
 
     // DayCycle
     public void SaveMaxDay(int maxDay)
     {
-        if (maxDay <= SaveConfig.Instance.GetDay().MaxDay)
-        {
-            return;
-        }
-        SaveConfig.Instance.GetDay().MaxDay = maxDay;
+        CoreSaveConfig.Instance.MaxDay = Math.Max(CoreSaveConfig.Instance.MaxDay, maxDay);
     }
 
     public void SaveCurrentDay(int currentDay)
@@ -159,16 +230,6 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    // Read Data
-    // Load Save to the scriptable object
-    public void LoadSave()
-    {
-        if (bLoaded)
-        {
-            return;
-        }
-    }
-
     // Get Player Info
     public SaveConfig.PlayerSaveData GetPlayer()
     {
@@ -185,11 +246,6 @@ public class SaveManager : MonoBehaviour
     public int GetCurrentDay()
     {
         return SaveConfig.Instance.GetDay().CurrentDay;
-    }
-
-    public int GetMaxDay()
-    {
-        return SaveConfig.Instance.GetDay().MaxDay;
     }
 
     // Get current day init status
@@ -228,10 +284,12 @@ public class SaveManager : MonoBehaviour
     public void AddNote(Enums.NOTE_TYPE type, int[] IDs)
     {
         SaveConfig.Instance.AddNote(type, IDs);
+        SaveGameCoreSave();
     }
     public void RemoveNote(Enums.NOTE_TYPE type, int[] IDs)
     {
         SaveConfig.Instance.RemoveNote(type, IDs);
+        SaveGameCoreSave();
     }
 
     // Get Note Data
@@ -243,12 +301,13 @@ public class SaveManager : MonoBehaviour
     // Get Hint Data
     public void UnlockHint(int hintID)
     {
-        SaveConfig.Instance.UnlockHint(hintID);
+        CoreSaveConfig.Instance.UnlockHint(hintID);
+        SaveGameCoreSave();
     }
 
     public bool CheckHintUnlocked(int hintID)
     {
-        return SaveConfig.Instance.HintUnlockList.Contains(hintID);
+        return CoreSaveConfig.Instance.HintUnlockList.Contains(hintID);
     }
 
     // Check, Enable and Disable HUDInteraction
@@ -277,8 +336,8 @@ public class SaveManager : MonoBehaviour
         }
         // Save data
         SaveConfig.Instance.SetPlayer(PersistentDataManager.Instance.MainPlayer.gameObject.transform.position, LevelManager.Instance.CurrentScene);
-
-        // Begin Save Cycle every given time
+        // Save the game
+        SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
     }
 
     private void OnRecv_SceneUnLoaded()

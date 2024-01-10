@@ -13,7 +13,6 @@ public class ScriptDayZero : DayScriptBase
     // Public:
     public override void Init() 
     {
-        SaveManager.Instance.ChangeSaveToDayZero();
         // NPCs
         NPCManager.Instance.RemoveInteractionFromNPC(1, 8);
         NPCManager.Instance.AddInteractionToNPC(1, 19);

@@ -72,18 +72,15 @@ public class LevelManager : MonoBehaviour
         LevelManager.Instance.LoadScene(current2DLevel.SceneName);
     }
 
-    // For single save mode - Check and see if there's a save
     public void EnterGame()
     {
+        SaveManager.Instance.LoadGameSave(Constants.SAVE_CURRENT_SAVE);
         // Configs the scriptable object
-        if (!SaveConfig.Instance.AllowRewrite)
-        {
-            SaveManager.Instance.LoadSave();
-        }
-        else
+        if (SaveConfig.Instance.AllowRewrite)
         {
             SaveManager.Instance.CreateNewSave();
         }
+        SaveManager.Instance.LoadGameCoreSave();
         SaveConfig.PlayerSaveData playerData = SaveManager.Instance.GetPlayer();
 
         // Edge Cases:

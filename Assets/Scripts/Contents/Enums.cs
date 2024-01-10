@@ -50,6 +50,7 @@ public static class Enums
         ChangeNPCPosition,  // Task: Change NPC position
         UnlockInteraction,  // Task: Unlock an Interaction
         LockInteraction,  // Task: Lock an Interaction
+        SaveGame,  // Task: Save the Current Game
     }
 
     public enum TASK_TYPE

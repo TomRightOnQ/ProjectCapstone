@@ -23,13 +23,6 @@ public class TaskManager : MonoBehaviour
         }
     }
 
-    // Public:
-    // Process events
-    public void ProcessActions(int[] actionIDs)
-    {
-        configTaskActions(actionIDs);
-    }
-
     // Private:
     // Config task actions
     private void configTaskActions(int[] actionIDs)
@@ -82,6 +75,10 @@ public class TaskManager : MonoBehaviour
                 case Enums.TASK_ACTION.ChangeNPCPosition:
                     NPCManager.Instance.ChangeNPCPositionAndScene(actionData.ActionTarget[0], actionData.ActionTarget[1], actionData.ActionTarget[2]);
                     break;
+                case Enums.TASK_ACTION.SaveGame:
+                    SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
+                    SaveManager.Instance.SaveGameCoreSave();
+                    break;
                 default:
                     break;
             }
@@ -106,6 +103,12 @@ public class TaskManager : MonoBehaviour
     }
 
     // Public:
+    // Process events
+    public void ProcessActions(int[] actionIDs)
+    {
+        configTaskActions(actionIDs);
+    }
+
     // Complete a mission
     public void CompleteTasks(int[] taskIDs)
     {

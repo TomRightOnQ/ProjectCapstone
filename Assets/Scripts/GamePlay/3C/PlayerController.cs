@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (bInputLocked)
+        if (bInputLocked || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }
@@ -273,7 +273,7 @@ public class PlayerController : MonoBehaviour
     private void jump(InputAction.CallbackContext context)
     {
         //Player's position is locked
-        if (bWorld || bAirBorne || bDash || !bMovementLocked || PersistentGameManager.Instance.bGamePaused)
+        if (PersistentGameManager.Instance.bGamePaused || bWorld || bAirBorne || bDash || !bMovementLocked)
         {
             return;
         }
@@ -282,7 +282,7 @@ public class PlayerController : MonoBehaviour
 
     private void dash(InputAction.CallbackContext context)
     {
-        if (bWorld ||bAirBorne || bDash || !bMovementLocked || PersistentGameManager.Instance.bGamePaused)
+        if (PersistentGameManager.Instance.bGamePaused || bWorld || bAirBorne || bDash || !bMovementLocked)
         {
             return;
         }

@@ -50,7 +50,7 @@ public class UI_CharacterPicker : UIBase
     private void refreshList()
     {
         // Get locking info from save system
-        lockList = SaveManager.Instance.GetCurrentCharacterLock(SaveManager.Instance.GetCurrentDay(), levelType);
+        lockList = SaveManager.Instance.GetCurrentCharacterLock(levelType);
         if (lockList == null)
         {
             lockList = new List<int>();

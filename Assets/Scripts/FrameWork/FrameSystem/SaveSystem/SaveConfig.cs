@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// Save Config - Hold a full game state and interact with the serialized JSONS
+/// This save portion only contains information that is changing from different save
+/// </summary>
 [CreateAssetMenu(menuName = "SaveSystem/SaveConfig")]
 public class SaveConfig : ScriptableSingleton<SaveConfig>
 {
@@ -29,12 +33,8 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     private NoteData noteData = new NoteData();
 
     [SerializeField]
-    private List<Character2DLockData> character2DLockList = new List<Character2DLockData>();
-    public List<Character2DLockData> Character2DLockList => character2DLockList;
-
-    [SerializeField]
-    private List<int> hintUnlockList = new List<int>();
-    public List<int> HintUnlockList => hintUnlockList;
+    private Character2DLockData character2DLock = new Character2DLockData();
+    public Character2DLockData Character2DLock => character2DLock;
 
     [SerializeField]
     private List<int> disabledHUDInteractionList = new List<int>();
@@ -64,7 +64,6 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public class DaySaveData
     {
         public int CurrentDay;
-        public int MaxDay;
         public bool bInited;
     }
 
@@ -208,28 +207,11 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         bAllowRewrite = false;
     }
 
-    // Modify Unlocked Hints
-    // --Init-- Methods
-    public void InitUnlockHintToSave()
-    {
-        hintUnlockList.Clear();
-    }
-
-    // Add a Hint
-    public void UnlockHint(int hintID)
-    {
-        if (!hintUnlockList.Contains(hintID))
-        {
-            hintUnlockList.Add(hintID);
-        }
-    }
-
     // Modify Day status
     // --Init-- Methods
     public void InitDayToSave()
     {
         daySaveData.CurrentDay = 0;
-        daySaveData.MaxDay = 0;
     }
 
     // Modify Guild status
@@ -354,11 +336,8 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     // --Init-- Methods
     public void InitCharacter2DToList()
     {
-        character2DLockList.Clear();
-        for (int i = 0; i < 7; i++)
-        {
-            character2DLockList.Add(new Character2DLockData());
-        }
+        character2DLock.ShooterLevelLock.Clear();
+        character2DLock.PlatformerLevelLock.Clear();
     }
 
     // Lock or Unlock a 2D character
@@ -367,15 +346,15 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         switch (levelType)
         {
             case (Enums.LEVEL_TYPE.Shooter):
-                if (!character2DLockList[daySaveData.CurrentDay].ShooterLevelLock.Contains(characterID))
+                if (!character2DLock.ShooterLevelLock.Contains(characterID))
                 {
-                    character2DLockList[daySaveData.CurrentDay].ShooterLevelLock.Add(characterID);
+                    character2DLock.ShooterLevelLock.Add(characterID);
                 }
                 break;
             case (Enums.LEVEL_TYPE.Platformer):
-                if (!character2DLockList[daySaveData.CurrentDay].PlatformerLevelLock.Contains(characterID))
+                if (!character2DLock.PlatformerLevelLock.Contains(characterID))
                 {
-                    character2DLockList[daySaveData.CurrentDay].PlatformerLevelLock.Add(characterID);
+                    character2DLock.PlatformerLevelLock.Add(characterID);
                 }
                 break;
         }
@@ -386,32 +365,17 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         switch (levelType)
         {
             case (Enums.LEVEL_TYPE.Shooter):
-                if (character2DLockList[daySaveData.CurrentDay].ShooterLevelLock.Contains(characterID))
+                if (character2DLock.ShooterLevelLock.Contains(characterID))
                 {
-                    character2DLockList[daySaveData.CurrentDay].ShooterLevelLock.Remove(characterID);
+                    character2DLock.ShooterLevelLock.Remove(characterID);
                 }
                 break;
             case (Enums.LEVEL_TYPE.Platformer):
-                if (character2DLockList[daySaveData.CurrentDay].PlatformerLevelLock.Contains(characterID))
+                if (character2DLock.PlatformerLevelLock.Contains(characterID))
                 {
-                    character2DLockList[daySaveData.CurrentDay].PlatformerLevelLock.Remove(characterID);
+                    character2DLock.PlatformerLevelLock.Remove(characterID);
                 }
                 break;
-        }
-    }
-
-    // Set the data to the begining of a day
-    public void SetCharacter2DLockToDay(int currentDay)
-    {
-        for (int i = currentDay; i < 7; i++)
-        {
-            character2DLockList[i].ShooterLevelLock = new List<int>();
-            character2DLockList[i].PlatformerLevelLock = new List<int>();
-        }
-        if (currentDay >= 1)
-        {
-            character2DLockList[currentDay].ShooterLevelLock = DeepCopyList(character2DLockList[currentDay - 1].ShooterLevelLock);
-            character2DLockList[currentDay].PlatformerLevelLock = DeepCopyList(character2DLockList[currentDay - 1].PlatformerLevelLock);
         }
     }
 
@@ -426,14 +390,14 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     }
 
     // Get the current character lock
-    public List<int> GetCurrentCharacterLock(int currentDay, Enums.LEVEL_TYPE levelType)
+    public List<int> GetCurrentCharacterLock(Enums.LEVEL_TYPE levelType)
     {
         switch (levelType)
         {
             case (Enums.LEVEL_TYPE.Shooter):
-                return character2DLockList[currentDay].ShooterLevelLock;
+                return character2DLock.ShooterLevelLock;
             case (Enums.LEVEL_TYPE.Platformer):
-                return character2DLockList[currentDay].PlatformerLevelLock;
+                return character2DLock.PlatformerLevelLock;
         }
         return null;
     }
