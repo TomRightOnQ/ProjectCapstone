@@ -14,6 +14,11 @@ public class LevelManager : MonoBehaviour
     private Enums.SCENE_TYPE currentSceneType;
     public Enums.SCENE_TYPE CurrentSceneType => currentSceneType;
 
+    // Cache if the current scene is savable
+    [SerializeField, ReadOnly]
+    private bool bSaveable = true;
+    public bool bCurrentSceneSaveable => bSaveable;
+
     // Current 2D Level Info
     private Level2DData.Level2DDataStruct current2DLevel;
 
@@ -116,7 +121,7 @@ public class LevelManager : MonoBehaviour
         // Retrieve level metadata
         LevelData levelData = LevelConfig.Instance.GetLevelData(sceneName);
 
-
+        bSaveable = levelData.bSaveable;
         MusicManager.Instance.PlayMusic(levelData.BGMName);
         currentSceneType = levelData.SceneType;
 

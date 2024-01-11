@@ -13,9 +13,24 @@ public class CoreSaveConfig : ScriptableSingleton<CoreSaveConfig>
     public bool AllowRewrite { get { return bAllowRewrite; } }
 
     // NotesSystem information
+    /// <summary>
+    /// Including Notes and Hints
+    /// </summary>
+    [SerializeField]
+    private NoteData noteData = new NoteData();
+
     [SerializeField]
     private List<int> hintUnlockList = new List<int>();
     public List<int> HintUnlockList => hintUnlockList;
+
+
+    [System.Serializable]
+    public class NoteData
+    {
+        public List<int> NoteIDs;
+        public List<int> ItemIDs;
+        public List<int> ReportIDs;
+    }
 
     // DayCycle - Max Day
     [SerializeField]
@@ -36,6 +51,100 @@ public class CoreSaveConfig : ScriptableSingleton<CoreSaveConfig>
         if (!hintUnlockList.Contains(hintID))
         {
             hintUnlockList.Add(hintID);
+        }
+    }
+
+    // Control a note
+    public List<int> GetNote(Enums.NOTE_TYPE type)
+    {
+        switch (type)
+        {
+            case Enums.NOTE_TYPE.Note:
+                return noteData.NoteIDs;
+            case Enums.NOTE_TYPE.Item:
+                return noteData.ItemIDs;
+            case Enums.NOTE_TYPE.Report:
+                return noteData.ReportIDs;
+            default:
+                return noteData.NoteIDs;
+        }
+    }
+
+    public void AddNote(Enums.NOTE_TYPE type, int[] IDs)
+    {
+        switch (type)
+        {
+            case Enums.NOTE_TYPE.Note:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (!noteData.NoteIDs.Contains(IDs[i]))
+                    {
+                        noteData.NoteIDs.Add(IDs[i]);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            case Enums.NOTE_TYPE.Item:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (!noteData.ItemIDs.Contains(IDs[i]))
+                    {
+                        noteData.ItemIDs.Add(IDs[i]);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            case Enums.NOTE_TYPE.Report:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (!noteData.ReportIDs.Contains(IDs[i]))
+                    {
+                        noteData.ReportIDs.Add(IDs[i]);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void RemoveNote(Enums.NOTE_TYPE type, int[] IDs)
+    {
+        switch (type)
+        {
+            case Enums.NOTE_TYPE.Note:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (noteData.NoteIDs.Contains(IDs[i]))
+                    {
+                        noteData.NoteIDs.Remove(IDs[i]);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            case Enums.NOTE_TYPE.Item:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (noteData.ItemIDs.Contains(IDs[i]))
+                    {
+                        noteData.ItemIDs.Remove(IDs[i]);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            case Enums.NOTE_TYPE.Report:
+                for (int i = 0; i < IDs.Length; i++)
+                {
+                    if (noteData.ReportIDs.Contains(IDs[i]))
+                    {
+                        noteData.ReportIDs.Remove(IDs[i]);
+                    }
+                }
+                noteData.NoteIDs.Sort();
+                break;
+            default:
+                break;
         }
     }
 }

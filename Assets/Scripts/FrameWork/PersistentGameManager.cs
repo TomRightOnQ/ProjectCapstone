@@ -111,4 +111,19 @@ public class PersistentGameManager : MonoBehaviour
         bPaused = false;
         Time.timeScale = 1;
     }
+
+    // Quit Game
+    /// <summary>
+    /// bSave: Quit with game auto-save
+    /// </summary>
+    public void QuitGame(bool bSave = true)
+    {
+        if (bSave)
+        {
+            SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
+            SaveManager.Instance.SaveGameCoreSave();
+        }
+        // Quit
+        Application.Quit();
+    }
 }

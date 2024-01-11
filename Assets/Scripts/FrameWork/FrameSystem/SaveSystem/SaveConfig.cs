@@ -30,9 +30,6 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public List<GuildSaveData> GuildSaveDataList => guildSaveDataList;
 
     [SerializeField]
-    private NoteData noteData = new NoteData();
-
-    [SerializeField]
     private Character2DLockData character2DLock = new Character2DLockData();
     public Character2DLockData Character2DLock => character2DLock;
 
@@ -68,14 +65,6 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     }
 
     [System.Serializable]
-    public class NoteData
-    {
-        public List<int> NoteIDs;
-        public List<int> ItemIDs;
-        public List<int> ReportIDs;
-    }
-
-    [System.Serializable]
     public class GuildSaveData
     {
         public int GuildID;
@@ -107,99 +96,6 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public DaySaveData GetDay()
     {
         return daySaveData;
-    }
-
-    public List<int> GetNote(Enums.NOTE_TYPE type)
-    {
-        switch (type)
-        {
-            case Enums.NOTE_TYPE.Note:
-                return noteData.NoteIDs;
-            case Enums.NOTE_TYPE.Item:
-                return noteData.ItemIDs;
-            case Enums.NOTE_TYPE.Report:
-                return noteData.ReportIDs;
-            default:
-                return noteData.NoteIDs;
-        }
-    }
-
-    public void AddNote(Enums.NOTE_TYPE type, int[] IDs)
-    {
-        switch (type) 
-        {
-            case Enums.NOTE_TYPE.Note:
-                for (int i = 0; i < IDs.Length; i++)
-                {
-                    if (!noteData.NoteIDs.Contains(IDs[i]))
-                    {
-                        noteData.NoteIDs.Add(IDs[i]);
-                    }
-                }
-                noteData.NoteIDs.Sort();
-                break;
-            case Enums.NOTE_TYPE.Item:
-                for (int i = 0; i < IDs.Length; i++)
-                {
-                    if (!noteData.ItemIDs.Contains(IDs[i]))
-                    {
-                        noteData.ItemIDs.Add(IDs[i]);
-                    }
-                }
-                noteData.NoteIDs.Sort();
-                break;
-            case Enums.NOTE_TYPE.Report:
-                for (int i = 0; i < IDs.Length; i++)
-                {
-                    if (!noteData.ReportIDs.Contains(IDs[i]))
-                    {
-                        noteData.ReportIDs.Add(IDs[i]);
-                    }
-                }
-                noteData.NoteIDs.Sort();
-                break;
-            default:
-                break;
-        }
-    }
-
-    public void RemoveNote(Enums.NOTE_TYPE type, int[] IDs)
-    {
-        switch (type)
-        {
-            case Enums.NOTE_TYPE.Note:
-                for (int i = 0; i < IDs.Length; i++)
-                {
-                    if (noteData.NoteIDs.Contains(IDs[i]))
-                    {
-                        noteData.NoteIDs.Remove(IDs[i]);
-                    }
-                }
-                noteData.NoteIDs.Sort();
-                break;
-            case Enums.NOTE_TYPE.Item:
-                for (int i = 0; i < IDs.Length; i++)
-                {
-                    if (noteData.ItemIDs.Contains(IDs[i]))
-                    {
-                        noteData.ItemIDs.Remove(IDs[i]);
-                    }
-                }
-                noteData.NoteIDs.Sort();
-                break;
-            case Enums.NOTE_TYPE.Report:
-                for (int i = 0; i < IDs.Length; i++)
-                {
-                    if (noteData.ReportIDs.Contains(IDs[i]))
-                    {
-                        noteData.ReportIDs.Remove(IDs[i]);
-                    }
-                }
-                noteData.NoteIDs.Sort();
-                break;
-            default:
-                break;
-        }
     }
 
     public void LockSave()

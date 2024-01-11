@@ -46,6 +46,10 @@ public class SaveManager : MonoBehaviour
     // Default: Change the autosave
     public void SaveGameSave(string saveName = Constants.SAVE_CURRENT_SAVE)
     {
+        if (!LevelManager.Instance.bCurrentSceneSaveable)
+        {
+            return;
+        }
         string saveFilePath = Path.Combine(Application.persistentDataPath, saveName);
         string json = JsonUtility.ToJson(SaveConfig.Instance);
         File.WriteAllText(saveFilePath, json);
@@ -54,6 +58,10 @@ public class SaveManager : MonoBehaviour
 
     public void SaveGameSave(int day = 0)
     {
+        if (!LevelManager.Instance.bCurrentSceneSaveable)
+        {
+            return;
+        }
         string saveName = Constants.SAVE_DAY_SAVE + day.ToString();
         string saveFilePath = Path.Combine(Application.persistentDataPath, saveName);
         string json = JsonUtility.ToJson(SaveConfig.Instance);
@@ -283,19 +291,19 @@ public class SaveManager : MonoBehaviour
     // Save or change note data
     public void AddNote(Enums.NOTE_TYPE type, int[] IDs)
     {
-        SaveConfig.Instance.AddNote(type, IDs);
+        CoreSaveConfig.Instance.AddNote(type, IDs);
         SaveGameCoreSave();
     }
     public void RemoveNote(Enums.NOTE_TYPE type, int[] IDs)
     {
-        SaveConfig.Instance.RemoveNote(type, IDs);
+        CoreSaveConfig.Instance.RemoveNote(type, IDs);
         SaveGameCoreSave();
     }
 
     // Get Note Data
     public List<int> GetNote(Enums.NOTE_TYPE type)
     {
-        return SaveConfig.Instance.GetNote(type);
+        return CoreSaveConfig.Instance.GetNote(type);
     }
 
     // Get Hint Data
