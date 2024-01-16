@@ -155,6 +155,7 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.InitGuildToSave();
         SaveConfig.Instance.InitCharacter2DToList();
         SaveConfig.Instance.InitHUDInteractionDisableList();
+        SaveConfig.Instance.InitTaskLists();
         SaveConfig.Instance.LockSave();
 
         // Load Day 0 Configs
@@ -288,6 +289,9 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.SetNPCActive(npcID, bActive);
     }
 
+    /// <summary>
+    /// Note System
+    /// </summary>
     // Save or change note data
     public void AddNote(Enums.NOTE_TYPE type, int[] IDs)
     {
@@ -318,6 +322,45 @@ public class SaveManager : MonoBehaviour
         return CoreSaveConfig.Instance.HintUnlockList.Contains(hintID);
     }
 
+    /// <summary>
+    /// Task System
+    /// </summary>
+    // Check, Trigger and Complete Tasks
+    // Check Tasks Status
+    public Enums.TASK_STATUS CheckTaskStatus(int taskID)
+    {
+        if (SaveConfig.Instance.TriggeredTaskList.Contains(taskID))
+        {
+            return Enums.TASK_STATUS.Triggered;
+        }
+        else if (SaveConfig.Instance.CompleteTaskList.Contains(taskID))
+        {
+            return Enums.TASK_STATUS.Complete;
+        }
+        return Enums.TASK_STATUS.NotTriggered;
+    }
+
+    // Trigger a Task
+    public void TriggerTask(int taskID)
+    {
+        SaveConfig.Instance.TriggerTask(taskID);
+    }
+
+    // Remove a Task that is already triggered
+    public void RemoveTriggeredTask(int taskID)
+    {
+        SaveConfig.Instance.RemoveTriggeredTask(taskID);
+    }
+
+    // Complete a Task
+    public void CompleteTask(int taskID)
+    {
+        SaveConfig.Instance.CompleteTask(taskID);
+    }
+
+    /// <summary>
+    /// Temp - HUD Interactions
+    /// </summary>
     // Check, Enable and Disable HUDInteraction
     public bool CheckHUDInteractionEnabled(int interactionID)
     {

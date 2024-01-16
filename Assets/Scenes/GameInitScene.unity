@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f2e02ac3af8c9446ab3217c1505118f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bSaveable: 1
   gameID2D: -1
   characterID: -1
   groupID: 0
@@ -1080,7 +1081,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc3db52a7900d543b6499367c21b9e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bLoaded: 0
 --- !u!4 &939818349
 Transform:
   m_ObjectHideFlags: 0
@@ -1169,6 +1169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fbc17b5566c208499272fdadc48a280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTrackedTaskID: -1
 --- !u!4 &1177849489
 Transform:
   m_ObjectHideFlags: 0

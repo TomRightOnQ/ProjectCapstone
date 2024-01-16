@@ -9,6 +9,11 @@ public class TaskManager : MonoBehaviour
 {
     private static TaskManager instance;
     public static TaskManager Instance => instance;
+
+    // Current Tracked Task
+    [SerializeField, ReadOnly]
+    private int currentTrackedTaskID = -1;
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -16,6 +21,7 @@ public class TaskManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this);
+            configEventHandlers();
         }
         else
         {
@@ -24,6 +30,12 @@ public class TaskManager : MonoBehaviour
     }
 
     // Private:
+    // Config scene loading
+    private void configEventHandlers()
+    {
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
+    }
+
     // Config task actions
     private void configTaskActions(int[] actionIDs)
     {
@@ -62,6 +74,12 @@ public class TaskManager : MonoBehaviour
                     break;
                 case Enums.TASK_ACTION.UnlockNextDay:
                     DayCycleManager.Instance.UnlockNextDay();
+                    break;
+                case Enums.TASK_ACTION.TriggerTask:
+                    UnlockTasks(actionData.ActionTarget);
+                    break;
+                case Enums.TASK_ACTION.CompleteTask:
+                    CompleteTasks(actionData.ActionTarget);
                     break;
                 case Enums.TASK_ACTION.EnterActing:
                     HUDManager.Instance.EnterActingMode();
@@ -102,6 +120,27 @@ public class TaskManager : MonoBehaviour
         }
     }
 
+    // Config Tracking
+    private void configTaskTracking(int taskID)
+    {
+        // If no tasks are tracked, choose the first one on list
+        if (taskID == -1 && SaveConfig.Instance.TriggeredTaskList.Count > 0)
+        {
+            currentTrackedTaskID = SaveConfig.Instance.TriggeredTaskList[0];
+            HUDManager.Instance.UpdateHUDTaskTracking(currentTrackedTaskID);
+        }
+        else if (currentTrackedTaskID == -1 && taskID != -1)
+        {
+            HUDManager.Instance.ClearTracking();
+            currentTrackedTaskID = taskID;
+            HUDManager.Instance.UpdateHUDTaskTracking(taskID);
+        }
+        else 
+        {
+            HUDManager.Instance.ClearTracking();
+        }
+    }
+
     // Public:
     // Process events
     public void ProcessActions(int[] actionIDs)
@@ -109,7 +148,7 @@ public class TaskManager : MonoBehaviour
         configTaskActions(actionIDs);
     }
 
-    // Complete a mission
+    // Complete a series of tasks
     public void CompleteTasks(int[] taskIDs)
     {
         for (int i = 0; i < taskIDs.Length; i++)
@@ -134,8 +173,13 @@ public class TaskManager : MonoBehaviour
     // Unlock a single task
     public void UnlockTask(int taskID)
     {
-        TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
-        configTaskActions(taskData.PreActions);
+        if (SaveManager.Instance.CheckTaskStatus(taskID) == Enums.TASK_STATUS.NotTriggered)
+        {
+            SaveManager.Instance.TriggerTask(taskID);
+            TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
+            configTaskActions(taskData.PreActions);
+        }
+        configTaskTracking(taskID);
     }
 
     // Complete a single task
@@ -145,8 +189,24 @@ public class TaskManager : MonoBehaviour
         {
             return;
         }
-        TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
-        configTaskActions(taskData.PostActions);
-        UnlockTasks(taskData.UnlockTask);
+        if (SaveManager.Instance.CheckTaskStatus(taskID) == Enums.TASK_STATUS.Triggered)
+        {
+            TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
+            SaveManager.Instance.CompleteTask(taskID);
+            configTaskActions(taskData.PostActions);
+            UnlockTasks(taskData.UnlockTask);
+        }
+
+        // Reset Tracking
+        currentTrackedTaskID = -1;
+        configTaskTracking(currentTrackedTaskID);
+    }
+
+    // Private:
+    // Event Handlers
+    private void OnRecv_SceneLoaded()
+    {
+        // When sceneloaded, track task status
+        configTaskTracking(currentTrackedTaskID);
     }
 }

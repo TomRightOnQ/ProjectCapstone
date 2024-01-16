@@ -60,6 +60,18 @@ public class HUDManager : MonoBehaviour
         ShowAllHUD();
     }
 
+    // Track Task
+    public void UpdateHUDTaskTracking(int taskID)
+    {
+        ui_HUD.UpdateHUDTaskTracking(taskID);
+    }
+
+    // Clear Tracking
+    public void ClearTracking()
+    {
+        ui_HUD.ClearTracking();
+    }
+
     // Battle Timer:
     public void BeginHUDTimer()
     {

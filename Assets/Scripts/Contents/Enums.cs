@@ -42,6 +42,7 @@ public static class Enums
         ShowReminder,  // Screen Interaction Type: Show a reminder
         EnterActing,  // Screen Interaction Type: Start Acting mode
         ExitActing,  // Screen Interaction Type: End Acting mode
+        TriggerTask,  // Screen Interaction Type: TriggerATask
         CompleteTask,  // Screen Interaction Type: Complete a task
         AddInteraction,  // Task: Add interactions to the targeted NPC
         RemoveInteraction,  // Task: Remove interactions from the targeted NPC
@@ -51,6 +52,13 @@ public static class Enums
         UnlockInteraction,  // Task: Unlock an Interaction
         LockInteraction,  // Task: Lock an Interaction
         SaveGame,  // Task: Save the Current Game
+    }
+
+    public enum TASK_STATUS
+    {
+        NotTriggered,  // Task Status: Not triggered yet
+        Triggered,  // Task Status: Already Triggered
+        Complete,  // Task Status: Task Accomplished
     }
 
     public enum TASK_TYPE

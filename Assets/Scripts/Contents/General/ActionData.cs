@@ -62,6 +62,7 @@ public static class ActionData
         {31, new ActionDataStruct(31, Enums.TASK_ACTION.Chat, new int[]{21})},
         {32, new ActionDataStruct(32, Enums.TASK_ACTION.Chat, new int[]{22})},
         {34, new ActionDataStruct(34, Enums.TASK_ACTION.UnlockInteraction, new int[]{19})},
+        {35, new ActionDataStruct(35, Enums.TASK_ACTION.TriggerTask, new int[]{9})},
     };
 
     public static ActionDataStruct GetData(int id)

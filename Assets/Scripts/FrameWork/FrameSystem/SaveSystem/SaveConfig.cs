@@ -14,30 +14,49 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     [SerializeField] private bool bAllowRewrite = true;
     public bool AllowRewrite { get { return bAllowRewrite; } }
 
-    // Data
+    /// <summary>
+    /// Datagrams
+    /// </summary>
+    // PlayerInfo
     [SerializeField]
     private PlayerSaveData playerSaveData = new PlayerSaveData();
 
+    // Current Day
     [SerializeField]
     private DaySaveData daySaveData = new DaySaveData();
 
+    // NPC metadata
     [SerializeField]
     private List<NPCSaveData> npcSaveDataList = new List<NPCSaveData>();
     public List<NPCSaveData> NpcSaveDataList => npcSaveDataList;
 
+    // "Guild" Data
     [SerializeField]
     private List<GuildSaveData> guildSaveDataList = new List<GuildSaveData>();
     public List<GuildSaveData> GuildSaveDataList => guildSaveDataList;
 
+    // Character Lock Data
     [SerializeField]
     private Character2DLockData character2DLock = new Character2DLockData();
     public Character2DLockData Character2DLock => character2DLock;
 
+    // Temp - HUD Interactions
     [SerializeField]
     private List<int> disabledHUDInteractionList = new List<int>();
     public List<int> DisabledHUDInteractionList => disabledHUDInteractionList;
 
-    // Datagrams
+    // Triggered Tasks
+    [SerializeField]
+    private List<int> triggeredTaskList = new List<int>();
+    public List<int> TriggeredTaskList => triggeredTaskList;
+
+    [SerializeField]
+    private List<int> completeTaskList = new List<int>();
+    public List<int> CompleteTaskList => completeTaskList;
+
+    /// <summary>
+    /// Data Structs
+    /// </summary>
     [System.Serializable]
     public class PlayerSaveData
     {
@@ -227,7 +246,6 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         npcSaveDataList.Clear();
     }
 
-
     // Modify character lock states
     // --Init-- Methods
     public void InitCharacter2DToList()
@@ -296,6 +314,42 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
                 return character2DLock.PlatformerLevelLock;
         }
         return null;
+    }
+
+    // Modify Task lists
+    // --Init Methods--
+    public void InitTaskLists()
+    {
+        triggeredTaskList.Clear();
+        completeTaskList.Clear();
+    }
+
+    // Trigger a Task
+    public void TriggerTask(int taskID)
+    {
+        if (!triggeredTaskList.Contains(taskID) && !completeTaskList.Contains(taskID))
+        {
+            triggeredTaskList.Add(taskID);
+        }
+    }
+
+    // Remove a Task that is already triggered
+    public void RemoveTriggeredTask(int taskID)
+    {
+        if (triggeredTaskList.Contains(taskID))
+        {
+            triggeredTaskList.Remove(taskID);
+        }
+    }
+
+    // Complete a Task
+    public void CompleteTask(int taskID)
+    {
+        if (triggeredTaskList.Contains(taskID) && !completeTaskList.Contains(taskID))
+        {
+            triggeredTaskList.Remove(taskID);
+            completeTaskList.Add(taskID);
+        }
     }
 
     // Modify Interactions

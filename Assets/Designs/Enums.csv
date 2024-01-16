@@ -23,6 +23,7 @@ StartGame,TASK_ACTION,Screen Interaction Type: Bring the player to a game level
 ShowReminder,TASK_ACTION,Screen Interaction Type: Show a reminder
 EnterActing,TASK_ACTION,Screen Interaction Type: Start Acting mode
 ExitActing,TASK_ACTION,Screen Interaction Type: End Acting mode
+TriggerTask,TASK_ACTION,Screen Interaction Type: TriggerATask
 CompleteTask,TASK_ACTION,Screen Interaction Type: Complete a task
 AddInteraction,TASK_ACTION,Task: Add interactions to the targeted NPC
 RemoveInteraction,TASK_ACTION,Task: Remove interactions from the targeted NPC
@@ -34,3 +35,6 @@ LockInteraction,TASK_ACTION,Task: Lock an Interaction
 SaveGame,TASK_ACTION,Task: Save the Current Game
 Chat,TASK_TYPE,Task System: Chat
 Game,TASK_TYPE,Task System: Game
+NotTriggered,TASK_STATUS,Task Status: Not triggered yet
+Triggered,TASK_STATUS,Task Status: Already Triggered
+Complete,TASK_STATUS,Task Status: Task Accomplished
