@@ -340,6 +340,18 @@ public class SaveManager : MonoBehaviour
         return Enums.TASK_STATUS.NotTriggered;
     }
 
+    // Get a list of triggered tasks
+    public List<int> GetTriggeredTasks()
+    {
+        return SaveConfig.Instance.TriggeredTaskList;
+    }
+
+    // Get a list of complete tasks
+    public List<int> GetCompleteTasks()
+    {
+        return SaveConfig.Instance.CompleteTaskList;
+    }
+
     // Trigger a Task
     public void TriggerTask(int taskID)
     {

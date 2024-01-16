@@ -14,6 +14,9 @@ public class TaskManager : MonoBehaviour
     [SerializeField, ReadOnly]
     private int currentTrackedTaskID = -1;
 
+    // UI Components
+    [SerializeField] private UI_Task ui_Task;
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -34,6 +37,13 @@ public class TaskManager : MonoBehaviour
     private void configEventHandlers()
     {
         EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
+    }
+
+    // Config UIs
+    private void createTaskUI()
+    {
+        GameObject uiObject = UIManager.Instance.CreateUI("UI_Task");
+        ui_Task = uiObject.GetComponent<UI_Task>();
     }
 
     // Config task actions
@@ -142,6 +152,28 @@ public class TaskManager : MonoBehaviour
     }
 
     // Public:
+    /// <summary>
+    /// UI_Task Methods
+    /// </summary>
+    // Show Task Panels
+    public void ShowTaskPanel()
+    {
+        if (ui_Task == null)
+        {
+            createTaskUI();
+        }
+        UIManager.Instance.ShowUI("UI_Task");
+    }
+
+    public void CloseTaskPanel()
+    {
+        if (ui_Task == null)
+        {
+            return;
+        }
+        UIManager.Instance.HideUI("UI_Task");
+    }
+
     // Process events
     public void ProcessActions(int[] actionIDs)
     {
