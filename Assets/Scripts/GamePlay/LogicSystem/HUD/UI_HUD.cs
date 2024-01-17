@@ -133,7 +133,7 @@ public class UI_HUD : UIBase
     // TaskInfo - Button to open the task board
     public void OnClick_Btn_OpenTask()
     {
-
+        TaskManager.Instance.ShowTaskPanel();
     }
 
     // Menu - Open Menu

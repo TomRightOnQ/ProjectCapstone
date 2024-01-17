@@ -123,6 +123,8 @@ public class HUDManager : MonoBehaviour
     // Event Handlers
     private void OnRecv_SceneLoaded()
     {
+        // Refresh Task
+
         // Show upperleft UI in battle scene
         if (LevelManager.Instance.CurrentSceneType == Enums.SCENE_TYPE.Battle)
         {

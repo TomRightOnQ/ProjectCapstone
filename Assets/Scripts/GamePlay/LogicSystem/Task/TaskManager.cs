@@ -141,8 +141,11 @@ public class TaskManager : MonoBehaviour
         }
         else if (currentTrackedTaskID == -1 && taskID != -1)
         {
-            HUDManager.Instance.ClearTracking();
             currentTrackedTaskID = taskID;
+            HUDManager.Instance.UpdateHUDTaskTracking(taskID);
+        }
+        else if (currentTrackedTaskID != -1)
+        {
             HUDManager.Instance.UpdateHUDTaskTracking(taskID);
         }
         else 
@@ -163,6 +166,7 @@ public class TaskManager : MonoBehaviour
             createTaskUI();
         }
         UIManager.Instance.ShowUI("UI_Task");
+        ui_Task.ShowTaskPanel();
     }
 
     public void CloseTaskPanel()
@@ -172,6 +176,12 @@ public class TaskManager : MonoBehaviour
             return;
         }
         UIManager.Instance.HideUI("UI_Task");
+    }
+
+    // Manually track a task
+    public void TrackTask(int taskID)
+    {
+        
     }
 
     // Process events
