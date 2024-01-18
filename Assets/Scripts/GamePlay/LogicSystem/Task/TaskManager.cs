@@ -17,6 +17,13 @@ public class TaskManager : MonoBehaviour
     // UI Components
     [SerializeField] private UI_Task ui_Task;
 
+    /// <summary>
+    /// References of tracking indicators
+    /// Tracking NPC or a position
+    /// </summary>
+    private Dictionary<int, TaskIndicator> npcTrackDictionary;
+    private Dictionary<int, TaskIndicator> positionTrackDictionary;
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -42,8 +49,12 @@ public class TaskManager : MonoBehaviour
     // Config UIs
     private void createTaskUI()
     {
-        GameObject uiObject = UIManager.Instance.CreateUI("UI_Task");
-        ui_Task = uiObject.GetComponent<UI_Task>();
+        if (ui_Task == null)
+        {
+            GameObject uiObject = UIManager.Instance.CreateUI("UI_Task");
+            ui_Task = uiObject.GetComponent<UI_Task>();
+            UIManager.Instance.ShowUI("UI_Task");
+        }
     }
 
     // Config task actions
@@ -134,9 +145,9 @@ public class TaskManager : MonoBehaviour
     private void configTaskTracking(int taskID)
     {
         // If no tasks are tracked, choose the first one on list
-        if (taskID == -1 && SaveConfig.Instance.TriggeredTaskList.Count > 0)
+        if (taskID == -1 && SaveManager.Instance.GetTriggeredTasks().Count > 0)
         {
-            currentTrackedTaskID = SaveConfig.Instance.TriggeredTaskList[0];
+            currentTrackedTaskID = SaveManager.Instance.GetTriggeredTasks()[0];
             HUDManager.Instance.UpdateHUDTaskTracking(currentTrackedTaskID);
         }
         else if (currentTrackedTaskID == -1 && taskID != -1)
@@ -165,7 +176,6 @@ public class TaskManager : MonoBehaviour
         {
             createTaskUI();
         }
-        UIManager.Instance.ShowUI("UI_Task");
         ui_Task.ShowTaskPanel();
     }
 
@@ -175,13 +185,14 @@ public class TaskManager : MonoBehaviour
         {
             return;
         }
-        UIManager.Instance.HideUI("UI_Task");
+        ui_Task.CloseTaskPanel();
     }
 
     // Manually track a task
     public void TrackTask(int taskID)
     {
-        
+        currentTrackedTaskID = taskID;
+        configTaskTracking(taskID);
     }
 
     // Process events
@@ -244,10 +255,26 @@ public class TaskManager : MonoBehaviour
         configTaskTracking(currentTrackedTaskID);
     }
 
+    /// <summary>
+    /// Tracking methods
+    /// </summary>
+    // Track an NPC
+    public void TrackNPC(int npcID)
+    {
+        // Make sure NPC in current scene and not already tracked
+        if (!NPCManager.Instance.NpcMap.ContainsKey(npcID) && !npcTrackDictionary.ContainsKey(npcID))
+        {
+            return;
+        }
+        // Create a TaskIndicator on Task UI Canvas and config it
+
+    }
+
     // Private:
     // Event Handlers
     private void OnRecv_SceneLoaded()
     {
+        createTaskUI();
         // When sceneloaded, track task status
         configTaskTracking(currentTrackedTaskID);
     }

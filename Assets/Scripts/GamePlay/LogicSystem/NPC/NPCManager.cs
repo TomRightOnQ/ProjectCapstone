@@ -12,6 +12,7 @@ public class NPCManager : MonoBehaviour
 
     // Save the references of all instantiated NPCs
     private Dictionary<int, NPCUnit> npcMap = new Dictionary<int, NPCUnit>();
+    public Dictionary<int, NPCUnit> NpcMap => npcMap;
 
     private void Awake()
     {

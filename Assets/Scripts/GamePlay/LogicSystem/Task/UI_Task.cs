@@ -14,6 +14,7 @@ public class UI_Task : UIBase
     private int currentTrackedTask = -1;
 
     // Widget
+    [SerializeField] private GameObject P_TaskPanel;
     [SerializeField] private GameObject P_Content;
     [SerializeField] private TextMeshProUGUI TB_NameTitle;
     [SerializeField] private TextMeshProUGUI RTB_TaskContent;
@@ -57,7 +58,13 @@ public class UI_Task : UIBase
     // Show Panel
     public void ShowTaskPanel()
     {
+        P_TaskPanel.SetActive(true);
         refreshList();
+    }
+
+    public void CloseTaskPanel()
+    {
+        P_TaskPanel.SetActive(false);
     }
 
     // Add to list
