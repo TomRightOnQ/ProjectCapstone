@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d93a4cd04b66b4c81984f05056df7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  P_TaskPanel: {fileID: 2689528369248446660}
   P_Content: {fileID: 8443031420317480174}
   TB_NameTitle: {fileID: 6405798559738374806}
   RTB_TaskContent: {fileID: 3868596845041366999}
@@ -1838,7 +1839,7 @@ PrefabInstance:
     - target: {fileID: 5976862100235429155, guid: a9753976044145b488101c0abb49d3bc,
         type: 3}
       propertyPath: m_Name
-      value: P_ComPanel
+      value: P_TaslPanel
       objectReference: {fileID: 0}
     - target: {fileID: 5976862100235429155, guid: a9753976044145b488101c0abb49d3bc,
         type: 3}
@@ -1863,6 +1864,12 @@ PrefabInstance:
       addedObject: {fileID: 1513322860864953431}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9753976044145b488101c0abb49d3bc, type: 3}
+--- !u!1 &2689528369248446660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5976862100235429155, guid: a9753976044145b488101c0abb49d3bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 8620183962954010087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8881568307069235628 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 927918497724251211, guid: a9753976044145b488101c0abb49d3bc,

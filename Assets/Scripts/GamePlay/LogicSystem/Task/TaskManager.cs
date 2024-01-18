@@ -21,8 +21,8 @@ public class TaskManager : MonoBehaviour
     /// References of tracking indicators
     /// Tracking NPC or a position
     /// </summary>
-    private Dictionary<int, TaskIndicator> npcTrackDictionary;
-    private Dictionary<int, TaskIndicator> positionTrackDictionary;
+    private Dictionary<int, TaskIndicator> npcTrackDictionary = new Dictionary<int, TaskIndicator>();
+    private Dictionary<int, TaskIndicator> positionTrackDictionary = new Dictionary<int, TaskIndicator>();
 
     private void Awake()
     {
@@ -150,19 +150,41 @@ public class TaskManager : MonoBehaviour
         {
             currentTrackedTaskID = SaveManager.Instance.GetTriggeredTasks()[0];
             HUDManager.Instance.UpdateHUDTaskTracking(currentTrackedTaskID);
+            setTrackOnTarget();
         }
         else if (currentTrackedTaskID == -1 && taskID != -1)
         {
             currentTrackedTaskID = taskID;
             HUDManager.Instance.UpdateHUDTaskTracking(taskID);
+            setTrackOnTarget();
         }
         else if (currentTrackedTaskID != -1)
         {
             HUDManager.Instance.UpdateHUDTaskTracking(taskID);
+            setTrackOnTarget();
         }
         else 
         {
             HUDManager.Instance.ClearTracking();
+        }
+    }
+
+    // Set Tracking
+    private void setTrackOnTarget()
+    {
+        // Get data for the current tracking
+        TaskData.TaskDataStruct taskData = TaskData.GetData(currentTrackedTaskID);
+        // Track Position or NPC
+        if (taskData.TrackTarget != -1)
+        {
+            if (taskData.bTrackNPC)
+            {
+                TrackNPC(taskData.TrackTarget);
+            }
+            else 
+            {
+                TrackPosition(taskData.TrackTarget);
+            }
         }
     }
 
@@ -192,7 +214,7 @@ public class TaskManager : MonoBehaviour
     // Manually track a task
     public void TrackTask(int taskID)
     {
-        currentTrackedTaskID = taskID;
+        currentTrackedTaskID = -1;
         configTaskTracking(taskID);
     }
 
@@ -268,18 +290,34 @@ public class TaskManager : MonoBehaviour
             return;
         }
         // Create a TaskIndicator on Task UI Canvas and config it
-
+        GameObject indicatorObj = PrefabManager.Instance.Instantiate("TaskIndicator", Vector3.zero, Quaternion.identity);
+        if (indicatorObj == null || indicatorObj.GetComponent<TaskIndicator>() == null)
+        {
+            return;
+        }
+        indicatorObj.transform.SetParent(ui_Task.transform, false);
+        indicatorObj.SetActive(true);
+        TaskIndicator indicator = indicatorObj.GetComponent<TaskIndicator>();
+        indicator.ConfigIndicator(NPCManager.Instance.NpcMap[npcID].gameObject);
     }
 
-    public void TrackPosition(int taskID)
+    public void TrackPosition(int positionID)
     {
         // Make sure the position is not tracked yet
-        if (positionTrackDictionary.ContainsKey(taskID))
+        if (positionTrackDictionary.ContainsKey(positionID))
         {
             return;
         }
         // Create a TaskIndicator on Task UI Canvas and config it
-
+        GameObject indicatorObj = PrefabManager.Instance.Instantiate("TaskIndicator", Vector3.zero, Quaternion.identity);
+        if (indicatorObj == null || indicatorObj.GetComponent<TaskIndicator>() == null)
+        {
+            return;
+        }
+        indicatorObj.transform.SetParent(ui_Task.transform, false);
+        indicatorObj.SetActive(true);
+        TaskIndicator indicator = indicatorObj.GetComponent<TaskIndicator>();
+        indicator.ConfigIndicator(Vector3PositionData.GetData(positionID).Position);
     }
 
     // Private:

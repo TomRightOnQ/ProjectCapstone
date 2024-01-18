@@ -8,11 +8,14 @@ using UnityEngine;
 public class TaskIndicator : MObject
 {
     // Target Reference
+    [SerializeField, ReadOnly]
     private GameObject targetObject;
 
+    [SerializeField, ReadOnly]
     // Target Position
     private Vector3 targetPosition;
 
+    [SerializeField, ReadOnly]
     // Tracking mod
     private bool bTrackByPosition = false;
 
@@ -33,9 +36,24 @@ public class TaskIndicator : MObject
     // During each update, adjust the position
     private void Update()
     {
-        if (targetObject == null)
+        if (bTrackByPosition)
         {
-            return;
+            UpdateIndicatorPosition(targetPosition);
         }
+        else if (targetObject != null)
+        {
+            UpdateIndicatorPosition(targetObject.transform.position);
+        }
+    }
+
+    private void UpdateIndicatorPosition(Vector3 worldPosition)
+    {
+        Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
+
+        screenPosition.x = Mathf.Clamp(screenPosition.x, 0, Screen.width);
+        screenPosition.y = Mathf.Clamp(screenPosition.y + 100f, 0, Screen.height);
+
+        // Set the indicator's position
+        transform.position = screenPosition;
     }
 }
