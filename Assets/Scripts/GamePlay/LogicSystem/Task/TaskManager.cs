@@ -44,6 +44,7 @@ public class TaskManager : MonoBehaviour
     private void configEventHandlers()
     {
         EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_UNLOADED, OnRecv_SceneUnloaded);
     }
 
     // Config UIs
@@ -262,7 +263,18 @@ public class TaskManager : MonoBehaviour
     public void TrackNPC(int npcID)
     {
         // Make sure NPC in current scene and not already tracked
-        if (!NPCManager.Instance.NpcMap.ContainsKey(npcID) && !npcTrackDictionary.ContainsKey(npcID))
+        if (!NPCManager.Instance.NpcMap.ContainsKey(npcID) || npcTrackDictionary.ContainsKey(npcID))
+        {
+            return;
+        }
+        // Create a TaskIndicator on Task UI Canvas and config it
+
+    }
+
+    public void TrackPosition(int taskID)
+    {
+        // Make sure the position is not tracked yet
+        if (positionTrackDictionary.ContainsKey(taskID))
         {
             return;
         }
@@ -277,5 +289,12 @@ public class TaskManager : MonoBehaviour
         createTaskUI();
         // When sceneloaded, track task status
         configTaskTracking(currentTrackedTaskID);
+    }
+
+    private void OnRecv_SceneUnloaded()
+    {
+        // When scene unloaded, clear the tracking to avoid null references.
+        npcTrackDictionary.Clear();
+        positionTrackDictionary.Clear();
     }
 }
