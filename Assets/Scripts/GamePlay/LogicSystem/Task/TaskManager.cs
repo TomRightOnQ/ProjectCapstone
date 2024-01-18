@@ -174,6 +174,11 @@ public class TaskManager : MonoBehaviour
     {
         // Get data for the current tracking
         TaskData.TaskDataStruct taskData = TaskData.GetData(currentTrackedTaskID);
+        // Only track when the target is in the scene
+        if (taskData.SceneName != LevelManager.Instance.CurrentScene)
+        {
+            return;
+        }
         // Track Position or NPC
         if (taskData.TrackTarget != -1)
         {

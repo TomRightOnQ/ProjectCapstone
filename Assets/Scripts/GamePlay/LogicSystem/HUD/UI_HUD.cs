@@ -109,7 +109,7 @@ public class UI_HUD : UIBase
     {
         // Retrieve Task Metadata
         TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
-        TB_TaskName.text = taskData.Name;
+        TB_TaskName.text = LevelConfig.Instance.GetLevelData(taskData.SceneName).StringName;
         TB_TaskBrief.text = taskData.Description;
         if (taskData.SceneName != "None")
         {
