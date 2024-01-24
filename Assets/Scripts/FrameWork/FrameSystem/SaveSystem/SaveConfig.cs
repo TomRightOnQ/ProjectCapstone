@@ -54,6 +54,14 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     private List<int> completeTaskList = new List<int>();
     public List<int> CompleteTaskList => completeTaskList;
 
+    // Map Lock
+    [SerializeField]
+    private List<string> lockedMapList = new List<string>();
+    public List<string> LockedMapList => lockedMapList;
+
+    [SerializeField]
+    private bool bTeleportLocked = false;
+
     /// <summary>
     /// Data Structs
     /// </summary>
@@ -350,6 +358,43 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
             triggeredTaskList.Remove(taskID);
             completeTaskList.Add(taskID);
         }
+    }
+
+    // Modify Map lock lists
+    // --Init Methods--
+    public void InitMapLockList()
+    {
+        lockedMapList.Clear();
+    }
+
+    // Lock a map
+    public void LockMap(string mapName)
+    {
+        if (!lockedMapList.Contains(mapName))
+        {
+            lockedMapList.Add(mapName);
+        }
+    }
+
+    // Unlock a map
+    public void UnlockMap(string mapName)
+    {
+        if (lockedMapList.Contains(mapName))
+        {
+            lockedMapList.Remove(mapName);
+        }
+    }
+
+    // Set map teleport lock 
+    public void SetMapTravelLockStatus(bool bLocked)
+    {
+        bTeleportLocked = bLocked;
+    }
+
+    // Get map teleport lock
+    public bool CheckMapTravelLockStatus()
+    {
+        return bTeleportLocked;
     }
 
     // Modify Interactions

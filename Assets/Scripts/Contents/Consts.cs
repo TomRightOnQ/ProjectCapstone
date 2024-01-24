@@ -29,6 +29,7 @@ public static class Constants
     public const string LEVEL2D_TEXT_SOURCE_PATH = "Texts/Level2D";  // Path for 2D Level Info
 
     // SCENE_NAME
+    public const string SCENE_NONE = ""; // No Scene
     public const string SCENE_GAME_INIT = "GameInitScene";  // Game Entry Scene
     public const string SCENE_GAME_LOAD = "GameLoadingScene";  // Game Main Loading Scene
     public const string SCENE_MAIN_MENU = "MainMenu";  // Main Menu

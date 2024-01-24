@@ -156,6 +156,7 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.InitCharacter2DToList();
         SaveConfig.Instance.InitHUDInteractionDisableList();
         SaveConfig.Instance.InitTaskLists();
+        SaveConfig.Instance.InitMapLockList();
         SaveConfig.Instance.LockSave();
 
         // Load Day 0 Configs
@@ -387,6 +388,38 @@ public class SaveManager : MonoBehaviour
     public void DisableHUDInteraction(int interactionID)
     {
         SaveConfig.Instance.DisableHUDInteraction(interactionID);
+    }
+
+    /// <summary>
+    /// Map System
+    /// </summary>
+    // Check if a map is locked
+    public bool CheckMapLocked(string mapName)
+    {
+        return SaveConfig.Instance.LockedMapList.Contains(mapName);
+    }
+
+    // Lock a map
+    public void LockMap(string mapName)
+    {
+        SaveConfig.Instance.LockMap(mapName);
+    }
+
+    public void UnlockMap(string mapName)
+    {
+        SaveConfig.Instance.UnlockMap(mapName);
+    }
+
+    // Set map teleport lock 
+    public void SetMapTravelLockStatus(bool bLocked)
+    {
+        SaveConfig.Instance.SetMapTravelLockStatus(bLocked);
+    }
+
+    // Get map teleport lock
+    public bool CheckMapTravelLockStatus()
+    {
+        return SaveConfig.Instance.CheckMapTravelLockStatus();
     }
 
     // Private:
