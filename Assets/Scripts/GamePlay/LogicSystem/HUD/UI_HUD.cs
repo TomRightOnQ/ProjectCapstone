@@ -19,6 +19,9 @@ public class UI_HUD : UIBase
     // UI - Upper Left Section
     [SerializeField] private GameObject upperLeftHUD;
 
+    // UI - Virtual Group of task indicators
+    [SerializeField] private GameObject P_TaskIndicatorGroup;
+
     // UI - Timer
     [SerializeField] private GameObject hudTimer;
     [SerializeField] private TextMeshProUGUI timerText;
@@ -43,6 +46,7 @@ public class UI_HUD : UIBase
         }
         bHidden = true;
         HideUpperRightHUD();
+        P_TaskIndicatorGroup.SetActive(false);
     }
 
     public void ShowAllHUD()
@@ -53,17 +57,20 @@ public class UI_HUD : UIBase
         }
         bHidden = false;
         ShowUpperRightHUD();
+        P_TaskIndicatorGroup.SetActive(true);
     }
 
     // Reveal Upper Right HUD
     public void ShowUpperRightHUD()
     {
+        P_TaskIndicatorGroup.SetActive(true);
         upperRightAnimator.Play("HUDUpperRightShow");
     }
 
     // Hide Upper Right HUD
     public void HideUpperRightHUD() 
     {
+        P_TaskIndicatorGroup.SetActive(false);
         upperRightAnimator.Play("HUDUpperRightHide");
     }
 
@@ -79,8 +86,14 @@ public class UI_HUD : UIBase
         upperLeftHUD.SetActive(false);
     }
 
+    // Set Task Indicator
+    public void SetTrackIndicator(Transform indicatorTransform)
+    {
+        indicatorTransform.SetParent(P_TaskIndicatorGroup.transform, false);
+    }
+
     /// <summary>
-    /// HUD Functional COntrols
+    /// HUD Functional Controls
     /// </summary>
     // Battle Timer:
     public void BeginHUDTimer()
@@ -109,11 +122,11 @@ public class UI_HUD : UIBase
     {
         // Retrieve Task Metadata
         TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
-        TB_TaskName.text = LevelConfig.Instance.GetLevelData(taskData.SceneName).StringName;
+        TB_TaskName.text = taskData.Name;
         TB_TaskBrief.text = taskData.Description;
         if (taskData.SceneName != "None")
         {
-            TB_TaskScene.text = taskData.SceneName;
+            TB_TaskScene.text = LevelConfig.Instance.GetLevelData(taskData.SceneName).StringName;
         }
         else 
         {

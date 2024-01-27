@@ -19,7 +19,10 @@ public static class ReminderData
     }
     public static Dictionary<int, ReminderDataStruct> data = new Dictionary<int, ReminderDataStruct>
     {
-        {1, new ReminderDataStruct(1, "Hey there!", 2f)},
+        {1, new ReminderDataStruct(1, "WASD to Move, F to Interact", 2f)},
+        {2, new ReminderDataStruct(2, "A Few Hours Later...", 2f)},
+        {3, new ReminderDataStruct(3, "Use Menu - Map to walk around!", 2f)},
+        {4, new ReminderDataStruct(4, "You have unlocked a new piece of Note", 2f)},
     };
 
     public static ReminderDataStruct GetData(int id)

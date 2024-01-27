@@ -32,6 +32,8 @@ public class UI_Menu : UIBase
         }
         bLocked = true;
         PersistentGameManager.Instance.PauseGame();
+        // Check which option to show
+        configLockedModule();
         menuAnimator.Play("MenuInAnimation");
     }
 
@@ -58,7 +60,7 @@ public class UI_Menu : UIBase
         DisableMenu();
     }
 
-    // Set all buttons except menu locked or unlocked
+    // Set all buttons except the main menu button locked or unlocked
     public void SetFunctionalButtonState(bool bActive)
     {
         for (int i = 0; i < functionalButtonList.Count; i++)
@@ -116,7 +118,8 @@ public class UI_Menu : UIBase
 
     public void OnClick_Btn_Maps()
     {
-        MenuManager.Instance.CloseMenu();
+        MapManager.Instance.ShowMapPanel();
+        MenuManager.Instance.CloseMenuNoResume();
     }
 
     public void OnClick_Btn_Characters()
@@ -140,5 +143,22 @@ public class UI_Menu : UIBase
     }
 
     // Private:
-
+    // Check if options are locked
+    private void configLockedModule()
+    {
+        if (SaveConfig.Instance.MenuModuleLockList.Count >= functionalButtonList.Count)
+        {
+            for (int i = 0; i < functionalButtonList.Count; i++)
+            {
+                if (SaveConfig.Instance.MenuModuleLockList[i])
+                {
+                    functionalButtonList[i].gameObject.SetActive(false);
+                }
+                else 
+                {
+                    functionalButtonList[i].gameObject.SetActive(true);
+                }
+            }
+        }
+    }
 }

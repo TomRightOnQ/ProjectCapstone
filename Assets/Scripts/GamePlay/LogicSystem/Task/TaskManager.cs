@@ -148,9 +148,18 @@ public class TaskManager : MonoBehaviour
         // If no tasks are tracked, choose the first one on list
         if (taskID == -1 && SaveManager.Instance.GetTriggeredTasks().Count > 0)
         {
-            currentTrackedTaskID = SaveManager.Instance.GetTriggeredTasks()[0];
-            HUDManager.Instance.UpdateHUDTaskTracking(currentTrackedTaskID);
-            setTrackOnTarget();
+            for (int i = 0; i < SaveManager.Instance.GetTriggeredTasks().Count; i++)
+            {
+                int tempID = SaveManager.Instance.GetTriggeredTasks()[i];
+                if (!TaskData.GetData(tempID).bHidden)
+                {
+                    currentTrackedTaskID = tempID;
+                    HUDManager.Instance.UpdateHUDTaskTracking(currentTrackedTaskID);
+                    setTrackOnTarget();
+                    return;
+                }
+            }
+            HUDManager.Instance.ClearTracking();
         }
         else if (currentTrackedTaskID == -1 && taskID != -1)
         {
@@ -258,7 +267,7 @@ public class TaskManager : MonoBehaviour
         {
             SaveManager.Instance.TriggerTask(taskID);
             TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
-            configTaskActions(taskData.PreActions);
+            DayCycleManager.Instance.ConfigTaskAction(taskID, true);
         }
         configTaskTracking(taskID);
     }
@@ -274,13 +283,26 @@ public class TaskManager : MonoBehaviour
         {
             TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
             SaveManager.Instance.CompleteTask(taskID);
-            configTaskActions(taskData.PostActions);
-            UnlockTasks(taskData.UnlockTask);
-        }
 
-        // Reset Tracking
-        currentTrackedTaskID = -1;
-        configTaskTracking(currentTrackedTaskID);
+            // Reset Tracking
+            // Clear current Tracking
+            if (taskData.bTrackNPC && npcTrackDictionary.ContainsKey(taskData.TrackTarget))
+            {
+                PrefabManager.Instance.Destroy(npcTrackDictionary[taskData.TrackTarget].gameObject);
+                npcTrackDictionary.Remove(taskData.TrackTarget);
+            }
+            else if (positionTrackDictionary.ContainsKey(taskData.TrackTarget))
+            {
+                PrefabManager.Instance.Destroy(npcTrackDictionary[taskData.TrackTarget].gameObject);
+                positionTrackDictionary.Remove(taskData.TrackTarget);
+            }
+            currentTrackedTaskID = -1;
+            configTaskTracking(currentTrackedTaskID);
+        }
+        DayCycleManager.Instance.ConfigTaskAction(taskID, false);
+
+        // Auto Save
+        SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
     }
 
     /// <summary>
@@ -300,10 +322,13 @@ public class TaskManager : MonoBehaviour
         {
             return;
         }
-        indicatorObj.transform.SetParent(ui_Task.transform, false);
+        HUDManager.Instance.SetTrackIndicator(indicatorObj.transform);
         indicatorObj.SetActive(true);
         TaskIndicator indicator = indicatorObj.GetComponent<TaskIndicator>();
         indicator.ConfigIndicator(NPCManager.Instance.NpcMap[npcID].gameObject);
+
+        // Hold the reference
+        npcTrackDictionary[npcID] = indicator;
     }
 
     public void TrackPosition(int positionID)
@@ -319,10 +344,11 @@ public class TaskManager : MonoBehaviour
         {
             return;
         }
-        indicatorObj.transform.SetParent(ui_Task.transform, false);
+        HUDManager.Instance.SetTrackIndicator(indicatorObj.transform);
         indicatorObj.SetActive(true);
         TaskIndicator indicator = indicatorObj.GetComponent<TaskIndicator>();
         indicator.ConfigIndicator(Vector3PositionData.GetData(positionID).Position);
+        positionTrackDictionary[positionID] = indicator;
     }
 
     // Private:

@@ -27,9 +27,9 @@ public class CoreSaveConfig : ScriptableSingleton<CoreSaveConfig>
     [System.Serializable]
     public class NoteData
     {
-        public List<int> NoteIDs;
-        public List<int> ItemIDs;
-        public List<int> ReportIDs;
+        public List<int> NoteIDs = new List<int>();
+        public List<int> ItemIDs = new List<int>();
+        public List<int> ReportIDs = new List<int>();
     }
 
     // DayCycle - Max Day

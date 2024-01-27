@@ -8,4 +8,9 @@ public class DayScriptBase
     {
 
     }
+
+    public virtual void ConfigTaskAction(int taskID, bool bPre)
+    {
+    
+    }
 }

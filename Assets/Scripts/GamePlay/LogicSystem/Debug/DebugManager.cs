@@ -80,4 +80,9 @@ public class DebugManager : MonoBehaviour
         CharacterManager.Instance.ShowCharacterPickerPanel(5);
         onClick();
     }
+
+    public void PlayWholeScreenReminder() 
+    {
+        ReminderManager.Instance.ShowWholeScreenReminder(2);
+    }
 }

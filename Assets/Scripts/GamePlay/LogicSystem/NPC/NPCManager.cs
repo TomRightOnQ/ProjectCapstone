@@ -93,7 +93,7 @@ public class NPCManager : MonoBehaviour
         if (npcMap.ContainsKey(npcID))
         {
             GameObject npcObject = npcMap[npcID].gameObject;
-            PrefabManager.Instance.Destroy(npcObject);
+            Destroy(npcObject);
             npcMap.Remove(npcID);
         }
     }
@@ -104,6 +104,17 @@ public class NPCManager : MonoBehaviour
         Vector3 position = Vector3PositionData.GetData(positionID).Position;
         string sceneName = LevelConfig.Instance.GetLevelData(sceneID).SceneName;
         SaveManager.Instance.AddNPCToSave(npcID, sceneName, position);
+    }
+
+    public void AddNewNPCToSave(int npcID, string sceneName, Vector3 NPCPosition)
+    {
+
+        SaveManager.Instance.AddNPCToSave(npcID, sceneName, NPCPosition);
+    }
+
+    public void RemoveNPCFromSave(int npcID)
+    {
+        SaveManager.Instance.RemoveNPCFromSave(npcID);
     }
 
     public void AddInteractionToNPC(int npcID, int interactionID)

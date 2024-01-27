@@ -24,6 +24,8 @@ public static class NotesData
         {0, new NotesDataStruct(0, "Important Conversations...", Enums.NOTE_TYPE.Note, "SampleNote.txt")},
         {1, new NotesDataStruct(1, "Something Worth Remembering...", Enums.NOTE_TYPE.Item, "SampleItem.txt")},
         {2, new NotesDataStruct(2, "End of a Day...", Enums.NOTE_TYPE.Report, "SampleReport.txt")},
+        {10000, new NotesDataStruct(10000, "About the Game", Enums.NOTE_TYPE.Note, "10000.txt")},
+        {10100, new NotesDataStruct(10100, "Game Rule", Enums.NOTE_TYPE.Item, "10100.txt")},
     };
 
     public static NotesDataStruct GetData(int id)

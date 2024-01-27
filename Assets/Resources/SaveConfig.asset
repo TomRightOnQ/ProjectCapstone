@@ -12,20 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5adf8aafd7f0134caf3fc7c7c08a0ff, type: 3}
   m_Name: SaveConfig
   m_EditorClassIdentifier: 
-  bAllowRewrite: 0
+  bAllowRewrite: 1
   playerSaveData:
     PlayerName: You
-    Position: {x: 0, y: 0.5, z: 0}
-    Scene: DefaultLevel
+    Position: {x: 14, y: 0.6, z: 0}
+    Scene: RoomALevel
   daySaveData:
-    CurrentDay: 0
+    CurrentDay: 1
     bInited: 1
   npcSaveDataList:
-  - NpcID: 1
-    NpcName: Chatter
-    Position: {x: 2, y: 0.5, z: 0}
-    interactionIDs: 08000000
-    Scene: DefaultLevel
+  - NpcID: 1100
+    NpcName: DNPC_Item_0
+    Position: {x: 6.191, y: 1.22, z: 1.077}
+    interactionIDs: 12270000
+    Scene: RoomALevel
+    bActive: 1
+  - NpcID: 1103
+    NpcName: DNPC_Item_3
+    Position: {x: 9.303, y: 0.44, z: -0.268}
+    interactionIDs: 13270000
+    Scene: RoomALevel
+    bActive: 1
+  - NpcID: 1102
+    NpcName: DNPC_Item_2
+    Position: {x: 4.35, y: 0.6, z: -1.4}
+    interactionIDs: 19270000
+    Scene: RoomALevel
     bActive: 1
   guildSaveDataList:
   - GuildID: 0
@@ -112,5 +124,8 @@ MonoBehaviour:
     ShooterLevelLock: 
     PlatformerLevelLock: 
   disabledHUDInteractionList: 
-  triggeredTaskList: 
-  completeTaskList: 
+  triggeredTaskList: 4c040000ee030000
+  completeTaskList: e8030000e9030000ea030000eb030000ec030000ed030000
+  lockedMapList: []
+  bTeleportLocked: 0
+  menuModuleLockList: 000000000000

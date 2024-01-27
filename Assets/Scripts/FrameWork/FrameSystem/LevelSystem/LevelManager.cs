@@ -30,6 +30,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField, ReadOnly]
     private int groupID = 0;
 
+    // UI Components
+    [SerializeField] private UI_Loading ui_Loading;
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -45,6 +48,11 @@ public class LevelManager : MonoBehaviour
     }
 
     // Public:
+    public void Init()
+    {
+        createLoadingUI();
+    }
+
     // Swap Scene
     public void LoadScene(int id)
     {
@@ -84,6 +92,8 @@ public class LevelManager : MonoBehaviour
         if (SaveConfig.Instance.AllowRewrite)
         {
             SaveManager.Instance.CreateNewSave();
+            // case for new game
+            return;
         }
         SaveManager.Instance.LoadGameCoreSave();
         SaveConfig.PlayerSaveData playerData = SaveManager.Instance.GetPlayer();
@@ -103,6 +113,34 @@ public class LevelManager : MonoBehaviour
     }
 
     // Private:
+    // Config UIs
+    private void createLoadingUI()
+    {
+        if (ui_Loading == null)
+        {
+            GameObject uiObject = UIManager.Instance.CreateUI("UI_Loading");
+            ui_Loading = uiObject.GetComponent<UI_Loading>();
+        }
+    }
+
+    // Show Loading page
+    // Hide Loading page
+    private void showLoadingUI()
+    {
+        if (ui_Loading != null)
+        {
+            UIManager.Instance.ShowUI("UI_Loading");
+        }
+    }
+
+    private void hideLoadingUI()
+    {
+        if (ui_Loading != null)
+        {
+            UIManager.Instance.HideUI("UI_Loading");
+        }
+    }
+
     // Coroutines
     private IEnumerator loadSceneAsync(string sceneName)
     {
@@ -111,6 +149,9 @@ public class LevelManager : MonoBehaviour
 
         // Notify the beginning of scene loading
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_SCENE_UNLOADED);
+        // Show Loading UI
+        showLoadingUI();
+
         // Wait until the scene is fully loaded
         while (!asyncOperation.isDone)
         {
@@ -183,6 +224,8 @@ public class LevelManager : MonoBehaviour
     {
         PersistentDataManager.Instance.SetCamera();
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_SCENE_LOADED);
+        // Hide Loaidng UI
+        hideLoadingUI();
 
         if (worldType == Enums.SCENE_TYPE.Battle)
         {
@@ -205,7 +248,7 @@ public class LevelManager : MonoBehaviour
         {
             InputManager.Instance.UnLockInput(worldType);
         }
-
+        
         // Resume the game
         PersistentGameManager.Instance.ResumeGame();
 

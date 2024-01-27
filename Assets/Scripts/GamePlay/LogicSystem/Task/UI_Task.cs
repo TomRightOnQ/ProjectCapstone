@@ -40,7 +40,10 @@ public class UI_Task : UIBase
         List<int> listData = SaveManager.Instance.GetTriggeredTasks();
         for (int i = 0; i < listData.Count; i++)
         {
-            AddToTaskList(listData[i]);
+            if (!TaskData.GetData(listData[i]).bHidden)
+            {
+                AddToTaskList(listData[i]);
+            }
         }
     }
 

@@ -62,8 +62,13 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     [SerializeField]
     private bool bTeleportLocked = false;
 
+    // Module Lock
+    [SerializeField]
+    private List<bool> menuModuleLockList = new List<bool>();
+    public List<bool> MenuModuleLockList => menuModuleLockList;
+
     /// <summary>
-    /// Data Structs
+    /// Data mainMenuoduleLockList
     /// </summary>
     [System.Serializable]
     public class PlayerSaveData
@@ -134,7 +139,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     // --Init-- Methods
     public void InitDayToSave()
     {
-        daySaveData.CurrentDay = 0;
+        daySaveData.CurrentDay = 1;
     }
 
     // Modify Guild status
@@ -189,6 +194,8 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public void InitNPCToSave()
     {
         npcSaveDataList.Clear();
+        /*
+         * Currently no need to init NPC like this
         foreach (var pair in NPCData.data)
         {
             NPCData.NPCDataStruct defaultNPC = pair.Value;
@@ -205,6 +212,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
 
             npcSaveDataList.Add(newNPCSaveData);
         }
+        */
     }
 
     // Change NPC in save
@@ -246,6 +254,16 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         else
         {
             Debug.LogWarning($"NPC with ID {npcID} already in save.");
+        }
+    }
+
+    public void RemoveNPCFromSave(int npcID)
+    {
+        var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
+
+        if (npc != null)
+        {
+            npcSaveDataList.Remove(npc);
         }
     }
 
@@ -412,6 +430,25 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         {
             Debug.LogWarning($"NPC with ID {npcID} not found.");
         }
+    }
+
+    // Modify Menu module options list
+    // --Init Methods--
+    public void InitMenuModuleLockList()
+    {
+        menuModuleLockList.Clear();
+    }
+
+    // Init module lock via array
+    public void InitModuleLock(bool[] lockList)
+    {
+        menuModuleLockList = new List<bool>(lockList);
+    }
+
+    // Lock or unlock a module
+    public void SetModuleLock(bool bLock, int moduleID)
+    {
+        menuModuleLockList[moduleID] = bLock;
     }
 
     public void RemoveInteractionFromNPC(int npcID, int interactionID)

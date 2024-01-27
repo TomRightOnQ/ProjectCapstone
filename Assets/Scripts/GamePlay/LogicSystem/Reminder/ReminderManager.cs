@@ -67,4 +67,25 @@ public class ReminderManager : MonoBehaviour
         }
         ui_Reminder.ShowMapReminder(name);
     }
+
+    // Show Reminder: Game Saving
+    public void ShowGameSavingReminder()
+    {
+        if (ui_Reminder == null)
+        {
+            createUI();
+        }
+        ui_Reminder.ShowGameSavingReminder();
+    }
+
+
+    // Show Reminder: Whole Screen
+    public void ShowWholeScreenReminder(int reminderID)
+    {
+        if (ui_Reminder == null)
+        {
+            createUI();
+        }
+        ui_Reminder.ShowWholeScreenReminder(reminderID);
+    }
 }

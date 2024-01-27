@@ -87,6 +87,12 @@ public class UI_ChatInteraction : UIBase
             TaskManager.Instance.ProcessActions(choiceInteraction.Action);
         }
 
+        // Choice to the next
+        if (choiceInteraction.bIsChoice && choiceInteraction.Next != -1)
+        {
+            refreshChat(choiceInteraction.Next);
+        }
+
         // Force stop check
         if (choiceInteraction.bEnd)
         {

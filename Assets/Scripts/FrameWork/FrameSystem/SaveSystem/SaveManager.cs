@@ -54,6 +54,7 @@ public class SaveManager : MonoBehaviour
         string json = JsonUtility.ToJson(SaveConfig.Instance);
         File.WriteAllText(saveFilePath, json);
         Debug.Log("CurrentDaySave saved to " + Application.persistentDataPath);
+        ReminderManager.Instance.ShowGameSavingReminder();
     }
 
     public void SaveGameSave(int day = 0)
@@ -149,7 +150,6 @@ public class SaveManager : MonoBehaviour
         // Now load data for new game...
         CoreSaveConfig.Instance.InitUnlockHintToSave();
 
-        SaveConfig.Instance.SetPlayer(new Vector3(0f, 0.5f, 0f), Constants.SCENE_DEFAULT_LEVEL);
         SaveConfig.Instance.InitDayToSave();
         SaveConfig.Instance.InitNPCToSave();
         SaveConfig.Instance.InitGuildToSave();
@@ -159,8 +159,9 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.InitMapLockList();
         SaveConfig.Instance.LockSave();
 
-        // Load Day 0 Configs
+        // Load Day 1 Configs
 
+        DayCycleManager.Instance.JumpToDay(1, false);
 
         // Create Save File
         SaveGameSave(Constants.SAVE_CURRENT_SAVE);
@@ -268,6 +269,11 @@ public class SaveManager : MonoBehaviour
     public void AddNPCToSave(int npcID, string sceneName, Vector3 position)
     {
         SaveConfig.Instance.AddNPCToSave(npcID, sceneName, position);
+    }
+
+    public void RemoveNPCFromSave(int npcID)
+    {
+        SaveConfig.Instance.RemoveNPCFromSave(npcID);
     }
 
     public void AddInteractionToNPC(int npcID, int interactionID)
@@ -420,6 +426,21 @@ public class SaveManager : MonoBehaviour
     public bool CheckMapTravelLockStatus()
     {
         return SaveConfig.Instance.CheckMapTravelLockStatus();
+    }
+
+    /// <summary>
+    /// Menu Module lock
+    /// </summary>
+    // Init module lock via array
+    public void InitModuleLock(bool[] lockList)
+    {
+        SaveConfig.Instance.InitModuleLock(lockList);
+    }
+
+    // Lock or unlock a module
+    public void SetModuleLock(bool bLock, int moduleID)
+    {
+        SaveConfig.Instance.SetModuleLock(bLock, moduleID);
     }
 
     // Private:

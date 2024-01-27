@@ -27,7 +27,10 @@ public class PlayerHUDInteractionTrigger : MonoBehaviour
             {
                 for (int i = 0; i < otherTrigger.InteractionIDs.Count; i++)
                 {
-                    HUDInteractionManager.Instance.AddInteractionToUIList(otherTrigger.InteractionIDs[i]);
+                    if (otherTrigger.InteractionIDs[i] != -1)
+                    {
+                        HUDInteractionManager.Instance.AddInteractionToUIList(otherTrigger.InteractionIDs[i]);
+                    }
                 }
             }
         }

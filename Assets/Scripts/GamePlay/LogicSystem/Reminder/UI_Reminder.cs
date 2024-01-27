@@ -17,6 +17,15 @@ public class UI_Reminder : UIBase
     [SerializeField] private TextMeshProUGUI tb_MapName;
     [SerializeField] private Animator mapAnimator;
 
+    // Game Saving
+    [SerializeField] private GameObject p_SavingReminder;
+    [SerializeField] private Animator saveAnimator;
+
+    // Whole Screen
+    [SerializeField] private GameObject p_WholeScreenReminder;
+    [SerializeField] private TextMeshProUGUI tb_WholeScreenText;
+    [SerializeField] private Animator wholeAnimator;
+
     // Public:
     // Show General Reminder - from pooling system
     public void ShowGeneralReminder(int id)
@@ -61,5 +70,63 @@ public class UI_Reminder : UIBase
     public void DisableMapReminder()
     {
         p_MapReminder.SetActive(false);
+    }
+
+    // Show GameSaving Reminder
+    public void ShowGameSavingReminder()
+    {
+        p_SavingReminder.SetActive(true);
+
+        saveAnimator.Play("In");
+        StartCoroutine(closeGameSavingReminder());
+    }
+
+    private IEnumerator closeGameSavingReminder()
+    {
+        yield return new WaitForSecondsRealtime(Constants.REMINDER_LEVEL_TIME);
+        HideGameSavingReminder();
+    }
+
+    // Hide GameSaving Reminder
+    public void HideGameSavingReminder()
+    {
+        saveAnimator.Play("Out");
+        StopCoroutine(closeGameSavingReminder());
+        Invoke("DisableGameSavingReminder", 0.5f);
+    }
+
+    // Disable GameSaving Reminder
+    public void DisableGameSavingReminder()
+    {
+        p_SavingReminder.SetActive(false);
+    }
+
+    // Show WholeScreen Reminder
+    public void ShowWholeScreenReminder(int reminderID)
+    {
+        tb_WholeScreenText.text = ReminderData.GetData(reminderID).Content;
+        p_WholeScreenReminder.SetActive(true);
+        wholeAnimator.Play("In");
+        StartCoroutine(closeWholeScreenReminder());
+    }
+
+    private IEnumerator closeWholeScreenReminder()
+    {
+        yield return new WaitForSecondsRealtime(Constants.REMINDER_LEVEL_TIME * 2);
+        HideWholeScreenReminder();
+    }
+
+    // Hide WholeScreen Reminder
+    public void HideWholeScreenReminder()
+    {
+        wholeAnimator.Play("Out");
+        StopCoroutine(closeWholeScreenReminder());
+        Invoke("DisableWholeScreenReminder", 0.5f);
+    }
+
+    // Disable WholeScreen Reminder
+    public void DisableWholeScreenReminder()
+    {
+        p_WholeScreenReminder.SetActive(false);
     }
 }

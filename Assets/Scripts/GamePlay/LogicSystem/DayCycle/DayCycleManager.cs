@@ -133,6 +133,16 @@ public class DayCycleManager : MonoBehaviour
         
     }
 
+    // Config Task Actions According to the day
+    public void ConfigTaskAction(int taskID, bool bPre)
+    {
+        if (currentScript == null)
+        {
+            configCurrentDayScript();
+        }
+        currentScript.ConfigTaskAction(taskID, bPre);
+    }
+
     // Show list of flash back
     public void ShowDayPanel()
     {
@@ -143,6 +153,23 @@ public class DayCycleManager : MonoBehaviour
     }
 
     // Private:
+    // Config today's script
+    private void configCurrentDayScript()
+    {
+        // Run the day script
+        switch (currentDay)
+        {
+            case 0:
+                currentScript = new ScriptDayZero();
+                break;
+            case 1:
+                currentScript = new ScriptDayOne();
+                break;
+            default:
+                break;
+        }
+    }
+
     // Event Handlers
     private void OnRecv_SceneLoaded()
     {

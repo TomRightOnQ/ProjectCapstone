@@ -13,8 +13,6 @@ public class MapManager : MonoBehaviour
     // UI Component
     [SerializeField] private UI_Map ui_Map;
 
-    
-
     private void Awake()
     {
         gameObject.tag = "Manager";

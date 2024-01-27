@@ -31,7 +31,6 @@ public class HUDManager : MonoBehaviour
     {
         if (ui_HUD == null && LevelManager.Instance.CurrentSceneType != Enums.SCENE_TYPE.Outside)
         {
-
             GameObject uiObject = UIManager.Instance.CreateUI("UI_HUD");
             ui_HUD = uiObject.GetComponent<UI_HUD>();
             configEventHandlers();
@@ -63,13 +62,27 @@ public class HUDManager : MonoBehaviour
     // Track Task
     public void UpdateHUDTaskTracking(int taskID)
     {
+        if (ui_HUD == null)
+        {
+            return;
+        }
         ui_HUD.UpdateHUDTaskTracking(taskID);
     }
 
     // Clear Tracking
     public void ClearTracking()
     {
+        if (ui_HUD == null)
+        {
+            return;
+        }
         ui_HUD.ClearTracking();
+    }
+
+    // Add Tas Track Indicator
+    public void SetTrackIndicator(Transform indicatorTransform)
+    {
+        ui_HUD.SetTrackIndicator(indicatorTransform);
     }
 
     // Battle Timer:

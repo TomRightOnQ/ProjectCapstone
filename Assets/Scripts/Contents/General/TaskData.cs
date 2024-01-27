@@ -10,38 +10,32 @@ public static class TaskData
         public string Name;
         public string Description;
         public string SceneName;
-        public Enums.TASK_TYPE Type;
-        public int[] PreActions;
-        public int[] PostActions;
-        public int[] UnlockTask;
         public int TrackTarget;
         public bool bTrackNPC;
+        public bool bHidden;
 
-        public TaskDataStruct(int ID, string Name, string Description, string SceneName, Enums.TASK_TYPE Type, int[] PreActions, int[] PostActions, int[] UnlockTask, int TrackTarget, bool bTrackNPC)
+        public TaskDataStruct(int ID, string Name, string Description, string SceneName, int TrackTarget, bool bTrackNPC, bool bHidden)
         {
             this.ID = ID;
             this.Name = Name;
             this.Description = Description;
             this.SceneName = SceneName;
-            this.Type = Type;
-            this.PreActions = PreActions;
-            this.PostActions = PostActions;
-            this.UnlockTask = UnlockTask;
             this.TrackTarget = TrackTarget;
             this.bTrackNPC = bTrackNPC;
+            this.bHidden = bHidden;
         }
     }
     public static Dictionary<int, TaskDataStruct> data = new Dictionary<int, TaskDataStruct>
     {
-        {1, new TaskDataStruct(1, "Unlock Day 1", "Time for the next day!", "None", Enums.TASK_TYPE.Chat, new int[]{2}, new int[]{3,4,5}, new int[]{-1}, -1, false)},
-        {2, new TaskDataStruct(2, "Unlock Day 2", "Time for the next day!", "None", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{3}, new int[]{-1}, -1, false)},
-        {3, new TaskDataStruct(3, "Unlock Day 3", "Time for the next day!", "None", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{-1}, new int[]{-1}, -1, false)},
-        {4, new TaskDataStruct(4, "Unlock Day 4", "Time for the next day!", "None", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{-1}, new int[]{-1}, -1, false)},
-        {5, new TaskDataStruct(5, "Unlock Day 5", "Time for the next day!", "None", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{-1}, new int[]{-1}, -1, false)},
-        {6, new TaskDataStruct(6, "Unlock Day 6", "Time for the next day!", "None", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{-1}, new int[]{-1}, -1, false)},
-        {7, new TaskDataStruct(7, "Unlock Day 7", "Time for the next day!", "None", Enums.TASK_TYPE.Chat, new int[]{-1}, new int[]{-1}, new int[]{-1}, -1, false)},
-        {8, new TaskDataStruct(8, "Complete a platformer stage", "Go and try a mini game", "AudienceLevel", Enums.TASK_TYPE.Game, new int[]{-1}, new int[]{1}, new int[]{1}, 1, true)},
-        {9, new TaskDataStruct(9, "Complete a shooter stage", "Go and try a mini game", "AudienceLevel", Enums.TASK_TYPE.Game, new int[]{-1}, new int[]{24}, new int[]{-1}, 1, true)},
+        {1000, new TaskDataStruct(1000, "Hey, you are finally awake!", "...?", "RoomALevel", 1000, true, false)},
+        {1001, new TaskDataStruct(1001, "Where am I?", "Check out the rules on the wall", "RoomALevel", 1100, true, false)},
+        {1002, new TaskDataStruct(1002, "Where am I?", "Go for a walk outside", "RoomALevel", 1200, true, false)},
+        {1003, new TaskDataStruct(1003, "Me?", "Talk with NPC_1_1", "DefaultLevel", 1001, true, false)},
+        {1004, new TaskDataStruct(1004, "Round 1", "Talk about today's match", "AudienceLevel", 1000, true, false)},
+        {1005, new TaskDataStruct(1005, "Just a normal day", "Talk with Guide", "RoomALevel", 1000, true, false)},
+        {1006, new TaskDataStruct(1006, "Good night to the world", "Go to the team room and sleep...", "RoomALevel", 1102, true, false)},
+        {1100, new TaskDataStruct(1100, "Say Hi", "None", "AudienceLevel", -1, true, true)},
+        {1101, new TaskDataStruct(1101, "The mysterious man", "None", "GuildScene", -1, true, true)},
     };
 
     public static TaskDataStruct GetData(int id)

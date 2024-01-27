@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 
@@ -21,7 +22,7 @@ public class PersistentGameManager : MonoBehaviour
         {
             DontDestroyOnLoad(this);
             instance = this;
-            EnterLoadGameScene();
+            StartCoroutine(EnterLoadGameScene());
         }
         else
         {
@@ -33,10 +34,11 @@ public class PersistentGameManager : MonoBehaviour
 
     // Enter Loading Stage
     // Only triggered once in boot up
-    private void EnterLoadGameScene()
+    private IEnumerator EnterLoadGameScene()
     {
         InitConfigs();
         InitManagers();
+        yield return new WaitForSeconds(1f);
         LevelManager.Instance.LoadScene(Constants.SCENE_MAIN_MENU);
     }
 
@@ -75,29 +77,31 @@ public class PersistentGameManager : MonoBehaviour
         Debug.Log("2. UIManager Loading");
         UIManager.Instance.Init();
 
-        Debug.Log("3. NPCManager Loading");
+        Debug.Log("3. LevelManager Loading");
+        LevelManager.Instance.Init();
+
+        Debug.Log("4. NPCManager Loading");
         NPCManager.Instance.Init();
 
-        Debug.Log("3. ChatInteractionManager Loading");
+        Debug.Log("5. ChatInteractionManager Loading");
         ChatInteractionManager.Instance.Init();
 
-        Debug.Log("4. HUDInteractionManager Loading");
+        Debug.Log("6. HUDInteractionManager Loading");
         HUDInteractionManager.Instance.Init();
 
-        Debug.Log("5. DayCycleManager Loading");
+        Debug.Log("7. DayCycleManager Loading");
         DayCycleManager.Instance.Init();
 
-        Debug.Log("6 HUDManager Loading");
+        Debug.Log("8. HUDManager Loading");
         HUDManager.Instance.Init();
 
-        Debug.Log("7 MenuManager Loading");
+        Debug.Log("9. MenuManager Loading");
         MenuManager.Instance.Init();
 
-        Debug.Log("8 ReminderManager Loading");
+        Debug.Log("10. ReminderManager Loading");
         MenuManager.Instance.Init();
 
         Debug.Log("PersistentGameManager Load: Managers Ready!");
-        // SceneManager.LoadScene("MainMenu");
     }
 
     // Pause Game

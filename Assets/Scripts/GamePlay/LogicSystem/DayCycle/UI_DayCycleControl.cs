@@ -73,7 +73,7 @@ public class UI_DayCycleControl : UIBase
     {
         int maxDay = SaveManager.Instance.GetCurrentDay();
         // Add unlocked days to list
-        for (int i = 0; i < maxDay + 1; i++)
+        for (int i = 1; i < maxDay + 1; i++)
         {
             ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = i, Name = "Day " + i.ToString() };
             dayItems.Add(newItem);

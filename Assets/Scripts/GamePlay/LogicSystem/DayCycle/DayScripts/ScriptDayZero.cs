@@ -13,8 +13,30 @@ public class ScriptDayZero : DayScriptBase
     // Public:
     public override void Init() 
     {
-        // NPCs
-        NPCManager.Instance.RemoveInteractionFromNPC(1, 8);
-        NPCManager.Instance.AddInteractionToNPC(1, 19);
+
+    }
+
+    // Day 0 Methods:
+    public override void ConfigTaskAction(int taskID, bool bPre)
+    {
+        switch (taskID)
+        {
+            case 0:
+                task_0_0(bPre);
+                break;
+            default:
+                break;
+        }
+    }
+
+    // Private:
+    // Task Actions
+    public void task_0_0(bool bPre)
+    {
+        if (bPre)
+        {
+            return;
+        }
+
     }
 }

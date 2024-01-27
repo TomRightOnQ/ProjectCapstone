@@ -18,7 +18,7 @@ public static class DayData
     public static Dictionary<int, DayDataStruct> data = new Dictionary<int, DayDataStruct>
     {
         {0, new DayDataStruct(0, "DefaultLevel")},
-        {1, new DayDataStruct(1, "AudienceLevel")},
+        {1, new DayDataStruct(1, "RoomALevel")},
         {2, new DayDataStruct(2, "AudienceLevel")},
         {3, new DayDataStruct(3, "AudienceLevel")},
         {4, new DayDataStruct(4, "AudienceLevel")},

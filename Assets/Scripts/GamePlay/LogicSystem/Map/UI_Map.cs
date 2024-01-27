@@ -12,18 +12,20 @@ public class UI_Map : UIBase
     [SerializeField] private string currentSelectedLocation = Constants.SCENE_NONE;
 
     // UI Widgets
+    [SerializeField] private GameObject P_MapPanel;
 
     // Public:
     // Show Map Panel
     public void ShowMapPanel()
     {
-    
+        P_MapPanel.SetActive(true);
     }
 
     // Close Map Panel
     public void CloseMapPanel()
     {
-    
+        P_MapPanel.SetActive(false);
+        PersistentGameManager.Instance.ResumeGame();
     }
 
     // Show the level Detail Panel
@@ -49,5 +51,30 @@ public class UI_Map : UIBase
     public void OnClick_Teleport()
     {
         MapManager.Instance.TravelToLevel(currentSelectedLocation);
+    }
+
+    public void OnClick_Teleport_Temp_1()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_AUDIENCELOW_LEVEL);
+    }
+
+    public void OnClick_Teleport_Temp_2()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_AUDIENCE_LEVEL);
+    }
+
+    public void OnClick_Teleport_Temp_3()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_ENTRANCE_LEVEL);
+    }
+
+    public void OnClick_Teleport_Temp_4()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_GUILD_LEVEL);
+    }
+
+    public void OnClick_Teleport_Temp_5()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_ROOMA_LEVEL);
     }
 }

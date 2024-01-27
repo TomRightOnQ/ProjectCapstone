@@ -17,7 +17,8 @@ public static class Vector3PositionData
     }
     public static Dictionary<int, Vector3PositionDataStruct> data = new Dictionary<int, Vector3PositionDataStruct>
     {
-        {1, new Vector3PositionDataStruct(1, new Vector3(-2.5f,7.25f,-2f))},
+        {1, new Vector3PositionDataStruct(1, new Vector3(6.191f,1.22f,1.077f))},
+        {2, new Vector3PositionDataStruct(2, new Vector3(-2.5f,7.25f,-2f))},
     };
 
     public static Vector3PositionDataStruct GetData(int id)
