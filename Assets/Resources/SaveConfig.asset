@@ -15,8 +15,8 @@ MonoBehaviour:
   bAllowRewrite: 1
   playerSaveData:
     PlayerName: You
-    Position: {x: 14, y: 0.6, z: 0}
-    Scene: RoomALevel
+    Position: {x: 0, y: 0.6, z: 0}
+    Scene: GuildScene
   daySaveData:
     CurrentDay: 1
     bInited: 1
@@ -124,8 +124,8 @@ MonoBehaviour:
     ShooterLevelLock: 
     PlatformerLevelLock: 
   disabledHUDInteractionList: 
-  triggeredTaskList: 4c040000ee030000
-  completeTaskList: e8030000e9030000ea030000eb030000ec030000ed030000
+  triggeredTaskList: ee030000
+  completeTaskList: e8030000e9030000ea030000eb0300004c040000ec030000ed030000
   lockedMapList: []
   bTeleportLocked: 0
   menuModuleLockList: 000000000000

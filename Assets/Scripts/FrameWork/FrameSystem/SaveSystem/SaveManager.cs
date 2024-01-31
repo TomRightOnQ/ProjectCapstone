@@ -443,6 +443,20 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.SetModuleLock(bLock, moduleID);
     }
 
+    /// <summary>
+    /// In-Game Time
+    /// </summary>
+    // Modify or get the current time
+    public void SetGameTime(GameEvent.Event timeEnum = GameEvent.Event.TIME_NOON)
+    {
+        SaveConfig.Instance.SetGameTime(timeEnum);
+    }
+
+    public GameEvent.Event GetGameTimeFromSave()
+    {
+        return SaveConfig.Instance.CurrentGameTime;
+    }
+
     // Private:
     // Event Handlers
     private void OnRecv_SceneLoaded()

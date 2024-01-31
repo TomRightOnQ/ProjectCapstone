@@ -67,6 +67,11 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     private List<bool> menuModuleLockList = new List<bool>();
     public List<bool> MenuModuleLockList => menuModuleLockList;
 
+    // Game Time
+    [SerializeField]
+    private GameEvent.Event currentGameTime = GameEvent.Event.TIME_NOON;
+    public GameEvent.Event CurrentGameTime => currentGameTime;
+
     /// <summary>
     /// Data mainMenuoduleLockList
     /// </summary>
@@ -449,6 +454,12 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     public void SetModuleLock(bool bLock, int moduleID)
     {
         menuModuleLockList[moduleID] = bLock;
+    }
+
+    // Modify the in-game time
+    public void SetGameTime(GameEvent.Event timeEnum = GameEvent.Event.TIME_NOON)
+    {
+        currentGameTime = timeEnum;
     }
 
     public void RemoveInteractionFromNPC(int npcID, int interactionID)

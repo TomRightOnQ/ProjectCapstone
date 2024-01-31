@@ -149,7 +149,9 @@ public class ScriptDayOne : DayScriptBase
         NPCManager.Instance.RemoveNPCFromSave(1002);
         // Play screen
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 10006);
+        // Show the black-out screen and change time to sunset
         ReminderManager.Instance.ShowWholeScreenReminder(2);
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_SUNSET, true);
         TaskManager.Instance.UnlockTask(1005);
     }
 
@@ -165,7 +167,9 @@ public class ScriptDayOne : DayScriptBase
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 10008);
         NPCManager.Instance.RemoveNPCFromSave(1000);
         TaskManager.Instance.UnlockTask(1006);
+        
         ReminderManager.Instance.ShowGeneralReminder(3);
+
         // Enable Map System
         SaveManager.Instance.InitModuleLock(new bool[] { false, false, false, false, false, false });
     }

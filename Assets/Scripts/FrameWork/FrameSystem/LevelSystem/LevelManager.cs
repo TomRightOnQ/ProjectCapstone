@@ -13,6 +13,10 @@ public class LevelManager : MonoBehaviour
 
     private Enums.SCENE_TYPE currentSceneType;
     public Enums.SCENE_TYPE CurrentSceneType => currentSceneType;
+    
+    [SerializeField]
+    private GameEvent.Event currentTime = GameEvent.Event.TIME_NOON;
+    public GameEvent.Event CurrentTime => currentTime;
 
     // Cache if the current scene is savable
     [SerializeField, ReadOnly]
@@ -32,7 +36,6 @@ public class LevelManager : MonoBehaviour
 
     // UI Components
     [SerializeField] private UI_Loading ui_Loading;
-
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -85,6 +88,7 @@ public class LevelManager : MonoBehaviour
         LevelManager.Instance.LoadScene(current2DLevel.SceneName);
     }
 
+    // Enter game via the main menu
     public void EnterGame()
     {
         SaveManager.Instance.LoadGameSave(Constants.SAVE_CURRENT_SAVE);
@@ -98,6 +102,9 @@ public class LevelManager : MonoBehaviour
         SaveManager.Instance.LoadGameCoreSave();
         SaveConfig.PlayerSaveData playerData = SaveManager.Instance.GetPlayer();
 
+        // Load Game Time
+        currentTime = SaveManager.Instance.GetGameTimeFromSave();
+
         // Edge Cases:
         // If the player quit the game while the game is initing the next day
         // In this case, re-init
@@ -109,6 +116,45 @@ public class LevelManager : MonoBehaviour
         else 
         {
             DayCycleManager.Instance.JumpToDay(SaveManager.Instance.GetCurrentDay());
+        }
+    }
+
+    // Set the omni timeset
+    // bChangeTimeNow: Change the time now
+    public void SetGameTime(GameEvent.Event timeEnum = GameEvent.Event.TIME_NOON, bool bChangeTimeNow = false)
+    {
+        currentTime = timeEnum;
+        // Save the time to the save
+        SaveManager.Instance.SetGameTime(timeEnum);
+
+        if (bChangeTimeNow)
+        {
+            SetSceneTime(currentTime);
+        }
+    }
+
+    // Post current time to the scene
+    public void SetSceneTime(GameEvent.Event timeEnum)
+    {
+        switch (timeEnum)
+        {
+            case GameEvent.Event.TIME_MORNING:
+                EventManager.Instance.PostEvent(GameEvent.Event.TIME_MORNING);
+                break;
+            case GameEvent.Event.TIME_NOON:
+                EventManager.Instance.PostEvent(GameEvent.Event.TIME_NOON);
+                break;
+            case GameEvent.Event.TIME_SUNSET:
+                EventManager.Instance.PostEvent(GameEvent.Event.TIME_SUNSET);
+                break;
+            case GameEvent.Event.TIME_NIGHT:
+                EventManager.Instance.PostEvent(GameEvent.Event.TIME_NIGHT);
+                break;
+            case GameEvent.Event.TIME_DARK:
+                EventManager.Instance.PostEvent(GameEvent.Event.TIME_DARK);
+                break;
+            default:
+                break;
         }
     }
 
@@ -168,6 +214,9 @@ public class LevelManager : MonoBehaviour
 
         // Scene is loaded, now load managers
         PersistentGameManager.Instance.LoadManagers();
+        // Set the scene based on the current time
+        SetSceneTime(currentTime);
+
         // Build the scene based on the saved info
         buildScene(sceneName);
     }
