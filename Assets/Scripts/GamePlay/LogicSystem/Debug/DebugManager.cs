@@ -77,12 +77,17 @@ public class DebugManager : MonoBehaviour
 
     public void EnterShooter()
     {
-        CharacterManager.Instance.ShowCharacterPickerPanel(5);
+        CharacterManager.Instance.ShowCharacterPickerPanel(11);
         onClick();
     }
 
     public void PlayWholeScreenReminder() 
     {
         ReminderManager.Instance.ShowWholeScreenReminder(2);
+    }
+
+    public void ChangePlayerMovementMethod()
+    {
+        InputManager.Instance.SetPlayerMovingAllDirection(true);
     }
 }

@@ -54,6 +54,17 @@ public class ReminderManager : MonoBehaviour
         ui_Reminder.ShowGeneralReminder(id);
     }
 
+    // Show reminder: Subtitle
+    public void ShowSubtitleReminder(int id)
+    {
+        if (ui_Reminder == null)
+        {
+            createUI();
+        }
+        ui_Reminder.ShowSubtitleReminder(id);
+    }
+
+
     // Show reminder: Level/Map Name
     public void ShowMapNameReminder(string name)
     {

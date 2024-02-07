@@ -27,6 +27,10 @@ public class ResourceManager : MonoBehaviour
     // Get a hint text
     public string GetStringText(int stringID)
     {
+        if (stringID == -1)
+        {
+            return "HINT_PLACE_HOLDER";
+        }
         StringConstData.StringConstDataStruct stringData = StringConstData.GetData(stringID);
         if (!stringData.bLocked || SaveManager.Instance.CheckHintUnlocked(stringID))
         {

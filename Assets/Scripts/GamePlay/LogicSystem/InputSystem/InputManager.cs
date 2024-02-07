@@ -79,4 +79,22 @@ public class InputManager : MonoBehaviour
         }
         playerController.LockPlayerInput();
     }
+
+    // Unlock All-Direction Movement
+    /// <summary>
+    /// This will unlock the player movements to all directions and make the player zero-gravity
+    /// Jumping will be banned
+    /// </summary>
+    public void SetPlayerMovingAllDirection(bool bCanMoveAll = false)
+    {
+        playerController.SetAsAllDirectionMove(bCanMoveAll);
+        if (bCanMoveAll)
+        {
+            EventManager.Instance.PostEvent(GameEvent.Event.EVENT_2DGAME_ALLDIR_BEGIN);
+        }
+        else 
+        {
+            EventManager.Instance.PostEvent(GameEvent.Event.EVENT_2DGAME_ALLDIR_END);
+        }
+    }
 }

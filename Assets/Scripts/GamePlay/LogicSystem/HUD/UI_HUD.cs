@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
@@ -25,8 +26,18 @@ public class UI_HUD : UIBase
     // UI - Timer
     [SerializeField] private GameObject hudTimer;
     [SerializeField] private TextMeshProUGUI timerText;
+
+    // UI - HP
+    [SerializeField] private Image Img_HP;
+
+    // UI - Damage
+    [SerializeField] private GameObject P_PlayerDamaged;
+
     // HUD Animation
     [SerializeField] private Animator upperRightAnimator;
+    [SerializeField] private Animator upperLeftAnimator;
+    [SerializeField] private Animator playerHPAnimator;
+    [SerializeField] private Animation playerDamaged;
 
     // UI - Task Information
     [SerializeField] private TextMeshProUGUI TB_TaskName;
@@ -78,12 +89,14 @@ public class UI_HUD : UIBase
     public void ShowUpperLeftHUD()
     {
         upperLeftHUD.SetActive(true);
+        upperLeftAnimator.Play("HUDUpperLeftShow");
     }
 
     // Hide Upper Left HUD
     public void HideUpperLeftHUD()
     {
         upperLeftHUD.SetActive(false);
+        upperLeftAnimator.Play("HUDUpperLeftHide");
     }
 
     // Set Task Indicator
@@ -114,6 +127,25 @@ public class UI_HUD : UIBase
 
         string formattedTime = $"{hours:00}:{minutes:00}:{seconds:00}";
         timerText.text = formattedTime;
+    }
+
+    // Player Damaged
+    public void PlayPlayerDamagedScreenEffect()
+    {
+        P_PlayerDamaged.SetActive(true);
+        playerDamaged.Play();
+    }
+
+    // HP Speed
+    public void AdjustHPSpeed(float ratio)
+    {
+        // Use 1 - ratio times constant as the new speed
+        playerHPAnimator.speed = (1 - ratio) * 2 + 1;
+
+        // Adjust HP Color based on the ratio
+        float redValue = 1 - ratio;
+        float greenValue = ratio;
+        Img_HP.color = new Color(redValue, greenValue, 0);
     }
 
     // Task Tracking

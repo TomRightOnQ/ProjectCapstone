@@ -32,9 +32,14 @@ public class BattleObserver : ScriptableSingleton<BattleObserver>
     }
 
     // Player HP
-    public void OnPlayerHPChanged(float value, float maxValue)
+    public void OnPlayerHPChanged(float currentHP, float maxHP)
     {
         // Update the HP to HUD
-        HUDManager.Instance.A_Recv_PlayerHPChanged(value, maxValue);
+        HUDManager.Instance.A_Recv_PlayerHPChanged(currentHP/maxHP);
+        // Post death event
+        if (currentHP <= 0)
+        {
+            EventManager.Instance.PostEvent(GameEvent.Event.PLAYER_DEATH);
+        }
     }
 }

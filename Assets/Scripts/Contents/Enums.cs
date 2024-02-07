@@ -1,5 +1,12 @@
 public static class Enums
 {
+    public enum CHARACTER_TYPE
+    {
+        You,  // Character Type: Player
+        Friend,  // Character Type: Friend
+        Enemy,  // Character Type: Enemy
+    }
+
     public enum LEVEL_TYPE
     {
         Platformer,  // Level:Platformer Stage

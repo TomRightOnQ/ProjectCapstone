@@ -15,8 +15,8 @@ MonoBehaviour:
   bAllowRewrite: 1
   playerSaveData:
     PlayerName: You
-    Position: {x: 0, y: 0.6, z: 0}
-    Scene: GuildScene
+    Position: {x: -6, y: 7.2, z: -1}
+    Scene: AudienceLevel
   daySaveData:
     CurrentDay: 1
     bInited: 1
@@ -41,91 +41,92 @@ MonoBehaviour:
     bActive: 1
   guildSaveDataList:
   - GuildID: 0
-    Score: 0
+    Score: 28
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 1
-    Score: 0
+    Score: 70
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 2
-    Score: 0
+    Score: 300
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 3
-    Score: 0
+    Score: 200
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 4
-    Score: 0
+    Score: 250
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 5
-    Score: 0
+    Score: 160
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 6
-    Score: 0
+    Score: 170
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 7
-    Score: 0
+    Score: 180
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 8
-    Score: 0
+    Score: 190
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 9
-    Score: 0
+    Score: 120
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 10
-    Score: 0
+    Score: 100
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 11
-    Score: 0
+    Score: 60
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 12
-    Score: 0
+    Score: 70
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 13
-    Score: 0
+    Score: 50
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 14
-    Score: 0
+    Score: 70
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 15
-    Score: 0
+    Score: 80
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   character2DLock:
-    ShooterLevelLock: 
+    ShooterLevelLock: 0200000003000000040000000500000001000000
     PlatformerLevelLock: 
   disabledHUDInteractionList: 
-  triggeredTaskList: ee030000
-  completeTaskList: e8030000e9030000ea030000eb0300004c040000ec030000ed030000
+  triggeredTaskList: 4c040000ee030000
+  completeTaskList: e8030000e9030000ea030000eb030000ec030000ed030000
   lockedMapList: []
   bTeleportLocked: 0
   menuModuleLockList: 000000000000
+  currentGameTime: 8

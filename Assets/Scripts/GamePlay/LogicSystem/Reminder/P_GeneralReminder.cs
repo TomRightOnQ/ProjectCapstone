@@ -5,7 +5,6 @@ using UnityEngine.UI;
 /// <summary>
 /// Used for general reminder
 /// </summary>
-
 public class P_GeneralReminder : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI tb_ReminderText;
@@ -14,11 +13,19 @@ public class P_GeneralReminder : MonoBehaviour
     // Begin the reminder cycle
     public void BeginGeneralReminder(int id)
     {
-        ReminderData.ReminderDataStruct remidnerData = ReminderData.GetData(id);
-        tb_ReminderText.text = remidnerData.Content;
+        ReminderData.ReminderDataStruct reminderData = ReminderData.GetData(id);
+        tb_ReminderText.text = reminderData.Content;
 
         reminderAnimator.Play("In");
-        Invoke("EndGeneralReminder", remidnerData.Life);
+        Invoke("EndGeneralReminder", reminderData.Life);
+    }
+
+    public void BeginGeneralReminder(string content, float life = 2f)
+    {
+        tb_ReminderText.text = content;
+
+        reminderAnimator.Play("In");
+        Invoke("EndGeneralReminder", life);
     }
 
     // End the reminder

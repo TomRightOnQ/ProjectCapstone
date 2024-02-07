@@ -132,6 +132,15 @@ public class HUDManager : MonoBehaviour
         ui_HUD.HideUpperLeftHUD();
     }
 
+    // PLayer Damaged
+    public void PlayPlayerDamagedScreenEffect()
+    {
+        if (ui_HUD != null)
+        {
+            ui_HUD.PlayPlayerDamagedScreenEffect();
+        }
+    }
+
     // Private:
     // Event Handlers
     private void OnRecv_SceneLoaded()
@@ -145,8 +154,11 @@ public class HUDManager : MonoBehaviour
         }
     }
 
-    public void A_Recv_PlayerHPChanged(float value, float maxValue)
+    public void A_Recv_PlayerHPChanged(float ratio)
     {
-        
+        if (ui_HUD != null)
+        {
+            ui_HUD.AdjustHPSpeed(ratio);
+        }
     }
 }

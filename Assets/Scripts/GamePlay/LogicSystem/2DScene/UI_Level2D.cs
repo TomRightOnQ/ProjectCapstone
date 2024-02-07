@@ -31,6 +31,12 @@ public class UI_Level2D : UIBase
     [SerializeField] private GameObject guildViewPort;
     private ObservableList<ListViewIconsItemDescription> guildItems = new ObservableList<ListViewIconsItemDescription>();
 
+    // Text - Game Begin Counter
+    [SerializeField] private GameObject TB_LevelBeginCountDown;
+    [SerializeField] private TextMeshProUGUI TB_LevelBeginCountDown_text;
+    // Text - Game End Text
+    [SerializeField] private GameObject TB_GameOverText;
+
     private void Awake()
     {
         guildList.DataSource = guildItems;
@@ -99,6 +105,22 @@ public class UI_Level2D : UIBase
     // Show Panels
     public void SetLevelCompletePanel(bool bShow)
     {
+        // Show GameOver and then config the panel
+        // Set the timer and await for game over
+        // Active the string object
+        TB_GameOverText.SetActive(true);
+        StartCoroutine(endGameCoroutine(bShow));
+    }
+
+    private IEnumerator endGameCoroutine(bool bShow)
+    {
+        float currentTime = 2f;
+        while (currentTime > 0)
+        {
+            yield return new WaitForSecondsRealtime(1f);
+            currentTime -= 1f;
+        }
+        TB_GameOverText.SetActive(false);
         configCompletePanel();
         P_LevelCompletePanel.SetActive(bShow);
     }
@@ -112,8 +134,25 @@ public class UI_Level2D : UIBase
     // Process OnClick
     public void OnClick_Btn_StartGame()
     {
-        GameManager2D.Instance.StartGame();
         SetLevelStartPanel(false);
+        // Set the timer and await for begin
+        // Active the string object
+        TB_LevelBeginCountDown.SetActive(true);
+        StartCoroutine(beginGameCoroutine());
+    }
+
+    private IEnumerator beginGameCoroutine()
+    {
+        int currentTime = 3;
+        while (currentTime > 0)
+        {
+            // Update the text
+            TB_LevelBeginCountDown_text.text = currentTime.ToString();
+            yield return new WaitForSeconds(1f);
+            currentTime -= 1;
+        }
+        TB_LevelBeginCountDown.SetActive(false);
+        GameManager2D.Instance.StartGame();
     }
 
     public void OnClick_Btn_ReturnScene()

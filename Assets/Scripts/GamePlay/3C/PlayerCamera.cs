@@ -11,6 +11,8 @@ public class PlayerCamera : MonoBehaviour
     // Camera horizontal limit
     [SerializeField] private float camMinX = -100f;
     [SerializeField] private float camMaxX = 100f;
+    [SerializeField] private float camMinY = -100f;
+    [SerializeField] private float camMaxY = 100f;
     [SerializeField] private float camMaxZ = 100f;
     [SerializeField] private float camMinZ = -100f;
 
@@ -58,12 +60,14 @@ public class PlayerCamera : MonoBehaviour
         if (unit.GetFacingToRight())
         {
             float cameraX = Mathf.Clamp(targetObject.transform.position.x + Constants.CAMERA_PAN_OFFSET, camMinX, camMaxX);
-            targetPosition = new Vector3(cameraX, targetObject.transform.position.y + cameraYOffset, cameraZ);
+            float cameraY = Mathf.Clamp(targetObject.transform.position.y + cameraYOffset, camMinY, camMaxY);
+            targetPosition = new Vector3(cameraX, cameraY, cameraZ);
         }
         else
         {
             float cameraX = Mathf.Clamp(targetObject.transform.position.x - Constants.CAMERA_PAN_OFFSET, camMinX, camMaxX);
-            targetPosition = new Vector3(cameraX, targetObject.transform.position.y + cameraYOffset, cameraZ);
+            float cameraY = Mathf.Clamp(targetObject.transform.position.y + cameraYOffset, camMinY, camMaxY);
+            targetPosition = new Vector3(cameraX, cameraY, cameraZ);
         }
 
         // Calculate the distance to the target
@@ -107,6 +111,8 @@ public class PlayerCamera : MonoBehaviour
         
     }
 
+    // Public:
+
     public void SetCameraToPlayerMode(bool bSetToPlayerMode = true)
     {
         bPlayerMode = bSetToPlayerMode;
@@ -117,6 +123,31 @@ public class PlayerCamera : MonoBehaviour
         transform.position = new Vector3(target.transform.position.x, transform.position.y, transform.position.z);
         targetObject = target;
         unit = targetUnit;
+    }
+
+    public void ShakeCamera(float duration = 0.1f, float magnitude = 1f)
+    {
+        StartCoroutine(ShakeCoroutine(duration, magnitude));
+    }
+
+    IEnumerator ShakeCoroutine(float duration, float magnitude)
+    {
+        Vector3 originalPos = transform.position;
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            transform.localPosition = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
+
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+        // Reset the camera's position after shaking
+        transform.localPosition = originalPos;
     }
 
     // Private:

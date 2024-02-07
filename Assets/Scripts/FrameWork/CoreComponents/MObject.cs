@@ -19,7 +19,10 @@ public class MObject : MonoBehaviour
 
     protected virtual void Awake()
     {
-        uuid = PersistentDataManager.Instance.GetMObjectID();
+        if (PersistentDataManager.Instance != null)
+        {
+            uuid = PersistentDataManager.Instance.GetMObjectID();
+        }
     }
 }
 

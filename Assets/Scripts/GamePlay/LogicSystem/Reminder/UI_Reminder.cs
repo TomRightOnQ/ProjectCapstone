@@ -42,6 +42,22 @@ public class UI_Reminder : UIBase
         reminder.BeginGeneralReminder(id);
     }
 
+    // Show Subtitle Reminder - from pooling system
+    public void ShowSubtitleReminder(int id)
+    {
+        GameObject reminderObj = PrefabManager.Instance.Instantiate("P_SubtitleReminder", Vector3.zero, Quaternion.identity);
+        if (reminderObj == null || reminderObj.GetComponent<P_SubtitleReminder>() == null)
+        {
+            Debug.LogWarning("Unable to accquire P_SubtitleReminder from pooling");
+            return;
+        }
+        reminderObj.transform.SetParent(this.transform, false);
+        reminderObj.transform.localPosition = new Vector3(0, -370, 0);
+        reminderObj.SetActive(true);
+        P_SubtitleReminder reminder = reminderObj.GetComponent<P_SubtitleReminder>();
+        reminder.BeginSubtitleReminder(id);
+    }
+
     // Show Map Reminder
     public void ShowMapReminder(string name)
     {
@@ -112,7 +128,7 @@ public class UI_Reminder : UIBase
 
     private IEnumerator closeWholeScreenReminder()
     {
-        yield return new WaitForSecondsRealtime(Constants.REMINDER_LEVEL_TIME * 2);
+        yield return new WaitForSecondsRealtime(Constants.REMINDER_LEVEL_TIME);
         HideWholeScreenReminder();
     }
 

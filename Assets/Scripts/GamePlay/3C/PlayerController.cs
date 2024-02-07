@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool bMovementLocked = false;
     // Control fire mode
     [SerializeField] private bool bShooter = false;
+    // Switch control to Omni-Direction
+    [SerializeField] private bool bAllDirectionMovement = false;
 
     // Shooter Configurations
     [SerializeField] private float fireLineSize = 0.2f;
@@ -116,21 +118,32 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (bInputLocked || !bMovementLocked || PersistentGameManager.Instance.bGamePaused)
+        if (bInputLocked || bMovementLocked || PersistentGameManager.Instance.bGamePaused)
         {
             return;
         }
 
         // Config movement
         Vector3 force = Vector3.zero;
-        if (moveInput.magnitude != 0 && !bAirBorne)
+        if (moveInput.magnitude != 0)
         {
-            force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitAccel();
-            UpdateAnimationState(WalkAnim);
-        }
-        else if (moveInput.magnitude != 0 && bAirBorne)
-        {
-            force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitAccel() * 0.5f;
+            float speedRatio = 1f;
+            if (bAirBorne) 
+            {
+                speedRatio = 0.5f;
+            }
+            // Movement direction based on the scene
+            if (bWorld || !bAllDirectionMovement)
+            {
+                // Case: Regular Move
+                force = new Vector3(moveInput.x * moveRatio, 0, moveInput.y * moveRatio) * player.GetUnitAccel() * speedRatio;
+            }
+            else 
+            {
+                // Case: All Direction Move
+                force = new Vector3(moveInput.x * moveRatio, moveInput.y * moveRatio, 0) * player.GetUnitAccel() * speedRatio;
+            }
+
             UpdateAnimationState(WalkAnim);
         }
         else
@@ -272,8 +285,12 @@ public class PlayerController : MonoBehaviour
 
     private void jump(InputAction.CallbackContext context)
     {
-        //Player's position is locked
-        if (PersistentGameManager.Instance.bGamePaused || bWorld || bAirBorne || bDash || !bMovementLocked)
+        // No jumping if the input is locked or players are in all direction mode
+        if (bMovementLocked || bAllDirectionMovement)
+        {
+            return;
+        }
+        if (PersistentGameManager.Instance.bGamePaused || bWorld || bAirBorne || bDash)
         {
             return;
         }
@@ -282,7 +299,11 @@ public class PlayerController : MonoBehaviour
 
     private void dash(InputAction.CallbackContext context)
     {
-        if (PersistentGameManager.Instance.bGamePaused || bWorld || bAirBorne || bDash || !bMovementLocked)
+        if (bMovementLocked)
+        {
+            return;
+        }
+        if (PersistentGameManager.Instance.bGamePaused || bWorld || bAirBorne || bDash)
         {
             return;
         }
@@ -313,7 +334,7 @@ public class PlayerController : MonoBehaviour
     // Stop all movement of the player
     public void StopPlayerMovement()
     {
-
+        playerRigidBody.velocity = Vector3.zero;
     }
 
     // Set mode
@@ -335,6 +356,20 @@ public class PlayerController : MonoBehaviour
         init(bWorld);
     }
 
+    public void SetAsAllDirectionMove(bool bCanMoveAll = false)
+    {
+        bAllDirectionMovement = bCanMoveAll;
+        // Change regidbody to remove gravity
+        if (bCanMoveAll)
+        {
+            playerRigidBody.useGravity = false;
+        }
+        else 
+        {
+            playerRigidBody.useGravity = true;
+        }
+    }
+
     public void SetAsShooter()
     {
         bShooter = true;
@@ -354,7 +389,7 @@ public class PlayerController : MonoBehaviour
     public void LockPlayerInput()
     {
         bInputLocked = true;
-        ChangePlayerMovementState(false);
+        ChangePlayerMovementLockState(true);
         bShooter = false;
         if (lineRenderer != null)
         {
@@ -366,7 +401,7 @@ public class PlayerController : MonoBehaviour
     public void UnlockPlayerInput()
     {
         bInputLocked = false;
-        ChangePlayerMovementState(true);
+        ChangePlayerMovementLockState(false);
     }
 
     // All external classes attampting to move the player shall call this method
@@ -391,7 +426,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Change input and lock state
-    public void ChangePlayerMovementState(bool bState = false)
+    public void ChangePlayerMovementLockState(bool bState = false)
     {
         bMovementLocked = bState;
     }

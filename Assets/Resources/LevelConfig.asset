@@ -66,7 +66,7 @@ MonoBehaviour:
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: 2.4, z: 1.2}
-    BGMName: PublicSceneBGM_1
+    BGMName: BattleSceneBGM_1
   - LevelID: 6
     SceneName: RoomALevel
     StringName: Team Room
@@ -106,4 +106,31 @@ MonoBehaviour:
     - {x: 200, y: 2.4, z: 1.2}
     - {x: 300, y: 2.4, z: 1.2}
     - {x: 400, y: 2.4, z: 1.2}
-    BGMName: PublicSceneBGM_1
+    BGMName: BattleSceneBGM_1
+  - LevelID: 10
+    SceneName: ShooterLevel_2
+    StringName: None
+    NextScene: 
+    SceneType: 0
+    bSaveable: 0
+    SpawnPoints:
+    - {x: 0, y: 2.4, z: 1.2}
+    BGMName: BattleSceneBGM_1
+  - LevelID: 11
+    SceneName: ShooterLevel_3
+    StringName: None
+    NextScene: 
+    SceneType: 0
+    bSaveable: 0
+    SpawnPoints:
+    - {x: 0, y: 2.4, z: 1.2}
+    BGMName: BattleSceneBGM_1
+  - LevelID: 12
+    SceneName: ShooterLevel_4
+    StringName: None
+    NextScene: 
+    SceneType: 0
+    bSaveable: 0
+    SpawnPoints:
+    - {x: 0, y: 2.4, z: 1.2}
+    BGMName: BattleSceneBGM_1

@@ -11,9 +11,6 @@ public class EUnit : MEntity
     protected bool facingRight = true;
     protected bool bCanChangeFace = false;
 
-    // Unit HP
-    protected float maxHealth = 0f;
-    protected float health = 0f;
     // If unit is inmmune to damage - notive that this unit is still considered in damage system in this case
     protected bool bInvulnerable = false;
 
@@ -28,8 +25,12 @@ public class EUnit : MEntity
     [SerializeField] protected float speedModifier = 1f;
     [SerializeField] protected float speedAccel = 1f;
 
-    protected SkeletonAnimation skeletonAnimation;
+    // Particle
+    [SerializeField] protected ParticleSystem damageParticle;
+    [SerializeField] protected ParticleSystem healParticle;
 
+    // Animation
+    protected SkeletonAnimation skeletonAnimation;
     private Spine.Skeleton skeleton;
 
     protected override void Awake()
@@ -87,7 +88,7 @@ public class EUnit : MEntity
     }
 
     // Take Damage Method
-    // ToDo: Use a struct to input the damage info
+    // Do NOT use negative damage for healing
     public virtual void TakeDamage(float damage = 0f, bool bForceDamage = false, bool bPercentDamage = false, bool bRealDamage = false)
     {
         float finalDamage = -1;
@@ -100,7 +101,7 @@ public class EUnit : MEntity
             else if (bPercentDamage)
             {
                 damage = Mathf.Clamp(damage, 0f, 1f);
-                finalDamage = damage * maxHealth;
+                finalDamage = damage * maxHP;
             }
             else
             {
@@ -111,17 +112,26 @@ public class EUnit : MEntity
         {
             if (bRealDamage)
             {
-                health -= finalDamage;
+                currentHP -= finalDamage;
             }
             else
             {
-
+                currentHP -= finalDamage;
             }
             // Show damage number
             // ...
         }
         // Determine current health
         checkCurrentHealth();
+    }
+
+    public virtual void TakeHeal(float heal)
+    {
+        if (currentHP <= 0)
+        {
+            return;
+        }
+        currentHP = Mathf.Clamp(currentHP, maxHP, currentHP + heal);
     }
 
     // Kill the unit instantly -> Reduce HP to 0 or force kill
@@ -133,7 +143,7 @@ public class EUnit : MEntity
         }
         else
         {
-            health = 0f;
+            currentHP = 0f;
             checkCurrentHealth();
         }
     }
@@ -161,5 +171,9 @@ public class EUnit : MEntity
     protected virtual void checkCurrentHealth()
     {
         // Check if current HP will lead to something
+        if (currentHP <= 0)
+        {
+            // Post Event of player death
+        }
     }
 }

@@ -64,7 +64,7 @@ public class GameManager2D : MonoBehaviour
 
     // Private:
     // Process Score
-    private void processGameScore()
+    private void processGameScore ()
     {
         gameResult.Clear();
         // Load non-player teams' preset game results
@@ -85,6 +85,11 @@ public class GameManager2D : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_2DGAME_ALLDIR_BEGIN, OnRecv_AllDirMoveBegin);
+    }
+
     // Public:
     // Start the game
     public void StartGame()
@@ -97,9 +102,18 @@ public class GameManager2D : MonoBehaviour
             default:
                 break;
         }
+        // Subscribe to player events
+        EventManager.Instance.AddListener(GameEvent.Event.PLAYER_DEATH, OnRecv_PlayerDeath);
         InputManager.Instance.UnLockInput(Enums.SCENE_TYPE.Battle, Enums.LEVEL_TYPE.Shooter);
         BattleObserver.Instance.BeginGame();
+
+        // Play Music
+        MusicManager.Instance.PlayMusic("BattleSceneBGM_1");
+
         StartCoroutine(UpdateTimerCoroutine());
+
+        // When game begins, subscribe to all direction movement event
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_2DGAME_ALLDIR_BEGIN, OnRecv_AllDirMoveBegin);
     }
 
     // Config the game scene
@@ -125,6 +139,9 @@ public class GameManager2D : MonoBehaviour
         HUDManager.Instance.BeginHUDTimer();
         // Show Panel after loaded
         ShowGameStartPanel();
+
+        // Play Lobby BGM
+        MusicManager.Instance.PlayMusic("MainMenuBGM_1");
     }
 
     // Update the timer
@@ -159,11 +176,15 @@ public class GameManager2D : MonoBehaviour
     // Victory/DefeatL This indicates the result of the game
     public void EndGame(bool bPass = true, bool bVictory = true)
     {
+        // Remove listner
+        EventManager.Instance.RemoveListener(GameEvent.Event.PLAYER_DEATH, OnRecv_PlayerDeath);
+
         StopCoroutine(UpdateTimerCoroutine());
         BattleObserver.Instance.EndGame();
         HUDManager.Instance.EndHUDTimer();
         InputManager.Instance.LockInput();
         CharacterManager.Instance.LockCharacter2D(characterID, gameMode);
+        PersistentGameManager.Instance.PauseGame();
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_2DGAME_END);
         HUDManager.Instance.HideAllHUD();
         // Config Score and notify the UI System
@@ -174,6 +195,7 @@ public class GameManager2D : MonoBehaviour
     // Leave the game Scene
     public void LeaveGameScene()
     {
+        PersistentGameManager.Instance.ResumeGame();
         string nextScene = Constants.SCENE_AUDIENCE_LEVEL;
         if (gameLevelID > -1)
         {
@@ -183,5 +205,16 @@ public class GameManager2D : MonoBehaviour
             TaskManager.Instance.CompleteTask(level2DData.TaskComplete);
         }
         LevelManager.Instance.LoadScene(nextScene);
+    }
+
+    // Event Handlers
+    public void OnRecv_PlayerDeath()
+    {
+        EndGame();
+    }
+
+    public void OnRecv_AllDirMoveBegin()
+    {
+        
     }
 }
