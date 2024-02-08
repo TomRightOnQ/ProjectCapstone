@@ -23,7 +23,7 @@ public class LaserSmall : Projectile
             {
                 hit.collider.GetComponent<Target>().TakeDamage(projDamage);
             }
-            else if (hit.collider.CompareTag("Terrain"))
+            else if (hit.collider.CompareTag("Terrain") || hit.collider.CompareTag("Barrier"))
             {
                 end = hit.point;
                 break;

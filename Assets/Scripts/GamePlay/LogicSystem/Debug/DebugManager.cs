@@ -75,9 +75,9 @@ public class DebugManager : MonoBehaviour
         onClick();
     }
 
-    public void EnterShooter()
+    public void EnterShooter(int id = 4)
     {
-        CharacterManager.Instance.ShowCharacterPickerPanel(11);
+        CharacterManager.Instance.ShowCharacterPickerPanel(id);
         onClick();
     }
 
