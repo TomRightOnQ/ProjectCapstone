@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3494.3892, g: 3033.4094, b: 3178.7388, a: 1}
+  m_IndirectSpecularColor: {r: 3494.6304, g: 3033.8586, b: 3179.5864, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -341,6 +341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudienceSpotPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 342902851473896460, guid: b474fe9bf9ba99b47a31311d880f3314,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 466229183456719462, guid: b474fe9bf9ba99b47a31311d880f3314,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -412,6 +417,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 323636186}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &333944372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.4751015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.495953
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526560582831464781, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
+        type: 3}
+      propertyPath: m_Name
+      value: Player2D_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab6aae81a1cda8949b69d7d1a02c94c9, type: 3}
 --- !u!1001 &372316225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -487,6 +560,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2230501786458688692, guid: b474fe9bf9ba99b47a31311d880f3314,
         type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230501786458688692, guid: b474fe9bf9ba99b47a31311d880f3314,
+        type: 3}
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
       objectReference: {fileID: 0}
@@ -509,6 +587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ColorTemperature
       value: 4594
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399302940241334703, guid: b474fe9bf9ba99b47a31311d880f3314,
+        type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -533,6 +616,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudienceSpotPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 342902851473896460, guid: b474fe9bf9ba99b47a31311d880f3314,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 466229183456719462, guid: b474fe9bf9ba99b47a31311d880f3314,
         type: 3}
@@ -591,6 +679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2230501786458688692, guid: b474fe9bf9ba99b47a31311d880f3314,
         type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230501786458688692, guid: b474fe9bf9ba99b47a31311d880f3314,
+        type: 3}
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
       objectReference: {fileID: 0}
@@ -608,6 +701,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ColorTemperature
       value: 4594
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399302940241334703, guid: b474fe9bf9ba99b47a31311d880f3314,
+        type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -632,6 +730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudienceSpotLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 518174518071058506, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2891534581543692510, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
@@ -681,6 +784,26 @@ PrefabInstance:
     - target: {fileID: 2891534581543692510, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338447511829557702, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338447511829557702, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338447511829557702, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934849586559773176, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -774,6 +897,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudienceSpotLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 518174518071058506, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2891534581543692510, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
@@ -1048,7 +1176,7 @@ MonoBehaviour:
   m_ShadowResolution:
     m_Override: 512
     m_UseOverride: 0
-    m_Level: 3
+    m_Level: 2
   m_ShadowDimmer: 1
   m_VolumetricShadowDimmer: 1
   m_ShadowFadeDistance: 10000
@@ -2186,7 +2314,7 @@ MonoBehaviour:
   m_ShadowResolution:
     m_Override: 512
     m_UseOverride: 0
-    m_Level: 3
+    m_Level: 2
   m_ShadowDimmer: 0.899
   m_VolumetricShadowDimmer: 1
   m_ShadowFadeDistance: 10000
@@ -2373,6 +2501,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudienceSpotLight
       objectReference: {fileID: 0}
+    - target: {fileID: 518174518071058506, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2891534581543692510, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2421,6 +2554,16 @@ PrefabInstance:
     - target: {fileID: 2891534581543692510, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338447511829557702, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934849586559773176, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2895,6 +3038,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudienceSpotPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 342902851473896460, guid: b474fe9bf9ba99b47a31311d880f3314,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 466229183456719462, guid: b474fe9bf9ba99b47a31311d880f3314,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2963,6 +3111,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudienceSpotLight
       objectReference: {fileID: 0}
+    - target: {fileID: 518174518071058506, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2891534581543692510, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3011,6 +3164,16 @@ PrefabInstance:
     - target: {fileID: 2891534581543692510, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338447511829557702, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934849586559773176, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3516,3 +3679,4 @@ SceneRoots:
   - {fileID: 2062894528}
   - {fileID: 1025089693}
   - {fileID: 1125327151}
+  - {fileID: 333944372}

@@ -12,121 +12,115 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5adf8aafd7f0134caf3fc7c7c08a0ff, type: 3}
   m_Name: SaveConfig
   m_EditorClassIdentifier: 
-  bAllowRewrite: 1
+  bAllowRewrite: 0
   playerSaveData:
     PlayerName: You
-    Position: {x: -6, y: 7.2, z: -1}
-    Scene: AudienceLevel
+    Position: {x: 4.35, y: 0.6, z: -1.4}
+    Scene: RoomALevel
   daySaveData:
     CurrentDay: 1
     bInited: 1
   npcSaveDataList:
+  - NpcID: 1000
+    NpcName: NPC_1_0
+    Position: {x: 4.75, y: 0.6, z: -1.4}
+    interactionIDs: 11270000
+    Scene: RoomALevel
+    bActive: 1
   - NpcID: 1100
     NpcName: DNPC_Item_0
     Position: {x: 6.191, y: 1.22, z: 1.077}
     interactionIDs: 12270000
     Scene: RoomALevel
     bActive: 1
-  - NpcID: 1103
-    NpcName: DNPC_Item_3
-    Position: {x: 9.303, y: 0.44, z: -0.268}
-    interactionIDs: 13270000
-    Scene: RoomALevel
-    bActive: 1
-  - NpcID: 1102
-    NpcName: DNPC_Item_2
-    Position: {x: 4.35, y: 0.6, z: -1.4}
-    interactionIDs: 19270000
-    Scene: RoomALevel
-    bActive: 1
   guildSaveDataList:
   - GuildID: 0
-    Score: 28
+    Score: 90
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 1
-    Score: 70
+    Score: 21
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 2
-    Score: 300
+    Score: 90
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 3
-    Score: 200
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 4
-    Score: 250
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 5
-    Score: 160
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 6
-    Score: 170
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 7
-    Score: 180
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 8
-    Score: 190
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 9
-    Score: 120
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 10
-    Score: 100
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 11
     Score: 60
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
+  - GuildID: 4
+    Score: 75
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 5
+    Score: 48
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 6
+    Score: 51
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 7
+    Score: 54
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 8
+    Score: 57
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 9
+    Score: 36
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 10
+    Score: 30
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 11
+    Score: 18
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
   - GuildID: 12
-    Score: 70
+    Score: 21
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 13
-    Score: 50
+    Score: 15
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 14
-    Score: 70
+    Score: 21
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 15
-    Score: 80
+    Score: 24
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   character2DLock:
-    ShooterLevelLock: 0200000003000000040000000500000001000000
+    ShooterLevelLock: 05000000
     PlatformerLevelLock: 
   disabledHUDInteractionList: 
-  triggeredTaskList: 4c040000ee030000
-  completeTaskList: e8030000e9030000ea030000eb030000ec030000ed030000
+  triggeredTaskList: e9030000
+  completeTaskList: e8030000
   lockedMapList: []
   bTeleportLocked: 0
-  menuModuleLockList: 000000000000
-  currentGameTime: 8
+  menuModuleLockList: 010101010100
+  currentGameTime: 21

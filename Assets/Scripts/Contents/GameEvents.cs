@@ -28,6 +28,11 @@ public static class GameEvent
         EVENT_2DGAME_END,
         EVENT_2DGAME_ALLDIR_BEGIN,
         EVENT_2DGAME_ALLDIR_END,
+
+        // Wide Screen
+        EVENT_WIDE_SCREEN_BEGIN,
+        EVENT_WIDE_SCREEN_END,
+
         // Rotational Damage Taker
         EVENT_2DGAME_ROTDMG_ON,
         EVENT_2DGAME_ROTDMG_OFF,

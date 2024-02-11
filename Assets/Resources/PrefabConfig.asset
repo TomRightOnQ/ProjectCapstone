@@ -16,9 +16,9 @@ MonoBehaviour:
   - name: SFXObject
     PrefabPath: 
     TypeName: SFXObject
-    Count: 3
+    Count: 80
     IsExpandable: 1
-    ExpandableRatio: 0.2
+    ExpandableRatio: 0.5
     bPoolable: 1
     bPoolByDefault: 1
     PrefabReference: {fileID: 5569541797541520666, guid: d70f82feb19c28c47938de5410a06670,
@@ -36,9 +36,9 @@ MonoBehaviour:
   - name: VFXObject
     PrefabPath: 
     TypeName: VFXObject
-    Count: 10
+    Count: 80
     IsExpandable: 1
-    ExpandableRatio: 0.2
+    ExpandableRatio: 0.5
     bPoolable: 1
     bPoolByDefault: 1
     PrefabReference: {fileID: 1042347956662069684, guid: 65aa5edea23dd954a9555823856e1ce1,
@@ -342,4 +342,14 @@ MonoBehaviour:
     bPoolable: 1
     bPoolByDefault: 0
     PrefabReference: {fileID: 1420475544445750498, guid: 489b3706235c2ff4dbe4a8c3fead0173,
+      type: 3}
+  - name: BossTargetBounce
+    PrefabPath: 
+    TypeName: BossTargetBounce
+    Count: 10
+    IsExpandable: 1
+    ExpandableRatio: 0.2
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 7998464320354780466, guid: a75991d52dd8d1949b1b2703c38f50f7,
       type: 3}

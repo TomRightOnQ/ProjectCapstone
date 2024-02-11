@@ -170,10 +170,9 @@ public class EUnit : MEntity
     // Determmine currnent HP status
     protected virtual void checkCurrentHealth()
     {
-        // Check if current HP will lead to something
         if (currentHP <= 0)
         {
-            // Post Event of player death
+            currentHP = 0;
         }
     }
 }

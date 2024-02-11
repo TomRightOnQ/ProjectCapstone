@@ -37,12 +37,33 @@ public class UI_HUD : UIBase
     [SerializeField] private Animator upperRightAnimator;
     [SerializeField] private Animator upperLeftAnimator;
     [SerializeField] private Animator playerHPAnimator;
+    [SerializeField] private Animator wideScreenAnimator;
     [SerializeField] private Animation playerDamaged;
 
     // UI - Task Information
     [SerializeField] private TextMeshProUGUI TB_TaskName;
     [SerializeField] private TextMeshProUGUI TB_TaskScene;
     [SerializeField] private TextMeshProUGUI TB_TaskBrief;
+
+    // Events of removing wide screen
+    private GameEvent.Event wideScreenShowEvent = GameEvent.Event.EVENT_WIDE_SCREEN_BEGIN;
+    private GameEvent.Event wideScreenHideEvent = GameEvent.Event.EVENT_WIDE_SCREEN_END;
+
+    // Wide screen objects
+    [SerializeField] private GameObject P_WideScreen;
+
+    private void Awake()
+    {
+        EventManager.Instance.AddListener(wideScreenShowEvent, ShowWideScreen);
+        EventManager.Instance.AddListener(wideScreenHideEvent, HideWideScreen);
+    }
+
+    // Private:
+    private void OnDestroy()
+    {
+        EventManager.Instance.RemoveListener(wideScreenShowEvent, ShowWideScreen);
+        EventManager.Instance.RemoveListener(wideScreenHideEvent, HideWideScreen);
+    }
 
     // Public:
     /// <summary>
@@ -172,6 +193,17 @@ public class UI_HUD : UIBase
         TB_TaskName.text = "";
         TB_TaskScene.text = "";
         TB_TaskBrief.text = "";
+    }
+
+    // Event Handlers
+    public void HideWideScreen()
+    {
+        wideScreenAnimator.Play("Hide");
+    }
+
+    public void ShowWideScreen()
+    {
+        wideScreenAnimator.Play("Show");
     }
 
     // OnClick Events

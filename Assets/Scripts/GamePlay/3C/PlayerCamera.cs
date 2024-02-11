@@ -38,7 +38,6 @@ public class PlayerCamera : MonoBehaviour
         }
 
         transform.rotation = Quaternion.Euler(defaultAngle, transform.eulerAngles.y, transform.eulerAngles.z);
-
         // Set up handlers
         configEventHandlers();
     }
@@ -108,7 +107,6 @@ public class PlayerCamera : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(transform.eulerAngles.x - RotatingAmount, transform.eulerAngles.y, transform.eulerAngles.z);
         }
-        
     }
 
     // Public:
@@ -142,7 +140,7 @@ public class PlayerCamera : MonoBehaviour
 
             transform.localPosition = new Vector3(originalPos.x + x, originalPos.y + y, originalPos.z);
 
-            elapsed += Time.deltaTime;
+            elapsed += Time.unscaledDeltaTime;
 
             yield return null;
         }

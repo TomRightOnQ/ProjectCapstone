@@ -13,6 +13,8 @@ public class ScriptDayOne : DayScriptBase
     // Public:
     public override void Init() 
     {
+        // Set time
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NOON, true);
         // Move player
         SaveConfig.Instance.SetPlayer(new Vector3(4.35f, 0.6f, -1.4f), Constants.SCENE_ROOMA_LEVEL);
         // Disable all Menu UIs

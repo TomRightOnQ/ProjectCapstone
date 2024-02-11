@@ -46,12 +46,12 @@ Material:
   - TransparentBackface
   - RayTracingPrepass
   - MOTIONVECTORS
-  m_LockedProperties: 
+  m_LockedProperties: _Emission
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _Surface:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7eedf5256aaa66448a14b1c89aa34fd4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -84,10 +84,10 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
-    - _Fresnel_Power: 15
+    - _Fresnel_Power: 8
     - _MaterialID: 1
     - _MaterialTypeMask: 2
-    - _Offset: 0
+    - _Offset: 0.5
     - _OpaqueCullMode: 2
     - _RayTracing: 0
     - _ReceivesSSR: 1
@@ -95,6 +95,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
+    - _Speed: 0.05
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 0
@@ -125,4 +126,5 @@ Material:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _Emission: {r: 67.79352, g: 48.515213, b: 30.524828, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Tilling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -121,7 +121,7 @@ public class LevelManager : MonoBehaviour
 
     // Set the omni timeset
     // bChangeTimeNow: Change the time now
-    public void SetGameTime(GameEvent.Event timeEnum = GameEvent.Event.TIME_NOON, bool bChangeTimeNow = false)
+    public void SetGameTime(GameEvent.Event timeEnum, bool bChangeTimeNow = false)
     {
         currentTime = timeEnum;
         // Save the time to the save
@@ -328,7 +328,17 @@ public class LevelManager : MonoBehaviour
         else 
         {
             LevelData levelData = LevelConfig.Instance.GetLevelData(sceneName);
+            // Place the player and the background according to the groupID
             playerObject = PrefabManager.Instance.Instantiate(playerPrefabName, levelData.SpawnPoints[groupID], Quaternion.identity);
+            if (ParallaxScrollingBG.Instance != null)
+            {
+                Vector3 bgPosition = new Vector3(
+                    levelData.SpawnPoints[groupID].x,
+                    ParallaxScrollingBG.Instance.transform.position.y, 
+                    ParallaxScrollingBG.Instance.transform.position.z
+                    );
+                ParallaxScrollingBG.Instance.transform.position = bgPosition;
+            }
         }
         // Set Player to DataManager
         PersistentDataManager.Instance.SetPlayer(playerObject.GetComponent<Player>());

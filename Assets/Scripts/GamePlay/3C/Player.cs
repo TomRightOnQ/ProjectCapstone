@@ -25,6 +25,8 @@ public class Player : EUnit
     private float healCD = 0f;
     [SerializeField] private bool bCanTakeHeal = false;
 
+    // Position to move the background
+    private Vector3 originalPosition;
 
     [SerializeField, ReadOnly]
     private string projectileName;
@@ -45,6 +47,7 @@ public class Player : EUnit
         {
             projectileName = ProjectileData.GetData(projectileID).Name;
         }
+        originalPosition = transform.position;
     }
 
     // Private:
@@ -81,6 +84,18 @@ public class Player : EUnit
         }
     }
 
+    private void FixedUpdate()
+    {
+        // Calculate the total offset from the original position
+        float totalOffsetX = transform.position.x - originalPosition.x;
+        float totalOffsetY = transform.position.y - originalPosition.y;
+        // Use this total offset for the parallax effect
+        if (ParallaxScrollingBG.Instance != null)
+        {
+            ParallaxScrollingBG.Instance.moveBackground(totalOffsetX, totalOffsetY);
+        }
+    }
+
     // Public:
     // Take Damage
     public override void TakeDamage(float damage = 0, bool bForceDamage = false, bool bPercentDamage = false, bool bRealDamage = false)
@@ -105,6 +120,7 @@ public class Player : EUnit
         }
 
         checkCurrentHealth();
+        GameEffectManager.Instance.PlaySound("DMG_1", transform.position);
     }
 
     // Take Heal
@@ -123,6 +139,7 @@ public class Player : EUnit
         {
             healParticle.Play();
         }
+        checkCurrentHealth();
     }
 
     // Fire

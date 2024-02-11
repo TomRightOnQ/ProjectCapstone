@@ -28,7 +28,7 @@ public static class ReminderData
         {3, new ReminderDataStruct(3, "Use Menu - Map to walk around!", 2f, "None", Enums.CHARACTER_TYPE.You)},
         {4, new ReminderDataStruct(4, "You have unlocked a new piece of Note", 2f, "None", Enums.CHARACTER_TYPE.You)},
         {5, new ReminderDataStruct(5, "What is that red zone? I guess we should not touch it.", 2f, "You", Enums.CHARACTER_TYPE.You)},
-        {6, new ReminderDataStruct(6, "Maybe we can touch it when its safe...", 2f, "You", Enums.CHARACTER_TYPE.You)},
+        {6, new ReminderDataStruct(6, "Maybe we can touch it when it's safe...", 2f, "You", Enums.CHARACTER_TYPE.You)},
         {7, new ReminderDataStruct(7, "Avoid the Unstable Zone!", 2f, "You", Enums.CHARACTER_TYPE.You)},
         {8, new ReminderDataStruct(8, "Now it's safe!", 2f, "You", Enums.CHARACTER_TYPE.You)},
         {9, new ReminderDataStruct(9, "I need to find a way to break this shield", 2f, "You", Enums.CHARACTER_TYPE.You)},

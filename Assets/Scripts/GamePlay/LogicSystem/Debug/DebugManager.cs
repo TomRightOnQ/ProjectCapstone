@@ -90,4 +90,19 @@ public class DebugManager : MonoBehaviour
     {
         InputManager.Instance.SetPlayerMovingAllDirection(true);
     }
+
+    public void ChangeTimeToNoon()
+    {
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NOON, true);
+    }
+
+    public void ChangeTimeToSunSet()
+    {
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_SUNSET, true);
+    }
+
+    public void ChangeTimeToNight()
+    {
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NIGHT, true);
+    }
 }
