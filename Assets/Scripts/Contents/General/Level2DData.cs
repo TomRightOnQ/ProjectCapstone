@@ -51,6 +51,7 @@ public static class Level2DData
         {10, new Level2DDataStruct(10, "Shooting Range - Stage 7", "ShooterLevel_3", Enums.LEVEL_TYPE.Shooter, "SHOOTING RANGE", 0, 120f, new int[]{-1,-1,-1}, "None", "Img_ShootingRange", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, -1)},
         {11, new Level2DDataStruct(11, "Shooting Range - Stage 8", "ShooterLevel_4", Enums.LEVEL_TYPE.Shooter, "SHOOTING RANGE", 0, 180f, new int[]{-1,-1,-1}, "None", "Img_ShootingRange", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, -1)},
         {12, new Level2DDataStruct(12, "Shooting Range - Stage 9", "ShooterLevel_5", Enums.LEVEL_TYPE.Shooter, "SHOOTING RANGE", 0, 180f, new int[]{-1,-1,-1}, "None", "Img_ShootingRange", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, -1)},
+        {13, new Level2DDataStruct(13, "Shooting Range - Stage 10", "ShooterLevel_6", Enums.LEVEL_TYPE.Shooter, "SHOOTING RANGE", 0, 180f, new int[]{-1,-1,-1}, "None", "Img_ShootingRange", "AudienceLevel", new int[]{2,30,3,20,4,25,5,16,6,17,7,18,8,19,9,12,10,10,11,6,12,7,13,5,14,7,15,8,1,7}, -1)},
     };
 
     public static Level2DDataStruct GetData(int id)

@@ -88,6 +88,7 @@ public class GameManager2D : MonoBehaviour
     private void OnDestroy()
     {
         EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_2DGAME_ALLDIR_BEGIN, OnRecv_AllDirMoveBegin);
+        EventManager.Instance.RemoveListener(GameEvent.Event.PLAYER_DEATH, OnRecv_PlayerDeath);
     }
 
     // Public:
@@ -191,11 +192,8 @@ public class GameManager2D : MonoBehaviour
     // End the game
     // Pass/No Pass: This only determines if the completion of the game will take the player to the next game
     // Victory/DefeatL This indicates the result of the game
-    public void EndGame(bool bPass = true, bool bVictory = true)
+    public void EndGame(bool bPass = true, bool bVictory = false)
     {
-        // Remove listner
-        EventManager.Instance.RemoveListener(GameEvent.Event.PLAYER_DEATH, OnRecv_PlayerDeath);
-
         StopCoroutine(UpdateTimerCoroutine());
         BattleObserver.Instance.EndGame();
         HUDManager.Instance.EndHUDTimer();
@@ -206,7 +204,7 @@ public class GameManager2D : MonoBehaviour
         HUDManager.Instance.HideAllHUD();
         // Config Score and notify the UI System
         processGameScore();
-        UI_Level2D.SetLevelCompletePanel(true);
+        UI_Level2D.SetLevelCompletePanel(true, bVictory);
     }
 
     // Leave the game Scene
@@ -227,6 +225,11 @@ public class GameManager2D : MonoBehaviour
     // Event Handlers
     public void OnRecv_PlayerDeath()
     {
+        PersistentDataManager.Instance.MainPlayer.gameObject.SetActive(false);
+        // Play VFX
+        GameEffectManager.Instance.PlayVFX("TargetExplode", 
+            PersistentDataManager.Instance.MainPlayer.transform.position,
+            PersistentDataManager.Instance.MainPlayer.transform.localScale);
         EndGame();
     }
 

@@ -50,7 +50,7 @@ public class ShooterLevelManager : MonoBehaviour
         ui_ShooterLevel.UpdateTimer(currentTime);
         if (currentTime <= 0)
         {
-            EndGame(false);
+            EndGame(true);
         }
     }
 

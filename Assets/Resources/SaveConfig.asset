@@ -15,8 +15,8 @@ MonoBehaviour:
   bAllowRewrite: 0
   playerSaveData:
     PlayerName: You
-    Position: {x: 4.35, y: 0.6, z: -1.4}
-    Scene: RoomALevel
+    Position: {x: -8.8, y: 3.5, z: 0}
+    Scene: MatchingLevel
   daySaveData:
     CurrentDay: 1
     bInited: 1
@@ -35,7 +35,7 @@ MonoBehaviour:
     bActive: 1
   guildSaveDataList:
   - GuildID: 0
-    Score: 90
+    Score: 12
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
     DuelLose: 0
     bElminated: 0
   character2DLock:
-    ShooterLevelLock: 05000000
+    ShooterLevelLock: 
     PlatformerLevelLock: 
   disabledHUDInteractionList: 
   triggeredTaskList: e9030000

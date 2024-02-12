@@ -42,7 +42,7 @@ public class UI_Level2D : UIBase
     [SerializeField] private GameObject TB_LevelBeginCountDown;
     [SerializeField] private TextMeshProUGUI TB_LevelBeginCountDown_text;
     // Text - Game End Text
-    [SerializeField] private GameObject TB_GameOverText;
+    [SerializeField] private TextMeshProUGUI TB_GameOverText;
 
     private void Awake()
     {
@@ -114,12 +114,20 @@ public class UI_Level2D : UIBase
 
     // Public:
     // Show Panels
-    public void SetLevelCompletePanel(bool bShow)
+    public void SetLevelCompletePanel(bool bShow, bool bVic = false)
     {
         // Show GameOver and then config the panel
         // Set the timer and await for game over
         // Active the string object
-        TB_GameOverText.SetActive(true);
+        if (bVic)
+        {
+            TB_GameOverText.text = "Level Clear";
+        }
+        else 
+        {
+            TB_GameOverText.text = "Game Over";
+        }
+        TB_GameOverText.gameObject.SetActive(true);
         StartCoroutine(endGameCoroutine(bShow));
     }
 
@@ -131,7 +139,7 @@ public class UI_Level2D : UIBase
             yield return new WaitForSecondsRealtime(1f);
             currentTime -= 1f;
         }
-        TB_GameOverText.SetActive(false);
+        TB_GameOverText.gameObject.SetActive(false);
         configCompletePanel();
         P_LevelCompletePanel.SetActive(bShow);
     }

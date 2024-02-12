@@ -38,6 +38,9 @@ public class TargetLauncher : MEntity
     private Coroutine launchRoutine;
     [SerializeField] private bool bTracking = false;
 
+    // Launch SFX
+    [SerializeField] private string launchSFXName = "None";
+
     protected override void Awake()
     {
         base.Awake();
@@ -98,6 +101,12 @@ public class TargetLauncher : MEntity
 
         if (target != null)
         {
+            if (launchSFXName != "None")
+            {
+                // Launch SFX
+                GameEffectManager.Instance.PlaySound(launchSFXName, transform.position);
+            }
+
             target.SetUp();
             target.Launch(randomizedDirection, launchForce);
         }
@@ -111,6 +120,13 @@ public class TargetLauncher : MEntity
     protected void activateLauncher()
     {
         bActivated = true;
+        if (bTracking)
+        {
+            Vector3 directionToPlayer = PersistentDataManager.Instance.MainPlayer.transform.position - transform.position;
+            float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg;
+            angle -= 90;
+            transform.localRotation = Quaternion.Euler(0f, 0f, angle);
+        }
         if (launchRoutine == null && gameObject.activeSelf)
         {
             launchRoutine = StartCoroutine(LaunchTargetsRoutine());

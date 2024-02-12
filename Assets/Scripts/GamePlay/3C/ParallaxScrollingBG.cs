@@ -58,7 +58,17 @@ public class ParallaxScrollingBG : MonoBehaviour
         for (int i = 0; i < bgList.Count; i++)
         {
             // Calculate the new position for the layer
-            Vector3 newPosition = bgList[i].originalLocation + new Vector3(cameraOffsetX * bgList[i].offsetValue, cameraOffsetY * -0.1f, 0);
+            // Front layer does not make vertical movement
+            Vector3 newPosition;
+            if (i == bgList.Count - 1)
+            {
+                newPosition = bgList[i].originalLocation + new Vector3(cameraOffsetX * bgList[i].offsetValue, 0, 0);
+            }
+            else 
+            {
+                newPosition = bgList[i].originalLocation + new Vector3(cameraOffsetX * bgList[i].offsetValue, cameraOffsetY * 0.1f, 0);
+            }
+            
 
             // Apply the new position to the layer
             bgList[i].spriteObject.transform.position = newPosition;

@@ -39,10 +39,10 @@ public static class ProjectileData
     }
     public static Dictionary<int, ProjectileDataStruct> data = new Dictionary<int, ProjectileDataStruct>
     {
-        {1, new ProjectileDataStruct(1, "BulletSmall", 14f, 5f, 1f, 0.75f, 0f, false, false, false, true, -1f, 0f)},
+        {1, new ProjectileDataStruct(1, "BulletSmall", 15f, 5f, 1.75f, 0.75f, 0f, false, false, false, true, -1f, 0f)},
         {2, new ProjectileDataStruct(2, "BulletLeaf", 50f, 0.5f, 0.25f, 0.25f, 0.1f, false, false, false, false, -1f, 0f)},
         {3, new ProjectileDataStruct(3, "LaserSmall", 0f, 0.5f, 2f, 0.2f, 0f, false, true, false, false, -1f, 0f)},
-        {4, new ProjectileDataStruct(4, "MissileSmall", 24f, 2f, 2f, 1f, 0.05f, true, false, true, true, 0.75f, 60f)},
+        {4, new ProjectileDataStruct(4, "MissileSmall", 24f, 2f, 5f, 1f, 0.05f, true, false, true, true, 0.75f, 60f)},
         {5, new ProjectileDataStruct(5, "BulletVT", 32f, 1f, 0.5f, 2f, 0.05f, false, false, true, true, 2f, 0f)},
     };
 
