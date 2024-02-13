@@ -54,12 +54,17 @@ public class ShooterLevelManager : MonoBehaviour
         }
     }
 
-
     // Config Listeners
     private void configListners()
     {
         EventManager.Instance.AddListener(GameEvent.Event.EVENT_2DGAME_END, OnRecv_ShooterLevelEnd);
     }
+
+    private void OnDestroy()
+    {
+        EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_2DGAME_END, OnRecv_ShooterLevelEnd);
+    }
+
 
     // End Game
     private void EndGame(bool bWin)
@@ -69,14 +74,13 @@ public class ShooterLevelManager : MonoBehaviour
             return;
         }
         bStarted = false;
-        ui_ShooterLevel.HideShooterLevelUI();
+        UIManager.Instance.HideUI("UI_ShooterLevel");
         GameManager2D.Instance.EndGame(true, bWin);
     }
 
     // Event Handlers
     private void OnRecv_ShooterLevelEnd()
     {
-        EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_2DGAME_END, OnRecv_ShooterLevelEnd);
         EndGame(true);
     }
 

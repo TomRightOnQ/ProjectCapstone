@@ -44,6 +44,9 @@ public class Boss_2 : Boss
         PersistentDataManager.Instance.MainPlayer.EntitySay("!!", 1f);
         yield return new WaitForSeconds(1f);
 
+        // Set Camera
+        PersistentDataManager.Instance.MainCamera.SetCameraSecondReference(gameObject);
+
         // Unlock Input
         InputManager.Instance.UnLockInput(Enums.SCENE_TYPE.Battle);
         InputManager.Instance.SetInputAsShooter();
@@ -83,7 +86,7 @@ public class Boss_2 : Boss
         if (ratio <= 0)
         {
             ShooterLevelManager.Instance.AddScore(100);
-            GameManager2D.Instance.EndGame();
+            GameManager2D.Instance.EndGame(true, true);
         }
     }
 

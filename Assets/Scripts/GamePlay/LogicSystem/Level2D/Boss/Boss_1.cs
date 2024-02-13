@@ -90,7 +90,7 @@ public class Boss_1 : Boss
         if (ratio <= 0)
         {
             ShooterLevelManager.Instance.AddScore(150);
-            GameManager2D.Instance.EndGame();
+            GameManager2D.Instance.EndGame(true, true);
         }
     }
 

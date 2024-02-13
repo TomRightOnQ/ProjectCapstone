@@ -4,6 +4,9 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour
 {
     [SerializeField] private GameObject targetObject;
+    // In some cases, there could be more than one references
+    [SerializeField] private GameObject targetObject_B;
+
     [SerializeField] private Camera playerCamera;
     [SerializeField] private float cameraYOffset = 3f;
     [SerializeField] private float cameraZOffset = 4f;
@@ -53,18 +56,24 @@ public class PlayerCamera : MonoBehaviour
     {
         if (unit == null || !bPlayerMode) return;
 
+        float xValue = targetObject.transform.position.x;
         // Set target position based on facing direction
+        if (targetObject_B != null)
+        {
+            xValue = (targetObject.transform.position.x + targetObject_B.transform.position.x) / 2;
+        }
+
         Vector3 targetPosition;
         float cameraZ = Mathf.Clamp(targetObject.transform.position.z - cameraZOffset, camMinZ, camMaxZ);
         if (unit.GetFacingToRight())
         {
-            float cameraX = Mathf.Clamp(targetObject.transform.position.x + Constants.CAMERA_PAN_OFFSET, camMinX, camMaxX);
+            float cameraX = Mathf.Clamp(xValue + Constants.CAMERA_PAN_OFFSET, camMinX, camMaxX);
             float cameraY = Mathf.Clamp(targetObject.transform.position.y + cameraYOffset, camMinY, camMaxY);
             targetPosition = new Vector3(cameraX, cameraY, cameraZ);
         }
         else
         {
-            float cameraX = Mathf.Clamp(targetObject.transform.position.x - Constants.CAMERA_PAN_OFFSET, camMinX, camMaxX);
+            float cameraX = Mathf.Clamp(xValue - Constants.CAMERA_PAN_OFFSET, camMinX, camMaxX);
             float cameraY = Mathf.Clamp(targetObject.transform.position.y + cameraYOffset, camMinY, camMaxY);
             targetPosition = new Vector3(cameraX, cameraY, cameraZ);
         }
@@ -110,6 +119,15 @@ public class PlayerCamera : MonoBehaviour
     }
 
     // Public:
+    public void SetCameraSecondReference(GameObject secondRerference)
+    {
+        targetObject_B = secondRerference;
+    }
+
+    public void RemoveCameraSecondReference()
+    {
+        targetObject_B = null;
+    }
 
     public void SetCameraToPlayerMode(bool bSetToPlayerMode = true)
     {

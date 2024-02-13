@@ -25,10 +25,6 @@ public class UI_ShooterLevel : UIBase
     // Hide All
     public void HideShooterLevelUI()
     {
-        if (gameObject == null)
-        {
-            return;
-        }
         gameObject.SetActive(false);
     }
 

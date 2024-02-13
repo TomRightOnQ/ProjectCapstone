@@ -21,14 +21,20 @@ public class LaserSmall : Projectile
         {
             if (hit.collider.CompareTag("Target"))
             {
+                // Play Effect At the End and Each Collision
+                GameEffectManager.Instance.PlayVFX("LaserExplode", hit.point, Vector3.one);
                 hit.collider.GetComponent<Target>().TakeDamage(projDamage, transform.position);
             }
             else if (hit.collider.CompareTag("Boss"))
             {
+                // Play Effect At the End and Each Collision
+                GameEffectManager.Instance.PlayVFX("LaserExplode", hit.point, Vector3.one);
                 hit.collider.GetComponent<Boss>().TakeDamage(projDamage);
             }
             else if (hit.collider.CompareTag("Terrain") || hit.collider.CompareTag("Barrier"))
             {
+                // Play Effect At the End and Each Collision
+                GameEffectManager.Instance.PlayVFX("LaserExplode", hit.point, Vector3.one);
                 end = hit.point;
                 break;
             }

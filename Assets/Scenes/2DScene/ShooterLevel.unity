@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3202.9595, g: 2890.8088, b: 4028.4146, a: 1}
+  m_IndirectSpecularColor: {r: 3205.69, g: 2893.3772, b: 4031.2505, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -434,6 +434,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1291804654}
     m_Modifications:
+    - target: {fileID: 4072229968570989901, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: bVictory
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5334657039609801441, guid: 26d222d449a7e884ba9cd1b2154ede4c,
         type: 3}
       propertyPath: m_Name
@@ -1689,6 +1694,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2045919204}
     m_Modifications:
+    - target: {fileID: 4072229968570989901, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: bVictory
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5334657039609801441, guid: 26d222d449a7e884ba9cd1b2154ede4c,
         type: 3}
       propertyPath: m_Name
@@ -4061,6 +4071,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 90984778}
     m_Modifications:
+    - target: {fileID: 4072229968570989901, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: bVictory
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5334657039609801441, guid: 26d222d449a7e884ba9cd1b2154ede4c,
         type: 3}
       propertyPath: m_Name
@@ -4749,6 +4764,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 600272262}
     m_Modifications:
+    - target: {fileID: 4072229968570989901, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: bVictory
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5334657039609801441, guid: 26d222d449a7e884ba9cd1b2154ede4c,
         type: 3}
       propertyPath: m_Name
@@ -4929,6 +4949,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 593675622}
     m_Modifications:
+    - target: {fileID: 4072229968570989901, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: bVictory
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5334657039609801441, guid: 26d222d449a7e884ba9cd1b2154ede4c,
         type: 3}
       propertyPath: m_Name
