@@ -2519,7 +2519,7 @@ GameObject:
   - component: {fileID: 849757829}
   - component: {fileID: 849757830}
   m_Layer: 14
-  m_Name: TimeTrigger_WideEnd
+  m_Name: EventTrigger_WideEnd
   m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2538,7 +2538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1488738696}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &849757830
 MonoBehaviour:
@@ -2553,7 +2553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerCondition: 21
-  triggerEvent: 16
+  triggerEvent: 0
   targetTime: 10
   timeElasped: 0
   bPlayAdditionalEffect: 1
@@ -3474,7 +3474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1488738696}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1331140217
 MonoBehaviour:
@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerCondition: 21
-  triggerEvent: 1
+  triggerEvent: 0
   targetTime: 5
   timeElasped: 0
   bPlayAdditionalEffect: 1
@@ -3523,7 +3523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1488738696}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1370564626
 MonoBehaviour:
@@ -3538,7 +3538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerCondition: 21
-  triggerEvent: 13
+  triggerEvent: 0
   targetTime: 20
   timeElasped: 0
   bPlayAdditionalEffect: 1
@@ -4192,9 +4192,6 @@ Transform:
   - {fileID: 1912847032}
   - {fileID: 137506766}
   - {fileID: 415149262}
-  - {fileID: 1370564625}
-  - {fileID: 1331140216}
-  - {fileID: 849757829}
   - {fileID: 1212784637}
   - {fileID: 6109177470738966751}
   m_Father: {fileID: 0}
@@ -7254,3 +7251,6 @@ SceneRoots:
   - {fileID: 24480515}
   - {fileID: 1488738696}
   - {fileID: 1899455624}
+  - {fileID: 1370564625}
+  - {fileID: 1331140216}
+  - {fileID: 849757829}

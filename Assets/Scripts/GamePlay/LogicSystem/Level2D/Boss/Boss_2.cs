@@ -94,6 +94,11 @@ public class Boss_2 : Boss
     // Take Damage
     public override void TakeDamage(float damage = 0, bool bForceDamage = false, bool bPercentDamage = false, bool bRealDamage = false)
     {
+        if (!bCanTakeDamage)
+        {
+            return;
+        }
+
         base.TakeDamage(damage, bForceDamage, bPercentDamage, bRealDamage);
 
         // Play Effects

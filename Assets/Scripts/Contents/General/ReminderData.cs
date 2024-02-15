@@ -34,6 +34,10 @@ public static class ReminderData
         {9, new ReminderDataStruct(9, "I need to find a way to break this shield", 2f, "You", Enums.CHARACTER_TYPE.You)},
         {10, new ReminderDataStruct(10, "They didn't tell me they are sending this for the match...", 2f, "Guide", Enums.CHARACTER_TYPE.Friend)},
         {11, new ReminderDataStruct(11, "Our bullets cannot get through that shield!", 2f, "Guide", Enums.CHARACTER_TYPE.Friend)},
+        {12, new ReminderDataStruct(12, "Who should we choose for this match...", 4f, "You", Enums.CHARACTER_TYPE.You)},
+        {13, new ReminderDataStruct(13, "Wait a minute, why couldn't I fire at all?", 3f, "You", Enums.CHARACTER_TYPE.You)},
+        {14, new ReminderDataStruct(14, "This match is a challenge to your speed, and you shall dodge all attacks", 3f, "*The Auditorium*", Enums.CHARACTER_TYPE.Enemy)},
+        {15, new ReminderDataStruct(15, "...", 3f, "You", Enums.CHARACTER_TYPE.You)},
     };
 
     public static ReminderDataStruct GetData(int id)

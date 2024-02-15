@@ -38,7 +38,12 @@ public class ParallaxScrollingBG : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
 
+    // SetUp
+    public void SetUp(Vector3 startPosition)
+    {
+        transform.position = startPosition;
         // Record the original position
         for (int i = 0; i < bgList.Count; i++)
         {

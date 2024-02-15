@@ -180,6 +180,10 @@ public class PlayerController : MonoBehaviour
     // Config firing Angle
     private void AimCursor()
     {
+        if (!bShooter)
+        {
+            return;
+        }
         Vector3 mousePosition = Input.mousePosition;
         Vector3 worldPosition = mainCamera.ScreenToWorldPoint(mousePosition);
         Vector3 playerPos = player.transform.position;
@@ -370,19 +374,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void SetAsShooter()
+    public void SetAsShooter(bool bActive)
     {
-        bShooter = true;
-        lineRenderer = GetComponent<LineRenderer>();
-        if (lineRenderer != null)
+        bShooter = bActive;
+        if (bShooter)
         {
-            lineRenderer.enabled = true;
-        }
+            lineRenderer = GetComponent<LineRenderer>();
+            if (lineRenderer != null)
+            {
+                lineRenderer.enabled = true;
+            }
 
-        // Check weapon type
-        ProjectileData.ProjectileDataStruct projData = ProjectileData.GetData(player.ProjectileID);
-        aimAngle = projData.LockAngle;
-        bMissile = projData.bGuided;
+            // Check weapon type
+            ProjectileData.ProjectileDataStruct projData = ProjectileData.GetData(player.ProjectileID);
+            aimAngle = projData.LockAngle;
+            bMissile = projData.bGuided;
+        }
+        else 
+        {
+            if (lineRenderer != null)
+            {
+                lineRenderer.enabled = false;
+            }
+        }
     }
 
     // Lock All Inputs

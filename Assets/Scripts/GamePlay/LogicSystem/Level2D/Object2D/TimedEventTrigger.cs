@@ -52,7 +52,7 @@ public class TimedEventTrigger : MonoBehaviour
     {
         while (targetTime > 0)
         {
-            // Wait for one second
+            // Wait
             yield return new WaitForSeconds(0.1f);
             // Decrement the target time
             targetTime -= 0.1f;

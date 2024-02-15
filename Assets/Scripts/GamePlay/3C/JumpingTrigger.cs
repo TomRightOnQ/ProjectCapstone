@@ -24,7 +24,7 @@ public class JumpingTrigger : MonoBehaviour
         {
             return;
         }
-        if (other.gameObject.tag == "Terrain")
+        if (other.gameObject.tag == "Terrain" || other.gameObject.tag == "Barrier")
         {
             playerController.ResetJumping();
         }
@@ -36,7 +36,7 @@ public class JumpingTrigger : MonoBehaviour
         {
             return;
         }
-        if (other.gameObject.tag == "Terrain")
+        if (other.gameObject.tag == "Terrain" || other.gameObject.tag == "Barrier")
         {
             playerController.LockJumping();
         }

@@ -57,6 +57,8 @@ public class CharacterManager : MonoBehaviour
         }
         UI_CharacterPicker.SetUpPanel(levelID);
         UIManager.Instance.ShowUI("UI_CharacterPicker");
+        // Show Player a reminder
+        ReminderManager.Instance.ShowSubtitleReminder(12);
     }
 
     // Hide character Picker

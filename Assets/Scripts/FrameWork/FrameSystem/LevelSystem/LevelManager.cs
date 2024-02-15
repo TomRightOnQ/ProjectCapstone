@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour
 
     // Current 2D Level Info
     private Level2DData.Level2DDataStruct current2DLevel;
+    public Level2DData.Level2DDataStruct Current2DLevel => current2DLevel;
 
     // 2D Scene Game ID
     [SerializeField, ReadOnly]
@@ -337,7 +338,7 @@ public class LevelManager : MonoBehaviour
                     ParallaxScrollingBG.Instance.transform.position.y, 
                     ParallaxScrollingBG.Instance.transform.position.z
                     );
-                ParallaxScrollingBG.Instance.transform.position = bgPosition;
+                ParallaxScrollingBG.Instance.SetUp(bgPosition);
             }
         }
         // Set Player to DataManager

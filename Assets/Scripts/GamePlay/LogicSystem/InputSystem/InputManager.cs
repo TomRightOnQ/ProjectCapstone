@@ -61,13 +61,13 @@ public class InputManager : MonoBehaviour
     }
 
     // Change Player Input mode to shooter
-    public void SetInputAsShooter()
+    public void SetInputAsShooter(bool bShooter = true)
     {
         if (playerController == null)
         {
             return;
         }
-        playerController.SetAsShooter();
+        playerController.SetAsShooter(bShooter);
     }
 
     // Lock Player input

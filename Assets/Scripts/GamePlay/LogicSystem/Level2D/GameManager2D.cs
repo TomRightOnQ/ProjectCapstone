@@ -198,13 +198,18 @@ public class GameManager2D : MonoBehaviour
         BattleObserver.Instance.EndGame();
         HUDManager.Instance.EndHUDTimer();
         InputManager.Instance.LockInput();
-        CharacterManager.Instance.LockCharacter2D(characterID, gameMode);
         PersistentGameManager.Instance.PauseGame();
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_2DGAME_END);
         HUDManager.Instance.HideAllHUD();
         // Config Score and notify the UI System
         processGameScore();
         UI_Level2D.SetLevelCompletePanel(true, bVictory);
+
+        // Lock character if the level required
+        if (LevelManager.Instance.Current2DLevel.bLockCharacter)
+        {
+            CharacterManager.Instance.LockCharacter2D(characterID, gameMode);
+        }
     }
 
     // Leave the game Scene
