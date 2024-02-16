@@ -9758,6 +9758,7 @@ GameObject:
   - component: {fileID: 7748342555381060184}
   - component: {fileID: 8850575767965197912}
   - component: {fileID: 1534593993483746552}
+  - component: {fileID: -4849631768204312211}
   m_Layer: 12
   m_Name: Player2D_2
   m_TagString: Player
@@ -9983,6 +9984,9 @@ MonoBehaviour:
   bCanTakeDamage: 0
   healCD: 0
   bCanTakeHeal: 0
+  playerSkill: {fileID: -4849631768204312211}
+  skillCD: 8
+  bSkillReady: 1
   projectileName: 
 --- !u!114 &1534593993483746552
 MonoBehaviour:
@@ -10017,6 +10021,21 @@ MonoBehaviour:
   minRange: 1
   maxRange: 30
   targetTransform: {fileID: 0}
+--- !u!114 &-4849631768204312211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703874159462560942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1507453a4fb45945b6f54154503ce0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillDamage: 1
+  childProjectileName: SummonedVine
+  projectileID: 8
 --- !u!1 &7015167787066067052
 GameObject:
   m_ObjectHideFlags: 0

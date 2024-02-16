@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
@@ -11,6 +10,13 @@ public class UI_ShooterLevel : UIBase
     // Text fields
     [SerializeField] private TextMeshProUGUI TB_Timer;
     [SerializeField] private TextMeshProUGUI TB_CurrentScore;
+
+    // Skill CD Wheel
+    [SerializeField] private GameObject P_SkillCD;
+    [SerializeField] private Slider S_CDWheel;
+
+    // Animator
+    [SerializeField] private Animator animator;
 
     // Public:
     // Init
@@ -42,5 +48,21 @@ public class UI_ShooterLevel : UIBase
     public void UpdateScore(int time)
     {
         TB_CurrentScore.text = time.ToString();
+    }
+
+    // Show/Hide Skill CD
+    public void SetSkillCDSlider(bool bShow)
+    {
+        P_SkillCD.SetActive(bShow);
+    }
+
+    // Set SliderCD
+    public void UpdateSkillCD(float currentCD, float maxCD)
+    {
+        S_CDWheel.value = currentCD / maxCD;
+        if (currentCD >= maxCD)
+        {
+            animator.Play("SkillCDReady");
+        }
     }
 }

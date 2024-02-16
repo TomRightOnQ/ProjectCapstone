@@ -42,4 +42,14 @@ public class BattleObserver : ScriptableSingleton<BattleObserver>
             EventManager.Instance.PostEvent(GameEvent.Event.PLAYER_DEATH);
         }
     }
+
+    // Player SkillCD
+    public void OnPlayerSkillCDChanged(float currentCD, float maxCD)
+    {
+        // Update the CD to HUD
+        if (ShooterLevelManager.Instance != null)
+        {
+            ShooterLevelManager.Instance.UpdateSkillCD(currentCD, maxCD);
+        }
+    }
 }

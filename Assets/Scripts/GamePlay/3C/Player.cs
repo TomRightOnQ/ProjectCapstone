@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Player Object
@@ -25,6 +27,12 @@ public class Player : EUnit
     private float healCD = 0f;
     [SerializeField] private bool bCanTakeHeal = false;
 
+    // Skill Component
+    [SerializeField] private PlayerSkillBase playerSkill;
+    // SkillCD
+    [SerializeField] private float skillCD = 1f;
+    [SerializeField] private bool bSkillReady = true;
+
     // Position to move the background
     private Vector3 originalPosition;
 
@@ -41,13 +49,17 @@ public class Player : EUnit
         PlayerController playerController = this.gameObject.GetComponent<PlayerController>();
         if (playerController == null) 
         {
-            this.gameObject.AddComponent<PlayerController>();
+            gameObject.AddComponent<PlayerController>();
         }
         if (projectileID > 0)
         {
             projectileName = ProjectileData.GetData(projectileID).Name;
         }
         originalPosition = transform.position;
+        if (playerSkill == null)
+        {
+            playerSkill = GetComponent<PlayerSkillBase>();
+        }
     }
 
     // Private:
@@ -92,7 +104,7 @@ public class Player : EUnit
         // Use this total offset for the parallax effect
         if (ParallaxScrollingBG.Instance != null)
         {
-            ParallaxScrollingBG.Instance.moveBackground(totalOffsetX, totalOffsetY);
+            ParallaxScrollingBG.Instance.MoveBackground(totalOffsetX, totalOffsetY);
         }
     }
 
@@ -163,6 +175,38 @@ public class Player : EUnit
         {
             Debug.LogWarning("Player: Unable to find projectile component");
         }
+    }
+
+    // Use Skill
+    public void UseSkill()
+    {
+        if (!bSkillReady)
+        {
+            return;
+        }
+        bSkillReady = false;
+
+        if (playerSkill != null)
+        {
+            playerSkill.SkillBegin();
+        }
+
+        // Clear CD
+        BattleObserver.Instance.OnPlayerSkillCDChanged(0, skillCD);
+        // StartCD
+        StartCoroutine(skillCoolDown());
+    }
+
+    private IEnumerator skillCoolDown()
+    {
+        float currentTime = 0;
+        while (currentTime <= skillCD)
+        {
+            yield return new WaitForSeconds(0.1f);
+            currentTime += 0.1f;
+            BattleObserver.Instance.OnPlayerSkillCDChanged(currentTime, skillCD);
+        }
+        bSkillReady = true;
     }
 
     // Terminate the player

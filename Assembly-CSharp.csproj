@@ -595,6 +595,7 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Transform\GetUpVector.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Input\StyleScale.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Light\GetShadowBias.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Level2D\Object2D\Projectile\ClevProjParent.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Tabs\TabButton.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\ListViewItem.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\IO\FileListViewComponentBase.cs" />
@@ -603,6 +604,7 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Input\GetAxisRaw.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Switch\SwitchMarkOffColor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Accordion\AccordionHighlightActiveBackgroundColor.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C\Skills\Skill_2.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Actions\StopBehaviorTree.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Decorators\ReturnFailure.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\TargetsWrapper.cs" />
@@ -1237,6 +1239,7 @@
     <Compile Include="Assets\Sprite Shaders Ultimate\Demo\Scripts\Demo_GUI.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Text\ITextProxy.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Transform\Translate.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Level2D\Object2D\Projectile\SummonedVine.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\ListViewGeneratorHelper.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\ListViewEnum\ListViewEnum.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\SelectableHelper\SelectableHelperSprite.cs" />
@@ -1356,6 +1359,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\ListViewIcons\ListViewIconsItemComponent.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\CharacterController\GetRadius.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Wrappers\InputField\TMProInputFieldCaretColor.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Level2D\Object2D\Projectile\ClevProjChild.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\InputField\InputFieldProxy.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Wrappers\Wrapper{TValue}.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Timeline\TrackBackground.cs" />
@@ -1439,6 +1443,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\Cursor\Cursors.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Dialog\Picker{TValue,TPicker}.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CenteredSlider\CenteredSliderBase.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C\Skills\Skill_1.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Calendar\Events\TimeEvent.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Input\StyleScroller.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Cursor\CursorsDPISelector.cs" />
@@ -1661,6 +1666,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ScrollRectUtilities\Enums\PaginatorDirection.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\SliderScale\ScaleMarkTemplate.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Animation\IsPlaying.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C\PlayerSkillBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CenteredSlider\CenteredSliderVertical.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Variables\SharedString.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Conditionals\Physics\HasEnteredTrigger2D.cs" />

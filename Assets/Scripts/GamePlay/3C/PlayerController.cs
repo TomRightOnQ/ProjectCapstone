@@ -96,6 +96,8 @@ public class PlayerController : MonoBehaviour
         {
             playerControls.Player.Jump.started += jump;
             playerControls.Player.Dash.performed += dash;
+
+            playerControls.Player.Skill.started += skill;
         }
 
         skeletonAnimation = GetComponentInChildren<SkeletonAnimation>();
@@ -316,6 +318,21 @@ public class PlayerController : MonoBehaviour
         playerRigidBody.AddForce(new Vector3(dashRatio * dashDirectionX, 0f, 0f));
         bDash = true;
         Invoke("stopDash", Constants.DASH_CD_PLAYER);
+    }
+
+    private void skill(InputAction.CallbackContext context)
+    {
+        if (bMovementLocked || !bShooter)
+        {
+            return;
+        }
+        if (PersistentGameManager.Instance.bGamePaused || bWorld)
+        {
+            return;
+        }
+
+        // Skill
+        player.UseSkill();
     }
 
     private void stopDash()

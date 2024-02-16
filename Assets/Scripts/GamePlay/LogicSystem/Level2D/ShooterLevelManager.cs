@@ -120,4 +120,23 @@ public class ShooterLevelManager : MonoBehaviour
         ui_ShooterLevel.UpdateScore(currentScore);
         GameManager2D.Instance.UpdatePlayerScore(currentScore);
     }
+
+    // Show/Hide Skill CD
+    public void SetSkillCDSlider(bool bShow)
+    {
+        if (ui_ShooterLevel != false)
+        {
+            ui_ShooterLevel.SetSkillCDSlider(bShow);
+        }
+    }
+
+
+    // Update skill CD
+    public void UpdateSkillCD(float currentCD, float maxCD)
+    {
+        if (ui_ShooterLevel != false)
+        {
+            ui_ShooterLevel.UpdateSkillCD(currentCD, maxCD);
+        }
+    }
 }

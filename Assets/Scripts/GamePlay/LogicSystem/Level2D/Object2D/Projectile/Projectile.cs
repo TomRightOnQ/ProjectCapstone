@@ -18,6 +18,8 @@ public class Projectile : MEntity
     // Effects
     [SerializeField] protected string explodeVFXName = "None";
     [SerializeField] protected string launchSFXName = "None";
+    [SerializeField] protected string explodeSFXName = "None";
+
     // RigidBody
     [SerializeField] protected Rigidbody projRigidBody;
 
@@ -127,7 +129,7 @@ public class Projectile : MEntity
         }
     }
 
-    protected void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Target")
         {
@@ -155,7 +157,7 @@ public class Projectile : MEntity
         }
     }
 
-    protected void explode()
+    protected virtual void explode()
     {
         CancelInvoke("explode");
         if (bExploded)
@@ -164,6 +166,7 @@ public class Projectile : MEntity
         }
 
         bExploded = true;
+        GameEffectManager.Instance.PlaySound(explodeSFXName, transform.position);
         if (explodeVFXName != "None")
         {
             GameEffectManager.Instance.PlayVFX(explodeVFXName, 
@@ -187,7 +190,6 @@ public class Projectile : MEntity
                 }
             }
         }
-
         deactivate();
     }
 

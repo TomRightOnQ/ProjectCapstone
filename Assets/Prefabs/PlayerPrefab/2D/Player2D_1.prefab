@@ -10044,6 +10044,7 @@ GameObject:
   - component: {fileID: 3800010328127456586}
   - component: {fileID: 3832694986499533238}
   - component: {fileID: 8365861725168036150}
+  - component: {fileID: 8935775046521630024}
   m_Layer: 12
   m_Name: Player2D_1
   m_TagString: Player
@@ -10269,6 +10270,9 @@ MonoBehaviour:
   bCanTakeDamage: 0
   healCD: 0
   bCanTakeHeal: 0
+  playerSkill: {fileID: 8935775046521630024}
+  skillCD: 5
+  bSkillReady: 1
   projectileName: 
 --- !u!114 &8365861725168036150
 MonoBehaviour:
@@ -10303,6 +10307,21 @@ MonoBehaviour:
   minRange: 1
   maxRange: 30
   targetTransform: {fileID: 0}
+--- !u!114 &8935775046521630024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8526560582831464781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78327c8a5c492e349abeba311e07f213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillDamage: 1
+  childProjectileName: ClevProjParent
+  projectileID: 6
 --- !u!1001 &881807870556782298
 PrefabInstance:
   m_ObjectHideFlags: 0

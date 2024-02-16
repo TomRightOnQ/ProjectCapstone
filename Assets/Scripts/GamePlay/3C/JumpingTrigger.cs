@@ -30,6 +30,18 @@ public class JumpingTrigger : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (playerController == null)
+        {
+            return;
+        }
+        if (other.gameObject.tag == "Terrain" || other.gameObject.tag == "Barrier")
+        {
+            playerController.ResetJumping();
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (playerController == null)

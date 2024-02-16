@@ -53,7 +53,7 @@ public class ParallaxScrollingBG : MonoBehaviour
     }
 
     // Recv camera movement and move the background
-    public void moveBackground(float cameraOffsetX, float cameraOffsetY)
+    public void MoveBackground(float cameraOffsetX, float cameraOffsetY)
     {
         if (!bReady)
         {

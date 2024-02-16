@@ -31,6 +31,10 @@ public class GameEffectConfig<TClip> : ScriptableObject where TClip : Object
 
     public TClip GetClip(string name)
     {
+        if (name == "None")
+        {
+            return null;
+        }
         if (clipDictionary.TryGetValue(name, out TClip clip))
         {
             return clip;

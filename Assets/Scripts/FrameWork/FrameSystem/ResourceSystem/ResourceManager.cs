@@ -42,6 +42,10 @@ public class ResourceManager : MonoBehaviour
     // Load Text
     public TextAsset LoadText(string path = Constants.NOTES_SOURCE_PATH, string fileName = "None")
     {
+        if (fileName == "None")
+        {
+            return null;
+        }
         string resourcePath = Path.Combine(path, fileName);
         resourcePath = resourcePath.Replace(".txt", "");
 
@@ -61,6 +65,10 @@ public class ResourceManager : MonoBehaviour
     // Load Image
     public Sprite LoadImage(string path = Constants.IMAGES_SOURCE_PATH, string fileName = "None")
     {
+        if (fileName == "None")
+        {
+            return null;
+        }
         string resourcePath = Path.Combine(path, fileName);
         resourcePath = resourcePath.Replace(".png", "").Replace(".jpg", "");
 

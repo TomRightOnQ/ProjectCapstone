@@ -283,6 +283,36 @@ MonoBehaviour:
     bPoolByDefault: 0
     PrefabReference: {fileID: 706728078302446487, guid: 19b4e6d79ecb83e419e4566095c0f6d0,
       type: 3}
+  - name: ClevProjParent
+    PrefabPath: 
+    TypeName: ClevProjParent
+    Count: 3
+    IsExpandable: 1
+    ExpandableRatio: 0.2
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 2890956069258996942, guid: 07b323f67713e3945bb999fd55c62438,
+      type: 3}
+  - name: ClevProjChild
+    PrefabPath: 
+    TypeName: ClevProjChild
+    Count: 5
+    IsExpandable: 1
+    ExpandableRatio: 0.2
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 7778519193970565473, guid: e7adce4fe9d19f94690e231793593b0a,
+      type: 3}
+  - name: SummonedVine
+    PrefabPath: 
+    TypeName: SummonedVine
+    Count: 1
+    IsExpandable: 0
+    ExpandableRatio: 0.2
+    bPoolable: 1
+    bPoolByDefault: 0
+    PrefabReference: {fileID: 4967622932000249783, guid: e25967d2c5b71a3478c0876157471bca,
+      type: 3}
   - name: GravityTargetSmall
     PrefabPath: 
     TypeName: GravityTargetSmall

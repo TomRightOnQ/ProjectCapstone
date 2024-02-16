@@ -67,6 +67,10 @@ public class InputManager : MonoBehaviour
         {
             return;
         }
+        if (ShooterLevelManager.Instance != null)
+        {
+            ShooterLevelManager.Instance.SetSkillCDSlider(bShooter);
+        }
         playerController.SetAsShooter(bShooter);
     }
 
