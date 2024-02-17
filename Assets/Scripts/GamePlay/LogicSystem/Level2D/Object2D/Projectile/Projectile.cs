@@ -44,6 +44,9 @@ public class Projectile : MEntity
     // Missile:
     [SerializeField] protected float lockAngle = 60f;
 
+    // Animator
+    [SerializeField] protected Animator projAnimator;
+
     // Public:
     // SetUp the Projectile
     public void SetUp(int projID = 1, bool bPlayer = false)

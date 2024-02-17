@@ -10044,6 +10044,7 @@ GameObject:
   - component: {fileID: 2575676021937863614}
   - component: {fileID: 297871427543926176}
   - component: {fileID: 7280934449007673690}
+  - component: {fileID: 4221926270007895813}
   m_Layer: 12
   m_Name: Player2D_3
   m_TagString: Player
@@ -10269,6 +10270,7 @@ MonoBehaviour:
   bCanTakeDamage: 0
   healCD: 0
   bCanTakeHeal: 0
+  playerSkill: {fileID: 0}
   skillCD: 5
   bSkillReady: 1
   projectileName: 
@@ -10305,6 +10307,21 @@ MonoBehaviour:
   minRange: 1
   maxRange: 30
   targetTransform: {fileID: 0}
+--- !u!114 &4221926270007895813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140762676369609257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373fc799e66ba1b479a625b795ca5274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillDamage: 1
+  childProjectileName: SummonedLaser
+  projectileID: 9
 --- !u!1001 &6540353912573495408
 PrefabInstance:
   m_ObjectHideFlags: 0

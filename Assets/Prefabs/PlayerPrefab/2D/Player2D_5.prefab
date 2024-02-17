@@ -9960,6 +9960,7 @@ GameObject:
   - component: {fileID: 7030523852737994661}
   - component: {fileID: 8821615990446791323}
   - component: {fileID: 8468581209908526687}
+  - component: {fileID: 3471988595069664835}
   m_Layer: 12
   m_Name: Player2D_5
   m_TagString: Player
@@ -10185,6 +10186,7 @@ MonoBehaviour:
   bCanTakeDamage: 0
   healCD: 0
   bCanTakeHeal: 0
+  playerSkill: {fileID: 3471988595069664835}
   skillCD: 5
   bSkillReady: 1
   projectileName: 
@@ -10221,6 +10223,21 @@ MonoBehaviour:
   minRange: 1
   maxRange: 30
   targetTransform: {fileID: 0}
+--- !u!114 &3471988595069664835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033011811365081348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0ad5557249e1940ac022a26f1844c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillDamage: 1
+  childProjectileName: TimeSlowProj
+  projectileID: 10
 --- !u!1 &8015987319325423297
 GameObject:
   m_ObjectHideFlags: 0

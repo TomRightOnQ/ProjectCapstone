@@ -265,6 +265,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Layouts\TrackLayoutGroup.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\RangeSlider\Float\RangeSliderFloatValueMinProvider.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Animator\GetIntegerParameter.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C\Skills\Skill_5.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\CharacterController\HasColliderHit.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\ParticleSystem\IsAlive.cs" />
     <Compile Include="Assets\Scripts\Contents\General\ProjectileData.cs" />
@@ -371,6 +372,7 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\GameObject\CompareLayer.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Core\UIBehaviourConditional.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CircularSlider\Float\CircularSliderFloatValueSetter.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Level2D\Object2D\Projectile\TimeSlowProj.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\PlayerPrefs\HasKey.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Autocomplete\AutocompleteString.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Vector3\RotateTowards.cs" />
@@ -1333,6 +1335,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\SelectableHelper\SelectableHelperHighlightedSprite.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\LayoutUtilities.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ContextMenu\HotKeyCode.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Level2D\Object2D\Projectile\SummonedLaser.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\EasyLayout\EasyLayoutPosition.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Drag-and-Drop\ListViewCustomDragSupport.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TreeGraph\TreeGraphCustom.cs" />
@@ -1442,6 +1445,7 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\SharedVariables\SharedGameObjectToTransform.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Cursor\Cursors.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Dialog\Picker{TValue,TPicker}.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C\Skills\Skill_4.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CenteredSlider\CenteredSliderBase.cs" />
     <Compile Include="Assets\Scripts\GamePlay\3C\Skills\Skill_1.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Calendar\Events\TimeEvent.cs" />
@@ -1571,6 +1575,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\Switch\SwitchIsOnProvider.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Mobile\Swipe.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Dialogs\StyleSupportButtonClose.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\3C\Skills\Skill_3.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TreeView\TreeViewCustomToggleAnimation.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Renderer\SetMaterial.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Transform\SetLocalRotation.cs" />

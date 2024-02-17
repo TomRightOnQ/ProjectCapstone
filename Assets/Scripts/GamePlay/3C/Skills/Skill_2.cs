@@ -25,14 +25,14 @@ public class Skill_2 : PlayerSkillBase
         Vector3 SummonPosition;
         if (directionToCursor.x >= 0)
         {
-            SummonPosition = new Vector3(transform.position.x + 4, -25, 0);
+            SummonPosition = new Vector3(transform.position.x + 4, transform.position.y - 10, 0);
         }
         else
         {
-            SummonPosition = new Vector3(transform.position.x - 4, -25, 0);
+            SummonPosition = new Vector3(transform.position.x - 4, transform.position.y - 10, 0);
         }
 
-        // Spawn the skill parent projectile and launch
+        // Spawn the vine and launch
         GameObject projObj = PrefabManager.Instance.Instantiate(childProjectileName, SummonPosition, Quaternion.identity);
         Projectile projectile = projObj.GetComponent<Projectile>();
         if (projectile != null)

@@ -14,6 +14,9 @@ public class SummonedVine : Projectile
     // Distance - Set to 20 by default
     [SerializeField] private float moveDistance = 20f;
 
+    // Effect: Out Particle
+    [SerializeField] private ParticleSystem vineOutParticle;
+
     // Launch the Projectile
     public override void Launch(Vector3 launchDirection, Transform targetTransform)
     {
@@ -34,7 +37,7 @@ public class SummonedVine : Projectile
         transform.up = growthDirection;
         StartCoroutine(GrowVine(growthDirection, moveDistance));
         GameEffectManager.Instance.PlaySound(launchSFXName, transform.position);
-        Invoke("explode", projLife);
+        Invoke("explode", projLife - 0.5f);
     }
 
     private IEnumerator GrowVine(Vector3 direction, float targetLength)
@@ -93,6 +96,8 @@ public class SummonedVine : Projectile
     // No Damage from explosion
     protected override void explode()
     {
-        deactivate();
+        vineOutParticle.Play();
+        projAnimator.Play("SummonedVineOut");
+        Invoke("deactivate", 0.5f);
     }
 }

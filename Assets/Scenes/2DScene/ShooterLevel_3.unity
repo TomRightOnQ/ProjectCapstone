@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 7.8307333, g: 2.10767, b: 1.1467963, a: 1}
+  m_IndirectSpecularColor: {r: 7.799754, g: 2.0671875, b: 1.0542446, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -920,6 +920,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7697433485329209840, guid: 26d222d449a7e884ba9cd1b2154ede4c,
         type: 3}
+      propertyPath: m_Range
+      value: 1.1304984
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697433485329209840, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
       propertyPath: m_Intensity
       value: 23.227089
       objectReference: {fileID: 0}
@@ -928,10 +933,35 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7697433485329209840, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 11.673899
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697433485329209840, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0.5652492
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697433485329209840, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: m_Shadows.m_CullingMatrixOverride.e22
+      value: 1.9408085
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697433485329209840, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: m_Shadows.m_CullingMatrixOverride.e23
+      value: -1.194081
+      objectReference: {fileID: 0}
     - target: {fileID: 8088135086854344845, guid: 26d222d449a7e884ba9cd1b2154ede4c,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.238
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088135086854344845, guid: 26d222d449a7e884ba9cd1b2154ede4c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

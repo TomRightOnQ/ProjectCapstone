@@ -615,7 +615,7 @@ PrefabInstance:
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
       propertyPath: targetName
-      value: ClusterTarget
+      value: BossTrackingTargets
       objectReference: {fileID: 0}
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
@@ -1990,74 +1990,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 506121350}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &581756661
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.9663273
-      objectReference: {fileID: 0}
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.3812172
-      objectReference: {fileID: 0}
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.280802
-      objectReference: {fileID: 0}
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8016261259597999881, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8526560582831464781, guid: ab6aae81a1cda8949b69d7d1a02c94c9,
-        type: 3}
-      propertyPath: m_Name
-      value: Player2D_1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ab6aae81a1cda8949b69d7d1a02c94c9, type: 3}
 --- !u!1 &604697428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5719,7 +5651,7 @@ PrefabInstance:
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
       propertyPath: targetName
-      value: ClusterTarget
+      value: BossTrackingTargets
       objectReference: {fileID: 0}
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
@@ -7322,4 +7254,3 @@ SceneRoots:
   - {fileID: 1370564625}
   - {fileID: 1331140216}
   - {fileID: 849757829}
-  - {fileID: 581756661}

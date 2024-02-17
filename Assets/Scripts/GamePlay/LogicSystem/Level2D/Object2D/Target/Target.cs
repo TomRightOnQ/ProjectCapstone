@@ -13,6 +13,8 @@ public class Target : MEntity
 
     // State flags
     [SerializeField, ReadOnly] protected bool bExploded = true;
+    // Record the default gravitational feature
+    [SerializeField, ReadOnly] public bool bGravity; 
 
     // Effects
     [SerializeField] protected string explodeVFXName = "None";
@@ -35,6 +37,8 @@ public class Target : MEntity
     // Mesh Renderer
     [SerializeField] protected MeshRenderer targetRenderer;
 
+    public float TargetCurrentHP => targetCurrentHP;
+
     // Public:
     public virtual void SetUp()
     {
@@ -53,6 +57,8 @@ public class Target : MEntity
         }
         targetRenderer.material = instanceMaterial;
         revertMaterial();
+        targetRigidBody.velocity = Vector3.zero;
+        bGravity = targetRigidBody.useGravity;
     }
 
     // Launch the Target
