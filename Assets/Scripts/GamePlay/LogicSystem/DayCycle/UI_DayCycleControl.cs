@@ -89,6 +89,11 @@ public class UI_DayCycleControl : UIBase
                 guildList[i].Score.ToString(), 
                 guildList[i].DuelWin.ToString(), 
                 guildList[i].DuelLose.ToString());
+            // Highlight player team
+            if (guildList[i].GuildID == 0)
+            {
+                itemName = "<color=orange>" + itemName + "</color>";
+            }
             ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = i, Name = itemName };
             guildItems.Add(newItem);
         }

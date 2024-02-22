@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5adf8aafd7f0134caf3fc7c7c08a0ff, type: 3}
   m_Name: SaveConfig
   m_EditorClassIdentifier: 
-  bAllowRewrite: 0
+  bAllowRewrite: 1
   playerSaveData:
     PlayerName: You
-    Position: {x: 0, y: 0.6, z: 0}
-    Scene: GuildScene
+    Position: {x: -6, y: 7.2, z: -1}
+    Scene: AudienceLevel
   daySaveData:
     CurrentDay: 1
     bInited: 1
@@ -35,82 +35,82 @@ MonoBehaviour:
     bActive: 1
   guildSaveDataList:
   - GuildID: 0
-    Score: 10109
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 1
-    Score: 441
+    Score: 10172
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 2
-    Score: 1890
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 3
-    Score: 1260
+    Score: 1980
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 4
-    Score: 1575
+    Score: 1650
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
-  - GuildID: 5
-    Score: 1008
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 6
-    Score: 1071
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 7
-    Score: 1134
+  - GuildID: 3
+    Score: 1320
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 8
-    Score: 1197
+    Score: 1254
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 7
+    Score: 1188
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 6
+    Score: 1122
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 5
+    Score: 1056
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 9
-    Score: 756
+    Score: 792
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 10
-    Score: 630
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 11
-    Score: 378
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 12
-    Score: 441
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 13
-    Score: 315
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 14
-    Score: 441
+    Score: 660
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 15
-    Score: 504
+    Score: 528
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 1
+    Score: 462
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 12
+    Score: 462
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 14
+    Score: 462
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 11
+    Score: 396
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 13
+    Score: 330
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
@@ -122,5 +122,5 @@ MonoBehaviour:
   completeTaskList: e8030000
   lockedMapList: []
   bTeleportLocked: 0
-  menuModuleLockList: 010101010100
+  menuModuleLockList: 000101010101
   currentGameTime: 23

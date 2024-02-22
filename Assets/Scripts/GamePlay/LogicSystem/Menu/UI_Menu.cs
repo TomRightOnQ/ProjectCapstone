@@ -72,7 +72,7 @@ public class UI_Menu : UIBase
     // Set the current day
     public void SetCurrentDayText(int currentDay)
     {
-        tb_DayText.text = "Day: " + currentDay.ToString();
+        tb_DayText.text = "DAY: " + currentDay.ToString();
     }
 
     void PauseGame()

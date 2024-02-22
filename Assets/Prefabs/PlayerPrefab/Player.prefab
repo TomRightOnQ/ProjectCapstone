@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 543877054150755387}
   - component: {fileID: 6126956499534643397}
-  - component: {fileID: 3364547157219426682}
   - component: {fileID: -5983067009283729175}
   - component: {fileID: 1455064361429526498}
   m_Layer: 12
@@ -35,6 +34,7 @@ Transform:
   m_Children:
   - {fileID: 7849651461596631001}
   - {fileID: 4101060602244488130}
+  - {fileID: 3041131826357000709}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6126956499534643397
@@ -64,29 +64,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!136 &3364547157219426682
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543877054150755391}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Height: 0.998
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.006404057, z: 0}
 --- !u!114 &-5983067009283729175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +79,7 @@ MonoBehaviour:
   uuid: 0
   objectName: 
   interactionTrigger: {fileID: 0}
+  bubble: {fileID: 0}
   unitRigidBody: {fileID: 6126956499534643397}
   maxHP: 0
   currentHP: 0
@@ -110,11 +88,20 @@ MonoBehaviour:
   speedBase: 15
   speedModifier: 1
   speedAccel: 18
+  damageParticle: {fileID: 0}
+  healParticle: {fileID: 0}
   playerController: {fileID: 1455064361429526498}
   playerInteractionTrigger: {fileID: 6120743333076121837}
   projectileID: 1
   rateOfFire: 1
   bFireCDReady: 0
+  damageCD: 0
+  bCanTakeDamage: 0
+  healCD: 0
+  bCanTakeHeal: 0
+  playerSkill: {fileID: 0}
+  skillCD: 1
+  bSkillReady: 1
   projectileName: 
 --- !u!114 &1455064361429526498
 MonoBehaviour:
@@ -141,6 +128,7 @@ MonoBehaviour:
   bInputLocked: 0
   bMovementLocked: 0
   bShooter: 0
+  bAllDirectionMovement: 0
   fireLineSize: 0.2
   fireLineZ: 1.3
   aimAngle: 45
@@ -148,6 +136,61 @@ MonoBehaviour:
   minRange: 1
   maxRange: 30
   targetTransform: {fileID: 0}
+--- !u!1 &1568250056745110681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3041131826357000709}
+  - component: {fileID: 5873375299224014984}
+  m_Layer: 12
+  m_Name: PlayerCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3041131826357000709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568250056745110681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.313, z: 0}
+  m_LocalScale: {x: 1.3840625, y: 0.325, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543877054150755387}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &5873375299224014984
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568250056745110681}
+  m_Material: {fileID: 13400000, guid: 669c054c0b75ed14ca365b4c183f273a, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.10625762
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2064517867704711478
 GameObject:
   m_ObjectHideFlags: 0
