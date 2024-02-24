@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\GamePlay\LogicSystem\HUD\HUDManager.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\IO\IOExceptionsView.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Attributes\ExclusionRegistryAttribute.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\GameEnd\GameEndManager.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Table\TableHeaderCellInfo.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Rigidbody\SetPosition.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\SelectableHelper\SelectableHelperSelectedColor.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\Obsolete\ListViewComponentPoolObsolete.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\CollectionsUtilities\PoolEnumerator.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\SliderScale\CenteredSliderScale.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\GameEndData.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Dialogs\StyleSupportDialog.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ScrollRectUtilities\ListViewPaginator.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Accordion\AccordionHighlightActiveBackgroundSprite.cs" />
@@ -281,6 +283,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\Calendar\TimeBaseTimeSynchronizer.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Table\ResizableHeaderCell.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Fast\StyleFastScrollbar.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\GameEnd\P_Achievement.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\ParticleSystem\GetEnableEmission.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Progressbar\LoadingAnimation.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\InputField\InputFieldNull.cs" />
@@ -402,6 +405,7 @@
     <Compile Include="Assets\Scripts\Contents\General\StringConstData.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\FieldViews\ObjectFieldView{TValue}.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Input\StyleCalendar.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Menu\UI_MainMenu.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Utilities\ImageAdvanced.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\References\PrefabsTemplates.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ListView\ListViewInt\ListViewIntSelectedItemsObserver.cs" />
@@ -443,6 +447,7 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\SharedVariables\CompareSharedBool.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CircularSlider\Int\CircularSliderValueSynchronizer.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\TMProSupport\Scripts\Tabs\TabIconActiveButtonTMPro.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\GameEnd\Btn_GameEndInfo.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Composites\Sequence.cs" />
     <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Level2D\Boss\Boss.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Draggable\OnDragKeepSelected.cs" />
@@ -1291,6 +1296,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\SelectableHelper\SelectableHelperSelectedSprite.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Rigidbody2D\SetAngularDrag.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\CenteredSlider\Horizontal\CenteredSliderStepSetter.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\GameEnd\UI_GameEnd.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Editor.Conditions\EditorConditionEnumAttribute.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Unity\StyleSupportToggle.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\Attributes\GeneratorAutocompleteAttribute.cs" />
@@ -1363,6 +1369,7 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\CharacterController\GetRadius.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Wrappers\InputField\TMProInputFieldCaretColor.cs" />
     <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Level2D\Object2D\Projectile\ClevProjChild.cs" />
+    <Compile Include="Assets\Scripts\Contents\General\AchievementData.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\InputField\InputFieldProxy.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Scripts\Wrappers\Wrapper{TValue}.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Timeline\TrackBackground.cs" />
@@ -1736,6 +1743,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\IO\DrivesListViewComponent.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Transform\GetRotation.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\Progressbar\ProgressbarMaxSetter.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\GameEnd\UI_GameAch.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Sidebar\SlideBlockHandle.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Composites\RandomSequence.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Notify\NotificationBase.cs" />

@@ -10,15 +10,10 @@ public class UI_DayCycleControl : UIBase
     [SerializeField] private Button btn_NextDay;
 
     // Panels
-    [SerializeField] private GameObject p_FlashBackPanel;
+    [SerializeField] private GameObject p_GuildRankingPanel;
 
     // Texts
     [SerializeField] private TextMeshProUGUI tb_Day_Text;
-
-    // Day ListVIew
-    [SerializeField] private ListViewIcons dayList;
-    [SerializeField] private GameObject viewPort;
-    private ObservableList<ListViewIconsItemDescription> dayItems = new ObservableList<ListViewIconsItemDescription>();
 
     // LeaderBoard LiseView
     [SerializeField] private ListViewIcons guildList;
@@ -31,7 +26,6 @@ public class UI_DayCycleControl : UIBase
 
     private void Awake()
     {
-        dayList.DataSource = dayItems;
         guildList.DataSource = guildItems;
         CloseDayPanel();
     }
@@ -40,7 +34,7 @@ public class UI_DayCycleControl : UIBase
     // Show list of flashback
     public void ShowDayPanel()
     {
-        p_FlashBackPanel.SetActive(true);
+        p_GuildRankingPanel.SetActive(true);
         tb_Day_Text.text = "DAY: " + DayCycleManager.Instance.CurrentDay.ToString();
         initList();
     }
@@ -49,9 +43,8 @@ public class UI_DayCycleControl : UIBase
     public void CloseDayPanel()
     {
         // Clear items
-        dayItems.Clear();
         guildItems.Clear();
-        p_FlashBackPanel.SetActive(false);
+        p_GuildRankingPanel.SetActive(false);
         PersistentGameManager.Instance.ResumeGame();
     }
 
@@ -71,31 +64,43 @@ public class UI_DayCycleControl : UIBase
     // Populate the list
     private void initList()
     {
-        int maxDay = SaveManager.Instance.GetCurrentDay();
-        // Add unlocked days to list
-        for (int i = 1; i < maxDay + 1; i++)
-        {
-            ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = i, Name = "Day " + i.ToString() };
-            dayItems.Add(newItem);
-        }
-
         // Fill leaderboard list
         List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
         guildList.Sort((x, y) => y.Score.CompareTo(x.Score));
-        for (int i = 0; i < guildList.Count; i++)
+
+        int remainTeam = DayData.GetData(DayCycleManager.Instance.CurrentDay).RemainTeam;
+        int eliminatedTeam = 16 - remainTeam;
+
+        int rankingNumber = 1;
+
+        for (int i = 0; i < 16; i++)
         {
-            string itemName = string.Format(" <mspace=0.65em>{0,-13}{1,3}  {2,3}/{3,-3}", 
+            // Do not show the eliminated teams
+            int currentGuildID = guildList[i].GuildID;
+
+            if (SaveManager.Instance.CheckGuildEliminated(currentGuildID))
+            {
+                continue;
+            }
+
+            string itemName = string.Format(" <mspace=0.65em>{0,-4}{1,-13}{2,3}",
+                rankingNumber.ToString(),
                 GuildInfoData.GetData(guildList[i].GuildID).Name, 
-                guildList[i].Score.ToString(), 
-                guildList[i].DuelWin.ToString(), 
-                guildList[i].DuelLose.ToString());
+                guildList[i].Score.ToString());
             // Highlight player team
             if (guildList[i].GuildID == 0)
             {
                 itemName = "<color=orange>" + itemName + "</color>";
             }
+            // Highlight the team that are on the edge of elimination
+            if (i > 15 - eliminatedTeam)
+            {
+                itemName = "<color=red>" + itemName + "</color>";
+            }
+
             ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = i, Name = itemName };
             guildItems.Add(newItem);
+            rankingNumber += 1;
         }
     }
 
@@ -107,14 +112,6 @@ public class UI_DayCycleControl : UIBase
     }
 
     // List of days
-    public void OnClick_DayList(int index, ListViewItem item, PointerEventData eventData)
-    {
-        if (item != null)
-        {
-            flashBackTarget = dayItems[item.Index].Value;
-        }
-    }
-
     public void OnClick_ConfirmFlashBack()
     {
         DayCycleManager.Instance.JumpToDay(flashBackTarget);

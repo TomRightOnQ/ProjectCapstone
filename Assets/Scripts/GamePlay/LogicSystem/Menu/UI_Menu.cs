@@ -22,6 +22,12 @@ public class UI_Menu : UIBase
     [SerializeField]
     private List<Button> functionalButtonList = new List<Button>();
 
+    // Confirm Window
+    [SerializeField] private GameObject P_ConfirmWindow;
+    [SerializeField] private TextMeshProUGUI TB_Content;
+
+    // Assign different actions to the same confirm window
+    private System.Action confirmAction;
 
     // Open Menu
     public void OpenMenu()
@@ -98,16 +104,31 @@ public class UI_Menu : UIBase
         }
     }
 
+    // Event delegates
+    private void PerformFlashBack()
+    {
+        DayCycleManager.Instance.FlashBack();
+        CloseMenu();
+    }
+
+    private void QuitToMainMenu()
+    {
+        CloseMenu();
+        LevelManager.Instance.LoadScene(Constants.SCENE_MAIN_MENU);
+    }
+
     // OnClick Events:
     public void OnClick_Btn_Calender()
     {
-        MenuManager.Instance.CloseMenu();
+        DayCycleManager.Instance.ShowDayPanel();
+        MenuManager.Instance.CloseMenuNoResume();
     }
 
     public void OnClick_Btn_FlashBack()
     {
-        DayCycleManager.Instance.ShowDayPanel();
-        MenuManager.Instance.CloseMenuNoResume();
+        confirmAction = PerformFlashBack;
+        TB_Content.text = StringConstData.GetData(4).Content;
+        P_ConfirmWindow.SetActive(true);
     }
 
     public void OnClick_Btn_Notes()
@@ -139,7 +160,21 @@ public class UI_Menu : UIBase
 
     public void OnClick_Btn_MainMenu()
     {
-        LevelManager.Instance.LoadScene(Constants.SCENE_MAIN_MENU);
+        confirmAction = QuitToMainMenu;
+        TB_Content.text = StringConstData.GetData(6).Content;
+        P_ConfirmWindow.SetActive(true);
+    }
+
+    public void OnClick_Btn_Achievements()
+    {
+        MenuManager.Instance.CloseMenuNoResume();
+        GameEndManager.Instance.ShowGameAchievementPage();
+    }
+
+    public void OnClick_Btn_ConfirmWindow()
+    {
+        MenuManager.Instance.CloseMenu();
+        confirmAction?.Invoke();
     }
 
     // Private:

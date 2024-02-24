@@ -207,6 +207,22 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.GetDay().bInited = bInited;
     }
 
+    /// <summary>
+    /// Guild Methods
+    /// </summary>
+    // This method will bypass eliminated teams!
+    public void AddScoreToGuild(int targetID, int score)
+    {
+        List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
+        for (int i = 0; i < guildList.Count; i++)
+        {
+            if (targetID == guildList[i].GuildID && !guildList[i].bElminated)
+            {
+                guildList[i].Score += score;
+            }
+        }
+    }
+
     public void SaveGuildData(int targetID, int score, int win, int lose, bool bElminated)
     {
         List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
@@ -241,6 +257,23 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    // Check if a team is eliminated
+    public bool CheckGuildEliminated(int guildID)
+    {
+        List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
+        for (int i = 0; i < guildList.Count; i++)
+        {
+            if (guildID == guildList[i].GuildID)
+            {
+                return guildList[i].bElminated;
+            }
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// Player Info
+    /// </summary>
     // Get Player Info
     public SaveConfig.PlayerSaveData GetPlayer()
     {
@@ -455,6 +488,30 @@ public class SaveManager : MonoBehaviour
     public GameEvent.Event GetGameTimeFromSave()
     {
         return SaveConfig.Instance.CurrentGameTime;
+    }
+
+    /// <summary>
+    /// Game Ends and Game Achievements
+    /// </summary>
+    // Modify or get current unlocked game ends and achievements
+    public void UnlockGameEnds(int gameEndID)
+    {
+        CoreSaveConfig.Instance.UnlockGameEnds(gameEndID);
+    }
+
+    public void UnlockGameAch(int gameAchID)
+    {
+        CoreSaveConfig.Instance.UnlockGameAch(gameAchID);
+    }
+
+    public bool CheckGameEndUnlocked(int gameEndID)
+    {
+        return CoreSaveConfig.Instance.GameEndUnlockList.Contains(gameEndID);
+    }
+
+    public bool CheckGameAchUnlocked(int gameAchID)
+    {
+        return CoreSaveConfig.Instance.AchUnlockList.Contains(gameAchID);
     }
 
     // Private:

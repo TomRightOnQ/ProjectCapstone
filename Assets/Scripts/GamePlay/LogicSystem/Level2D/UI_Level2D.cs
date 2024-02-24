@@ -97,12 +97,21 @@ public class UI_Level2D : UIBase
         // Fill leaderboard list
         List<(int, int)> guildList = GameManager2D.Instance.GameResult;
         List<SaveConfig.GuildSaveData> guildData = SaveConfig.Instance.GuildSaveDataList;
+
+        int rankingNumber = 1;
+
         for (int i = 0; i < guildList.Count; i++)
         {
+            // Do not show the eliminated teams
             int currentGuildID = guildList[i].Item1;
+
+            if (SaveManager.Instance.CheckGuildEliminated(currentGuildID))
+            {
+                continue;
+            }
             string currentGuildName = GuildInfoData.GetData(currentGuildID).Name;
             string itemName = string.Format(" <mspace=0.65em>{0,-3}{1,-13} {2,3} {3,3}",
-                (i + 1).ToString(),
+                rankingNumber.ToString(),
                 currentGuildName,
                 "+" + guildList[i].Item2.ToString(),
                 guildData[guildList[i].Item1].Score.ToString()
@@ -114,6 +123,7 @@ public class UI_Level2D : UIBase
             }
             ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = i, Name = itemName };
             guildItems.Add(newItem);
+            rankingNumber += 1;
         }
     }
 

@@ -26,6 +26,12 @@ public class UI_Reminder : UIBase
     [SerializeField] private TextMeshProUGUI tb_WholeScreenText;
     [SerializeField] private Animator wholeAnimator;
 
+    // Achievements
+    [SerializeField] private GameObject p_AchievementReminder;
+    [SerializeField] private TextMeshProUGUI tb_AchievementName;
+    [SerializeField] private Image img_Icon;
+    [SerializeField] private Animator achievementAnimator;
+
     // Public:
     // Show General Reminder - from pooling system
     public void ShowGeneralReminder(int id)
@@ -144,5 +150,19 @@ public class UI_Reminder : UIBase
     public void DisableWholeScreenReminder()
     {
         p_WholeScreenReminder.SetActive(false);
+    }
+
+    // Show a new achievement
+    public void ShowAchievementReminder(int achID)
+    {
+        AchievementData.AchievementDataStruct achData = AchievementData.GetData(achID);
+        tb_AchievementName.text = achData.Name;
+        Sprite achIcon = ResourceManager.Instance.LoadImage(Constants.IMAGES_SOURCE_PATH, achData.Icon);
+        if (achIcon != null)
+        {
+            img_Icon.sprite = achIcon;
+        }
+        p_AchievementReminder.SetActive(true);
+        achievementAnimator.Play("AchievementReminder");
     }
 }

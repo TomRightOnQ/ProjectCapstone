@@ -12,7 +12,7 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
 {
     // Control flag
     [SerializeField] private bool bAllowRewrite = true;
-    public bool AllowRewrite { get { return bAllowRewrite; } }
+    public bool AllowRewrite { get { return bAllowRewrite; } set { bAllowRewrite = value; } }
 
     /// <summary>
     /// Datagrams

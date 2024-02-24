@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
 
     private Enums.SCENE_TYPE currentSceneType;
     public Enums.SCENE_TYPE CurrentSceneType => currentSceneType;
-    
+
     [SerializeField]
     private GameEvent.Event currentTime = GameEvent.Event.TIME_NOON;
     public GameEvent.Event CurrentTime => currentTime;
@@ -87,6 +87,13 @@ public class LevelManager : MonoBehaviour
         characterID = chosenCharacterID;
         groupID = current2DLevel.GroupID;
         LevelManager.Instance.LoadScene(current2DLevel.SceneName);
+    }
+
+    // Enter a new game via the main menu
+    public void CreateNewGame()
+    {
+        SaveConfig.Instance.AllowRewrite = true;
+        SaveManager.Instance.CreateNewSave();
     }
 
     // Enter game via the main menu

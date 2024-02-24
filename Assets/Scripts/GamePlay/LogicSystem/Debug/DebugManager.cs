@@ -86,6 +86,21 @@ public class DebugManager : MonoBehaviour
         ReminderManager.Instance.ShowWholeScreenReminder(2);
     }
 
+    public void ShowEnd()
+    {
+        GameEndManager.Instance.EndGame(1);
+    }
+
+    public void UnlockAch()
+    {
+        GameEndManager.Instance.UnlockAhievements(0);
+    }
+
+    public void UnlockNextDay()
+    {
+        DayCycleManager.Instance.UnlockNextDay();
+    }
+
     public void ChangePlayerMovementMethod()
     {
         InputManager.Instance.SetPlayerMovingAllDirection(true);

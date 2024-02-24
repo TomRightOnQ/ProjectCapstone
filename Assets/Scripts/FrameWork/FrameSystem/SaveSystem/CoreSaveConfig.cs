@@ -23,7 +23,6 @@ public class CoreSaveConfig : ScriptableSingleton<CoreSaveConfig>
     private List<int> hintUnlockList = new List<int>();
     public List<int> HintUnlockList => hintUnlockList;
 
-
     [System.Serializable]
     public class NoteData
     {
@@ -31,6 +30,17 @@ public class CoreSaveConfig : ScriptableSingleton<CoreSaveConfig>
         public List<int> ItemIDs = new List<int>();
         public List<int> ReportIDs = new List<int>();
     }
+
+    /// <summary>
+    /// Game Ends and Achievements
+    /// </summary>
+    [SerializeField]
+    private List<int> gameEndUnlockList = new List<int>();
+    public List<int> GameEndUnlockList => gameEndUnlockList;
+
+    [SerializeField]
+    private List<int> achUnlockList = new List<int>();
+    public List<int> AchUnlockList => achUnlockList;
 
     // DayCycle - Max Day
     [SerializeField]
@@ -145,6 +155,38 @@ public class CoreSaveConfig : ScriptableSingleton<CoreSaveConfig>
                 break;
             default:
                 break;
+        }
+    }
+
+    // Modify Unlocked Game Ends
+    // --Init-- Methods
+    public void InitUnlockGameEndsToSave()
+    {
+        gameEndUnlockList.Clear();
+    }
+
+    // Add a Game End
+    public void UnlockGameEnds(int gameEndID)
+    {
+        if (!gameEndUnlockList.Contains(gameEndID))
+        {
+            gameEndUnlockList.Add(gameEndID);
+        }
+    }
+
+    // Modify Unlocked Game Achievements
+    // --Init-- Methods
+    public void InitUnlockGameAchToSave()
+    {
+        achUnlockList.Clear();
+    }
+
+    // Add a Game Achievements
+    public void UnlockGameAch(int gameAchID)
+    {
+        if (!achUnlockList.Contains(gameAchID))
+        {
+            achUnlockList.Add(gameAchID);
         }
     }
 }

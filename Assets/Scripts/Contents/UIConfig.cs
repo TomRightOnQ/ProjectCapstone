@@ -32,7 +32,7 @@ public class UIConfig : ScriptableSingleton<UIConfig>
         }
         else
         {
-            Debug.LogError($"UI {name} not found.");
+            Debug.LogWarning($"UI {name} not found.");
             return default;
         }
     }

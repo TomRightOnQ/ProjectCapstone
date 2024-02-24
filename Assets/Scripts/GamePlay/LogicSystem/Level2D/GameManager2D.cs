@@ -81,7 +81,7 @@ public class GameManager2D : MonoBehaviour
         // Add score to the teams
         for (int i = 0; i < gameResult.Count; i ++)
         {
-            SaveManager.Instance.SaveGuildData(gameResult[i].TeamID, gameResult[i].Score, 0, 0, false);
+            SaveManager.Instance.AddScoreToGuild(gameResult[i].TeamID, gameResult[i].Score);
         }
     }
 

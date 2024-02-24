@@ -99,4 +99,14 @@ public class ReminderManager : MonoBehaviour
         }
         ui_Reminder.ShowWholeScreenReminder(reminderID);
     }
+
+    // Show a new achievement
+    public void ShowAchievementReminder(int achID)
+    {
+        if (ui_Reminder == null)
+        {
+            createUI();
+        }
+        ui_Reminder.ShowAchievementReminder(achID);
+    }
 }

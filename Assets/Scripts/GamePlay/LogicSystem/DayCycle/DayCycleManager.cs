@@ -54,13 +54,23 @@ public class DayCycleManager : MonoBehaviour
     // Unlock Next Day
     public void UnlockNextDay()
     {
-        ShowReport(currentDay);
-        if (ui_DayCycleControl != null && currentDay < 7)
+        // The the player might get eliminated, notify it
+        if (CheckPlayerEliminated())
+        {
+            ReminderManager.Instance.ShowSubtitleReminder(16);
+        }
+
+        // Enable Flash Back
+        SaveManager.Instance.SetModuleLock(false, 1);
+
+        if (ui_DayCycleControl != null)
         {
             // Write to save
             SaveManager.Instance.SaveMaxDay(currentDay);
             ui_DayCycleControl.ShowNextDayButton();
         }
+
+        SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
     }
 
     // Jump to the beginning of a specific day
@@ -117,20 +127,63 @@ public class DayCycleManager : MonoBehaviour
         LevelManager.Instance.LoadScene(targetScene);
     }
 
-    // Go to the next day
-    public void GoToNextDay()
+    // Flash to the previous day
+    public void GoToPreviousDay()
     {
-        if (currentDay < 7)
+        DayData.DayDataStruct dayData = DayData.GetData(currentDay);
+        if (dayData.PrevDayID != -1)
         {
-            ui_DayCycleControl.HideNextDayButton();
-            JumpToDay(currentDay + 1, false);
+            JumpToDay(dayData.PrevDayID, false);
         }
     }
 
-    // Show the daily report
-    public void ShowReport(int targetDay)
+    // Go to the next day
+    public void GoToNextDay()
     {
-        
+        DayData.DayDataStruct dayData = DayData.GetData(currentDay);
+        // -- If the player team is eliminated, trigger the ending --
+        if (CheckPlayerEliminated())
+        {
+            GameEndManager.Instance.EndGame(dayData.GameEnd);
+            return;
+        }
+
+        // Eliminate team if needed
+        List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
+        guildList.Sort((x, y) => y.Score.CompareTo(x.Score));
+        for (int i = dayData.RemainTeam; i < 16; i++)
+        {
+            guildList[i].bElminated = true;
+        }
+
+        if (dayData.NextDayID != -1)
+        {
+            ui_DayCycleControl.HideNextDayButton();
+            JumpToDay(dayData.NextDayID, false);
+        }
+    }
+
+    // Check if the player will be eliminated
+    public bool CheckPlayerEliminated()
+    {
+        DayData.DayDataStruct dayData = DayData.GetData(currentDay);
+        List<SaveConfig.GuildSaveData> guildList = SaveConfig.Instance.GuildSaveDataList;
+        guildList.Sort((x, y) => y.Score.CompareTo(x.Score));
+        for (int i = dayData.RemainTeam; i < 16; i++)
+        {
+            if (guildList[i].GuildID == 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Public method for clicking the FlashBack Button from the menu
+    public void FlashBack()
+    {
+        GoToPreviousDay();
+        SaveManager.Instance.SetModuleLock(true, 1);
     }
 
     // Config Task Actions According to the day
