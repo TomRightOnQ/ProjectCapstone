@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using BehaviorDesigner;
 
 /// <summary>
 /// Monster Group - Boss 2
@@ -10,9 +9,6 @@ public class Boss_2 : Boss
 {
     // Shield Object
     [SerializeField] private GameObject bossShield;
-
-    // Tree
-    [SerializeField] private BehaviorDesigner.Runtime.BehaviorTree aiTree;
 
     protected override void Awake()
     {

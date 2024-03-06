@@ -37,28 +37,9 @@ public class GameEffectManager : MonoBehaviour
         effect.SetUp(_name, pos);
     }
 
-    public void PlayEffect<T>(AudioClip clip, Vector3 pos) where T : Component, ISetup
-    {
-        T effect = Pooling.Instance.GetObj<T>();
-        if (effect == null)
-        {
-            Debug.LogWarning($"Effect Object for {typeof(T).Name} not found.");
-            return;
-        }
-        effect.SetUp(clip, pos);
-    }
-
     public void PlaySound(string _name, Vector3 pos)
     {
-        GameObject sfxObj = PrefabManager.Instance.Instantiate("SFXObject", pos, Quaternion.identity);
-        if (sfxObj == null || sfxObj.GetComponent<SFXObject>() == null)
-        {
-            Debug.LogWarning("Unable to accquire SFX from pooling");
-            return;
-        }
-        SFXObject sfx = sfxObj.GetComponent<SFXObject>();
-        sfx.SetUp(_name, pos);
-        sfxObj.SetActive(true);
+
     }
 
     public void PlayAnim(string _name, Vector3 pos, Vector3 scale)

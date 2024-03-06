@@ -36,7 +36,7 @@ public class SummonedVine : Projectile
         Vector3 growthDirection = angleToDirectionVector(convertBearingToUnityAngle(randomAngle));
         transform.up = growthDirection;
         StartCoroutine(GrowVine(growthDirection, moveDistance));
-        GameEffectManager.Instance.PlaySound(launchSFXName, transform.position);
+        playProjectileSound(launchSFXName);
         Invoke("explode", projLife - 0.5f);
     }
 

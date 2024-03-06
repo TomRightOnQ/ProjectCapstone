@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -726,6 +726,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb3ec2fee0cd994397235874541df57, type: 3}
+--- !u!1 &952025353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6584082587829654210, guid: 2eb3ec2fee0cd994397235874541df57,
+    type: 3}
+  m_PrefabInstance: {fileID: 952025352}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1189963989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2589,7 +2595,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5710726259183170088}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &5710726259183170088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2603,6 +2609,7 @@ GameObject:
   - component: {fileID: 5710726259183170087}
   - component: {fileID: 5710726259183170084}
   - component: {fileID: 5710726259183170089}
+  - component: {fileID: 5710726259183170090}
   m_Layer: 0
   m_Name: MainMenuCamera
   m_TagString: MainCamera
@@ -2626,6 +2633,19 @@ MonoBehaviour:
   rotationSpeed: 2
   minRotationAngleY: 8
   maxRotationAngleY: 36
+--- !u!114 &5710726259183170090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5710726259183170088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 952025353}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

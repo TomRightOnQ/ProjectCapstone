@@ -75,6 +75,12 @@ public class DebugManager : MonoBehaviour
         onClick();
     }
 
+    public void EnterControlRoom()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_CONTROL_LEVEL);
+        onClick();
+    }
+
     public void EnterShooter(int id = 4)
     {
         CharacterManager.Instance.ShowCharacterPickerPanel(id);

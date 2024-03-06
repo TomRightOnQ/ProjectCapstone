@@ -87,12 +87,10 @@
     <Compile Include="Assets\New UI Widgets\Editor\ListView\TreeListEditorWindow.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ProgressbarEditor.cs" />
     <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\ShaderHintSSU.cs" />
-    <Compile Include="Assets\Behavior Designer\Editor\ExternalBehaviorTreeInspector.cs" />
     <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Interactive\Editor\WindManagerSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Editor.Conditions\EditorConditionalUVEffect.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Styles\StyleImagePropertyDrawer.cs" />
     <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\ShaderFaderSSUEditor.cs" />
-    <Compile Include="Assets\Behavior Designer\Editor\Object Drawers\StackedActionDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\SpinnerFloatEditor.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\Theme\ThemeWarningBlockView.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Unity\ScriptsRecompile.cs" />
@@ -142,7 +140,6 @@
     <Compile Include="Assets\New UI Widgets\Editor\SnapGridDrawerEditor.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\Unity\ScriptingDefineSymbols.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ListView\ListViewEditor.cs" />
-    <Compile Include="Assets\Behavior Designer\Editor\BehaviorTreeInspector.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\WidgetsGeneration\PrefabGenerator.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\ThemeTarget\ThemeTargetInfo.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Editor.Conditions\EditorConditionalMono.cs" />
@@ -153,12 +150,10 @@
     <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\SpriteSheetSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\TabIconButtonEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\TableHeaderEditor.cs" />
-    <Compile Include="Assets\Behavior Designer\Editor\Object Drawers\StackedConditionalDrawer.cs" />
     <Compile Include="Assets\Sprite Shaders Ultimate\Scripts\Editor\MaterialInstancerSSUEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ColorHSVPropertyDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ResizableHeaderEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Unity\MenuOptions.cs" />
-    <Compile Include="Assets\Behavior Designer\Editor\Object Drawers\FloatSliderDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Styles\StyleTextPropertyDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\DragSupportEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Styles\StyleSelectablePropertyDrawer.cs" />
@@ -166,7 +161,6 @@
     <Compile Include="Assets\New UI Widgets\Editor\UIWidgetsMonoEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\TooltipEditor.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\WidgetsGeneration\OverwriteRequestWindow.cs" />
-    <Compile Include="Assets\Behavior Designer\Editor\Object Drawers\IntSliderDrawer.cs" />
     <Compile Include="Assets\New UI Widgets\UI Themes\Editor\ReferencesGUIDs.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\Editor.Conditions\EditorConditional.cs" />
     <Compile Include="Assets\New UI Widgets\Editor\ListView\ListViewIconsEditor.cs" />
@@ -216,8 +210,6 @@
     <None Include="Assets\New UI Widgets\Editor\WidgetsGeneration\Templates\CollectionsSupport\TreeViewDropSupport.template.txt" />
     <None Include="Assets\New UI Widgets\UI Themes\Editor\Templates\asmdef.txt" />
     <None Include="Assets\New UI Widgets\Editor\WidgetsGeneration\Templates\Dialogs\PickerListView.template.txt" />
-    <None Include="Assets\Behavior Designer\Editor\BehaviorDesigner.Editor.dll" />
-    <None Include="Assets\Behavior Designer\Editor\GridShader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -628,20 +620,12 @@
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="BehaviorDesigner.Runtime">
-      <HintPath>Assets\Behavior Designer\Runtime\BehaviorDesigner.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="BehaviorDesigner.Editor">
-      <HintPath>Assets\Behavior Designer\Editor\BehaviorDesigner.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib">
@@ -1236,12 +1220,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Collections">
       <HintPath>Library\ScriptAssemblies\Unity.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.001">
+      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
@@ -1413,6 +1397,22 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{4EA18785-2C43-CCF8-6705-26F671EC58C8}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnityResonance.csproj">
+      <Project>{2B28AEFC-1E04-C7B6-D4DB-279115B20707}</Project>
+      <Name>FMODUnityResonance</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnityEditor.csproj">
+      <Project>{2CD69B3D-6AE6-30C2-AF43-5BEB96558AD1}</Project>
+      <Name>FMODUnityEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnityResonanceEditor.csproj">
+      <Project>{8B9940DC-5B3E-FEAB-A442-56F5D0E7A9A8}</Project>
+      <Name>FMODUnityResonanceEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMODUnity.csproj">
+      <Project>{2D3B10FC-D1EE-75FD-CFBF-45DA033A4C95}</Project>
+      <Name>FMODUnity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

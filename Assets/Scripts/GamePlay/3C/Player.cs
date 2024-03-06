@@ -39,6 +39,9 @@ public class Player : EUnit
     [SerializeField, ReadOnly]
     private string projectileName;
 
+    // Audio Component
+    [SerializeField] private PlayerAudio playerAudio;
+
     public int ProjectileID => projectileID;
     public float RateOfFire => rateOfFire;
 
@@ -59,6 +62,10 @@ public class Player : EUnit
         if (playerSkill == null)
         {
             playerSkill = GetComponent<PlayerSkillBase>();
+        }
+        if (playerAudio == null)
+        {
+            playerAudio = GetComponent<PlayerAudio>();
         }
     }
 
@@ -132,7 +139,7 @@ public class Player : EUnit
         }
 
         checkCurrentHealth();
-        GameEffectManager.Instance.PlaySound("DMG_1", transform.position);
+        playerAudio.PlayerHit();
     }
 
     // Take Heal

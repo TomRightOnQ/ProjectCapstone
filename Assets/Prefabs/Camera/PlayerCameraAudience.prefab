@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6988797645420320389}
   - component: {fileID: 6988797645420320390}
-  - component: {fileID: 6988797645420320391}
   - component: {fileID: 6988797645420320388}
   - component: {fileID: 6988797645420320387}
+  - component: {fileID: 5218449939579941756}
   m_Layer: 0
   m_Name: PlayerCameraAudience
   m_TagString: MainCamera
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6988797645420320392}
+  serializedVersion: 2
   m_LocalRotation: {x: 0.19509031, y: 0, z: 0, w: 0.98078537}
   m_LocalPosition: {x: 0, y: 5.6, z: 10.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 22.5, y: 0, z: 0}
 --- !u!20 &6988797645420320390
 Camera:
@@ -49,9 +49,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 30.620394
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 30.620394
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -78,14 +86,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6988797645420320391
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6988797645420320392}
-  m_Enabled: 1
 --- !u!114 &6988797645420320388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +111,8 @@ MonoBehaviour:
   stopNaNs: 0
   taaSharpenStrength: 0.5
   TAAQuality: 1
+  taaSharpenMode: 0
+  taaRingingReduction: 0
   taaHistorySharpening: 0.35
   taaAntiFlicker: 0.5
   taaMotionVectorRejection: 0
@@ -136,12 +138,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   hasPersistentHistory: 0
+  screenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  screenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   allowDeepLearningSuperSampling: 1
   deepLearningSuperSamplingUseCustomQualitySettings: 0
   deepLearningSuperSamplingQuality: 0
   deepLearningSuperSamplingUseCustomAttributes: 0
   deepLearningSuperSamplingUseOptimalSettings: 1
   deepLearningSuperSamplingSharpening: 0
+  fsrOverrideSharpness: 0
+  fsrSharpness: 0.92
   exposureTarget: {fileID: 0}
   materialMipBias: 0
   m_RenderingPathCustomFrameSettings:
@@ -157,6 +163,7 @@ MonoBehaviour:
     sssQualityMode: 0
     sssQualityLevel: 2
     sssCustomSampleBudget: 20
+    sssCustomDownsampleSteps: 0
     msaaMode: 9
     materialQuality: 0
   renderingPathCustomFrameSettingsOverrideMask:
@@ -164,7 +171,7 @@ MonoBehaviour:
       data1: 422212465065984
       data2: 0
   defaultFrameSettings: 0
-  m_Version: 8
+  m_Version: 9
   m_ObsoleteRenderingPath: 0
   m_ObsoleteFrameSettings:
     overrides: 0
@@ -224,12 +231,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 0}
+  targetObject_B: {fileID: 0}
   playerCamera: {fileID: 6988797645420320390}
   cameraYOffset: 4.5
   cameraZOffset: 10.5
   camMinX: -7.5
   camMaxX: 9
+  camMinY: -100
+  camMaxY: 100
   camMaxZ: 100
   camMinZ: -100
   defaultAngle: -45
   finalAngle: 22.5
+  bScreenShake: 1
+--- !u!114 &5218449939579941756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6988797645420320392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}

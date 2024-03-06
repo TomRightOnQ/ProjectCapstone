@@ -150,7 +150,8 @@ public class UI_Menu : UIBase
 
     public void OnClick_Btn_Settings()
     {
-        MenuManager.Instance.CloseMenu();
+        SettingManager.Instance.ShowSettingPanel();
+        MenuManager.Instance.CloseMenuNoResume();
     }
 
     public void OnClick_Btn_CloseMenu()

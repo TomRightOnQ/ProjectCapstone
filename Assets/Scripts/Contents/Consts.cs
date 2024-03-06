@@ -45,6 +45,7 @@ public static class Constants
     public const string SCENE_GUILD_LEVEL = "GuildScene";  // Guild Level
     public const string SCENE_MATCHING_LEVEL = "MatchingLevel";  // Matching Platform
     public const string SCENE_SHOOTER_LEVEL = "ShooterLevel";  // Shooter Level
+    public const string SCENE_CONTROL_LEVEL = "ControlRoomLevel";  // Control Room Level
 
     // Save
     public const string SAVE_CURRENT_SAVE = "CurrentDaySave";  // Name for the current game save

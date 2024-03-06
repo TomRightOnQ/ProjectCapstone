@@ -233,8 +233,8 @@ MonoBehaviour:
   projectileID: -1
   bExploded: 1
   explodeVFXName: TargetExplode
-  launchSFXName: FIRE_2
-  explodeSFXName: EXP_4
+  launchSFXName: event:/Weapons/Fire Magic 2
+  explodeSFXName: event:/Weapons/Explosion Small 1
   projRigidBody: {fileID: 0}
   projSpeed: 1
   projLife: 1
@@ -248,6 +248,7 @@ MonoBehaviour:
   bProxFuse: 0
   projProxRange: 7
   lockAngle: 60
+  projAnimator: {fileID: 0}
   childProjectileName: ClevProjChild
   childProjectileID: 7
   startAngle: 110

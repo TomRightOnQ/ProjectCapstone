@@ -37,7 +37,7 @@ public class UI_MainMenu : UIBase
 
     public void OnClick_Btn_Settings()
     {
-
+        SettingManager.Instance.ShowSettingPanel();
     }
 
     public void OnClick_Btn_Quit()

@@ -29,6 +29,9 @@ public class PlayerCamera : MonoBehaviour
     private bool bPlayerMode = true;
     private EUnit unit;
 
+    // Settings
+    [SerializeField] private bool bScreenShake = true;
+
     private void Awake()
     {
         if (playerCamera == null)
@@ -141,8 +144,19 @@ public class PlayerCamera : MonoBehaviour
         unit = targetUnit;
     }
 
+    // Set Screen Shake
+    public void SetScreenShake(bool bAllowed)
+    {
+        bScreenShake = bAllowed;
+    }
+
     public void ShakeCamera(float duration = 0.1f, float magnitude = 1f)
     {
+        // Read if shake is allowed
+        if (!bScreenShake)
+        {
+            return;
+        }
         StartCoroutine(ShakeCoroutine(duration, magnitude));
     }
 

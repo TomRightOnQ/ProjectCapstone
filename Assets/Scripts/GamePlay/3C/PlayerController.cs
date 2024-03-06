@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
     private Spine.AnimationState spineAnimationState;
     private Vector2 moveInput;
 
+    // Player Audio Component
+    [SerializeField] private PlayerAudio playerAudio;
+
     [SerializeField] private string IdleAnim = "Idle";
     [SerializeField] private string WalkAnim = "Walk";
     [SerializeField] private string currentState = "Idle";
@@ -79,6 +82,10 @@ public class PlayerController : MonoBehaviour
         if (player == null)
         {
             player = GetComponent<Player>();
+        }
+        if (playerAudio == null)
+        {
+            playerAudio = GetComponent<PlayerAudio>();
         }
         mainCamera = FindFirstObjectByType<Camera>();
         proxTargetLayerMask = 1 << LayerMask.NameToLayer("Target");
@@ -154,6 +161,8 @@ public class PlayerController : MonoBehaviour
 
         }
         playerRigidBody.AddForce(force);
+
+        UpdateMovementAudioState();
 
         // Clamp the max speed
         Vector3 horizontalVelocity = playerRigidBody.velocity;
@@ -248,6 +257,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Manage animation and audio
     private void UpdateAnimationState(string state)
     {
         if (currentState == WalkAnim && state == IdleAnim)
@@ -255,12 +265,31 @@ public class PlayerController : MonoBehaviour
             spineAnimationState.SetAnimation(0, IdleAnim, true);
             spineAnimationState.TimeScale = 1;
             currentState = IdleAnim;
+            playerAudio.StopWalk();
         } 
         else if (currentState == IdleAnim && state == WalkAnim) 
         {
             spineAnimationState.SetAnimation(0, WalkAnim, true);
             spineAnimationState.TimeScale = 1.5f;
             currentState = WalkAnim;
+            playerAudio.StartWalk();
+        }
+    }
+
+    private void UpdateMovementAudioState()
+    {
+        if (bAirBorne)
+        {
+            playerAudio.StopWalk();
+            return;
+        }
+        if (currentState == WalkAnim)
+        {
+            playerAudio.SetWalk();
+        }
+        else if (currentState == IdleAnim)
+        {
+            playerAudio.SetIdle();
         }
     }
 

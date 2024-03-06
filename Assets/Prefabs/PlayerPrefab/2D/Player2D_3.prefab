@@ -10045,6 +10045,7 @@ GameObject:
   - component: {fileID: 297871427543926176}
   - component: {fileID: 7280934449007673690}
   - component: {fileID: 4221926270007895813}
+  - component: {fileID: -9008079165879988351}
   m_Layer: 12
   m_Name: Player2D_3
   m_TagString: Player
@@ -10288,6 +10289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 297871427543926176}
   mainCamera: {fileID: 0}
+  playerAudio: {fileID: 0}
   IdleAnim: Idle
   WalkAnim: Walk
   currentState: 0
@@ -10322,6 +10324,23 @@ MonoBehaviour:
   SkillDamage: 1
   childProjectileName: SummonedLaser
   projectileID: 9
+--- !u!114 &-9008079165879988351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140762676369609257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dcb40069a2b6141b0dd7131d2be4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceType: Carpet
+  WALK_EVENT_NAME: event:/Character/Player Footsteps
+  walkTimeDiff: 0.5
+  bWalking: 0
+  playerRigidBody: {fileID: 1121507140852780646}
 --- !u!1001 &6540353912573495408
 PrefabInstance:
   m_ObjectHideFlags: 0

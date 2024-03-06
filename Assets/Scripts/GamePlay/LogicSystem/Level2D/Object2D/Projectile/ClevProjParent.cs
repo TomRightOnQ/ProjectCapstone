@@ -97,7 +97,7 @@ public class ClevProjParent : Projectile
         }
 
         bExploded = true;
-        GameEffectManager.Instance.PlaySound(explodeSFXName, transform.position);
+        playProjectileSound(explodeSFXName);
         if (explodeVFXName != "None")
         {
             GameEffectManager.Instance.PlayVFX(explodeVFXName,

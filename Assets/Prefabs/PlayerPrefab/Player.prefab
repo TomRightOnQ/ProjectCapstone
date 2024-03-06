@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6126956499534643397}
   - component: {fileID: -5983067009283729175}
   - component: {fileID: 1455064361429526498}
+  - component: {fileID: 4088671277816012693}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -117,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: -5983067009283729175}
   mainCamera: {fileID: 0}
+  playerAudio: {fileID: 0}
   IdleAnim: Idle
   WalkAnim: Walk
   currentState: Idle
@@ -136,6 +138,23 @@ MonoBehaviour:
   minRange: 1
   maxRange: 30
   targetTransform: {fileID: 0}
+--- !u!114 &4088671277816012693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543877054150755391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dcb40069a2b6141b0dd7131d2be4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceType: Carpet
+  WALK_EVENT_NAME: event:/Character/Player Footsteps
+  walkTimeDiff: 0.65
+  bWalking: 0
+  playerRigidBody: {fileID: 6126956499534643397}
 --- !u!1 &1568250056745110681
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3041131826357000709}
   - component: {fileID: 5873375299224014984}
+  - component: {fileID: 5192825405728011327}
   m_Layer: 12
   m_Name: PlayerCollider
   m_TagString: Untagged
@@ -188,9 +208,30 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.10625762
-  m_Height: 1
+  m_Height: 1.951566
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.47578308, z: 0}
+--- !u!65 &5192825405728011327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568250056745110681}
+  m_Material: {fileID: 13400000, guid: 669c054c0b75ed14ca365b4c183f273a, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45, y: 1.5, z: 0.2}
+  m_Center: {x: 0.01, y: 1.7625409, z: 0}
 --- !u!1 &2064517867704711478
 GameObject:
   m_ObjectHideFlags: 0

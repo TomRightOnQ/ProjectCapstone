@@ -23,7 +23,7 @@ public class SummonedLaser : Projectile
             return;
         }
         // Launch SFX
-        GameEffectManager.Instance.PlaySound(launchSFXName, transform.position);
+        playProjectileSound(launchSFXName);
         continueRotation = true;
     }
 

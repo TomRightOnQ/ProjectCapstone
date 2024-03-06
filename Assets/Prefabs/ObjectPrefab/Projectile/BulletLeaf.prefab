@@ -153,7 +153,8 @@ MonoBehaviour:
   projectileID: -1
   bExploded: 1
   explodeVFXName: BulletLeaf
-  launchSFXName: FIRE_6
+  launchSFXName: event:/Weapons/Machine Gun
+  explodeSFXName: None
   projRigidBody: {fileID: 6022980989547132315}
   projSpeed: 1
   projLife: 1
@@ -167,3 +168,4 @@ MonoBehaviour:
   bProxFuse: 0
   projProxRange: 1
   lockAngle: 60
+  projAnimator: {fileID: 0}

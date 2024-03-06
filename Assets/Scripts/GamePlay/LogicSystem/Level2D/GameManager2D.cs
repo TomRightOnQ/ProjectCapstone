@@ -109,7 +109,7 @@ public class GameManager2D : MonoBehaviour
         BattleObserver.Instance.BeginGame();
 
         // Play Music
-        MusicManager.Instance.PlayMusic("BattleSceneBGM_1");
+        MusicManager.Instance.ChangeMusicState(1);
 
         StartCoroutine(UpdateTimerCoroutine());
 
@@ -140,9 +140,6 @@ public class GameManager2D : MonoBehaviour
         HUDManager.Instance.BeginHUDTimer();
         // Show Panel after loaded
         ShowGameStartPanel();
-
-        // Play Lobby BGM
-        MusicManager.Instance.PlayMusic("MainMenuBGM_1");
     }
 
     // Update the timer

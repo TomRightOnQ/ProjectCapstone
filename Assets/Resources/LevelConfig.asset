@@ -21,7 +21,7 @@ MonoBehaviour:
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: 0, z: 0}
-    BGMName: MainMenuBGM_1
+    BGMName: BGM Main Menu 1
   - LevelID: 1
     SceneName: DefaultLevel
     StringName: None
@@ -30,7 +30,7 @@ MonoBehaviour:
     bSaveable: 1
     SpawnPoints:
     - {x: 0, y: 0.5, z: 0}
-    BGMName: MainMenuBGM_1
+    BGMName: BGM Public 1
   - LevelID: 2
     SceneName: AudienceLevel
     StringName: Audience Stands - High
@@ -39,7 +39,7 @@ MonoBehaviour:
     bSaveable: 1
     SpawnPoints:
     - {x: -6, y: 7.2, z: -1}
-    BGMName: PublicSceneBGM_1
+    BGMName: BGM Public 1
   - LevelID: 3
     SceneName: AudienceLowLevel
     StringName: Audience Stands - Low
@@ -48,7 +48,7 @@ MonoBehaviour:
     bSaveable: 1
     SpawnPoints:
     - {x: 2.2, y: 11.7, z: 10}
-    BGMName: PublicSceneBGM_1
+    BGMName: BGM Public 1
   - LevelID: 4
     SceneName: EntranceLevel
     StringName: Entrance Tunnel
@@ -57,7 +57,7 @@ MonoBehaviour:
     bSaveable: 1
     SpawnPoints:
     - {x: 11, y: 0.6, z: 0}
-    BGMName: EntranceSceneBGM_1
+    BGMName: BGM Entrance 1
   - LevelID: 5
     SceneName: PlatformerLevel
     StringName: Ready, Set, Run!
@@ -66,7 +66,7 @@ MonoBehaviour:
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: 2.4, z: 1.2}
-    BGMName: BattleSceneBGM_1
+    BGMName: BGM Entrance 1
   - LevelID: 6
     SceneName: RoomALevel
     StringName: Team Room
@@ -75,7 +75,7 @@ MonoBehaviour:
     bSaveable: 1
     SpawnPoints:
     - {x: 14, y: 0.6, z: 0}
-    BGMName: MainMenuBGM_1
+    BGMName: BGM Main Menu 1
   - LevelID: 7
     SceneName: GuildScene
     StringName: Tarvern
@@ -84,7 +84,7 @@ MonoBehaviour:
     bSaveable: 1
     SpawnPoints:
     - {x: 0, y: 0.6, z: 0}
-    BGMName: PublicSceneBGM_1
+    BGMName: BGM Main Menu 1
   - LevelID: 8
     SceneName: MatchingLevel
     StringName: None
@@ -93,7 +93,7 @@ MonoBehaviour:
     bSaveable: 1
     SpawnPoints:
     - {x: -8.8, y: 3.5, z: 0}
-    BGMName: PublicSceneBGM_1
+    BGMName: BGM Battle 1
   - LevelID: 9
     SceneName: ShooterLevel
     StringName: None
@@ -106,7 +106,7 @@ MonoBehaviour:
     - {x: 200, y: 2.4, z: 1.2}
     - {x: 300, y: 2.4, z: 1.2}
     - {x: 400, y: 2.4, z: 1.2}
-    BGMName: BattleSceneBGM_1
+    BGMName: BGM Battle 1
   - LevelID: 10
     SceneName: ShooterLevel_2
     StringName: None
@@ -115,7 +115,7 @@ MonoBehaviour:
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: 2.4, z: 1.2}
-    BGMName: BattleSceneBGM_1
+    BGMName: BGM Battle 1
   - LevelID: 11
     SceneName: ShooterLevel_3
     StringName: None
@@ -124,7 +124,7 @@ MonoBehaviour:
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: 2.4, z: 1.2}
-    BGMName: BattleSceneBGM_1
+    BGMName: BGM Battle 1
   - LevelID: 12
     SceneName: ShooterLevel_4
     StringName: None
@@ -133,7 +133,7 @@ MonoBehaviour:
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: 2.4, z: 1.2}
-    BGMName: BattleSceneBGM_1
+    BGMName: BGM Battle 1
   - LevelID: 13
     SceneName: ShooterLevel_5
     StringName: None
@@ -142,7 +142,7 @@ MonoBehaviour:
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: -1.75, z: 1.2}
-    BGMName: BattleSceneBGM_1
+    BGMName: BGM Battle 1
   - LevelID: 14
     SceneName: ShooterLevel_6
     StringName: None
@@ -151,4 +151,13 @@ MonoBehaviour:
     bSaveable: 0
     SpawnPoints:
     - {x: 0, y: -1.75, z: 1.2}
-    BGMName: BattleSceneBGM_1
+    BGMName: BGM Battle 1
+  - LevelID: 15
+    SceneName: ControlRoomLevel
+    StringName: Control Room
+    NextScene: 
+    SceneType: 1
+    bSaveable: 1
+    SpawnPoints:
+    - {x: 14.8, y: 0.6, z: -1.7}
+    BGMName: BGM Entrance 1

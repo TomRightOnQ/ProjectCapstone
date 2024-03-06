@@ -4940,13 +4940,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4670232939590679213}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.6532815, y: 0.27059805, z: 0.27059805, w: 0.6532815}
   m_LocalPosition: {x: 0, y: 0.25, z: -0.099999905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 785822050041883828}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 45, z: 0}
 --- !u!198 &3497562306011768524
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -9759,6 +9759,7 @@ GameObject:
   - component: {fileID: 8850575767965197912}
   - component: {fileID: 1534593993483746552}
   - component: {fileID: -4849631768204312211}
+  - component: {fileID: 3055049573550796099}
   m_Layer: 12
   m_Name: Player2D_2
   m_TagString: Player
@@ -10002,6 +10003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 8850575767965197912}
   mainCamera: {fileID: 0}
+  playerAudio: {fileID: 0}
   IdleAnim: Idle
   WalkAnim: Walk
   currentState: 0
@@ -10036,6 +10038,23 @@ MonoBehaviour:
   SkillDamage: 1
   childProjectileName: SummonedVine
   projectileID: 8
+--- !u!114 &3055049573550796099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703874159462560942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dcb40069a2b6141b0dd7131d2be4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceType: Carpet
+  WALK_EVENT_NAME: event:/Character/Player Footsteps
+  walkTimeDiff: 0.5
+  bWalking: 0
+  playerRigidBody: {fileID: 7146752433052942948}
 --- !u!1 &7015167787066067052
 GameObject:
   m_ObjectHideFlags: 0

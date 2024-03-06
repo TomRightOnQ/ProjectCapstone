@@ -193,7 +193,8 @@ MonoBehaviour:
   projectileID: -1
   bExploded: 1
   explodeVFXName: BulletVT
-  launchSFXName: FIRE_1
+  launchSFXName: event:/Weapons/Fire Magic 2
+  explodeSFXName: None
   projRigidBody: {fileID: 0}
   projSpeed: 1
   projLife: 1
@@ -207,6 +208,7 @@ MonoBehaviour:
   bProxFuse: 0
   projProxRange: 1
   lockAngle: 60
+  projAnimator: {fileID: 0}
 --- !u!73398921 &1020517086485896992
 VFXRenderer:
   serializedVersion: 1

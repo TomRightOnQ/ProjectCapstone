@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,6 +48,9 @@ public class Projectile : MEntity
 
     // Animator
     [SerializeField] protected Animator projAnimator;
+
+    // FMOD event instance
+    protected EventInstance projectileSound;
 
     // Public:
     // SetUp the Projectile
@@ -110,9 +115,28 @@ public class Projectile : MEntity
 
         // Launch SFX
         GameEffectManager.Instance.PlaySound(launchSFXName, transform.position);
+        playProjectileSound(launchSFXName);
     }
 
     // Private:
+    protected void OnDestroy()
+    {
+        projectileSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        projectileSound.release();
+    }
+
+    protected void playProjectileSound(string soundName)
+    {
+        if (soundName == "None")
+        {
+            return;
+        }
+        projectileSound = RuntimeManager.CreateInstance(soundName);
+        projectileSound.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+        projectileSound.start();
+        projectileSound.release();
+    }
+
     protected virtual void FixedUpdate()
     {
         if (bProxFuse)
@@ -169,7 +193,7 @@ public class Projectile : MEntity
         }
 
         bExploded = true;
-        GameEffectManager.Instance.PlaySound(explodeSFXName, transform.position);
+        playProjectileSound(explodeSFXName);
         if (explodeVFXName != "None")
         {
             GameEffectManager.Instance.PlayVFX(explodeVFXName, 

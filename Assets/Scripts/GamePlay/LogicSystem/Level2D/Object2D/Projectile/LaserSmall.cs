@@ -48,6 +48,6 @@ public class LaserSmall : Projectile
         Invoke("deactivate", 0.1f);
 
         // Launch SFX
-        GameEffectManager.Instance.PlaySound(launchSFXName, transform.position);
+        playProjectileSound(launchSFXName);
     }
 }

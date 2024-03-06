@@ -153,7 +153,8 @@ MonoBehaviour:
   projectileID: -1
   bExploded: 1
   explodeVFXName: None
-  launchSFXName: FIRE_1
+  launchSFXName: event:/Weapons/Fire Magic
+  explodeSFXName: None
   projRigidBody: {fileID: 3241377773143725526}
   projSpeed: 20
   projLife: 2
@@ -167,3 +168,4 @@ MonoBehaviour:
   bProxFuse: 0
   projProxRange: 1
   lockAngle: 60
+  projAnimator: {fileID: 0}

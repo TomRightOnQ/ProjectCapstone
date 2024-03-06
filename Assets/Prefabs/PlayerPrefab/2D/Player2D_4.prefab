@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3405054269929566273}
   - component: {fileID: 6387817867284602309}
   - component: {fileID: 7573913417548090546}
+  - component: {fileID: 7219193485199552181}
   m_Layer: 12
   m_Name: Player2D_4
   m_TagString: Player
@@ -258,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3405054269929566273}
   mainCamera: {fileID: 0}
+  playerAudio: {fileID: 0}
   IdleAnim: Idle
   WalkAnim: Walk
   currentState: 0
@@ -295,6 +297,23 @@ MonoBehaviour:
   startAngle: 60
   endAngle: 85
   childCount: 5
+--- !u!114 &7219193485199552181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338545887191912199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2dcb40069a2b6141b0dd7131d2be4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surfaceType: Carpet
+  WALK_EVENT_NAME: event:/Character/Player Footsteps
+  walkTimeDiff: 0.5
+  bWalking: 0
+  playerRigidBody: {fileID: 2772861493151543617}
 --- !u!1 &2239254211822606368
 GameObject:
   m_ObjectHideFlags: 0
@@ -5521,13 +5540,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6476714427414281815}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.6532815, y: 0.27059805, z: 0.27059805, w: 0.6532815}
   m_LocalPosition: {x: 0, y: 0.25, z: -0.099999905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6743838115716651136}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 45, z: 0}
 --- !u!198 &5772376843236116533
 ParticleSystem:
   m_ObjectHideFlags: 0
