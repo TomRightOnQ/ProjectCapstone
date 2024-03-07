@@ -37,5 +37,20 @@ public class Boss : EUnit
         }
         base.TakeDamage(damage, bForceDamage, bPercentDamage, bRealDamage);
         ShooterLevelManager.Instance.AddScore((int)(pointPerHit * damage));
+        playHitSound();
+    }
+
+    protected void playHitSound()
+    {
+        playerHit = RuntimeManager.CreateInstance(HIT_EVENT_NAME);
+        playerHit.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+        playerHit.start();
+        playerHit.release();
+    }
+
+    protected virtual void OnDestroy()
+    {
+        playerHit.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        playerHit.release();
     }
 }

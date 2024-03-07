@@ -17,8 +17,9 @@ public class Boss_1 : Boss
         EventManager.Instance.AddListener(GameEvent.Event.EVENT_C_1, bossBegin);
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
+        base.OnDestroy();
         EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_C_1, bossBegin);
     }
 

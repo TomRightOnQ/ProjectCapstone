@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -443,8 +443,8 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
-    m_UseOverride: 0
+    m_Override: 2048
+    m_UseOverride: 1
     m_Level: 3
   m_ShadowDimmer: 1
   m_VolumetricShadowDimmer: 1
@@ -2142,10 +2142,35 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1864155069182080804, guid: 729401129d28bea4a9d332d7006fd676,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 318.6225
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864155069182080804, guid: 729401129d28bea4a9d332d7006fd676,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 158.5419
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864155069182080804, guid: 729401129d28bea4a9d332d7006fd676,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864155069182080804, guid: 729401129d28bea4a9d332d7006fd676,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -46
+      objectReference: {fileID: 0}
     - target: {fileID: 2235089053985946185, guid: 729401129d28bea4a9d332d7006fd676,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097199800429434258, guid: 729401129d28bea4a9d332d7006fd676,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.47058824
       objectReference: {fileID: 0}
     - target: {fileID: 5609480106978196777, guid: 729401129d28bea4a9d332d7006fd676,
         type: 3}

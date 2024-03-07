@@ -119,10 +119,9 @@ public class Projectile : MEntity
     }
 
     // Private:
-    protected void OnDestroy()
+    protected void OnDisable()
     {
-        projectileSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        projectileSound.release();
+
     }
 
     protected void playProjectileSound(string soundName)

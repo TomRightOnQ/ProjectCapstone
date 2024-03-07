@@ -757,6 +757,7 @@ GameObject:
   - component: {fileID: 610870199}
   - component: {fileID: 610870201}
   - component: {fileID: 610870200}
+  - component: {fileID: 610870202}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Untagged
@@ -851,8 +852,8 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
-    m_UseOverride: 0
+    m_Override: 2048
+    m_UseOverride: 1
     m_Level: 2
   m_ShadowDimmer: 1
   m_VolumetricShadowDimmer: 1
@@ -963,6 +964,24 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &610870202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610870198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa5e41821facbf4f8f9682c714955a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightComponent: {fileID: 610870200}
+  LOW_SHAODW_RESOLUTION: 512
+  MEDIUM_SHAODW_RESOLUTION: 1024
+  HIGH_SHAODW_RESOLUTION: 2048
+  bDisableAtLow: 0
+  bNoShadow: 0
 --- !u!1001 &736534242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1723,6 +1742,7 @@ GameObject:
   - component: {fileID: 1275885483}
   - component: {fileID: 1275885485}
   - component: {fileID: 1275885484}
+  - component: {fileID: 1275885486}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Untagged
@@ -1817,8 +1837,8 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
-    m_UseOverride: 0
+    m_Override: 2048
+    m_UseOverride: 1
     m_Level: 2
   m_ShadowDimmer: 1
   m_VolumetricShadowDimmer: 1
@@ -1929,6 +1949,24 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1275885486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275885482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa5e41821facbf4f8f9682c714955a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightComponent: {fileID: 1275885484}
+  LOW_SHAODW_RESOLUTION: 512
+  MEDIUM_SHAODW_RESOLUTION: 1024
+  HIGH_SHAODW_RESOLUTION: 2048
+  bDisableAtLow: 0
+  bNoShadow: 0
 --- !u!1 &1278700825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,6 +2159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1509821798}
   - component: {fileID: 1509821797}
+  - component: {fileID: 1509821799}
   m_Layer: 0
   m_Name: Sky and Fog Volume
   m_TagString: Untagged
@@ -2160,6 +2199,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1509821799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509821796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84060cdb6ede5a4197ed84eeb84b788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeComponent: {fileID: 1509821797}
 --- !u!1001 &1564899485
 PrefabInstance:
   m_ObjectHideFlags: 0

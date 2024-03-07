@@ -21,7 +21,6 @@ public class GameEffectManager : MonoBehaviour
 
     public void InitGameEffectConfigs()
     {
-        AudioConfig.Instance.Init();
         AnimConfig.Instance.Init();
         VFXConfig.Instance.Init();
     }

@@ -122,6 +122,7 @@ public class ClevProjParent : Projectile
             }
         }
         releaseChildProjectile();
+        playProjectileSound(explodeSFXName);
         deactivate();
     }
 }

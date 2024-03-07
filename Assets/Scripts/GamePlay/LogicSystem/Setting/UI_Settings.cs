@@ -42,6 +42,19 @@ public class UI_Settings : UIBase
     }
 
     // Private:
+    // Apply Graphic Level
+    private void applyGraphicLevel()
+    {
+        EventManager.Instance.PostEvent(GameEvent.Event.GRAPHICS_LEVEL_CHANGED);
+
+        foreach (ScriptableLight lightComponnet in FindObjectsByType<ScriptableLight>(FindObjectsSortMode.None))
+        {
+            if (lightComponnet.gameObject.activeSelf)
+            {
+                lightComponnet.ChangeLevel();
+            }
+        }
+    }
 
     // Public:
     // Show and Hide Panel
@@ -70,6 +83,7 @@ public class UI_Settings : UIBase
         PlayerPrefs.SetInt("bScreenShake", (screenShake.isOn ? 1 : 0));
 
         ApplySettings();
+        applyGraphicLevel();
     }
 
     // Load Data
@@ -89,6 +103,7 @@ public class UI_Settings : UIBase
         screenShake.isOn = (currentScreenShake == 1);
 
         ApplySettings();
+        applyGraphicLevel();
     }
 
     // Apply Settings
@@ -101,9 +116,6 @@ public class UI_Settings : UIBase
         MusicManager.Instance.SetMasterBus(SL_MasterVolumeSlider.value);
         MusicManager.Instance.SetMusicBus(SL_MusicVolumeSlider.value);
         MusicManager.Instance.SetSFXBus(SL_SFXVolumeSlider.value);
-
-        // Graphic Levels
-        graphicsLevelGroup.LoadIndex(graphicsLevelGroup.CurrentIndex);
 
         // Screen Shake
         if (PersistentDataManager.Instance.MainCamera != null)

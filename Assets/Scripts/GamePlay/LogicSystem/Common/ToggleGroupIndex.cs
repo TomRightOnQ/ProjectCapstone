@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Customized Toggle that interact with number index
 /// </summary>
-public class ToggleGroupIndex : ToggleGroup
+public class ToggleGroupIndex : MonoBehaviour
 {
     [SerializeField] private List<Toggle> toggleList = new List<Toggle>();
 
@@ -16,11 +16,20 @@ public class ToggleGroupIndex : ToggleGroup
     // Public:
     public void SetIndex(int index)
     {
+        toggleList[index].isOn = true;
         currentIndex = index;
+        OnToggle(index);
     }
 
-    public void LoadIndex(int index)
+    // Events
+    public void OnToggle(int index)
     {
-        toggleList[index].isOn = true;
+        for (int i = 0; i < toggleList.Count; i++)
+        {
+            if (i != index)
+            {
+                toggleList[i].isOn = false;
+            }
+        }
     }
 }

@@ -19,8 +19,8 @@ MonoBehaviour:
     Data3: 1244236687
     Data4: 595743019
   Banks:
-  - {fileID: 5124124499039741968}
-  - {fileID: -952194376412105895}
+  - {fileID: 6542571561165433941}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -28,6 +28,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-9127323349716559719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: FmodPR/FlashBackA/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638453432729104129
+  FileSizes:
+  - Name: Desktop
+    Value: 21801536
+  Exists: 1
 --- !u!114 &-9045017561493370933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,7 +67,7 @@ MonoBehaviour:
     Data3: -437843327
     Data4: -703888599
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -98,7 +118,7 @@ MonoBehaviour:
     Data3: 1660743820
     Data4: -1969025494
   Banks:
-  - {fileID: -4864797360068937659}
+  - {fileID: 7057909350539880544}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -151,7 +171,7 @@ MonoBehaviour:
     Data3: 1364428202
     Data4: -840343620
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -179,7 +199,7 @@ MonoBehaviour:
     Data3: -1368499021
     Data4: -693149788
   Banks:
-  - {fileID: 5124124499039741968}
+  - {fileID: 6542571561165433941}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -206,7 +226,7 @@ MonoBehaviour:
     Data3: -1091619938
     Data4: 1253267948
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -214,26 +234,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 917
---- !u!114 &-7415883039251710205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Dialogue_JP.bank
-  m_EditorClassIdentifier: 
-  Path: ../FmodPR/FlashBackA/Build/Desktop/Dialogue_JP.bank
-  Name: Dialogue_JP
-  StudioPath: bank:/Dialogue_JP
-  lastModified: 638449279707199514
-  FileSizes:
-  - Name: Desktop
-    Value: 66560
-  Exists: 1
 --- !u!114 &-7340925930056680483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
     Data3: 661987496
     Data4: 496157849
   Banks:
-  - {fileID: -4864797360068937659}
+  - {fileID: 7057909350539880544}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
     Data3: 130402976
     Data4: 239065686
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -334,7 +334,7 @@ MonoBehaviour:
     Data3: -333876557
     Data4: 1941186587
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -361,7 +361,7 @@ MonoBehaviour:
     Data3: -654620229
     Data4: -1879791167
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -436,7 +436,7 @@ MonoBehaviour:
     Data3: -208375150
     Data4: 1020918174
   Banks:
-  - {fileID: -4864797360068937659}
+  - {fileID: 7057909350539880544}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -444,26 +444,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 181333
---- !u!114 &-4864797360068937659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
-  m_EditorClassIdentifier: 
-  Path: ../FmodPR/FlashBackA/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638449362629227247
-  FileSizes:
-  - Name: Desktop
-    Value: 18889120
-  Exists: 1
 --- !u!114 &-4792970430173017466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +463,7 @@ MonoBehaviour:
     Data3: 651052185
     Data4: -1957406073
   Banks:
-  - {fileID: -4864797360068937659}
+  - {fileID: 7057909350539880544}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -493,6 +473,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 150857
+--- !u!114 &-4494935985613998213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Dialogue_CN.bank
+  m_EditorClassIdentifier: 
+  Path: FmodPR/FlashBackA/Build/Desktop/Dialogue_CN.bank
+  Name: Dialogue_CN
+  StudioPath: bank:/Dialogue_CN
+  lastModified: 638449279705789191
+  FileSizes:
+  - Name: Desktop
+    Value: 52416
+  Exists: 1
 --- !u!114 &-4342134848534914660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ MonoBehaviour:
     Data3: -128471909
     Data4: -739394485
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -521,7 +521,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 100
   Length: 0
---- !u!114 &-3996109102724150928
+--- !u!114 &-3598787992826011774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -531,15 +531,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Vehicles.bank
+  m_Name: bank:/Dialogue_EN.bank
   m_EditorClassIdentifier: 
-  Path: ../FmodPR/FlashBackA/Build/Desktop/Vehicles.bank
-  Name: Vehicles
-  StudioPath: bank:/Vehicles
-  lastModified: 638449279797417145
+  Path: FmodPR/FlashBackA/Build/Desktop/Dialogue_EN.bank
+  Name: Dialogue_EN
+  StudioPath: bank:/Dialogue_EN
+  lastModified: 638449279706497133
   FileSizes:
   - Name: Desktop
-    Value: 222464
+    Value: 61120
   Exists: 1
 --- !u!114 &-3325927127192874200
 MonoBehaviour:
@@ -656,7 +656,7 @@ MonoBehaviour:
     Data3: -125142357
     Data4: -1149771785
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -755,7 +755,7 @@ MonoBehaviour:
     Data3: 47099559
     Data4: -643625871
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -763,26 +763,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 147
---- !u!114 &-1427565670153224594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/VO.bank
-  m_EditorClassIdentifier: 
-  Path: ../FmodPR/FlashBackA/Build/Desktop/VO.bank
-  Name: VO
-  StudioPath: bank:/VO
-  lastModified: 638449279797877436
-  FileSizes:
-  - Name: Desktop
-    Value: 38624
-  Exists: 1
 --- !u!114 &-1310160780112854742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,7 +782,7 @@ MonoBehaviour:
     Data3: -856088394
     Data4: -1552366533
   Banks:
-  - {fileID: 5124124499039741968}
+  - {fileID: 6542571561165433941}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -833,26 +813,6 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Labels: []
-  Exists: 1
---- !u!114 &-952194376412105895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: ../FmodPR/FlashBackA/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638453277072085109
-  FileSizes:
-  - Name: Desktop
-    Value: 21801664
   Exists: 1
 --- !u!114 &-915263044548341856
 MonoBehaviour:
@@ -897,7 +857,7 @@ MonoBehaviour:
     Data3: 1399996295
     Data4: 1960433336
   Banks:
-  - {fileID: -4864797360068937659}
+  - {fileID: 7057909350539880544}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -906,6 +866,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-856653761833460763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Vehicles.bank
+  m_EditorClassIdentifier: 
+  Path: FmodPR/FlashBackA/Build/Desktop/Vehicles.bank
+  Name: Vehicles
+  StudioPath: bank:/Vehicles
+  lastModified: 638449279797417145
+  FileSizes:
+  - Name: Desktop
+    Value: 222464
+  Exists: 1
 --- !u!114 &-813046729649991714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,7 +905,7 @@ MonoBehaviour:
     Data3: -1749516898
     Data4: 563633538
   Banks:
-  - {fileID: -1427565670153224594}
+  - {fileID: -806399015988198593}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -933,6 +913,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1859
+--- !u!114 &-806399015988198593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/VO.bank
+  m_EditorClassIdentifier: 
+  Path: FmodPR/FlashBackA/Build/Desktop/VO.bank
+  Name: VO
+  StudioPath: bank:/VO
+  lastModified: 638449279797877436
+  FileSizes:
+  - Name: Desktop
+    Value: 38624
+  Exists: 1
 --- !u!114 &-698336056502577306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,7 +978,7 @@ MonoBehaviour:
     Data3: 1814092417
     Data4: 28844622
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -987,6 +987,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-609247525463996956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FmodPR/FlashBackA/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638453277069914663
+  FileSizes:
+  - Name: Desktop
+    Value: 4508
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,15 +1020,15 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 957728398833022366}
-  - {fileID: 1246211257211587424}
-  - {fileID: 8381896865707083204}
-  - {fileID: -7415883039251710205}
-  - {fileID: 5124124499039741968}
-  - {fileID: -4864797360068937659}
-  - {fileID: -952194376412105895}
-  - {fileID: -3996109102724150928}
-  - {fileID: -1427565670153224594}
+  - {fileID: -609247525463996956}
+  - {fileID: -4494935985613998213}
+  - {fileID: -3598787992826011774}
+  - {fileID: 5597230300971568560}
+  - {fileID: 6542571561165433941}
+  - {fileID: 7057909350539880544}
+  - {fileID: -9127323349716559719}
+  - {fileID: -856653761833460763}
+  - {fileID: -806399015988198593}
   EditorEvents:
   - {fileID: -1310160780112854742}
   - {fileID: -9222485983978962628}
@@ -1052,10 +1072,10 @@ MonoBehaviour:
   - {fileID: 4541036572228693707}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5124124499039741968}
+  - {fileID: 6542571561165433941}
   StringsBanks:
-  - {fileID: 957728398833022366}
-  cacheTime: 638453277072085109
+  - {fileID: -609247525463996956}
+  cacheTime: 638453432729104129
   cacheVersion: 131616
 --- !u!114 &218797953650131602
 MonoBehaviour:
@@ -1076,7 +1096,7 @@ MonoBehaviour:
     Data3: 1431117501
     Data4: -326572916
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1113,26 +1133,6 @@ MonoBehaviour:
   - Carpet
   - Grass
   - Wood Floor
-  Exists: 1
---- !u!114 &957728398833022366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../FmodPR/FlashBackA/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638453277069914663
-  FileSizes:
-  - Name: Desktop
-    Value: 4508
   Exists: 1
 --- !u!114 &958320493933616712
 MonoBehaviour:
@@ -1177,7 +1177,7 @@ MonoBehaviour:
     Data3: 964216707
     Data4: -396832587
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1204,7 +1204,7 @@ MonoBehaviour:
     Data3: -1869216072
     Data4: 201092544
   Banks:
-  - {fileID: 5124124499039741968}
+  - {fileID: 6542571561165433941}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1212,26 +1212,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &1246211257211587424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Dialogue_CN.bank
-  m_EditorClassIdentifier: 
-  Path: ../FmodPR/FlashBackA/Build/Desktop/Dialogue_CN.bank
-  Name: Dialogue_CN
-  StudioPath: bank:/Dialogue_CN
-  lastModified: 638449279705789191
-  FileSizes:
-  - Name: Desktop
-    Value: 52416
-  Exists: 1
 --- !u!114 &1483983862339746171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1251,7 +1231,7 @@ MonoBehaviour:
     Data3: 1192915876
     Data4: -364537359
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1303,7 +1283,7 @@ MonoBehaviour:
     Data3: -39584839
     Data4: -1719187868
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1330,7 +1310,7 @@ MonoBehaviour:
     Data3: -261621348
     Data4: -48242944
   Banks:
-  - {fileID: -4864797360068937659}
+  - {fileID: 7057909350539880544}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1359,7 +1339,7 @@ MonoBehaviour:
     Data3: -768382828
     Data4: 8080861
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1386,7 +1366,7 @@ MonoBehaviour:
     Data3: 1359563695
     Data4: -2072128577
   Banks:
-  - {fileID: -3996109102724150928}
+  - {fileID: -856653761833460763}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1415,7 +1395,7 @@ MonoBehaviour:
     Data3: 1091724724
     Data4: 1436550054
   Banks:
-  - {fileID: -3996109102724150928}
+  - {fileID: -856653761833460763}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1444,7 +1424,7 @@ MonoBehaviour:
     Data3: -1037264232
     Data4: -138975497
   Banks:
-  - {fileID: -4864797360068937659}
+  - {fileID: 7057909350539880544}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1471,7 +1451,7 @@ MonoBehaviour:
     Data3: 1319579315
     Data4: -1597025449
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1499,7 +1479,7 @@ MonoBehaviour:
     Data3: -524491124
     Data4: 2072024542
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1551,7 +1531,7 @@ MonoBehaviour:
     Data3: 432447913
     Data4: 308547786
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1579,7 +1559,7 @@ MonoBehaviour:
     Data3: -380992089
     Data4: 1039913086
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1606,7 +1586,7 @@ MonoBehaviour:
     Data3: 468447645
     Data4: -713930297
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1638,7 +1618,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5124124499039741968
+--- !u!114 &5597230300971568560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1648,15 +1628,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Dialogue_JP.bank
   m_EditorClassIdentifier: 
-  Path: ../FmodPR/FlashBackA/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638453277069894015
+  Path: FmodPR/FlashBackA/Build/Desktop/Dialogue_JP.bank
+  Name: Dialogue_JP
+  StudioPath: bank:/Dialogue_JP
+  lastModified: 638449279707199514
   FileSizes:
   - Name: Desktop
-    Value: 15592
+    Value: 66560
   Exists: 1
 --- !u!114 &5723851461297572415
 MonoBehaviour:
@@ -1701,7 +1681,7 @@ MonoBehaviour:
     Data3: -26701164
     Data4: 1208754546
   Banks:
-  - {fileID: 5124124499039741968}
+  - {fileID: 6542571561165433941}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -1752,7 +1732,7 @@ MonoBehaviour:
     Data3: 1258668933
     Data4: -853691887
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1760,6 +1740,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &6542571561165433941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FmodPR/FlashBackA/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638453277069894015
+  FileSizes:
+  - Name: Desktop
+    Value: 15592
+  Exists: 1
 --- !u!114 &6547236228594364033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1779,7 +1779,7 @@ MonoBehaviour:
     Data3: 246411438
     Data4: -242683011
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1806,7 +1806,7 @@ MonoBehaviour:
     Data3: -1735917643
     Data4: 1322468004
   Banks:
-  - {fileID: -4864797360068937659}
+  - {fileID: 7057909350539880544}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1814,6 +1814,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 170181
+--- !u!114 &7057909350539880544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FmodPR/FlashBackA/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638449362629227247
+  FileSizes:
+  - Name: Desktop
+    Value: 18889120
+  Exists: 1
 --- !u!114 &7587006116670009300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,7 +1853,7 @@ MonoBehaviour:
     Data3: -101840716
     Data4: 711972407
   Banks:
-  - {fileID: -1427565670153224594}
+  - {fileID: -806399015988198593}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1884,7 +1904,7 @@ MonoBehaviour:
     Data3: -2064153176
     Data4: 1900422219
   Banks:
-  - {fileID: -952194376412105895}
+  - {fileID: -9127323349716559719}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1893,26 +1913,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8381896865707083204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Dialogue_EN.bank
-  m_EditorClassIdentifier: 
-  Path: ../FmodPR/FlashBackA/Build/Desktop/Dialogue_EN.bank
-  Name: Dialogue_EN
-  StudioPath: bank:/Dialogue_EN
-  lastModified: 638449279706497133
-  FileSizes:
-  - Name: Desktop
-    Value: 61120
-  Exists: 1
 --- !u!114 &8847615973858823626
 MonoBehaviour:
   m_ObjectHideFlags: 0
