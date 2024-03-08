@@ -51,6 +51,7 @@ public class GameEndManager : MonoBehaviour
             createUIGameAch();
         }
         ui_GameAch.ShowGameAchievementPage();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_OPEN);
     }
 
     // Trigger an game End

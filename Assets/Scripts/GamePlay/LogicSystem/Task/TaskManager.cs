@@ -214,6 +214,7 @@ public class TaskManager : MonoBehaviour
             createTaskUI();
         }
         ui_Task.ShowTaskPanel();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_OPEN);
     }
 
     public void CloseTaskPanel()
@@ -223,6 +224,7 @@ public class TaskManager : MonoBehaviour
             return;
         }
         ui_Task.CloseTaskPanel();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CLOSE);
     }
 
     // Manually track a task

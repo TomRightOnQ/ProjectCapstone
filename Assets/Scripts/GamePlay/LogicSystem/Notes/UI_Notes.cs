@@ -96,25 +96,34 @@ public class UI_Notes : UIBase
     }
 
     // On Click Events
+    public void OnClick_Btn_ClosePanel()
+    {
+        NotesManager.Instance.CloseNotePanel();
+    }
+
     public void OnClick_Btn_ShowNotes()
     {
         currentNoteType = Enums.NOTE_TYPE.Note;
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CANCEL);
         refreshList();
     }
     public void OnClick_Btn_ShowItems()
     {
         currentNoteType = Enums.NOTE_TYPE.Item;
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CANCEL);
         refreshList();
     }
     public void OnClick_Btn_ShowReports()
     {
         currentNoteType = Enums.NOTE_TYPE.Report;
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CANCEL);
         refreshList();
     }
 
     public void OnClick_NotesList(int index, ListViewItem item, PointerEventData eventData)
     {
         int noteID = SaveManager.Instance.GetNote(currentNoteType)[index];
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CANCEL);
         refreshDetailPanel(noteID);
     }
 }

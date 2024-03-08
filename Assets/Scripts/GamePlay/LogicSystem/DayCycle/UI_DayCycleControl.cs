@@ -46,6 +46,7 @@ public class UI_DayCycleControl : UIBase
         guildItems.Clear();
         p_GuildRankingPanel.SetActive(false);
         PersistentGameManager.Instance.ResumeGame();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CLOSE);
     }
 
     // Show button to the next day

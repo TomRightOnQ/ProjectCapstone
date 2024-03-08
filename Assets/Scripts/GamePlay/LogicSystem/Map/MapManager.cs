@@ -47,6 +47,7 @@ public class MapManager : MonoBehaviour
             createUIMap();
         }
         ui_Map.ShowMapPanel();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_OPEN);
     }
 
     // Set Map teleport locked or unlocked

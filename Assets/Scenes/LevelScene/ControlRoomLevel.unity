@@ -935,11 +935,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa5e41821facbf4f8f9682c714955a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightComponent: {fileID: 1365073247}
+  lightComponent: {fileID: 1365073246}
   LOW_SHAODW_RESOLUTION: 512
   MEDIUM_SHAODW_RESOLUTION: 1024
   HIGH_SHAODW_RESOLUTION: 2048
   bDisableAtLow: 0
+  bNoShadow: 0
 --- !u!1 &1468896403
 GameObject:
   m_ObjectHideFlags: 0

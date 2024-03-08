@@ -28,27 +28,32 @@ public class UI_MainMenu : UIBase
     public void OnClick_Btn_NewGame()
     {
         LevelManager.Instance.CreateNewGame();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CONFIRM);
     }
 
     public void OnClick_Btn_ContinueGame()
     {
         LevelManager.Instance.EnterGame();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CONFIRM);
     }
 
     public void OnClick_Btn_Settings()
     {
         SettingManager.Instance.ShowSettingPanel();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CONFIRM);
     }
 
     public void OnClick_Btn_Quit()
     {
         PersistentGameManager.Instance.QuitGame();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CONFIRM);
     }
 
     // Side Cluster
     public void OnClick_Btn_Achievements()
     {
         GameEndManager.Instance.ShowGameAchievementPage();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CONFIRM);
     }
 
     public void OnClick_Btn_Credit()

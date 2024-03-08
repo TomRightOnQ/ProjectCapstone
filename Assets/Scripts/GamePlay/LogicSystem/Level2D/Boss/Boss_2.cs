@@ -102,7 +102,6 @@ public class Boss_2 : Boss
         {
             damageParticle.Play();
         }
-        GameEffectManager.Instance.PlaySound("DMG_1", transform.position);
         checkCurrentHealth();
     }
 

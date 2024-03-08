@@ -36,6 +36,7 @@ public class UI_GameAch : UIBase
     public void ClosePanel()
     {
         PersistentGameManager.Instance.ResumeGame();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CLOSE);
         P_GameAchPanel.SetActive(false);
     }
 

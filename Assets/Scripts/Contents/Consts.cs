@@ -8,6 +8,12 @@ public static class Constants
     public const float CAMERA_ROTATED_THRESHOLD = 0.1f;  // 
     public const float PLAYER_JUMP_DETECT_RADIUS = 0.01f;  // From how far we should consider the player on the ground
 
+    // Audio
+    public const string SOUND_UI_CONFIRM = "Btn Confirm";  // UI Audio
+    public const string SOUND_UI_CANCEL = "Btn Cancel";  // UI Audio
+    public const string SOUND_UI_OPEN = "UI Open";  // UI Audio
+    public const string SOUND_UI_CLOSE = "UI Close";  // UI Audio
+
     // C1
     public const int TEST_INT_C1 = 1;  // A normal value
     public const string TEST_STRING_C1 = "test";  // A normal value

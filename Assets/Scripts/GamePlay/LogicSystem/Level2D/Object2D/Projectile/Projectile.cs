@@ -114,7 +114,7 @@ public class Projectile : MEntity
         gameObject.SetActive(true);
 
         // Launch SFX
-        GameEffectManager.Instance.PlaySound(launchSFXName, transform.position);
+        GameEffectManager.Instance.PlaySound(launchSFXName);
         playProjectileSound(launchSFXName);
     }
 

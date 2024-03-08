@@ -109,7 +109,8 @@ public class GameManager2D : MonoBehaviour
         BattleObserver.Instance.BeginGame();
 
         // Play Music
-        MusicManager.Instance.ChangeMusicState(1);
+        Level2DData.Level2DDataStruct levelData = Level2DData.GetData(gameLevelID);
+        MusicManager.Instance.PlayMusic(levelData.BGMName);
 
         StartCoroutine(UpdateTimerCoroutine());
 

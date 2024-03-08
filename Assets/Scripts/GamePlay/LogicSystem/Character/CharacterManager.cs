@@ -59,6 +59,7 @@ public class CharacterManager : MonoBehaviour
         UIManager.Instance.ShowUI("UI_CharacterPicker");
         // Show Player a reminder
         ReminderManager.Instance.ShowSubtitleReminder(12);
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_OPEN);
     }
 
     // Hide character Picker
@@ -69,5 +70,6 @@ public class CharacterManager : MonoBehaviour
             return;
         }
         UIManager.Instance.HideUI("UI_CharacterPicker");
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CLOSE);
     }
 }

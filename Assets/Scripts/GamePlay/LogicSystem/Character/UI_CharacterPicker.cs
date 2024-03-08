@@ -136,6 +136,7 @@ public class UI_CharacterPicker : UIBase
     // OnClick Events:
     public void OnClick_CharactersList(int index, ListViewItem item, PointerEventData eventData)
     {
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_OPEN);
         characterID = characterItems[index].Value;
         refreshPanel(characterID);
     }

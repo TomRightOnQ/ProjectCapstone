@@ -202,6 +202,7 @@ public class DayCycleManager : MonoBehaviour
         if (ui_DayCycleControl != null)
         {
             ui_DayCycleControl.ShowDayPanel();
+            GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_OPEN);
         }
     }
 

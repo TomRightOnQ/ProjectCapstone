@@ -104,7 +104,7 @@ public class TargetLauncher : MEntity
             if (launchSFXName != "None")
             {
                 // Launch SFX
-                GameEffectManager.Instance.PlaySound(launchSFXName, transform.position);
+                GameEffectManager.Instance.PlaySound(launchSFXName);
             }
 
             target.SetUp();

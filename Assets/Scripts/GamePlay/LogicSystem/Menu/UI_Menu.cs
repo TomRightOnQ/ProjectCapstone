@@ -36,6 +36,7 @@ public class UI_Menu : UIBase
         {
             return;
         }
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_OPEN);
         bLocked = true;
         PersistentGameManager.Instance.PauseGame();
         // Check which option to show
@@ -49,6 +50,7 @@ public class UI_Menu : UIBase
         {
             return;
         }
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CLOSE);
         menuAnimator.Play("MenuOutAnimation");
         float length = menuAnimator.GetCurrentAnimatorStateInfo(0).length;
         Invoke("DisableMenu", length);

@@ -45,10 +45,12 @@ public class SettingManager : MonoBehaviour
         // Load Configuration to the panel
         ui_Settings.ShowSettingPanel();
         UIManager.Instance.ShowUI("UI_Settings");
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_OPEN);
     }
     public void HideSettingPanel()
     {
         UIManager.Instance.HideUI("UI_Settings");
         PersistentGameManager.Instance.ResumeGame();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CLOSE);
     }
 }

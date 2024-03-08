@@ -48,7 +48,7 @@ public class Boss : EUnit
         playerHit.release();
     }
 
-    protected virtual void OnDestroy()
+    protected virtual void OnDisable()
     {
         playerHit.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         playerHit.release();

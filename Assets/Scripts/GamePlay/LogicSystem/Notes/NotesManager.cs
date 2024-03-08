@@ -45,8 +45,8 @@ public class NotesManager : MonoBehaviour
             createUINotes();
         }
         UIManager.Instance.ShowUI("UI_Notes");
-
         ui_Notes.ShowNotePanel();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_OPEN);
     }
 
     public void CloseNotePanel() 
@@ -56,5 +56,6 @@ public class NotesManager : MonoBehaviour
             return;
         }
         ui_Notes.CloseNotePanel();
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CLOSE);
     }
 }

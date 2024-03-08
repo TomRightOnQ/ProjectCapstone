@@ -1,9 +1,15 @@
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
 
 public class GameEffectManager : MonoBehaviour
 {
     private static GameEffectManager instance;
     public static GameEffectManager Instance => instance;
+
+    // FMOD event instance
+    protected EventInstance soundEvent;
+    [SerializeField, ReadOnly] private string UI_EVENT_PREFIX = "event:/UI/";
 
     private void Awake()
     {
@@ -36,9 +42,28 @@ public class GameEffectManager : MonoBehaviour
         effect.SetUp(_name, pos);
     }
 
-    public void PlaySound(string _name, Vector3 pos)
+    public void PlayUISound(string _name)
     {
+        if (_name == "None")
+        {
+            return;
+        }
+        soundEvent = RuntimeManager.CreateInstance(UI_EVENT_PREFIX + _name);
+        soundEvent.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+        soundEvent.start();
+        soundEvent.release();
+    }
 
+    public void PlaySound(string _name)
+    {
+        if (_name == "None")
+        {
+            return;
+        }
+        //soundEvent = RuntimeManager.CreateInstance(UI_EVENT_PREFIX + _name);
+        //soundEvent.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+        //soundEvent.start();
+        //soundEvent.release();
     }
 
     public void PlayAnim(string _name, Vector3 pos, Vector3 scale)
