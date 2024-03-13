@@ -60,10 +60,10 @@ public class GameEffectManager : MonoBehaviour
         {
             return;
         }
-        //soundEvent = RuntimeManager.CreateInstance(UI_EVENT_PREFIX + _name);
-        //soundEvent.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
-        //soundEvent.start();
-        //soundEvent.release();
+        soundEvent = RuntimeManager.CreateInstance(_name);
+        soundEvent.set3DAttributes(RuntimeUtils.To3DAttributes(gameObject));
+        soundEvent.start();
+        soundEvent.release();
     }
 
     public void PlayAnim(string _name, Vector3 pos, Vector3 scale)

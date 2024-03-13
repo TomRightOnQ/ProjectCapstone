@@ -82,6 +82,42 @@ public class LevelManager : MonoBehaviour
         {
             return;
         }
+
+        if (PersistentDataManager.Instance.MainCamera.PlayCameraLoadingEffect_WaterSphere())
+        {
+            StartCoroutine(Load2DLevel_I(levelID, chosenCharacterID));
+        }
+        else 
+        {
+            Load2DLevel_F(levelID, chosenCharacterID);
+        }
+        
+    }
+
+    public IEnumerator Load2DLevel_I(int levelID, int chosenCharacterID = 1)
+    {
+        InputManager.Instance.LockInput();
+        HUDManager.Instance.HideAllHUD();
+        yield return new WaitForSeconds(3.1f);
+        if (levelID > 0)
+        {
+            current2DLevel = Level2DData.GetData(levelID);
+            gameID2D = levelID;
+            characterID = chosenCharacterID;
+            groupID = current2DLevel.GroupID;
+            LevelManager.Instance.LoadScene(current2DLevel.SceneName);
+        }
+    }
+
+    public void Load2DLevel_F(int levelID, int chosenCharacterID = 1)
+    {
+        if (levelID < 0)
+        {
+            return;
+        }
+        InputManager.Instance.LockInput();
+        HUDManager.Instance.HideAllHUD();
+
         current2DLevel = Level2DData.GetData(levelID);
         gameID2D = levelID;
         characterID = chosenCharacterID;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2.0352213, g: 2.1467822, b: 2.7625048, a: 1}
+  m_IndirectSpecularColor: {r: 2.0488322, g: 2.1645243, b: 2.7856753, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 75859782}
   - component: {fileID: 75859781}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: DefaultSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5154,11 +5154,11 @@ Transform:
   m_GameObject: {fileID: 75859780}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7010574, y: -0.09229599, z: 0.5609855, w: 0.43045938}
-  m_LocalPosition: {x: 9.883, y: -1.407, z: 1.449}
+  m_LocalPosition: {x: -0.016999245, y: 0.2830001, z: 0.24899995}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 122979716}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &106374610
 GameObject:
@@ -5364,6 +5364,7 @@ Transform:
   - {fileID: 435509776}
   - {fileID: 113544072}
   - {fileID: 1388293188}
+  - {fileID: 75859783}
   - {fileID: 1298457470}
   - {fileID: 251025145}
   - {fileID: 1573587561}
@@ -5977,7 +5978,7 @@ PrefabInstance:
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
       propertyPath: launchSFXName
-      value: EXP_1
+      value: event:/Weapons/Fire Magic
       objectReference: {fileID: 0}
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
@@ -7865,7 +7866,7 @@ PrefabInstance:
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
       propertyPath: launchSFXName
-      value: EXP_1
+      value: None
       objectReference: {fileID: 0}
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
@@ -15294,7 +15295,7 @@ PrefabInstance:
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
       propertyPath: launchSFXName
-      value: EXP_1
+      value: event:/Weapons/Fire Magic
       objectReference: {fileID: 0}
     - target: {fileID: 2702351743878071637, guid: 2e2462aecf9512740b94260f38ba5d18,
         type: 3}
@@ -17412,7 +17413,6 @@ SceneRoots:
   - {fileID: 1488738696}
   - {fileID: 1814275152}
   - {fileID: 122979716}
-  - {fileID: 75859783}
   - {fileID: 269986282}
   - {fileID: 1370564625}
   - {fileID: 608835419}

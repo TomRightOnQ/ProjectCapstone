@@ -32,6 +32,9 @@ public class PlayerCamera : MonoBehaviour
     // Settings
     [SerializeField] private bool bScreenShake = true;
 
+    // Special Loading Effect
+    [SerializeField] private GameObject cameraLoadingEffect_WaterSphere;
+
     private void Awake()
     {
         if (playerCamera == null)
@@ -178,6 +181,18 @@ public class PlayerCamera : MonoBehaviour
         }
         // Reset the camera's position after shaking
         transform.localPosition = originalPos;
+    }
+
+    // Play Special Effects
+    public bool PlayCameraLoadingEffect_WaterSphere()
+    {
+        if (cameraLoadingEffect_WaterSphere != null)
+        {
+            cameraLoadingEffect_WaterSphere.SetActive(true);
+            GameEffectManager.Instance.PlayUISound("SFX Teleoport 1");
+            return true;
+        }
+        return false;
     }
 
     // Private:

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4349.428, g: 2864.43, b: 2555.5315, a: 1}
+  m_IndirectSpecularColor: {r: 4349.219, g: 2864.9338, b: 2556.594, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4361,6 +4361,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1043578318 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5472669501707413775, guid: 5b050357d1433204294ad8c28650aa64,
+    type: 3}
+  m_PrefabInstance: {fileID: 3102946628168554600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1044324891
 GameObject:
   m_ObjectHideFlags: 0
@@ -7414,6 +7420,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1647162448 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+    type: 3}
+  m_PrefabInstance: {fileID: 8574902072612285974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1684148478
 GameObject:
   m_ObjectHideFlags: 0
@@ -9144,6 +9156,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCameraAudienceLow
       objectReference: {fileID: 0}
+    - target: {fileID: 5472669501707413762, guid: 5b050357d1433204294ad8c28650aa64,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5472669501707413769, guid: 5b050357d1433204294ad8c28650aa64,
         type: 3}
       propertyPath: camMaxX
@@ -9164,6 +9181,11 @@ PrefabInstance:
       propertyPath: defaultAngle
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: 5472669501707413769, guid: 5b050357d1433204294ad8c28650aa64,
+        type: 3}
+      propertyPath: cameraLoadingEffect_WaterSphere
+      value: 
+      objectReference: {fileID: 8574902072612285975}
     - target: {fileID: 5472669501707413772, guid: 5b050357d1433204294ad8c28650aa64,
         type: 3}
       propertyPath: field of view
@@ -9244,9 +9266,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8387187185959282499, guid: 5b050357d1433204294ad8c28650aa64,
+        type: 3}
+      propertyPath: attenuationObject
+      value: 
+      objectReference: {fileID: 8574902072612285975}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5472669501707413775, guid: 5b050357d1433204294ad8c28650aa64,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1647162448}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b050357d1433204294ad8c28650aa64, type: 3}
 --- !u!1001 &3845278565274886801
@@ -9360,6 +9391,85 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7a040404cb67304da7d09641b66f019, type: 3}
+--- !u!1001 &8574902072612285974
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1043578318}
+    m_Modifications:
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.094
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.364
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8270119159230506126, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraLoadingEffect_WaterSphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 8270119159230506126, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b695903b17d0b9445be259c19d176001, type: 3}
+--- !u!1 &8574902072612285975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8270119159230506126, guid: b695903b17d0b9445be259c19d176001,
+    type: 3}
+  m_PrefabInstance: {fileID: 8574902072612285974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

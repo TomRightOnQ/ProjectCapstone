@@ -143,6 +143,7 @@ public class UI_CharacterPicker : UIBase
 
     public void OnClick_Btn_Confirm()
     {
+        CharacterManager.Instance.HideCharacterPickerPanel();
         EnterLevel();
     }
 
