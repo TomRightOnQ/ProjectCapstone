@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 735.33795, g: 485.66168, b: 312.09036, a: 1}
+  m_IndirectSpecularColor: {r: 734.97296, g: 485.5611, b: 312.14114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1264,6 +1264,11 @@ PrefabInstance:
       propertyPath: m_SpotLightShape
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4338447511829557702, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4934849586559773176, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
       propertyPath: m_Range
@@ -1377,12 +1382,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa5e41821facbf4f8f9682c714955a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightComponent: {fileID: 0}
+  lightComponent: {fileID: 815904841}
   LOW_SHAODW_RESOLUTION: 512
   MEDIUM_SHAODW_RESOLUTION: 512
   HIGH_SHAODW_RESOLUTION: 512
   bDisableAtLow: 1
   bNoShadow: 0
+--- !u!114 &815904841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4338447511829557702, guid: b16cacc89533bb64fabb47cde412645c,
+    type: 3}
+  m_PrefabInstance: {fileID: 815904837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815904839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &821809601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,11 +2922,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 342902851473896460, guid: b474fe9bf9ba99b47a31311d880f3314,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1399367828}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b474fe9bf9ba99b47a31311d880f3314, type: 3}
 --- !u!4 &1399367826 stripped
 Transform:
@@ -2917,30 +2930,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1399367825}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1399367827 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 342902851473896460, guid: b474fe9bf9ba99b47a31311d880f3314,
-    type: 3}
-  m_PrefabInstance: {fileID: 1399367825}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1399367828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399367827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fa5e41821facbf4f8f9682c714955a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightComponent: {fileID: 0}
-  LOW_SHAODW_RESOLUTION: 512
-  MEDIUM_SHAODW_RESOLUTION: 512
-  HIGH_SHAODW_RESOLUTION: 512
-  bDisableAtLow: 1
-  bNoShadow: 0
 --- !u!1 &1435347846
 GameObject:
   m_ObjectHideFlags: 0
@@ -4099,36 +4088,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 342902851473896460, guid: b474fe9bf9ba99b47a31311d880f3314,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 523532807620358251}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b474fe9bf9ba99b47a31311d880f3314, type: 3}
---- !u!1 &523532807620358250 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 342902851473896460, guid: b474fe9bf9ba99b47a31311d880f3314,
-    type: 3}
-  m_PrefabInstance: {fileID: 523532807620358249}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &523532807620358251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 523532807620358250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fa5e41821facbf4f8f9682c714955a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightComponent: {fileID: 0}
-  LOW_SHAODW_RESOLUTION: 512
-  MEDIUM_SHAODW_RESOLUTION: 512
-  HIGH_SHAODW_RESOLUTION: 512
-  bDisableAtLow: 1
-  bNoShadow: 0
 --- !u!1001 &1540225680491433604
 PrefabInstance:
   m_ObjectHideFlags: 0

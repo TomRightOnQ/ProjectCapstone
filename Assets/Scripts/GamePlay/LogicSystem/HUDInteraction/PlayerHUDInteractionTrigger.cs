@@ -29,7 +29,7 @@ public class PlayerHUDInteractionTrigger : MonoBehaviour
                 {
                     if (otherTrigger.InteractionIDs[i] != -1)
                     {
-                        HUDInteractionManager.Instance.AddInteractionToUIList(otherTrigger.InteractionIDs[i]);
+                        HUDInteractionManager.Instance.AddInteractionToUIList(otherTrigger.InteractionIDs[i], otherTrigger.objectBase);
                     }
                 }
             }

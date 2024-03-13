@@ -4856,7 +4856,7 @@ Transform:
   m_GameObject: {fileID: 2792502876213663796}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.387, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4903,7 +4903,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 98d3401be9ba2844e9b17031f00804af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8427614b6a1bf5b4089ed4ed598ef5b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9808,8 +9808,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.73026824, y: 0.91582155, z: 1}
-  m_Center: {x: -0.01719749, y: 0.0384686, z: 0}
+  m_Size: {x: 0.7190256, y: 1.2373526, z: 1}
+  m_Center: {x: 0.0064115524, y: 0.19923413, z: 0}
 --- !u!54 &7146752433052942948
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9966,14 +9966,15 @@ MonoBehaviour:
   objectName: 
   interactionTrigger: {fileID: 0}
   bubble: {fileID: 4098651510400272310}
+  bCanChangeFace: 1
   unitRigidBody: {fileID: 7146752433052942948}
   maxHP: 20
   currentHP: 20
   defense: 0
   attack: 0
-  speedBase: 14
+  speedBase: 12
   speedModifier: 1
-  speedAccel: 25
+  speedAccel: 22
   damageParticle: {fileID: 3497562306011768524}
   healParticle: {fileID: 4066944181009978036}
   playerController: {fileID: 1534593993483746552}
@@ -9989,6 +9990,7 @@ MonoBehaviour:
   skillCD: 8
   bSkillReady: 1
   projectileName: 
+  playerAudio: {fileID: 0}
 --- !u!114 &1534593993483746552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10052,6 +10054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   surfaceType: Carpet
   WALK_EVENT_NAME: event:/Character/Player Footsteps
+  HIT_EVENT_NAME: event:/Hits/Player Hit
   walkTimeDiff: 0.5
   bWalking: 0
   playerRigidBody: {fileID: 7146752433052942948}
@@ -10151,7 +10154,7 @@ Transform:
   m_GameObject: {fileID: 8007294120545735249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.19999981}
+  m_LocalPosition: {x: 0, y: 0.191, z: -0.19999981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10188,7 +10191,7 @@ Light:
       e02: 0
       e03: 0
       e10: 0
-      e11: 1.9119282
+      e11: 1.4871254
       e12: 0
       e13: 0
       e20: 0
@@ -10210,11 +10213,11 @@ Light:
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 1.4378757, y: 1.0460644}
+  m_AreaSize: {x: 1.4378757, y: 1.3448765}
   m_BounceIntensity: 1
   m_ColorTemperature: 6151
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0.33043242, w: 0.94848293}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0.33043242, w: 1.0383787}
   m_UseBoundingSphereOverride: 1
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -10245,7 +10248,7 @@ MonoBehaviour:
   m_AffectSpecular: 1
   m_NonLightmappedOnly: 0
   m_ShapeWidth: 1.4378757
-  m_ShapeHeight: 1.0460644
+  m_ShapeHeight: 1.3448765
   m_AspectRatio: 1
   m_ShapeRadius: 0.025
   m_SoftnessScale: 1

@@ -10,6 +10,9 @@ public class Boss_2 : Boss
     // Shield Object
     [SerializeField] private GameObject bossShield;
 
+    // MainTex
+    [SerializeField] private GameObject _MainTex;
+
     protected override void Awake()
     {
         base.Awake();
@@ -104,6 +107,26 @@ public class Boss_2 : Boss
         }
         checkCurrentHealth();
     }
+
+    // Change Facing
+    public override void ChangeFacing(bool bLeft = true)
+    {
+        if (!bCanChangeFace)
+        {
+            return;
+        }
+        if (bLeft)
+        {
+            _MainTex.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            _MainTex.transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        facingRight = !bLeft;
+    }
+
 
     // Private methods for weapon and behavior group
     private void stage_1()

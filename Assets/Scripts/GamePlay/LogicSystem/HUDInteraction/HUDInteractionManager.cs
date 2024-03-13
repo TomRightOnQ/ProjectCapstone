@@ -47,7 +47,7 @@ public class HUDInteractionManager : MonoBehaviour
     }
 
     // Add interaction to the list
-    public void AddInteractionToUIList(int interactionID)
+    public void AddInteractionToUIList(int interactionID, MObject interactionCarrier)
     {
         // Check the type of the interaction before proceeding
         HUDInteractionData.HUDInteractionDataStruct interactionData = HUDInteractionData.GetData(interactionID);
@@ -67,7 +67,7 @@ public class HUDInteractionManager : MonoBehaviour
         }
         else 
         {
-            ui_HUDInteraction.AddInteraction(interactionID);
+            ui_HUDInteraction.AddInteraction(interactionID, interactionCarrier);
         }
     }
 

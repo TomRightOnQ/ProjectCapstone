@@ -9,6 +9,15 @@ public class Boss_1 : Boss
 {
     // Shield Object
     [SerializeField] private GameObject bossShield;
+    [SerializeField] private float noShieldLow = 1f;
+    [SerializeField] private float noShieldHigh = 3f;
+    [SerializeField] private GameObject damageZone;
+
+    // Material Changing
+    [SerializeField] private List<Material> materialList = new List<Material>();
+    [SerializeField] private MeshRenderer mainRenderer;
+
+    [SerializeField, ReadOnly] private bool bShieldDown = false;
 
     protected override void Awake()
     {
@@ -22,6 +31,22 @@ public class Boss_1 : Boss
         EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_C_1, bossBegin);
     }
 
+    // Public:
+    // Disable Shield
+    public void DisableShield()
+    {
+        float disableTime = Random.Range(noShieldLow, noShieldHigh);
+        bossShield.SetActive(false);
+        bShieldDown = true;
+        Invoke("ActiveShield", disableTime);
+    }
+
+    public void ActiveShield()
+    {
+        bossShield.SetActive(true);
+        bShieldDown = false;
+    }
+
     // Begin to work
     private void bossBegin()
     {
@@ -29,13 +54,13 @@ public class Boss_1 : Boss
         InputManager.Instance.LockInput();
         // Animation and await
         StartCoroutine(bossSpawning());
+        StartCoroutine(blinkingEffectCoroutine());
     }
 
     private IEnumerator bossSpawning()
     {
         PersistentDataManager.Instance.MainCamera.ShakeCamera(2.75f, 0.5f);
         bossAnimator.Play("BossSpawn");
-
         if (GameManager2D.Instance != null)
         {
             GameManager2D.Instance.ShowBossInfo();
@@ -46,6 +71,7 @@ public class Boss_1 : Boss
         // Spawn the Shield
         ReminderManager.Instance.ShowSubtitleReminder(9);
         bossShield.SetActive(true);
+        damageZone.SetActive(true);
         bossCollider.enabled = true;
 
         // Unlock Input
@@ -61,6 +87,33 @@ public class Boss_1 : Boss
         ReminderManager.Instance.ShowSubtitleReminder(10);
         yield return new WaitForSeconds(2.5f);
         ReminderManager.Instance.ShowSubtitleReminder(11);
+    }
+
+    // If damaged with shield, remove it
+    public override void TakeDamage(float damage = 0, bool bForceDamage = false, bool bPercentDamage = false, bool bRealDamage = false)
+    {
+        base.TakeDamage(damage, bForceDamage, bPercentDamage, bRealDamage);
+        if (!bShieldDown)
+        {
+            DisableShield();
+        }
+    }
+
+    // Blinking Effect
+    private IEnumerator blinkingEffectCoroutine()
+    {
+        if (materialList.Count == 0 || mainRenderer == null)
+        {
+            yield break;
+        }
+
+        float effectDuration = Random.Range(0f, 1.5f);
+        while (true)
+        {
+            Material randomMaterial = materialList[Random.Range(0, materialList.Count)];
+            mainRenderer.material = randomMaterial;
+            yield return new WaitForSeconds(effectDuration);
+        }
     }
 
     // Update HP to UIs

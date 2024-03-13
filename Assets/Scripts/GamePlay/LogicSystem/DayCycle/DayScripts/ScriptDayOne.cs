@@ -52,6 +52,9 @@ public class ScriptDayOne : DayScriptBase
             case 1100:
                 task_1_1_0(bPre);
                 break;
+            case 1101:
+                task_1_1_1(bPre);
+                break;
             default:
                 break;
         }
@@ -153,7 +156,7 @@ public class ScriptDayOne : DayScriptBase
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 10006);
         // Show the black-out screen and change time to sunset
         ReminderManager.Instance.ShowWholeScreenReminder(2);
-        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_SUNSET, true);
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NIGHT, true);
         TaskManager.Instance.UnlockTask(1005);
     }
 
@@ -184,6 +187,7 @@ public class ScriptDayOne : DayScriptBase
             NPCManager.Instance.AddNewNPCToSave(1102, Constants.SCENE_ROOMA_LEVEL, new Vector3(4.35f, 0.6f, -1.4f));
             NPCManager.Instance.AddInteractionToNPC(1102, 10009);
             SaveManager.Instance.SetNPCActive(1102, true);
+            TaskManager.Instance.UnlockTask(1101);
             return;
         }
     }
@@ -201,5 +205,20 @@ public class ScriptDayOne : DayScriptBase
         // Remove NPC
         NPCManager.Instance.RemoveInteractionFromNPC(1002, 10007);
         NPCManager.Instance.RemoveNPCFromSave(1002);
+    }
+
+    public void task_1_1_1(bool bPre)
+    {
+        if (bPre)
+        {
+            // Add NPC_1_2
+            NPCManager.Instance.AddNewNPCToSave(1003, Constants.SCENE_GUILD_LEVEL, new Vector3(4.6f, 0.56f, 0.22f));
+            SaveManager.Instance.SetNPCActive(1003, true);
+            NPCManager.Instance.AddInteractionToNPC(1003, 10010);
+            return;
+        }
+        // Remove NPC
+        NPCManager.Instance.AddInteractionToNPC(1003, 10011);
+        NPCManager.Instance.RemoveInteractionFromNPC(1003, 10010);
     }
 }

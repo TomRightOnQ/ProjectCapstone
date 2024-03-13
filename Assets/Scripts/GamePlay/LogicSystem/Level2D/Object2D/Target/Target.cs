@@ -64,6 +64,7 @@ public class Target : MEntity
     // Launch the Target
     public virtual void Launch(Vector3 luanchDirection, float force = 1f)
     {
+        transform.up = luanchDirection;
         targetRigidBody.velocity = Vector3.zero;
         if (targetRigidBody == null)
         {
@@ -71,7 +72,7 @@ public class Target : MEntity
         }
         gameObject.SetActive(true);
 
-        targetRigidBody.velocity = luanchDirection * targetSpeed * force;
+        targetRigidBody.velocity = transform.up * targetSpeed * force;
         bExploded = false;
     }
 

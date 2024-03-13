@@ -95,6 +95,10 @@ public class TargetLauncher : MEntity
     {
         // Spawn Target
         GameObject targetObj = PrefabManager.Instance.Instantiate(targetName, gameObject.transform.position, Quaternion.identity);
+        if (targetObj == null)
+        {
+            return;
+        }
         Target target = targetObj.GetComponent<Target>();
         // Calculate Launch force muliplier
         float launchForce = Random.Range(minLaunchForce, maxLaunchForce);

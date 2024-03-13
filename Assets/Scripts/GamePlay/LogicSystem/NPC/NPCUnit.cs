@@ -44,4 +44,17 @@ public class NPCUnit : EUnit
             interactionTrigger.SetUpTrigger(npcData.interactionIDs[i]);
         }
     }
+
+    // Facing the Player
+    public void FacingPlayer()
+    {
+        if (PersistentDataManager.Instance.MainPlayer.transform.position.x > transform.position.x)
+        {
+            ChangeFacing(true);
+        }
+        else 
+        {
+            ChangeFacing(false);
+        }
+    }
 }

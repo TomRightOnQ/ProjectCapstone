@@ -97,6 +97,10 @@ public class PrefabManager : MonoBehaviour
                 }
 
                 GameObject instance = Pooling.Instance.GetObj(prefabName);
+                if (instance == null)
+                {
+                    return null;
+                }
                 instance.transform.position = position;
                 instance.transform.rotation = rotation;
                 instance.SetActive(true);
@@ -106,11 +110,25 @@ public class PrefabManager : MonoBehaviour
         return GameObject.Instantiate(prefabData.PrefabReference, position, rotation);
     }
 
+    // With this variation, skip the pooling and place directly
+    public GameObject Instantiate(string prefabName, Vector3 position, Quaternion rotation, bool bPlacingNPC = true)
+    {
+        NPCPrefabData prefabData = NPCConfig.Instance.GetPrefabData(prefabName);
+        return GameObject.Instantiate(prefabData.PrefabReference, position, rotation);
+    }
 
     public void Destroy(GameObject gameObject)
     {
         string prefabName = gameObject.name.Replace("(Clone)", "").Trim();
         PrefabData prefabData = PrefabConfig.Instance.GetPrefabData(prefabName);
+
+        // If the prefab is not fiound, remove it directly
+        if (prefabData.Equals(default(PrefabData)))
+        {
+            GameObject.Destroy(gameObject);
+            return;
+        }
+
         // Check if pool exists
         if (Pooling.Instance.GetPool(prefabData.TypeName) != null)
         {

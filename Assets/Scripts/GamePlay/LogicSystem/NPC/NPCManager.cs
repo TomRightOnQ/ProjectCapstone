@@ -68,7 +68,7 @@ public class NPCManager : MonoBehaviour
     public void SpawnNPC(int npcID, Vector3 position, Quaternion rotation)
     {
         NPCData.NPCDataStruct npcData = NPCData.GetData(npcID);
-        GameObject npcObject = PrefabManager.Instance.Instantiate(npcData.Name, position, rotation);
+        GameObject npcObject = PrefabManager.Instance.Instantiate(npcData.Name, position, rotation, true);
         if (npcObject != null)
         {
             NPCUnit npc = npcObject.GetComponent<NPCUnit>();
@@ -79,7 +79,7 @@ public class NPCManager : MonoBehaviour
 
     public void SpawnNPC(SaveConfig.NPCSaveData npcData)
     {
-        GameObject npcObject = PrefabManager.Instance.Instantiate(npcData.NpcName, npcData.Position, Quaternion.identity);
+        GameObject npcObject = PrefabManager.Instance.Instantiate(npcData.NpcName, npcData.Position, Quaternion.identity, true);
         if (npcObject != null)
         {
             NPCUnit npc = npcObject.GetComponent<NPCUnit>();

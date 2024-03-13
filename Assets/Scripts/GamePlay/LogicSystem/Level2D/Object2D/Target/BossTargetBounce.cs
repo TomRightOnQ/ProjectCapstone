@@ -29,11 +29,19 @@ public class BossTargetBounce : Target
 
         instanceMaterial.SetFloat("_Hitted", 0.25f);
 
-        // No gravity for bounced bullets
         targetRigidBody.useGravity = false;
+        Vector3 incomingVec = targetRigidBody.velocity;
+        Vector3 normalVec = (transform.position - theOtherPosition).normalized;
 
-        Vector3 difference = (transform.position - theOtherPosition).normalized;
-        targetRigidBody.velocity = targetRigidBody.velocity.magnitude * difference;
+        Vector3 reflectVec = Vector3.Reflect(incomingVec, normalVec);
+        float energyLossFactor = 0.75f;
+        reflectVec = reflectVec.normalized * incomingVec.magnitude * energyLossFactor;
+
+        float randomness = 0.1f;
+        Vector3 randomVec = new Vector3(Random.Range(-randomness, randomness), Random.Range(-randomness, randomness), Random.Range(-randomness, randomness));
+        reflectVec += randomVec;
+
+        targetRigidBody.velocity = reflectVec;
     }
 
     // Override to be able to damage the boss
@@ -81,6 +89,24 @@ public class BossTargetBounce : Target
             {
                 boss.TakeDamage(damageToPlayer);
                 PersistentDataManager.Instance.MainCamera.ShakeCamera(0.1f, 0.01f);
+            }
+            deactivate();
+        }
+        else if (bBounced && other.tag == "Shield")
+        {
+            targetRigidBody.useGravity = true;
+            bExploded = true;
+            if (explodeVFXName != "None")
+            {
+                GameEffectManager.Instance.PlayVFX(explodeVFXName,
+                    new Vector3(transform.position.x, transform.position.y, 0),
+                    transform.localScale);
+            }
+            // Damage the shield
+            Boss_1 boss = FindFirstObjectByType<Boss_1>();
+            if (boss != null)
+            {
+                boss.DisableShield();
             }
             deactivate();
         }

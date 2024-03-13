@@ -51,9 +51,11 @@ public class PersistentGameManager : MonoBehaviour
 
         Debug.Log("1. PrefabConfig Loading");
         PrefabConfig.Instance.Init();
-        Debug.Log("2. LevelConfig Loading");
+        Debug.Log("2. NPCConfig Loading");
+        NPCConfig.Instance.Init();
+        Debug.Log("3. LevelConfig Loading");
         LevelConfig.Instance.Init();
-        Debug.Log("3. UIConfig Loading");
+        Debug.Log("4. UIConfig Loading");
         UIConfig.Instance.Init();
         Debug.Log("PersistentGameManager Init: Configs Ready!");
     }

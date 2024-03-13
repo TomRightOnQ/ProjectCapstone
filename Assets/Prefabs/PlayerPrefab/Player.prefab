@@ -104,6 +104,7 @@ MonoBehaviour:
   skillCD: 1
   bSkillReady: 1
   projectileName: 
+  playerAudio: {fileID: 0}
 --- !u!114 &1455064361429526498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   surfaceType: Carpet
   WALK_EVENT_NAME: event:/Character/Player Footsteps
+  HIT_EVENT_NAME: event:/Hits/Player Hit
   walkTimeDiff: 0.65
   bWalking: 0
   playerRigidBody: {fileID: 6126956499534643397}
@@ -346,6 +348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CastShadows
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054287351010181989, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 265
       objectReference: {fileID: 0}
     - target: {fileID: 2735874020404217317, guid: 6c46b038bc0ca4a43b4a10a15c862c27,
         type: 3}

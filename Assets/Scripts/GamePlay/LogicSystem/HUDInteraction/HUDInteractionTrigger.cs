@@ -19,6 +19,14 @@ public class HUDInteractionTrigger : MonoBehaviour
     private List<int> interactionIDs = new List<int>();
     public List<int> InteractionIDs => interactionIDs;
 
+    private void Start()
+    {
+        if (objectBase == null)
+        {
+            objectBase = GetComponentInParent<MObject>();
+        }
+    }
+
     //Public:
 
     public void SetUpTrigger(int interactionID)

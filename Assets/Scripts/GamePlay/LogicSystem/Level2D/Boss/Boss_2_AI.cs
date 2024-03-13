@@ -10,6 +10,7 @@ public class Boss_2_AI : MonoBehaviour
     [SerializeField] private bool bAIActivated = false;
 
     [SerializeField] private GameObject boss;
+    [SerializeField] private Boss_2 bossComponent;
 
     [SerializeField] private float moveForce = 100f;
     [SerializeField] private float jumpForce = 1000f;
@@ -52,8 +53,9 @@ public class Boss_2_AI : MonoBehaviour
                     }
                  }
 
-                bool moveLeft = calculateMovementDirection();
-                if (moveLeft)
+                bool bMoveLeft = calculateMovementDirection();
+                bossComponent.ChangeFacing(mainPlayer.transform.position.x - transform.position.x <= 0);
+                if (bMoveLeft)
                 {
                     bossRigidBody.AddForce(new Vector3(-moveForce, 0, 0));
                 }

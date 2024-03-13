@@ -35,6 +35,9 @@ public static class ActionData
         {1013, new ActionDataStruct(1013, Enums.TASK_ACTION.Chat, new int[]{10047})},
         {1014, new ActionDataStruct(1014, Enums.TASK_ACTION.CompleteTask, new int[]{1005})},
         {1015, new ActionDataStruct(1015, Enums.TASK_ACTION.Chat, new int[]{10052})},
+        {1016, new ActionDataStruct(1016, Enums.TASK_ACTION.Chat, new int[]{10053})},
+        {1017, new ActionDataStruct(1017, Enums.TASK_ACTION.Chat, new int[]{10068})},
+        {1018, new ActionDataStruct(1018, Enums.TASK_ACTION.CompleteTask, new int[]{1101})},
     };
 
     public static ActionDataStruct GetData(int id)

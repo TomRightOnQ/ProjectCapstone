@@ -25,10 +25,15 @@ public static class NPCData
     }
     public static Dictionary<int, NPCDataStruct> data = new Dictionary<int, NPCDataStruct>
     {
-        {1000, new NPCDataStruct(1000, "NPC_1_0", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
-        {1001, new NPCDataStruct(1001, "NPC_1_1", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
-        {1002, new NPCDataStruct(1002, "NPC_1_2", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
-        {1003, new NPCDataStruct(1003, "NPC_1_3", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
+        {1000, new NPCDataStruct(1000, "NPC_S0_Guide", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
+        {1001, new NPCDataStruct(1001, "NPC_C3_Dove", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
+        {1002, new NPCDataStruct(1002, "NPC_S1_Jack", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
+        {1003, new NPCDataStruct(1003, "NPC_S2_Bacon", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
+        {1004, new NPCDataStruct(1004, "NPC_P1_Darlan", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
+        {1005, new NPCDataStruct(1005, "NPC_P2_Lanuarius", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
+        {1006, new NPCDataStruct(1006, "NPC_P3_Francois", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
+        {1007, new NPCDataStruct(1007, "NPC_P4_Chesteria", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
+        {1008, new NPCDataStruct(1008, "NPC_C2_Veronique", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
         {1100, new NPCDataStruct(1100, "DNPC_Item_0", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
         {1101, new NPCDataStruct(1101, "DNPC_Item_1", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},
         {1102, new NPCDataStruct(1102, "DNPC_Item_2", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false)},

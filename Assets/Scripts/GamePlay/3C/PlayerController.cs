@@ -222,6 +222,9 @@ public class PlayerController : MonoBehaviour
         {
             player.FireProjectile(directionToCursor, targetTransform);
         }
+
+        // Config Facing
+        player.ChangeFacing(directionToCursor.x < 0);
     }
 
     private void FindTarget()
@@ -303,6 +306,10 @@ public class PlayerController : MonoBehaviour
         // Update moveInput with the current input value
         moveInput = context.ReadValue<Vector2>();
         // Flip the player
+        if (!bWorld)
+        {
+            return;
+        }
         if (moveInput.x < 0)
         {
             player.ChangeFacing(true);

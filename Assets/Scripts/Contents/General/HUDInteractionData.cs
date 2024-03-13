@@ -33,6 +33,8 @@ public static class HUDInteractionData
         {10007, new HUDInteractionDataStruct(10007, "?", new int[]{1010}, false, false)},
         {10008, new HUDInteractionDataStruct(10008, "Looks Good!", new int[]{1013}, false, false)},
         {10009, new HUDInteractionDataStruct(10009, "Sleep!", new int[]{1015}, false, false)},
+        {10010, new HUDInteractionDataStruct(10010, "???", new int[]{1016}, false, false)},
+        {10011, new HUDInteractionDataStruct(10011, "Weird Guy", new int[]{1017}, false, false)},
     };
 
     public static HUDInteractionDataStruct GetData(int id)

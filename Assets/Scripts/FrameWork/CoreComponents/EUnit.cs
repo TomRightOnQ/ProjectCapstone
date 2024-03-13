@@ -9,7 +9,7 @@ public class EUnit : MEntity
     // Data Section
     // Facing
     protected bool facingRight = true;
-    protected bool bCanChangeFace = false;
+    [SerializeField] protected bool bCanChangeFace = false;
 
     // If unit is inmmune to damage - notive that this unit is still considered in damage system in this case
     protected bool bInvulnerable = false;
@@ -53,7 +53,7 @@ public class EUnit : MEntity
     }
 
     // Change the direction of sprite
-    public void ChangeFacing(bool bLeft = true)
+    public virtual void ChangeFacing(bool bLeft = true)
     {
         if (!bCanChangeFace)
         {

@@ -23,7 +23,7 @@ public class RotationalDamageTaker : MonoBehaviour
 
     // Switching
     [SerializeField] private bool bDamageMode = true;
-    [SerializeField, ReadOnly] private bool bReady = false;
+    [SerializeField] private bool bReady = false;
 
     [SerializeField] private bool bAutoSwitching = true;
     [SerializeField] private int minSwitchingTime = 7;

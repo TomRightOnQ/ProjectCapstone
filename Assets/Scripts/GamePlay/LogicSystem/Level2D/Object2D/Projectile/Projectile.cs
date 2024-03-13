@@ -177,7 +177,7 @@ public class Projectile : MEntity
             // Notify the main camera to shake
             PersistentDataManager.Instance.MainCamera.ShakeCamera(0.05f, 0.005f);
         }
-        else if (other.tag == "Terrain" || other.tag == "Barrier")
+        else if (other.tag == "Terrain" || other.tag == "Barrier" || other.tag == "Shield")
         {
             explode();
         }

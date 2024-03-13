@@ -30,7 +30,7 @@ public class UI_ChatInteraction : UIBase
         p_ChatChoicePanel.SetActive(false);
 
         // Set Chat text
-        TB_ChatSepaker.text = currentInteraction.Speaker;
+        TB_ChatSepaker.text = StringConstData.GetData(currentInteraction.Speaker).Content;
         TB_ChatContent.text = currentInteraction.Content;
 
         if (currentInteraction.bEnd || currentInteraction.Next > 0)

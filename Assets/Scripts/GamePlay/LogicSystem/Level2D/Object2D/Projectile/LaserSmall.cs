@@ -31,7 +31,7 @@ public class LaserSmall : Projectile
                 GameEffectManager.Instance.PlayVFX("LaserExplode", hit.point, Vector3.one);
                 hit.collider.GetComponent<Boss>().TakeDamage(projDamage);
             }
-            else if (hit.collider.CompareTag("Terrain") || hit.collider.CompareTag("Barrier"))
+            else if (hit.collider.CompareTag("Terrain") || hit.collider.CompareTag("Barrier") || hit.collider.CompareTag("Shield"))
             {
                 // Play Effect At the End and Each Collision
                 GameEffectManager.Instance.PlayVFX("LaserExplode", hit.point, Vector3.one);

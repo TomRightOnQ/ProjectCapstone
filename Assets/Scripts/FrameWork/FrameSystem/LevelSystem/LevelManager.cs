@@ -331,13 +331,13 @@ public class LevelManager : MonoBehaviour
         GameObject playerObject;
         if (playerData.Scene == sceneName)
         {
-            playerObject = PrefabManager.Instance.Instantiate(playerPrefabName, playerData.Position, Quaternion.identity);
+            playerObject = PrefabManager.Instance.Instantiate(playerPrefabName, playerData.Position, Quaternion.identity.normalized, true);
         }
         else 
         {
             LevelData levelData = LevelConfig.Instance.GetLevelData(sceneName);
             // Place the player and the background according to the groupID
-            playerObject = PrefabManager.Instance.Instantiate(playerPrefabName, levelData.SpawnPoints[groupID], Quaternion.identity);
+            playerObject = PrefabManager.Instance.Instantiate(playerPrefabName, levelData.SpawnPoints[groupID], Quaternion.identity, true);
             if (ParallaxScrollingBG.Instance != null)
             {
                 Vector3 bgPosition = new Vector3(

@@ -190,11 +190,11 @@ public class UI_Menu : UIBase
             {
                 if (SaveConfig.Instance.MenuModuleLockList[i])
                 {
-                    functionalButtonList[i].gameObject.SetActive(false);
+                    functionalButtonList[i].interactable = false;
                 }
                 else 
                 {
-                    functionalButtonList[i].gameObject.SetActive(true);
+                    functionalButtonList[i].interactable = true;
                 }
             }
         }

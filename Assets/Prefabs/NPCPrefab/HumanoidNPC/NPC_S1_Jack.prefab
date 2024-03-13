@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1640568367135438283}
   - component: {fileID: 3062176579606561893}
   m_Layer: 11
-  m_Name: NPC_1_2_Jack
+  m_Name: NPC_S1_Jack
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,6 +133,8 @@ MonoBehaviour:
   uuid: 0
   objectName: 
   interactionTrigger: {fileID: 5064749617566895466}
+  bubble: {fileID: 0}
+  bCanChangeFace: 1
   unitRigidBody: {fileID: 0}
   maxHP: 0
   currentHP: 0
@@ -141,6 +143,8 @@ MonoBehaviour:
   speedBase: 1
   speedModifier: 1
   speedAccel: 1
+  damageParticle: {fileID: 0}
+  healParticle: {fileID: 0}
   npcID: 0
 --- !u!1001 &5858591332949818185
 PrefabInstance:
