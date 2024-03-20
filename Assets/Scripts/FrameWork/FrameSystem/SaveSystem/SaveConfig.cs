@@ -72,6 +72,10 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
     private GameEvent.Event currentGameTime = GameEvent.Event.TIME_NOON;
     public GameEvent.Event CurrentGameTime => currentGameTime;
 
+    // Special Group - Custom Variables
+    private Dictionary<string, bool> globalBoolVariables = new Dictionary<string, bool>();
+    public Dictionary<string, bool> GlobalBoolVariables => globalBoolVariables;
+
     /// <summary>
     /// Data mainMenuoduleLockList
     /// </summary>
@@ -462,6 +466,19 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         currentGameTime = timeEnum;
     }
 
+    // Modify Global Variables
+    public void SetGlobalVariable(string _name, bool bTrue)
+    {
+        if (globalBoolVariables.ContainsKey(_name))
+        {
+            globalBoolVariables[_name] = bTrue;
+        }
+        else 
+        {
+            globalBoolVariables.Add(_name, bTrue);
+        }
+    }
+
     public void RemoveInteractionFromNPC(int npcID, int interactionID)
     {
         var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
@@ -469,8 +486,22 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
         {
             if (!npc.interactionIDs.Remove(interactionID))
             {
-                Debug.LogWarning($"InteractionID {interactionID} not found in NPC with ID {npcID}.");
+                Debug.Log($"InteractionID {interactionID} not found in NPC with ID {npcID}.");
             }
+        }
+        else
+        {
+            Debug.LogWarning($"NPC with ID {npcID} not found.");
+        }
+    }
+
+    // Clear All
+    public void RemoveInteractionFromNPC(int npcID)
+    {
+        var npc = npcSaveDataList.FirstOrDefault(n => n.NpcID.GetHashCode() == npcID);
+        if (npc != null)
+        {
+            npc.interactionIDs.Clear();
         }
         else
         {

@@ -12,25 +12,38 @@ public class P_WholeScreenReminder : MonoBehaviour
     [SerializeField] private Animator reminderAnimator;
 
     // Begin the reminder cycle
-    public void BeginGeneralReminder(int id)
+    public void BeginReminder(int id)
     {
         ReminderData.ReminderDataStruct remidnerData = ReminderData.GetData(id);
         tb_ReminderText.text = remidnerData.Content;
 
+        switch (remidnerData.SpeakerType)
+        {
+            case Enums.CHARACTER_TYPE.Friend:
+                tb_ReminderText.color = Color.yellow;
+                break;
+            case Enums.CHARACTER_TYPE.You:
+                tb_ReminderText.color = Color.white;
+                break;
+            case Enums.CHARACTER_TYPE.Enemy:
+                tb_ReminderText.color = Color.black;
+                break;
+        }
+
         reminderAnimator.Play("In");
-        Invoke("EndGeneralReminder", remidnerData.Life);
+        Invoke("EndWholeScreenReminder", remidnerData.Life);
     }
 
     // End the reminder
-    private void EndGeneralReminder()
+    private void EndWholeScreenReminder()
     {
         reminderAnimator.Play("Out");
-        Invoke("ReturnGeneralReminder", 0.51f);
+        Invoke("ReturnWholeScreenReminder", 1f);
     }
     // Back to the pool
-    private void ReturnGeneralReminder()
+    private void ReturnWholeScreenReminder()
     {
-        CancelInvoke("ReturnGeneralReminder");
+        CancelInvoke("ReturnWholeScreenReminder");
         _deactivate();
     }
 

@@ -25,6 +25,10 @@ public static class Constants
     public const int TEST_INT_C3 = 3;  // A normal value
     public const string TEST_STRING_C3 = "unreal";  // A normal value
 
+    // Note
+    public const string NOTES_PREFIX = "You have unlocked a new piece of note: ";  // Reminding new note
+    public const string ITEMS_PREFIX = "You have unlocked a new item: ";  // Reminding new item
+
     // Player
     public const float PLAYER_DAMAGE_CD = 0.25f;  // CD for player taking another damage
 

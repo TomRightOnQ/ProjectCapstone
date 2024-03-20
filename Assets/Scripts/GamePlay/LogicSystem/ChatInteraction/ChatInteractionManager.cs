@@ -39,6 +39,8 @@ public class ChatInteractionManager : MonoBehaviour
             ui_ChatInteraction = uiObject.GetComponent<UI_ChatInteraction>();
             uiObject.SetActive(false);
         }
+        // Bind to detect scene switching
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_EVENT_SCENE_LOADED);
     }
 
 
@@ -75,5 +77,11 @@ public class ChatInteractionManager : MonoBehaviour
 
         // Show HUD
         HUDManager.Instance.ShowAllHUD();
+    }
+
+    // Event Handlers
+    public void OnRecv_EVENT_SCENE_LOADED()
+    {
+        bInChat = false;
     }
 }

@@ -85,6 +85,9 @@ public class TaskManager : MonoBehaviour
                 case Enums.TASK_ACTION.StartGame:
                     CharacterManager.Instance.ShowCharacterPickerPanel(actionData.ActionTarget[0]);
                     break;
+                case Enums.TASK_ACTION.EnterGame:
+                    LevelManager.Instance.Load2DLevel(actionData.ActionTarget[0], actionData.ActionTarget[1]);
+                    break;
                 case Enums.TASK_ACTION.Teleport:
                     LevelManager.Instance.LoadScene(LevelConfig.Instance.GetLevelData(actionData.ActionTarget[0]).SceneName);
                     break;
@@ -101,7 +104,7 @@ public class TaskManager : MonoBehaviour
                     UnlockTasks(actionData.ActionTarget);
                     break;
                 case Enums.TASK_ACTION.CompleteTask:
-                    CompleteTasks(actionData.ActionTarget);
+                    CompleteTask(actionData.ActionTarget);
                     break;
                 case Enums.TASK_ACTION.EnterActing:
                     HUDManager.Instance.EnterActingMode();
@@ -163,14 +166,20 @@ public class TaskManager : MonoBehaviour
         }
         else if (currentTrackedTaskID == -1 && taskID != -1)
         {
-            currentTrackedTaskID = taskID;
-            HUDManager.Instance.UpdateHUDTaskTracking(taskID);
-            setTrackOnTarget();
+            if (!TaskData.GetData(taskID).bHidden)
+            {
+                currentTrackedTaskID = taskID;
+                HUDManager.Instance.UpdateHUDTaskTracking(taskID);
+                setTrackOnTarget();
+            }
         }
         else if (currentTrackedTaskID != -1)
         {
-            HUDManager.Instance.UpdateHUDTaskTracking(taskID);
-            setTrackOnTarget();
+            if (!TaskData.GetData(currentTrackedTaskID).bHidden)
+            {
+                HUDManager.Instance.UpdateHUDTaskTracking(taskID);
+                setTrackOnTarget();
+            }
         }
         else 
         {
@@ -241,7 +250,7 @@ public class TaskManager : MonoBehaviour
     }
 
     // Complete a series of tasks
-    public void CompleteTasks(int[] taskIDs)
+    public void CompleteTask(int[] taskIDs)
     {
         for (int i = 0; i < taskIDs.Length; i++)
         {
@@ -272,6 +281,35 @@ public class TaskManager : MonoBehaviour
             DayCycleManager.Instance.ConfigTaskAction(taskID, true);
         }
         configTaskTracking(taskID);
+    }
+
+    // Destroy the indicator
+    public void StopIndicator()
+    {
+        StopIndicator(currentTrackedTaskID);
+    }
+    public void StopIndicator(int taskID)
+    {
+        if (taskID == -1)
+        {
+            return;
+        }
+        if (SaveManager.Instance.CheckTaskStatus(taskID) == Enums.TASK_STATUS.Triggered)
+        {
+            TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
+            // Reset Tracking
+            // Clear current Tracking
+            if (taskData.bTrackNPC && npcTrackDictionary.ContainsKey(taskData.TrackTarget))
+            {
+                PrefabManager.Instance.Destroy(npcTrackDictionary[taskData.TrackTarget].gameObject);
+                npcTrackDictionary.Remove(taskData.TrackTarget);
+            }
+            else if (positionTrackDictionary.ContainsKey(taskData.TrackTarget))
+            {
+                PrefabManager.Instance.Destroy(npcTrackDictionary[taskData.TrackTarget].gameObject);
+                positionTrackDictionary.Remove(taskData.TrackTarget);
+            }
+        }
     }
 
     // Complete a single task
@@ -319,7 +357,7 @@ public class TaskManager : MonoBehaviour
             return;
         }
         // Create a TaskIndicator on Task UI Canvas and config it
-        GameObject indicatorObj = PrefabManager.Instance.Instantiate("TaskIndicator", Vector3.zero, Quaternion.identity);
+        GameObject indicatorObj = PrefabManager.Instance.Instantiate("TaskIndicator", new Vector3(-1000f, -1000f, -1000f), Quaternion.identity);
         if (indicatorObj == null || indicatorObj.GetComponent<TaskIndicator>() == null)
         {
             return;

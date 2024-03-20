@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -54,6 +55,15 @@ public class ReminderManager : MonoBehaviour
         ui_Reminder.ShowGeneralReminder(id);
     }
 
+    public void ShowGeneralReminder(string content, float life)
+    {
+        if (ui_Reminder == null)
+        {
+            createUI();
+        }
+        ui_Reminder.ShowGeneralReminder(content, life);
+    }
+
     // Show reminder: Subtitle
     public void ShowSubtitleReminder(int id)
     {
@@ -64,6 +74,32 @@ public class ReminderManager : MonoBehaviour
         ui_Reminder.ShowSubtitleReminder(id);
     }
 
+    public void ShowSubtitleReminder(string content, string speaker, float life, Enums.CHARACTER_TYPE speakerType)
+    {
+        if (ui_Reminder == null)
+        {
+            createUI();
+        }
+        ui_Reminder.ShowSubtitleReminder(content, speaker, life, speakerType);
+    }
+
+    public void ShowSubtitleReminder(int[] id)
+    {
+        if (ui_Reminder == null)
+        {
+            createUI();
+        }
+        StartCoroutine(spawnSubtitleReminder(id));
+    }
+
+    private IEnumerator spawnSubtitleReminder(int[] id)
+    {
+        for (int i = 0; i < id.Length; i++)
+        {
+            ui_Reminder.ShowSubtitleReminder(id[i]);
+            yield return new WaitForSeconds(ReminderData.GetData(id[i]).Life + 0.5f);
+        }
+    }
 
     // Show reminder: Level/Map Name
     public void ShowMapNameReminder(string name)
@@ -98,6 +134,24 @@ public class ReminderManager : MonoBehaviour
             createUI();
         }
         ui_Reminder.ShowWholeScreenReminder(reminderID);
+    }
+
+    public void ShowWholeScreenReminder(int[] reminderID, float[] gap)
+    {
+        if (ui_Reminder == null)
+        {
+            createUI();
+        }
+        StartCoroutine(spawnWholeScreenReminder(reminderID, gap));
+    }
+
+    private IEnumerator spawnWholeScreenReminder(int[] reminderID, float[] gap)
+    {
+        for (int i = 0; i < reminderID.Length; i++)
+        {
+            ui_Reminder.ShowWholeScreenReminder(reminderID[i]);
+            yield return new WaitForSeconds(gap[i]);
+        }
     }
 
     // Show a new achievement

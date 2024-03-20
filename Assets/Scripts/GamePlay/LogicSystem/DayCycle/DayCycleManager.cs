@@ -80,8 +80,9 @@ public class DayCycleManager : MonoBehaviour
         // Reset the day script
         if (currentScript != null)
         {
-           currentScript = null;
+            Destroy(currentScript);
         }
+
         // Change the save Status
         SaveManager.Instance.SaveCurrentDay(targetDay);
 
@@ -89,25 +90,9 @@ public class DayCycleManager : MonoBehaviour
         SaveManager.Instance.SaveCurrentDayInited(false);
 
         currentDay = targetDay;
-        // Show Animation
 
         // Add a listner to determine the end of loading
         EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
-
-        // Run the day script
-        switch (targetDay)
-        {
-            case 0:
-                currentScript = new ScriptDayZero();
-                currentScript.Init();
-                break;
-            case 1:
-                currentScript = new ScriptDayOne();
-                currentScript.Init();
-                break;
-            default:
-                break;
-        }
 
         ///
         /// If we are jumping to the beginning of a day, we should alter to the beginning of that day by loading.
@@ -122,9 +107,17 @@ public class DayCycleManager : MonoBehaviour
             SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
         }
 
+        // Run the day script
+        configCurrentDayScript();
+
         // Load Scene
         string targetScene = DayData.GetData(targetDay).StartedScene;
         LevelManager.Instance.LoadScene(targetScene);
+    }
+
+    public void JumpToDay(bool bBack = true)
+    {
+        JumpToDay(currentDay, true);
     }
 
     // Flash to the previous day
@@ -133,7 +126,7 @@ public class DayCycleManager : MonoBehaviour
         DayData.DayDataStruct dayData = DayData.GetData(currentDay);
         if (dayData.PrevDayID != -1)
         {
-            JumpToDay(dayData.PrevDayID, false);
+            JumpToDay(dayData.PrevDayID, true);
         }
     }
 
@@ -210,14 +203,23 @@ public class DayCycleManager : MonoBehaviour
     // Config today's script
     private void configCurrentDayScript()
     {
-        // Run the day script
         switch (currentDay)
         {
             case 0:
-                currentScript = new ScriptDayZero();
+                currentScript = this.gameObject.AddComponent<ScriptDayZero>();
+                currentScript.Init();
                 break;
             case 1:
-                currentScript = new ScriptDayOne();
+                currentScript = this.gameObject.AddComponent<ScriptDayOne>();
+                currentScript.Init();
+                break;
+            case 2:
+                currentScript = this.gameObject.AddComponent<ScriptDayTwo>();
+                currentScript.Init();
+                break;
+            case 3:
+                currentScript = this.gameObject.AddComponent<ScriptDayThree>();
+                currentScript.Init();
                 break;
             default:
                 break;
@@ -232,6 +234,8 @@ public class DayCycleManager : MonoBehaviour
         if (!SaveManager.Instance.GetIsCurrentDayInited())
         {
             SaveManager.Instance.SaveGameSave(currentDay);
+            // Play the first action of the day
+            currentScript.BeginningAction();
         }
         // Mark the current day as inited
         SaveManager.Instance.SaveCurrentDayInited(true);

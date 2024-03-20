@@ -24,6 +24,7 @@ public class UI_ChatInteraction : UIBase
     // Config current chat
     private void refreshChat(int chatID)
     {
+        TB_ChatContent.gameObject.SetActive(false);
         currentInteractionID = chatID;
         currentInteraction = ChatInteractionData.GetData(chatID);
         btn_ClickAny.SetActive(false);
@@ -32,6 +33,9 @@ public class UI_ChatInteraction : UIBase
         // Set Chat text
         TB_ChatSepaker.text = StringConstData.GetData(currentInteraction.Speaker).Content;
         TB_ChatContent.text = currentInteraction.Content;
+
+        // Set active to show the animation
+        TB_ChatContent.gameObject.SetActive(true);
 
         if (currentInteraction.bEnd || currentInteraction.Next > 0)
         {

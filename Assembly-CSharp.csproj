@@ -489,6 +489,7 @@
     <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Level2D\Object2D\Projectile\BulletSmall.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\RangeSlider\Float\RangeSliderFloatValueMaxObserver.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ListView\ListViewInt\ListViewIntSelectedItemProvider.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\Level2D\LevelScript\Level_T_Script.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\InputField\InputFieldExtendedNull.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Misc\StyleCanvas.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Sidebar\SidebarEnums.cs" />
@@ -902,6 +903,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\TileView\TileViewCustom.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Misc\StyleTooltip.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Style\Input\StyleSpinner.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\DayCycle\DayScripts\ScriptDayThree.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\Calendar\CalendarBase.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\Spinner\Int\SpinnerValueProvider.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ThirdPartySupport\DataBindSupport\ListView\ListViewHeight\ListViewHeightSelectedItemObserver.cs" />
@@ -1242,6 +1244,7 @@
     <Compile Include="Assets\New UI Widgets\Scripts\TracksView\Timeline\TimelineData.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\WidgetGeneration\ComboboxGeneratorHelper.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ScrollRectUtilities\Events\ScrollRectPageSelect.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\LogicSystem\DayCycle\DayScripts\ScriptDayTwo.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\Obsolete\ListViewCustomHeight.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\UIThemesSupport\Accordion\AccordionHighlightThemesActiveBackgroundColor.cs" />
     <Compile Include="Assets\New UI Widgets\Scripts\ListView\Events\ListViewCustomEvent.cs" />
@@ -1253,8 +1256,11 @@
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIFlare.shader" />
+    <None Include="Assets\Resources\Texts\Notes\10102.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Resources\Texts\Notes\10103.txt" />
     <None Include="Assets\Resources\Texts\Notes\10100.txt" />
+    <None Include="Assets\Resources\Texts\Notes\10002.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGrayscale.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderPlaneHSV.shader" />
@@ -1264,6 +1270,7 @@
     <None Include="Assets\Prefabs\PlayerPrefab\C1B\C1.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderCircleHSV.shader" />
+    <None Include="Assets\Resources\Texts\Notes\10104.txt" />
     <None Include="Assets\Resources\Texts\Level2D\Text_Leaf.txt" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIRipple.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -1271,9 +1278,12 @@
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderHLineRGB.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderVLineRGB.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\Multiplicative SSU.shader" />
+    <None Include="Assets\Resources\Texts\Notes\10001.txt" />
+    <None Include="Assets\Resources\Texts\Notes\10105.txt" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIGradientShaderVLineHSV.shader" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIFlareGlobal.shader" />
     <None Include="Assets\Resources\Texts\Notes\SampleItem.txt" />
+    <None Include="Assets\Resources\Texts\Notes\10101.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\Standard SSU.shader" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\Additive SSU.shader" />
@@ -1283,6 +1293,7 @@
     <None Include="Assets\Sprite Shaders Ultimate\Demo\Scripts\Color Pick.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Resources\Texts\Notes\3.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Resources\Texts\Level2D\Text_Laser.txt" />
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIWidgets.cginc" />
@@ -1309,6 +1320,7 @@
     <None Include="Assets\New UI Widgets\Assets\Shaders\UIFlareTransparent.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\New UI Widgets\Scripts\WidgetGeneration\DataBindSupport\Provider.template.txt" />
+    <None Include="Assets\Resources\Texts\Notes\10003.txt" />
     <None Include="Assets\Sprite Shaders Ultimate\Shaders\Additive GUI SSU.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\New UI Widgets\readme.txt" />

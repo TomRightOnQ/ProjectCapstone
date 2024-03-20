@@ -185,8 +185,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 156.829}
+  m_AnchoredPosition: {x: -2.5, y: 0}
+  m_SizeDelta: {x: -5, y: 156.829}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4889080563412392731
 CanvasRenderer:
@@ -216,8 +216,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b877c001bce9a1844aaee2cec5610ed6, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 49d4f784350399849b9df06056ad3664, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!114 &4889080563412392733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +349,7 @@ MonoBehaviour:
   CellsBackgroundVersion: 0
   cellsGraphicsBackground: []
   LocalPositionZReset: 0
-  Icon: {fileID: 0}
+  Icon: {fileID: 3590190870804492660}
   Text: {fileID: 0}
   TextAdapter: {fileID: 2837744793618939198}
   SetNativeSize: 1
@@ -385,10 +385,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4889080563412392732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -287, y: 0.000062943}
-  m_SizeDelta: {x: 149.639, y: 149.639}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 88.0989, y: 86.3}
+  m_SizeDelta: {x: 115.4023, y: 115.4023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5739638609334484190
 CanvasRenderer:

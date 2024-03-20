@@ -152,13 +152,14 @@ MonoBehaviour:
   bubble: {fileID: 0}
   targetID: -1
   bExploded: 1
+  bGravity: 0
   explodeVFXName: TargetExplode
   targetRigidBody: {fileID: -3141998030041393323}
   targetSpeed: 60
   targetHP: 1
   targetCurrentHP: 1
   targetLife: 5
-  targetPoints: 1
+  targetPoints: 2
   damageToPlayer: 1
   defaultMaterial: {fileID: 2100000, guid: 9f3288725773ef344aeb2b9ec5c8f4c5, type: 2}
   instanceMaterial: {fileID: 0}

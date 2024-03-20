@@ -21,16 +21,14 @@ public class UI_Reminder : UIBase
     [SerializeField] private GameObject p_SavingReminder;
     [SerializeField] private Animator saveAnimator;
 
-    // Whole Screen
-    [SerializeField] private GameObject p_WholeScreenReminder;
-    [SerializeField] private TextMeshProUGUI tb_WholeScreenText;
-    [SerializeField] private Animator wholeAnimator;
-
     // Achievements
     [SerializeField] private GameObject p_AchievementReminder;
     [SerializeField] private TextMeshProUGUI tb_AchievementName;
     [SerializeField] private Image img_Icon;
     [SerializeField] private Animator achievementAnimator;
+
+    // List to hold reminders
+    [SerializeField] private GameObject sv_ReminderList;
 
     // Public:
     // Show General Reminder - from pooling system
@@ -42,10 +40,24 @@ public class UI_Reminder : UIBase
             Debug.LogWarning("Unable to accquire P_GeneralReminder from pooling");
             return;
         }
-        reminderObj.transform.SetParent(this.transform, false);
+        reminderObj.transform.SetParent(sv_ReminderList.transform, false);
         reminderObj.SetActive(true);
         P_GeneralReminder reminder = reminderObj.GetComponent<P_GeneralReminder>();
         reminder.BeginGeneralReminder(id);
+    }
+
+    public void ShowGeneralReminder(string content, float life)
+    {
+        GameObject reminderObj = PrefabManager.Instance.Instantiate("P_GeneralReminder", Vector3.zero, Quaternion.identity);
+        if (reminderObj == null || reminderObj.GetComponent<P_GeneralReminder>() == null)
+        {
+            Debug.LogWarning("Unable to accquire P_GeneralReminder from pooling");
+            return;
+        }
+        reminderObj.transform.SetParent(sv_ReminderList.transform, false);
+        reminderObj.SetActive(true);
+        P_GeneralReminder reminder = reminderObj.GetComponent<P_GeneralReminder>();
+        reminder.BeginGeneralReminder(content, life);
     }
 
     // Show Subtitle Reminder - from pooling system
@@ -62,6 +74,21 @@ public class UI_Reminder : UIBase
         reminderObj.SetActive(true);
         P_SubtitleReminder reminder = reminderObj.GetComponent<P_SubtitleReminder>();
         reminder.BeginSubtitleReminder(id);
+    }
+
+    public void ShowSubtitleReminder(string content, string speaker, float life, Enums.CHARACTER_TYPE speakerType)
+    {
+        GameObject reminderObj = PrefabManager.Instance.Instantiate("P_SubtitleReminder", Vector3.zero, Quaternion.identity);
+        if (reminderObj == null || reminderObj.GetComponent<P_SubtitleReminder>() == null)
+        {
+            Debug.LogWarning("Unable to accquire P_SubtitleReminder from pooling");
+            return;
+        }
+        reminderObj.transform.SetParent(this.transform, false);
+        reminderObj.transform.localPosition = new Vector3(0, -370, 0);
+        reminderObj.SetActive(true);
+        P_SubtitleReminder reminder = reminderObj.GetComponent<P_SubtitleReminder>();
+        reminder.BeginSubtitleReminder(content, speaker, life, speakerType);
     }
 
     // Show Map Reminder
@@ -124,32 +151,19 @@ public class UI_Reminder : UIBase
     }
 
     // Show WholeScreen Reminder
-    public void ShowWholeScreenReminder(int reminderID)
+    public void ShowWholeScreenReminder(int id)
     {
-        tb_WholeScreenText.text = ReminderData.GetData(reminderID).Content;
-        p_WholeScreenReminder.SetActive(true);
-        wholeAnimator.Play("In");
-        StartCoroutine(closeWholeScreenReminder());
-    }
-
-    private IEnumerator closeWholeScreenReminder()
-    {
-        yield return new WaitForSecondsRealtime(Constants.REMINDER_LEVEL_TIME);
-        HideWholeScreenReminder();
-    }
-
-    // Hide WholeScreen Reminder
-    public void HideWholeScreenReminder()
-    {
-        wholeAnimator.Play("Out");
-        StopCoroutine(closeWholeScreenReminder());
-        Invoke("DisableWholeScreenReminder", 0.5f);
-    }
-
-    // Disable WholeScreen Reminder
-    public void DisableWholeScreenReminder()
-    {
-        p_WholeScreenReminder.SetActive(false);
+        GameObject reminderObj = PrefabManager.Instance.Instantiate("P_WholeScreenReminder", Vector3.zero, Quaternion.identity);
+        if (reminderObj == null || reminderObj.GetComponent<P_WholeScreenReminder>() == null)
+        {
+            Debug.LogWarning("Unable to accquire P_SubtitleReminder from pooling");
+            return;
+        }
+        reminderObj.transform.SetParent(this.transform, false);
+        reminderObj.transform.localPosition = new Vector3(0, -370, 0);
+        reminderObj.SetActive(true);
+        P_WholeScreenReminder reminder = reminderObj.GetComponent<P_WholeScreenReminder>();
+        reminder.BeginReminder(id);
     }
 
     // Show a new achievement

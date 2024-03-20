@@ -15,112 +15,148 @@ MonoBehaviour:
   bAllowRewrite: 0
   playerSaveData:
     PlayerName: You
-    Position: {x: 11, y: 0.6, z: 0}
-    Scene: EntranceLevel
+    Position: {x: 16.25, y: 0.6, z: -1.4}
+    Scene: RoomALevel
   daySaveData:
-    CurrentDay: 1
+    CurrentDay: 2
     bInited: 1
   npcSaveDataList:
-  - NpcID: 1000
-    NpcName: NPC_1_0
-    Position: {x: 4.75, y: 0.6, z: -1.4}
-    interactionIDs: 11270000
-    Scene: RoomALevel
-    bActive: 1
   - NpcID: 1100
     NpcName: DNPC_Item_0
     Position: {x: 6.191, y: 1.22, z: 1.077}
     interactionIDs: 12270000
     Scene: RoomALevel
     bActive: 1
+  - NpcID: 1103
+    NpcName: DNPC_Item_3
+    Position: {x: 9.303, y: 0.44, z: -0.268}
+    interactionIDs: 214e0000
+    Scene: RoomALevel
+    bActive: 1
+  - NpcID: 1000
+    NpcName: NPC_S0_Guide
+    Position: {x: 2.39, y: 0.41, z: -0.21}
+    interactionIDs: 
+    Scene: GuildScene
+    bActive: 1
+  - NpcID: 2200
+    NpcName: DNPC_Trigger_TakeFood
+    Position: {x: 8.2, y: 0.8, z: 0.6}
+    interactionIDs: 
+    Scene: GuildScene
+    bActive: 1
+  - NpcID: 1004
+    NpcName: NPC_P1_Darlan
+    Position: {x: 2.22, y: 2.45, z: -5.28}
+    interactionIDs: 
+    Scene: RoomALevel
+    bActive: 1
+  - NpcID: 1005
+    NpcName: NPC_P2_Lanuarius
+    Position: {x: 15.65, y: 0.65, z: 1}
+    interactionIDs: 
+    Scene: RoomALevel
+    bActive: 1
+  - NpcID: 1006
+    NpcName: NPC_P3_Francois
+    Position: {x: 14.49, y: 0.6, z: 1.26}
+    interactionIDs: 
+    Scene: RoomALevel
+    bActive: 1
+  - NpcID: 1007
+    NpcName: NPC_P4_Chesteria
+    Position: {x: 13.39, y: 0.62, z: 0.64}
+    interactionIDs: 2c4e0000
+    Scene: RoomALevel
+    bActive: 1
   guildSaveDataList:
-  - GuildID: 0
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 1
-    Score: 0
+  - GuildID: 5
+    Score: 954
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 2
-    Score: 0
+    Score: 756
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 3
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 4
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 5
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 6
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 7
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 8
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 9
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 10
-    Score: 0
+    Score: 557
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 11
-    Score: 0
+    Score: 638
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
-  - GuildID: 12
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 13
-    Score: 0
-    DuelWin: 0
-    DuelLose: 0
-    bElminated: 0
-  - GuildID: 14
-    Score: 0
+  - GuildID: 4
+    Score: 546
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   - GuildID: 15
-    Score: 0
+    Score: 312
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 8
+    Score: 359
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 13
+    Score: 508
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 10
+    Score: 246
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 14
+    Score: 345
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 9
+    Score: 118
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 1
+    Score: 173
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 7
+    Score: 262
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 12
+    Score: 311
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 6
+    Score: 156
+    DuelWin: 0
+    DuelLose: 0
+    bElminated: 0
+  - GuildID: 0
+    Score: 183
     DuelWin: 0
     DuelLose: 0
     bElminated: 0
   character2DLock:
-    ShooterLevelLock: 
+    ShooterLevelLock: 04000000
     PlatformerLevelLock: 
-  disabledHUDInteractionList: 
-  triggeredTaskList: e9030000
-  completeTaskList: e8030000
+  disabledHUDInteractionList: 08520000
+  triggeredTaskList: 4d04000035080000d4070000
+  completeTaskList: e8030000e9030000ea030000eb030000f5030000ec030000f6030000ed030000ee030000d0070000d107000034080000d2070000d3070000
   lockedMapList: []
   bTeleportLocked: 0
-  menuModuleLockList: 000000000000
+  menuModuleLockList: 010100010000
   currentGameTime: 23

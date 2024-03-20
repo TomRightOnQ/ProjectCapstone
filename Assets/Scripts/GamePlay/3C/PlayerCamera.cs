@@ -190,6 +190,8 @@ public class PlayerCamera : MonoBehaviour
         {
             cameraLoadingEffect_WaterSphere.SetActive(true);
             GameEffectManager.Instance.PlayUISound("SFX Teleoport 1");
+            HUDInteractionManager.Instance.DisableHUDInteractionOnPlayer();
+            TaskManager.Instance.StopIndicator();
             return true;
         }
         return false;

@@ -33,7 +33,7 @@ MonoBehaviour:
     BGMName: BGM Public 1
   - LevelID: 2
     SceneName: AudienceLevel
-    StringName: Audience Stands - High
+    StringName: VIP Audience
     NextScene: 
     SceneType: 1
     bSaveable: 1
@@ -42,7 +42,7 @@ MonoBehaviour:
     BGMName: BGM Public 1
   - LevelID: 3
     SceneName: AudienceLowLevel
-    StringName: Audience Stands - Low
+    StringName: Audience Area
     NextScene: 
     SceneType: 1
     bSaveable: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
     BGMName: BGM Main Menu 1
   - LevelID: 7
     SceneName: GuildScene
-    StringName: Tarvern
+    StringName: Summit Feast
     NextScene: 
     SceneType: 1
     bSaveable: 1
@@ -160,4 +160,13 @@ MonoBehaviour:
     bSaveable: 1
     SpawnPoints:
     - {x: 14.8, y: 0.6, z: -1.7}
+    BGMName: BGM Entrance 1
+  - LevelID: 16
+    SceneName: ShooterLevel_T
+    StringName: Shooting Range
+    NextScene: 
+    SceneType: 0
+    bSaveable: 0
+    SpawnPoints:
+    - {x: 0, y: 2.4, z: 1.2}
     BGMName: BGM Entrance 1

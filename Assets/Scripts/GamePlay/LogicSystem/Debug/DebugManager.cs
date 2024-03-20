@@ -92,6 +92,12 @@ public class DebugManager : MonoBehaviour
         ReminderManager.Instance.ShowWholeScreenReminder(2);
     }
 
+    public void PlayGeneralReminder()
+    {
+        ReminderManager.Instance.ShowGeneralReminder(2);
+    }
+
+
     public void ShowEnd()
     {
         GameEndManager.Instance.EndGame(1);
@@ -100,6 +106,11 @@ public class DebugManager : MonoBehaviour
     public void UnlockAch()
     {
         GameEndManager.Instance.UnlockAhievements(0);
+    }
+
+    public void BackToMorning()
+    {
+        DayCycleManager.Instance.JumpToDay();
     }
 
     public void UnlockNextDay()

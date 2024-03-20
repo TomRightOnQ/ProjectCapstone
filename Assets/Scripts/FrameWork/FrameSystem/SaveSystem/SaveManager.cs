@@ -319,6 +319,12 @@ public class SaveManager : MonoBehaviour
         SaveConfig.Instance.RemoveInteractionFromNPC(npcID, interactionID);
     }
 
+    // Clear All
+    public void RemoveInteractionFromNPC(int npcID)
+    {
+        SaveConfig.Instance.RemoveInteractionFromNPC(npcID);
+    }
+
     public void ChangeNPCPositionAndScene(int npcID, string sceneName, Vector3 position)
     {
         SaveConfig.Instance.ChangeNPCPositionAndScene(npcID, sceneName, position);
@@ -512,6 +518,19 @@ public class SaveManager : MonoBehaviour
     public bool CheckGameAchUnlocked(int gameAchID)
     {
         return CoreSaveConfig.Instance.AchUnlockList.Contains(gameAchID);
+    }
+
+    /// <summary>
+    /// Global Variables
+    /// </summary>
+    public void SetGlobalVariable(string _name, bool bTrue)
+    {
+        SaveConfig.Instance.SetGlobalVariable(_name, bTrue);
+    }
+
+    public bool CheckGlobalVariable(string _name)
+    {
+        return SaveConfig.Instance.GlobalBoolVariables.ContainsKey(_name) && SaveConfig.Instance.GlobalBoolVariables[_name];
     }
 
     // Private:

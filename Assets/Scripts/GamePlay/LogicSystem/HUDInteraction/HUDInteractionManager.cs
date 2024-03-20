@@ -13,6 +13,9 @@ public class HUDInteractionManager : MonoBehaviour
     // UI Components
     [SerializeField] private UI_HUDInteraction ui_HUDInteraction;
 
+    [SerializeField] private bool bInteractionAllowed = true;
+    public bool InteractionAllowed => bInteractionAllowed;
+
     private void Awake()
     {
         gameObject.tag = "Manager";
@@ -44,6 +47,7 @@ public class HUDInteractionManager : MonoBehaviour
             GameObject uiObject = UIManager.Instance.CreateUI("UI_HUDInteraction");
             ui_HUDInteraction = uiObject.GetComponent<UI_HUDInteraction>();
         }
+        bInteractionAllowed = true;
     }
 
     // Add interaction to the list
@@ -87,6 +91,19 @@ public class HUDInteractionManager : MonoBehaviour
     public void DisableHUDInteractionUI()
     {
         ui_HUDInteraction.ChangeHUDINteractionState(false);
+    }
+
+    // Enable and Disable Player's trigger
+    public void EnableHUDInteractionOnPlayer()
+    {
+        PersistentDataManager.Instance.MainPlayer.GetComponentInChildren<PlayerHUDInteractionTrigger>().SetUpTrigger();
+        bInteractionAllowed = true;
+    }
+
+    public void DisableHUDInteractionOnPlayer()
+    {
+        PersistentDataManager.Instance.MainPlayer.GetComponentInChildren<PlayerHUDInteractionTrigger>().DisableTrigger();
+        bInteractionAllowed = false;
     }
 
     // Allow an object to be interactable
@@ -182,7 +199,10 @@ public class HUDInteractionManager : MonoBehaviour
 
     public void OnRecv_ChatEnd()
     {
-        EnableHUDInteractionUI();
-        RefreshTriggerList();
+        if (bInteractionAllowed)
+        {
+            EnableHUDInteractionUI();
+            RefreshTriggerList();
+        }
     }
 }

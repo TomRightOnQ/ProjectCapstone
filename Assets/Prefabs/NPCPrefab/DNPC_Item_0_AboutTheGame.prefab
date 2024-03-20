@@ -50,6 +50,8 @@ MonoBehaviour:
   uuid: 0
   objectName: 
   interactionTrigger: {fileID: 1644248561386009680}
+  bubble: {fileID: 0}
+  bCanChangeFace: 0
   unitRigidBody: {fileID: 0}
   maxHP: 0
   currentHP: 0
@@ -58,6 +60,8 @@ MonoBehaviour:
   speedBase: 1
   speedModifier: 1
   speedAccel: 1
+  damageParticle: {fileID: 0}
+  healParticle: {fileID: 0}
   npcID: 0
 --- !u!1 &4121289494766747207
 GameObject:
@@ -195,7 +199,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4497313005798987940}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 2
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

@@ -51,6 +51,7 @@ public static class Enums
         ExitActing,  // Screen Interaction Type: End Acting mode
         TriggerTask,  // Screen Interaction Type: TriggerATask
         CompleteTask,  // Screen Interaction Type: Complete a task
+        EnterGame,  // Screen Interaction Type: Enter a game
         AddInteraction,  // Task: Add interactions to the targeted NPC
         RemoveInteraction,  // Task: Remove interactions from the targeted NPC
         UnlockNextDay,  // Task: Unlock to the next day

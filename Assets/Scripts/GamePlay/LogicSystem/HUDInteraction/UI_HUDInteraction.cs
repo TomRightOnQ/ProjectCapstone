@@ -32,6 +32,10 @@ public class UI_HUDInteraction : UIBase
     // Add interactions
     public void AddInteraction(int interactionID, MObject interactionCarrier)
     {
+        if (!HUDInteractionManager.Instance.InteractionAllowed)
+        {
+            return;
+        }
         if (!interactionItems.Exists(item => item.Value == interactionID))
         {
             HUDInteractionData.HUDInteractionDataStruct interactionData = HUDInteractionData.GetData(interactionID);

@@ -40,8 +40,14 @@ public class ScriptDayOne : DayScriptBase
             case 1003:
                 task_1_3(bPre);
                 break;
+            case 1013:
+                task_1_3_b(bPre);
+                break;
             case 1004:
                 task_1_4(bPre);
+                break;
+            case 1014:
+                task_1_4_b(bPre);
                 break;
             case 1005:
                 task_1_5(bPre);
@@ -61,6 +67,13 @@ public class ScriptDayOne : DayScriptBase
     }
 
     // Private:
+    // Beginning Actions
+    public override void BeginningAction()
+    {
+        // Whole Screen Subtitle
+        ReminderManager.Instance.ShowWholeScreenReminder(new int[] { 17, 18, 19, 20, 21, 0, 10001},
+                                                         new float[] { 5f, 2.5f, 2.5f, 2.5f, 2.5f, 2.5f, 2.5f});
+    }
     // Task Actions
     public void task_1_0(bool bPre)
     {
@@ -74,6 +87,7 @@ public class ScriptDayOne : DayScriptBase
             return;
         }
         ReminderManager.Instance.ShowGeneralReminder(1);
+        ReminderManager.Instance.ShowSubtitleReminder(new int[] { 22, 23 });
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 10000);
         NPCManager.Instance.AddInteractionToNPC(1000, 10001);
         TaskManager.Instance.UnlockTask(1001);
@@ -112,7 +126,7 @@ public class ScriptDayOne : DayScriptBase
         TaskManager.Instance.UnlockTask(1003);
         // Remove exit door trigger
         NPCManager.Instance.RemoveNPCFromSave(1200);
-        LevelManager.Instance.LoadScene(Constants.SCENE_DEFAULT_LEVEL);
+        LevelManager.Instance.LoadScene(Constants.SCENE_ENTRANCE_LEVEL);
     }
 
     public void task_1_3(bool bPre)
@@ -120,17 +134,31 @@ public class ScriptDayOne : DayScriptBase
         if (bPre)
         {
             // Place NPC2
-            NPCManager.Instance.AddNewNPCToSave(1001, Constants.SCENE_DEFAULT_LEVEL, new Vector3(4f, 0.5f, 0.25f));
+            NPCManager.Instance.AddNewNPCToSave(1001, Constants.SCENE_ENTRANCE_LEVEL, new Vector3(13.725f, 0.68f, 0.67f));
             SaveManager.Instance.SetNPCActive(1001, true);
             NPCManager.Instance.AddInteractionToNPC(1001, 10005);
             return;
         }
         // Enable Note system
-        SaveManager.Instance.InitModuleLock(new bool[] { false, false, false, true, false, false });
+        SaveManager.Instance.InitModuleLock(new bool[] { false, true, false, true, false, false });
         SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Note, new int[] { 10000 });
+        SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Note, new int[] { 3 });
+        ReminderManager.Instance.ShowSubtitleReminder(new int[] { 24, 25 });
         ReminderManager.Instance.ShowGeneralReminder(4);
+        HUDInteractionManager.Instance.DisableHUDInteractionUI();
+        HUDManager.Instance.HideAllHUD();
+        TaskManager.Instance.UnlockTask(1013);
+    }
+
+    public void task_1_3_b(bool bPre)
+    {
+        if (bPre)
+        {
+            NPCManager.Instance.RemoveInteractionFromNPC(1001, 10005);
+            NPCManager.Instance.AddInteractionToNPC(1001, 10013);
+            return;
+        }
         NPCManager.Instance.RemoveNPCFromSave(1001);
-        TaskManager.Instance.UnlockTask(1100);
         TaskManager.Instance.UnlockTask(1004);
     }
 
@@ -140,7 +168,7 @@ public class ScriptDayOne : DayScriptBase
         {
             // Modify Guide NPC
             NPCManager.Instance.RemoveNPCFromSave(1000);
-            NPCManager.Instance.AddNewNPCToSave(1000, Constants.SCENE_AUDIENCE_LEVEL, new Vector3(-1.235f, 7.2f, -2.351f));
+            NPCManager.Instance.AddNewNPCToSave(1000, Constants.SCENE_AUDIENCE_LEVEL, new Vector3(-1.235f, 7.28f, -2.351f));
             SaveManager.Instance.SetNPCActive(1000, true);
             NPCManager.Instance.AddInteractionToNPC(1000, 10006);
 
@@ -152,12 +180,25 @@ public class ScriptDayOne : DayScriptBase
         NPCManager.Instance.DespawnNPC(1002);
         // Remove NPC
         NPCManager.Instance.RemoveNPCFromSave(1002);
-        // Play screen
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 10006);
-        // Show the black-out screen and change time to sunset
-        ReminderManager.Instance.ShowWholeScreenReminder(2);
-        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NIGHT, true);
+
+        // Send player to the matching scene
+        LevelManager.Instance.LoadScene(Constants.SCENE_MATCHING_LEVEL);
+        TaskManager.Instance.UnlockTask(1014);
+    }
+
+    public void task_1_4_b(bool bPre)
+    {
+        if (bPre)
+        {
+            // Add a trggier to the game
+            NPCManager.Instance.AddNewNPCToSave(1201, Constants.SCENE_MATCHING_LEVEL, new Vector3(10.33f, 3.23f, 0));
+            SaveManager.Instance.SetNPCActive(1201, true);
+            return;
+        }
         TaskManager.Instance.UnlockTask(1005);
+        NPCManager.Instance.RemoveNPCFromSave(1201);
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_SUNSET, true);
     }
 
     public void task_1_5(bool bPre)
@@ -172,11 +213,12 @@ public class ScriptDayOne : DayScriptBase
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 10008);
         NPCManager.Instance.RemoveNPCFromSave(1000);
         TaskManager.Instance.UnlockTask(1006);
-        
-        ReminderManager.Instance.ShowGeneralReminder(3);
 
+        ReminderManager.Instance.ShowGeneralReminder(3);
+        // Set Time
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NIGHT);
         // Enable Map System
-        SaveManager.Instance.InitModuleLock(new bool[] { false, false, false, false, false, false });
+        SaveManager.Instance.InitModuleLock(new bool[] { false, true, false, false, false, false });
     }
 
     public void task_1_6(bool bPre)
@@ -190,6 +232,8 @@ public class ScriptDayOne : DayScriptBase
             TaskManager.Instance.UnlockTask(1101);
             return;
         }
+        NPCManager.Instance.RemoveNPCFromSave(1102);
+        DayCycleManager.Instance.GoToNextDay();
     }
 
     public void task_1_1_0(bool bPre)
@@ -197,7 +241,7 @@ public class ScriptDayOne : DayScriptBase
         if (bPre)
         {
             // Add NPC_1_2
-            NPCManager.Instance.AddNewNPCToSave(1002, Constants.SCENE_AUDIENCE_LEVEL, new Vector3(-3.9f, 7.2f, -1.65f));
+            NPCManager.Instance.AddNewNPCToSave(1002, Constants.SCENE_AUDIENCE_LEVEL, new Vector3(-3.9f, 7.28f, -1.65f));
             SaveManager.Instance.SetNPCActive(1002, true);
             NPCManager.Instance.AddInteractionToNPC(1002, 10007);
             return;
@@ -220,5 +264,7 @@ public class ScriptDayOne : DayScriptBase
         // Remove NPC
         NPCManager.Instance.AddInteractionToNPC(1003, 10011);
         NPCManager.Instance.RemoveInteractionFromNPC(1003, 10010);
+        // Save the indicator of completion
+        SaveManager.Instance.SetGlobalVariable("DAY_1_TALKED_WITH_WEIRD_GUY", true);
     }
 }

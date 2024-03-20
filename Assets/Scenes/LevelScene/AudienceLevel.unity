@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 734.97296, g: 485.5611, b: 312.14114, a: 1}
+  m_IndirectSpecularColor: {r: 735.77936, g: 485.87555, b: 312.1768, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3325,6 +3325,91 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9064145, y: 0.22197282, z: 0.1360304}
   m_Center: {x: 0.09152031, y: 0.06097652, z: 0.033371557}
+--- !u!1001 &1600469720
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3440082887611731760}
+    m_Modifications:
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.047
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.438
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8270119159230506126, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraLoadingEffect_WaterSphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 8270119159230506126, guid: b695903b17d0b9445be259c19d176001,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b695903b17d0b9445be259c19d176001, type: 3}
+--- !u!4 &1600469721 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 468504792230168632, guid: b695903b17d0b9445be259c19d176001,
+    type: 3}
+  m_PrefabInstance: {fileID: 1600469720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1600469722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8270119159230506126, guid: b695903b17d0b9445be259c19d176001,
+    type: 3}
+  m_PrefabInstance: {fileID: 1600469720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1681814539
 GameObject:
   m_ObjectHideFlags: 0
@@ -4272,6 +4357,11 @@ PrefabInstance:
       propertyPath: defaultAngle
       value: -30
       objectReference: {fileID: 0}
+    - target: {fileID: 6988797645420320387, guid: 41f8eed6227a0414091bb393783e5153,
+        type: 3}
+      propertyPath: cameraLoadingEffect_WaterSphere
+      value: 
+      objectReference: {fileID: 1600469722}
     - target: {fileID: 6988797645420320388, guid: 41f8eed6227a0414091bb393783e5153,
         type: 3}
       propertyPath: m_Version
@@ -4350,7 +4440,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6988797645420320391, guid: 41f8eed6227a0414091bb393783e5153, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6988797645420320389, guid: 41f8eed6227a0414091bb393783e5153,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1600469721}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6988797645420320392, guid: 41f8eed6227a0414091bb393783e5153,
         type: 3}
@@ -4376,6 +4470,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
+--- !u!4 &3440082887611731760 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6988797645420320389, guid: 41f8eed6227a0414091bb393783e5153,
+    type: 3}
+  m_PrefabInstance: {fileID: 3440082887611731757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &5413550380868635835
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -89,6 +89,7 @@ public class CoreSaveConfig : ScriptableSingleton<CoreSaveConfig>
                 {
                     if (!noteData.NoteIDs.Contains(IDs[i]))
                     {
+                        ReminderManager.Instance.ShowGeneralReminder(Constants.NOTES_PREFIX + NotesData.GetData(IDs[i]).Name, 2f);
                         noteData.NoteIDs.Add(IDs[i]);
                     }
                 }
@@ -99,20 +100,13 @@ public class CoreSaveConfig : ScriptableSingleton<CoreSaveConfig>
                 {
                     if (!noteData.ItemIDs.Contains(IDs[i]))
                     {
+                        ReminderManager.Instance.ShowGeneralReminder(Constants.ITEMS_PREFIX + NotesData.GetData(IDs[i]).Name, 2f);
                         noteData.ItemIDs.Add(IDs[i]);
                     }
                 }
                 noteData.NoteIDs.Sort();
                 break;
             case Enums.NOTE_TYPE.Report:
-                for (int i = 0; i < IDs.Length; i++)
-                {
-                    if (!noteData.ReportIDs.Contains(IDs[i]))
-                    {
-                        noteData.ReportIDs.Add(IDs[i]);
-                    }
-                }
-                noteData.NoteIDs.Sort();
                 break;
             default:
                 break;

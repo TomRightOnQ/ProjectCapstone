@@ -129,6 +129,12 @@ public class NPCManager : MonoBehaviour
         removeInteractionFromNPCInField(npcID, interactionID);
     }
 
+    // Clear Interaction
+    public void ClearInteractionFromNPC(int npcID)
+    {
+        SaveManager.Instance.RemoveInteractionFromNPC(npcID);
+    }
+
     public void ChangeNPCPositionAndScene(int npcID, string sceneName, Vector3 position)
     {
         SaveManager.Instance.ChangeNPCPositionAndScene(npcID, sceneName, position);

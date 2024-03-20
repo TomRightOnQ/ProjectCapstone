@@ -71,9 +71,9 @@ public class GameManager2D : MonoBehaviour
         Level2DData.Level2DDataStruct levelData = Level2DData.GetData(gameLevelID);
         // Process the array into dictionary with player's actual score
         gameResult.Add((0, gameScore));
-        for (int i = 0; i < levelData.Score.Length; i += 2)
+        for (int i = 1; i < levelData.Score.Length; i ++)
         {
-            gameResult.Add((levelData.Score[i], levelData.Score[i + 1]));
+            gameResult.Add((i, levelData.Score[i]));
         }
         // Sort
         gameResult = gameResult.OrderByDescending(result => result.Score).ToList();
@@ -199,6 +199,7 @@ public class GameManager2D : MonoBehaviour
         PersistentGameManager.Instance.PauseGame();
         EventManager.Instance.PostEvent(GameEvent.Event.EVENT_2DGAME_END);
         HUDManager.Instance.HideAllHUD();
+        MenuManager.Instance.CloseMenu();
         // Config Score and notify the UI System
         processGameScore();
         UI_Level2D.SetLevelCompletePanel(true, bVictory);

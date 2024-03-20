@@ -128,8 +128,20 @@ public class UI_CharacterPicker : UIBase
         if (!characterItems.Exists(item => item.Value == characterID))
         {
             Character2DData.Character2DDataStruct characterData = Character2DData.GetData(characterID);
-            ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = characterID, Name = characterData.Name };
-            characterItems.Add(newItem);
+            Sprite characterIcon = ResourceManager.Instance.LoadImage(Constants.IMAGES_SOURCE_PATH, characterData.AvatarPath);
+            if (characterIcon != null)
+            {
+                ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = characterID,
+                    Name = characterData.Name,
+                    Icon = characterIcon
+                };
+                characterItems.Add(newItem);
+            }
+            else 
+            {
+                ListViewIconsItemDescription newItem = new ListViewIconsItemDescription() { Value = characterID, Name = characterData.Name };
+                characterItems.Add(newItem);
+            }
         }
     }
 
