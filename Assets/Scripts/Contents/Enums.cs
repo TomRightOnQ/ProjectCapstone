@@ -60,6 +60,8 @@ public static class Enums
         UnlockInteraction,  // Task: Unlock an Interaction
         LockInteraction,  // Task: Lock an Interaction
         SaveGame,  // Task: Save the Current Game
+        UnlockNotes,  // Task: Unlock a regular note
+        UnlockItems,  // Task: Unlock am item note
     }
 
     public enum TASK_STATUS

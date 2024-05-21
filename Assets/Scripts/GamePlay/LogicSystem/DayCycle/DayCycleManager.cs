@@ -77,6 +77,9 @@ public class DayCycleManager : MonoBehaviour
     // bBack: indicates if we are flashing back
     public void JumpToDay(int targetDay, bool bBack = true)
     {
+        // Marked the day as uninited
+        SaveManager.Instance.SaveCurrentDayInited(false);
+
         // Reset the day script
         if (currentScript != null)
         {
@@ -85,9 +88,6 @@ public class DayCycleManager : MonoBehaviour
 
         // Change the save Status
         SaveManager.Instance.SaveCurrentDay(targetDay);
-
-        // Marked the day as uninited
-        SaveManager.Instance.SaveCurrentDayInited(false);
 
         currentDay = targetDay;
 
@@ -207,22 +207,22 @@ public class DayCycleManager : MonoBehaviour
         {
             case 0:
                 currentScript = this.gameObject.AddComponent<ScriptDayZero>();
-                currentScript.Init();
                 break;
             case 1:
                 currentScript = this.gameObject.AddComponent<ScriptDayOne>();
-                currentScript.Init();
                 break;
             case 2:
                 currentScript = this.gameObject.AddComponent<ScriptDayTwo>();
-                currentScript.Init();
                 break;
             case 3:
                 currentScript = this.gameObject.AddComponent<ScriptDayThree>();
-                currentScript.Init();
                 break;
             default:
                 break;
+        }
+        if (!SaveManager.Instance.GetIsCurrentDayInited())
+        {
+            currentScript.Init();
         }
     }
 

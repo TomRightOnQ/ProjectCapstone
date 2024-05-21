@@ -320,6 +320,11 @@ public class SaveManager : MonoBehaviour
     }
 
     // Clear All
+    public void ClearNPCSave()
+    {
+        SaveConfig.Instance.ClearAllNPC();
+    }
+
     public void RemoveInteractionFromNPC(int npcID)
     {
         SaveConfig.Instance.RemoveInteractionFromNPC(npcID);

@@ -58,6 +58,15 @@ public class ScriptDayTwo : DayScriptBase
             case 2101:
                 task_2_1_1(bPre);
                 break;
+            case 2102:
+                task_2_1_2(bPre);
+                break;
+            case 2103:
+                task_2_1_3(bPre);
+                break;
+            case 2104:
+                task_2_1_4(bPre);
+                break;
             default:
                 break;
         }
@@ -98,11 +107,15 @@ public class ScriptDayTwo : DayScriptBase
             // Place the guide
             NPCManager.Instance.ChangeNPCPositionAndScene(1000, Constants.SCENE_GUILD_LEVEL, new Vector3(2.39f, 0.62f, -0.21f));
             SaveManager.Instance.SetNPCActive(1000, true);
+
             // Place Other NPCs
             NPCManager.Instance.AddNewNPCToSave(1004, Constants.SCENE_GUILD_LEVEL, new Vector3(-1.13f, 0.6f, 4.6f));
             SaveManager.Instance.SetNPCActive(1004, true);
             NPCManager.Instance.AddNewNPCToSave(1007, Constants.SCENE_GUILD_LEVEL, new Vector3(-0.47f, 0.59f, 4.11f));
             SaveManager.Instance.SetNPCActive(1007, true);
+
+            // Unlock the catowner objective
+            TaskManager.Instance.UnlockTask(2102);
 
             // Two different results based on the previous day
             if (SaveManager.Instance.CheckGlobalVariable("DAY_1_TALKED_WITH_WEIRD_GUY"))
@@ -122,6 +135,7 @@ public class ScriptDayTwo : DayScriptBase
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 20002);
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 20008);
         // Remove NPCs
+        NPCManager.Instance.RemoveNPCFromSave(1000);
         NPCManager.Instance.RemoveNPCFromSave(1004);
         NPCManager.Instance.RemoveNPCFromSave(1007);
         // Unlock Conversation with Dove and the hidden text to future
@@ -155,6 +169,9 @@ public class ScriptDayTwo : DayScriptBase
     {
         if (bPre)
         {
+            // There is no food!
+            TaskManager.Instance.DeleteTask(2100);
+            NPCManager.Instance.RemoveInteractionFromNPC(2200, 21000);
             // Add interaction
             NPCManager.Instance.AddInteractionToNPC(1007, 20011);
             return;
@@ -200,10 +217,25 @@ public class ScriptDayTwo : DayScriptBase
         NPCManager.Instance.DespawnNPC(1006);
         NPCManager.Instance.DespawnNPC(1007);
         // Subtitle
+        // Hide UI seconds
+        HUDManager.Instance.HideAllHUD();
+        InputManager.Instance.LockInput();
+
         ReminderManager.Instance.ShowWholeScreenReminder(0);
         ReminderManager.Instance.ShowSubtitleReminder(new int[] { 26, 27, 28, 29});
 
+        Invoke("resumeUI", 6f);
+
+        // Change time
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NIGHT, true);
         TaskManager.Instance.UnlockTask(2005);
+        TaskManager.Instance.UnlockTask(2104);
+    }
+
+    private void resumeUI()
+    {
+        InputManager.Instance.UnLockInput(Enums.SCENE_TYPE.World);
+        HUDManager.Instance.ShowAllHUD();
     }
 
     public void task_2_5(bool bPre)
@@ -239,7 +271,6 @@ public class ScriptDayTwo : DayScriptBase
     }
 
     // Text Future
-    // Breakfast
     public void task_2_1_1(bool bPre)
     {
         if (bPre)
@@ -249,5 +280,69 @@ public class ScriptDayTwo : DayScriptBase
         // Unlock Achievement
         SaveManager.Instance.SetGlobalVariable("TEXT_TO_FUTURE", true);
         GameEndManager.Instance.UnlockAhievements(3);
+    }
+
+    // Talk with the cat owner
+    public void task_2_1_2(bool bPre)
+    {
+        if (bPre)
+        {
+            // Place the Cat with its default interaction
+            NPCManager.Instance.AddNewNPCToSave(2000, Constants.SCENE_GUILD_LEVEL, new Vector3(5.57f, 1.17f, 0.31f));
+            SaveManager.Instance.SetNPCActive(2000, true);
+            NPCManager.Instance.AddInteractionToNPC(2000, 20014);
+
+
+            // Spawn the cat owner
+            NPCManager.Instance.AddNewNPCToSave(2001, Constants.SCENE_GUILD_LEVEL, new Vector3(6.57f, 0.59f, 0f));
+            SaveManager.Instance.SetNPCActive(2001, true);
+            NPCManager.Instance.AddInteractionToNPC(2001, 20017);
+            return;
+        }
+        // Unlock the talk with the cat
+        TaskManager.Instance.UnlockTask(2103);
+        // Unlock the collar
+        SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Note, new int[] { 10101 });
+    }
+
+    // Talk with the cat
+    public void task_2_1_3(bool bPre)
+    {
+        if (bPre)
+        {
+            // Remove the cat owner'sinteraction and from the save
+            NPCManager.Instance.RemoveInteractionFromNPC(2001, 20017);
+            NPCManager.Instance.RemoveNPCFromSave(2001);
+
+            // Change interaction of the Cat
+            // Rmeove the default interaction
+            NPCManager.Instance.RemoveInteractionFromNPC(2000, 20014);
+            NPCManager.Instance.AddInteractionToNPC(2000, 20015);
+            return;
+        }
+
+        // Remove the interaction and set to a new default
+        NPCManager.Instance.RemoveInteractionFromNPC(2000, 20015);
+        NPCManager.Instance.AddInteractionToNPC(2000, 20016);
+    }
+
+    // Talk with Samantha
+    public void task_2_1_4(bool bPre)
+    {
+        if (bPre)
+        {
+            // Spawn NPC
+            NPCManager.Instance.AddNewNPCToSave(2002, Constants.SCENE_MATCHING_LEVEL, new Vector3(10.55f, 3.58f, 1f));
+            SaveManager.Instance.SetNPCActive(2002, true);
+            NPCManager.Instance.AddInteractionToNPC(2002, 20018);
+            return;
+        }
+
+        // Remove the NPC non instantly
+        NPCManager.Instance.RemoveInteractionFromNPC(2002, 20018);
+        NPCManager.Instance.RemoveNPCFromSave(2002);
+
+        // Record 
+        SaveManager.Instance.SetGlobalVariable("MEET_SAMANTHA", true);
     }
 }

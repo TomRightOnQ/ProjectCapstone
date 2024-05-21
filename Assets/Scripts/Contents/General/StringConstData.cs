@@ -28,6 +28,7 @@ public static class StringConstData
         {4, new StringConstDataStruct(4, "Are you sure to flash back to the previous day?", false, "???")},
         {5, new StringConstDataStruct(5, "Are you sure to flash back to the morning of today?", false, "???")},
         {6, new StringConstDataStruct(6, "Are you sure to quit to the main menu? Unsaved game progress may be lost.", false, "???")},
+        {7, new StringConstDataStruct(7, "???", false, "???")},
         {998, new StringConstDataStruct(998, "Connection Check", false, "???")},
         {999, new StringConstDataStruct(999, "Rules", false, "???")},
         {1000, new StringConstDataStruct(1000, "Guide", false, "???")},
@@ -40,6 +41,7 @@ public static class StringConstData
         {1007, new StringConstDataStruct(1007, "Francois", false, "???")},
         {1020, new StringConstDataStruct(1020, "Cat", false, "???")},
         {1021, new StringConstDataStruct(1021, "Cat Owner", false, "???")},
+        {1022, new StringConstDataStruct(1022, "Samantha", false, "???")},
     };
 
     public static StringConstDataStruct GetData(int id)

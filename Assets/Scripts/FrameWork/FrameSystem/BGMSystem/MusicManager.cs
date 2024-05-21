@@ -91,7 +91,7 @@ public class MusicManager : MonoBehaviour
         bgmInstance = RuntimeManager.CreateInstance(currentBGMEvent);
         bgmInstance.setParameterByName("BGMStatus", 0);
         bgmInstance.start();
-        bgmInstance.release();
+        //bgmInstance.release();
     }
 
     // Switch music parameter
@@ -101,7 +101,7 @@ public class MusicManager : MonoBehaviour
         bgmInstance = RuntimeManager.CreateInstance(currentBGMEvent);
         bgmInstance.setParameterByName("BGMStatus", state);
         bgmInstance.start();
-        bgmInstance.release();
+        //bgmInstance.release();
     }
 
     // Wrappers or Play() and Stop()

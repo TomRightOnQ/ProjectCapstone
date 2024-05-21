@@ -30,7 +30,7 @@ public static class DayData
         {0, new DayDataStruct(0, "DefaultLevel", 0, -1, -1, 16, 1)},
         {1, new DayDataStruct(1, "RoomALevel", 1, 1, 2, 16, 1)},
         {2, new DayDataStruct(2, "RoomALevel", 2, 1, 3, 16, 1)},
-        {3, new DayDataStruct(3, "RoomALevel", 3, 2, 4, 16, 1)},
+        {3, new DayDataStruct(3, "AudienceLowLevel", 3, 2, 4, 16, 1)},
         {4, new DayDataStruct(4, "AudienceLevel", 4, 3, 5, 8, 1)},
         {5, new DayDataStruct(5, "AudienceLevel", 5, 4, 6, 4, 2)},
         {6, new DayDataStruct(6, "AudienceLevel", 6, 5, 7, 2, 3)},

@@ -522,5 +522,10 @@ public class SaveConfig : ScriptableSingleton<SaveConfig>
             Debug.LogWarning($"NPC with ID {npcID} not found.");
         }
     }
+
+    public void ClearNPCSave()
+    {
+        npcSaveDataList.Clear();
+    }
 }
 

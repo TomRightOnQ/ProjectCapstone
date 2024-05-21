@@ -197,8 +197,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4934849586559773176, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934849586559773176, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
       propertyPath: m_InnerSpotAngle
       value: 14.48648
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934849586559773176, guid: b16cacc89533bb64fabb47cde412645c,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4934849586559773176, guid: b16cacc89533bb64fabb47cde412645c,
         type: 3}
@@ -401,8 +411,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5399302940241334703, guid: b474fe9bf9ba99b47a31311d880f3314,
         type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399302940241334703, guid: b474fe9bf9ba99b47a31311d880f3314,
+        type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5399302940241334703, guid: b474fe9bf9ba99b47a31311d880f3314,
         type: 3}

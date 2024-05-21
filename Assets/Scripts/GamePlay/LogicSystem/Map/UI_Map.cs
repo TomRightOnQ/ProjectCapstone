@@ -39,6 +39,12 @@ public class UI_Map : UIBase
         GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CONFIRM);
     }
 
+    public void OnClick_Btn_Matching()
+    {
+        LevelManager.Instance.LoadScene(Constants.SCENE_MATCHING_LEVEL);
+        GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CONFIRM);
+    }
+
     public void OnClick_Btn_Entrance()
     {
         LevelManager.Instance.LoadScene(Constants.SCENE_ENTRANCE_LEVEL);

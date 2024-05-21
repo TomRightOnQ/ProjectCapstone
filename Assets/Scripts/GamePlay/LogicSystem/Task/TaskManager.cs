@@ -122,6 +122,12 @@ public class TaskManager : MonoBehaviour
                     SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
                     SaveManager.Instance.SaveGameCoreSave();
                     break;
+                case Enums.TASK_ACTION.UnlockNotes:
+                    SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Note, actionData.ActionTarget);
+                    break;
+                case Enums.TASK_ACTION.UnlockItems:
+                    SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Item, actionData.ActionTarget);
+                    break;
                 default:
                     break;
             }
@@ -148,6 +154,7 @@ public class TaskManager : MonoBehaviour
     // Config Tracking
     private void configTaskTracking(int taskID)
     {
+        HUDManager.Instance.ClearTracking();
         // If no tasks are tracked, choose the first one on list
         if (taskID == -1 && SaveManager.Instance.GetTriggeredTasks().Count > 0)
         {
@@ -193,7 +200,7 @@ public class TaskManager : MonoBehaviour
         // Get data for the current tracking
         TaskData.TaskDataStruct taskData = TaskData.GetData(currentTrackedTaskID);
         // Only track when the target is in the scene
-        if (taskData.SceneName != LevelManager.Instance.CurrentScene)
+        if (taskData.SceneName != LevelManager.Instance.CurrentScene && !taskData.bHidden)
         {
             return;
         }
@@ -340,6 +347,38 @@ public class TaskManager : MonoBehaviour
             configTaskTracking(currentTrackedTaskID);
         }
         DayCycleManager.Instance.ConfigTaskAction(taskID, false);
+
+        // Auto Save
+        SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
+    }
+
+    // Delete a single task
+    public void DeleteTask(int taskID)
+    {
+        if (taskID == -1)
+        {
+            return;
+        }
+        if (SaveManager.Instance.CheckTaskStatus(taskID) == Enums.TASK_STATUS.Triggered)
+        {
+            TaskData.TaskDataStruct taskData = TaskData.GetData(taskID);
+            SaveManager.Instance.RemoveTriggeredTask(taskID);
+
+            // Reset Tracking
+            // Clear current Tracking
+            if (taskData.bTrackNPC && npcTrackDictionary.ContainsKey(taskData.TrackTarget))
+            {
+                PrefabManager.Instance.Destroy(npcTrackDictionary[taskData.TrackTarget].gameObject);
+                npcTrackDictionary.Remove(taskData.TrackTarget);
+            }
+            else if (positionTrackDictionary.ContainsKey(taskData.TrackTarget))
+            {
+                PrefabManager.Instance.Destroy(npcTrackDictionary[taskData.TrackTarget].gameObject);
+                positionTrackDictionary.Remove(taskData.TrackTarget);
+            }
+            currentTrackedTaskID = -1;
+            configTaskTracking(currentTrackedTaskID);
+        }
 
         // Auto Save
         SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);

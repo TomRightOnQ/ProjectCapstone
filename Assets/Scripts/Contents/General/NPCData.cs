@@ -43,6 +43,9 @@ public static class NPCData
         {1200, new NPCDataStruct(1200, "DNPC_Trigger_0", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false, "Walk Outside")},
         {1201, new NPCDataStruct(1201, "DNPC_Trigger_1", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false, "Join Game (Day 1)")},
         {2200, new NPCDataStruct(2200, "DNPC_Trigger_TakeFood", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false, "Take Food Trigger")},
+        {2000, new NPCDataStruct(2000, "NPC_S3_GGBond", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false, "Cat")},
+        {2001, new NPCDataStruct(2001, "NPC_S4_CatOwner", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false, "Cat Owner")},
+        {2002, new NPCDataStruct(2002, "NPC_S5_Samantha", "DefaultLevel", new Vector3(0f,0f,0f), new int[]{-1}, false, "Samantha")},
     };
 
     public static NPCDataStruct GetData(int id)
