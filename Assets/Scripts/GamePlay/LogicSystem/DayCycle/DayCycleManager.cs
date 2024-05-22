@@ -91,9 +91,6 @@ public class DayCycleManager : MonoBehaviour
 
         currentDay = targetDay;
 
-        // Add a listner to determine the end of loading
-        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
-
         ///
         /// If we are jumping to the beginning of a day, we should alter to the beginning of that day by loading.
         /// Then we shall overwrite the current game save.
@@ -109,6 +106,10 @@ public class DayCycleManager : MonoBehaviour
 
         // Run the day script
         configCurrentDayScript();
+        SaveManager.Instance.SaveGameSave(currentDay);
+
+        // Add a listner to determine the end of loading
+        EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
 
         // Load Scene
         string targetScene = DayData.GetData(targetDay).StartedScene;
@@ -233,7 +234,6 @@ public class DayCycleManager : MonoBehaviour
         EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
         if (!SaveManager.Instance.GetIsCurrentDayInited())
         {
-            SaveManager.Instance.SaveGameSave(currentDay);
             // Play the first action of the day
             currentScript.BeginningAction();
         }

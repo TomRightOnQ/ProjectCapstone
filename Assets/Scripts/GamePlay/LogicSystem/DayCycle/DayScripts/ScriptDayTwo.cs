@@ -15,11 +15,9 @@ public class ScriptDayTwo : DayScriptBase
         // Disable Flash Back
         SaveManager.Instance.SetModuleLock(true, 1);
         // Set time
-        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NOON, true);
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_MORNING, true);
         // Move player
         SaveConfig.Instance.SetPlayer(new Vector3(4.35f, 0.6f, -1.4f), Constants.SCENE_ROOMA_LEVEL);
-        // Run first Task
-        TaskManager.Instance.UnlockTask(2000);
 
         // NPC
         // Remove the old connectivity check
@@ -27,6 +25,9 @@ public class ScriptDayTwo : DayScriptBase
         NPCManager.Instance.AddInteractionToNPC(1103, 20001);
         // Remove old NPCs
         NPCManager.Instance.RemoveNPCFromSave(1003);
+
+        // Run first Task
+        TaskManager.Instance.UnlockTask(2000);
     }
 
     // Day 1 Methods:
@@ -91,6 +92,9 @@ public class ScriptDayTwo : DayScriptBase
             SaveManager.Instance.SetNPCActive(1000, true);
             // Gives interaction to the guide
             NPCManager.Instance.AddInteractionToNPC(1000, 20000);
+
+            // Save As the beginning of a day
+            SaveManager.Instance.SaveGameSave(DayCycleManager.Instance.CurrentDay);
             return;
         }
         // Change NPCs
@@ -131,6 +135,8 @@ public class ScriptDayTwo : DayScriptBase
             NPCManager.Instance.AddInteractionToNPC(1004, 20010);
             return;
         }
+        // Set Time
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NOON, false);
         // Clear all interactions
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 20002);
         NPCManager.Instance.RemoveInteractionFromNPC(1000, 20008);
@@ -139,9 +145,10 @@ public class ScriptDayTwo : DayScriptBase
         NPCManager.Instance.RemoveNPCFromSave(1004);
         NPCManager.Instance.RemoveNPCFromSave(1007);
         // Unlock Conversation with Dove and the hidden text to future
+
+        TaskManager.Instance.UnlockTask(2002);
         TaskManager.Instance.UnlockTask(2100);
         TaskManager.Instance.UnlockTask(2101);
-        TaskManager.Instance.UnlockTask(2002);
     }
 
     // Talk with Dove
@@ -181,6 +188,8 @@ public class ScriptDayTwo : DayScriptBase
         NPCManager.Instance.RemoveNPCFromSave(1007);
         // Move player
         SaveConfig.Instance.SetPlayer(new Vector3(16.25f, 0.6f, -1.4f), Constants.SCENE_ROOMA_LEVEL);
+        // Set Time
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_SUNSET, false);
         TaskManager.Instance.UnlockTask(2004);
     }
 
@@ -201,8 +210,6 @@ public class ScriptDayTwo : DayScriptBase
             NPCManager.Instance.AddInteractionToNPC(1007, 20012);
             return;
         }
-        // Set Time
-        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_SUNSET, true);
         // Unlock Map
         SaveManager.Instance.SetModuleLock(false, 3);
         // Remove NPCs
@@ -302,7 +309,7 @@ public class ScriptDayTwo : DayScriptBase
         // Unlock the talk with the cat
         TaskManager.Instance.UnlockTask(2103);
         // Unlock the collar
-        SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Note, new int[] { 10101 });
+        SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Item, new int[] { 10101 });
     }
 
     // Talk with the cat

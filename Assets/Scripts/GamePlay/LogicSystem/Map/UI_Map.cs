@@ -10,10 +10,18 @@ public class UI_Map : UIBase
     // UI Widgets
     [SerializeField] private GameObject P_MapPanel;
 
+    // Task Tracker
+    [SerializeField] private GameObject Img_TaskTracking;
+
+    // List of Tracking Points
+    // Use LevelID as index
+    [SerializeField] private List<Vector3> trackPoints;
+
     // Public:
     // Show Map Panel
     public void ShowMapPanel()
     {
+        gameObject.SetActive(true);
         P_MapPanel.SetActive(true);
     }
 
@@ -23,6 +31,19 @@ public class UI_Map : UIBase
         P_MapPanel.SetActive(false);
         PersistentGameManager.Instance.ResumeGame();
         GameEffectManager.Instance.PlayUISound(Constants.SOUND_UI_CLOSE);
+    }
+
+    // Set the on-map tracking
+    public void SetMapTaskTracking(string sceneName)
+    {
+        int levelID = LevelConfig.Instance.GetLevelData(sceneName).LevelID;
+        Img_TaskTracking.transform.localPosition = trackPoints[levelID];
+        Img_TaskTracking.SetActive(true);
+    }
+
+    public void CancelMapTracking()
+    {
+        Img_TaskTracking.SetActive(false);
     }
 
     // OnClick Events

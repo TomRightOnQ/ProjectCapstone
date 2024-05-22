@@ -332,8 +332,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   maxFogDistance:
-    m_OverrideState: 0
-    m_Value: 5000
+    m_OverrideState: 1
+    m_Value: 200
   mipFogMaxMip:
     m_OverrideState: 0
     m_Value: 0.5
@@ -448,10 +448,10 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   nearFocusStart:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   nearFocusEnd:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   farFocusStart:
     m_OverrideState: 1
@@ -460,10 +460,10 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 300
   m_NearSampleCount:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 5
   m_NearMaxBlur:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 4
   m_FarSampleCount:
     m_OverrideState: 1

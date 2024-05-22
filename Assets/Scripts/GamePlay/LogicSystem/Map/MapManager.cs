@@ -87,4 +87,17 @@ public class MapManager : MonoBehaviour
         }
         LevelManager.Instance.LoadScene(mapName);
     }
+
+    // Set the on-map tracking
+    public void SetMapTaskTracking(string sceneName)
+    {
+        createUIMap();
+        ui_Map.SetMapTaskTracking(sceneName);
+    }
+
+    public void CancelMapTracking()
+    {
+        createUIMap();
+        ui_Map.CancelMapTracking();
+    }
 }

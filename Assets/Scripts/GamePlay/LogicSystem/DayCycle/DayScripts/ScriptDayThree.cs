@@ -16,7 +16,7 @@ public class ScriptDayThree : DayScriptBase
         // Disable Flash Back
         SaveManager.Instance.SetModuleLock(true, 1);
         // Set time
-        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_NOON, true);
+        LevelManager.Instance.SetGameTime(GameEvent.Event.TIME_MORNING, true);
         // Move player
         SaveConfig.Instance.SetPlayer(new Vector3(4.35f, 0.6f, -1.4f), Constants.SCENE_ROOMA_LEVEL);
 
@@ -77,6 +77,8 @@ public class ScriptDayThree : DayScriptBase
             {
                 NPCManager.Instance.AddInteractionToNPC(2002, 30001);
             }
+            // Save As the beginning of a day
+            SaveManager.Instance.SaveGameSave(DayCycleManager.Instance.CurrentDay);
             return;
         }
         // Remove the NPC non instantly
@@ -85,7 +87,7 @@ public class ScriptDayThree : DayScriptBase
         NPCManager.Instance.RemoveNPCFromSave(2002);
 
         // Unlock the badge
-        SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Note, new int[] { 10103 });
+        SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Item, new int[] { 10103 });
     }
 
     // Breakfast
@@ -97,6 +99,8 @@ public class ScriptDayThree : DayScriptBase
             SaveManager.Instance.SetNPCActive(2200, true);
             // Add to the trigger
             NPCManager.Instance.AddInteractionToNPC(2200, 31000);
+            // Save As the beginning of a day
+            SaveManager.Instance.SaveGameSave(DayCycleManager.Instance.CurrentDay);
             return;
         }
         ReminderManager.Instance.ShowGeneralReminder(":>", 3f);

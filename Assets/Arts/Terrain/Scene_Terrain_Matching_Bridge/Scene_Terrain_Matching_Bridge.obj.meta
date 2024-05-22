@@ -3,7 +3,12 @@ guid: 6c616178e359a064cb9db0c7c8b0568e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scene_Terrain_Matching_Bridge_Material
+    second: {fileID: 2100000, guid: f003a7d91ad6937479a99a92623ddb36, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

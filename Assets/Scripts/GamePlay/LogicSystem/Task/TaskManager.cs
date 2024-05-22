@@ -13,6 +13,7 @@ public class TaskManager : MonoBehaviour
     // Current Tracked Task
     [SerializeField, ReadOnly]
     private int currentTrackedTaskID = -1;
+    public int CurrentTrackedTaskID => currentTrackedTaskID;
 
     // UI Components
     [SerializeField] private UI_Task ui_Task;
@@ -154,9 +155,35 @@ public class TaskManager : MonoBehaviour
     // Config Tracking
     private void configTaskTracking(int taskID)
     {
+        // Do not change tracking if a valid task is already tracked
+        if (currentTrackedTaskID != -1 &&
+            !TaskData.GetData(currentTrackedTaskID).bHidden &&
+            SaveManager.Instance.CheckTaskStatus(currentTrackedTaskID) == Enums.TASK_STATUS.Triggered)
+        {
+            /*
+             Right after changeing a scene with a valid tracking, we need to 
+            re-configure the HUD tracking since all UI widgets are reset upon
+            scene changes;
+            we also have to spawn the tracking object
+             */
+            HUDManager.Instance.UpdateHUDTaskTracking(currentTrackedTaskID);
+            setTrackOnTarget();
+            return;
+        }
+
         HUDManager.Instance.ClearTracking();
         // If no tasks are tracked, choose the first one on list
-        if (taskID == -1 && SaveManager.Instance.GetTriggeredTasks().Count > 0)
+        if (currentTrackedTaskID == -1 && taskID != -1)
+        {
+            if (!TaskData.GetData(taskID).bHidden && SaveManager.Instance.CheckTaskStatus(taskID) == Enums.TASK_STATUS.Triggered)
+            {
+                currentTrackedTaskID = taskID;
+                HUDManager.Instance.UpdateHUDTaskTracking(taskID);
+                setTrackOnTarget();
+                return;
+            }
+        }
+        else if (currentTrackedTaskID == -1 && SaveManager.Instance.GetTriggeredTasks().Count > 0)
         {
             for (int i = 0; i < SaveManager.Instance.GetTriggeredTasks().Count; i++)
             {
@@ -169,36 +196,36 @@ public class TaskManager : MonoBehaviour
                     return;
                 }
             }
-            HUDManager.Instance.ClearTracking();
-        }
-        else if (currentTrackedTaskID == -1 && taskID != -1)
-        {
-            if (!TaskData.GetData(taskID).bHidden)
-            {
-                currentTrackedTaskID = taskID;
-                HUDManager.Instance.UpdateHUDTaskTracking(taskID);
-                setTrackOnTarget();
-            }
         }
         else if (currentTrackedTaskID != -1)
         {
-            if (!TaskData.GetData(currentTrackedTaskID).bHidden)
+            if (!TaskData.GetData(currentTrackedTaskID).bHidden && 
+                SaveManager.Instance.CheckTaskStatus(currentTrackedTaskID) == Enums.TASK_STATUS.Triggered)
             {
                 HUDManager.Instance.UpdateHUDTaskTracking(taskID);
                 setTrackOnTarget();
+                return;
             }
         }
-        else 
-        {
-            HUDManager.Instance.ClearTracking();
-        }
+        // Other wise, clear the map tracking
+        MapManager.Instance.CancelMapTracking();
     }
 
     // Set Tracking
     private void setTrackOnTarget()
     {
+        // Remove all old tracking
+        foreach (KeyValuePair<int, TaskIndicator> i in npcTrackDictionary)
+        {
+            Destroy(i.Value.gameObject);
+        }
+        npcTrackDictionary.Clear();
+        MapManager.Instance.CancelMapTracking();
+
         // Get data for the current tracking
         TaskData.TaskDataStruct taskData = TaskData.GetData(currentTrackedTaskID);
+        // Set Map Tracking
+        MapManager.Instance.SetMapTaskTracking(taskData.SceneName);
         // Only track when the target is in the scene
         if (taskData.SceneName != LevelManager.Instance.CurrentScene && !taskData.bHidden)
         {
@@ -343,9 +370,12 @@ public class TaskManager : MonoBehaviour
                 PrefabManager.Instance.Destroy(npcTrackDictionary[taskData.TrackTarget].gameObject);
                 positionTrackDictionary.Remove(taskData.TrackTarget);
             }
-            currentTrackedTaskID = -1;
-            configTaskTracking(currentTrackedTaskID);
+
         }
+        // Reset tracking
+        currentTrackedTaskID = -1;
+        configTaskTracking(currentTrackedTaskID);
+
         DayCycleManager.Instance.ConfigTaskAction(taskID, false);
 
         // Auto Save

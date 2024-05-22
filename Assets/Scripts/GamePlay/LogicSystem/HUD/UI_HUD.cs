@@ -41,6 +41,7 @@ public class UI_HUD : UIBase
     [SerializeField] private Animation playerDamaged;
 
     // UI - Task Information
+    [SerializeField, ReadOnly] private string trackedSceneName = "None";
     [SerializeField] private TextMeshProUGUI TB_TaskName;
     [SerializeField] private TextMeshProUGUI TB_TaskScene;
     [SerializeField] private TextMeshProUGUI TB_TaskBrief;
@@ -180,6 +181,7 @@ public class UI_HUD : UIBase
         if (taskData.SceneName != "None")
         {
             TB_TaskScene.text = LevelConfig.Instance.GetLevelData(taskData.SceneName).StringName;
+            trackedSceneName = taskData.SceneName;
         }
         else 
         {
@@ -218,5 +220,15 @@ public class UI_HUD : UIBase
     {
         MenuManager.Instance.OpenMenu();
         HUDManager.Instance.HideAllHUD();
+    }
+
+    // Task - To tracked scene
+    public void OnClick_Btn_Track()
+    {
+        // Teleport the player if the scene is not the current scene
+        if (trackedSceneName != LevelManager.Instance.CurrentScene)
+        {
+            LevelManager.Instance.LoadScene(trackedSceneName);
+        }
     }
 }

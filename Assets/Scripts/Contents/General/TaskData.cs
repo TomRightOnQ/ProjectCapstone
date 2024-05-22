@@ -41,7 +41,7 @@ public static class TaskData
         {2000, new TaskDataStruct(2000, "A brave new day", "Talk with Guide", "RoomALevel", 1000, true, false)},
         {2001, new TaskDataStruct(2001, "A brave new day", "Head to Summit Feast", "GuildScene", 1000, true, false)},
         {2002, new TaskDataStruct(2002, "See you again", "Dove has something important for you, it's time to see her - again", "AudienceLevel", 1001, true, false)},
-        {2003, new TaskDataStruct(2003, "So-called insider", "Match with Dove's suggestion", "AudienceLevel", 1004, true, false)},
+        {2003, new TaskDataStruct(2003, "So-called insider", "Match with Dove's suggestion", "AudienceLevel", 1007, true, false)},
         {2004, new TaskDataStruct(2004, "Fake News", "Our intellegence is incorrect", "RoomALevel", 1007, true, false)},
         {2005, new TaskDataStruct(2005, "Tomorrow will be better", "Go to the team room and sleep...", "RoomALevel", 1102, true, false)},
         {2100, new TaskDataStruct(2100, "Free food", "Don't forget to grab your free food, bro", "GuildScene", 2200, true, false)},

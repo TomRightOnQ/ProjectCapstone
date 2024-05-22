@@ -84,6 +84,9 @@ public class ScriptDayOne : DayScriptBase
             SaveManager.Instance.SetNPCActive(1000, true);
             // Gives interaction to the guide
             NPCManager.Instance.AddInteractionToNPC(1000, 10000);
+
+            // Save As the beginning of a day
+            SaveManager.Instance.SaveGameSave(DayCycleManager.Instance.CurrentDay);
             return;
         }
         ReminderManager.Instance.ShowGeneralReminder(1);
