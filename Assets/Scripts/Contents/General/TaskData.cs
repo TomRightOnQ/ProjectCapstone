@@ -50,6 +50,7 @@ public static class TaskData
         {2103, new TaskDataStruct(2103, "Animal Crossing II", "Talk with the cat", "GuildScene", -1, true, true)},
         {2104, new TaskDataStruct(2104, "The mysterious lady", "Talk with Samantha", "MatchingLevel", -1, true, true)},
         {3000, new TaskDataStruct(3000, "Postal Service", "Someone unexpected found you...", "AudienceLowLevel", 2002, true, false)},
+        {3001, new TaskDataStruct(3001, "Postal Service", "Find a connector", "EntranceLevel", 1008, true, false)},
         {9999, new TaskDataStruct(9999, "End Of Demo", "Here is the end of the demo version, the rest of the stories will be complete in the following months. Use Debug menu to try more levels and features.", "RoomALevel", -1, true, false)},
         {3100, new TaskDataStruct(3100, "Take Food", "Take Food", "GuildScene", -1, true, true)},
         {4100, new TaskDataStruct(4100, "Take Food", "Take Food", "GuildScene", -1, true, true)},

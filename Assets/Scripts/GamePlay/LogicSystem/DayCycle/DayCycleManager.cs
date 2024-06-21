@@ -86,9 +86,6 @@ public class DayCycleManager : MonoBehaviour
             Destroy(currentScript);
         }
 
-        // Change the save Status
-        SaveManager.Instance.SaveCurrentDay(targetDay);
-
         currentDay = targetDay;
 
         ///
@@ -100,13 +97,10 @@ public class DayCycleManager : MonoBehaviour
         {
             // Load the target day save
             SaveManager.Instance.LoadGameSave(targetDay);
-            // Overwrite the beginning of the new day to the current save
-            SaveManager.Instance.SaveGameSave(Constants.SAVE_CURRENT_SAVE);
         }
 
         // Run the day script
         configCurrentDayScript();
-        SaveManager.Instance.SaveGameSave(currentDay);
 
         // Add a listner to determine the end of loading
         EventManager.Instance.AddListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
@@ -118,7 +112,7 @@ public class DayCycleManager : MonoBehaviour
 
     public void JumpToDay(bool bBack = true)
     {
-        JumpToDay(currentDay, true);
+        JumpToDay(currentDay, bBack);
     }
 
     // Flash to the previous day
@@ -232,6 +226,7 @@ public class DayCycleManager : MonoBehaviour
     {
         // First, remove the listener
         EventManager.Instance.RemoveListener(GameEvent.Event.EVENT_SCENE_LOADED, OnRecv_SceneLoaded);
+        SaveManager.Instance.SaveGameSave(currentDay);
         if (!SaveManager.Instance.GetIsCurrentDayInited())
         {
             // Play the first action of the day

@@ -54,6 +54,8 @@ public static class HUDInteractionData
         {20019, new HUDInteractionDataStruct(20019, "Check Connection Stability", new int[]{3000}, false, false)},
         {30000, new HUDInteractionDataStruct(30000, "Samantha", new int[]{3003}, false, false)},
         {30001, new HUDInteractionDataStruct(30001, "???", new int[]{3004}, false, false)},
+        {30002, new HUDInteractionDataStruct(30002, "Dove", new int[]{3006}, true, true)},
+        {30003, new HUDInteractionDataStruct(30003, "???", new int[]{3007}, false, false)},
         {21000, new HUDInteractionDataStruct(21000, "Take Food", new int[]{2005}, true, false)},
         {31000, new HUDInteractionDataStruct(31000, "Take Food", new int[]{3001}, true, false)},
         {41000, new HUDInteractionDataStruct(41000, "Take Food", new int[]{-1}, true, false)},

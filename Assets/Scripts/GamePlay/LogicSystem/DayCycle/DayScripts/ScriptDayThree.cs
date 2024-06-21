@@ -43,6 +43,9 @@ public class ScriptDayThree : DayScriptBase
             case 3000:
                 task_3_0(bPre);
                 break;
+            case 3001:
+                task_3_1(bPre);
+                break;
             case 3100:
                 task_3_1_0(bPre);
                 break;
@@ -79,6 +82,7 @@ public class ScriptDayThree : DayScriptBase
             }
             // Save As the beginning of a day
             SaveManager.Instance.SaveGameSave(DayCycleManager.Instance.CurrentDay);
+            SaveManager.Instance.SaveCurrentDay(DayCycleManager.Instance.CurrentDay);
             return;
         }
         // Remove the NPC non instantly
@@ -88,6 +92,33 @@ public class ScriptDayThree : DayScriptBase
 
         // Unlock the badge
         SaveManager.Instance.AddNote(Enums.NOTE_TYPE.Item, new int[] { 10103 });
+        TaskManager.Instance.UnlockTask(3001);
+    }
+
+    // Bering the connector
+    public void task_3_1(bool bPre)
+    {
+        if (bPre)
+        {
+            // Place Dove and Samantha
+            NPCManager.Instance.AddNewNPCToSave(1001, Constants.SCENE_ENTRANCE_LEVEL, new Vector3(13.725f, 0.68f, 0.67f));
+            SaveManager.Instance.SetNPCActive(1001, true);
+            NPCManager.Instance.AddInteractionToNPC(1001, 30002);
+
+            NPCManager.Instance.AddNewNPCToSave(1008, Constants.SCENE_ENTRANCE_LEVEL, new Vector3(5.725f, 0.68f, 0.67f));
+            SaveManager.Instance.SetNPCActive(1008, true);
+            NPCManager.Instance.AddInteractionToNPC(1008, 30003);
+
+            return;
+        }
+        // Remove the NPC non instantly
+        NPCManager.Instance.RemoveInteractionFromNPC(2002, 30000);
+        NPCManager.Instance.RemoveInteractionFromNPC(2002, 30001);
+        NPCManager.Instance.RemoveNPCFromSave(1001);
+        NPCManager.Instance.RemoveNPCFromSave(1008);
+        // Take player to the control room and turn off the map
+        SaveManager.Instance.InitModuleLock(new bool[] { false, true, false, true, false, false });
+        LevelManager.Instance.LoadScene(Constants.SCENE_CONTROL_LEVEL);
     }
 
     // Breakfast
@@ -101,6 +132,7 @@ public class ScriptDayThree : DayScriptBase
             NPCManager.Instance.AddInteractionToNPC(2200, 31000);
             // Save As the beginning of a day
             SaveManager.Instance.SaveGameSave(DayCycleManager.Instance.CurrentDay);
+            SaveManager.Instance.SaveCurrentDay(DayCycleManager.Instance.CurrentDay);
             return;
         }
         ReminderManager.Instance.ShowGeneralReminder(":>", 3f);

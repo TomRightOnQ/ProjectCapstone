@@ -110,7 +110,7 @@ public class DebugManager : MonoBehaviour
 
     public void BackToMorning()
     {
-        DayCycleManager.Instance.JumpToDay();
+        DayCycleManager.Instance.JumpToDay(false);
     }
 
     public void UnlockNextDay()

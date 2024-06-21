@@ -80,6 +80,9 @@ public static class ActionData
         {3003, new ActionDataStruct(3003, Enums.TASK_ACTION.Chat, new int[]{30000})},
         {3004, new ActionDataStruct(3004, Enums.TASK_ACTION.Chat, new int[]{30001})},
         {3005, new ActionDataStruct(3005, Enums.TASK_ACTION.CompleteTask, new int[]{3000})},
+        {3006, new ActionDataStruct(3006, Enums.TASK_ACTION.Chat, new int[]{30020})},
+        {3007, new ActionDataStruct(3007, Enums.TASK_ACTION.Chat, new int[]{30040})},
+        {3008, new ActionDataStruct(3008, Enums.TASK_ACTION.CompleteTask, new int[]{3001})},
     };
 
     public static ActionDataStruct GetData(int id)
